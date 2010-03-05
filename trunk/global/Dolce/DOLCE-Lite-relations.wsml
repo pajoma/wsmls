@@ -1,0 +1,536 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://purl.org/net/wsml/dolce#",
+     rdf _"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+     rdfs _"http://www.w3.org/2000/01/rdf-schema#",
+     dolce _"http://www.load-cnr.it/ontologies/DOLCE-Lite.owl",
+     dc _"http://purl.org/dc/elements/1.1/"}
+
+ontology DOLCE_Lite_relations
+     nfp
+        dc#creator hasValue "Patrick Maué(IFGI)"
+        dc#publisher hasValue "IfGI, University of Muenster"
+		dc#type hasValue "Foundational Ontology"
+		dc#title hasValue "Dolce Ontology (relations)"	
+		dc#description hasValue "The DOLCE and DnS ontologies. OWL engineering by Aldo Gangemi. WSML Translation by Patrick Maué"
+		dc#source hasValue "http://www.loa-cnr.it/DOLCE.html"
+		dc#subject hasValue "dolce, foundational"	
+     endnfp
+
+
+relation immediate_relation(ofType particular, ofType particular)
+	nfp
+		dc#title hasValue "Immediate Relation@en"
+		dc#description hasValue "A relation that holds without additional mediating individuals. In logical terms, a non-composed relation."
+		rdfs#seeAlso hasValue dolce#immediate\-relation	
+	endnfp
+	
+relation immediate_relation_i(ofType particular, ofType particular)
+	nfp
+		dc#title hasValue "Immediate Relation Inverse@en"
+		dc#description hasValue "A relation that holds without additional mediating individuals. In logical terms, a non-composed relation."
+		rdfs#seeAlso hasValue dolce#immediate\-relation\-i	
+	endnfp
+	
+relation mediated_relation(ofType particular, ofType particular)
+	nfp
+		dc#title hasValue "Mediated Relation@en"
+		dc#description hasValue "A relation that composes other  relations. For example, a participation relation composed with a representation relation.Composed relation cannot be directly expressed in OWL-DL, then (at least some) compositions are expressed as class or restriction axioms."
+		rdfs#seeAlso hasValue dolce#mediated\-relation
+	endnfp
+	
+relation mediated_relation_i(ofType particular, ofType particular)   
+	nfp
+		dc#title hasValue "Immediate Relation Inverse@en"
+		dc#description hasValue "A relation that composes other  relations. For example, a participation relation composed with a representation relation.Composed relation cannot be directly expressed in OWL-DL, then (at least some) compositions are expressed as class or restriction axioms."
+		rdfs#seeAlso hasValue dolce#mediated\-relation\-i
+	endnfp
+	
+relation generic_constituent (ofType particular, ofType particular)  subRelationOf immediate_relation
+	nfp
+		dc#title hasValue "Generic Constituent@en"
+		dc#description hasValue "'Constituent' should depend on some layering of  the ontology. For example, scientific granularities or ontological 'strata' are  typical layerings. A constituent is a part belonging to a lower layer. Since layering is actually a partition of the ontology, constituents are not properly classified as parts, although this kinship can be intuitive for common sense. Example of specific constant constituents are the entities constituting a setting (a situation), whilethe entities constituting a collection are examples of generic constant constituents."
+		rdfs#seeAlso hasValue dolce#generic\-constituent
+	endnfp
+	
+relation generic_constituent_of (ofType particular, ofType particular)  subRelationOf immediate_relation_i
+	nfp
+		dc#title hasValue "Generic Constituent Of@en"
+		dc#description hasValue "'Constituent' should depend on some layering of  the ontology. For example, scientific granularities or ontological 'strata' are  typical layerings. A constituent is a part belonging to a lower layer. Since layering is actually a partition of the ontology, constituents are not properly classified as parts, although this kinship can be intuitive for common sense. Example of specific constant constituents are the entities constituting a setting (a situation), whilethe entities constituting a collection are examples of generic constant constituents."
+		rdfs#seeAlso hasValue dolce#generic\-constituent\-of
+	endnfp
+	
+relation generic_dependent (ofType particular, ofType particular)  subRelationOf immediate_relation
+	nfp
+		dc#title hasValue "generic dependent of@en"
+		dc#description hasValue "The dependence on an individual of a given type at some time. This is traditionally a relation between particulars and universals, but this one states that x generically depends on y if a z different from y, but with the same properties, can be equivalently its depend-on.This is a temporally-indexed relation (embedded in this syntax)."
+		rdfs#seeAlso hasValue dolce#generic\-dependent
+	endnfp
+	
+	
+	
+relation identitiy_c (ofType particular, ofType particular)  subRelationOf immediate_relation
+	nfp
+		dc#title hasValue "is identitical to (Ontologically)@en"
+		dc#description hasValue "Any pair of individuals are ontologically identical if they are identical to themselves. Reflexive, symmetric, and transitive."
+		rdfs#seeAlso hasValue dolce#identitiy\-c
+	endnfp
+	
+relation identitiy_n (ofType particular, ofType particular)  subRelationOf immediate_relation
+	nfp
+		dc#title hasValue "is identitical to (notionally)@en"
+		dc#description hasValue "Any pair of individuals are notionally identical iff they instantiate all and only the same concepts."
+		rdfs#seeAlso hasValue dolce#identitiy\-n
+	endnfp
+	
+relation inherent_in (ofType particular, ofType particular)  subRelationOf immediate_relation
+	nfp
+		dc#title hasValue "inherent in @en"
+		dc#description hasValue "The immediate relation holding for qualities and entities."
+		rdfs#seeAlso hasValue dolce#inherent\-in
+	endnfp
+	
+relation has_quality (ofType particular, ofType quality)  subRelationOf immediate_relation_i
+	nfp
+		dc#title hasValue "has quality@en"
+		dc#description hasValue "The immediate relation holding for qualities and entities."
+		rdfs#seeAlso hasValue dolce#has\-quality
+	endnfp
+	
+relation t_inherent_in (ofType quality, ofType particular)  subRelationOf immediate_relation
+	nfp
+		dc#title hasValue "Generic Dependent@en"
+		dc#description hasValue "The immediate relation holding for qualities and entities at time t."
+		rdfs#seeAlso hasValue dolce#t\-inherent\-in
+	endnfp
+	
+relation has_t_quality	(ofType particular, ofType quality) subRelationOf has_quality
+	nfp
+		dc#title hasValue "has temporal quality@en"
+		dc#description hasValue "The immediate relation holding for qualities and entities at time t."
+		rdfs#seeAlso hasValue dolce#has\-t\-quality
+	endnfp
+	
+relation part (ofType particular, ofType particular)  subRelationOf immediate_relation
+	nfp
+		dc#title hasValue "has part@en"
+		dc#description hasValue "The most generic part relation, reflexive, asymmetric, and transitive."
+		rdfs#seeAlso hasValue dolce#part
+	endnfp
+	
+relation part_of(ofType particular, ofType particular)  subRelationOf immediate_relation_i
+	nfp
+		dc#title hasValue "is part of@en"
+		dc#description hasValue "The most generic part relation, reflexive, asymmetric, and transitive."
+		rdfs#seeAlso hasValue dolce#part\-of
+	endnfp
+	
+		
+relation atomic_part (ofType particular, ofType particular)  subRelationOf part
+	nfp
+		dc#title hasValue "has atomic part@en"
+		dc#description hasValue "The part relation between a particular and an atom."
+		rdfs#seeAlso hasValue dolce#atomic\-part
+	endnfp
+	
+relation atomic_part_of (ofType particular, ofType particular)  subRelationOf part_of
+	nfp
+		dc#title hasValue "is atomic part of@en"
+		dc#description hasValue "The part relation between a particular and an atom."
+		rdfs#seeAlso hasValue dolce#atomic\-_part\-of
+	endnfp
+	
+relation proper_part (ofType particular, ofType particular)  subRelationOf part
+	nfp
+		dc#title hasValue "has proper part@en"
+		dc#description hasValue "The proper part relation: irreflexive, antisymmetric, and transitive."
+		rdfs#seeAlso hasValue dolce#proper\-part
+	endnfp
+		
+relation proper_part_of (ofType particular, ofType particular)  subRelationOf part_of
+	nfp
+		dc#title hasValue "is proper part of@en"
+		dc#description hasValue "The proper part relation: irreflexive, antisymmetric, and transitive."
+		rdfs#seeAlso hasValue dolce#proper\-part\-of
+	endnfp
+	
+relation boundary (ofType particular, ofType particular)  subRelationOf proper_part
+	nfp
+		dc#title hasValue "has boundary@en"
+		dc#description hasValue ""
+		rdfs#seeAlso hasValue dolce#boundary
+	endnfp
+	
+relation boundary_of (ofType particular, ofType particular)  subRelationOf proper_part_of
+	nfp
+		dc#title hasValue "is boundary of@en"
+		dc#description hasValue ""
+		rdfs#seeAlso hasValue dolce#boundary\-of
+	endnfp
+	
+relation temporary_proper_part (ofType endurant, ofType endurant)  subRelationOf proper_part
+	nfp
+		dc#title hasValue "has proper part at time t@en"
+		dc#description hasValue "Being proper part at time t. It holds for endurants only. This is important to model proper parts that can change or be lost over time without affecting the identity of the whole."
+		rdfs#seeAlso hasValue dolce#temporary\-proper\-part
+	endnfp
+	
+relation temporary_proper_part_of (ofType endurant, ofType endurant)  subRelationOf proper_part_of
+	nfp
+		dc#title hasValue "is proper part at time t of@en"
+		dc#description hasValue "Being proper part at time t. It holds for endurants only. This is important to model proper parts that can change or be lost over time without affecting the identity of the whole."
+		rdfs#seeAlso hasValue dolce#temporary\-proper\-part\-of
+	endnfp
+	
+	
+axiom define_inverse 
+	definedBy
+		immediate_relation(?x,?y) implies immediate_relation_i(?y,?x).
+		mediated_relation(?x,?y) implies mediated_relation_i(?y,?x).	
+		generic_constituent(?x,?y) implies generic_constituent_of(?y,?x).
+		generic_dependent(?x,?y) implies generic_dependent_on(?y,?x).
+		identitiy_c(?x,?y) implies identitiy_c(?y,?x).
+		identitiy_n(?x,?y) implies identitiy_n(?y,?x).
+		sibling_part(?x,?y) implies sibling_part(?y,?x).
+		inherent_in(?x,?y) implies has_quality(?y,?x).
+		t_inherent_in(?x,?y) implies has_t_quality(?y,?x).
+		part(?x,?y) implies part_of(?y,?x).		
+		atomic_part(?x,?y) implies atomic_part_of(?y,?x).		
+		proper_part(?x,?y) implies proper_part_of(?y,?x).		
+		boundary(?x,?y) implies boundary_of(?y,?x).		
+		temporary_proper_part(?x,?y) implies temporary_proper_part_of(?y,?x).		
+		// to be added if needed
+
+	
+	
+relation temporary_part (ofType endurant, ofType endurant)  subRelationOf part
+	nfp
+		dc#title hasValue "temporary part@en"
+		dc#description hasValue "Being part at time t. It holds for endurants only. This is important to model parts that can change or be lost over time without affecting the identity of the whole. In FOL, this is expressed as a ternary relation, but in DLs we only can reason with binary relations, then only the necessary axiom of compresence is represented here."
+		rdfs#seeAlso hasValue dolce#temporary_part
+	endnfp
+		
+relation temporary_part_of (ofType endurant, ofType endurant)  subRelationOf immediate_relation
+	nfp
+		dc#title hasValue "temporary part of@en"
+		dc#description hasValue "sss"
+		rdfs#seeAlso hasValue dolce#temporary_part_of
+	endnfp
+	
+	
+relation constant_participant (ofType perdurant, ofType endurant)  subRelationOf participant
+	nfp
+		dc#title hasValue "constant participant in@en"
+		dc#description hasValue "Anytime x is present, x has participant y. In other words, all parts of x have a same participant.Participation can be constant (in all parts of the perdurant, e.g. in 'the car is running'), or temporary (in only some parts, e.g. in 'I'm electing the president')."
+		rdfs#seeAlso hasValue dolce#constant_participant
+	endnfp
+		
+relation constant_participant_in (ofType endurant, ofType particular)  subRelationOf participant_in
+	nfp
+		dc#title hasValue "Generic Dependent@en"
+		dc#description hasValue "Anytime x is present, x has participant y. In other words, all parts of x have a same participant.Participation can be constant (in all parts of the perdurant, e.g. in 'the car is running'), or temporary (in only some parts, e.g. in 'I'm electing the president')."
+		rdfs#seeAlso hasValue dolce#constant_participant_in
+	endnfp
+	
+relation specific_constant_dependent (ofType particular, ofType particular)  subRelationOf immediate_relation
+	nfp
+		dc#title hasValue "specific constant dependent@en"
+		dc#description hasValue "The constant dependence between two individuals. Taken here as primitive."
+		rdfs#seeAlso hasValue dolce#specific_constant_dependent
+	endnfp
+	
+relation specifically_constantly_dependent_on (ofType particular, ofType particular)  subRelationOf immediate_relation
+	nfp
+		dc#title hasValue "specifically constantly dependent on@en"
+		dc#description hasValue "The constant dependence between two individuals. Taken here as primitive."
+		rdfs#seeAlso hasValue dolce#specifically_constantly_dependent_on
+	endnfp
+	
+relation temporary_participant_in (ofType endurant, ofType perdurant)  subRelationOf participant_in
+	nfp
+		dc#title hasValue "temporary participant in@en"
+		dc#description hasValue "x participates in some of y's parts."
+		rdfs#seeAlso hasValue dolce#temporary_participant_in
+	endnfp
+		
+relation temporary_participant (ofType perdurant, ofType endurant)  subRelationOf participant
+	nfp
+		dc#title hasValue "temporary participant@en"
+		dc#description hasValue "Only some parts of the perdurant p have a participant e.In fact, participation can be constant (in all parts of the perdurant, e.g. in 'the car is running'), or temporary (in only some parts, e.g. in 'I'm electing the president').Implicitly, this relation has a temporal indexing.If needed, in OWL one can derive such indexing by expliciting what parts of p have e as _constant_ participant.An appropriate OWL axiom is created to bind this relation to a proper part of it, which has the temporary_participant as a constant one."
+		rdfs#seeAlso hasValue dolce#temporary_participant
+	endnfp
+	
+relation host_of (ofType physical_endurant, ofType feature)  subRelationOf specific_constant_dependent
+	nfp
+		dc#title hasValue "is host of@en"
+		dc#description hasValue "The immediate relation holding for features and entities."
+		rdfs#seeAlso hasValue dolce#host_of
+	endnfp
+		
+relation host (ofType feature, ofType physical_endurant)  subRelationOf specifically_constantly_dependent_on
+	nfp
+		dc#title hasValue "hosts@en"
+		dc#description hasValue "The immediate relation holding for features and entities."
+		rdfs#seeAlso hasValue dolce#host
+	endnfp
+	
+relation specific_constant_constituent_of (ofType particular, ofType particular)  subRelationOf immediate_relation
+	nfp
+		dc#title hasValue "specific constant constituent of@en"
+		dc#description hasValue "'Constituent' should depend on some layering of  the ontology. For example, scientific granularities or ontological 'strata' are  typical layerings. A constituent is a part belonging to a lower layer. Since layering is actually a partition of the ontology, constituents are not properly classified as parts, although this kinship can be intuitive for common sense. Example of specific constant constituents are the entities constituting a setting (a situation), whilethe entities constituting a collection are examples of generic constant constituents."
+		rdfs#seeAlso hasValue dolce#specific_constant_constituent_of
+	endnfp
+	
+relation specific_constant_constituent (ofType particular, ofType particular)  subRelationOf immediate_relation
+	nfp
+		dc#title hasValue "specific constant constituent@en"
+		dc#description hasValue "'Constituent' should depend on some layering of  the ontology. For example, scientific granularities or ontological 'strata' are  typical layerings. A constituent is a part belonging to a lower layer. Since layering is actually a partition of the ontology, constituents are not properly classified as parts, although this kinship can be intuitive for common sense. Example of specific constant constituents are the entities constituting a setting (a situation), whilethe entities constituting a collection are examples of generic constant constituents."
+		rdfs#seeAlso hasValue dolce#specific_constant_constituent
+	endnfp
+	
+relation weak_connection (ofType particular, ofType particular)  subRelationOf immediate_relation
+	nfp
+		dc#title hasValue "weak connection@en"
+		dc#description hasValue "he basic connection, not requiring a  common boundary."
+		rdfs#seeAlso hasValue dolce#weak_connection
+	endnfp
+	
+	
+relation r_location_of (ofType region, ofType region)  subRelationOf immediate_relation_i
+	nfp
+		dc#title hasValue "is location of@en"
+		dc#description hasValue "A relation for representing regions within other regions, e.g. in measurement spaces (space composition).The result of r_location composition is a new 'composed region', which can either preserve the same region type (e.g. physical+physical_>physical, or  physical+abstract_>physical), or not (e.g. physical+abstract_>abstract). See 'composition description' for more details.In some cases, space composition is conventional, i.e. a space is just 'located' at another space, as in the case of measurement spaces:(direct composition):   r r_location r1In other cases, r_location implies a complex path, e.g. :(homogeneous composition):   r q_location_of q inherent_in x has_quality q1 q_location r1(heterogeneous composition across endurants and perdurants):   r q_location_of q inherent_in e participant_in p has_quality q1 q_location r1(heterogeneous composition across physical and non_physical endurants):   r q_location_of q inherent_in pe specific_constant_dependent npe has_quality q1 q_location r1"
+		rdfs#seeAlso hasValue dolce#weak_connection
+	endnfp
+	
+relation r_location (ofType region, ofType region)  subRelationOf immediate_relation
+	nfp
+		dc#title hasValue "has location@en"
+		dc#description hasValue "A relation for representing regions within other regions, e.g. in measurement spaces (space composition).The result of r_location composition is a new 'composed region', which can either preserve the same region type (e.g. physical+physical_>physical, or  physical+abstract_>physical), or not (e.g. physical+abstract_>abstract). See 'composition description' for more details.In some cases, space composition is conventional, i.e. a space is just 'located' at another space, as in the case of measurement spaces:(direct composition):  r r_location r1.  In other cases, r_location implies a complex path, e.g. :(homogeneous composition):   r q_location_of q inherent_in x has_quality q1 q_location r1(heterogeneous composition across endurants and perdurants):   r q_location_of q inherent_in e participant_in p has_quality q1 q_location r1(heterogeneous composition across physical and non_physical endurants):   r q_location_of q inherent_in pe specific_constant_dependent npe has_quality q1 q_location r1"
+		rdfs#seeAlso hasValue dolce#r_location
+	endnfp
+	
+relation quale_of (ofType quale, ofType quality)  subRelationOf immediate_relation
+	nfp
+		dc#title hasValue "is quale of@en"
+		dc#description hasValue "A quality having a q_location at an atomic region."
+		rdfs#seeAlso hasValue dolce#quale_of
+	endnfp
+	
+relation has_quale (ofType quality, ofType quale)  subRelationOf immediate_relation
+	nfp
+		dc#title hasValue "has quale@en"
+		dc#description hasValue "A quality having a q_location at an atomic region."
+		rdfs#seeAlso hasValue dolce#has_quale
+	endnfp
+	
+relation total_temporary_participant (ofType perdurant, ofType endurant)  subRelationOf temporary_participant
+	nfp
+		dc#title hasValue "total temporary participant@en"
+		dc#description hasValue "The perdurant p has a participant e that temporarily participates in p with all its parts, e.g. in 'I played the concert' (where I actually played just an ouverture).See also 'temporary_participant'."
+		rdfs#seeAlso hasValue dolce#total_temporary_participant
+	endnfp
+	
+relation total_temporary_participant_in (ofType endurant, ofType perdurant)  subRelationOf temporary_participant_in
+	nfp
+		dc#title hasValue "total_temporary_participant_in@en"
+		dc#description hasValue "The perdurant p has a participant e that temporarily participates in p with all its parts, e.g. in 'I played the concert' (where I actually played just an ouverture).See also 'temporary_participant'."
+		rdfs#seeAlso hasValue dolce#total_temporary_participant_in
+	endnfp
+	
+relation generically_dependent_on (ofType particular, ofType particular)  subRelationOf immediate_relation_i
+	nfp
+		dc#title hasValue "generically dependent on@en"
+		dc#description hasValue "sss"
+		rdfs#seeAlso hasValue dolce#generically_dependent_on
+	endnfp
+	
+relation q_present_at (ofType physical_quality, ofType time_interval)  subRelationOf mediated_relation
+	nfp
+		dc#title hasValue "q_present_at@en"
+		dc#description hasValue "Presence of a physical quality when inheres in  an endurant."
+		rdfs#seeAlso hasValue dolce#q_present_at
+	endnfp 
+	
+relation time_of_q_presence_of (ofType time_interval, ofType physical_quality)  subRelationOf mediated_relation_i
+	nfp
+		dc#title hasValue "time_of_q_presence_of@en"
+		dc#description hasValue "Presence of a physical quality when inheres in  an endurant."
+		rdfs#seeAlso hasValue dolce#time_of_q_presence_of
+	endnfp
+	
+relation mereologically_coincides (ofType endurant, ofType endurant)  subRelationOf temporary_part
+	nfp
+		dc#title hasValue "mereologically_coincides@en"
+		dc#description hasValue "Having the same parts at time t."
+		rdfs#seeAlso hasValue dolce#mereologically_coincides
+	endnfp
+	
+relation participant (ofType perdurant, ofType endurant)  subRelationOf immediate_relation
+	nfp
+		dc#title hasValue "participant@en"
+		dc#description hasValue "The immediate relation holding between endurants and perdurants (e.g. in 'the car is running').Participation can be constant (in all parts of the perdurant, e.g. in 'the car is running'), or temporary (in only some parts, e.g. in 'I'm electing the president').A 'functional' participant is specialized for those forms of participation that depend on the nature of participants, processes, or on the intentionality of agentive participants. Traditional 'thematic role' should be mapped to functional participation.For relations holding between participants in a same perdurant, see the co_participates relation."
+		rdfs#seeAlso hasValue dolce#participant
+	endnfp
+	
+relation participant_in (ofType endurant, ofType perdurant)  subRelationOf immediate_relation_i
+	nfp
+		dc#title hasValue "participant in@en"
+		dc#description hasValue "The immediate relation holding between endurants and perdurants (e.g. in 'the car is running').Participation can be constant (in all parts of the perdurant, e.g. in 'the car is running'), or temporary (in only some parts, e.g. in 'I'm electing the president').A 'functional' participant is specialized for those forms of participation that depend on the nature of participants, processes, or on the intentionality of agentive participants. Traditional 'thematic role' should be mapped to functional participation.For relations holding between participants in a same perdurant, see the co_participates relation."
+		rdfs#seeAlso hasValue dolce#participant_in
+	endnfp
+	
+relation life (ofType particular, ofType particular)  subRelationOf constant_participant_in
+	nfp
+		dc#title hasValue "life@en"
+		dc#description hasValue "Total constant participation applied to the mereological sum of the perdurants in which an endurant participates."
+		rdfs#seeAlso hasValue dolce#life
+	endnfp
+	
+relation life_of (ofType perdurant, ofType endurant)  subRelationOf constant_participant
+	nfp
+		dc#title hasValue "life of@en"
+		dc#description hasValue "Total constant participation applied to the mereological sum of the perdurants in which an endurant participates."
+		rdfs#seeAlso hasValue dolce#life\-of
+	endnfp
+	
+relation partly_compresent (ofType particular, ofType particular)  subRelationOf mediated_relation
+	nfp
+		dc#title hasValue "partly compresent@en"
+		dc#description hasValue "A composed (mediated) relation used here to make relations 'temporary': by adding it as a superrelation, the effect is that the two related endurants cannot be present at all the same time intervals, but are compresent at least at some time interval (see related axiom).In FOL, the same constraint can be stated directly by coreference.This workaround can be used to index time of relations that involve reciprocal dependency, but it cannot be used in general with relations involving multiple strata of reality. For example, _about_ relation can be temporally indexed, without involving that the time of the information object overlaps with the time of the entity the information is about (but this works for e.g. the _realizes_ relation between information objects and entities whatsoever). The different temporal constraints of about vs. expresses probably derive from the dependency of aboutness from conception (to be about x, an information object should also express a description d that is satisfied by a situation including x, then temporal overlapping of _about_ is true in virtue of d). On the other hand, even conceives cannot be indexed in this way, because overlapping does not hold between the time og the conceiving agent, and the conceived description (or situation)."
+		rdfs#seeAlso hasValue dolce#partly_compresent
+	endnfp
+	
+relation abstract_location_of (ofType abstract_region, ofType non_physical_endurant)  subRelationOf exact_location_of
+	nfp
+		dc#title hasValue "abstract location of@en"
+		dc#description hasValue "Analytical location holding between non_physical endurants and abstract regions."
+		rdfs#seeAlso hasValue dolce#abstract_location_of
+	endnfp
+	
+relation abstract_location (ofType non_physical_endurant, ofType abstract_region)  subRelationOf exact_location
+	nfp
+		dc#title hasValue "abstract location@en"
+		dc#description hasValue "Analytical location holding between non_physical endurants and abstract regions."
+		rdfs#seeAlso hasValue dolce#abstract_location
+	endnfp
+	
+relation generic_location_of (ofType particular, ofType particular)  subRelationOf mediated_relation_i
+	nfp
+		dc#title hasValue "generic location of@en"
+		dc#description hasValue "The most generic location relation, probably equivalent to more than one image schema in a cognitive system (e.g. containment for exact location, proximity for approximate location).This is meant to reason on generalized, common sense as well as formal locations, including naive localization, between any kinds of entities. Generic location is branched into 'exact' location, ranging on regions, and 'approximate' (naive) location, ranging on non_regions."
+		rdfs#seeAlso hasValue dolce#generic_location_of
+	endnfp
+	
+relation generic_location (ofType particular, ofType particular)  subRelationOf mediated_relation
+	nfp
+		dc#title hasValue "generic_location@en"
+		dc#description hasValue "The most generic location relation, probably equivalent to more than one image schema in a cognitive system (e.g. containment for exact location, proximity for approximate location).This is meant to reason on generalized, common sense as well as formal locations, including naive localization, between any kinds of entities. Generic location is branched into 'exact' location, ranging on regions, and 'approximate' (naive) location, ranging on non_regions."
+		rdfs#seeAlso hasValue dolce#generic_location
+	endnfp	
+	
+	
+relation physical_location (ofType physical_endurant, ofType physical_region)  subRelationOf exact_location
+	nfp
+		dc#title hasValue "physical_location@en"
+		dc#description hasValue "Analytical location holding between physical endurants and physical regions."
+		rdfs#seeAlso hasValue dolce#mediated_relation_i
+	endnfp
+	
+relation physical_location_of (ofType physical_region, ofType physical_endurant)  subRelationOf exact_location_of
+	nfp
+		dc#title hasValue "physical_location_of@en"
+		dc#description hasValue "Analytical location holding between physical endurants and physical regions."
+		rdfs#seeAlso hasValue dolce#physical_location_of
+	endnfp
+	
+relation q_location_of (ofType region, ofType quality)  subRelationOf immediate_relation_i
+	nfp
+		dc#title hasValue "q_location_of@en"
+		dc#description hasValue "The immediate relation holding for qualities and regions. See 'generic location' branching for the various mediated relations that embed q_location."
+		rdfs#seeAlso hasValue dolce#q_location_of
+	endnfp
+	
+relation q_location  (ofType quality, ofType region)  subRelationOf immediate_relation
+	nfp
+		dc#title hasValue "q_location@en"
+		dc#description hasValue "The immediate relation holding for qualities and regions. See 'generic location' branching for the various mediated relations that embed q_location."
+		rdfs#seeAlso hasValue dolce#q_location
+	endnfp
+	
+relation total_constant_participant (ofType perdurant, ofType endurant)  subRelationOf constant_participant
+	nfp
+		dc#title hasValue "total_constant_participant@en"
+		dc#description hasValue "The perdurant p has a participant e that constantly participates in p with all its parts, e.g. in 'I played the concert' (where the concert is a solo concert)."
+		rdfs#seeAlso hasValue dolce#total_constant_participant
+	endnfp	
+	
+relation total_constant_participant_in (ofType endurant, ofType perdurant)  subRelationOf constant_participant_in
+	nfp
+		dc#title hasValue "total_constant_participant_in@en"
+		dc#description hasValue "The perdurant p has a participant e that constantly participates in p with all its parts, e.g. in 'I played the concert' (where the concert is a solo concert)."
+		rdfs#seeAlso hasValue dolce#total_constant_participant_in
+	endnfp
+	
+relation sibling_part (ofType particular, ofType particular)  subRelationOf mediated_relation
+	nfp
+		dc#title hasValue "sibling part@en"
+		dc#description hasValue "Mereological sibling: having a common whole"
+		rdfs#seeAlso hasValue dolce#sibling_part
+	endnfp
+	
+relation spatio_temporally_present_at (ofType particular, ofType spatio_temporal_region)  subRelationOf exact_location
+	nfp
+		dc#title hasValue "spatio_temporally_present_at@en"
+		dc#description hasValue ""
+		rdfs#seeAlso hasValue dolce#spatio_temporally_present_at
+	endnfp
+	
+relation spatio_temporal_presence_of (ofType spatio_temporal_region, ofType particular)  subRelationOf exact_location_of
+	nfp
+		dc#title hasValue "spatio_temporal_presence_of@en"
+		dc#description hasValue ""
+		rdfs#seeAlso hasValue dolce#spatio_temporal_presence_of
+	endnfp
+	
+relation strong_connection (ofType particular, ofType particular)  subRelationOf mediated_relation
+	nfp
+		dc#title hasValue "strong_connection@en"
+		dc#description hasValue "By strong connection here we mean a connection between  two entities that share a boundary."
+		rdfs#seeAlso hasValue dolce#strong_connection
+	endnfp	
+	 
+relation exact_location_of (ofType region, ofType particular)  subRelationOf generic_location_of
+	nfp
+		dc#title hasValue "exact location of@en"
+		dc#description hasValue "A location relation bounded to regions and defined analytically through the composition of inherence and q_location. This is the analytical version of 'generic location'."
+		rdfs#seeAlso hasValue dolce#exact_location_of
+	endnfp
+	
+relation exact_location (ofType particular, ofType region)  subRelationOf generic_location
+	nfp
+		dc#title hasValue "exact location@en"
+		dc#description hasValue "A location relation bounded to regions and defined analytically through the composition of inherence and q_location. This is the analytical version of 'generic location'."
+		rdfs#seeAlso hasValue dolce#exact_location
+	endnfp
+	
+relation temporary_atomic_part (ofType endurant, ofType endurant)  subRelationOf temporary_proper_part
+	nfp
+		dc#title hasValue "temporary_atomic_part@en"
+		dc#description hasValue "Having an atom as part at a time t."
+		rdfs#seeAlso hasValue dolce#temporary_atomic_part
+	endnfp
+	
+relation temporary_atomic_part_of (ofType endurant, ofType endurant)  subRelationOf temporary_proper_part_of
+	nfp
+		dc#title hasValue "temporary_atomic_part_of@en"
+		dc#description hasValue "Having an atom as part at a time t."
+		rdfs#seeAlso hasValue dolce#temporary_atomic_part_of
+	endnfp
+	
+relation overlaps (ofType particular, ofType particular)  subRelationOf mediated_relation
+	nfp
+		dc#title hasValue "overlaps@en"
+		dc#description hasValue "Mereological overlap: having a common part."
+		rdfs#seeAlso hasValue dolce#overlaps
+	endnfp	
+	
