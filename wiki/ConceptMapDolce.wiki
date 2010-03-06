@@ -1,1 +1,1 @@
-http://wsmls.googlecode.com/svn/trunk/global/Dolce/concept_map_small.png
+http://wsmls.googlecode.com/svn/trunk/global/Dolce/concept_map.png
