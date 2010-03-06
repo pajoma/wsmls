@@ -1,1 +1,4 @@
-http://wsmls.googlecode.com/svn/trunk/global/Dolce/concept_map.png
+Link to the ontology: http://wsmls.googlecode.com/svn/trunk/global/Dolce/DOLCE-Lite.wsml
+
+
+<img src="http://wsmls.googlecode.com/svn/trunk/global/Dolce/concept_map.png" width="100%"/>
