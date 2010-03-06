@@ -1,0 +1,29 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://swing.uni-muenster.de/core/pattern/", 
+		dc _"http://purl.org/dc/elements/1.1/#", 
+     	wsml _"http://www.wsmo.org/wsml/wsml-syntax#",
+     	rdf _"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+     	rdfs _"http://www.w3.org/2000/01/rdf-schema#",
+     	dolce _"http://www.load-cnr.it/ontologies/DOLCE-Lite.owl"	
+     	}
+
+ontology Systems 
+     nonFunctionalProperties
+     	dc#creator hasValue "p.maue© (IFGI)"
+		dc#contributor hasValue "h.michels (IFGI)"
+		dc#publisher hasValue "(a)IfGI, University of Muenster"
+		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+		dc#type hasValue "Semantic Pattern"
+		dc#title hasValue "Semantic Pattern: Systems"	
+		dc#subject hasValue "Pattern, Systems "			
+     endNonFunctionalProperties
+ 
+concept System
+	involvedPhysicalEndurant impliesType dolce#physical\-endurant
+	involvedPerdurant impliesType dolce#perdurant
+
+concept Model subConceptOf geographic_quality
+	nfp
+		rdfs#label hasValue "Aspect@en"
+		dc#description hasValue "In geography, aspect refers to the horizontal direction to which Slope faces." 
+	endnfp 
