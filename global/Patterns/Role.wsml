@@ -1,0 +1,45 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://swing.uni-muenster.de/core/pattern/", 
+		dc _"http://purl.org/dc/elements/1.1/#", 
+     	wsml _"http://www.wsmo.org/wsml/wsml-syntax#",
+     	rdf _"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+     	rdfs _"http://www.w3.org/2000/01/rdf-schema#",
+     	dul _"http://www.loa-cnr.it/ontologies/DUL.owl"	
+     	}
+
+ontology RolePattern
+     nonFunctionalProperties
+     	dc#creator hasValue "p.maue (IFGI)"
+		dc#contributor hasValue ""
+		dc#publisher hasValue "(a)IfGI, University of Muenster"
+		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+		dc#type hasValue "Semantic Pattern"
+		dc#title hasValue "Semantic Pattern: Role"	
+		dc#subject hasValue "Pattern, Role"			
+     endNonFunctionalProperties
+     
+     
+concept Role
+	nfp
+		dc#label hasValue "Role@en"
+		dc#label hasValue "Rolle@de"
+	endnfp 
+	isPlayedBy impliesType 	dul#Agent
+			nonFunctionalProperties
+				rdfs#label hasValue "wird gespielt von@de"
+				rdfs#label hasValue "is played by@en"
+				dc#description hasValue ""
+				dc#source hasValue ""
+				rdfs#comments hasValue ""
+			endNonFunctionalProperties
+	
+concept TemporaryRole
+	nfp
+		rdfs#label hasValue "Temporary Role@en"
+		rdfs#label hasValue "Rolle, vorübergehend@de"
+		comment hasValue "A role which is played only a certain time, e.g. a student" 
+	endnfp 
+	startTime impliesType dul#TimeInterval
+	endTime impliesType dul#TimeInterval
+	
+
