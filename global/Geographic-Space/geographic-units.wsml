@@ -1,0 +1,129 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://purl.org/net/wsml/geospace#", 
+		dc _"http://purl.org/dc/elements/1.1/",
+     	wsml _"http://www.wsmo.org/wsml/wsml-syntax#",
+     	rdf _"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+     	rdfs _"http://www.w3.org/2000/01/rdf-schema#",
+     	dolce _"http://purl.org/net/wsml/dolce#",
+     	dolceSpatial _"http://purl.org/net/wsml/dolceSpatial#"
+     	}
+
+ontology geographic_units
+     nonFunctionalProperties
+     	dc#creator hasValue "p.maue (IFGI)"
+		dc#contributor hasValue "e.klien (IFGI)"
+		dc#publisher hasValue "(a)IfGI, University of Muenster"
+		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+		dc#type hasValue "Domain Ontology"
+		dc#description hasValue "A generic ontology suitable to describe objects and events in the geographic space, e.g. weather, forests, mountains, rivers, snow, ..." 
+		dc#title hasValue "Geographic Space Ontology"	
+		dc#subject hasValue "Geography"			
+     endNonFunctionalProperties
+
+
+concept natural_unit subConceptOf geographical_unit
+	nfp
+		rdfs#label hasValue "Natürliche Einheit@de"
+		rdfs#label hasValue "Natural Unit@en"
+		dc#description hasValue "A geographic unit created naturally" 
+		dc#subject hasValue "Units"	
+	endnfp 
+
+concept anthropogenic_unit subConceptOf geographical_unit
+	nfp
+		rdfs#label hasValue "Vom Menschen erbautes Objekt@de"
+		rdfs#label hasValue "Anthropogenic Unit@en"
+		dc#description hasValue "A geographic unit created by humans" 
+		dc#subject hasValue "Units"	
+	endnfp 
+
+
+
+
+/*
+ 	Geomorphology is the study of landforms
+ 	check out: http://en.wikipedia.org/wiki/Landforms
+*/
+concept geomorphological_unit subConceptOf geographical_unit
+	nfp
+		rdfs#label hasValue "Geomorphologische Einheit@de"
+		rdfs#label hasValue "Geomorphological Unit@en"
+		dc#description hasValue "A landform comprises a geomorphological unit" 
+		dc#subject hasValue "Units"	
+	endnfp 
+
+/*
+ Lex Comber et al. (2005). "What is land cover?". Environment and Planning B: Planning and Design (32): 199–209.
+ 
+ From GEMET: 
+ Land cover is the physical state of the land surface. It is the combination of vegetation, soil, rock, water and human-made 
+ structures, which make up the earth's landscape. The land cover is the interface between the earth's crust and the atmosphere, 
+ influencing the exchange of energy and matter in the climatic system and biogeochemical cycles. (Source: BRS)
+ 
+
+ */
+concept landcover_unit subConceptOf geographical_unit
+	nfp
+		rdfs#label hasValue "Einheit der Landbedeckung@de"
+		rdfs#label hasValue "Land Cover Unit@en"
+		dc#description hasValue "Land cover is the physical state of the land surface. Land Cover Units are discernible parts of Land Cover, e.g. the forest or a street"
+		dc#subject hasValue "Units"	 
+	endnfp 
+
+
+concept vegetation_community subConceptOf LandCoverUnit
+	nfp
+		rdfs#label hasValue "Vegetation@de"
+		rdfs#label hasValue "Vegetation@en"
+		dc#description hasValue "The plants of an area considered in general or as communities, but not taxonomically;" 
+		dc#subject hasValue "LandCover"	
+	endnfp 
+
+
+
+concept forest subConceptOf vegetation_community
+	nfp
+		rdfs#label hasValue "Wald@de"
+		rdfs#label hasValue "forest@en"
+		comment hasValue "A vegetation community dominated by trees and other woody shrubs, growing close enough together that the tree tops touch or overlap, creating various degrees of shade on the forest floor. It may produce benefits such as timber, recreation, wildlife habitat, etc. (Source: DUNSTE)"
+		dc#subject hasValue "LandCover"
+	endnfp 
+	
+/*
+Grassland cover nearly one-fifth of the Earth's land surface. They include 
+savannah, the prairies of North America, and the steppes of Russia and Central Asia. 
+Grassland ecosystems support thousands of different species, above and below the ground, 
+and have a vital part to play maintaining the ecological balance of the world. (Source: WRIGHT)
+*/
+concept grassland subConceptOf vegetation_community
+	nfp
+		rdfs#label hasValue "Gruenland@de"
+		rdfs#label hasValue "grassland@en"
+		comment hasValue "A vegetation community in which grasses are the most conspicuous plants"
+		dc#subject hasValue "LandCover"
+	endnfp 
+	
+concept brushwood subConceptOf vegetation_community
+	nfp
+		rdfs#label hasValue "Unterholz@de"
+		rdfs#label hasValue "brushwood@en"
+		comment hasValue "Branches and twigs fallen from trees and shrubs; small trees and shrubs "
+		dc#subject hasValue "LandCover"
+	endnfp  
+	
+	
+/* note that a River is not simply a subconcept of the waterbody. A River is a 
+system, and the waterbody is just a (essential) part of it) */
+concept waterbody subConceptOf landcover_unit
+	nfp
+		rdfs#label hasValue "Gewaesser@de"
+		rdfs#label hasValue "water body@en"
+		comment hasValue "any kind of accumulation of water, as oceans, rivers or lakes"
+		dc#subject hasValue "LandCover"
+	endnfp 
+	dolce#has\-quality impliesType water#VolumeOfWaterbody
+	
+
+	
+
+

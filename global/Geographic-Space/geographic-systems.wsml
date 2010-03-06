@@ -1,0 +1,52 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://purl.org/net/wsml/geospace#", 
+		dc _"http://purl.org/dc/elements/1.1/",
+     	wsml _"http://www.wsmo.org/wsml/wsml-syntax#",
+     	rdf _"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+     	rdfs _"http://www.w3.org/2000/01/rdf-schema#",
+     	dolce _"http://purl.org/net/wsml/dolce#"
+     	}
+
+ontology geographic_systems
+     nonFunctionalProperties
+     	dc#creator hasValue "p.maue (IFGI)"
+		dc#contributor hasValue "h.michels (IFGI)"
+		dc#publisher hasValue "(a)IfGI, University of Muenster"
+		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+		dc#type hasValue "Domain Ontology"
+		dc#description hasValue "A generic ontology suitable to describe objects and events in the geographic space, e.g. weather, forests, mountains, rivers, snow, ..." 
+		dc#title hasValue "Geographic Space Ontology"	
+		dc#subject hasValue "Geography"			
+     endNonFunctionalProperties
+
+
+concept GeographicSystem subConceptOf patterns#System
+	nfp
+		rdfs#label hasValue "System, geographisch@de"
+		rdfs#label hasValue "geographical system@en"
+		comment hasValue "a system in the geographical space"
+		dc#subject hasValue "Systems"		
+	endnfp 
+	surroundedBy impliesType Environment
+			nfp
+				rdfs#label hasValue "umgeben von@de"
+				rdfs#label hasValue "sourrounded by@en"
+				dc#description hasValue ""
+				dc#source hasValue ""
+				rdfs#comments hasValue ""
+			endnfp
+			
+		
+/* environment is an example of a region without a defined boundary (but a well-defined center) */
+concept Environment subConceptOf patterns#Role
+	nfp
+		rdfs#label hasValue "Umgebung@de"
+		rdfs#label hasValue "Environment@en"
+		comment hasValue "the sourrounding geographical unit of a system"
+		dc#subject hasValue "Environment"	
+	endnfp 
+	
+
+	
+
+
