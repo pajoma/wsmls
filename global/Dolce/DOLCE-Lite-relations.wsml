@@ -7,7 +7,7 @@ namespace { _"http://purl.org/net/wsml/dolce#",
 
 ontology DOLCE_Lite_relations
      nfp
-        dc#creator hasValue "Patrick Maué(IFGI)"
+        dc#creator hasValue "p.maue (IFGI)"
         dc#publisher hasValue "IfGI, University of Muenster"
 		dc#type hasValue "Foundational Ontology"
 		dc#title hasValue "Dolce Ontology (relations)"	

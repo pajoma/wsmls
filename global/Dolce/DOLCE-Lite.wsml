@@ -7,7 +7,7 @@ namespace { _"http://purl.org/net/wsml/dolce#",
 
 ontology DOLCE_Lite
      nfp
-        dc#creator hasValue "Patrick Maué(IFGI)"
+        dc#creator hasValue "p.maue (IFGI)"
         dc#publisher hasValue "IfGI, University of Muenster"
 		dc#type hasValue "Foundational Ontology"
 		dc#title hasValue "DOLCE Foundational Ontology"	
@@ -17,10 +17,8 @@ ontology DOLCE_Lite
      endnfp
 
 /*** 
- * CONCEPTS
+ * CONCEPTS 
  */
-
-	 
 concept abstract subConceptOf particular
 	nfp
 		dc#title hasValue "Abstract@en"
@@ -55,7 +53,7 @@ concept achievement subConceptOf event
 concept accomplishment subConceptOf event
 	nfp
 		dc#title hasValue "Accomplishment@en"
-		dc#description hasValue "Eventive occurrences (events) are called achievements if they are atomic, otherwise they are accomplishments.Further developments: being 'achievement', 'accomplishment', 'state', 'event', etc. can be also considered 'aspects' of processes or of parts of them. For example, the same process 'rock erosion in the Sinni valley' can be seen as an accomplishment (what has brought the current state that e.g. we are trying to explain), as an achievement (the erosion process as the result of a previous accomplishment), as a state (collapsing the time interval of the erosion into a time point), as an event (what has changed our focus from a state to another).In the erosion case, we could have good motivations to shift from one aspect to another: a) causation focus, b) effectual focus, c) condensation d) transition (causality)."
+		dc#description hasValue "Eventive occurrences (events) are called achievements  if they are atomic, otherwise they are accomplishments.Further developments: being 'achievement', 'accomplishment', 'state', 'event', etc. can be also considered 'aspects' of processes or of parts of them. For example, the same process 'rock erosion in the Sinni valley' can be seen as an accomplishment (what has brought the current state that e.g. we are trying to explain), as an achievement (the erosion process as the result of a previous accomplishment), as a state (collapsing the time interval of the erosion into a time point), as an event (what has changed our focus from a state to another).In the erosion case, we could have good motivations to shift from one aspect to another: a) causation focus, b) effectual focus, c) condensation d) transition (causality)."
 		rdfs#seeAlso hasValue dolce#accomplishment
 	endnfp	
 
@@ -90,6 +88,13 @@ concept event subConceptOf perdurant
 		rdfs#seeAlso hasValue dolce#event
 	endnfp		
 		
+concept endurant subConceptOf spatio_temporal_particular
+	nfp
+		dc#title hasValue "Endurant@en"
+		dc#description hasValue "The main characteristic of endurants is that all of them are independent essential wholes. This does not mean that the corresponding property (being an endurant) carries proper unity, since there is  no common unity criterion for endurants. Endurants can 'genuinely' change in time,  in the sense that the very same endurant as a whole can have incompatible properties at different times. To see this, suppose that an endurant - say 'this paper' - has a  property at a time t 'it's white', and a different, incompatible property at time t'  'it's yellow': in both cases we refer to the whole object, without picking up any  particular part of it. Within endurants, we distinguish between physical and non-physical  endurants, according to whether they have direct spatial qualities. Within physical  endurants, we distinguish between amounts of matter, objects, and features."
+		rdfs#seeAlso hasValue dolce#endurant
+	endnfp		
+		
 concept feature subConceptOf physical_endurant
 	nfp
 		dc#title hasValue "Feature@en"
@@ -109,7 +114,7 @@ concept non_physical_endurant subConceptOf endurant
 	part ofType non_physical_endurant
 	
 	
-concept non_physical_object subConceptOf  non_physical_endurant
+concept non_physical_object subConceptOf non_physical_endurant
 	nfp
 		dc#title hasValue "Non-Physical Object@en"
 		dc#description hasValue "Formerly known as description. A unitary endurant with no mass (non-physical), generically constantly depending on some agent, on some communication act, and indirectly on some agent participating in that act. Both descriptions (in the now current sense) and concepts are non-physical objects."
@@ -145,7 +150,7 @@ concept physical_object subConceptOf physical_endurant
 	endnfp	
 		
 
-concept physical_endurant subConceptOf spatio_temporal_region
+concept physical_endurant subConceptOf endurant
 	nfp
 		dc#title hasValue "Physical Endurant@en"
 		dc#description hasValue "An endurant having a direct physical (at least spatial) quality."
@@ -159,6 +164,12 @@ concept physical_quality subConceptOf quality
 		rdfs#seeAlso hasValue dolce#physical\-quality
 	endnfp	
 
+concept physical_region subConceptOf quality
+	nfp
+		dc#title hasValue "Physical Region@en"
+		dc#description hasValue "A region at which only physical qualities can be  directly located. It assumes some metrics for physical properties."
+		rdfs#seeAlso hasValue dolce#physical\-region
+	endnfp	
 	
 	
 concept process subConceptOf stative
@@ -291,7 +302,14 @@ concept temporal_region subConceptOf region
 	endnfp
 	part ofType temporal_region
 	q_location_of ofType temporal_quality
-
+	
+concept time_interval subConceptOf region
+	nfp
+		dc#title hasValue "Time Interval@en"
+		dc#description hasValue "A temporal region, measured according to a calendar."
+		rdfs#seeAlso hasValue dolce#time\-interval 
+	endnfp
+				
 
 /*** 
  * RELATIONS  
