@@ -1,0 +1,6 @@
+Link to the ontology: <a href="http://code.google.com/p/wsmls/source/browse/trunk/global/DolceModules/DOLCE_SpatialRelations.wsml">http://code.google.com/p/wsmls/source/browse/trunk/global/DolceModules/DOLCE_SpatialRelations.wsml</a>
+Namespace: http://purl.org/net/wsml/dolceSpatial#
+
+<a href="http://wsmls.googlecode.com/svn/trunk/global/DolceModules/Dolce-SpatialRelations.png">
+<img src="http://wsmls.googlecode.com/svn/trunk/global/DolceModules/Dolce-SpatialRelations.png" width="100%"/>
+</a>
