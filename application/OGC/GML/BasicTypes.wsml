@@ -1,0 +1,48 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://purl.net/concepts/",
+dc _"http://purl.org/dc/elements/1.1/", 
+gml _"http://www.opengis.net/gml/3.2#"
+ }
+
+/* check for documentation: 
+ * http://www.liquid-technologies.com/LibraryDocs/OpenGis/om/1.0.0/default.html
+ */
+
+
+ontology BasicTypes
+	nonFunctionalProperties
+		dc#creator hasValue "pajoma"
+		dc#publisher hasValue "(a)IfGI, University of Muenster"
+		dc#date hasValue "12-02-2010"
+		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+		dc#type hasValue "Ontology"
+		dc#title hasValue "OGC Basic Types"
+		dc#description hasValue "simple content types derived using the XML Schema mechanisms are used for the representation of data types in GML.  "
+		dc#source hasValue "http://schemas.opengis.net/gml/3.2.1/feature.xsd"
+	endNonFunctionalProperties
+
+	/*elements*/
+
+	concept gml#Code
+		nonFunctionalProperties
+			dc#title hasValue "GML Code "
+			dc#description hasValue "gml:CodeType is a generalized type to be used for a term, keyword or name. It adds a XML attribute codeSpace to a term, where the value of the codeSpace attribute (if present) shall indicate a dictionary, thesaurus, classification scheme, authority, or pattern for the term"
+		endNonFunctionalProperties
+		value ofType _string
+		gml#codeSpace ofType gml#codeSpace
+	
+	concept gml#CodeWithAuthority subConceptOf gml#Code
+		nonFunctionalProperties
+			dc#description hasValue "gml:CodeWithAuthorityType requires that the codeSpace attribute is provided in an instance"
+		endNonFunctionalProperties
+	
+	/*attributes*/
+		
+	concept gml#codeSpace
+		value ofType _iri
+		
+	concept gml#NilReason
+		nonFunctionalProperties
+			dc#description hasValue "gml:NilReasonType defines a content model that allows recording of an explanation for a void value or other exception. gml:NilReasonType is a union of the following enumerated values: - inapplicable there is no value - missing the correct value is not readily available to the sender of this data. Furthermore, a correct value may not exist - template the value will be available later - unknown the correct value is not known to, and not computable by, the sender of this data. However, a correct value probably exists - withheld the value is not divulged - other:text other brief explanation, where text is a string of two or more characters with no included spaces and - anyURI which should refer to a resource which describes the reason for the exception A particular community may choose to assign more detailed semantics to the standard values provided. Alternatively, the URI method enables a specific or more complete explanation for the absence of a value to be provided elsewhere and indicated by-reference in an instance document. gml:NilReasonType is used as a member of a union in a number of simple content types where it is necessary to permit a value from the NilReasonType union as an alternative to the primary type."
+		endNonFunctionalProperties
+		value ofType _iri		

@@ -1,0 +1,98 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://purl.net/concepts/",
+dc _"http://purl.org/dc/elements/1.1/", 
+xlink _"http://www.w3.org/1999/xlink"
+ }
+
+
+
+ontology XLink
+	nonFunctionalProperties
+		dc#creator hasValue "pajoma"
+		dc#publisher hasValue "(a)IfGI, University of Muenster"
+		dc#date hasValue "12-02-2010"
+		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+		dc#type hasValue "Ontology"
+		dc#title hasValue "GML 3.0 candidate xlinks schema."
+		dc#description hasValue "A GML feature is a (representation of a) identifiable real-world object in a selected domain of discourse. The feature schema provides a framework for the creation of GML features and feature collections."
+		dc#source hasValue "http://schemas.opengis.net/xlink/1.0.0/"
+	endNonFunctionalProperties
+
+	/*attribute groups*/
+
+	concept xlink#simpleLink 
+		type ofType _string
+		xlink#href ofType xlink#href
+		xlink#role ofType xlink#role
+		xlink#arcrole ofType xlink#arcrole
+		xlink#title ofType xlink#title
+		xlink#show ofType xlink#show
+		xlink#actuate ofType xlink#actuate
+		
+	concept xlink#extendedLink
+		type ofType _string
+		xlink#role ofType xlink#role
+		xlink#title ofType xlink#title
+	
+	concept xlink#locatorLink
+		type ofType _string
+		xlink#href ofType xlink#href
+		xlink#role ofType xlink#role
+		xlink#title ofType xlink#title
+		xlink#label ofType xlink#label
+
+	concept xlink#arcLink
+		type ofType _string
+		xlink#arcrole ofType xlink#arcrole
+		xlink#title ofType xlink#title
+		xlink#from ofType xlink#from
+		xlink#to ofType xlink#to
+		xlink#show ofType xlink#show	
+		xlink#actuate ofType xlink#actuate	
+	
+	concept xlink#resourceLink
+		type ofType _string
+		xlink#role ofType xlink#role
+		xlink#title ofType xlink#title
+		xlink#label ofType xlink#label
+	
+	concept xlink#titleLink
+		type ofType _string
+	
+	concept xlink#emptyLink
+		type ofType _string
+	
+	/*attributes*/
+	
+	concept xlink#href
+		value ofType _iri
+		
+	concept xlink#role
+		value ofType _iri
+		
+	concept xlink#arcrole
+		value ofType _iri
+		
+	concept xlink#title
+		value ofType _string
+		
+	concept xlink#show
+		nonFunctionalProperties
+			dc#description hasValue "The 'show' attribute is used to communicate the desired presentation of the ending resource on traversal from the starting resource; it's value should be treated as follows: new - load ending resource in a new window, frame, pane, or other presentation context replace - load the resource in the same window, frame, pane, or other presentation context embed - load ending resource in place of the presentation of the starting resource other - behavior is unconstrained; examine other markup in the link for hints none - behavior is unconstrained"
+		endNonFunctionalProperties
+		value ofType _string
+		
+	concept xlink#actuate
+		nonFunctionalProperties
+			dc#description hasValue "The 'actuate' attribute is used to communicate the desired timing of traversal from the starting resource to the ending resource; it's value should be treated as follows: onLoad - traverse to the ending resource immediately on loading the starting resource onRequest - traverse from the starting resource to the ending resource only on a post-loading event triggered for this purpose other - behavior is unconstrained; examine other markup in link for hints none - behavior is unconstrained"
+		endNonFunctionalProperties
+		value ofType _string
+		
+	concept xlink#label
+		value ofType _string
+		
+	concept xlink#from
+		value ofType _string
+		
+	concept xlink#to
+		value ofType _string

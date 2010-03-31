@@ -1,0 +1,35 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://purl.net/concepts/",
+dc _"http://purl.org/dc/elements/1.1/", 
+om _"http://www.opengis.net/om/1.0#",
+gml _"http://www.opengis.net/gml/3.2#",
+swe _"http://www.opengis.net/swe/1.0.1#"
+ }
+
+/* check for documentation: 
+ * http://www.liquid-technologies.com/LibraryDocs/OpenGis/om/1.0.0/default.html
+ */
+ 
+
+ontology TemporalAggregates
+	nonFunctionalProperties
+		dc#creator hasValue "pajoma"
+		dc#publisher hasValue "(a)IfGI, University of Muenster"
+		dc#date hasValue "12-02-2010"
+		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+		dc#type hasValue "Ontology"
+		dc#title hasValue "SWE Temporal Aggregates"
+		dc#description hasValue "time geometric complex, time aggregates and time grids"
+		dc#source hasValue "http://www.liquid-technologies.com/LibraryDocs/OpenGis/om/1.0.0/default.html?url=http://www.liquid-technologies.com/LibraryDocs/OpenGis/om/1.0.0/TimeObjectPropertyType.html"
+	endNonFunctionalProperties
+
+ 	concept swe#TimeAggregate subConceptOf gml#AbstractTimeObject
+ 		nonFunctionalProperties
+ 			dc#title hasValue "an arbitrary set of TimeObjects, often TimeInstants and TimePeriods"
+ 		endNonFunctionalProperties
+	concept swe#TimeGeometricComplex
+	concept swe#TimeGrid
+	concept swe#TimeInstantGrid
+	concept swe#TimeIntervalGrid
+	
+	

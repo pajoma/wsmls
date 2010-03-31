@@ -1,0 +1,44 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://purl.net/concepts/",
+	dc _"http://purl.org/dc/elements/1.1/", 
+	om _"http://www.opengis.net/om/1.0",
+	gml _"http://www.opengis.net/gml/3.2"
+ }
+
+/* check for documentation: 
+ * http://www.liquid-technologies.com/LibraryDocs/OpenGis/om/1.0.0/default.html
+ */
+ 
+ontology Coverage
+
+	nonFunctionalProperties
+		dc#creator hasValue "pajoma"
+		dc#publisher hasValue "(a)IfGI, University of Muenster"
+		dc#date hasValue "12-02-2010"
+		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+		dc#type hasValue "Ontology"
+		dc#title hasValue "GML Feature"
+		dc#description hasValue "See ISO/DIS 19136 20.3."
+		dc#source hasValue "http://schemas.opengis.net/gml/3.2.1/feature.xsd"
+	endNonFunctionalProperties
+
+concept gml#AbstractCoverage
+
+concept gml#AbstractDiscreteCoverage
+
+concept gml#AbstractContinuousCoverage
+//	gml#coverageFunction ofType gml#CoverageFunction
+	
+concept gml#CoverageFunction
+//	gml#mappingRule ofType gml#MappingRule
+//	gml#coverageMappingRule ofType gml#MappingRule
+//	gml#gridFunction ofType gml#GridFunction
+	
+concept gml#MappingRule
+
+concept gml#GridFunction
+	
+concept gml#GridCoverage
+
+concept gml#GridFunction
+

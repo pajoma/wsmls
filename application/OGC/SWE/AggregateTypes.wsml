@@ -1,0 +1,47 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://purl.net/concepts/",
+dc _"http://purl.org/dc/elements/1.1/", 
+om _"http://www.opengis.net/om/1.0#",
+gml _"http://www.opengis.net/gml/3.2#",
+swe _"http://www.opengis.net/swe/1.0.1#"
+ }
+
+/* check for documentation: 
+ * http://www.liquid-technologies.com/LibraryDocs/OpenGis/om/1.0.0/default.html
+ */
+
+ontology AggregateTypes
+	nonFunctionalProperties
+		dc#creator hasValue "pajoma"
+		dc#publisher hasValue "(a)IfGI, University of Muenster"
+		dc#date hasValue "12-02-2010"
+		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+		dc#type hasValue "Ontology"
+		dc#title hasValue "SWE Aggregates"
+		dc#description hasValue "SWE Common schema for aggregate data types"
+		dc#source hasValue "http://schemas.opengis.net/sweCommon/1.0.1/"
+	endNonFunctionalProperties
+
+ 	concept swe#AbstractDataArray subConceptOf gml#AbstractGML
+ 	concept swe#AbstractDataArray subConceptOf gml#AbstractGML
+ 	concept swe#AbstractDataRecord subConceptOf gml#AbstractGML
+ 	concept swe#ConditionalData subConceptOf gml#AbstractGML
+ 	concept swe#ConditionalValue subConceptOf gml#AbstractGML
+ 	concept swe#DataArray subConceptOf gml#AbstractGML
+ 	concept swe#DataRecord subConceptOf gml#AbstractGML
+ 	concept swe#SimpleDataRecord subConceptOf gml#AbstractGML
+ 		
+		
+	// not in schema, to accomodate the anyType thing
+	concept swe#AnyData subConceptOf gml#AbstractGML
+		nonFunctionalProperties
+			dc#title hasValue "Any Type"
+		endNonFunctionalProperties
+	
+	concept swe#TimeObjectProperty
+		nonFunctionalProperties
+			dc#description hasValue "Property type not provided by GML"
+		endNonFunctionalProperties
+		
+	
+	
