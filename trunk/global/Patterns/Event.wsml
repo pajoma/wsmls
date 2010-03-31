@@ -1,0 +1,42 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-core"
+namespace { _"http://swing.uni-muenster.de/core/", 
+     rdf _"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+     rdfs _"http://www.w3.org/2000/01/rdf-schema#",
+     dc _"http://purl.org/dc/elements/1.1/",
+     patterns _"http://swing.uni-muenster.de/core/pattern/",
+     geo _"http://swing.uni-muenster.de/core/GeographicSpace/",
+     dolce _"http://www.load-cnr.it/ontologies/DOLCE-Lite.owl"
+     }
+
+ontology EventPattern
+     nonFunctionalProperties
+        dc#creator hasValue "h.michels (IFGI)"
+		dc#contributor hasValue ""
+		dc#publisher hasValue "(a)IfGI, University of Muenster"
+		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+		dc#type hasValue "Semantic Pattern"
+		dc#title hasValue "Semantic Pattern: Event"	
+		dc#subject hasValue "Pattern, Event"
+     endNonFunctionalProperties
+     
+    concept Event subConceptOf dolce#perdurant
+	nfp
+		dc#label hasValue "event@en"
+		dc#label hasValue "Event@de"
+	endnfp 
+		initiates impliesType dolce#perdurant
+			nfp
+				rdfs#label hasValue "initiiert@de"
+				rdfs#label hasValue "initiate@en"
+				dc#description hasValue ""
+				dc#source hasValue ""
+				rdfs#comments hasValue ""
+			endnfp
+		changes impliesType dolce#quality
+			nfp
+				rdfs#label hasValue "ver�ndert@de"
+				rdfs#label hasValue "changes@en"
+				dc#description hasValue "an event changes something (here Quality)"
+				dc#source hasValue ""
+				rdfs#comments hasValue ""
+			endnfp
