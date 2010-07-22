@@ -1,0 +1,42 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://ifgi.uni-muenster.de/~schades/Phd/Annotation/current#",
+    rdfs _"http://www.w3.org/2000/01/rdf-schema#",
+    dc _"http://purl.org/dc/elements/1.1/", 
+    wsml _"http://www.wsmo.org/wsml/wsml-syntax#"
+ }
+
+ontology Annotation
+	nonFunctionalProperties
+		dc#creator hasValue "s.schade (IFGI)"
+		dc#hasVersion hasValue "0.1 beta"
+		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+		dc#type hasValue "Annotation Ontology"
+		dc#title hasValue "Annotation Ontology"	
+		dc#description hasValue "This ontology captures the old and new relations for implementing annotations"
+		dc#subject hasValue "annotation, reference, domain, measure"
+	endNonFunctionalProperties
+
+// old:
+relation annotate/2
+	nonFunctionalProperties
+		dc#title hasValue "annotate relation"	
+		dc#description hasValue "..."
+		rdfs#seeAlso hasValue "http://dolce/klien/swing..."
+	endNonFunctionalProperties
+
+// new:
+relation domainReference/2
+	nonFunctionalProperties
+		dc#title hasValue "relation to the domain model"	
+		dc#description hasValue "..."
+		rdfs#seeAlso hasValue "annotate relation"
+	endNonFunctionalProperties
+
+relation measureReference/2
+	nonFunctionalProperties
+		dc#title hasValue "relation to the reference space"	
+		dc#description hasValue "..."
+	endNonFunctionalProperties
+
+
+ 
