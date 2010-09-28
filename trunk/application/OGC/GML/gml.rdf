@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  
+This ontology is made available under the Open Data Commons 
+Attribution License: http://opendatacommons.org/licenses/by/1.
+-->
+<rdf:RDF xml:base="http://purl.org/ifgi/gml/0.1/" xmlns:gml="http://purl.org/ifgi/gml/0.1/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+	<rdf:Description rdf:about="AbstractGML">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#Class"/>
+		</rdf:type>
+	</rdf:Description>
+	<rdf:Description rdf:about="AbstractFeature">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#Class"/>
+		</rdf:type>
+		<rdfs:subClassOf>
+			<rdf:Description rdf:about="AbstractGML"/>
+		</rdfs:subClassOf>
+	</rdf:Description>
+	<rdf:Description rdf:about="AbstractGeometry">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#Class"/>
+		</rdf:type>
+		<rdfs:subClassOf>
+			<rdf:Description rdf:about="AbstractGML"/>
+		</rdfs:subClassOf>
+	</rdf:Description>
+	<rdf:Description rdf:about="FeatureProperty">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#Class"/>
+		</rdf:type>
+		<rdfs:subClassOf>
+			<rdf:Description rdf:about="AbstractGML"/>
+		</rdfs:subClassOf>
+	</rdf:Description>
+	<rdf:Description rdf:about="FeatureCollection">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#Class"/>
+		</rdf:type>
+		<rdfs:subClassOf>
+			<rdf:Description rdf:about="AbstractGML"/>
+		</rdfs:subClassOf>
+	</rdf:Description>
+	<rdf:Description rdf:about="featureMember">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+		</rdf:type>
+		<rdfs:domain>
+			<rdf:Description rdf:about="FeatureCollection"/>
+		</rdfs:domain>
+		<rdfs:range>
+			<rdf:Description rdf:about="AbstractFeature"/>
+		</rdfs:range>
+		<rdfs:subPropertyOf>
+			<rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#member"/>
+		</rdfs:subPropertyOf>
+	</rdf:Description>
+	<rdf:Description rdf:about="hasProperty">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+		</rdf:type>
+		<rdfs:domain>
+			<rdf:Description rdf:about="AbstractFeature"/>
+		</rdfs:domain>
+		<rdfs:range>
+			<rdf:Description rdf:about="FeatureProperty"/>
+		</rdfs:range>
+	</rdf:Description>
+	<rdf:Description rdf:about="GeometryProperty">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#Class"/>
+		</rdf:type>
+		<rdfs:subClassOf>
+			<rdf:Description rdf:about="FeatureProperty"/>
+		</rdfs:subClassOf>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#value">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+		</rdf:type>
+		<rdfs:domain>
+			<rdf:Description rdf:about="FeatureProperty"/>
+		</rdfs:domain>
+		<rdfs:range>
+			<rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#anyType"/>
+		</rdfs:range>
+	</rdf:Description>
+</rdf:RDF>

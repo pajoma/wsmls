@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xml:base="http://purl.org/ifgi/ows/0.1/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:posm="http://www.wsmo.org/ns/posm/0.1#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+	<rdf:Description rdf:about="OWSOperation">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#Class"/>
+		</rdf:type>
+		<rdfs:subClassOf>
+			<rdf:Description rdf:about="http://www.wsmo.org/ns/posm/0.1#Operation"/>
+		</rdfs:subClassOf>
+	</rdf:Description>
+	<rdf:Description rdf:about="OWSMessage">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#Class"/>
+		</rdf:type>
+		<rdfs:subClassOf>
+			<rdf:Description rdf:about="http://www.wsmo.org/ns/posm/0.1#Message"/>
+		</rdfs:subClassOf>
+		<rdfs:label>Input/Output Message for OGC Web service</rdfs:label>
+	</rdf:Description>
+	<rdf:Description rdf:about="Version">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.wsmo.org/ns/posm/0.1#MessagePart"/>
+		</rdf:type>
+	</rdf:Description>
+	<rdf:Description rdf:about="Request">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.wsmo.org/ns/posm/0.1#MessagePart"/>
+		</rdf:type>
+	</rdf:Description>
+	<rdf:Description rdf:about="Service">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.wsmo.org/ns/posm/0.1#MessagePart"/>
+		</rdf:type>
+	</rdf:Description>
+	<rdf:Description rdf:about="GetCapabilities">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.wsmo.org/ns/posm/0.1#Operation"/>
+		</rdf:type>
+		<posm:hasOutputMessage>
+			<rdf:Description rdf:about="GetCapabilitiesResponse"/>
+		</posm:hasOutputMessage>
+		<posm:hasInputMessage>
+			<rdf:Description rdf:about="GetCapabilitiesRequest"/>
+		</posm:hasInputMessage>
+	</rdf:Description>
+	<rdf:Description rdf:about="GetCapabilitiesRequest">
+		<rdf:type>
+			<rdf:Description rdf:about="OWSMessage"/>
+		</rdf:type>
+		<posm:hasMessagePart>
+			<rdf:Description rdf:about="Version"/>
+		</posm:hasMessagePart>
+		<posm:hasMessagePart>
+			<rdf:Description rdf:about="Service"/>
+		</posm:hasMessagePart>
+		<posm:hasMessagePart>
+			<rdf:Description rdf:about="Request"/>
+		</posm:hasMessagePart>
+	</rdf:Description>
+	<rdf:Description rdf:about="GetCapabilitiesResponse">
+		<rdf:type>
+			<rdf:Description rdf:about="OWSMessage"/>
+		</rdf:type>
+		<posm:hasMessagePart rdf:parseType="Literal"/>
+	</rdf:Description>
+</rdf:RDF>

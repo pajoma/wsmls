@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  
+This ontology is made available under the Open Data Commons 
+Attribution License: http://opendatacommons.org/licenses/by/1.
+-->
+<rdf:RDF xml:base="http://purl.org/ifgi/wfs/0.1/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:ows="http://purl.org/ifgi/ows/0.1/" xmlns:posm="http://www.wsmo.org/ns/posm/0.1#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:wfs="http://purl.org/ifgi/wfs/0.1/">
+	<rdf:Description rdf:about="DescribeFeatureType">
+		<rdf:type>
+			<rdf:Description rdf:about="http://purl.org/ifgi/ows/0.1/OWSOperation"/>
+		</rdf:type>
+	</rdf:Description>
+	<rdf:Description rdf:about="DescribeFeatureTypeResponse">
+		<rdf:type>
+			<rdf:Description rdf:about="http://purl.org/ifgi/ows/0.1/OWSMessage"/>
+		</rdf:type>
+	</rdf:Description>
+	<rdf:Description rdf:about="DescribeFeatureTypeRequest">
+		<rdf:type>
+			<rdf:Description rdf:about="http://purl.org/ifgi/ows/0.1/OWSMessage"/>
+		</rdf:type>
+		<posm:hasMessagePart>
+			<rdf:Description rdf:about="http://purl.org/ifgi/ows/0.1/Request"/>
+		</posm:hasMessagePart>
+		<posm:hasMessagePart>
+			<rdf:Description rdf:about="http://purl.org/ifgi/ows/0.1/Service"/>
+		</posm:hasMessagePart>
+		<posm:hasMessagePart>
+			<rdf:Description rdf:about="http://purl.org/ifgi/ows/0.1/Version"/>
+		</posm:hasMessagePart>
+	</rdf:Description>
+	<rdf:Description rdf:about="WFSService">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#Class"/>
+		</rdf:type>
+		<rdfs:subClassOf>
+			<rdf:Description rdf:about="http://www.wsmo.org/ns/posm/0.1#Service"/>
+		</rdfs:subClassOf>
+	</rdf:Description>
+	<rdf:Description rdf:about="GetFeature">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#Class"/>
+		</rdf:type>
+		<rdfs:subClassOf>
+			<rdf:Description rdf:about="http://purl.org/ifgi/ows/0.1/OWSOperation"/>
+		</rdfs:subClassOf>
+	</rdf:Description>
+	<rdf:Description rdf:about="GetFeatureResponse">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#Class"/>
+		</rdf:type>
+		<rdfs:subClassOf>
+			<rdf:Description rdf:about="http://purl.org/ifgi/ows/0.1/OWSMessage"/>
+		</rdfs:subClassOf>
+	</rdf:Description>
+	<rdf:Description rdf:about="GetFeatureRequest">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#Class"/>
+		</rdf:type>
+		<rdfs:subClassOf>
+			<rdf:Description rdf:about="http://purl.org/ifgi/ows/0.1/OWSMessage"/>
+		</rdfs:subClassOf>
+	</rdf:Description>
+	<rdf:Description rdf:about="Parameter_TypeName">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#Class"/>
+		</rdf:type>
+		<rdfs:subClassOf>
+			<rdf:Description rdf:about="http://www.wsmo.org/ns/posm/0.1#MessagePart"/>
+		</rdfs:subClassOf>
+	</rdf:Description>
+</rdf:RDF>
