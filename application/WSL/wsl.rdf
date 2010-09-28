@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:sawsdl="http://www.w3.org/ns/sawsdl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:wsl="http://www.wsmo.org/ns/wsmo-lite#">
+<!-- this file is not intended as human-readable; see http://www.wsmo.org/ns/wsmo-lite/index.n3 instead -->
+	<rdfs:Class rdf:about="http://www.wsmo.org/ns/wsmo-lite#Ontology">
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Ontology" />
+	</rdfs:Class>
+	<rdf:Description rdf:about="http://www.wsmo.org/ns/wsmo-lite#FunctionalClassificationRoot">
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class" />
+	</rdf:Description>
+	<rdfs:Class rdf:about="http://www.wsmo.org/ns/wsmo-lite#NonFunctionalParameter" />
+	<rdfs:Class rdf:about="http://www.wsmo.org/ns/wsmo-lite#Condition" />
+	<rdfs:Class rdf:about="http://www.wsmo.org/ns/wsmo-lite#Effect" />
+
+	
+</rdf:RDF>
