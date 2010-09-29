@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  
+This ontology is made available under the Open Data Commons 
+Attribution License: http://opendatacommons.org/licenses/by/1.
+-->
+<rdf:RDF xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:sos="http://purl.org/ifgi/sos/0.1/" xmlns:posm="http://www.wsmo.org/ns/posm/0.1#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<rdfs:Class rdf:about="http://purl.org/ifgi/sos/0.1/SensorObservationService">
+		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#Service" />
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://purl.org/ifgi/sos/0.1/DescribeSensor">
+		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#Operation" />
+		<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class" />
+		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#MessagePart" />
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://purl.org/ifgi/sos/0.1/GetObservation">
+		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#Operation" />
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://purl.org/ifgi/sos/0.1/DescribeSensorRequest">
+		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#Message" />
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://purl.org/ifgi/sos/0.1/DescribeSensorResponse">
+		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#Message" />
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://purl.org/ifgi/sos/0.1/GetObservationRequest">
+		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#Message" />
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://purl.org/ifgi/sos/0.1/GetObservationResponse">
+		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#Message" />
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://purl.org/ifgi/sos/0.1/Parameter_Procedure">
+		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#MessagePart" />
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://purl.org/ifgi/sos/0.1/Parameter_Offering">
+		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#MessagePart" />
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://purl.org/ifgi/sos/0.1/Parameter_ObservedProperty">
+		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#MessagePart" />
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://purl.org/ifgi/sos/0.1/Parameter_ResponseFormat">
+		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#MessagePart" />
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://purl.org/ifgi/sos/0.1/Parameter_OutputFormat">
+		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#MessagePart" />
+	</rdfs:Class>
+</rdf:RDF>

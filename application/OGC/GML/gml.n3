@@ -1,0 +1,34 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix gml: <http://purl.org/ifgi/gml/0.1/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+
+gml:AbstractFeature a rdfs:Class;
+	rdfs:subClassOf gml:AbstractGML.
+	
+gml:AbstractGeometry a rdfs:Class;
+	rdfs:subClassOf gml:AbstractGML.
+	
+gml:AbstractGML a rdfs:Class.
+
+gml:FeatureProperty a rdfs:Class;
+	rdfs:subClassOf gml:AbstractGML.
+	
+gml:GeometryProperty a rdfs:Class;
+	rdfs:subClassOf gml:FeatureProperty.
+	
+gml:hasProperty a rdf:Property;
+	rdfs:domain gml:AbstractFeature;
+	rdfs:range gml:FeatureProperty.
+	
+gml:FeatureCollection a rdfs:Class;
+	rdfs:subClassOf gml:AbstractGML.
+	
+gml:featureMember a rdf:Property;
+	rdfs:domain gml:FeatureCollection;
+	rdfs:range gml:AbstractFeature;
+	rdfs:subPropertyOf rdfs:member.
+	
+rdf:value a rdf:Property;
+	rdfs:domain gml:FeatureProperty;
+	rdfs:range <http://www.w3.org/2001/XMLSchema#anyType>.

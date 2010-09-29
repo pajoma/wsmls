@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix posm: <http://www.wsmo.org/ns/posm/0.1#>.
+@prefix wfs: <http://purl.org/ifgi/wfs/0.1/>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+# Service
+
+wfs:WFSService a rdfs:Class;
+	rdfs:subClassOf posm:Service.
+
+# Operations
+
+wfs:DescribeFeatureType a rdfs:Class;
+	rdfs:subClassOf posm:Operation.
+	
+wfs:GetFeature a rdfs:Class;
+	rdfs:subClassOf posm:Operation.
+
+# Messages
+
+wfs:DescribeFeatureTypeRequest a rdfs:Class;
+	rdfs:subClassOf posm:Message.
+
+wfs:DescribeFeatureTypeResponse a rdfs:Class;
+	rdfs:subClassOf posm:Message.
+	
+wfs:GetFeatureRequest a rdfs:Class;
+	rdfs:subClassOf posm:Message.
+	
+wfs:GetFeatureResponse a rdfs:Class;
+	rdfs:subClassOf posm:Message.
+
+# MessageParts/Parameters
+
+wfs:DescribeFeature a rdfs:Class;
+	rdfs:subClassOf posm:MessagePart.
+	
+wfs:Parameter_TypeName a rdfs:Class;
+	rdfs:subClassOf posm:MessagePart.
+	

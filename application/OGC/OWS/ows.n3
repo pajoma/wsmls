@@ -1,0 +1,32 @@
+@prefix ows: <http://purl.org/ifgi/ows/0.1/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix posm: <http://www.wsmo.org/ns/posm/0.1#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+# Operation
+
+ows:GetCapabilities a rdfs:Class;
+	rdfs:subClassOf posm:Operation.
+
+# Messages 
+
+ows:GetCapabilitiesRequest a rdfs:Class;
+	rdfs:subClassOf posm:Message.
+	
+ows:GetCapabilitiesResponse a rdfs:Class;
+	rdfs:subClassOf posm:Message.
+
+#MessageParts/Parameters
+	
+ows:Capabilities a rdfs:Class;
+	rdfs:subClassOf posm:MessagePart;
+	rdfs:seeAlso "http://schemas.opengis.net/ows/1.0.0/owsGetCapabilities.xsd".
+	
+ows:Parameter_Request a rdfs:Class;
+	rdfs:subClassOf posm:MessagePart.
+	
+ows:Parameter_Service a rdfs:Class;
+	rdfs:subClassOf posm:MessagePart.
+	
+ows:Parameter_Version a rdfs:Class;
+	rdfs:subClassOf posm:MessagePart.
