@@ -1,0 +1,47 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix om: <http://purl.org/ifgi/om/0.1/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix xs: <http://www.w3.org/2001/XMLSchema#>.
+
+# Classes
+
+om:Observation a rdfs:Class;
+	rdfs:subClassOf gml:AbstractFeature.
+	
+om:ObservationProperty a rdfs:Class.
+
+om:ObservationCollection a rdfs:Class;
+	rdfs:subClassOf gml:AbstractFeature.
+	
+om:samplingTime a rdfs:Class;
+	rdfs:subClassOf om:ObservationProperty.
+
+om:procedure a rdfs:Class;
+	rdfs:subClassOf om:ObservationProperty.
+
+om:observedProperty a rdfs:Class;
+	rdfs:subClassOf om:ObservationProperty.
+
+om:result a rdfs:Class;
+	rdfs:subClassOf om:ObservationProperty.
+	
+om:featureOfInterest a rdfs:Class;
+	rdfs:subClassOf om:ObservationProperty.
+	
+
+# Properties	
+
+om:member a rdf:Property;
+	rdfs:domain om:ObservationCollection;
+	rdfs:range om:Observation;
+	rdfs:subPropertyOf rdfs:member.
+	
+om:hasProperty a rdf:Property;
+	rdfs:domain om:Observation;
+	rdfs:range om:ObservationProperty.
+	
+rdf:value a rdf:Property;
+	rdfs:domain om:ObservationProperty;
+	rdfs:range <http://www.w3.org/2001/XMLSchema#anyType>.
+	
