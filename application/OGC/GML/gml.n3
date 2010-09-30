@@ -32,3 +32,7 @@ gml:featureMember a rdf:Property;
 rdf:value a rdf:Property;
 	rdfs:domain gml:FeatureProperty;
 	rdfs:range <http://www.w3.org/2001/XMLSchema#anyType>.
+	
+gml:id a rdf:Property;
+	rdfs:domain gml:AbstractGML;
+	rdfs:range xs:Literal.
