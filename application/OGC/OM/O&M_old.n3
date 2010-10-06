@@ -1,25 +1,36 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix om: <http://purl.org/ifgi/om/0.1/>.
-@prefix swe: <http://purl.org/ifgi/swe/0.1/>.
-@prefix sml: <http://purl.org/ifgi/sml/0.1/>.
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix gml: <http://purl.org/ifgi/gml/0.1/>.
-@prefix om: <http://purl.org/ifgi/om/0.1/>.
 
 # Classes
 
 om:Observation a rdfs:Class;
 	rdfs:subClassOf gml:AbstractFeature.
 	
+om:ObservationProperty a rdfs:Class.
+
 om:ObservationCollection a rdfs:Class;
 	rdfs:subClassOf gml:AbstractFeature.
 	
-om:Process a rdfs:Class;
-	rdfs:subClassOf xsd:anyType.
+om:samplingTime a rdfs:Class;
+	rdfs:subClassOf om:ObservationProperty.
+
+om:procedure a rdfs:Class;
+	rdfs:subClassOf om:ObservationProperty.
+
+om:observedProperty a rdfs:Class;
+	rdfs:subClassOf om:ObservationProperty.
+
+om:result a rdfs:Class;
+	rdfs:subClassOf om:ObservationProperty.
 	
+om:featureOfInterest a rdfs:Class;
+	rdfs:subClassOf om:ObservationProperty.
 	
+
 # Properties	
 
 om:member a rdf:Property;
@@ -27,26 +38,11 @@ om:member a rdf:Property;
 	rdfs:range om:Observation;
 	rdfs:subPropertyOf rdfs:member.
 	
-om:samplingTime a rdf:Property;
+om:hasProperty a rdf:Property;
 	rdfs:domain om:Observation;
-	rdfs:range gml:AbstractTimeObject.
+	rdfs:range om:ObservationProperty.
 	
-om:procedure a rdf:Property;
-	rdfs:domain om:Observation;
-	rdfs:range om:Process;
-	rdfs:range sml:AbstractProcess.
-	
-om:observedProperty a rdf:Property;
-	rdfs:domain om:Observation;
-	rdfs:range swe:Phenomenon.
-	
-om:featureOfInterest a rdf:Property;
-	rdfs:domain om:Observation;
-	rdfs:range gml:AbstractFeature.
-	
-om:result a rdf:Property;
-	rdfs:domain om:Observation;
+rdf:value a rdf:Property;
+	rdfs:domain om:ObservationProperty;
 	rdfs:range xsd:anyType.
-	
-
 	

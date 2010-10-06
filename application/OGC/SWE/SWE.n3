@@ -1,0 +1,8 @@
+@prefix swe: <http://purl.org/ifgi/swe/0.1/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix gml: <http://purl.org/ifgi/gml/0.1/>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+swe:Phenomenon a rdfs:Class;
+	rdfs:subClassOf gml:Definition.

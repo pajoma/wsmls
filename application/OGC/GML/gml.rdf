@@ -1,88 +1,65 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--  
-This ontology is made available under the Open Data Commons 
-Attribution License: http://opendatacommons.org/licenses/by/1.
--->
-<rdf:RDF xml:base="http://purl.org/ifgi/gml/0.1/" xmlns:gml="http://purl.org/ifgi/gml/0.1/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-	<rdf:Description rdf:about="AbstractGML">
-		<rdf:type>
-			<rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#Class"/>
-		</rdf:type>
-	</rdf:Description>
-	<rdf:Description rdf:about="AbstractFeature">
-		<rdf:type>
-			<rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#Class"/>
-		</rdf:type>
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:gml="http://purl.org/ifgi/gml/0.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<rdfs:Class rdf:about="http://purl.org/ifgi/gml/0.1/AbstractFeature">
 		<rdfs:subClassOf>
-			<rdf:Description rdf:about="AbstractGML"/>
+			<rdfs:Class rdf:about="http://purl.org/ifgi/gml/0.1/AbstractGML" />
 		</rdfs:subClassOf>
-	</rdf:Description>
-	<rdf:Description rdf:about="AbstractGeometry">
-		<rdf:type>
-			<rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#Class"/>
-		</rdf:type>
-		<rdfs:subClassOf>
-			<rdf:Description rdf:about="AbstractGML"/>
-		</rdfs:subClassOf>
-	</rdf:Description>
-	<rdf:Description rdf:about="FeatureProperty">
-		<rdf:type>
-			<rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#Class"/>
-		</rdf:type>
-		<rdfs:subClassOf>
-			<rdf:Description rdf:about="AbstractGML"/>
-		</rdfs:subClassOf>
-	</rdf:Description>
-	<rdf:Description rdf:about="FeatureCollection">
-		<rdf:type>
-			<rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#Class"/>
-		</rdf:type>
-		<rdfs:subClassOf>
-			<rdf:Description rdf:about="AbstractGML"/>
-		</rdfs:subClassOf>
-	</rdf:Description>
-	<rdf:Description rdf:about="featureMember">
-		<rdf:type>
-			<rdf:Description rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-		</rdf:type>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://purl.org/ifgi/gml/0.1/FeatureProperty">
+		<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml/0.1/AbstractGML" />
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://purl.org/ifgi/gml/0.1/Envelope" />
+	<rdfs:Class rdf:about="http://purl.org/ifgi/gml/0.1/AbstractTimeObject">
+		<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml/0.1/AbstractGML" />
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://purl.org/ifgi/gml/0.1/Definition">
+		<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml/0.1/AbstractGML" />
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://purl.org/ifgi/gml/0.1/hasProperty">
+		<rdfs:domain rdf:resource="http://purl.org/ifgi/gml/0.1/AbstractFeature" />
+		<rdfs:range rdf:resource="http://purl.org/ifgi/gml/0.1/FeatureProperty" />
+	</rdf:Property>
+	<rdf:Property rdf:about="http://purl.org/ifgi/gml/0.1/featureMember">
 		<rdfs:domain>
-			<rdf:Description rdf:about="FeatureCollection"/>
+			<rdfs:Class rdf:about="http://purl.org/ifgi/gml/0.1/FeatureCollection">
+				<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml/0.1/AbstractGML" />
+			</rdfs:Class>
 		</rdfs:domain>
-		<rdfs:range>
-			<rdf:Description rdf:about="AbstractFeature"/>
-		</rdfs:range>
+		<rdfs:range rdf:resource="http://purl.org/ifgi/gml/0.1/AbstractFeature" />
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#member" />
+	</rdf:Property>
+	<rdf:Property rdf:about="http://purl.org/ifgi/gml/0.1/hasGeometry">
 		<rdfs:subPropertyOf>
-			<rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#member"/>
+			<rdf:Property rdf:about="http://purl.org/ifgi/gml/0.1/hasValue">
+				<rdfs:domain rdf:resource="http://purl.org/ifgi/gml/0.1/FeatureProperty" />
+				<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyType" />
+			</rdf:Property>
 		</rdfs:subPropertyOf>
-	</rdf:Description>
-	<rdf:Description rdf:about="hasProperty">
-		<rdf:type>
-			<rdf:Description rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-		</rdf:type>
 		<rdfs:domain>
-			<rdf:Description rdf:about="AbstractFeature"/>
+			<rdfs:Class rdf:about="http://purl.org/ifgi/gml/0.1/GeometryProperty">
+				<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml/0.1/FeatureProperty" />
+			</rdfs:Class>
 		</rdfs:domain>
 		<rdfs:range>
-			<rdf:Description rdf:about="FeatureProperty"/>
+			<rdfs:Class rdf:about="http://purl.org/ifgi/gml/0.1/AbstractGeometry">
+				<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml/0.1/AbstractGML" />
+			</rdfs:Class>
 		</rdfs:range>
-	</rdf:Description>
-	<rdf:Description rdf:about="GeometryProperty">
-		<rdf:type>
-			<rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#Class"/>
-		</rdf:type>
-		<rdfs:subClassOf>
-			<rdf:Description rdf:about="FeatureProperty"/>
-		</rdfs:subClassOf>
-	</rdf:Description>
-	<rdf:Description rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#value">
-		<rdf:type>
-			<rdf:Description rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-		</rdf:type>
-		<rdfs:domain>
-			<rdf:Description rdf:about="FeatureProperty"/>
-		</rdfs:domain>
-		<rdfs:range>
-			<rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#anyType"/>
-		</rdfs:range>
-	</rdf:Description>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://purl.org/ifgi/gml/0.1/boundedBy">
+		<rdfs:domain rdf:resource="http://purl.org/ifgi/gml/0.1/AbstractFeature" />
+		<rdfs:range rdf:resource="http://purl.org/ifgi/gml/0.1/Envelope" />
+	</rdf:Property>
+	<rdf:Property rdf:about="http://purl.org/ifgi/gml/0.1/upperCorner">
+		<rdfs:domain rdf:resource="http://purl.org/ifgi/gml/0.1/Envelope" />
+		<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	</rdf:Property>
+	<rdf:Property rdf:about="http://purl.org/ifgi/gml/0.1/lowerCorner">
+		<rdfs:domain rdf:resource="http://purl.org/ifgi/gml/0.1/Envelope" />
+		<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	</rdf:Property>
+	<rdf:Property rdf:about="http://purl.org/ifgi/gml/0.1/id">
+		<rdfs:domain rdf:resource="http://purl.org/ifgi/gml/0.1/AbstractGML" />
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#ID" />
+	</rdf:Property>
 </rdf:RDF>

@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:sml="http://purl.org/ifgi/sml/0.1/" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:gml="http://purl.org/ifgi/gml/0.1/" xmlns:om="http://purl.org/ifgi/om/0.1/" xmlns:swe="http://purl.org/ifgi/swe/0.1/">
+	<rdfs:Class rdf:about="http://purl.org/ifgi/om/0.1/Observation">
+		<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml/0.1/AbstractFeature" />
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://purl.org/ifgi/om/0.1/member">
+		<rdfs:domain>
+			<rdfs:Class rdf:about="http://purl.org/ifgi/om/0.1/ObservationCollection">
+				<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml/0.1/AbstractFeature" />
+			</rdfs:Class>
+		</rdfs:domain>
+		<rdfs:range rdf:resource="http://purl.org/ifgi/om/0.1/Observation" />
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#member" />
+	</rdf:Property>
+	<rdf:Property rdf:about="http://purl.org/ifgi/om/0.1/samplingTime">
+		<rdfs:domain rdf:resource="http://purl.org/ifgi/om/0.1/Observation" />
+		<rdfs:range rdf:resource="http://purl.org/ifgi/gml/0.1/AbstractTimeObject" />
+	</rdf:Property>
+	<rdf:Property rdf:about="http://purl.org/ifgi/om/0.1/procedure">
+		<rdfs:domain rdf:resource="http://purl.org/ifgi/om/0.1/Observation" />
+		<rdfs:range>
+			<rdfs:Class rdf:about="http://purl.org/ifgi/om/0.1/Process">
+				<rdfs:subClassOf rdf:resource="http://www.w3.org/2001/XMLSchema#anyType" />
+			</rdfs:Class>
+		</rdfs:range>
+		<rdfs:range rdf:resource="http://purl.org/ifgi/sml/0.1/AbstractProcess" />
+	</rdf:Property>
+	<rdf:Property rdf:about="http://purl.org/ifgi/om/0.1/observedProperty">
+		<rdfs:domain rdf:resource="http://purl.org/ifgi/om/0.1/Observation" />
+		<rdfs:range rdf:resource="http://purl.org/ifgi/swe/0.1/Phenomenon" />
+	</rdf:Property>
+	<rdf:Property rdf:about="http://purl.org/ifgi/om/0.1/featureOfInterest">
+		<rdfs:domain rdf:resource="http://purl.org/ifgi/om/0.1/Observation" />
+		<rdfs:range rdf:resource="http://purl.org/ifgi/gml/0.1/AbstractFeature" />
+	</rdf:Property>
+	<rdf:Property rdf:about="http://purl.org/ifgi/om/0.1/result">
+		<rdfs:domain rdf:resource="http://purl.org/ifgi/om/0.1/Observation" />
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyType" />
+	</rdf:Property>
+</rdf:RDF>
