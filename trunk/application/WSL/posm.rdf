@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:posm="http://www.wsmo.org/ns/posm/0.1#" xmlns:part="http://www.w3.org/2001/sw/BestPractices/OEP/SimplePartWhole/part.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<!-- this file is not intended as human-readable; see http://www.wsmo.org/ns/posm/0.1/index.n3 instead -->
+	<rdf:Property rdf:about="http://www.wsmo.org/ns/posm/0.1#hasOperation">
+		<rdfs:domain>
+			<rdfs:Class rdf:about="http://www.wsmo.org/ns/posm/0.1#Service" />
+		</rdfs:domain>
+		<rdfs:range>
+			<rdfs:Class rdf:about="http://www.wsmo.org/ns/posm/0.1#Operation" />
+		</rdfs:range>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.wsmo.org/ns/posm/0.1#hasInputMessage">
+		<rdfs:domain rdf:resource="http://www.wsmo.org/ns/posm/0.1#Operation" />
+		<rdfs:range>
+			<rdfs:Class rdf:about="http://www.wsmo.org/ns/posm/0.1#Message">
+				<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class" />
+				<rdfs:subClassOf>
+					<rdfs:Class rdf:about="http://www.wsmo.org/ns/posm/0.1#MessagePart" />
+				</rdfs:subClassOf>
+			</rdfs:Class>
+		</rdfs:range>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.wsmo.org/ns/posm/0.1#hasOutputMessage">
+		<rdfs:domain rdf:resource="http://www.wsmo.org/ns/posm/0.1#Operation" />
+		<rdfs:range rdf:resource="http://www.wsmo.org/ns/posm/0.1#Message" />
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.wsmo.org/ns/posm/0.1#hasInputFault">
+		<rdfs:domain rdf:resource="http://www.wsmo.org/ns/posm/0.1#Operation" />
+		<rdfs:range rdf:resource="http://www.wsmo.org/ns/posm/0.1#Message" />
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.wsmo.org/ns/posm/0.1#hasOutputFault">
+		<rdfs:domain rdf:resource="http://www.wsmo.org/ns/posm/0.1#Operation" />
+		<rdfs:range rdf:resource="http://www.wsmo.org/ns/posm/0.1#Message" />
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.wsmo.org/ns/posm/0.1#hasMessagePart">
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2001/sw/BestPractices/OEP/SimplePartWhole/part.owl#hasPart_directly" />
+		<rdfs:domain rdf:resource="http://www.wsmo.org/ns/posm/0.1#MessagePart" />
+		<rdfs:range rdf:resource="http://www.wsmo.org/ns/posm/0.1#MessagePart" />
+	</rdf:Property>
+	<rdf:Description rdf:about="http://www.wsmo.org/ns/posm/0.1#hasMandatoryPart">
+		<rdfs:subPropertyOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#hasMessagePart" />
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.wsmo.org/ns/posm/0.1#hasOptionalPart">
+		<rdfs:subPropertyOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#hasMessagePart" />
+	</rdf:Description>
+</rdf:RDF>

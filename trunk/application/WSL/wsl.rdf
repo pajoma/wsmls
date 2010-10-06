@@ -10,6 +10,36 @@
 	<rdfs:Class rdf:about="http://www.wsmo.org/ns/wsmo-lite#NonFunctionalParameter" />
 	<rdfs:Class rdf:about="http://www.wsmo.org/ns/wsmo-lite#Condition" />
 	<rdfs:Class rdf:about="http://www.wsmo.org/ns/wsmo-lite#Effect" />
-
-	
+	<rdfs:Class rdf:about="http://www.wsmo.org/ns/wsmo-lite#Service" />
+	<rdf:Property rdf:about="http://www.wsmo.org/ns/wsmo-lite#hasOperation">
+		<rdfs:domain rdf:resource="http://www.wsmo.org/ns/wsmo-lite#Service" />
+		<rdfs:range>
+			<rdfs:Class rdf:about="http://www.wsmo.org/ns/wsmo-lite#Operation" />
+		</rdfs:range>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.wsmo.org/ns/wsmo-lite#hasInputMessage">
+		<rdfs:domain rdf:resource="http://www.wsmo.org/ns/wsmo-lite#Operation" />
+		<rdfs:range>
+			<rdfs:Class rdf:about="http://www.wsmo.org/ns/wsmo-lite#Message" />
+		</rdfs:range>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.wsmo.org/ns/wsmo-lite#hasOutputMessage">
+		<rdfs:domain rdf:resource="http://www.wsmo.org/ns/wsmo-lite#Operation" />
+		<rdfs:range rdf:resource="http://www.wsmo.org/ns/wsmo-lite#Message" />
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.wsmo.org/ns/wsmo-lite#hasInputFault">
+		<rdfs:domain rdf:resource="http://www.wsmo.org/ns/wsmo-lite#Operation" />
+		<rdfs:range rdf:resource="http://www.wsmo.org/ns/wsmo-lite#Message" />
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.wsmo.org/ns/wsmo-lite#hasOutputFault">
+		<rdfs:domain rdf:resource="http://www.wsmo.org/ns/wsmo-lite#Operation" />
+		<rdfs:range rdf:resource="http://www.wsmo.org/ns/wsmo-lite#Message" />
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.w3.org/ns/sawsdl#modelReference" />
+	<rdf:Property rdf:about="http://www.w3.org/ns/sawsdl#liftingSchemaMapping" />
+	<rdf:Property rdf:about="http://www.w3.org/ns/sawsdl#loweringSchemaMapping" />
+	<rdfs:Property rdf:about="http://www.wsmo.org/ns/wsmo-lite#usesOntology">
+		<rdfs:domain rdf:resource="http://www.wsmo.org/ns/wsmo-lite#Service" />
+		<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso" />
+	</rdfs:Property>
 </rdf:RDF>
