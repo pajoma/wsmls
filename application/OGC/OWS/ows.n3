@@ -18,10 +18,6 @@ ows:GetCapabilitiesResponse a rdfs:Class;
 
 #MessageParts/Parameters
 	
-ows:Capabilities a rdfs:Class;
-	rdfs:subClassOf posm:MessagePart;
-	rdfs:seeAlso "http://schemas.opengis.net/ows/1.0.0/owsGetCapabilities.xsd".
-	
 ows:Parameter_Request a rdfs:Class;
 	rdfs:subClassOf posm:MessagePart.
 	

@@ -2,6 +2,7 @@
 @prefix posm: <http://www.wsmo.org/ns/posm/0.1#>.
 @prefix wfs: <http://purl.org/ifgi/wfs/0.1/>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix gml: <http://purl.org/ifgi/gml/0.1/>.
 
 # Service
 
@@ -32,8 +33,18 @@ wfs:GetFeatureResponse a rdfs:Class;
 
 # MessageParts/Parameters
 
-wfs:DescribeFeature a rdfs:Class;
+wfs:GetCapabilitiesResponse_MessagePart a rdfs:Class;
+	rdfs:seeAlso "http://schemas.opengis.net/wfs/1.1.0/wfs.xsd#WFS_Capabilities";
 	rdfs:subClassOf posm:MessagePart.
+
+wfs:DescribeFeatureTypeResponse_MessagePart a rdfs:Class;
+	rdfs:seeAlso "http://schemas.opengis.net/wfs/1.1.0/wsdl/wfs-util.xsd#DescribeFeatureTypeResponse";
+	rdfs:subClassOf posm:MessagePart.
+	
+wfs:FeatureCollection a rdfs:Class;
+	rdfs:seeAlso "http://schemas.opengis.net/wfs/1.1.0/wfs.xsd#FeatureCollection";
+	rdfs:subClassOf posm:MessagePart;
+	rdfs:subClassOf gml:FeatureCollection.
 	
 wfs:Parameter_TypeName a rdfs:Class;
 	rdfs:subClassOf posm:MessagePart.
