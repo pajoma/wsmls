@@ -35,7 +35,16 @@ sos:GetObservationResponse a rdfs:Class;
 	
 # MessageParts/Parameters
 
-sos:DescribeSensor a rdfs:Class;
+sos:GetCapabilitiesResponse_MessagePart a rdfs:Class;
+	rdfs:seeAlso "http://schemas.opengis.net/sos/1.0.0/sosGetCapabilities.xsd#Capabilities";
+	rdfs:subClassOf posm:MessagePart.
+
+sos:DescribeSensorResponse_MessagePart a rdfs:Class;
+	rdfs:seeAlso "http://schemas.opengis.net/sensorML/1.0.1/sensorML.xsd#SensorML";
+	rdfs:subClassOf posm:MessagePart.
+
+sos:GetObservationResponse_MessagePart a rdfs:Class;
+	rdfs:seeAlso "http://schemas.opengis.net/om/1.0.0/observation.xsd#Observation";
 	rdfs:subClassOf posm:MessagePart.
 	
 sos:Parameter_Procedure a rdfs:Class;

@@ -1,16 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--  
-This ontology is made available under the Open Data Commons 
-Attribution License: http://opendatacommons.org/licenses/by/1.
--->
+<?xml version="1.0"?>
 <rdf:RDF xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:sos="http://purl.org/ifgi/sos/0.1/" xmlns:posm="http://www.wsmo.org/ns/posm/0.1#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 	<rdfs:Class rdf:about="http://purl.org/ifgi/sos/0.1/SensorObservationService">
 		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#Service" />
 	</rdfs:Class>
 	<rdfs:Class rdf:about="http://purl.org/ifgi/sos/0.1/DescribeSensor">
 		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#Operation" />
-		<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class" />
-		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#MessagePart" />
 	</rdfs:Class>
 	<rdfs:Class rdf:about="http://purl.org/ifgi/sos/0.1/GetObservation">
 		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#Operation" />
@@ -26,6 +20,18 @@ Attribution License: http://opendatacommons.org/licenses/by/1.
 	</rdfs:Class>
 	<rdfs:Class rdf:about="http://purl.org/ifgi/sos/0.1/GetObservationResponse">
 		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#Message" />
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://purl.org/ifgi/sos/0.1/GetCapabilitiesResponse_MessagePart">
+		<rdfs:seeAlso>http://schemas.opengis.net/sos/1.0.0/sosGetCapabilities.xsd#Capabilities</rdfs:seeAlso>
+		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#MessagePart" />
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://purl.org/ifgi/sos/0.1/DescribeSensorResponse_MessagePart">
+		<rdfs:seeAlso>http://schemas.opengis.net/sensorML/1.0.1/sensorML.xsd#SensorML</rdfs:seeAlso>
+		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#MessagePart" />
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://purl.org/ifgi/sos/0.1/GetObservationResponse_MessagePart">
+		<rdfs:seeAlso>http://schemas.opengis.net/om/1.0.0/observation.xsd#Observation</rdfs:seeAlso>
+		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#MessagePart" />
 	</rdfs:Class>
 	<rdfs:Class rdf:about="http://purl.org/ifgi/sos/0.1/Parameter_Procedure">
 		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#MessagePart" />
