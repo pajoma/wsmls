@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:wps="http://purl.org/ifgi/wps/0.1/" xmlns:posm="http://www.wsmo.org/ns/posm/0.1#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<rdfs:Class rdf:about="http://purl.org/ifgi/wps/0.1/WPSService">
+		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#Service" />
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://purl.org/ifgi/wps/0.1/DecribeProcess">
+		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#Operation" />
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://purl.org/ifgi/wps/0.1/Execute">
+		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#Operation" />
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://purl.org/ifgi/wps/0.1/DecribeProcessRequest">
+		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#Message" />
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://purl.org/ifgi/wps/0.1/DecribeProcessResponse">
+		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#Message" />
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://purl.org/ifgi/wps/0.1/ExecuteRequest">
+		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#Message" />
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://purl.org/ifgi/wps/0.1/ExecuteResponse">
+		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#Message" />
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://purl.org/ifgi/wps/0.1/GetCapabilitiesResponse_MessagePart">
+		<rdfs:seeAlso>http://schemas.opengis.net/wps/1.0.0/wpsGetCapabilities_response.xsd#Capabilities</rdfs:seeAlso>
+		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#MessagePart" />
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://purl.org/ifgi/wps/0.1/DecribeProcessResponse_MessagePart">
+		<rdfs:seeAlso>http://schemas.opengis.net/wps/1.0.0/wpsDescribeProcess_response.xsd#ProcessDescriptions</rdfs:seeAlso>
+		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#MessagePart" />
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://purl.org/ifgi/wps/0.1/ExecuteRequest_MessagePart">
+		<rdfs:seeAlso>http://schemas.opengis.net/wps/1.0.0/wpsExecute_request.xsd#Execute</rdfs:seeAlso>
+		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#MessagePart" />
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://purl.org/ifgi/wps/0.1/ExecuteResponse_MessagePart">
+		<rdfs:seeAlso>http://schemas.opengis.net/wps/1.0.0/wpsExecute_response.xsd#ExecuteResponse</rdfs:seeAlso>
+		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#MessagePart" />
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://purl.org/ifgi/wps/0.1/Parameter_Identifier">
+		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#MessagePart" />
+	</rdfs:Class>
+</rdf:RDF>
