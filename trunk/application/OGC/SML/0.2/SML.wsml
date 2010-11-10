@@ -1,13 +1,12 @@
 wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
-namespace { _"http://purl.net/concepts/",
-sml _"http://schemas.opengis.net/sensorML/1.0.1/",
-dc _"http://purl.org/dc/elements/1.1/"
+namespace { _"http://purl.org/ifgi/sml#",
+	dc _"http://purl.org/dc/elements/1.1/", 
+	gml _"http://purl.org/ifgi/gml#"
  }
 
 ontology Base
 
-	nonFunctionalProperties
-		dc#creator hasValue "Henry"
+	annotations
 		dc#publisher hasValue "(a)IfGI, University of Muenster"
 		dc#date hasValue "28-03-2010"
 		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
@@ -15,6 +14,12 @@ ontology Base
 		dc#title hasValue "OGC SensorML Base"
 		dc#description hasValue "Base class definitions for core SensorML SensorML is an OGC Standard. Copyright (c) 2007,2010 Open Geospatial Consortium, Inc. All Rights Reserved. To obtain additional rights of use, visit www.opengeospatial.org/legal/ ."
 		dc#source hasValue "http://schemas.opengis.net/sensorML/1.0.1/base.xsd"	
-	endNonFunctionalProperties
+	endAnnotations
 	
-	concept sml#AbstractSML subConceptOf AbstractFeature
+	concept AbstractSML subConceptOf gml#AbstractFeature
+	
+	
+	concept AbstractProcess subConceptOf AbstractSML
+		annotations
+			dc#description hasValue "base substitution group for all processes"
+		endAnnotations

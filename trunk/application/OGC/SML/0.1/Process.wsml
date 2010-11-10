@@ -1,7 +1,6 @@
 wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
-namespace { _"http://purl.net/concepts/",
-sml _"http://schemas.opengis.net/sensorML/1.0.1/",
-dc _"http://purl.org/dc/elements/1.1/"
+namespace { _"http://purl.org/ifgi/sml#",
+		 dc _"http://purl.org/dc/elements/1.1/"
  }
 
 ontology Process
@@ -19,7 +18,7 @@ ontology Process
 	
 	/*elements*/
 	
-	concept sml#AbstractProcess subConceptOf sml#AbstractSML
+	concept AbstractProcess subConceptOf AbstractSML
 		nonFunctionalProperties
 			dc#description hasValue "base substitution group for all processes"
 		endNonFunctionalProperties
