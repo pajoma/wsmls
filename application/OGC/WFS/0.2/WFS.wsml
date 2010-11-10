@@ -1,0 +1,52 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://purl.org/ifgi/wfs#",
+	xsd _"http://www.w3.org/2001/XMLSchema#",  
+	sawsdl _"http://www.w3.org/ns/sawsdl#",
+	dc _"http://purl.org/dc/elements/1.1/",
+	ows _"http://purl.org/ifgi/ows#",
+	posm _"http://www.wsmo.org/ns/posm/0.2#", 
+	rdfs _"http://www.w3.org/2000/01/rdf-schema#"
+ }
+
+ontology WFS
+
+	annotations
+		dc#publisher hasValue "(a)IfGI, University of Muenster"
+		dc#date hasValue "10-11-2010"
+		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+		dc#type hasValue "Ontology"
+		dc#title hasValue "OGC Web Feature Service"
+	endAnnotations
+	
+
+	
+	/* POSM related stuff */
+	concept WebFeatureService subConceptOf ows#OGCWebService
+	
+	concept DescribeFeatureType subConceptOf posm#Operation
+	concept DescribeFeatureTypeInput subConceptOf posm#MessagePart
+	concept DescribeFeatureTypeOutput subConceptOf posm#MessagePart
+		annotations
+			rdfs#seeAlso hasValue _"http://schemas.opengis.net/wfs/1.1.0/wsdl/wfs-util.xsd#DescribeFeatureTypeResponse"
+		endAnnotations
+
+	
+	
+	concept GetFeature subConceptOf posm#Operation
+	concept GetFeatureInput subConceptOf posm#MessagePart
+	concept GetFeatureOutput subConceptOf posm#MessagePart
+		annotations
+			rdfs#seeAlso hasValue _"http://schemas.opengis.net/wfs/1.1.0/wfs.xsd#FeatureCollection"
+		endAnnotations
+		
+	
+	/* default instances */
+	instance DefaultDescribeFeatureType memberOf DescribeFeatureType
+		posm#hasOutput hasValue DefaultDescribeFeatureTypeOutput
+		posm#hasInput hasValue DefaultDescribeFeatureTypeInput
+	
+	instance DefaultDescribeFeatureTypeOutput memberOf DescribeFeatureTypeOutput
+		sawsdl#modelReference hasValue xsd#string
+		
+	instance DefaultDescribeFeatureTypeInput memberOf DescribeFeatureTypeInput
+		sawsdl#modelReference hasValue xsd#string

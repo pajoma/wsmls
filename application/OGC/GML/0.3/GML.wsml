@@ -1,0 +1,54 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://purl.org/ifgi/gml#",
+	gml _"http://purl.org/ifgi/gml#",
+	xsd _"http://www.w3.org/2001/XMLSchema#",  
+	sawsdl _"http://www.w3.org/ns/sawsdl#",
+	dc _"http://purl.org/dc/elements/1.1/",
+	ows _"http://purl.org/ifgi/ows#",
+	posm _"http://www.wsmo.org/ns/posm/0.2#", 
+	rdfs _"http://www.w3.org/2000/01/rdf-schema#"
+ }
+
+ontology GML
+
+	annotations
+		dc#publisher hasValue "(a)IfGI, University of Muenster"
+		dc#date hasValue "10-11-2010"
+		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+		dc#type hasValue "Ontology"
+		dc#title hasValue "OGC Geography Markup Language"
+	endAnnotations
+
+concept AbstractGML
+	id ofType xsd#ID
+	
+concept AbstractFeature subConceptOf AbstractGML
+	hasProperty ofType FeatureProperty
+	boundedBy ofType Envelope
+
+concept AbstractGeometry subConceptOf AbstractGML
+
+concept FeatureProperty subConceptOf AbstractGML
+	gml#hasValue ofType xsd#anyType
+
+concept GeometryProperty subConceptOf FeatureProperty
+	hasGeometry ofType AbstractGeometry
+
+concept FeatureCollection subConceptOf AbstractGML
+	featureMember ofType AbstractFeature
+	
+relation featureMember (ofType FeatureCollection, ofType AbstractFeature) subRelationOf rdfs#member
+
+relation hasGeometry (ofType GeometryProperty, ofType AbstractGeometry) subRelationOf gml#hasValue
+
+concept Envelope
+	upperCorner ofType rdfs#Literal
+	lowerCorner ofType rdfs#Literal
+
+concept AbstractTimeObject subConceptOf AbstractGML
+
+concept Definition subConceptOf AbstractGML
+
+
+
+

@@ -1,0 +1,47 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://purl.org/ifgi/wfs#> .
+@prefix sawsdl: <http://www.w3.org/ns/sawsdl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ows: <http://purl.org/ifgi/ows#> .
+@prefix posm: <http://www.wsmo.org/ns/posm/0.2#> .
+
+# http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/date: "10-11-2010"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/type: "Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/title: "OGC Web Feature Service"^^<http://www.w3.org/2001/XMLSchema#string>
+
+:WebFeatureService a rdfs:Class ;
+	rdfs:subClassOf ows:OGCWebService .
+
+:DescribeFeatureType a rdfs:Class ;
+	rdfs:subClassOf posm:Operation .
+
+:DescribeFeatureTypeInput a rdfs:Class ;
+	rdfs:subClassOf posm:MessagePart .
+
+:DescribeFeatureTypeOutput a rdfs:Class ;
+	rdfs:subClassOf posm:MessagePart ;
+	rdfs:seeAlso <http://schemas.opengis.net/wfs/1.1.0/wsdl/wfs-util.xsd#DescribeFeatureTypeResponse> .
+
+:GetFeature a rdfs:Class ;
+	rdfs:subClassOf posm:Operation .
+
+:GetFeatureInput a rdfs:Class ;
+	rdfs:subClassOf posm:MessagePart .
+
+:GetFeatureOutput a rdfs:Class ;
+	rdfs:subClassOf posm:MessagePart ;
+	rdfs:seeAlso <http://schemas.opengis.net/wfs/1.1.0/wfs.xsd#FeatureCollection> .
+
+:DefaultDescribeFeatureType a :DescribeFeatureType ;
+	posm:hasOutput :DefaultDescribeFeatureTypeOutput ;
+	posm:hasInput :DefaultDescribeFeatureTypeInput .
+
+:DefaultDescribeFeatureTypeOutput a :DescribeFeatureTypeOutput ;
+	sawsdl:modelReference xsd:string .
+
+:DefaultDescribeFeatureTypeInput a :DescribeFeatureTypeInput ;
+	sawsdl:modelReference xsd:string .

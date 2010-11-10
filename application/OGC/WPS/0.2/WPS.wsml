@@ -1,0 +1,55 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://purl.org/ifgi/wps#",
+	xsd _"http://www.w3.org/2001/XMLSchema#",  
+	sawsdl _"http://www.w3.org/ns/sawsdl#",
+	dc _"http://purl.org/dc/elements/1.1/",
+	ows _"http://purl.org/ifgi/ows#",
+	posm _"http://www.wsmo.org/ns/posm/0.2#", 
+	rdfs _"http://www.w3.org/2000/01/rdf-schema#"
+ }
+
+ontology WPS
+
+	annotations
+		dc#publisher hasValue "(a)IfGI, University of Muenster"
+		dc#date hasValue "10-11-2010"
+		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+		dc#type hasValue "Ontology"
+		dc#title hasValue "OGC Web Processing Service"
+	endAnnotations
+	
+
+	
+	/* POSM related stuff */
+	concept WebProcessingService subConceptOf ows#OGCWebService
+	
+	concept DecribeProcess subConceptOf posm#Operation
+	concept DecribeProcessInput subConceptOf posm#MessagePart
+	concept DecribeProcessOutput subConceptOf posm#MessagePart
+		annotations
+			rdfs#seeAlso hasValue _"http://schemas.opengis.net/wps/1.0.0/wpsDescribeProcess_response.xsd#ProcessDescriptions"
+		endAnnotations
+
+	
+	
+	concept Execute subConceptOf posm#Operation
+	concept ExecuteInput subConceptOf posm#MessagePart
+		annotations
+			rdfs#seeAlso hasValue _"http://schemas.opengis.net/wps/1.0.0/wpsExecute_request.xsd#Execute"
+		endAnnotations
+	concept ExecuteOutput subConceptOf posm#MessagePart
+		annotations
+			rdfs#seeAlso hasValue _"http://schemas.opengis.net/wps/1.0.0/wpsExecute_response.xsd#ExecuteResponse"
+		endAnnotations
+		
+	
+	/* default instances */
+	instance DefaultDecribeProcess memberOf DecribeProcess
+		posm#hasOutput hasValue DefaultDecribeProcessOutput
+		posm#hasInput hasValue DefaultDecribeProcessInput
+	
+	instance DefaultDecribeProcessOutput memberOf DescribeProcessOutput
+		sawsdl#modelReference hasValue xsd#string
+		
+	instance DefaultDecribeProcessInput memberOf DescribeProcessInput
+		sawsdl#modelReference hasValue xsd#string
