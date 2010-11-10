@@ -18,7 +18,7 @@ om:ObservationCollection a rdfs:Class;
 om:samplingTime a rdfs:Class;
 	rdfs:subClassOf om:ObservationProperty.
 
-om:procedure a rdfs:Class;
+om:procedured a rdfs:Class;
 	rdfs:subClassOf om:ObservationProperty.
 
 om:observedProperty a rdfs:Class;
