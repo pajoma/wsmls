@@ -1,0 +1,57 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-core"
+namespace { _"http://purl.org/ifgi/sos#",
+	xsd _"http://www.w3.org/2001/XMLSchema#",  
+	sawsdl _"http://www.w3.org/ns/sawsdl#",
+	dc _"http://purl.org/dc/elements/1.1/",
+	ows _"http://purl.org/ifgi/ows#",
+	om _"http://purl.org/ifgi/om#",
+	posm _"http://www.wsmo.org/ns/posm/0.2#",
+	sos	_"http://purl.org/ifgi/sos#", 
+	wsl _"http://www.wsmo.org/ns/wsmo-lite#"
+	
+ }
+
+ontology sos#GenericSOS
+
+/* example of a generic service */
+
+instance sos#_s1 memberOf sos#SensorObservationService
+	posm#hasOperation hasValue {sos#_op1, sos#_op2, sos#_op3}
+ 
+instance sos#_s1 memberOf posm#Service
+	posm#hasOperation hasValue {sos#_op1, sos#_op2, sos#_op3}
+	
+instance sos#_op1 memberOf ows#GetCapabilities
+	posm#hasInput hasValue sos#_op1_in
+	posm#hasOutput hasValue sos#_op1_out
+	
+instance sos#_op1_in memberOf ows#GetCapabilitiesInput
+	sawsdl#modelReference hasValue xsd#string
+	 
+instance sos#_op1_out memberOf ows#GetCapabilitiesOutput
+	sawsdl#modelReference hasValue xsd#string
+	
+instance sos#_op2 memberOf sos#DescribeSensor
+	posm#hasInput hasValue sos#_op2_in
+	posm#hasOutput hasValue sos#_op2_out
+
+instance sos#_op2_in memberOf sos#DescribeSensorInput
+	sawsdl#modelReference hasValue xsd#string
+	
+instance sos#_op2_out memberOf sos#DescribeSensorOutput
+	sawsdl#modelReference hasValue xsd#string
+
+instance sos#_op3 memberOf sos#GetObservation
+	posm#hasInput hasValue sos#_op3_in
+	posm#hasOutput hasValue sos#_op3_out
+
+instance sos#_op3_in memberOf sos#GetObservationInput
+	sawsdl#modelReference hasValue xsd#string
+	
+instance sos#_op3_out memberOf sos#GetObservationOutput
+	sawsdl#modelReference hasValue om#Observation
+	
+
+
+
+

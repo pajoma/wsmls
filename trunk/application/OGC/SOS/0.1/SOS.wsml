@@ -1,0 +1,28 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://ifgipedia.uni-muenster.de/envision-testenvironment#",
+	dc _"http://purl.org/dc/elements/1.1/",
+	sos _"http://www.opengis.net/sos/1.0/",
+	om _"http://www.opengis.net/om/1.0#"
+ }
+
+ontology SOS
+	nonFunctionalProperties
+		dc#creator hasValue "a_llav02&t_fech01"
+		dc#publisher hasValue "(a)IfGI, University of Muenster"
+		dc#date hasValue "25-02-2010"
+		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+		dc#type hasValue "Ontology"
+		dc#title hasValue "OGC Sensor Observation Service"
+	endNonFunctionalProperties
+	
+	concept sos#SensorDescription
+		nonFunctionalProperties
+			dc#description hasValue "Describes a sensor by means of its identifier and the output format of the data it provides."
+		endNonFunctionalProperties
+		sos#sensorId ofType om#Procedure
+		sos#outputFormat ofType _string
+		
+	concept sos#Observation subConceptOf om#Observation
+		nonFunctionalProperties
+			dc#description hasValue "Individual perception of the real world obtained from a sensor."
+		endNonFunctionalProperties

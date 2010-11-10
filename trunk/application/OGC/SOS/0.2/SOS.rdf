@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns="http://purl.org/ifgi/sos#"
+	xmlns:sawsdl="http://www.w3.org/ns/sawsdl#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:ows="http://purl.org/ifgi/ows#"
+	xmlns:om="http://purl.org/ifgi/om#"
+	xmlns:posm="http://www.wsmo.org/ns/posm/0.2#">
+<!-- http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/date: "25-02-2010"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/type: "Ontology"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/title: "OGC Sensor Observation Service"^^<http://www.w3.org/2001/XMLSchema#string> -->
+
+<rdf:Description rdf:about="http://purl.org/ifgi/sos#SensorObservationService">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/ows#OGCWebService"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/sos#DescribeSensor">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#Operation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/sos#DescribeSensorInput">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/sos#DescribeSensorOutput">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
+	<rdfs:seeAlso rdf:resource="http://schemas.opengis.net/sensorML/1.0.1/sensorML.xsd#SensorML"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/sos#GetObservation">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#Operation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/sos#GetObservationInput">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/sos#GetObservationOutput">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
+	<rdfs:seeAlso rdf:resource="http://schemas.opengis.net/om/1.0.0/observation.xsd#Observation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/sos#DefaultDescribeSensor">
+	<rdf:type rdf:resource="http://purl.org/ifgi/sos#DescribeSensor"/>
+	<posm:hasOutput rdf:resource="http://purl.org/ifgi/sos#DefaultDescribeSensorOutput"/>
+	<posm:hasInput rdf:resource="http://purl.org/ifgi/sos#DefaultDescribeSensorInput"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/sos#DefaultDescribeSensorOutput">
+	<rdf:type rdf:resource="http://purl.org/ifgi/sos#DescribeSensorOutput"/>
+	<sawsdl:modelReference rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/sos#DefaultDescribeSensorInput">
+	<rdf:type rdf:resource="http://purl.org/ifgi/sos#DescribeSensorInput"/>
+	<sawsdl:modelReference rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+
+</rdf:RDF>

@@ -1,0 +1,49 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://purl.org/ifgi/sos#> .
+@prefix sawsdl: <http://www.w3.org/ns/sawsdl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ows: <http://purl.org/ifgi/ows#> .
+@prefix om: <http://purl.org/ifgi/om#> .
+@prefix posm: <http://www.wsmo.org/ns/posm/0.2#> .
+
+# http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/date: "25-02-2010"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/type: "Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/title: "OGC Sensor Observation Service"^^<http://www.w3.org/2001/XMLSchema#string>
+
+:SensorObservationService a rdfs:Class ;
+	rdfs:subClassOf ows:OGCWebService .
+
+:DescribeSensor a rdfs:Class ;
+	rdfs:subClassOf posm:Operation .
+
+:DescribeSensorInput a rdfs:Class ;
+	rdfs:subClassOf posm:MessagePart .
+
+:DescribeSensorOutput a rdfs:Class ;
+	rdfs:subClassOf posm:MessagePart ;
+	rdfs:seeAlso <http://schemas.opengis.net/sensorML/1.0.1/sensorML.xsd#SensorML> .
+
+:GetObservation a rdfs:Class ;
+	rdfs:subClassOf posm:Operation .
+
+:GetObservationInput a rdfs:Class ;
+	rdfs:subClassOf posm:MessagePart .
+
+:GetObservationOutput a rdfs:Class ;
+	rdfs:subClassOf posm:MessagePart ;
+	rdfs:seeAlso <http://schemas.opengis.net/om/1.0.0/observation.xsd#Observation> .
+
+:DefaultDescribeSensor a :DescribeSensor ;
+	posm:hasOutput :DefaultDescribeSensorOutput ;
+	posm:hasInput :DefaultDescribeSensorInput .
+
+:DefaultDescribeSensorOutput a :DescribeSensorOutput ;
+	sawsdl:modelReference xsd:string .
+
+:DefaultDescribeSensorInput a :DescribeSensorInput ;
+	sawsdl:modelReference xsd:string .
+
