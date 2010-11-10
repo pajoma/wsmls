@@ -1,0 +1,73 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://purl.org/ifgi/gml#> .
+@prefix sawsdl: <http://www.w3.org/ns/sawsdl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ows: <http://purl.org/ifgi/ows#> .
+@prefix posm: <http://www.wsmo.org/ns/posm/0.2#> .
+
+# http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/date: "10-11-2010"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/type: "Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/title: "OGC Geography Markup Language"^^<http://www.w3.org/2001/XMLSchema#string>
+
+:AbstractGML a rdfs:Class .
+
+:id a rdf:Property ;
+	rdfs:domain :AbstractGML .
+
+:AbstractFeature a rdfs:Class ;
+	rdfs:subClassOf :AbstractGML .
+
+:hasProperty a rdf:Property ;
+	rdfs:domain :AbstractFeature .
+
+:boundedBy a rdf:Property ;
+	rdfs:domain :AbstractFeature .
+
+:AbstractGeometry a rdfs:Class ;
+	rdfs:subClassOf :AbstractGML .
+
+:FeatureProperty a rdfs:Class ;
+	rdfs:subClassOf :AbstractGML .
+
+:hasValue a rdf:Property ;
+	rdfs:domain :FeatureProperty .
+
+:GeometryProperty a rdfs:Class ;
+	rdfs:subClassOf :FeatureProperty .
+
+:hasGeometry a rdf:Property ;
+	rdfs:domain :GeometryProperty .
+
+:FeatureCollection a rdfs:Class ;
+	rdfs:subClassOf :AbstractGML .
+
+:featureMember a rdf:Property ;
+	rdfs:domain :FeatureCollection .
+
+:Envelope a rdfs:Class .
+
+:upperCorner a rdf:Property ;
+	rdfs:domain :Envelope .
+
+:lowerCorner a rdf:Property ;
+	rdfs:domain :Envelope .
+
+:AbstractTimeObject a rdfs:Class ;
+	rdfs:subClassOf :AbstractGML .
+
+:Definition a rdfs:Class ;
+	rdfs:subClassOf :AbstractGML .
+
+:featureMember a rdf:Property ;
+	rdfs:domain :FeatureCollection ;
+	rdfs:range :AbstractFeature ;
+	rdfs:subPropertyOf rdfs:member .
+
+:hasGeometry a rdf:Property ;
+	rdfs:domain :GeometryProperty ;
+	rdfs:range :AbstractGeometry ;
+	rdfs:subPropertyOf :hasValue .

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns="http://purl.org/ifgi/wps#"
+	xmlns:sawsdl="http://www.w3.org/ns/sawsdl#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:ows="http://purl.org/ifgi/ows#"
+	xmlns:posm="http://www.wsmo.org/ns/posm/0.2#">
+<!-- http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/date: "10-11-2010"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/type: "Ontology"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/title: "OGC Web Processing Service"^^<http://www.w3.org/2001/XMLSchema#string> -->
+
+<rdf:Description rdf:about="http://purl.org/ifgi/wps#WebProcessingService">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/ows#OGCWebService"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/wps#DecribeProcess">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#Operation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/wps#DecribeProcessInput">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/wps#DecribeProcessOutput">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
+	<rdfs:seeAlso rdf:resource="http://schemas.opengis.net/wps/1.0.0/wpsDescribeProcess_response.xsd#ProcessDescriptions"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/wps#Execute">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#Operation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/wps#ExecuteInput">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
+	<rdfs:seeAlso rdf:resource="http://schemas.opengis.net/wps/1.0.0/wpsExecute_request.xsd#Execute"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/wps#ExecuteOutput">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
+	<rdfs:seeAlso rdf:resource="http://schemas.opengis.net/wps/1.0.0/wpsExecute_response.xsd#ExecuteResponse"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/wps#DefaultDecribeProcess">
+	<rdf:type rdf:resource="http://purl.org/ifgi/wps#DecribeProcess"/>
+	<posm:hasOutput rdf:resource="http://purl.org/ifgi/wps#DefaultDecribeProcessOutput"/>
+	<posm:hasInput rdf:resource="http://purl.org/ifgi/wps#DefaultDecribeProcessInput"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/wps#DefaultDecribeProcessOutput">
+	<rdf:type rdf:resource="http://purl.org/ifgi/wps#DescribeProcessOutput"/>
+	<sawsdl:modelReference rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/wps#DefaultDecribeProcessInput">
+	<rdf:type rdf:resource="http://purl.org/ifgi/wps#DescribeProcessInput"/>
+	<sawsdl:modelReference rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+
+</rdf:RDF>
