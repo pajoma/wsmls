@@ -20,34 +20,41 @@ ontology GML
 	endAnnotations
 
 concept AbstractGML
-	id ofType xsd#ID
-	
-concept AbstractFeature subConceptOf AbstractGML
-	hasProperty ofType FeatureProperty
-	boundedBy ofType Envelope
 
+concept AbstractFeature subConceptOf AbstractGML
+	
 concept AbstractGeometry subConceptOf AbstractGML
 
 concept FeatureProperty subConceptOf AbstractGML
-	gml#hasValue ofType xsd#anyType
 
 concept GeometryProperty subConceptOf FeatureProperty
-	hasGeometry ofType AbstractGeometry
 
 concept FeatureCollection subConceptOf AbstractGML
-	featureMember ofType AbstractFeature
 	
-relation featureMember (ofType FeatureCollection, ofType AbstractFeature) subRelationOf rdfs#member
-
-relation hasGeometry (ofType GeometryProperty, ofType AbstractGeometry) subRelationOf gml#hasValue
-
 concept Envelope
-	upperCorner ofType rdfs#Literal
-	lowerCorner ofType rdfs#Literal
 
 concept AbstractTimeObject subConceptOf AbstractGML
 
 concept Definition subConceptOf AbstractGML
+
+// Properties
+	
+relation id (ofType AbstractGML, ofType xsd#ID)
+
+relation hasProperty (ofType AbstractFeature, ofType FeatureProperty)
+
+relation boundedBy (ofType AbstractFeature, ofType Envelope)
+
+relation gml#hasValue (ofType FeatureProperty, ofType xsd#anyType)
+
+relation upperCorner (ofType Envelope, ofType rdfs#Literal)
+
+relation lowerCorner (ofType Envelope, ofType rdfs#Literal)
+
+relation hasGeometry (ofType GeometryProperty, ofType AbstractGeometry) subRelationOf gml#hasValue
+
+relation featureMember (ofType FeatureCollection, ofType AbstractFeature) subRelationOf rdfs#member
+
 
 
 

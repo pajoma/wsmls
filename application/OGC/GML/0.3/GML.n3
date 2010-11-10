@@ -15,17 +15,8 @@
 
 :AbstractGML a rdfs:Class .
 
-:id a rdf:Property ;
-	rdfs:domain :AbstractGML .
-
 :AbstractFeature a rdfs:Class ;
 	rdfs:subClassOf :AbstractGML .
-
-:hasProperty a rdf:Property ;
-	rdfs:domain :AbstractFeature .
-
-:boundedBy a rdf:Property ;
-	rdfs:domain :AbstractFeature .
 
 :AbstractGeometry a rdfs:Class ;
 	rdfs:subClassOf :AbstractGML .
@@ -33,28 +24,13 @@
 :FeatureProperty a rdfs:Class ;
 	rdfs:subClassOf :AbstractGML .
 
-:hasValue a rdf:Property ;
-	rdfs:domain :FeatureProperty .
-
 :GeometryProperty a rdfs:Class ;
 	rdfs:subClassOf :FeatureProperty .
-
-:hasGeometry a rdf:Property ;
-	rdfs:domain :GeometryProperty .
 
 :FeatureCollection a rdfs:Class ;
 	rdfs:subClassOf :AbstractGML .
 
-:featureMember a rdf:Property ;
-	rdfs:domain :FeatureCollection .
-
 :Envelope a rdfs:Class .
-
-:upperCorner a rdf:Property ;
-	rdfs:domain :Envelope .
-
-:lowerCorner a rdf:Property ;
-	rdfs:domain :Envelope .
 
 :AbstractTimeObject a rdfs:Class ;
 	rdfs:subClassOf :AbstractGML .
@@ -62,12 +38,36 @@
 :Definition a rdfs:Class ;
 	rdfs:subClassOf :AbstractGML .
 
-:featureMember a rdf:Property ;
-	rdfs:domain :FeatureCollection ;
-	rdfs:range :AbstractFeature ;
-	rdfs:subPropertyOf rdfs:member .
+:id a rdf:Property ;
+	rdfs:domain :AbstractGML ;
+	rdfs:range xsd:ID .
+
+:hasProperty a rdf:Property ;
+	rdfs:domain :AbstractFeature ;
+	rdfs:range :FeatureProperty .
+
+:boundedBy a rdf:Property ;
+	rdfs:domain :AbstractFeature ;
+	rdfs:range :Envelope .
+
+:hasValue a rdf:Property ;
+	rdfs:domain :FeatureProperty ;
+	rdfs:range xsd:anyType .
+
+:upperCorner a rdf:Property ;
+	rdfs:domain :Envelope ;
+	rdfs:range rdfs:Literal .
+
+:lowerCorner a rdf:Property ;
+	rdfs:domain :Envelope ;
+	rdfs:range rdfs:Literal .
 
 :hasGeometry a rdf:Property ;
 	rdfs:domain :GeometryProperty ;
 	rdfs:range :AbstractGeometry ;
 	rdfs:subPropertyOf :hasValue .
+
+:featureMember a rdf:Property ;
+	rdfs:domain :FeatureCollection ;
+	rdfs:range :AbstractFeature ;
+	rdfs:subPropertyOf rdfs:member .
