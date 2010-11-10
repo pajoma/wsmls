@@ -1,0 +1,23 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-core"
+namespace { _"http://www.wsmo.org/ns/wsmo-lite#"
+ }
+
+/* See W3C submission for a description:  
+ *	http://www.w3.org/Submission/2010/SUBM-WSMO-Lite-20100823/
+ * Outdated ontology: http://www.wsmo.org/ns/wsmo-lite/
+ */
+ontology WSL
+
+
+concept FunctionalClassificationRoot
+
+concept NonfunctionalParameter
+
+concept Condition
+
+concept Effect 
+
+/* we introducted this relation to be able to map between service instances and the classification root */
+relation functionalClassification/2
+
+relation usesOntology/2

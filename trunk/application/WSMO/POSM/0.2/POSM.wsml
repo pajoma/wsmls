@@ -1,0 +1,23 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-core"
+namespace { _"http://www.wsmo.org/ns/posm/0.2#"
+ }
+
+ontology POSM
+
+/* classes for use in structural definition of procedure-oriented services */
+
+concept Service
+    hasOperation impliesType Operation
+
+concept Operation
+	hasInput impliesType MessagePart
+	hasOutput impliesType MessagePart
+	hasInputFault impliesType MessagePart
+	hasOutputFault impliesType MessagePart
+	
+/* classes for use in definition of messages of procedure-oriented services */
+
+concept MessagePart
+	hasMessagePart impliesType MessagePart
+
+concept MessageContent subConceptOf MessagePart

@@ -1,0 +1,38 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://www.wsmo.org/ns/posm/0.2#> .
+
+
+:Service a rdfs:Class .
+
+:hasOperation a rdf:Property ;
+	rdfs:domain :Service ;
+	rdfs:range :Operation .
+
+:Operation a rdfs:Class .
+
+:hasInput a rdf:Property ;
+	rdfs:domain :Operation ;
+	rdfs:range :MessagePart .
+
+:hasOutput a rdf:Property ;
+	rdfs:domain :Operation ;
+	rdfs:range :MessagePart .
+
+:hasInputFault a rdf:Property ;
+	rdfs:domain :Operation ;
+	rdfs:range :MessagePart .
+
+:hasOutputFault a rdf:Property ;
+	rdfs:domain :Operation ;
+	rdfs:range :MessagePart .
+
+:MessagePart a rdfs:Class .
+
+:hasMessagePart a rdf:Property ;
+	rdfs:domain :MessagePart ;
+	rdfs:range :MessagePart .
+
+:MessageContent a rdfs:Class ;
+	rdfs:subClassOf :MessagePart .
