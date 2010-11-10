@@ -1,0 +1,68 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://purl.org/net/wsmls/observations#> .
+@prefix dolce: <http://purl.org/net/wsmls/dolce#> .
+
+
+:ObservationProcess a rdfs:Class ;
+	rdfs:subClassOf dolce:process .
+
+:isPerformedBy a rdf:Property ;
+	rdfs:domain :ObservationProcess ;
+	rdfs:range :Observer .
+
+:Observer a rdfs:Class ;
+	rdfs:subClassOf dolce:physical_object .
+
+:Observable a rdfs:Class ;
+	rdfs:subClassOf dolce:quality .
+
+:isObservedBy a rdf:Property ;
+	rdfs:domain :Observable ;
+	rdfs:range :Observer .
+
+:ObservedEntity a rdfs:Class ;
+	rdfs:subClassOf dolce:endurant , dolce:perdurant .
+
+dolce:hasQuality a rdf:Property ;
+	rdfs:domain :ObservedEntity ;
+	rdfs:range :Observable .
+
+dolce:participantIn a rdf:Property ;
+	rdfs:domain :ObservedEntity ;
+	rdfs:range :Stimulus .
+
+:Stimulus a rdfs:Class ;
+	rdfs:subClassOf dolce:perdurant .
+
+:isDetectedBy a rdf:Property ;
+	rdfs:domain :Stimulus ;
+	rdfs:range :Observer .
+
+:isSometimesProducedBy a rdf:Property ;
+	rdfs:domain :Stimulus ;
+	rdfs:range :Observer .
+
+:ObservationValue a rdfs:Class .
+
+:value a rdf:Property ;
+	rdfs:domain :ObservationValue .
+
+:isProducedBy a rdf:Property ;
+	rdfs:domain :ObservationValue ;
+	rdfs:range :Observer .
+
+:MeasurementRegion a rdfs:Class ;
+	rdfs:subClassOf dolce:region .
+
+:value a rdf:Property ;
+	rdfs:domain :MeasurementRegion ;
+	rdfs:range :ObservationValue .
+
+:partOf a rdf:Property ;
+	rdfs:domain :MeasurementRegion ;
+	rdfs:range :UnitOfMeasurement .
+
+:UnitOfMeasurement a rdfs:Class ;
+	rdfs:subClassOf dolce:quality_space .

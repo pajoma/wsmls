@@ -1,0 +1,34 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-core"
+namespace { _"http://purl.org/net/wsmls/observations#", 
+	dolce _"http://purl.org/net/wsmls/dolce#"
+ }
+
+ontology ObservationsOntology
+	importsOntology {dolce#DOLCE_Lite}
+	
+	concept ObservationProcess subConceptOf dolce#process
+		isPerformedBy impliesType Observer
+		
+	concept Observer subConceptOf dolce#physical_object
+	
+	concept Observable subConceptOf dolce#quality
+		isObservedBy impliesType Observer
+		
+	concept ObservedEntity subConceptOf {dolce#endurant, dolce#perdurant}
+		dolce#hasQuality impliesType Observable
+		dolce#participantIn impliesType Stimulus
+		
+	concept Stimulus subConceptOf dolce#perdurant
+		isDetectedBy impliesType Observer
+		isSometimesProducedBy impliesType Observer
+		
+	concept ObservationValue
+		value ofType {_integer, _float, _boolean, _string}
+		isProducedBy impliesType Observer
+		
+	concept MeasurementRegion subConceptOf dolce#region
+		value impliesType ObservationValue
+		partOf impliesType UnitOfMeasurement
+		
+	concept UnitOfMeasurement subConceptOf dolce#quality_space
+

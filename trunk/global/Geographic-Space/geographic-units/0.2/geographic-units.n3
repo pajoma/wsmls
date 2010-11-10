@@ -1,0 +1,71 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://purl.org/net/wsml/geospace#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix wsml: <http://www.wsmo.org/wsml/wsml-syntax#> .
+@prefix dolce: <http://purl.org/net/wsml/dolce#> .
+@prefix dolceSpatial: <http://purl.org/net/wsml/dolceSpatial#> .
+
+# http://purl.org/dc/elements/1.1/creator: "p.maue (IFGI)"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/contributor: "e.klien (IFGI)"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/type: "Domain Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/description: "A generic ontology suitable to describe objects and events in the geographic space, e.g. weather, forests, mountains, rivers, snow, ..."^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/title: "Geographic Space Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/subject: "Geography"^^<http://www.w3.org/2001/XMLSchema#string>
+
+:natural_unit a rdfs:Class ;
+	rdfs:subClassOf :geographical_unit ;
+	rdfs:label "Natürliche Einheit@de"^^xsd:string , "Natural Unit@en"^^xsd:string ;
+	dc:description "A geographic unit created naturally"^^xsd:string ;
+	dc:subject "Units"^^xsd:string .
+
+:anthropogenic_unit a rdfs:Class ;
+	rdfs:subClassOf :geographical_unit ;
+	rdfs:label "Vom Menschen erbautes Objekt@de"^^xsd:string , "Anthropogenic Unit@en"^^xsd:string ;
+	dc:description "A geographic unit created by humans"^^xsd:string ;
+	dc:subject "Units"^^xsd:string .
+
+:geomorphological_unit a rdfs:Class ;
+	rdfs:subClassOf :geographical_unit ;
+	rdfs:label "Geomorphologische Einheit@de"^^xsd:string , "Geomorphological Unit@en"^^xsd:string ;
+	dc:description "A landform comprises a geomorphological unit"^^xsd:string ;
+	dc:subject "Units"^^xsd:string .
+
+:landcover_unit a rdfs:Class ;
+	rdfs:subClassOf :geographical_unit ;
+	rdfs:label "Einheit der Landbedeckung@de"^^xsd:string , "Land Cover Unit@en"^^xsd:string ;
+	dc:description "Land cover is the physical state of the land surface. Land Cover Units are discernible parts of Land Cover, e.g. the forest or a street"^^xsd:string ;
+	dc:subject "Units"^^xsd:string .
+
+:vegetation_community a rdfs:Class ;
+	rdfs:subClassOf :LandCoverUnit ;
+	rdfs:label "Vegetation@de"^^xsd:string , "Vegetation@en"^^xsd:string ;
+	dc:description "The plants of an area considered in general or as communities, but not taxonomically;"^^xsd:string ;
+	dc:subject "LandCover"^^xsd:string .
+
+:forest a rdfs:Class ;
+	rdfs:subClassOf :vegetation_community ;
+	rdfs:label "Wald@de"^^xsd:string , "forest@en"^^xsd:string ;
+	:comment "A vegetation community dominated by trees and other woody shrubs, growing close enough together that the tree tops touch or overlap, creating various degrees of shade on the forest floor. It may produce benefits such as timber, recreation, wildlife habitat, etc. (Source: DUNSTE)"^^xsd:string ;
+	dc:subject "LandCover"^^xsd:string .
+
+:grassland a rdfs:Class ;
+	rdfs:subClassOf :vegetation_community ;
+	rdfs:label "Gruenland@de"^^xsd:string , "grassland@en"^^xsd:string ;
+	:comment "A vegetation community in which grasses are the most conspicuous plants"^^xsd:string ;
+	dc:subject "LandCover"^^xsd:string .
+
+:brushwood a rdfs:Class ;
+	rdfs:subClassOf :vegetation_community ;
+	rdfs:label "Unterholz@de"^^xsd:string , "brushwood@en"^^xsd:string ;
+	:comment "Branches and twigs fallen from trees and shrubs; small trees and shrubs "^^xsd:string ;
+	dc:subject "LandCover"^^xsd:string .
+
+:waterbody a rdfs:Class ;
+	rdfs:subClassOf :landcover_unit ;
+	rdfs:label "Gewaesser@de"^^xsd:string , "water body@en"^^xsd:string ;
+	:comment "any kind of accumulation of water, as oceans, rivers or lakes"^^xsd:string ;
+	dc:subject "LandCover"^^xsd:string .

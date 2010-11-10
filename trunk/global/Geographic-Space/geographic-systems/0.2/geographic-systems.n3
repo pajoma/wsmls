@@ -1,0 +1,37 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://purl.org/net/wsml/geospace#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix wsml: <http://www.wsmo.org/wsml/wsml-syntax#> .
+@prefix dolce: <http://purl.org/net/wsml/dolce#> .
+@prefix ptrn: <http://purl.org/net/concepts/patterns/system#> .
+
+# http://purl.org/dc/elements/1.1/creator: "p.maue (IFGI)"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/contributor: "h.michels (IFGI)"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/type: "Domain Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/description: "A generic ontology suitable to describe objects and events in the geographic space, e.g. weather, forests, mountains, rivers, snow, ..."^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/title: "Geographic Space Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/subject: "Geography"^^<http://www.w3.org/2001/XMLSchema#string>
+
+:geographic_system a rdfs:Class ;
+	rdfs:subClassOf ptrn:System ;
+	rdfs:label "System, geographisch@de"^^xsd:string , "geographical system@en"^^xsd:string ;
+	:comment "a system in the geographical space"^^xsd:string ;
+	dc:subject "Systems"^^xsd:string .
+
+:surroundedBy a rdf:Property ;
+	rdfs:label "umgeben von@de"^^xsd:string , "sourrounded by@en"^^xsd:string ;
+	dc:description ""^^xsd:string ;
+	dc:source ""^^xsd:string ;
+	rdfs:comments ""^^xsd:string ;
+	rdfs:domain :geographic_system ;
+	rdfs:range :Environment .
+
+:environment a rdfs:Class ;
+	rdfs:subClassOf ptrn:Role ;
+	rdfs:label "Umgebung@de"^^xsd:string , "Environment@en"^^xsd:string ;
+	:comment "the sourrounding geographical unit of a system"^^xsd:string ;
+	dc:subject "Environment"^^xsd:string .

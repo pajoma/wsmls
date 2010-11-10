@@ -1,0 +1,38 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://purl.org/net/concepts/patterns#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/#> .
+@prefix wsml: <http://www.wsmo.org/wsml/wsml-syntax#> .
+@prefix dul: <http://www.loa-cnr.it/ontologies/DUL.owl#> .
+
+# http://purl.org/dc/elements/1.1/#creator: "p.maue (IFGI)"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/#contributor: ""^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/#publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/#rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/#type: "Semantic Pattern"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/#title: "Semantic Pattern: Role"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/#subject: "Pattern, Role"^^<http://www.w3.org/2001/XMLSchema#string>
+
+:Role a rdfs:Class ;
+	dc:label "Role@en"^^xsd:string , "Rolle@de"^^xsd:string .
+
+:isPlayedBy a rdf:Property ;
+	rdfs:label "wird gespielt von@de"^^xsd:string , "is played by@en"^^xsd:string ;
+	dc:description ""^^xsd:string ;
+	dc:source ""^^xsd:string ;
+	rdfs:comments ""^^xsd:string ;
+	rdfs:domain :Role ;
+	rdfs:range dul:Agent .
+
+:TemporaryRole a rdfs:Class ;
+	rdfs:label "Temporary Role@en"^^xsd:string , "Rolle, vorübergehend@de"^^xsd:string ;
+	rdfs:comments "A role which is played only a certain time, e.g. a student"^^xsd:string .
+
+:startTime a rdf:Property ;
+	rdfs:domain :TemporaryRole ;
+	rdfs:range dul:TimeInterval .
+
+:endTime a rdf:Property ;
+	rdfs:domain :TemporaryRole ;
+	rdfs:range dul:TimeInterval .
