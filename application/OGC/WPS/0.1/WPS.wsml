@@ -1,0 +1,35 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://ifgipedia.uni-muenster.de/envision-testenvironment#",
+	dc _"http://purl.org/dc/elements/1.1/",
+	sml _"http://www.opengis.net/sensorML/1.0.1",
+	gml _"http://www.opengis.net/gml/3.2",
+	swe _"http://www.opengis.net/swe/1.0.1"
+ }
+ 
+
+ontology WPS
+	importsOntology {Geoprocesses}
+	
+	nonFunctionalProperties
+		dc#description hasValue "Web Processing Service Ontology"
+ 		dc#publisher hasValue "(a)IfGI, University of Muenster"
+		dc#date hasValue "16-02-2010"
+		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+		dc#type hasValue "Ontology"
+		dc#title hasValue "OGC WPS ontology"
+		dc#source hasValue "http://schemas.opengis.net/sensorML/1.0.1/process.xsd"
+	endNonFunctionalProperties
+	
+	concept sml#ProcessChain subConceptOf gml#AbstractFeature
+		nonFunctionalProperties
+			dc#description hasValue "Process formed by chaining sub-processes"
+		endNonFunctionalProperties
+		component ofType (1 *) sml#_Process
+		input ofType (1 *) swe#AnyData
+		output ofType (1 *) swe#AnyData
+		
+	concept Input subConceptOf gml#AbstractFeature
+		data ofType ogc#AnyData
+	
+	concept Output subConceptOf gml#AbstractFeature
+		data ofType ogc#AnyData

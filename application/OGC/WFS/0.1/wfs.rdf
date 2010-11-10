@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:wfs="http://purl.org/ifgi/wfs/0.1/" xmlns:posm="http://www.wsmo.org/ns/posm/0.1#" xmlns:gml="http://purl.org/ifgi/gml/0.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<rdfs:Class rdf:about="http://purl.org/ifgi/wfs/0.1/WFSService">
+		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#Service" />
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://purl.org/ifgi/wfs/0.1/DescribeFeatureType">
+		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#Operation" />
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://purl.org/ifgi/wfs/0.1/GetFeature">
+		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#Operation" />
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://purl.org/ifgi/wfs/0.1/DescribeFeatureTypeRequest">
+		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#Message" />
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://purl.org/ifgi/wfs/0.1/DescribeFeatureTypeResponse">
+		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#Message" />
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://purl.org/ifgi/wfs/0.1/GetFeatureRequest">
+		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#Message" />
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://purl.org/ifgi/wfs/0.1/GetFeatureResponse">
+		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#Message" />
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://purl.org/ifgi/wfs/0.1/GetCapabilitiesResponse_MessagePart">
+		<rdfs:seeAlso>http://schemas.opengis.net/wfs/1.1.0/wfs.xsd#WFS_Capabilities</rdfs:seeAlso>
+		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#MessagePart" />
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://purl.org/ifgi/wfs/0.1/DescribeFeatureTypeResponse_MessagePart">
+		<rdfs:seeAlso>http://schemas.opengis.net/wfs/1.1.0/wsdl/wfs-util.xsd#DescribeFeatureTypeResponse</rdfs:seeAlso>
+		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#MessagePart" />
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://purl.org/ifgi/wfs/0.1/FeatureCollection">
+		<rdfs:seeAlso>http://schemas.opengis.net/wfs/1.1.0/wfs.xsd#FeatureCollection</rdfs:seeAlso>
+		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#MessagePart" />
+		<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml/0.1/FeatureCollection" />
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://purl.org/ifgi/wfs/0.1/Parameter_TypeName">
+		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#MessagePart" />
+	</rdfs:Class>
+</rdf:RDF>
