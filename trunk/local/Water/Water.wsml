@@ -3,7 +3,7 @@ namespace { _"http://swing.uni-muenster.de/core/water/",
      rdf _"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
      rdfs _"http://www.w3.org/2000/01/rdf-schema#",
      dc _"http://purl.org/dc/elements/1.1/",
-     patterns _"http://swing.uni-muenster.de/core/pattern/",
+     ptns _"http://purl.org/net/concepts/patterns#",
      geo _"http://swing.uni-muenster.de/core/GeographicSpace/",
      dolce _"http://www.load-cnr.it/ontologies/DOLCE-Lite.owl" 
      }
@@ -42,7 +42,7 @@ and discharging at a fixed point into another body of water. (Source: BJGEO)
 			dc#subject hasValue "Hydrosphere"
 			rdfs#comments hasValue ""
 		endnfp 
-		patterns#involvedPhysicalEndurant impliesType geo#WaterBody
+		ptns#involvedPhysicalEndurant impliesType geo#WaterBody
 	 
 	concept Lake subConceptOf geo#GeographicSystem
 		nfp
@@ -53,7 +53,7 @@ and discharging at a fixed point into another body of water. (Source: BJGEO)
 			dc#subject hasValue "Hydrosphere"
 			rdfs#comments hasValue ""
 		endnfp 
-		patterns#involvedPhysicalEndurant impliesType geo#WaterBody
+		ptns#involvedPhysicalEndurant impliesType geo#WaterBody
 	
 	concept RiverSystem subConceptOf geo#GeographicSystem
 		nfp
@@ -65,18 +65,19 @@ and discharging at a fixed point into another body of water. (Source: BJGEO)
 			dc#subject hasValue "Hydrosphere, Systems"
 			rdfs#comments hasValue ""
 		endnfp
-		patterns#involvedPhysicalEndurant impliesType RiverWaterBody
-		patterns#involvedPhysicalEndurant impliesType Reach
-		patterns#involvedPhysicalEndurant impliesType Channel
-		patterns#involvedPerdurant impliesType Current
+		ptns#involvedPhysicalEndurant impliesType RiverWaterBody
+		ptns#involvedPhysicalEndurant impliesType Reach
+		ptns#involvedPhysicalEndurant impliesType Channel
+		ptns#involvedPerdurant impliesType Current
 
 	// we state that the current river is surrounded by a drainage basin (which plays the role of the environment)
+	/* not working
 	axiom defineRiverSystem 
 		definedBy
-		 	?env[isPlayedBy ofType ?player] memberOf patterns#Environment and
+		 	?env[isPlayedBy ofType ?player] memberOf ptns#Environment and
 		 	?player memberOf DrainageBasin and
 		 	?system[surroundedBy ofType ?env] memberOf RiverSystem.
-	
+	*/
 		
 	concept DrainageBasin subConceptOf geo#GeomorphologicalUnit
 		nfp
@@ -180,7 +181,7 @@ and discharging at a fixed point into another body of water. (Source: BJGEO)
 	
 	//Events
 	
-	concept Flow subConceptOf patterns#Event
+	concept Flow subConceptOf ptns#Event
 		nfp
 			rdfs#label hasValue "Fluss@de"
 			rdfs#label hasValue "flow@en"
@@ -190,7 +191,7 @@ and discharging at a fixed point into another body of water. (Source: BJGEO)
 			rdfs#comments hasValue "It is not a river."
 		endnfp
 		dolce#has\-quality impliesType {VolumetricFlowRate, Continuity}
-		patterns#changes impliesType WaterLevel
+		ptns#changes impliesType WaterLevel
 	
 	concept Current subConceptOf Flow
 		nfp
