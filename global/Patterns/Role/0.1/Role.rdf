@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns="http://purl.org/net/concepts/patterns#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/#"
+	xmlns:wsml="http://www.wsmo.org/wsml/wsml-syntax#"
+	xmlns:dul="http://www.loa-cnr.it/ontologies/DUL.owl#">
+<!-- http://purl.org/dc/elements/1.1/#creator: "p.maue (IFGI)"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/#contributor: ""^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/#publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/#rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/#type: "Semantic Pattern"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/#title: "Semantic Pattern: Role"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/#subject: "Pattern, Role"^^<http://www.w3.org/2001/XMLSchema#string> -->
+
+<rdf:Description rdf:about="http://purl.org/net/concepts/patterns#Role">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<dc:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Role@en</dc:label>
+	<dc:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rolle@de</dc:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/net/concepts/patterns#isPlayedBy">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wird gespielt von@de</rdfs:label>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is played by@en</rdfs:label>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
+	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:source>
+	<rdfs:comments rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comments>
+	<rdfs:domain rdf:resource="http://purl.org/net/concepts/patterns#Role"/>
+	<rdfs:range rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#Agent"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/net/concepts/patterns#TemporaryRole">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temporary Role@en</rdfs:label>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rolle, vorübergehend@de</rdfs:label>
+	<rdfs:comments rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A role which is played only a certain time, e.g. a student</rdfs:comments>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/net/concepts/patterns#startTime">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/net/concepts/patterns#TemporaryRole"/>
+	<rdfs:range rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#TimeInterval"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/net/concepts/patterns#endTime">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/net/concepts/patterns#TemporaryRole"/>
+	<rdfs:range rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#TimeInterval"/>
+</rdf:Description>
+
+</rdf:RDF>

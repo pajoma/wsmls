@@ -9,7 +9,7 @@ namespace { _"http://purl.org/net/wsml/geospace#",
      	}
 
 ontology geographic_space
-     nonFunctionalProperties
+     annotations
      	dc#creator hasValue "p.maue (ifgi)"
 		dc#contributor hasValue "e.klien (ifgi), s.schade (ifgi)"
 		dc#publisher hasValue "(a)IfGI, University of Muenster"
@@ -18,48 +18,46 @@ ontology geographic_space
 		dc#description hasValue "A generic ontology suitable to describe objects and events in the geographic space, e.g. weather, forests, mountains, rivers, snow, ..." 
 		dc#title hasValue "Geographic Space Ontology"	
 		dc#subject hasValue "Geography"			
-     endNonFunctionalProperties
- 
-
-
+     endAnnotations
+     
 /* a unit does not have to have a precise location */
 concept geographical_unit subConceptOf dolce#physical_object
-	nfp
+	annotations
 		rdfs#label hasValue "Geographical Unit@en"
 		rdfs#label hasValue "Geographische Einheit@de"
 		dc#description hasValue "Something which is identified as entity on geographic scale" 
-	endnfp 
-	dolce#spatial_location_q impliesType geographical_space
+	endAnnotations 
+	dolceSpatial#spatial_location impliesType geographical_space
 	dolce#has_quality impliesType geographical_quality
 	confinedBy impliesType geographical_unit
-			nfp
+			annotations
 				rdfs#label hasValue "begrenzt durch@de"
 				rdfs#label hasValue "confined by@en"
 				dc#description hasValue ""
 				dc#source hasValue ""
 				rdfs#comments hasValue ""
-			endnfp
+			endAnnotations
 	situatedIn impliesType geographical_unit
-			nfp
+			annotations
 				rdfs#label hasValue "situiert in@de"
 				rdfs#label hasValue "situated in@en"
 				dc#description hasValue "The area in which something is located in"
 				dc#source hasValue ""
 				rdfs#comments hasValue ""
-			endnfp
+			endAnnotations
 	
 concept geographical_space_region subConceptOf dolce#space_region
-	nfp
+	annotations
 		rdfs#label hasValue "Geographical Space@en"
 		rdfs#label hasValue "Geographische Raum@de"
 		dc#description hasValue "Geographic space refers to the space of our world in which we live and work." 
-	endnfp 
+	endAnnotations 
 
 concept geographical_quality subConceptOf dolce#physical_quality
-	nfp
+	annotations
 		rdfs#label hasValue "Geographic Quality@en"
 		rdfs#label hasValue "Geographische Qualität@de"
 		dc#description hasValue "Qualities restricted to geographic objects. Only large scale objects have a terrain or a skyline " 
-	endnfp 
+	endAnnotations 
 	
 

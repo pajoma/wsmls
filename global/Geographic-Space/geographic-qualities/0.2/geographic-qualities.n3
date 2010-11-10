@@ -1,0 +1,57 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://purl.org/net/wsml/geospace#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix wsml: <http://www.wsmo.org/wsml/wsml-syntax#> .
+@prefix dolce: <http://purl.org/net/wsml/dolce#> .
+
+# http://purl.org/dc/elements/1.1/creator: "p.maue (ifgi)"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/contributor: "e.klien (ifgi), s.schade (ifgi)"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/type: "Domain Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/description: "A generic ontology suitable to describe objects and events in the geographic space, e.g. weather, forests, mountains, rivers, snow, ..."^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/title: "Geographic Space Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/subject: "Geography, Quality"^^<http://www.w3.org/2001/XMLSchema#string>
+
+:aspect a rdfs:Class ;
+	rdfs:subClassOf :geographic_quality ;
+	rdfs:label "Aspect@en"^^xsd:string ;
+	dc:description "In geography, aspect refers to the horizontal direction to which Slope faces."^^xsd:string .
+
+:altitude a rdfs:Class ;
+	rdfs:subClassOf :geographic_quality ;
+	rdfs:label "Altitude@en"^^xsd:string ;
+	dc:description "The height or vertical elevation of a point above a reference surface. Altitude measurements are usually based on a given reference datum, such as mean sea level."^^xsd:string ;
+	dc:relation <http://en.wikipedia.org/wiki/Altitude> .
+
+:elevation a rdfs:Class ;
+	rdfs:subClassOf :geographic_quality ;
+	rdfs:label "Hoehe@de"^^xsd:string , "elevation@en"^^xsd:string ;
+	dc:description "The elevation of a geographic location is its height above a fixed reference point, often the mean sea level"^^xsd:string ;
+	dc:source "en.wikipedia.org/wiki/Elevation"^^xsd:string .
+
+:slope a rdfs:Class ;
+	rdfs:subClassOf :geographic_quality ;
+	rdfs:label "Slope@en"^^xsd:string , "Gefaelle@de"^^xsd:string ;
+	dc:description "The degree to which a surface tends upward or downward."^^xsd:string .
+
+:grade a rdfs:Class ;
+	rdfs:subClassOf :geographic_quality ;
+	rdfs:seeAlso :slope .
+
+:spatial_extent a rdfs:Class ;
+	rdfs:subClassOf :geographic_quality ;
+	rdfs:label "Spatial Extent@en"^^xsd:string , "raeumliche Ausdehnung@de"^^xsd:string ;
+	dc:description ""^^xsd:string .
+
+:terrain a rdfs:Class ;
+	rdfs:subClassOf :geographic_quality ;
+	rdfs:label "Terrain@en"^^xsd:string , "Gelände@de"^^xsd:string ;
+	dc:description "The area of the surface with a distinctive geological character"^^xsd:string .
+
+:texture a rdfs:Class ;
+	rdfs:subClassOf :geographic_quality ;
+	rdfs:label "Texture@en"^^xsd:string , "Textur@de"^^xsd:string ;
+	dc:description ""^^xsd:string .

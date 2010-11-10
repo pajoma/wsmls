@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns="http://purl.org/net/wsml/geospace#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:wsml="http://www.wsmo.org/wsml/wsml-syntax#"
+	xmlns:dolce="http://purl.org/net/wsml/dolce#">
+<!-- http://purl.org/dc/elements/1.1/creator: "p.maue (ifgi)"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/contributor: "e.klien (ifgi), s.schade (ifgi)"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/type: "Domain Ontology"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/description: "A generic ontology suitable to describe objects and events in the geographic space, e.g. weather, forests, mountains, rivers, snow, ..."^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/title: "Geographic Space Ontology"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/subject: "Geography, Quality"^^<http://www.w3.org/2001/XMLSchema#string> -->
+
+<rdf:Description rdf:about="http://purl.org/net/wsml/geospace#aspect">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/net/wsml/geospace#geographic_quality"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aspect@en</rdfs:label>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In geography, aspect refers to the horizontal direction to which Slope faces.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/net/wsml/geospace#altitude">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/net/wsml/geospace#geographic_quality"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Altitude@en</rdfs:label>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The height or vertical elevation of a point above a reference surface. Altitude measurements are usually based on a given reference datum, such as mean sea level.</dc:description>
+	<dc:relation rdf:resource="http://en.wikipedia.org/wiki/Altitude"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/net/wsml/geospace#elevation">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/net/wsml/geospace#geographic_quality"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hoehe@de</rdfs:label>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">elevation@en</rdfs:label>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The elevation of a geographic location is its height above a fixed reference point, often the mean sea level</dc:description>
+	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en.wikipedia.org/wiki/Elevation</dc:source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/net/wsml/geospace#slope">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/net/wsml/geospace#geographic_quality"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Slope@en</rdfs:label>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gefaelle@de</rdfs:label>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The degree to which a surface tends upward or downward.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/net/wsml/geospace#grade">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/net/wsml/geospace#geographic_quality"/>
+	<rdfs:seeAlso rdf:resource="http://purl.org/net/wsml/geospace#slope"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/net/wsml/geospace#spatial_extent">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/net/wsml/geospace#geographic_quality"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spatial Extent@en</rdfs:label>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">raeumliche Ausdehnung@de</rdfs:label>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/net/wsml/geospace#terrain">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/net/wsml/geospace#geographic_quality"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Terrain@en</rdfs:label>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gelände@de</rdfs:label>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The area of the surface with a distinctive geological character</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/net/wsml/geospace#texture">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/net/wsml/geospace#geographic_quality"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Texture@en</rdfs:label>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Textur@de</rdfs:label>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
+</rdf:Description>
+
+</rdf:RDF>

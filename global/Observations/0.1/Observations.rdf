@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns="http://purl.org/net/wsmls/observations#"
+	xmlns:dolce="http://purl.org/net/wsmls/dolce#">
+
+<rdf:Description rdf:about="http://purl.org/net/wsmls/observations#ObservationProcess">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/net/wsmls/dolce#process"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/net/wsmls/observations#isPerformedBy">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/net/wsmls/observations#ObservationProcess"/>
+	<rdfs:range rdf:resource="http://purl.org/net/wsmls/observations#Observer"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/net/wsmls/observations#Observer">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/net/wsmls/dolce#physical_object"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/net/wsmls/observations#Observable">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/net/wsmls/dolce#quality"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/net/wsmls/observations#isObservedBy">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/net/wsmls/observations#Observable"/>
+	<rdfs:range rdf:resource="http://purl.org/net/wsmls/observations#Observer"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/net/wsmls/observations#ObservedEntity">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/net/wsmls/dolce#endurant"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/net/wsmls/dolce#perdurant"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/net/wsmls/dolce#hasQuality">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/net/wsmls/observations#ObservedEntity"/>
+	<rdfs:range rdf:resource="http://purl.org/net/wsmls/observations#Observable"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/net/wsmls/dolce#participantIn">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/net/wsmls/observations#ObservedEntity"/>
+	<rdfs:range rdf:resource="http://purl.org/net/wsmls/observations#Stimulus"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/net/wsmls/observations#Stimulus">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/net/wsmls/dolce#perdurant"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/net/wsmls/observations#isDetectedBy">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/net/wsmls/observations#Stimulus"/>
+	<rdfs:range rdf:resource="http://purl.org/net/wsmls/observations#Observer"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/net/wsmls/observations#isSometimesProducedBy">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/net/wsmls/observations#Stimulus"/>
+	<rdfs:range rdf:resource="http://purl.org/net/wsmls/observations#Observer"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/net/wsmls/observations#ObservationValue">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/net/wsmls/observations#value">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/net/wsmls/observations#ObservationValue"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/net/wsmls/observations#isProducedBy">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/net/wsmls/observations#ObservationValue"/>
+	<rdfs:range rdf:resource="http://purl.org/net/wsmls/observations#Observer"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/net/wsmls/observations#MeasurementRegion">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/net/wsmls/dolce#region"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/net/wsmls/observations#value">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/net/wsmls/observations#MeasurementRegion"/>
+	<rdfs:range rdf:resource="http://purl.org/net/wsmls/observations#ObservationValue"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/net/wsmls/observations#partOf">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/net/wsmls/observations#MeasurementRegion"/>
+	<rdfs:range rdf:resource="http://purl.org/net/wsmls/observations#UnitOfMeasurement"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/net/wsmls/observations#UnitOfMeasurement">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/net/wsmls/dolce#quality_space"/>
+</rdf:Description>
+
+</rdf:RDF>
