@@ -1,5 +1,5 @@
 wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
-namespace { _"http://ifgi.uni-muenster.de/~schades/Phd/Annotation/current#",
+namespace { _"http://purl.org/ifgi/annotations#",
     rdfs _"http://www.w3.org/2000/01/rdf-schema#",
     dc _"http://purl.org/dc/elements/1.1/", 
     wsml _"http://www.wsmo.org/wsml/wsml-syntax#"
