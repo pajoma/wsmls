@@ -1,0 +1,52 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://purl.org/ifgi/sos#",
+	xsd _"http://www.w3.org/2001/XMLSchema#",  
+	sawsdl _"http://www.w3.org/ns/sawsdl#",
+	dc _"http://purl.org/dc/elements/1.1/",
+	ows _"http://purl.org/ifgi/ows#",
+	om _"http://purl.org/ifgi/om#",
+	posm _"http://www.wsmo.org/ns/posm/0.2#", 
+	rdfs _"http://www.w3.org/2000/01/rdf-schema#"
+ }
+
+ontology SOS
+	annotations
+		dc#publisher hasValue "(a)IfGI, University of Muenster"
+		dc#date hasValue "25-02-2010"
+		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+		dc#type hasValue "Ontology"
+		dc#title hasValue "OGC Sensor Observation Service"
+	endAnnotations
+	
+
+	
+	/* POSM related stuff */
+	concept SensorObservationService subConceptOf ows#OGCWebService
+	
+	concept DescribeSensor subConceptOf posm#Operation
+	concept DescribeSensorInput subConceptOf posm#MessagePart
+	concept DescribeSensorOutput subConceptOf posm#MessagePart
+		annotations
+			rdfs#seeAlso hasValue _"http://schemas.opengis.net/sensorML/1.0.1/sensorML.xsd#SensorML"
+		endAnnotations
+
+	
+	
+	concept GetObservation subConceptOf posm#Operation
+	concept GetObservationInput subConceptOf posm#MessagePart
+	concept GetObservationOutput subConceptOf posm#MessagePart
+		annotations
+			rdfs#seeAlso hasValue _"http://schemas.opengis.net/om/1.0.0/observation.xsd#Observation"
+		endAnnotations
+		
+	
+	/* default instances */
+	instance DefaultDescribeSensor memberOf DescribeSensor
+		posm#hasOutput hasValue DefaultDescribeSensorOutput
+		posm#hasInput hasValue DefaultDescribeSensorInput
+	
+	instance DefaultDescribeSensorOutput memberOf DescribeSensorOutput
+		sawsdl#modelReference hasValue xsd#string
+		
+	instance DefaultDescribeSensorInput memberOf DescribeSensorInput
+		sawsdl#modelReference hasValue xsd#string
