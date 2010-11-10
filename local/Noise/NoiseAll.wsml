@@ -44,12 +44,12 @@ ontology NoiseAll
 		patterns#involvedPerdurant impliesType Pollution
 		
 	// we state that the traffic system is surrounded by a NoiseImissionEnvironment (which plays the role of the environment)
-	axiom defineTrafficSystem
-		definedBy
-		 	?env[isPlayedBy ofType ?player] memberOf geo#Environment and
-		 	?player memberOf NoiseImissionEnvironment and
-		 	?system[surroundedBy ofType ?env] memberOf TrafficSystem.
-			
+//	axiom defineTrafficSystem
+//		definedBy
+//		 	?env[isPlayedBy ofType ?player] memberOf geo#Environment and
+//		 	?player memberOf NoiseImissionEnvironment and
+//		 	?system[surroundedBy ofType ?env] memberOf TrafficSystem.
+//			
 	//Collectives
 
 	concept Infrastructure subConceptOf dolce#collective
@@ -186,11 +186,11 @@ ontology NoiseAll
 		dolce#part\-of impliesType Road
 		geo#sourroundedBy impliesType geo#Environment
 			
-	axiom defineStreet
-		definedBy
-		 	?env[isPlayedBy ofType ?player] memberOf geo#Environment and
-		 	?player memberOf UrbanizedArea and
-		 	?object[surroundedBy ofType ?env] memberOf Street.
+//	axiom defineStreet
+//		definedBy
+//		 	?env[isPlayedBy ofType ?player] memberOf geo#Environment and
+//		 	?player memberOf UrbanizedArea and
+//		 	?object[surroundedBy ofType ?env] memberOf Street.
 			
 	concept	StreetSection subConceptOf dolce#endurant
 		nfp
