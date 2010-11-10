@@ -1,23 +1,22 @@
 wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
-namespace { _"http://purl.net/concepts/",
+namespace { _"http://purl.org/ifgi/om#",
 dc _"http://purl.org/dc/elements/1.1/", 
-om _"http://www.opengis.net/om/1.0#",
-gml _"http://www.opengis.net/gml/3.2#",
-swe _"http://www.opengis.net/swe/1.0.1#",
-sml _"http://schemas.opengis.net/sensorML/1.0.1/"
+gml _"http://purl.org/ifgi/gml#",
+swe _"http://purl.org/ifgi/swe#",
+sml _"http://purl.org/ifgi/sml#"
  }
 
 /* check for documentation: 
  * http://www.liquid-technologies.com/LibraryDocs/OpenGis/om/1.0.0/default.html
  */
 
-ontology Observation
+ontology ObservationsAndMeasurements
 	importsOntology {Feature}
 
 	nonFunctionalProperties
-		dc#creator hasValue "pajoma"
+		dc#creator hasValue "Henry Michels, Patrick Maue"
 		dc#publisher hasValue "(a)IfGI, University of Muenster"
-		dc#date hasValue "12-02-2010"
+		dc#date hasValue "2010-02-12"
 		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
 		dc#type hasValue "Ontology"
 		dc#title hasValue "OGC Observation & Measurements"
@@ -27,30 +26,33 @@ ontology Observation
 	
 	/*elements*/
 
-	concept om#ObservationCollection subConceptOf gml#AbstractFeature
-		om#member ofType om#Observation
+	concept ObservationCollection subConceptOf gml#AbstractFeature
+		member ofType Observation
 		
-	concept om#Observation subConceptOf gml#AbstractFeature
-		om#metadata ofType om#ObservationCollection
-		om#samplingTime ofType swe#TimeObjectProperty
-		om#resultTime ofType swe#TimeObjectProperty
-		om#procedure ofType om#ProcssProperty
-		om#resultQuality ofType gml#AbstractReference
-		om#observedProperty ofType swe#Phenomenon
-		om#featureOfInterest ofType gml#AbstractFeature
-		om#parameter ofType swe#AnyData
-		om#result ofType swe#AnyData
+	concept Observation subConceptOf gml#AbstractFeature
+		metadata ofType ObservationCollection
+		samplingTime ofType swe#TimeObjectProperty
+		resultTime ofType swe#TimeObjectProperty
+		procedure ofType ProcssProperty
+		resultQuality ofType gml#AbstractReference
+		observedProperty ofType swe#Phenomenon
+		featureOfInterest ofType gml#AbstractFeature
+		parameter ofType swe#AnyData
+		result ofType swe#AnyData
 		
-	concept om#ProcssProperty
+	concept ProcessProperty
 		nonFunctionalProperties
 			dc#description hasValue "The procedure is the description of a process used to generate the result.  At this level we do not distinguish between sensor-observations, estimations made by an observer, or algorithms, simulations, computations and complex processing chains."
 		endNonFunctionalProperties
-		om#process ofType sml#AbstractProcess
+		process ofType sml#AbstractProcess
 	
-	concept om#AnyOrReference
+	concept AnyOrReference
 		nonFunctionalProperties
 			dc#description hasValue "Placeholder type Used in a few places where ISO 19139 metadata classes are used, which will become available with GML 3.2"
 		endNonFunctionalProperties
-		om#any ofType swe#AnyData
+		any ofType swe#AnyData
 		gml#associationAttributeGroup ofType gml#AssociationAttributeGroup
+		
+
+	
 		
