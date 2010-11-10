@@ -1,0 +1,439 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://swing.brgm.fr/repository/ontologies/GML212/current#",
+	xlink _"http://swing.brgm.fr/repository/ontologies/XLink/current#",
+	xml _"http://swing.brgm.fr/repository/ontologies/XMLSchema/current#",
+	dc _"http://purl.org/dc/elements/1.1/#",
+	wsml _"http://www.wsmo.org/wsml/wsml-syntax#"
+}
+
+ontology GML212
+// to do: consider adding "see also" link
+	nonFunctionalProperties
+		dc#creator hasValue "s.schade"
+		dc#contributor hasValue {"d.fitzner", "m.bishr"}
+		dc#publisher hasValue "(a)IfGI, University of Muenster"
+		dc#hasVersion hasValue "1.0"
+		dc#date hasValue "07-16-2007"	
+		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+		dc#type hasValue "Ontology"
+		dc#title hasValue "GML Version 2.1.2 Ontology"	
+		dc#description hasValue "An ontology of the GML 2.1.2 elements."
+		dc#source hasValue "http://www.opengeospatial.org/standards/gml"
+	endNonFunctionalProperties
+
+importsOntology {xlink#XLinkOntology, xml#XLinkOntology}
+
+/* Geometry Schema */
+
+concept Geometry
+     nonFunctionalProperties
+		dc#description hasValue "All geometry elements are derived from this super concept; 
+        a geometry element may have an identifying attribute (gid). 
+        It may be associated with a spatial reference system."
+     endNonFunctionalProperties
+     gid ofType (0 1) xml#string
+	     nonFunctionalProperties
+	        comments hasValue {"In GML, the gid attribute is actually of the XML type ID. It required being uniquely 
+	        within one geometry collection."}
+	     endNonFunctionalProperties
+     srsName ofType (0 1) xml#anyURI
+	     nonFunctionalProperties
+	        comments hasValue {"In GML 3 GeometricPrimitive is added as an additional abstraction layer.", 
+	        "In GML 2 the concept CoordinateReferenceSystem does not exist. Instead references, i.e. identifiers are applied.",
+	        "In the standard, this concept is specified abstract."}
+	     endNonFunctionalProperties
+
+concept AssociationAttributeGroup
+    nonFunctionalProperties
+        dc#description hasValue "These attributes can be attached to any element, 
+        thus allowing it to act as a pointer. The 'remoteSchema' attribute allows an element that 
+        carries link attributes to indicate that the element is declared in a remote schema 
+        rather than by the schema that constrains the current document instance."
+    endNonFunctionalProperties
+	attributeGroup ofType (0 1) xlink#simpleLink
+	remoteSchema ofType (0 1) xml#anyURI
+		nonFunctionalProperties
+		    comments hasValue {"The cardinalities for attributeGroup and remoteSchema are only specified in the GML 
+		    documents UML diagrams, not in the related XSD."}
+	    endNonFunctionalProperties
+	
+/* primitive geometry concepts */
+
+concept Coord
+     nonFunctionalProperties
+        dc#description hasValue "Represents a coordinate tuple in one, two, or three dimensions."
+        comments hasValue {"There are two ways to represent coordinates: (1) as a sequence of 
+        <coord> elements that encapsulate tuples, or (2) using a single <coordinates> string."}
+     endNonFunctionalProperties
+     X ofType (0 1) xml#decimal
+	     nonFunctionalProperties
+	        comments hasValue {"According to WSMO Deliverable 16.1, the WSML _decimal data type #
+	        corresponds to the XML decimal data type."}
+	     endNonFunctionalProperties
+     Y ofType (0 1) xml#decimal
+     Z ofType (0 1) xml#decimal
+
+concept Point subConceptOf Geometry
+    nonFunctionalProperties
+		dc#description hasValue "A Point is defined by a single coordinate tuple."
+    endNonFunctionalProperties
+	coordinates ofType xml#string
+    	nonFunctionalProperties
+        	comments hasValue {"According to WSMO Deliverable 16.1, the WSML _string data type 
+	        corresponds to the XML string data type."}
+    	endNonFunctionalProperties
+    coord ofType (0 1) Coord
+
+concept LineString subConceptOf Geometry
+     nonFunctionalProperties
+	    dc#description hasValue "A LineString is defined by two or more coordinate tuples, with
+	    linear interpolation between them."
+     endNonFunctionalProperties
+     coordinates ofType xml#string
+     coord ofType Coord
+     
+concept LinearRing subConceptOf Geometry
+     nonFunctionalProperties
+        dc#description hasValue "A LinearRing is defined by four or more coordinate tuples, with
+        linear interpolation between them; the first and last coordinates must be coincident."
+        comments hasValue {"The relation coord (4 *) was skipped in the first version."}
+     endNonFunctionalProperties
+     coordinates ofType xml#string
+     coord ofType Coord
+
+concept Box subConceptOf Geometry
+     nonFunctionalProperties
+	    dc#description hasValue "The Box structure defines an extent using a pair of coordinate tuples."
+     endNonFunctionalProperties
+     coordinates ofType xml#string
+     coord ofType  (0 2) Coord
+	     nonFunctionalProperties
+			comments hasValue {"Actually the cardinality should be (2 2), but this cannot be modelled in WSML-Flight."}
+	     endNonFunctionalProperties
+
+concept Polygon subConceptOf Geometry
+	nonFunctionalProperties
+		dc#description hasValue "A Polygon is defined by an outer boundary and zero or more inner
+	    boundaries which are in turn defined by LinearRings."
+	endNonFunctionalProperties
+    outerBoundaryIs ofType (0 1) LinearRing
+		nonFunctionalProperties
+		    comments hasValue {"The cardinalities for outerBoundaryIs are only specified in the GML documents text, 
+		    not in the related XSD."}
+	    endNonFunctionalProperties
+	 innerBoundaryIs ofType LinearRing
+	     nonFunctionalProperties
+			comments hasValue {"Actually there are geometric constraints on the LinearRings (the LinearRings of the 
+			interior boundary cannot cross one another and cannot be contained within one another). We do not require 
+			capturing those to reach the goal of the GML ontology for SWING."}
+	     endNonFunctionalProperties
+
+/* aggregate geometry concepts */
+
+concept GeometryCollection subConceptOf Geometry
+	nonFunctionalProperties
+		dc#description hasValue "A geometry collection must include one or more geometries, referenced
+	    through geometryMember elements. User-defined geometry collections that accept GML geometry 
+	    classes as members must instantiate--or derive from--this type."
+	    comments hasValue {"In the standard, this concept is specified abstract."}
+     endNonFunctionalProperties     
+     geometryMember ofType GeometryAssociation     
+
+concept GeometryAssociation
+   nonFunctionalProperties
+        dc#description hasValue "An instance of this type (e.g. a geometryMember) can either enclose 
+        or point to a primitive geometry element. When serving as a simple link that references a remote
+        geometry instance, the value of the gml:remoteSchema attribute can be used to locate a schema 
+        fragment that constrains the target instance."
+    endNonFunctionalProperties
+    attributeGroup ofType (0 1) AssociationAttributeGroup
+	enclosedGeometry ofType (0 1) Geometry	
+		nonFunctionalProperties
+	        comments hasValue {"Since the standard does not provide a specific element for this relation, we derived 
+	        the term from the textual description of the GeometryAssociation (also listed above)."}
+	    endNonFunctionalProperties
+	
+  
+concept MultiPoint subConceptOf GeometryCollection
+	geometryMember ofType PointMember
+	
+concept PointMember subConceptOf GeometryAssociation
+    nonFunctionalProperties
+        dc#description hasValue "Intent: Restricting the geometry member to being a Point instance."
+    endNonFunctionalProperties
+    enclosedGeometry ofType (0 1) Point
+    
+
+concept MultiLineString subConceptOf GeometryCollection
+	geometryMember ofType LineStringMember
+	
+concept LineStringMember subConceptOf GeometryAssociation
+    nonFunctionalProperties
+        dc#description hasValue "Intent: Restricting the geometry member to being a LineString instance."
+    endNonFunctionalProperties
+    enclosedGeometry ofType (0 1) LineString
+
+
+concept MultiPolygon subConceptOf GeometryCollection
+	geometryMember ofType PolygonMember
+	
+concept PolygonMember subConceptOf GeometryAssociation
+    nonFunctionalProperties
+        dc#description hasValue "Intent: Restricting the geometry member to being a Polygon instance."
+    endNonFunctionalProperties
+    enclosedGeometry ofType (0 1) Polygon
+
+         
+concept MultiGeometry subConceptOf GeometryCollection
+	nonFunctionalProperties
+	    dc#description hasValue "The MultiGeometry type is introduced for collecting geometries of heterogenious types."
+	    comments hasValue {"In GML MultiGeometry and the abstract _GeometryCollection are sub concepts of Geometry and 
+	    are of type GeometryCollectionType..."}
+     endNonFunctionalProperties            
+
+         
+/* Feature Schema */
+
+concept BoundingShape
+     nonFunctionalProperties
+		dc#description hasValue "Bounding shapes--a Box or a null element are currently allowed."
+        comments hasValue {"In GML 2 this type is not at all related to geometry."}
+     endNonFunctionalProperties
+     null ofType (0 1)xml#string
+     box ofType (0 1) Box
+	     nonFunctionalProperties
+		    comments hasValue {"The cardinalities for null and box are only specified in the GML documents text, 
+		    not in the related XSD."}
+	     endNonFunctionalProperties
+
+concept Feature
+     nonFunctionalProperties
+        dc#description hasValue "An abstract feature provides a set of common properties, including id, name, description and 
+        boundedBy. A concrete feature type must derive from this type and specify additional  properties in an application schema. 
+      	A feature must possess an identifying attribute ('fid' - this was changed to the 'id' of the AbstarctGMLType in GML 3)."
+        comments hasValue {"Please note that AbstractObject and AbstractGML were introduced in GML 3.", 
+        "In the standard, this concept is specified abstract."}
+     endNonFunctionalProperties
+     description ofType xml#string
+     name ofType xml#string
+	     nonFunctionalProperties
+	        comments hasValue {"In GML 3 the name will be defined as a CodeType."}
+	     endNonFunctionalProperties
+     boundedBy ofType BoundingShape
+	     nonFunctionalProperties
+	        comments hasValue {"This is changed to Envelope in GML 3."}
+	     endNonFunctionalProperties
+     fid ofType (0 1) xml#string
+	     nonFunctionalProperties
+	        comments hasValue {"In GML, the fid attribute is actually of the XML type ID. It required being uniquely within 
+	        one geometry collection."}
+	     endNonFunctionalProperties
+     geometryProperty ofType GeometryProperty
+     
+/* some basic geometric properties of features and common aliases for geometry properties (i.e. role names)  */
+/* boundedBy is already defined for any feature */
+
+concept GeometryProperty 
+    nonFunctionalProperties
+        dc#description hasValue "A simple geometry property encapsulates a geometry element. 
+        Alternatively, it can function as a pointer (simple-type link) that refers to a remote geometry element."
+    endNonFunctionalProperties
+	attributeGroup ofType (0 1) AssociationAttributeGroup
+	encapsulatedGeometry ofType (0 1) Geometry	
+		nonFunctionalProperties
+	        comments hasValue {"Since the standard does not provide a specific element for this relation, we derived 
+	        the term from the textual description of the GeometryProperty (also listed above)."}
+	    endNonFunctionalProperties
+  
+/*    
+concept myFeature subConceptOf _"http://swing.brgm.fr/repository/ontologies/gml#Feature"
+	x ofType X    
+    geometryProperty ofType X
+    
+concept X subConceptOf PointProperty
+    
+concept Basin subConceptOf _"http://swing.brgm.fr/repository/ontologies/gml#Feature"
+	msGeometry ofType GeometryProperty        
+    basinname ofType _string
+*/    
+    
+concept PointProperty subConceptOf GeometryProperty
+    nonFunctionalProperties
+        dc#description hasValue 
+		"Encapsulates a single point to represent position, location, or centerOf properties."
+    endNonFunctionalProperties
+	encapsulatedGeometry ofType (0 1) Point		
+		nonFunctionalProperties
+	        comments hasValue {"Intent: Restricting the geometry property to be a Point instance."}
+	    endNonFunctionalProperties
+    
+/* aliases */
+concept Location subConceptOf PointProperty   
+	nonFunctionalProperties
+        comments hasValue {"In GML all alias labels begin with small letters, we start them with capital once, 
+        because they are modelled as concepts"}
+    endNonFunctionalProperties
+    
+concept CenterOf subConceptOf PointProperty
+concept Position subConceptOf PointProperty
+
+
+concept LineStringProperty subConceptOf GeometryProperty
+    nonFunctionalProperties
+        dc#description hasValue "Encapsulates a single LineString to represent centerLineOf or edgeOf properties."
+    endNonFunctionalProperties
+   	encapsulatedGeometry ofType (0 1) LineSting
+		nonFunctionalProperties
+	        comments hasValue {"Intent: Restricting the geometry property to be a Point instance."}
+	    endNonFunctionalProperties
+
+/* aliases */ 
+concept EdgeOf subConceptOf LineStringProperty  
+concept CenterLineOf subConceptOf LineStringProperty
+
+
+concept PolygonProperty subConceptOf GeometryProperty    
+    nonFunctionalProperties
+        dc#description hasValue "Encapsulates a single polygon to represent coverage or extentOf properties."
+    endNonFunctionalProperties
+   	encapsulatedGeometry ofType (0 1) Polygon
+		nonFunctionalProperties
+	        comments hasValue {"Intent: Restricting the geometry property to be a Point instance."}
+	    endNonFunctionalProperties
+    
+/* aliases */  
+concept ExtentOf subConceptOf PolygonProperty    
+concept Coverage subConceptOf PolygonProperty 
+
+
+concept MultiPointProperty subConceptOf GeometryProperty        
+    nonFunctionalProperties
+        dc#description hasValue "Encapsulates a MultiPoint element to represent the following 
+        geometric properties: multiLocation, multiPosition, multiCenterOf."
+    endNonFunctionalProperties
+    encapsulatedGeometry ofType (0 1) MultiPoint
+		nonFunctionalProperties
+	        comments hasValue {"Intent: Restricting the geometry property to be a MultiPoint instance."}
+	    endNonFunctionalProperties
+
+/* aliases */
+concept MultiLocation subConceptOf MultiPointProperty  
+concept MultiCenterOf subConceptOf MultiPointProperty    
+concept MultoPosition subConceptOf MultiPointProperty    
+
+
+concept MultiLineStringProperty subConceptOf GeometryProperty   
+    nonFunctionalProperties
+        dc#description hasValue "Encapsulates a MultiLineString element to represent the following  
+        geometric properties: multiEdgeOf, multiCenterLineOf."
+    endNonFunctionalProperties
+    encapsulatedGeometry ofType (0 1) MultiLineString
+		nonFunctionalProperties
+	        comments hasValue {"Intent: Restricting the geometry property to be a MultiLineString instance."}
+	    endNonFunctionalProperties
+
+/* aliases */ 
+concept MultiEdgeOf subConceptOf MultiLineStringProperty
+concept MultiCenterLineOf subConceptOf MultiLineStringProperty
+
+
+concept MultiPolygonProperty subConceptOf GeometryProperty 
+    nonFunctionalProperties
+        dc#description hasValue "Encapsulates a MultiPolygon to represent the following geometric 
+        properties: multiCoverage, multiExtentOf."
+    endNonFunctionalProperties
+    encapsulatedGeometry ofType (0 1) MultiPolygon
+		nonFunctionalProperties
+	        comments hasValue {"Intent: Restricting the geometry property to be a MultiPolygon instance."}
+	    endNonFunctionalProperties    
+    
+/* aliases */    
+concept MultiExtentOf subConceptOf MultiPolygonProperty    
+concept MultiCoverage subConceptOf MultiPolygonProperty
+
+concept MultiGeometryProperty subConceptOf GeometryProperty 
+    nonFunctionalProperties
+		dc#description hasValue "Encapsulates a MultiGeometry element."
+    endNonFunctionalProperties
+    encapsulatedGeometry ofType (0 1) MultiGeometry
+		nonFunctionalProperties
+	        comments hasValue {"Intent: Restricting the geometry property to be a MultiGeometry instance."}
+	    endNonFunctionalProperties             
+         
+         
+/* Feature collections */
+
+concept FeatureCollection subConceptOf Feature
+     nonFunctionalProperties
+		dc#description hasValue "A feature collection contains zero or more featureMember elements."
+        comments hasValue {"In the standard, this concept is specified abstract. We neglected the 
+        AbstractFeatureCollectionBaseType, because if just defined a previously optional attribute mandatory."}
+     endNonFunctionalProperties 
+     featureMember ofType FeatureAssociation
+	     nonFunctionalProperties
+		    comments hasValue {"If using this way, specialised features cannot really specialise the featureMember property! => this holds for geometryMember and geometryProperty, too"}
+	     endNonFunctionalProperties 
+      
+/* *****
+** tests    
+/* ***** */
+
+/* old
+concept beds subConceptOf gml#Feature
+	msGeometry impliesType (0 1) GeometryPropertyType
+	BedName impliesType (0 1) _string /* Description of the type of bed 
+	BedType impliesType (0 1) _string /* Type of the bed, e.g. "geology" for geological beds 
+	SourceName impliesType (0 1) _string /* Cartographic source of the bed, e.g. "Carte geologique de la France 1:50000" 
+	SourceType impliesType (0 1) _string  /* seems to be "BRGM" for every bed 
+*/
+
+/* direct translation of the "map server way"
+concept beds subConceptOf gml#Feature
+	msGeometry impliesType (0 1) GeometryProperty /* this should be the attribute of GML... gml#geometryProperty, which does not work... 
+	BedName impliesType (0 1) _string /* Description of the type of bed 
+	/* ... 
+*/	
+	
+/*new
+concept beds subConceptOf gml#Feature
+	geometryProperty impliesType (0 1) MsGeometry // this should be the attribute of GML... gml#geometryProperty, which does not work...
+	BedName impliesType (0 1) _string //Description of the type of bed 
+	// ...
+	
+concept MsGeometry subConceptOf GeometryProperty
+// clould be slao specialised further, like: subConceptOf PointProperty or subConceptOf Location...	
+*/
+
+/*suggested solution
+/* We are free to annotate the attribute (msGeometry) as done in previous examples, or the concept (MsGeometry) as such...
+/*
+concept beds subConceptOf gml#Feature
+	msGeometry impliesType (0 1) MsGeometry
+	nonFunctionalProperties
+        comments hasValue {"Three cases should be mapped to this structure: the brgm one, one where msGeometry would be 
+        substitution group of _geometryProperty, and one where even a more specific Property Type is used..", 
+        "This loss of information is not critical to the parsing, because the element name is the attribute name, i.e. msGeometry."}
+    endNonFunctionalProperties
+
+concept MsGeometry subConceptOf gml#GeometryProperty
+	nonFunctionalProperties
+        comments hasValue {"Clould be slao specialised further, like: subConceptOf PointProperty or subConceptOf Location..."}
+    endNonFunctionalProperties
+*/
+
+concept FeatureAssociation 
+	nonFunctionalProperties
+        dc#description hasValue "An instance of this type (e.g. a featureMember) can either enclose or 
+        point to a feature (or feature collection); this type can be restricted in an application schema 
+        to allow only specified features as valid participants in the association. When serving as a simple 
+        link that references a remote feature instance, the value of the gml:remoteSchema attribute can be 
+        used to locate a schema fragment that constrains the target instance."
+        comments hasValue {"May be modelled as a property or association if formalising the ISO General Feature Model."}
+    endNonFunctionalProperties   
+	attributeGroup ofType (0 1) AssociationAttributeGroup
+	enclosedFeature ofType (0 1) Feature
+		nonFunctionalProperties
+	        comments hasValue {"Since the standard does not provide a specific element for this relation, we derived 
+	        the term from the textual description of the FeatureAssociation (also listed above)."}
+	    endNonFunctionalProperties
+    

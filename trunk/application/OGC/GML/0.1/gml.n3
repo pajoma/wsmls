@@ -1,0 +1,72 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix gml: <http://purl.org/ifgi/gml/0.1/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+
+# Classes
+
+gml:AbstractFeature a rdfs:Class;
+	rdfs:subClassOf gml:AbstractGML.
+	
+gml:AbstractGeometry a rdfs:Class;
+	rdfs:subClassOf gml:AbstractGML.
+	
+gml:AbstractGML a rdfs:Class.
+
+gml:FeatureProperty a rdfs:Class;
+	rdfs:subClassOf gml:AbstractGML.
+	
+gml:GeometryProperty a rdfs:Class;
+	rdfs:subClassOf gml:FeatureProperty.
+	
+gml:FeatureCollection a rdfs:Class;
+	rdfs:subClassOf gml:AbstractGML.
+	
+gml:Envelope a rdfs:Class.
+	
+
+# Help_Classes
+	
+gml:AbstractTimeObject a rdfs:Class;
+	rdfs:subClassOf gml:AbstractGML.
+	
+gml:Definition a rdfs:Class;
+	rdfs:subClassOf gml:AbstractGML.
+	
+	
+# Properties	
+		
+gml:hasProperty a rdf:Property;
+	rdfs:domain gml:AbstractFeature;
+	rdfs:range gml:FeatureProperty.
+	
+gml:featureMember a rdf:Property;
+	rdfs:domain gml:FeatureCollection;
+	rdfs:range gml:AbstractFeature;
+	rdfs:subPropertyOf rdfs:member.
+	
+gml:hasValue a rdf:Property;
+	rdfs:domain gml:FeatureProperty;
+	rdfs:range xsd:anyType.
+	
+gml:hasGeometry a rdf:Property;
+	rdfs:subPropertyOf gml:hasValue;
+	rdfs:domain gml:GeometryProperty;
+	rdfs:range gml:AbstractGeometry.
+	
+gml:boundedBy a rdf:Property;
+	rdfs:domain gml:AbstractFeature;
+	rdfs:range gml:Envelope.
+	
+gml:upperCorner a rdf:Property;
+	rdfs:domain gml:Envelope;
+	rdfs:range rdfs:Literal.
+	
+gml:lowerCorner a rdf:Property;
+	rdfs:domain gml:Envelope;
+	rdfs:range rdfs:Literal.
+	
+gml:id a rdf:Property;
+	rdfs:domain gml:AbstractGML;
+	rdfs:range xsd:ID.

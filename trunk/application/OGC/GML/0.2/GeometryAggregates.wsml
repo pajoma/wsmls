@@ -1,0 +1,33 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://purl.net/concepts/",
+dc _"http://purl.org/dc/elements/1.1/", 
+gml _"http://www.opengis.net/gml/3.2#"
+ }
+
+/* check for documentation: 
+ * http://www.liquid-technologies.com/LibraryDocs/OpenGis/om/1.0.0/default.html
+ */
+
+ontology GeometryAggregates
+	nonFunctionalProperties
+		dc#creator hasValue "Henry"
+		dc#publisher hasValue "(a)IfGI, University of Muenster"
+		dc#date hasValue "28-03-2010"
+		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+		dc#type hasValue "Ontology"
+		dc#title hasValue "GML GeometryAggregates"
+		dc#description hasValue "Geometric aggregates (i.e. instances of a subtype of gml:AbstractGeometricAggregateType) are arbitrary aggregations of geometry elements. They are not assumed to have any additional internal structure and are used to 'collect' pieces of geometry of a specified type. Application schemas may use aggregates for features that use multiple geometric objects in their representations. GML is an OGC Standard. Copyright (c) 2007,2010 Open Geospatial Consortium, Inc. All Rights Reserved. To obtain additional rights of use, visit www.opengeospatial.org/legal/ "
+		dc#source hasValue "http://schemas.opengis.net/gml/3.2.1/geometryAggregates.xsd"
+	endNonFunctionalProperties
+
+	concept gml#AbstractGeometricAggregate subConceptOf gml#AbstractGeometry
+		nonFunctionalProperties
+			dc#description hasValue "gml:AbstractGeometricAggregate is the abstract head of the substitution group for all geometric aggregates."
+		endNonFunctionalProperties
+		
+	concept gml#MultiGeometry subConceptOf gml#AbstractGeometricAggregate
+		nonFunctionalProperties
+			dc#description hasValue "ggml:MultiGeometry is a collection of one or more GML geometry objects of arbitrary type. The members of the geometric aggregate may be specified either using the 'standard' property (gml:geometryMember) or the array property (gml:geometryMembers). It is also valid to use both the 'standard' and the array properties in the same collection."
+		endNonFunctionalProperties
+		gml#GeometryMember ofType gml#GeometryProperty
+		gml#GeometryMembers ofType gml#GeometryArrayProperty	
