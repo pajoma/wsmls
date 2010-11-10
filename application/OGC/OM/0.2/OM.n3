@@ -1,0 +1,67 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://purl.org/ifgi/om#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix gml: <http://purl.org/ifgi/gml#> .
+@prefix swe: <http://purl.org/ifgi/swe#> .
+@prefix sml: <http://purl.org/ifgi/sml#> .
+
+# http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/date: "2010-11-10"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/type: "Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/title: "OGC Observation & Measurements"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/description: "Taken from the XML schema"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/source: "http://schemas.opengis.net/om/1.0.0/observation.xsd"^^<http://www.w3.org/2001/XMLSchema#string>
+
+:ObservationCollection a rdfs:Class ;
+	rdfs:subClassOf gml:AbstractFeature .
+
+:member a rdf:Property ;
+	rdfs:domain :ObservationCollection .
+
+:Observation a rdfs:Class ;
+	rdfs:subClassOf gml:AbstractFeature .
+
+:metadata a rdf:Property ;
+	rdfs:domain :Observation .
+
+:samplingTime a rdf:Property ;
+	rdfs:domain :Observation .
+
+:resultTime a rdf:Property ;
+	rdfs:domain :Observation .
+
+:procedure a rdf:Property ;
+	rdfs:domain :Observation .
+
+:resultQuality a rdf:Property ;
+	rdfs:domain :Observation .
+
+:observedProperty a rdf:Property ;
+	rdfs:domain :Observation .
+
+:featureOfInterest a rdf:Property ;
+	rdfs:domain :Observation .
+
+:parameter a rdf:Property ;
+	rdfs:domain :Observation .
+
+:result a rdf:Property ;
+	rdfs:domain :Observation .
+
+:ProcessProperty a rdfs:Class ;
+	dc:description "The procedure is the description of a process used to generate the result.  At this level we do not distinguish between sensor-observations, estimations made by an observer, or algorithms, simulations, computations and complex processing chains."^^xsd:string .
+
+:process a rdf:Property ;
+	rdfs:domain :ProcessProperty .
+
+:AnyOrReference a rdfs:Class ;
+	dc:description "Placeholder type Used in a few places where ISO 19139 metadata classes are used, which will become available with GML 3.2"^^xsd:string .
+
+:any a rdf:Property ;
+	rdfs:domain :AnyOrReference .
+
+gml:associationAttributeGroup a rdf:Property ;
+	rdfs:domain :AnyOrReference .
