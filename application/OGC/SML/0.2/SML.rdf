@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns="http://purl.org/ifgi/sml#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:gml="http://purl.org/ifgi/gml#">
+<!-- http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/date: "28-03-2010"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/type: "Ontology"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/title: "OGC SensorML Base"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/description: "Base class definitions for core SensorML SensorML is an OGC Standard. Copyright (c) 2007,2010 Open Geospatial Consortium, Inc. All Rights Reserved. To obtain additional rights of use, visit www.opengeospatial.org/legal/ ."^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/source: "http://schemas.opengis.net/sensorML/1.0.1/base.xsd"^^<http://www.w3.org/2001/XMLSchema#string> -->
+
+<rdf:Description rdf:about="http://purl.org/ifgi/sml#AbstractSML">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml#AbstractFeature"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/sml#AbstractProcess">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/sml#AbstractSML"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">base substitution group for all processes</dc:description>
+</rdf:Description>
+
+</rdf:RDF>
