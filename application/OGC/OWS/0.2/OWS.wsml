@@ -9,9 +9,9 @@ namespace { _"http://purl.org/ifgi/ows#",
  }
 
 ontology ows#OWSOntology
-	importsOntology { wsl#WSL, posm#POSM }
-	
-	annotations
+	importsOntology { wsl#WSL, posm#POSM } 
+	 
+	annotations 
 		dc#publisher hasValue "(a)IfGI, University of Muenster"
 		dc#date hasValue "2010-11-10"
 		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
