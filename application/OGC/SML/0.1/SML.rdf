@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:sml="http://purl.org/ifgi/sml/0.1/" xmlns:gml="http://purl.org/ifgi/gml/0.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<rdfs:Class rdf:about="http://purl.org/ifgi/sml/0.1/SensorML" />
+	<rdfs:Class rdf:about="http://purl.org/ifgi/sml/0.1/AbstractProcess">
+		<rdfs:subClassOf>
+			<rdfs:Class rdf:about="http://purl.org/ifgi/sml/0.1/AbstractSML">
+				<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml/0.1/AbstractFeature" />
+			</rdfs:Class>
+		</rdfs:subClassOf>
+	</rdfs:Class>
+</rdf:RDF>

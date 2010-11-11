@@ -41,7 +41,7 @@ wfs:DescribeFeatureTypeResponse_MessagePart a rdfs:Class;
 	rdfs:seeAlso "http://schemas.opengis.net/wfs/1.1.0/wsdl/wfs-util.xsd#DescribeFeatureTypeResponse";
 	rdfs:subClassOf posm:MessagePart.
 	
-wfs:FeatureCollection a rdfs:Class;
+wfs:FeatureCollection_MessagePart a rdfs:Class;
 	rdfs:seeAlso "http://schemas.opengis.net/wfs/1.1.0/wfs.xsd#FeatureCollection";
 	rdfs:subClassOf posm:MessagePart;
 	rdfs:subClassOf gml:FeatureCollection.

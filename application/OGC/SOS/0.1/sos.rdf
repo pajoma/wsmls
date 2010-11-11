@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:sos="http://purl.org/ifgi/sos/0.1/" xmlns:posm="http://www.wsmo.org/ns/posm/0.1#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:sml="http://purl.org/ifgi/sml/0.1/" xmlns:sos="http://purl.org/ifgi/sos/0.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:posm="http://www.wsmo.org/ns/posm/0.1#" xmlns:om="http://purl.org/ifgi/om/0.1/">
 	<rdfs:Class rdf:about="http://purl.org/ifgi/sos/0.1/SensorObservationService">
 		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#Service" />
 	</rdfs:Class>
@@ -25,13 +25,15 @@
 		<rdfs:seeAlso>http://schemas.opengis.net/sos/1.0.0/sosGetCapabilities.xsd#Capabilities</rdfs:seeAlso>
 		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#MessagePart" />
 	</rdfs:Class>
-	<rdfs:Class rdf:about="http://purl.org/ifgi/sos/0.1/DescribeSensorResponse_MessagePart">
+	<rdfs:Class rdf:about="http://purl.org/ifgi/sos/0.1/SensorML_MessagePart">
 		<rdfs:seeAlso>http://schemas.opengis.net/sensorML/1.0.1/sensorML.xsd#SensorML</rdfs:seeAlso>
 		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#MessagePart" />
+		<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/sml/0.1/SensorML" />
 	</rdfs:Class>
-	<rdfs:Class rdf:about="http://purl.org/ifgi/sos/0.1/GetObservationResponse_MessagePart">
-		<rdfs:seeAlso>http://schemas.opengis.net/om/1.0.0/observation.xsd#Observation</rdfs:seeAlso>
+	<rdfs:Class rdf:about="http://purl.org/ifgi/sos/0.1/ObservationCollection_MessagePart">
+		<rdfs:seeAlso>http://schemas.opengis.net/om/1.0.0/observation.xsd#ObservationCollection</rdfs:seeAlso>
 		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#MessagePart" />
+		<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/om/0.1/ObservationCollection" />
 	</rdfs:Class>
 	<rdfs:Class rdf:about="http://purl.org/ifgi/sos/0.1/Parameter_Procedure">
 		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.1#MessagePart" />
