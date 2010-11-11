@@ -2,6 +2,8 @@
 @prefix posm: <http://www.wsmo.org/ns/posm/0.1#>.
 @prefix sos: <http://purl.org/ifgi/sos/0.1/>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix sml: <http://purl.org/ifgi/sml/0.1/>.
+@prefix om: <http://purl.org/ifgi/om/0.1/>.
 
 # Service
 
@@ -39,13 +41,13 @@ sos:GetCapabilitiesResponse_MessagePart a rdfs:Class;
 	rdfs:seeAlso "http://schemas.opengis.net/sos/1.0.0/sosGetCapabilities.xsd#Capabilities";
 	rdfs:subClassOf posm:MessagePart.
 
-sos:DescribeSensorResponse_MessagePart a rdfs:Class;
+sos:SensorML_MessagePart a rdfs:Class;
 	rdfs:seeAlso "http://schemas.opengis.net/sensorML/1.0.1/sensorML.xsd#SensorML";
-	rdfs:subClassOf posm:MessagePart.
+	rdfs:subClassOf posm:MessagePart, sml:SensorML.
 
-sos:GetObservationResponse_MessagePart a rdfs:Class;
-	rdfs:seeAlso "http://schemas.opengis.net/om/1.0.0/observation.xsd#Observation";
-	rdfs:subClassOf posm:MessagePart.
+sos:ObservationCollection_MessagePart a rdfs:Class;
+	rdfs:seeAlso "http://schemas.opengis.net/om/1.0.0/observation.xsd#ObservationCollection";
+	rdfs:subClassOf posm:MessagePart, om:ObservationCollection.
 	
 sos:Parameter_Procedure a rdfs:Class;
 	rdfs:subClassOf posm:MessagePart. 

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:gml="http://purl.org/ifgi/gml/0.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:swe="http://purl.org/ifgi/swe/0.1/">
+	<rdfs:Class rdf:about="http://purl.org/ifgi/swe/0.1/Phenomenon">
+		<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml/0.1/Definition" />
+	</rdfs:Class>
+</rdf:RDF>
