@@ -4,7 +4,7 @@
 @prefix : <http://purl.org/ifgi/wps#> .
 @prefix sawsdl: <http://www.w3.org/ns/sawsdl#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix ows: <http://purl.org/ifgi/ows#> .
+@prefix ows: <http://purl.org/ifgi/ows/0.2#> .
 @prefix posm: <http://www.wsmo.org/ns/posm/0.2#> .
 
 # http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string>
