@@ -6,7 +6,7 @@
 	xmlns="http://purl.org/ifgi/sos#"
 	xmlns:sawsdl="http://www.w3.org/ns/sawsdl#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
-	xmlns:ows="http://purl.org/ifgi/ows#"
+	xmlns:ows="http://purl.org/ifgi/ows/0.2#"
 	xmlns:om="http://purl.org/ifgi/om#"
 	xmlns:posm="http://www.wsmo.org/ns/posm/0.2#">
 <!-- http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string> -->
@@ -17,7 +17,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/sos#SensorObservationService">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/ows#OGCWebService"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/ows/0.2#OGCWebService"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/sos#DescribeSensor">

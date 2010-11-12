@@ -3,7 +3,7 @@
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-	xmlns="http://purl.org/ifgi/ows#"
+	xmlns="http://purl.org/ifgi/ows/0.2#"
 	xmlns:wsl="http://www.wsmo.org/ns/wsmo-lite#"
 	xmlns:posm="http://www.wsmo.org/ns/posm/0.2#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -14,39 +14,39 @@
 <!-- http://purl.org/dc/elements/1.1/type: "Ontology"^^<http://www.w3.org/2001/XMLSchema#string> -->
 <!-- http://purl.org/dc/elements/1.1/title: "OWS Common"^^<http://www.w3.org/2001/XMLSchema#string> -->
 
-<rdf:Description rdf:about="http://purl.org/ifgi/ows#OGCWebService">
+<rdf:Description rdf:about="http://purl.org/ifgi/ows/0.2#OGCWebService">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/wsmo-lite#FunctionalClassificationRoot"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/ows#GetCapabilities">
+<rdf:Description rdf:about="http://purl.org/ifgi/ows/0.2#GetCapabilities">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#Operation"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/ows#GetCapabilitiesOutput">
+<rdf:Description rdf:about="http://purl.org/ifgi/ows/0.2#GetCapabilitiesOutput">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/ows#GetCapabilitiesInput">
+<rdf:Description rdf:about="http://purl.org/ifgi/ows/0.2#GetCapabilitiesInput">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/ows#DefaultGetCapabilities">
-	<rdf:type rdf:resource="http://purl.org/ifgi/ows#GetCapabilities"/>
-	<posm:hasOutput rdf:resource="http://purl.org/ifgi/ows#DefaultGetCapabilitiesOutput"/>
-	<posm:hasInput rdf:resource="http://purl.org/ifgi/ows#DefaultGetCapabilitiesInput"/>
+<rdf:Description rdf:about="http://purl.org/ifgi/ows/0.2#DefaultGetCapabilities">
+	<rdf:type rdf:resource="http://purl.org/ifgi/ows/0.2#GetCapabilities"/>
+	<posm:hasOutput rdf:resource="http://purl.org/ifgi/ows/0.2#DefaultGetCapabilitiesOutput"/>
+	<posm:hasInput rdf:resource="http://purl.org/ifgi/ows/0.2#DefaultGetCapabilitiesInput"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/ows#DefaultGetCapabilitiesOutput">
-	<rdf:type rdf:resource="http://purl.org/ifgi/ows#GetCapabilitiesOutput"/>
+<rdf:Description rdf:about="http://purl.org/ifgi/ows/0.2#DefaultGetCapabilitiesOutput">
+	<rdf:type rdf:resource="http://purl.org/ifgi/ows/0.2#GetCapabilitiesOutput"/>
 	<sawsdl:modelReference rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/ows#DefaultGetCapabilitiesInput">
-	<rdf:type rdf:resource="http://purl.org/ifgi/ows#GetCapabilitiesInput"/>
+<rdf:Description rdf:about="http://purl.org/ifgi/ows/0.2#DefaultGetCapabilitiesInput">
+	<rdf:type rdf:resource="http://purl.org/ifgi/ows/0.2#GetCapabilitiesInput"/>
 	<sawsdl:modelReference rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 </rdf:Description>
 

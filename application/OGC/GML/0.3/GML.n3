@@ -1,11 +1,9 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix : <http://purl.org/ifgi/gml#> .
-@prefix sawsdl: <http://www.w3.org/ns/sawsdl#> .
+@prefix : <http://purl.org/ifgi/gml/0.2#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix ows: <http://purl.org/ifgi/ows#> .
-@prefix posm: <http://www.wsmo.org/ns/posm/0.2#> .
+
 
 # http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string>
 # http://purl.org/dc/elements/1.1/date: "10-11-2010"^^<http://www.w3.org/2001/XMLSchema#string>
