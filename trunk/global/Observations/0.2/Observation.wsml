@@ -1,0 +1,36 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://ifgipedia.uni-muenster.de/envision-simple-use-case#",
+	dc _"http://purl.org/dc/elements/1.1/",
+	dolce _"http://www.load-cnr.it/ontologies/DOLCE-Lite.owl#"
+ }
+
+ontology Observation
+
+	concept ObservationProcess subConceptOf dolce#Process
+		isPerformedBy ofType (1 *) Observer
+		
+	concept Observer subConceptOf dolce#PhysicalObject
+		performs ofType (1 1) ObservationProcess
+		observes ofType (1 *) ObservedEntity
+	
+	concept Observable subConceptOf dolce#Quality
+		isObservedBy ofType (1 *) Observer
+		
+	concept ObservedEntity subConceptOf {dolce#Endurant, dolce#Perdurant}
+		dolce#hasQuality ofType (1 1) Observable
+		dolce#participantIn ofType (1 1) Stimulus
+		
+	concept Stimulus subConceptOf dolce#Perdurant
+		hasParticipant ofType (1 *) ObservedEntity
+		isDetectedBy ofType (1 *) Observer
+		isSometimesProducedBy ofType (1 *) Observer
+		
+	concept ObservationValue subConceptOf dolce#AbstractQuality
+		value ofType {_integer, _float, _boolean, _string}
+		isProducedBy ofType (1 1) Observer
+		dolce#gLocation ofType (1 1) dolce#measurementUnit
+	
+	concept NaturalEvent subConceptOf dolce#Event
+		triggeredAt ofType (1 *) Observer
+		
+
