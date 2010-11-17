@@ -1,0 +1,46 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://purl.org/ifgi/ows/0.3#> .
+@prefix wsl: <http://www.wsmo.org/ns/wsmo-lite#> .
+@prefix posm: <http://www.wsmo.org/ns/posm/0.2#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sawsdl: <http://www.w3.org/ns/sawsdl#> .
+
+# http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/date: "2010-11-10"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/type: "Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/title: "OWS Common"^^<http://www.w3.org/2001/XMLSchema#string>
+
+:OGCWebService a rdfs:Class ;
+	rdfs:subClassOf wsl:FunctionalClassificationRoot .
+
+:GetCapabilities a rdfs:Class ;
+	rdfs:subClassOf posm:Operation .
+
+:GetCapabilitiesOutput a rdfs:Class ;
+	rdfs:subClassOf posm:MessagePart .
+
+:GetCapabilitiesInput a rdfs:Class ;
+	rdfs:subClassOf posm:MessagePart .
+
+:BoundingBox a rdfs:Class .
+
+:DefaultGetCapabilities a :GetCapabilities ;
+	posm:hasOutput :DefaultGetCapabilitiesOutput ;
+	posm:hasInput :DefaultGetCapabilitiesInput .
+
+:DefaultGetCapabilitiesOutput a :GetCapabilitiesOutput ;
+	sawsdl:modelReference xsd:string .
+
+:DefaultGetCapabilitiesInput a :GetCapabilitiesInput ;
+	sawsdl:modelReference xsd:string .
+
+:upperCorner a rdf:Property ;
+	rdfs:domain :BoundingBox ;
+	rdfs:range xsd:double .
+
+:lowerCorner a rdf:Property ;
+	rdfs:domain :BoundingBox ;
+	rdfs:range xsd:double .

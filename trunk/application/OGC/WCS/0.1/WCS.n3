@@ -1,0 +1,49 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://purl.org/ifgi/wcs#> .
+@prefix sawsdl: <http://www.w3.org/ns/sawsdl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ows: <http://purl.org/ifgi/ows/0.3#> .
+@prefix posm: <http://www.wsmo.org/ns/posm/0.2#> .
+
+# http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/date: "10-11-2010"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/type: "Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/title: "OGC Web Coverage Service 1.1"^^<http://www.w3.org/2001/XMLSchema#string>
+
+:WebCoverageService a rdfs:Class ;
+	rdfs:subClassOf ows:OGCWebService .
+
+:DescribeCoverage a rdfs:Class ;
+	rdfs:subClassOf posm:Operation .
+
+:DescribeCoverageInput a rdfs:Class ;
+	rdfs:subClassOf posm:MessagePart ;
+	rdfs:seeAlso <http://schemas.opengis.net/wcs/1.1/wcsDescribeCoverage.xsd#DescribeCoverage> .
+
+:DescribeCoverageOutput a rdfs:Class ;
+	rdfs:subClassOf posm:MessagePart ;
+	rdfs:seeAlso <http://schemas.opengis.net/wcs/1.1/wcsDescribeCoverage.xsd#CoverageDescriptions> .
+
+:GetCoverage a rdfs:Class ;
+	rdfs:subClassOf posm:Operation .
+
+:GetCoverageInput a rdfs:Class ;
+	rdfs:subClassOf posm:MessagePart ;
+	rdfs:seeAlso <http://schemas.opengis.net/wcs/1.1/wcsGetCoverage.xsd#GetCoverage> .
+
+:GetCoverageOutput a rdfs:Class ;
+	rdfs:subClassOf posm:MessagePart ;
+	rdfs:seeAlso <http://schemas.opengis.net/wcs/1.1/wcsCoverages.xsd#Coverages> .
+
+:DefaultDescribeCoverage a :DescribeCoverage ;
+	posm:hasOutput :DefaultDescribeCoverageOutput ;
+	posm:hasInput :DefaultDescribeCoverageInput .
+
+:DefaultDescribeCoverageOutput a :DescribeCoverageOutput ;
+	sawsdl:modelReference xsd:string .
+
+:DefaultDescribeCoverageInput a :DescribeCoverageInput ;
+	sawsdl:modelReference xsd:string .

@@ -1,0 +1,60 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://purl.org/ifgi/wcs#",
+	xsd _"http://www.w3.org/2001/XMLSchema#",  
+	sawsdl _"http://www.w3.org/ns/sawsdl#",
+	dc _"http://purl.org/dc/elements/1.1/",
+	ows _"http://purl.org/ifgi/ows/0.3#",
+	posm _"http://www.wsmo.org/ns/posm/0.2#", 
+	rdfs _"http://www.w3.org/2000/01/rdf-schema#"
+ }
+
+ontology WCS
+
+	annotations
+		dc#publisher hasValue "(a)IfGI, University of Muenster"
+		dc#date hasValue "10-11-2010"
+		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+		dc#type hasValue "Ontology"
+		dc#title hasValue "OGC Web Coverage Service 1.1"
+	endAnnotations
+	
+
+	
+	/* POSM related stuff */
+	concept WebCoverageService subConceptOf ows#OGCWebService
+	
+	concept DescribeCoverage subConceptOf posm#Operation
+	concept DescribeCoverageInput subConceptOf posm#MessagePart
+		annotations
+			rdfs#seeAlso hasValue _"http://schemas.opengis.net/wcs/1.1/wcsDescribeCoverage.xsd#DescribeCoverage"
+		endAnnotations
+	concept DescribeCoverageOutput subConceptOf posm#MessagePart
+		annotations
+			rdfs#seeAlso hasValue _"http://schemas.opengis.net/wcs/1.1/wcsDescribeCoverage.xsd#CoverageDescriptions"
+		endAnnotations
+
+	
+	
+	concept GetCoverage subConceptOf posm#Operation
+	concept GetCoverageInput subConceptOf posm#MessagePart
+		annotations
+			rdfs#seeAlso hasValue _"http://schemas.opengis.net/wcs/1.1/wcsGetCoverage.xsd#GetCoverage"
+		endAnnotations
+	concept GetCoverageOutput subConceptOf posm#MessagePart
+		annotations
+			rdfs#seeAlso hasValue _"http://schemas.opengis.net/wcs/1.1/wcsCoverages.xsd#Coverages"
+		endAnnotations
+		
+		
+	
+	/* default instances */
+	instance DefaultDescribeCoverage memberOf DescribeCoverage
+		posm#hasOutput hasValue DefaultDescribeCoverageOutput
+		posm#hasInput hasValue DefaultDescribeCoverageInput
+	
+	instance DefaultDescribeCoverageOutput memberOf DescribeCoverageOutput
+		sawsdl#modelReference hasValue xsd#string
+		
+	instance DefaultDescribeCoverageInput memberOf DescribeCoverageInput
+		sawsdl#modelReference hasValue xsd#string
+		
