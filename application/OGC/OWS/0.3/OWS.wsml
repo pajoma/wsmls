@@ -1,6 +1,6 @@
 wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-core"
-namespace { _"http://purl.org/ifgi/ows/0.2#", 
-	ows _"http://purl.org/ifgi/ows/0.2#",
+namespace { _"http://purl.org/ifgi/ows/0.3#", 
+	ows _"http://purl.org/ifgi/ows/0.3#",
 	wsl _"http://www.wsmo.org/ns/wsmo-lite#", 
 	xsd _"http://www.w3.org/2001/XMLSchema#", 
 	posm _"http://www.wsmo.org/ns/posm/0.2#",
@@ -29,9 +29,9 @@ ontology ows#OWSOntology
 	
 	// Properties
 	
-	relation upperCorner (ofType ows#BoundingBox, ofType rdfs#Literal)
+	relation upperCorner (ofType ows#BoundingBox, ofType xsd#double)
 
-	relation lowerCorner (ofType ows#BoundingBox, ofType rdfs#Literal)
+	relation lowerCorner (ofType ows#BoundingBox, ofType xsd#double)
 	
 	
 	// Defaults
