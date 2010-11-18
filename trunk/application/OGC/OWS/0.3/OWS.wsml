@@ -13,7 +13,7 @@ ontology ows#OWSOntology
 	 
 	annotations 
 		dc#publisher hasValue "(a)IfGI, University of Muenster"
-		dc#date hasValue "2010-11-10"
+		dc#date hasValue "2010-11-17"
 		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
 		dc#type hasValue "Ontology"
 		dc#title hasValue "OWS Common"

@@ -7,7 +7,7 @@
 	xmlns:ows="http://purl.org/ifgi/ows/0.3#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/">
 <!-- http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/date: "10-11-2010"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/date: "18-11-2010"^^<http://www.w3.org/2001/XMLSchema#string> -->
 <!-- http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string> -->
 <!-- http://purl.org/dc/elements/1.1/type: "Ontology"^^<http://www.w3.org/2001/XMLSchema#string> -->
 <!-- http://purl.org/dc/elements/1.1/title: "OGC Geography Markup Language"^^<http://www.w3.org/2001/XMLSchema#string> -->
@@ -49,6 +49,11 @@
 <rdf:Description rdf:about="http://purl.org/ifgi/gml/0.4#Definition">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml/0.4#AbstractGML"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/gml/0.4#Polygon">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml/0.4#AbstractGeometry"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/gml/0.4#id">

@@ -1,0 +1,56 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://purl.org/ifgi/swe/0.2#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix gml: <http://purl.org/ifgi/gml/0.4#> .
+
+# http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/date: "10-11-2010"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/type: "Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/title: "OGC Sensor Web Enablement"^^<http://www.w3.org/2001/XMLSchema#string>
+
+:AbstractDataArray a rdfs:Class ;
+	rdfs:subClassOf gml:AbstractGML .
+
+:AbstractDataRecord a rdfs:Class ;
+	rdfs:subClassOf gml:AbstractGML .
+
+:ConditionalData a rdfs:Class ;
+	rdfs:subClassOf gml:AbstractGML .
+
+:ConditionalValue a rdfs:Class ;
+	rdfs:subClassOf gml:AbstractGML .
+
+:DataArray a rdfs:Class ;
+	rdfs:subClassOf gml:AbstractGML .
+
+:DataRecord a rdfs:Class ;
+	rdfs:subClassOf gml:AbstractGML .
+
+:SimpleDataRecord a rdfs:Class ;
+	rdfs:subClassOf gml:AbstractGML .
+
+:AnyData a rdfs:Class ;
+	rdfs:subClassOf gml:AbstractGML ;
+	dc:title "Any Type"^^xsd:string .
+
+:TimeObjectProperty a rdfs:Class ;
+	dc:description "Property type not provided by GML"^^xsd:string .
+
+:Phenomenon a rdfs:Class ;
+	rdfs:subClassOf gml:AbstractGML ;
+	dc:title "Basic Phenomenon definition, and head of substitution group of specialized phenomenon defs."^^xsd:string .
+
+:TimeAggregate a rdfs:Class ;
+	rdfs:subClassOf gml:AbstractTimeObject ;
+	dc:title "an arbitrary set of TimeObjects, often TimeInstants and TimePeriods"^^xsd:string .
+
+:TimeGeometricComplex a rdfs:Class .
+
+:TimeGrid a rdfs:Class .
+
+:TimeInstantGrid a rdfs:Class .
+
+:TimeIntervalGrid a rdfs:Class .

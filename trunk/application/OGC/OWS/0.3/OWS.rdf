@@ -9,7 +9,7 @@
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns:sawsdl="http://www.w3.org/ns/sawsdl#">
 <!-- http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/date: "2010-11-10"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/date: "2010-11-17"^^<http://www.w3.org/2001/XMLSchema#string> -->
 <!-- http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string> -->
 <!-- http://purl.org/dc/elements/1.1/type: "Ontology"^^<http://www.w3.org/2001/XMLSchema#string> -->
 <!-- http://purl.org/dc/elements/1.1/title: "OWS Common"^^<http://www.w3.org/2001/XMLSchema#string> -->

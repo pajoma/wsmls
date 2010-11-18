@@ -1,0 +1,72 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://purl.org/ifgi/gmlcov_wcs100_wcs110/0.1#> .
+@prefix gml: <http://purl.org/ifgi/gml/0.4#> .
+@prefix ows: <http://purl.org/ifgi/ows/0.3#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+# http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/date: "18-11-2010"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/type: "Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/title: "OGC GML Coverage for WCS 1.0.0 and WCS 1.1.0"^^<http://www.w3.org/2001/XMLSchema#string>
+
+:Coverages a rdfs:Class .
+
+:Coverage a rdfs:Class .
+
+:CoverageProperty a rdfs:Class .
+
+:Field a rdfs:Class ;
+	rdfs:subClassOf :CoverageProperty .
+
+:TimeSequence a rdfs:Class ;
+	rdfs:subClassOf :CoverageProperty .
+
+:InterpolationMethod a rdfs:Class .
+
+:coverageMember a rdf:Property ;
+	rdfs:domain :Coverages ;
+	rdfs:range :Coverage ;
+	rdfs:subPropertyOf rdfs:member .
+
+:hasGeometry a rdf:Property ;
+	rdfs:domain :Coverage ;
+	rdfs:range gml:Polygon .
+
+:hasProperty a rdf:Property ;
+	rdfs:domain :Coverage ;
+	rdfs:range :CoverageProperty .
+
+:boundedBy a rdf:Property ;
+	rdfs:domain :Coverage ;
+	rdfs:range ows:BoundingBox .
+
+:coverageId a rdf:Property ;
+	rdfs:domain :Coverage ;
+	rdfs:range xsd:string .
+
+:coverageCRS a rdf:Property ;
+	rdfs:domain :Coverage ;
+	rdfs:range xsd:anyURI .
+
+:fieldId a rdf:Property ;
+	rdfs:domain :Field ;
+	rdfs:range xsd:string .
+
+:interpolationMethod a rdf:Property ;
+	rdfs:domain :Field ;
+	rdfs:range :InterpolationMethod .
+
+:interpolationMethodId a rdf:Property ;
+	rdfs:domain :InterpolationMethod ;
+	rdfs:range xsd:string .
+
+:hasStartPoint a rdf:Property ;
+	rdfs:domain :TimeSequence ;
+	rdfs:range xsd:dateTime .
+
+:hasEndPoint a rdf:Property ;
+	rdfs:domain :TimeSequence ;
+	rdfs:range xsd:dateTime .

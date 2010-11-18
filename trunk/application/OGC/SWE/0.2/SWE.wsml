@@ -1,0 +1,68 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://purl.org/ifgi/swe/0.2#",
+	swe _"http://purl.org/ifgi/swe/0.2#",
+	dc _"http://purl.org/dc/elements/1.1/",
+	gml _"http://purl.org/ifgi/gml/0.4#"
+ }
+
+ontology SWE
+	
+	annotations
+		dc#publisher hasValue "(a)IfGI, University of Muenster"
+		dc#date hasValue "10-11-2010"
+		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+		dc#type hasValue "Ontology"
+		dc#title hasValue "OGC Sensor Web Enablement"
+	endAnnotations
+	
+	//AggregateTypes
+	
+	concept swe#AbstractDataArray subConceptOf gml#AbstractGML
+	
+ 	concept swe#AbstractDataArray subConceptOf gml#AbstractGML
+ 	
+ 	concept swe#AbstractDataRecord subConceptOf gml#AbstractGML
+ 	
+ 	concept swe#ConditionalData subConceptOf gml#AbstractGML
+ 	
+ 	concept swe#ConditionalValue subConceptOf gml#AbstractGML
+ 	
+ 	concept swe#DataArray subConceptOf gml#AbstractGML
+ 	
+ 	concept swe#DataRecord subConceptOf gml#AbstractGML
+ 	
+ 	concept swe#SimpleDataRecord subConceptOf gml#AbstractGML
+		
+	// not in schema, to accomodate the anyType thing
+	concept swe#AnyData subConceptOf gml#AbstractGML
+		annotations
+			dc#title hasValue "Any Type"
+		endAnnotations
+	
+	concept swe#TimeObjectProperty
+		annotations
+			dc#description hasValue "Property type not provided by GML"
+		endAnnotations
+	
+	//Phenomenon
+		
+	concept swe#Phenomenon subConceptOf gml#AbstractGML
+ 		annotations
+ 			dc#title hasValue "Basic Phenomenon definition, and head of substitution group of specialized phenomenon defs."
+ 		endAnnotations
+ 	
+ 	//TemporalAggregates	
+ 		
+ 	concept swe#TimeAggregate subConceptOf gml#AbstractTimeObject
+ 		annotations
+ 			dc#title hasValue "an arbitrary set of TimeObjects, often TimeInstants and TimePeriods"
+ 		endAnnotations
+ 		
+	concept swe#TimeGeometricComplex
+	
+	concept swe#TimeGrid
+	
+	concept swe#TimeInstantGrid
+	
+	concept swe#TimeIntervalGrid
+	
