@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns="http://purl.org/ifgi/swe/0.2#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:gml="http://purl.org/ifgi/gml/0.4#">
+<!-- http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/date: "10-11-2010"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/type: "Ontology"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/title: "OGC Sensor Web Enablement"^^<http://www.w3.org/2001/XMLSchema#string> -->
+
+<rdf:Description rdf:about="http://purl.org/ifgi/swe/0.2#AbstractDataArray">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml/0.4#AbstractGML"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/swe/0.2#AbstractDataRecord">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml/0.4#AbstractGML"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/swe/0.2#ConditionalData">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml/0.4#AbstractGML"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/swe/0.2#ConditionalValue">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml/0.4#AbstractGML"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/swe/0.2#DataArray">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml/0.4#AbstractGML"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/swe/0.2#DataRecord">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml/0.4#AbstractGML"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/swe/0.2#SimpleDataRecord">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml/0.4#AbstractGML"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/swe/0.2#AnyData">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml/0.4#AbstractGML"/>
+	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any Type</dc:title>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/swe/0.2#TimeObjectProperty">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Property type not provided by GML</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/swe/0.2#Phenomenon">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml/0.4#AbstractGML"/>
+	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Basic Phenomenon definition, and head of substitution group of specialized phenomenon defs.</dc:title>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/swe/0.2#TimeAggregate">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml/0.4#AbstractTimeObject"/>
+	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">an arbitrary set of TimeObjects, often TimeInstants and TimePeriods</dc:title>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/swe/0.2#TimeGeometricComplex">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/swe/0.2#TimeGrid">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/swe/0.2#TimeInstantGrid">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/swe/0.2#TimeIntervalGrid">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+</rdf:Description>
+
+</rdf:RDF>

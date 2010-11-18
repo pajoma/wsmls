@@ -6,7 +6,7 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 
 # http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/date: "10-11-2010"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/date: "18-11-2010"^^<http://www.w3.org/2001/XMLSchema#string>
 # http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string>
 # http://purl.org/dc/elements/1.1/type: "Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
 # http://purl.org/dc/elements/1.1/title: "OGC Geography Markup Language"^^<http://www.w3.org/2001/XMLSchema#string>
@@ -33,6 +33,9 @@
 
 :Definition a rdfs:Class ;
 	rdfs:subClassOf :AbstractGML .
+
+:Polygon a rdfs:Class ;
+	rdfs:subClassOf :AbstractGeometry .
 
 :id a rdf:Property ;
 	rdfs:domain :AbstractGML ;

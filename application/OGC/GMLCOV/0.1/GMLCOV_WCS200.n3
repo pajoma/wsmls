@@ -1,0 +1,48 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://purl.org/ifgi/gmlcov_wcs200/0.1#> .
+@prefix gml: <http://purl.org/ifgi/gml/0.4#> .
+@prefix ows: <http://purl.org/ifgi/ows/0.3#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix swe: <http://purl.org/ifgi/swe/0.2#> .
+
+# http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/date: "18-11-2010"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/type: "Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/title: "OGC GML Coverage for WCS 2.0"^^<http://www.w3.org/2001/XMLSchema#string>
+
+:Coverages a rdfs:Class .
+
+:Coverage a rdfs:Class ;
+	rdfs:subClassOf gml:AbstractFeature .
+
+:CoverageProperty a rdfs:Class ;
+	rdfs:subClassOf gml:FeatureProperty .
+
+:Range a rdfs:Class ;
+	rdfs:subClassOf :CoverageProperty .
+
+:DomainSet a rdfs:Class ;
+	rdfs:subClassOf :CoverageProperty .
+
+:CoverageFunction a rdfs:Class ;
+	rdfs:subClassOf :CoverageProperty .
+
+:coverageMember a rdf:Property ;
+	rdfs:domain :Coverages ;
+	rdfs:range :Coverage ;
+	rdfs:subPropertyOf rdfs:member .
+
+:hasTimeObject a rdf:Property ;
+	rdfs:domain :DomainSet ;
+	rdfs:range :AbstractGML .
+
+:hasMappingRule a rdf:Property ;
+	rdfs:domain :CoverageFunction ;
+	rdfs:range xsd:string .
+
+:dataRecordProperty a rdf:Property ;
+	rdfs:domain :Range ;
+	rdfs:range swe:DataRecord .

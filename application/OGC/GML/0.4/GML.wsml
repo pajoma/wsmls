@@ -11,7 +11,7 @@ ontology GML
 
 	annotations
 		dc#publisher hasValue "(a)IfGI, University of Muenster"
-		dc#date hasValue "10-11-2010"
+		dc#date hasValue "18-11-2010"
 		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
 		dc#type hasValue "Ontology"
 		dc#title hasValue "OGC Geography Markup Language"
@@ -33,6 +33,8 @@ concept AbstractTimeObject subConceptOf AbstractGML
 
 concept Definition subConceptOf AbstractGML
 
+concept Polygon subConceptOf AbstractGeometry
+
 // Properties
 	
 relation id (ofType AbstractGML, ofType xsd#ID)
@@ -46,8 +48,6 @@ relation gml#hasValue (ofType FeatureProperty, ofType xsd#anyType)
 relation hasGeometry (ofType GeometryProperty, ofType AbstractGeometry) subRelationOf gml#hasValue
 
 relation featureMember (ofType FeatureCollection, ofType AbstractFeature) subRelationOf rdfs#member
-
-
 
 
 

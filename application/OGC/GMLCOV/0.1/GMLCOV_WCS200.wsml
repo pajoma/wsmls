@@ -1,0 +1,40 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://purl.org/ifgi/gmlcov_wcs200/0.1#",
+	gml _"http://purl.org/ifgi/gml/0.4#",
+	ows _"http://purl.org/ifgi/ows/0.3#",
+	xsd _"http://www.w3.org/2001/XMLSchema#",  
+	dc _"http://purl.org/dc/elements/1.1/", 
+	rdfs _"http://www.w3.org/2000/01/rdf-schema#",
+	swe _"http://purl.org/ifgi/swe/0.2#"
+ }
+
+ontology GMLCOV_WCS200
+
+	annotations
+		dc#publisher hasValue "(a)IfGI, University of Muenster"
+		dc#date hasValue "18-11-2010"
+		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+		dc#type hasValue "Ontology"
+		dc#title hasValue "OGC GML Coverage for WCS 2.0"
+	endAnnotations
+	
+	concept Coverages
+	
+	concept Coverage subConceptOf gml#AbstractFeature
+	
+	concept CoverageProperty subConceptOf gml#FeatureProperty
+	
+	concept Range subConceptOf CoverageProperty
+	
+	concept DomainSet subConceptOf CoverageProperty
+	
+	concept CoverageFunction subConceptOf CoverageProperty
+	
+	relation coverageMember (ofType Coverages, ofType Coverage) subRelationOf rdfs#member
+	
+	relation hasTimeObject (ofType DomainSet, ofType AbstractGML)
+	
+	relation hasMappingRule (ofType CoverageFunction, ofType xsd#string)
+	
+	relation dataRecordProperty (ofType Range, ofType swe#DataRecord)
+	
