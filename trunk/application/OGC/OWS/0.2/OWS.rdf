@@ -7,7 +7,8 @@
 	xmlns:wsl="http://www.wsmo.org/ns/wsmo-lite#"
 	xmlns:posm="http://www.wsmo.org/ns/posm/0.2#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
-	xmlns:sawsdl="http://www.w3.org/ns/sawsdl#">
+	xmlns:sawsdl="http://www.w3.org/ns/sawsdl#"
+	xmlns:dolce="http://purl.org/net/wsml/dolceDnS#">
 <!-- http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string> -->
 <!-- http://purl.org/dc/elements/1.1/date: "2010-11-10"^^<http://www.w3.org/2001/XMLSchema#string> -->
 <!-- http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string> -->
@@ -34,6 +35,11 @@
 	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
 </rdf:Description>
 
+<rdf:Description rdf:about="http://purl.org/ifgi/ows/0.2#ServiceDescription">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/net/wsml/dolceDnS#information_object"/>
+</rdf:Description>
+
 <rdf:Description rdf:about="http://purl.org/ifgi/ows/0.2#DefaultGetCapabilities">
 	<rdf:type rdf:resource="http://purl.org/ifgi/ows/0.2#GetCapabilities"/>
 	<posm:hasOutput rdf:resource="http://purl.org/ifgi/ows/0.2#DefaultGetCapabilitiesOutput"/>
@@ -42,7 +48,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ows/0.2#DefaultGetCapabilitiesOutput">
 	<rdf:type rdf:resource="http://purl.org/ifgi/ows/0.2#GetCapabilitiesOutput"/>
-	<sawsdl:modelReference rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	<sawsdl:modelReference rdf:resource="http://purl.org/ifgi/ows/0.2#ServiceDescription"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ows/0.2#DefaultGetCapabilitiesInput">

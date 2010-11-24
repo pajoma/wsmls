@@ -6,6 +6,7 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix ows: <http://purl.org/ifgi/ows/0.2#> .
 @prefix posm: <http://www.wsmo.org/ns/posm/0.2#> .
+@prefix dolce: <http://purl.org/net/wsml/dolceDnS#> .
 
 # http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string>
 # http://purl.org/dc/elements/1.1/date: "10-11-2010"^^<http://www.w3.org/2001/XMLSchema#string>
@@ -36,12 +37,15 @@
 	rdfs:subClassOf posm:MessagePart ;
 	rdfs:seeAlso <http://schemas.opengis.net/wfs/1.1.0/wfs.xsd#FeatureCollection> .
 
+:FeatureTypeDescription a rdfs:Class ;
+	rdfs:subClassOf dolce:information_object .
+
 :DefaultDescribeFeatureType a :DescribeFeatureType ;
 	posm:hasOutput :DefaultDescribeFeatureTypeOutput ;
 	posm:hasInput :DefaultDescribeFeatureTypeInput .
 
 :DefaultDescribeFeatureTypeOutput a :DescribeFeatureTypeOutput ;
-	sawsdl:modelReference xsd:string .
+	sawsdl:modelReference :FeatureTypeDescription .
 
 :DefaultDescribeFeatureTypeInput a :DescribeFeatureTypeInput ;
 	sawsdl:modelReference xsd:string .
