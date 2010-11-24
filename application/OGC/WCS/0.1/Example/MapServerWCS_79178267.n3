@@ -1,0 +1,52 @@
+@prefix sm: <http://giv-wcs.uni-muenster.de:8080/jcr/repository/default/services/MapServerWCS/79178267/MapServerWCS_79178267.rdf#> .
+@prefix wsl: <http://www.wsmo.org/ns/wsmo-lite#> .
+@prefix sawsdl: <http://www.w3.org/ns/sawsdl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix wcs: <http://purl.org/ifgi/wcs#> .
+@prefix posm: <http://www.wsmo.org/ns/posm/0.2#> .
+@prefix ows: <http://purl.org/ifgi/ows/0.2#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix gml: <http://purl.org/ifgi/gml/0.3#> .
+@prefix cov: <http://purl.org/ifgi/cov/0.1#> .
+@prefix ocd: <http://purl.org/ifgi/ocd/0.1#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+
+sm:MapServerWCS_79178267 a posm:Service ;
+	dc:title "MapServerWCS_SRTM3" ;
+	rdfs:seeAlso <http://mapdmzrec.brgm.fr/cgi-bin/mapserv?map=/carto/demo/mapFiles/demo_srtm_glp.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCapabilities>;
+	wsl:functionalClassification wcs:WebCoverageService ;
+	posm:hasOperation ows:DefaultGetCapabilities , wcs:DefaultDescribeCoverage , sm:GetCoverage .
+
+sm:GetCoverage a wcs:GetCoverage ;
+	dc:title "GetCoverage_SRTM3" ;
+	posm:hasInput sm:GetCoverageRequest ;
+	posm:hasOutput sm:GetCoverageResponse .
+
+sm:GetCoverageRequest a wcs:GetCoverageInput ;
+	dc:title "GetCoverageRequest_SRTM3" ;
+	sawsdl:modelReference xsd:string .
+
+sm:GetCoverageResponse a wcs:GetCoverageOutput ;
+	dc:title "GetCoverageResponse_SRTM3" ;
+	sawsdl:modelReference sm:Coverage_79178267 .
+
+sm:MapServerWCS_79178267_Effect a wsl:Effect ;
+	dc:title "Effect_SRTM3" .
+
+sm:Coverage_79178267 a rdfs:Class ;
+	dc:title "Coverage_SRTM3" ;
+	rdfs:subClassOf cov:Coverage .
+
+sm:name a rdfs:Class ;
+	dc:title "name" ;
+	rdfs:subClassOf gml:CoverageProperty .
+
+sm:lonLatEnvelope a rdfs:Class ;
+	dc:title "lonLatEnvelope" ;
+	rdfs:subClassOf ocd:BoundingBox .
+
+sm:interpolationMethod a rdfs:Class ;
+	dc:title "interpolationMethod" ;
+	rdfs:subClassOf cov:InterpolationMethod .
