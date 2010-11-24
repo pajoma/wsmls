@@ -1,0 +1,33 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://purl.org/ifgi/ocd#",
+	xsd _"http://www.w3.org/2001/XMLSchema#",  
+	dc _"http://purl.org/dc/elements/1.1/", 
+	rdfs _"http://www.w3.org/2000/01/rdf-schema#",
+	gml _"http://purl.org/ifgi/gml#"
+ }
+
+ontology OCD
+
+	annotations 
+		dc#publisher hasValue "(a)IfGI, University of Muenster"
+		dc#date hasValue "2010-11-24"
+		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+		dc#type hasValue "Ontology"
+		dc#title hasValue "OGC Common Data"
+	endAnnotations
+
+	concept BoundingBox subConceptOf gml#AbstractGeometry
+	
+	concept TimeSequence subConceptOf gml#FeatureProperty
+	
+	// Properties
+	
+	relation boundedBy (ofType gml#AbstractFeature, ofType BoundingBox)
+	
+	relation upperCorner (ofType BoundingBox, ofType rdfs#Literal)
+
+	relation lowerCorner (ofType BoundingBox, ofType rdfs#Literal)
+	
+	relation hasStartPoint (ofType TimeSequence, ofType xsd#dateTime)
+	
+	relation hasEndPoint (ofType TimeSequence, ofType xsd#dateTime)

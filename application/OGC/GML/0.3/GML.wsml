@@ -1,6 +1,6 @@
 wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
-namespace { _"http://purl.org/ifgi/gml/0.2#",
-	gml _"http://purl.org/ifgi/gml/0.2#",
+namespace { _"http://purl.org/ifgi/gml#",
+	gml _"http://purl.org/ifgi/gml#",
 	xsd _"http://www.w3.org/2001/XMLSchema#",  
 	dc _"http://purl.org/dc/elements/1.1/", 
 	rdfs _"http://www.w3.org/2000/01/rdf-schema#"
@@ -10,7 +10,7 @@ ontology GML
 
 	annotations
 		dc#publisher hasValue "(a)IfGI, University of Muenster"
-		dc#date hasValue "10-11-2010"
+		dc#date hasValue "24-11-2010"
 		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
 		dc#type hasValue "Ontology"
 		dc#title hasValue "OGC Geography Markup Language"
@@ -29,10 +29,15 @@ concept GeometryProperty subConceptOf FeatureProperty
 concept FeatureCollection subConceptOf AbstractGML
 	
 concept Envelope
+	annotations
+		dc#description hasValue "deprecated - use ocd#BoundingBox"
+	endAnnotations
 
 concept AbstractTimeObject subConceptOf AbstractGML
 
 concept Definition subConceptOf AbstractGML
+
+concept Polygon subConceptOf AbstractGeometry
 
 // Properties
 	
@@ -41,12 +46,21 @@ relation id (ofType AbstractGML, ofType xsd#ID)
 relation hasProperty (ofType AbstractFeature, ofType FeatureProperty)
 
 relation boundedBy (ofType AbstractFeature, ofType Envelope)
+	annotations
+		dc#description hasValue "deprecated - use ocd#BoundingBox"
+	endAnnotations
 
 relation gml#hasValue (ofType FeatureProperty, ofType xsd#anyType)
 
 relation upperCorner (ofType Envelope, ofType rdfs#Literal)
+	annotations
+		dc#description hasValue "deprecated"
+	endAnnotations
 
 relation lowerCorner (ofType Envelope, ofType rdfs#Literal)
+	annotations
+		dc#description hasValue "deprecated"
+	endAnnotations
 
 relation hasGeometry (ofType GeometryProperty, ofType AbstractGeometry) subRelationOf gml#hasValue
 
