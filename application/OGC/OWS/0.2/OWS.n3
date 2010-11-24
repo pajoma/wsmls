@@ -6,6 +6,7 @@
 @prefix posm: <http://www.wsmo.org/ns/posm/0.2#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix sawsdl: <http://www.w3.org/ns/sawsdl#> .
+@prefix dolce: <http://purl.org/net/wsml/dolceDnS#> .
 
 # http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string>
 # http://purl.org/dc/elements/1.1/date: "2010-11-10"^^<http://www.w3.org/2001/XMLSchema#string>
@@ -25,13 +26,15 @@
 :GetCapabilitiesInput a rdfs:Class ;
 	rdfs:subClassOf posm:MessagePart .
 
+:ServiceDescription a rdfs:Class ;
+	rdfs:subClassOf dolce:information_object .
+
 :DefaultGetCapabilities a :GetCapabilities ;
 	posm:hasOutput :DefaultGetCapabilitiesOutput ;
 	posm:hasInput :DefaultGetCapabilitiesInput .
 
 :DefaultGetCapabilitiesOutput a :GetCapabilitiesOutput ;
-	sawsdl:modelReference xsd:string .
+	sawsdl:modelReference :ServiceDescription .
 
 :DefaultGetCapabilitiesInput a :GetCapabilitiesInput ;
 	sawsdl:modelReference xsd:string .
-

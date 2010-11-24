@@ -5,7 +5,8 @@ namespace { _"http://purl.org/ifgi/wfs#",
 	dc _"http://purl.org/dc/elements/1.1/",
 	ows _"http://purl.org/ifgi/ows/0.2#",
 	posm _"http://www.wsmo.org/ns/posm/0.2#", 
-	rdfs _"http://www.w3.org/2000/01/rdf-schema#"
+	rdfs _"http://www.w3.org/2000/01/rdf-schema#",
+	dolce _"http://purl.org/net/wsml/dolceDnS#"
  }
 
 ontology WFS
@@ -39,6 +40,7 @@ ontology WFS
 			rdfs#seeAlso hasValue _"http://schemas.opengis.net/wfs/1.1.0/wfs.xsd#FeatureCollection"
 		endAnnotations
 		
+	concept FeatureTypeDescription subConceptOf dolce#information_object
 	
 	/* default instances */
 	instance DefaultDescribeFeatureType memberOf DescribeFeatureType
@@ -46,7 +48,7 @@ ontology WFS
 		posm#hasInput hasValue DefaultDescribeFeatureTypeInput
 	
 	instance DefaultDescribeFeatureTypeOutput memberOf DescribeFeatureTypeOutput
-		sawsdl#modelReference hasValue xsd#string
+		sawsdl#modelReference hasValue FeatureTypeDescription
 		
 	instance DefaultDescribeFeatureTypeInput memberOf DescribeFeatureTypeInput
 		sawsdl#modelReference hasValue xsd#string

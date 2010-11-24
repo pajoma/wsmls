@@ -7,7 +7,8 @@
 	xmlns:sawsdl="http://www.w3.org/ns/sawsdl#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns:ows="http://purl.org/ifgi/ows/0.2#"
-	xmlns:posm="http://www.wsmo.org/ns/posm/0.2#">
+	xmlns:posm="http://www.wsmo.org/ns/posm/0.2#"
+	xmlns:dolce="http://purl.org/net/wsml/dolceDnS#">
 <!-- http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string> -->
 <!-- http://purl.org/dc/elements/1.1/date: "10-11-2010"^^<http://www.w3.org/2001/XMLSchema#string> -->
 <!-- http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string> -->
@@ -51,6 +52,11 @@
 	<rdfs:seeAlso rdf:resource="http://schemas.opengis.net/wfs/1.1.0/wfs.xsd#FeatureCollection"/>
 </rdf:Description>
 
+<rdf:Description rdf:about="http://purl.org/ifgi/wfs#FeatureTypeDescription">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/net/wsml/dolceDnS#information_object"/>
+</rdf:Description>
+
 <rdf:Description rdf:about="http://purl.org/ifgi/wfs#DefaultDescribeFeatureType">
 	<rdf:type rdf:resource="http://purl.org/ifgi/wfs#DescribeFeatureType"/>
 	<posm:hasOutput rdf:resource="http://purl.org/ifgi/wfs#DefaultDescribeFeatureTypeOutput"/>
@@ -59,7 +65,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/wfs#DefaultDescribeFeatureTypeOutput">
 	<rdf:type rdf:resource="http://purl.org/ifgi/wfs#DescribeFeatureTypeOutput"/>
-	<sawsdl:modelReference rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	<sawsdl:modelReference rdf:resource="http://purl.org/ifgi/wfs#FeatureTypeDescription"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/wfs#DefaultDescribeFeatureTypeInput">
