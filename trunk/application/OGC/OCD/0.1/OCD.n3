@@ -1,0 +1,38 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://purl.org/ifgi/ocd#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix gml: <http://purl.org/ifgi/gml#> .
+
+# http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/date: "2010-11-24"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/type: "Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/title: "OGC Common Data"^^<http://www.w3.org/2001/XMLSchema#string>
+
+:BoundingBox a rdfs:Class ;
+	rdfs:subClassOf gml:AbstractGeometry .
+
+:TimeSequence a rdfs:Class ;
+	rdfs:subClassOf gml:FeatureProperty .
+
+:boundedBy a rdf:Property ;
+	rdfs:domain gml:AbstractFeature ;
+	rdfs:range :BoundingBox .
+
+:upperCorner a rdf:Property ;
+	rdfs:domain :BoundingBox ;
+	rdfs:range rdfs:Literal .
+
+:lowerCorner a rdf:Property ;
+	rdfs:domain :BoundingBox ;
+	rdfs:range rdfs:Literal .
+
+:hasStartPoint a rdf:Property ;
+	rdfs:domain :TimeSequence ;
+	rdfs:range xsd:dateTime .
+
+:hasEndPoint a rdf:Property ;
+	rdfs:domain :TimeSequence ;
+	rdfs:range xsd:dateTime .
