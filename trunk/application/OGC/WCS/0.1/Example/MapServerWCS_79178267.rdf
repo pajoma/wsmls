@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:ows="http://purl.org/ifgi/ows/0.2#" xmlns:sm="http://giv-wcs.uni-muenster.de:8080/jcr/repository/default/services/MapServerWCS/79178267/MapServerWCS_79178267.rdf#" xmlns:wcs="http://purl.org/ifgi/wcs#" xmlns:cov="http://purl.org/ifgi/cov/0.1#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:ocd="http://purl.org/ifgi/ocd/0.1#" xmlns:gml="http://purl.org/ifgi/gml/0.3#" xmlns:sawsdl="http://www.w3.org/ns/sawsdl#" xmlns:wsl="http://www.wsmo.org/ns/wsmo-lite#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:posm="http://www.wsmo.org/ns/posm/0.2#">
+	<posm:Service rdf:about="http://giv-wcs.uni-muenster.de:8080/jcr/repository/default/services/MapServerWCS/79178267/MapServerWCS_79178267.rdf#MapServerWCS_79178267">
+		<dc:title>MapServerWCS_SRTM3</dc:title>
+		<rdfs:seeAlso rdf:resource="http://mapdmzrec.brgm.fr/cgi-bin/mapserv?map=/carto/demo/mapFiles/demo_srtm_glp.map&amp;SERVICE=WCS&amp;VERSION=1.0.0&amp;REQUEST=GetCapabilities" />
+		<wsl:functionalClassification rdf:resource="http://purl.org/ifgi/wcs#WebCoverageService" />
+		<posm:hasOperation rdf:resource="http://purl.org/ifgi/ows/0.2#DefaultGetCapabilities" />
+		<posm:hasOperation rdf:resource="http://purl.org/ifgi/wcs#DefaultDescribeCoverage" />
+		<posm:hasOperation>
+			<wcs:GetCoverage rdf:about="http://giv-wcs.uni-muenster.de:8080/jcr/repository/default/services/MapServerWCS/79178267/MapServerWCS_79178267.rdf#GetCoverage">
+				<dc:title>GetCoverage_SRTM3</dc:title>
+				<posm:hasInput>
+					<wcs:GetCoverageInput rdf:about="http://giv-wcs.uni-muenster.de:8080/jcr/repository/default/services/MapServerWCS/79178267/MapServerWCS_79178267.rdf#GetCoverageRequest">
+						<dc:title>GetCoverageRequest_SRTM3</dc:title>
+						<sawsdl:modelReference rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+					</wcs:GetCoverageInput>
+				</posm:hasInput>
+				<posm:hasOutput>
+					<wcs:GetCoverageOutput rdf:about="http://giv-wcs.uni-muenster.de:8080/jcr/repository/default/services/MapServerWCS/79178267/MapServerWCS_79178267.rdf#GetCoverageResponse">
+						<dc:title>GetCoverageResponse_SRTM3</dc:title>
+						<sawsdl:modelReference>
+							<rdfs:Class rdf:about="http://giv-wcs.uni-muenster.de:8080/jcr/repository/default/services/MapServerWCS/79178267/MapServerWCS_79178267.rdf#Coverage_79178267">
+								<dc:title>Coverage_SRTM3</dc:title>
+								<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/cov/0.1#Coverage" />
+							</rdfs:Class>
+						</sawsdl:modelReference>
+					</wcs:GetCoverageOutput>
+				</posm:hasOutput>
+			</wcs:GetCoverage>
+		</posm:hasOperation>
+	</posm:Service>
+	<wsl:Effect rdf:about="http://giv-wcs.uni-muenster.de:8080/jcr/repository/default/services/MapServerWCS/79178267/MapServerWCS_79178267.rdf#MapServerWCS_79178267_Effect">
+		<dc:title>Effect_SRTM3</dc:title>
+	</wsl:Effect>
+	<rdfs:Class rdf:about="http://giv-wcs.uni-muenster.de:8080/jcr/repository/default/services/MapServerWCS/79178267/MapServerWCS_79178267.rdf#name">
+		<dc:title>name</dc:title>
+		<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml/0.3#CoverageProperty" />
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://giv-wcs.uni-muenster.de:8080/jcr/repository/default/services/MapServerWCS/79178267/MapServerWCS_79178267.rdf#lonLatEnvelope">
+		<dc:title>lonLatEnvelope</dc:title>
+		<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/ocd/0.1#BoundingBox" />
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://giv-wcs.uni-muenster.de:8080/jcr/repository/default/services/MapServerWCS/79178267/MapServerWCS_79178267.rdf#interpolationMethod">
+		<dc:title>interpolationMethod</dc:title>
+		<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/cov/0.1#InterpolationMethod" />
+	</rdfs:Class>
+</rdf:RDF>
