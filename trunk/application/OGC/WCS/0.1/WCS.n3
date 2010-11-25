@@ -6,9 +6,10 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix ows: <http://purl.org/ifgi/ows/0.3#> .
 @prefix posm: <http://www.wsmo.org/ns/posm/0.2#> .
+@prefix dolce: <http://purl.org/net/wsml/dolceDnS#> .
 
 # http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/date: "10-11-2010"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/date: "25-11-2010"^^<http://www.w3.org/2001/XMLSchema#string>
 # http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string>
 # http://purl.org/dc/elements/1.1/type: "Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
 # http://purl.org/dc/elements/1.1/title: "OGC Web Coverage Service 1.1"^^<http://www.w3.org/2001/XMLSchema#string>
@@ -38,12 +39,15 @@
 	rdfs:subClassOf posm:MessagePart ;
 	rdfs:seeAlso <http://schemas.opengis.net/wcs/1.1/wcsCoverages.xsd#Coverages> .
 
+:CoverageDescription a rdfs:Class ;
+	rdfs:subClassOf dolce:information_object .
+
 :DefaultDescribeCoverage a :DescribeCoverage ;
 	posm:hasOutput :DefaultDescribeCoverageOutput ;
 	posm:hasInput :DefaultDescribeCoverageInput .
 
 :DefaultDescribeCoverageOutput a :DescribeCoverageOutput ;
-	sawsdl:modelReference xsd:string .
+	sawsdl:modelReference :CoverageDescription .
 
 :DefaultDescribeCoverageInput a :DescribeCoverageInput ;
 	sawsdl:modelReference xsd:string .

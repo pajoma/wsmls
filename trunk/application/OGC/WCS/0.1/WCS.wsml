@@ -5,14 +5,15 @@ namespace { _"http://purl.org/ifgi/wcs#",
 	dc _"http://purl.org/dc/elements/1.1/",
 	ows _"http://purl.org/ifgi/ows/0.3#",
 	posm _"http://www.wsmo.org/ns/posm/0.2#", 
-	rdfs _"http://www.w3.org/2000/01/rdf-schema#"
+	rdfs _"http://www.w3.org/2000/01/rdf-schema#",
+	dolce _"http://purl.org/net/wsml/dolceDnS#"
  }
 
 ontology WCS
 
 	annotations
 		dc#publisher hasValue "(a)IfGI, University of Muenster"
-		dc#date hasValue "10-11-2010"
+		dc#date hasValue "25-11-2010"
 		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
 		dc#type hasValue "Ontology"
 		dc#title hasValue "OGC Web Coverage Service 1.1"
@@ -45,7 +46,7 @@ ontology WCS
 			rdfs#seeAlso hasValue _"http://schemas.opengis.net/wcs/1.1/wcsCoverages.xsd#Coverages"
 		endAnnotations
 		
-		
+	concept CoverageDescription subConceptOf dolce#information_object	
 	
 	/* default instances */
 	instance DefaultDescribeCoverage memberOf DescribeCoverage
@@ -53,7 +54,7 @@ ontology WCS
 		posm#hasInput hasValue DefaultDescribeCoverageInput
 	
 	instance DefaultDescribeCoverageOutput memberOf DescribeCoverageOutput
-		sawsdl#modelReference hasValue xsd#string
+		sawsdl#modelReference hasValue CoverageDescription
 		
 	instance DefaultDescribeCoverageInput memberOf DescribeCoverageInput
 		sawsdl#modelReference hasValue xsd#string
