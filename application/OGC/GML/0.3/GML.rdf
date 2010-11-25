@@ -48,6 +48,7 @@
 <rdf:Description rdf:about="http://purl.org/ifgi/gml#AbstractTimeObject">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml#AbstractGML"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">deprecated - use ocd#AbstractTimeObject</dc:description>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/gml#Definition">

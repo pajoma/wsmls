@@ -17,9 +17,19 @@
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml#AbstractGeometry"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/ocd#TimeSequence">
+<rdf:Description rdf:about="http://purl.org/ifgi/ocd#AbstractTimeObject">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml#FeatureProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/ocd#TimeSequence">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/ocd#AbstractTimeObject"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/ocd#TimePoint">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/ocd#AbstractTimeObject"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ocd#boundedBy">

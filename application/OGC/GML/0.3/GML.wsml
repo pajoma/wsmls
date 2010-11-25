@@ -34,6 +34,9 @@ concept Envelope
 	endAnnotations
 
 concept AbstractTimeObject subConceptOf AbstractGML
+	annotations
+		dc#description hasValue "deprecated - use ocd#AbstractTimeObject"
+	endAnnotations
 
 concept Definition subConceptOf AbstractGML
 
