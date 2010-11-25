@@ -18,7 +18,11 @@ ontology OCD
 
 	concept BoundingBox subConceptOf gml#AbstractGeometry
 	
-	concept TimeSequence subConceptOf gml#FeatureProperty
+	concept AbstractTimeObject subConceptOf gml#FeatureProperty
+	
+	concept TimeSequence subConceptOf AbstractTimeObject
+	
+	concept TimePoint subConceptOf AbstractTimeObject
 	
 	// Properties
 	

@@ -31,7 +31,8 @@
 	dc:description "deprecated - use ocd#BoundingBox"^^xsd:string .
 
 :AbstractTimeObject a rdfs:Class ;
-	rdfs:subClassOf :AbstractGML .
+	rdfs:subClassOf :AbstractGML ;
+	dc:description "deprecated - use ocd#AbstractTimeObject"^^xsd:string .
 
 :Definition a rdfs:Class ;
 	rdfs:subClassOf :AbstractGML .

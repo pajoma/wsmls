@@ -14,8 +14,14 @@
 :BoundingBox a rdfs:Class ;
 	rdfs:subClassOf gml:AbstractGeometry .
 
-:TimeSequence a rdfs:Class ;
+:AbstractTimeObject a rdfs:Class ;
 	rdfs:subClassOf gml:FeatureProperty .
+
+:TimeSequence a rdfs:Class ;
+	rdfs:subClassOf :AbstractTimeObject .
+
+:TimePoint a rdfs:Class ;
+	rdfs:subClassOf :AbstractTimeObject .
 
 :boundedBy a rdf:Property ;
 	rdfs:domain gml:AbstractFeature ;
