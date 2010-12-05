@@ -36,3 +36,19 @@
 		?geounit[dlc#has_quality hasValue {?quality1, ?quality2} memberOf geo#geographical_unit and 
 		?quality1 memberOf geo#terrain and ?quality2 memberOf geo#spatial_extent and			
 		annot#domainReference(?coverage, ?quality1) and	annot#domainReference(?bb, ?quality2) ."""^^xsd:string .
+
+:Coverage_79178267 a rdfs:Class ;
+	dc:title "Coverage_SRTM3"^^xsd:string ;
+	rdfs:subClassOf cov:Coverage .
+
+:name a rdfs:Class ;
+	dc:title "name"^^xsd:string ;
+	rdfs:subClassOf cov:CoverageProperty .
+
+:lonLatEnvelope a rdfs:Class ;
+	dc:title "lonLatEnvelope"^^xsd:string ;
+	rdfs:subClassOf ocd:BoundingBox .
+
+:interpolationMethod a rdfs:Class ;
+	dc:title "interpolationMethod"^^xsd:string ;
+	rdfs:subClassOf cov:InterpolationMethod .

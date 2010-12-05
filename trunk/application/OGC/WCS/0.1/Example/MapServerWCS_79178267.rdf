@@ -50,4 +50,28 @@
 		annot#domainReference(?coverage, ?quality1) and	annot#domainReference(?bb, ?quality2) .</rdf:value>
 </rdf:Description>
 
+<rdf:Description rdf:about="http://giv-wcs.uni-muenster.de:8080/jcr/repository/default/services/MapServerWCS/79178267/MapServerWCS_79178267.rdf#Coverage_79178267">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coverage_SRTM3</dc:title>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/cov#Coverage"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://giv-wcs.uni-muenster.de:8080/jcr/repository/default/services/MapServerWCS/79178267/MapServerWCS_79178267.rdf#name">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</dc:title>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/cov#CoverageProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://giv-wcs.uni-muenster.de:8080/jcr/repository/default/services/MapServerWCS/79178267/MapServerWCS_79178267.rdf#lonLatEnvelope">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lonLatEnvelope</dc:title>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/ocd#BoundingBox"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://giv-wcs.uni-muenster.de:8080/jcr/repository/default/services/MapServerWCS/79178267/MapServerWCS_79178267.rdf#interpolationMethod">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">interpolationMethod</dc:title>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/cov#InterpolationMethod"/>
+</rdf:Description>
+
 </rdf:RDF>

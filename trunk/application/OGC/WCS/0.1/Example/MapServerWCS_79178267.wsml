@@ -68,3 +68,19 @@ axiom _annotation
 		annot#domainReference(?coverage, ?quality1) and
 		annot#domainReference(?bb, ?quality2).
 		
+instance Coverage_79178267 memberOf rdfs#Class
+	dc#title hasValue "Coverage_SRTM3"
+	rdfs#subClassOf hasValue cov#Coverage
+
+instance name memberOf rdfs#Class
+	dc#title hasValue "name"
+	rdfs#subClassOf hasValue cov#CoverageProperty
+
+instance lonLatEnvelope memberOf rdfs#Class
+	dc#title hasValue "lonLatEnvelope"
+	rdfs#subClassOf hasValue ocd#BoundingBox
+
+instance interpolationMethod memberOf rdfs#Class
+	dc#title hasValue "interpolationMethod"
+	rdfs#subClassOf hasValue cov#InterpolationMethod
+		
