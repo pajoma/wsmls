@@ -1,0 +1,70 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://giv-wcs.uni-muenster.de:8080/jcr/repository/default/services/MapServerWCS/79178267/MapServerWCS_79178267.rdf#",
+	xsd _"http://www.w3.org/2001/XMLSchema#",  
+	sawsdl _"http://www.w3.org/ns/sawsdl#",
+	dc _"http://purl.org/dc/elements/1.1/",
+	ows _"http://purl.org/ifgi/ows#",
+	posm _"http://www.wsmo.org/ns/posm/0.2#",
+	wsl _"http://www.wsmo.org/ns/wsmo-lite#", 
+	rdfs _"http://www.w3.org/2000/01/rdf-schema#", 
+	annot _"http://purl.org/ifgi/annotations#", 
+	dlc _"http://purl.org/net/wsmls/dolce#",
+ 	rdf _"http://www.w3.org/1999/02/22-rdf-syntax-ns#", 
+ 	cov _"http://purl.org/ifgi/cov#",
+ 	geo _"http://purl.org/net/wsml/geospace#",
+ 	wcs _"http://purl.org/ifgi/wcs#",
+ 	ocd _"http://purl.org/ifgi/ocd#"	
+ }
+
+ontology MapServerWCS
+
+	//why this import?
+	importsOntology {wsl#WSL, annot#Annotation}
+
+
+/* service model related stuff */
+instance MapServerWCS_79178267 memberOf posm#Service
+	dc#title hasValue "SRTM3"
+	rdfs#seeAlso hasValue {
+			_"http://mapdmzrec.brgm.fr/cgi-bin/mapserv?map=/carto/demo/mapFiles/demo_srtm_glp.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCapabilities" 
+		}
+	wsl#functionalClassification hasValue wcs#WebCoverageService
+	posm#hasOperation hasValue ows#DefaultGetCapabilities
+	posm#hasOperation hasValue wcs#DefaultDescribeCoverage
+	posm#hasOperation hasValue MyGetCoverage
+	
+
+instance MyGetCoverage memberOf wcs#GetCoverage
+	posm#hasOutput hasValue MyGetCoverageOutput
+	posm#hasInput hasValue MyGetCoverageInput
+	
+instance MyGetCoverageInput memberOf wcs#GetCoverageInput
+	sawsdl#modelReference hasValue xsd#string
+	
+instance MyGetCoverageOutput memberOf wcs#GetCoverageOutput
+	sawsdl#modelReference hasValue Coverage_79178267
+	
+/* ogc related stuff */
+
+/* Here comes the annotation. The serialization as it is now ignores the axioms, so we have to define it manually here.  */ 
+instance _effect memberOf wsl#Effect
+	rdf#value hasValue "?coverage memberOf cov#Coverage and ?bb memberOf ocd#BoundingBox and 
+		?geounit[dlc#has_quality hasValue {?quality1, ?quality2} memberOf geo#geographical_unit and 
+		?quality1 memberOf geo#terrain and ?quality2 memberOf geo#spatial_extent and			
+		annot#domainReference(?coverage, ?quality1) and	annot#domainReference(?bb, ?quality2) ." 
+
+
+/* the actual annotation, which is created in the same way as in SWING. The IRIS-reasoner in WSMT rejects it, though (talks about
+   unbound variables */
+axiom _annotation 
+	definedBy  
+		?coverage memberOf cov#Coverage and 
+		?bb memberOf ocd#BoundingBox and 
+		 
+		?geounit[dlc#has_quality hasValue {?quality1, ?quality2}] memberOf geo#geographical_unit and 
+		?quality1 memberOf geo#terrain and 
+		?quality2 memberOf geo#spatial_extent and
+			
+		annot#domainReference(?coverage, ?quality1) and
+		annot#domainReference(?bb, ?quality2).
+		
