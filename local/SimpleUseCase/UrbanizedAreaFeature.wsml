@@ -1,0 +1,48 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://ifgipedia.uni-muenster.de/envision-simple-use-case#",
+	dc _"http://purl.org/dc/elements/1.1/",
+	dolce _"http://purl.org/ifgi/dolce#",
+	geospace _"http://purl.org/net/wsml/geospace#"
+ }
+
+ontology UrbanizedAreaFeature
+
+	annotations
+        dc#publisher hasValue "IfGI, University of Muenster"
+		dc#type hasValue "Domain Ontology"
+		dc#title hasValue "Ontology describing landcover of an urbanized area"	
+		dc#description hasValue "more or less a simple formalization of the Corine landcover catalogue by Henry Michels"
+		dc#source hasValue ""
+		dc#subject hasValue "urbanized area, landcover, domain"	
+		dc#date hasValue "06-12-2010"
+     endAnnotations
+	
+	concept UrbanizedArea subConceptOf geospace#landcover_unit
+	
+	concept ContinousUrbanizedArea subConceptOf UrbanizedArea
+	
+	concept DiscontinousUrbanizedArea subConceptOf UrbanizedArea
+	
+	concept LeisureUnit subConceptOf {ContinousUrbanizedArea, DiscontinousUrbanizedArea}
+	
+	concept CommercialUnit subConceptOf {ContinousUrbanizedArea, DiscontinousUrbanizedArea}
+	
+	concept IndustrialUnit subConceptOf {ContinousUrbanizedArea, DiscontinousUrbanizedArea}
+	
+	concept GreenUrbanUnit subConceptOf {ContinousUrbanizedArea, DiscontinousUrbanizedArea}
+	
+	concept TransportUnit subConceptOf {ContinousUrbanizedArea, DiscontinousUrbanizedArea}
+	
+	concept ConstructionUnit subConceptOf {ContinousUrbanizedArea, DiscontinousUrbanizedArea}
+	
+	concept DumpUnit subConceptOf {ContinousUrbanizedArea, DiscontinousUrbanizedArea}
+	
+	concept MineUnit subConceptOf {ContinousUrbanizedArea, DiscontinousUrbanizedArea}
+	
+	concept RoadNetwork subConceptOf TransportUnit
+	
+	concept RailNetwork subConceptOf TransportUnit
+	
+	concept Port subConceptOf TransportUnit
+	
+	
