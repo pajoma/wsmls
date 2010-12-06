@@ -23,7 +23,7 @@
 
 dolceSpatial:spatial_location a rdf:Property ;
 	rdfs:domain :geographical_unit ;
-	rdfs:range :geographical_space .
+	rdfs:range :geographical_space_region .
 
 dolce:has_quality a rdf:Property ;
 	rdfs:domain :geographical_unit ;
