@@ -1,0 +1,43 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://ifgipedia.uni-muenster.de/envision-simple-use-case#",
+	dc _"http://purl.org/dc/elements/1.1/",
+	dolce _"http://purl.org/ifgi/dolce#",
+	obs _"http://purl.org/ifgi/observation#"
+ }
+
+ontology WaterlevelObservation
+
+	annotations
+        dc#publisher hasValue "IfGI, University of Muenster"
+		dc#type hasValue "Domain Ontology"
+		dc#title hasValue "Water Level Observation Ontology"	
+		dc#description hasValue "Domain ontology describing the observation of water level extending the foundational observation ontology by Henry Michels"
+		dc#source hasValue ""
+		dc#subject hasValue "observation, measurement, domain"	
+		dc#date hasValue "06-12-2010"
+     endAnnotations
+	
+	concept WaterlevelObservation subConceptOf obs#ObservationProcess
+		hasName impliesType _string
+		isPerformedBy impliesType WaterlevelSensor
+		
+	concept WaterlevelSensor subConceptOf obs#Observer
+		performs ofType (1 1) WaterlevelObservation
+		observes ofType (1 *) Water
+	
+	concept WaterlevelValue subConceptOf obs#ObservationValue
+		value impliesType _float
+		isProducedBy impliesType WaterlevelObservation
+		
+	concept Waterlevel subConceptOf Level
+		isObservedBy impliesType WaterlevelSensor
+		
+	concept Level subConceptOf obs#Observable
+	
+	concept RiverWater subConceptOf Water
+		
+	concept GroundWater subConceptOf Water
+		
+	concept Water subConceptOf obs#ObservedEntity
+		dolce#has_quality impliesType Waterlevel
+	

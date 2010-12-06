@@ -1,0 +1,74 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://purl.org/ifgi/observation#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dolce: <http://purl.org/ifgi/dolce#> .
+
+# http://purl.org/dc/elements/1.1/publisher: "IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/type: "Foundational Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/title: "Observation Foundational Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/description: "Formalization of Kuhn's Observation and Measurement, with respect to annotate SOSs by Henry Michels"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/source: ""^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/subject: "observation, measurement, foundational"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/date: "06-12-2010"^^<http://www.w3.org/2001/XMLSchema#string>
+
+:ObservationProcess a rdfs:Class ;
+	rdfs:subClassOf dolce:Process .
+
+:isPerformedBy a rdf:Property ;
+	rdfs:domain :ObservationProcess .
+
+:Observer a rdfs:Class ;
+	rdfs:subClassOf dolce:PhysicalObject .
+
+:performs a rdf:Property ;
+	rdfs:domain :Observer .
+
+:observes a rdf:Property ;
+	rdfs:domain :Observer .
+
+:Observable a rdfs:Class ;
+	rdfs:subClassOf dolce:Quality .
+
+:isObservedBy a rdf:Property ;
+	rdfs:domain :Observable .
+
+:ObservedEntity a rdfs:Class ;
+	rdfs:subClassOf dolce:Endurant , dolce:Perdurant .
+
+dolce:hasQuality a rdf:Property ;
+	rdfs:domain :ObservedEntity .
+
+dolce:participantIn a rdf:Property ;
+	rdfs:domain :ObservedEntity .
+
+:Stimulus a rdfs:Class ;
+	rdfs:subClassOf dolce:Perdurant .
+
+:hasParticipant a rdf:Property ;
+	rdfs:domain :Stimulus .
+
+:isDetectedBy a rdf:Property ;
+	rdfs:domain :Stimulus .
+
+:isSometimesProducedBy a rdf:Property ;
+	rdfs:domain :Stimulus .
+
+:ObservationValue a rdfs:Class ;
+	rdfs:subClassOf dolce:AbstractQuality .
+
+:value a rdf:Property ;
+	rdfs:domain :ObservationValue .
+
+:isProducedBy a rdf:Property ;
+	rdfs:domain :ObservationValue .
+
+dolce:gLocation a rdf:Property ;
+	rdfs:domain :ObservationValue .
+
+:NaturalEvent a rdfs:Class ;
+	rdfs:subClassOf dolce:Event .
+
+:triggeredAt a rdf:Property ;
+	rdfs:domain :NaturalEvent .

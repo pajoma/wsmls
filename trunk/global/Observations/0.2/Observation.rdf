@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns="http://purl.org/ifgi/observation#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:dolce="http://purl.org/ifgi/dolce#">
+<!-- http://purl.org/dc/elements/1.1/publisher: "IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/type: "Foundational Ontology"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/title: "Observation Foundational Ontology"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/description: "Formalization of Kuhn's Observation and Measurement, with respect to annotate SOSs by Henry Michels"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/source: ""^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/subject: "observation, measurement, foundational"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/date: "06-12-2010"^^<http://www.w3.org/2001/XMLSchema#string> -->
+
+<rdf:Description rdf:about="http://purl.org/ifgi/observation#ObservationProcess">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dolce#Process"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/observation#isPerformedBy">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/observation#ObservationProcess"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/observation#Observer">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dolce#PhysicalObject"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/observation#performs">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/observation#Observer"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/observation#observes">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/observation#Observer"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/observation#Observable">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dolce#Quality"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/observation#isObservedBy">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/observation#Observable"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/observation#ObservedEntity">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dolce#Endurant"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dolce#Perdurant"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/dolce#hasQuality">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/observation#ObservedEntity"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/dolce#participantIn">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/observation#ObservedEntity"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/observation#Stimulus">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dolce#Perdurant"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/observation#hasParticipant">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/observation#Stimulus"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/observation#isDetectedBy">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/observation#Stimulus"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/observation#isSometimesProducedBy">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/observation#Stimulus"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/observation#ObservationValue">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dolce#AbstractQuality"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/observation#value">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/observation#ObservationValue"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/observation#isProducedBy">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/observation#ObservationValue"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/dolce#gLocation">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/observation#ObservationValue"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/observation#NaturalEvent">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dolce#Event"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/observation#triggeredAt">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/observation#NaturalEvent"/>
+</rdf:Description>
+
+</rdf:RDF>

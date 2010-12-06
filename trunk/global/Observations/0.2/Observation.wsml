@@ -1,10 +1,20 @@
 wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
-namespace { _"http://ifgipedia.uni-muenster.de/envision-simple-use-case#",
+namespace { _"http://purl.org/ifgi/observation#",
 	dc _"http://purl.org/dc/elements/1.1/",
-	dolce _"http://www.load-cnr.it/ontologies/DOLCE-Lite.owl#"
+	dolce _"http://purl.org/ifgi/dolce#"
  }
 
 ontology Observation
+
+	 annotations
+        dc#publisher hasValue "IfGI, University of Muenster"
+		dc#type hasValue "Foundational Ontology"
+		dc#title hasValue "Observation Foundational Ontology"	
+		dc#description hasValue "Formalization of Kuhn's Observation and Measurement, with respect to annotate SOSs by Henry Michels"
+		dc#source hasValue ""
+		dc#subject hasValue "observation, measurement, foundational"	
+		dc#date hasValue "06-12-2010"
+     endAnnotations
 
 	concept ObservationProcess subConceptOf dolce#Process
 		isPerformedBy ofType (1 *) Observer
