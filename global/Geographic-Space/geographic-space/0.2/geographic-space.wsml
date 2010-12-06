@@ -27,7 +27,7 @@ concept geographical_unit subConceptOf dolce#physical_object
 		rdfs#label hasValue "Geographische Einheit@de"
 		dc#description hasValue "Something which is identified as entity on geographic scale" 
 	endAnnotations 
-	dolceSpatial#spatial_location impliesType geographical_space
+	dolceSpatial#spatial_location impliesType geographical_space_region
 	dolce#has_quality impliesType geographical_quality
 	confinedBy impliesType geographical_unit
 			annotations
