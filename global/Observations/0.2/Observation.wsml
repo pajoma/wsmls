@@ -13,7 +13,7 @@ ontology Observation
 		dc#description hasValue "Formalization of Kuhn's Observation and Measurement, with respect to annotate SOSs by Henry Michels"
 		dc#source hasValue ""
 		dc#subject hasValue "observation, measurement, foundational"	
-		dc#date hasValue "06-12-2010"
+		dc#date hasValue "13-12-2010"
      endAnnotations
 
 	concept ObservationProcess subConceptOf dolce#Process
@@ -21,7 +21,7 @@ ontology Observation
 		
 	concept Observer subConceptOf dolce#PhysicalObject
 		performs ofType (1 1) ObservationProcess
-		observes ofType (1 *) ObservedEntity
+		observes ofType (1 *) Observable
 	
 	concept Observable subConceptOf dolce#Quality
 		isObservedBy ofType (1 *) Observer
@@ -33,7 +33,7 @@ ontology Observation
 	concept Stimulus subConceptOf dolce#Perdurant
 		hasParticipant ofType (1 *) ObservedEntity
 		isDetectedBy ofType (1 *) Observer
-		isSometimesProducedBy ofType (1 *) Observer
+		isSometimesProducedBy ofType (0 *) Observer
 		
 	concept ObservationValue subConceptOf dolce#AbstractQuality
 		value ofType {_integer, _float, _boolean, _string}

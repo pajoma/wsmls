@@ -11,7 +11,7 @@
 # http://purl.org/dc/elements/1.1/description: "Formalization of Kuhn's Observation and Measurement, with respect to annotate SOSs by Henry Michels"^^<http://www.w3.org/2001/XMLSchema#string>
 # http://purl.org/dc/elements/1.1/source: ""^^<http://www.w3.org/2001/XMLSchema#string>
 # http://purl.org/dc/elements/1.1/subject: "observation, measurement, foundational"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/date: "06-12-2010"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/date: "13-12-2010"^^<http://www.w3.org/2001/XMLSchema#string>
 
 :ObservationProcess a rdfs:Class ;
 	rdfs:subClassOf dolce:Process .
