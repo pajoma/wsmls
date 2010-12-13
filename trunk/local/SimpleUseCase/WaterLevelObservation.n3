@@ -12,7 +12,7 @@
 # http://purl.org/dc/elements/1.1/description: "Domain ontology describing the observation of water level extending the foundational observation ontology by Henry Michels"^^<http://www.w3.org/2001/XMLSchema#string>
 # http://purl.org/dc/elements/1.1/source: ""^^<http://www.w3.org/2001/XMLSchema#string>
 # http://purl.org/dc/elements/1.1/subject: "observation, measurement, domain"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/date: "06-12-2010"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/date: "13-12-2010"^^<http://www.w3.org/2001/XMLSchema#string>
 
 :WaterlevelObservation a rdfs:Class ;
 	rdfs:subClassOf obs:ObservationProcess .
@@ -29,10 +29,12 @@
 	rdfs:subClassOf obs:Observer .
 
 :performs a rdf:Property ;
-	rdfs:domain :WaterlevelSensor .
+	rdfs:domain :WaterlevelSensor ;
+	rdfs:range :WaterlevelObservation .
 
 :observes a rdf:Property ;
-	rdfs:domain :WaterlevelSensor .
+	rdfs:domain :WaterlevelSensor ;
+	rdfs:range :Waterlevel .
 
 :WaterlevelValue a rdfs:Class ;
 	rdfs:subClassOf obs:ObservationValue .

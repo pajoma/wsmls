@@ -13,7 +13,7 @@
 <!-- http://purl.org/dc/elements/1.1/description: "Domain ontology describing the observation of water level extending the foundational observation ontology by Henry Michels"^^<http://www.w3.org/2001/XMLSchema#string> -->
 <!-- http://purl.org/dc/elements/1.1/source: ""^^<http://www.w3.org/2001/XMLSchema#string> -->
 <!-- http://purl.org/dc/elements/1.1/subject: "observation, measurement, domain"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/date: "06-12-2010"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/date: "13-12-2010"^^<http://www.w3.org/2001/XMLSchema#string> -->
 
 <rdf:Description rdf:about="http://ifgipedia.uni-muenster.de/envision-simple-use-case#WaterlevelObservation">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
@@ -40,11 +40,13 @@
 <rdf:Description rdf:about="http://ifgipedia.uni-muenster.de/envision-simple-use-case#performs">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:domain rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#WaterlevelSensor"/>
+	<rdfs:range rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#WaterlevelObservation"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://ifgipedia.uni-muenster.de/envision-simple-use-case#observes">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:domain rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#WaterlevelSensor"/>
+	<rdfs:range rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#Waterlevel"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://ifgipedia.uni-muenster.de/envision-simple-use-case#WaterlevelValue">

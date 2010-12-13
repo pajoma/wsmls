@@ -14,7 +14,7 @@ ontology WaterlevelObservation
 		dc#description hasValue "Domain ontology describing the observation of water level extending the foundational observation ontology by Henry Michels"
 		dc#source hasValue ""
 		dc#subject hasValue "observation, measurement, domain"	
-		dc#date hasValue "06-12-2010"
+		dc#date hasValue "13-12-2010"
      endAnnotations
 	
 	concept WaterlevelObservation subConceptOf obs#ObservationProcess
@@ -22,8 +22,8 @@ ontology WaterlevelObservation
 		isPerformedBy impliesType WaterlevelSensor
 		
 	concept WaterlevelSensor subConceptOf obs#Observer
-		performs ofType (1 1) WaterlevelObservation
-		observes ofType (1 *) Water
+		performs impliesType WaterlevelObservation
+		observes impliesType Waterlevel
 	
 	concept WaterlevelValue subConceptOf obs#ObservationValue
 		value impliesType _float
