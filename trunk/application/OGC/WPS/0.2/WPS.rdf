@@ -19,17 +19,17 @@
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/ows/0.2#OGCWebService"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/wps#DecribeProcess">
+<rdf:Description rdf:about="http://purl.org/ifgi/wps#DescribeProcess">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#Operation"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/wps#DecribeProcessInput">
+<rdf:Description rdf:about="http://purl.org/ifgi/wps#DescribeProcessInput">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/wps#DecribeProcessOutput">
+<rdf:Description rdf:about="http://purl.org/ifgi/wps#DescribeProcessOutput">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
 	<rdfs:seeAlso rdf:resource="http://schemas.opengis.net/wps/1.0.0/wpsDescribeProcess_response.xsd#ProcessDescriptions"/>
@@ -52,18 +52,18 @@
 	<rdfs:seeAlso rdf:resource="http://schemas.opengis.net/wps/1.0.0/wpsExecute_response.xsd#ExecuteResponse"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/wps#DefaultDecribeProcess">
-	<rdf:type rdf:resource="http://purl.org/ifgi/wps#DecribeProcess"/>
-	<posm:hasOutput rdf:resource="http://purl.org/ifgi/wps#DefaultDecribeProcessOutput"/>
-	<posm:hasInput rdf:resource="http://purl.org/ifgi/wps#DefaultDecribeProcessInput"/>
+<rdf:Description rdf:about="http://purl.org/ifgi/wps#DefaultDescribeProcess">
+	<rdf:type rdf:resource="http://purl.org/ifgi/wps#DescribeProcess"/>
+	<posm:hasOutput rdf:resource="http://purl.org/ifgi/wps#DefaultDescribeProcessOutput"/>
+	<posm:hasInput rdf:resource="http://purl.org/ifgi/wps#DefaultDescribeProcessInput"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/wps#DefaultDecribeProcessOutput">
+<rdf:Description rdf:about="http://purl.org/ifgi/wps#DefaultDescribeProcessOutput">
 	<rdf:type rdf:resource="http://purl.org/ifgi/wps#DescribeProcessOutput"/>
 	<sawsdl:modelReference rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/wps#DefaultDecribeProcessInput">
+<rdf:Description rdf:about="http://purl.org/ifgi/wps#DefaultDescribeProcessInput">
 	<rdf:type rdf:resource="http://purl.org/ifgi/wps#DescribeProcessInput"/>
 	<sawsdl:modelReference rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 </rdf:Description>
