@@ -16,13 +16,13 @@
 :WebProcessingService a rdfs:Class ;
 	rdfs:subClassOf ows:OGCWebService .
 
-:DecribeProcess a rdfs:Class ;
+:DescribeProcess a rdfs:Class ;
 	rdfs:subClassOf posm:Operation .
 
-:DecribeProcessInput a rdfs:Class ;
+:DescribeProcessInput a rdfs:Class ;
 	rdfs:subClassOf posm:MessagePart .
 
-:DecribeProcessOutput a rdfs:Class ;
+:DescribeProcessOutput a rdfs:Class ;
 	rdfs:subClassOf posm:MessagePart ;
 	rdfs:seeAlso <http://schemas.opengis.net/wps/1.0.0/wpsDescribeProcess_response.xsd#ProcessDescriptions> .
 
@@ -37,12 +37,12 @@
 	rdfs:subClassOf posm:MessagePart ;
 	rdfs:seeAlso <http://schemas.opengis.net/wps/1.0.0/wpsExecute_response.xsd#ExecuteResponse> .
 
-:DefaultDecribeProcess a :DecribeProcess ;
+:DefaultDescribeProcess a :DescribeProcess ;
 	posm:hasOutput :DefaultDecribeProcessOutput ;
 	posm:hasInput :DefaultDecribeProcessInput .
 
-:DefaultDecribeProcessOutput a :DescribeProcessOutput ;
+:DefaultDescribeProcessOutput a :DescribeProcessOutput ;
 	sawsdl:modelReference xsd:string .
 
-:DefaultDecribeProcessInput a :DescribeProcessInput ;
+:DefaultDescribeProcessInput a :DescribeProcessInput ;
 	sawsdl:modelReference xsd:string .
