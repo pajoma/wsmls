@@ -1,6 +1,6 @@
 wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
-namespace { _"http://purl.org/ifgi/gml#",
-	gml _"http://purl.org/ifgi/gml#",
+namespace { _"http://purl.org/ifgi/gml/0.2#",
+	gml _"http://purl.org/ifgi/gml/0.2#",
 	xsd _"http://www.w3.org/2001/XMLSchema#",  
 	dc _"http://purl.org/dc/elements/1.1/", 
 	rdfs _"http://www.w3.org/2000/01/rdf-schema#"
@@ -9,6 +9,7 @@ namespace { _"http://purl.org/ifgi/gml#",
 ontology GML
 
 	annotations
+		dc#creator hasValue "Marcell Roth"
 		dc#publisher hasValue "(a)IfGI, University of Muenster"
 		dc#date hasValue "24-11-2010"
 		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
