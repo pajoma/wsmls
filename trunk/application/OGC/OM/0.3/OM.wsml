@@ -1,0 +1,57 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://purl.org/ifgi/om#",
+dc _"http://purl.org/dc/elements/1.1/", 
+gml _"http://purl.org/ifgi/gml#",
+swe _"http://purl.org/ifgi/swe#",
+sml _"http://purl.org/ifgi/sml#"
+ }
+
+/* check for documentation: 
+ * http://www.liquid-technologies.com/LibraryDocs/OpenGis/om/1.0.0/default.html
+ */
+
+ontology ObservationsAndMeasurements
+	importsOntology {Feature}
+
+	annotation
+		dc#publisher hasValue "(a)IfGI, University of Muenster"
+		dc#date hasValue "2010-11-10"
+		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+		dc#type hasValue "Ontology"
+		dc#title hasValue "OGC Observation & Measurements"
+		dc#description hasValue "Taken from the XML schema"
+		dc#source hasValue "http://schemas.opengis.net/om/1.0.0/observation.xsd"
+	endAnnotation
+	
+	/*elements*/
+
+	concept ObservationCollection subConceptOf gml#AbstractFeature
+		member ofType Observation
+		
+	concept Observation subConceptOf gml#AbstractFeature
+		metadata ofType ObservationCollection
+		samplingTime ofType swe#TimeObjectProperty
+		resultTime ofType swe#TimeObjectProperty
+		procedure ofType ProcssProperty
+		resultQuality ofType gml#AbstractReference
+		observedProperty ofType swe#Phenomenon
+		featureOfInterest ofType gml#AbstractFeature
+		parameter ofType swe#AnyData
+		result ofType swe#AnyData
+		
+	concept ProcessProperty
+		annotation
+			dc#description hasValue "The procedure is the description of a process used to generate the result.  At this level we do not distinguish between sensor-observations, estimations made by an observer, or algorithms, simulations, computations and complex processing chains."
+		endAnnotation
+		process ofType sml#AbstractProcess
+	
+	concept AnyOrReference
+		annotation
+			dc#description hasValue "Placeholder type Used in a few places where ISO 19139 metadata classes are used, which will become available with GML 3.2"
+		endAnnotation
+		any ofType swe#AnyData
+		gml#associationAttributeGroup ofType gml#AssociationAttributeGroup
+		
+
+	
+		

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns="http://purl.org/ifgi/om#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:gml="http://purl.org/ifgi/gml#"
+	xmlns:swe="http://purl.org/ifgi/swe#"
+	xmlns:sml="http://purl.org/ifgi/sml#">
+<!-- http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/date: "2010-11-10"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/type: "Ontology"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/title: "OGC Observation & Measurements"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/description: "Taken from the XML schema"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/source: "http://schemas.opengis.net/om/1.0.0/observation.xsd"^^<http://www.w3.org/2001/XMLSchema#string> -->
+
+<rdf:Description rdf:about="http://purl.org/ifgi/om#ObservationCollection">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml#AbstractFeature"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/om#member">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/om#ObservationCollection"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/om#Observation">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml#AbstractFeature"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/om#metadata">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/om#Observation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/om#samplingTime">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/om#Observation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/om#resultTime">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/om#Observation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/om#procedure">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/om#Observation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/om#resultQuality">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/om#Observation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/om#observedProperty">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/om#Observation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/om#featureOfInterest">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/om#Observation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/om#parameter">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/om#Observation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/om#result">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/om#Observation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/om#ProcessProperty">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The procedure is the description of a process used to generate the result.  At this level we do not distinguish between sensor-observations, estimations made by an observer, or algorithms, simulations, computations and complex processing chains.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/om#process">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/om#ProcessProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/om#AnyOrReference">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Placeholder type Used in a few places where ISO 19139 metadata classes are used, which will become available with GML 3.2</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/om#any">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/om#AnyOrReference"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/gml#associationAttributeGroup">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/om#AnyOrReference"/>
+</rdf:Description>
+
+</rdf:RDF>
