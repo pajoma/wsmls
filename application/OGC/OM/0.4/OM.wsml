@@ -1,0 +1,52 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://purl.org/ifgi/om#",
+dc _"http://purl.org/dc/elements/1.1/", 
+gml _"http://purl.org/ifgi/gml#",
+ssn _"http://purl.oclc.org/NET/ssnx/ssn#",
+xsd _"http://www.w3.org/2001/XMLSchema#"
+ }
+
+/* check for documentation: 
+ * http://www.w3.org/2005/Incubator/ssn/wiki/SSN
+ */
+
+ontology ObservationsAndMeasurements
+	importsOntology {Feature}
+
+	annotations
+		dc#publisher hasValue "(a)IfGI, University of Muenster"
+		dc#date hasValue "2011-02-03"
+		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+		dc#type hasValue "Ontology"
+		dc#title hasValue "OGC Observation & Measurements ontology"
+		dc#description hasValue "Taken from the XML schema and the SSN ontology"
+		dc#source hasValue "http://schemas.opengis.net/om/1.0.0/observation.xsd"
+		dc#source hasValue "http://purl.oclc.org/NET/ssnx/ssn#"
+	endAnnotations
+	
+	/*elements*/
+
+	concept ObservationCollection subConceptOf gml#AbstractFeature
+		
+	concept Observation subConceptOf {gml#AbstractFeature, ssn#Observation}
+
+	concept Sensor subConceptOf ssn#Sensor
+	
+	concept Property subConceptOf ssn#Property
+	
+	concept FeatureOfInterest subConceptOf ssn#FeatureOfInterest
+	
+	concept SensorOutput subConceptOf ssn#SensorOutput
+	
+	concept ObservationValue subConceptOf ssn#ObservationValue
+
+	// Properties
+	
+	relation member (ofType ObservationCollection, ofType Observation)
+	
+	relation hasQuantityUnitOfMeasurement (ofType ObservationValue, ofType xsd#string)
+	
+	relation hasQuantityValue (ofType ObservationValue, ofType xsd#string)
+	
+	
+		

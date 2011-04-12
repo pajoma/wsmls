@@ -1,0 +1,61 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://purl.org/ifgi/gml/0.2#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix DUL: <http://www.loa-cnr.it/ontologies/DUL.owl#> .
+
+# http://purl.org/dc/elements/1.1/creator: "Marcell Roth"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/date: "03-02-2011"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/type: "Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/title: "OGC Feature Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
+
+:AbstractGML a rdfs:Class ;
+	rdfs:subClassOf DUL:InformationObject .
+
+:AbstractFeature a rdfs:Class ;
+	rdfs:subClassOf :AbstractGML .
+
+:AbstractGeometry a rdfs:Class ;
+	rdfs:subClassOf :FeatureProperty .
+
+:FeatureProperty a rdfs:Class ;
+	rdfs:subClassOf :AbstractGML .
+
+:FeatureCollection a rdfs:Class ;
+	rdfs:subClassOf :AbstractGML .
+
+:Envelope a rdfs:Class ;
+	rdfs:subClassOf DUL:InformationObject .
+
+:id a rdf:Property ;
+	rdfs:domain :AbstractGML ;
+	rdfs:range xsd:ID .
+
+:hasProperty a rdf:Property ;
+	rdfs:domain :AbstractFeature ;
+	rdfs:range :FeatureProperty .
+
+:hasValue a rdf:Property ;
+	rdfs:domain :FeatureProperty ;
+	rdfs:range xsd:anyType .
+
+:upperCorner a rdf:Property ;
+	rdfs:domain :Envelope ;
+	rdfs:range rdfs:Literal .
+
+:lowerCorner a rdf:Property ;
+	rdfs:domain :Envelope ;
+	rdfs:range rdfs:Literal .
+
+:hasGeometry a rdf:Property ;
+	rdfs:domain :AbstractFeature ;
+	rdfs:range :AbstractGeometry ;
+	rdfs:subPropertyOf :hasProperty .
+
+:featureMember a rdf:Property ;
+	rdfs:domain :FeatureCollection ;
+	rdfs:range :AbstractFeature ;
+	rdfs:subPropertyOf rdfs:member .

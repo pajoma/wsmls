@@ -1,0 +1,49 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://purl.org/ifgi/om#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix gml: <http://purl.org/ifgi/gml#> .
+@prefix ssn: <http://purl.oclc.org/NET/ssnx/ssn#> .
+
+# http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/date: "2011-02-03"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/type: "Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/title: "OGC Observation & Measurements ontology"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/description: "Taken from the XML schema and the SSN ontology"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/source: "http://schemas.opengis.net/om/1.0.0/observation.xsd"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/source: "http://purl.oclc.org/NET/ssnx/ssn#"^^<http://www.w3.org/2001/XMLSchema#string>
+
+:ObservationCollection a rdfs:Class ;
+	rdfs:subClassOf gml:AbstractFeature .
+
+:Observation a rdfs:Class ;
+	rdfs:subClassOf gml:AbstractFeature , ssn:Observation .
+
+:Sensor a rdfs:Class ;
+	rdfs:subClassOf ssn:Sensor .
+
+:Property a rdfs:Class ;
+	rdfs:subClassOf ssn:Property .
+
+:FeatureOfInterest a rdfs:Class ;
+	rdfs:subClassOf ssn:FeatureOfInterest .
+
+:SensorOutput a rdfs:Class ;
+	rdfs:subClassOf ssn:SensorOutput .
+
+:ObservationValue a rdfs:Class ;
+	rdfs:subClassOf ssn:ObservationValue .
+
+:member a rdf:Property ;
+	rdfs:domain :ObservationCollection ;
+	rdfs:range :Observation .
+
+:hasQuantityUnitOfMeasurement a rdf:Property ;
+	rdfs:domain :ObservationValue ;
+	rdfs:range xsd:string .
+
+:hasQuantityValue a rdf:Property ;
+	rdfs:domain :ObservationValue ;
+	rdfs:range xsd:string .
