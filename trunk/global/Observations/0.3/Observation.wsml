@@ -1,0 +1,59 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://purl.org/ifgi/observation#",
+	dc _"http://purl.org/dc/elements/1.1/",
+	dolce _"http://purl.org/ifgi/dolce#",
+	dns _"http://purl.org/net/wsml/dolceDnS#"
+ }
+
+ontology Observation
+
+	 annotations
+        dc#publisher hasValue "IfGI, University of Muenster"
+		dc#type hasValue "Foundational Ontology"
+		dc#title hasValue "Observation Foundational Ontology"	
+		dc#description hasValue "Formalization of Kuhn's Observation and Measurement, with respect to annotate SOSs by Henry Michels"
+		dc#source hasValue ""
+		dc#subject hasValue "observation, measurement, foundational"	
+		dc#date hasValue "10-05-2011"
+     endAnnotations
+
+	concept ObservationProcess subConceptOf dolce#process
+		isPerformedBy ofType (1 1) Sensor
+		dns#realizes ofType (1 1) Observation
+		
+	concept Sensor subConceptOf dolce#non_agentive_physical_object
+		performs ofType (1 *) ObservationProcess
+		observes ofType (1 *) Observable
+	
+	concept Observable subConceptOf dolce#physical_quality
+		isObservedBy ofType (1 *) Sensor
+		
+	concept ObservedEntity subConceptOf dolce#physical_endurant
+		dolce#has_quality ofType (1 *) Observable
+		dolce#participant_in ofType (1 *) Stimulus
+		
+	concept Stimulus subConceptOf dolce#process
+		dolce#has_participant ofType (1 *) ObservedEntity
+		isDetectedBy ofType (1 *) Sensor
+		
+	concept Observation subConceptOf dns#information_object
+		dns#is_realized_by ofType (1 1) ObservationProcess
+		holds ofType (1 1) {ObservationValue, dolce#space_region, dolce#temporal_region}
+		
+	concept ObservationValue subConceptOf dolce#abstract_quality
+		value ofType {_integer, _float, _boolean, _string}
+		dolce#q_location ofType (1 1) dolce#measurement_unit
+	
+	relation performs (ofType Sensor, ofType ObservationProcess)  subRelationOf dolce#participant_in
+	relation isPerformedBy (ofType ObservationProcess, ofType Sensor)  subRelationOf dolce#participant
+	
+	axiom performs_inverse_isPerformedBy
+    	definedBy
+        	?x memberOf Sensor and
+          	?y memberOf ObservationProcess and
+          	performs(?x,?y) implies isPerformedBy(?y,?x).
+         	?x memberOf ObservationProcess and
+          	?y memberOf Sensor and
+          	isPerformedBy(?x,?y) implies performs(?y,?x).
+		
+
