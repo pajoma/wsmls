@@ -20,21 +20,21 @@
 :GetCapabilities a rdfs:Class ;
 	rdfs:subClassOf posm:Operation .
 
-:GetCapabilitiesOutput a rdfs:Class ;
+:GetCapabilitiesResponse a rdfs:Class ;
 	rdfs:subClassOf posm:MessagePart .
 
-:GetCapabilitiesInput a rdfs:Class ;
+:GetCapabilitiesRequest a rdfs:Class ;
 	rdfs:subClassOf posm:MessagePart .
 
 :ServiceDescription a rdfs:Class ;
 	rdfs:subClassOf dolce:information_object .
 
 :DefaultGetCapabilities a :GetCapabilities ;
-	posm:hasOutput :DefaultGetCapabilitiesOutput ;
-	posm:hasInput :DefaultGetCapabilitiesInput .
+	posm:hasOutput :DefaultGetCapabilitiesResponse ;
+	posm:hasInput :DefaultGetCapabilitiesRequest .
 
-:DefaultGetCapabilitiesOutput a :GetCapabilitiesOutput ;
+:DefaultGetCapabilitiesResponse a :GetCapabilitiesResponse ;
 	sawsdl:modelReference :ServiceDescription .
 
-:DefaultGetCapabilitiesInput a :GetCapabilitiesInput ;
+:DefaultGetCapabilitiesRequest a :GetCapabilitiesRequest ;
 	sawsdl:modelReference xsd:string .

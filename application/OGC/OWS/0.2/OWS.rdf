@@ -25,12 +25,12 @@
 	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#Operation"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/ows/0.2#GetCapabilitiesOutput">
+<rdf:Description rdf:about="http://purl.org/ifgi/ows/0.2#GetCapabilitiesResponse">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/ows/0.2#GetCapabilitiesInput">
+<rdf:Description rdf:about="http://purl.org/ifgi/ows/0.2#GetCapabilitiesRequest">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
 </rdf:Description>
@@ -42,17 +42,17 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ows/0.2#DefaultGetCapabilities">
 	<rdf:type rdf:resource="http://purl.org/ifgi/ows/0.2#GetCapabilities"/>
-	<posm:hasOutput rdf:resource="http://purl.org/ifgi/ows/0.2#DefaultGetCapabilitiesOutput"/>
-	<posm:hasInput rdf:resource="http://purl.org/ifgi/ows/0.2#DefaultGetCapabilitiesInput"/>
+	<posm:hasOutput rdf:resource="http://purl.org/ifgi/ows/0.2#DefaultGetCapabilitiesResponse"/>
+	<posm:hasInput rdf:resource="http://purl.org/ifgi/ows/0.2#DefaultGetCapabilitiesRequest"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/ows/0.2#DefaultGetCapabilitiesOutput">
-	<rdf:type rdf:resource="http://purl.org/ifgi/ows/0.2#GetCapabilitiesOutput"/>
+<rdf:Description rdf:about="http://purl.org/ifgi/ows/0.2#DefaultGetCapabilitiesResponse">
+	<rdf:type rdf:resource="http://purl.org/ifgi/ows/0.2#GetCapabilitiesResponse"/>
 	<sawsdl:modelReference rdf:resource="http://purl.org/ifgi/ows/0.2#ServiceDescription"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/ows/0.2#DefaultGetCapabilitiesInput">
-	<rdf:type rdf:resource="http://purl.org/ifgi/ows/0.2#GetCapabilitiesInput"/>
+<rdf:Description rdf:about="http://purl.org/ifgi/ows/0.2#DefaultGetCapabilitiesRequest">
+	<rdf:type rdf:resource="http://purl.org/ifgi/ows/0.2#GetCapabilitiesRequest"/>
 	<sawsdl:modelReference rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 </rdf:Description>
 

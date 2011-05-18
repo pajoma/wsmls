@@ -25,12 +25,12 @@
 	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#Operation"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/wfs#DescribeFeatureTypeInput">
+<rdf:Description rdf:about="http://purl.org/ifgi/wfs#DescribeFeatureTypeRequest">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/wfs#DescribeFeatureTypeOutput">
+<rdf:Description rdf:about="http://purl.org/ifgi/wfs#DescribeFeatureTypeResponse">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
 	<rdfs:seeAlso rdf:resource="http://schemas.opengis.net/wfs/1.1.0/wsdl/wfs-util.xsd#DescribeFeatureTypeResponse"/>
@@ -41,12 +41,12 @@
 	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#Operation"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/wfs#GetFeatureInput">
+<rdf:Description rdf:about="http://purl.org/ifgi/wfs#GetFeatureRequest">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/wfs#GetFeatureOutput">
+<rdf:Description rdf:about="http://purl.org/ifgi/wfs#GetFeatureResponse">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
 	<rdfs:seeAlso rdf:resource="http://schemas.opengis.net/wfs/1.1.0/wfs.xsd#FeatureCollection"/>
@@ -59,17 +59,17 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/wfs#DefaultDescribeFeatureType">
 	<rdf:type rdf:resource="http://purl.org/ifgi/wfs#DescribeFeatureType"/>
-	<posm:hasOutput rdf:resource="http://purl.org/ifgi/wfs#DefaultDescribeFeatureTypeOutput"/>
-	<posm:hasInput rdf:resource="http://purl.org/ifgi/wfs#DefaultDescribeFeatureTypeInput"/>
+	<posm:hasOutput rdf:resource="http://purl.org/ifgi/wfs#DefaultDescribeFeatureTypeResponse"/>
+	<posm:hasInput rdf:resource="http://purl.org/ifgi/wfs#DefaultDescribeFeatureTypeRequest"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/wfs#DefaultDescribeFeatureTypeOutput">
-	<rdf:type rdf:resource="http://purl.org/ifgi/wfs#DescribeFeatureTypeOutput"/>
+<rdf:Description rdf:about="http://purl.org/ifgi/wfs#DefaultDescribeFeatureTypeResponse">
+	<rdf:type rdf:resource="http://purl.org/ifgi/wfs#DescribeFeatureTypeResponse"/>
 	<sawsdl:modelReference rdf:resource="http://purl.org/ifgi/wfs#FeatureTypeDescription"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/wfs#DefaultDescribeFeatureTypeInput">
-	<rdf:type rdf:resource="http://purl.org/ifgi/wfs#DescribeFeatureTypeInput"/>
+<rdf:Description rdf:about="http://purl.org/ifgi/wfs#DefaultDescribeFeatureTypeRequest">
+	<rdf:type rdf:resource="http://purl.org/ifgi/wfs#DescribeFeatureTypeRequest"/>
 	<sawsdl:modelReference rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 </rdf:Description>
 

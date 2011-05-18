@@ -20,20 +20,20 @@
 :DescribeFeatureType a rdfs:Class ;
 	rdfs:subClassOf posm:Operation .
 
-:DescribeFeatureTypeInput a rdfs:Class ;
+:DescribeFeatureTypeRequest a rdfs:Class ;
 	rdfs:subClassOf posm:MessagePart .
 
-:DescribeFeatureTypeOutput a rdfs:Class ;
+:DescribeFeatureTypeResponse a rdfs:Class ;
 	rdfs:subClassOf posm:MessagePart ;
 	rdfs:seeAlso <http://schemas.opengis.net/wfs/1.1.0/wsdl/wfs-util.xsd#DescribeFeatureTypeResponse> .
 
 :GetFeature a rdfs:Class ;
 	rdfs:subClassOf posm:Operation .
 
-:GetFeatureInput a rdfs:Class ;
+:GetFeatureRequest a rdfs:Class ;
 	rdfs:subClassOf posm:MessagePart .
 
-:GetFeatureOutput a rdfs:Class ;
+:GetFeatureResponse a rdfs:Class ;
 	rdfs:subClassOf posm:MessagePart ;
 	rdfs:seeAlso <http://schemas.opengis.net/wfs/1.1.0/wfs.xsd#FeatureCollection> .
 
@@ -41,11 +41,11 @@
 	rdfs:subClassOf dolce:information_object .
 
 :DefaultDescribeFeatureType a :DescribeFeatureType ;
-	posm:hasOutput :DefaultDescribeFeatureTypeOutput ;
-	posm:hasInput :DefaultDescribeFeatureTypeInput .
+	posm:hasOutput :DefaultDescribeFeatureTypeResponse ;
+	posm:hasInput :DefaultDescribeFeatureTypeRequest .
 
-:DefaultDescribeFeatureTypeOutput a :DescribeFeatureTypeOutput ;
+:DefaultDescribeFeatureTypeResponse a :DescribeFeatureTypeResponse ;
 	sawsdl:modelReference :FeatureTypeDescription .
 
-:DefaultDescribeFeatureTypeInput a :DescribeFeatureTypeInput ;
+:DefaultDescribeFeatureTypeRequest a :DescribeFeatureTypeRequest ;
 	sawsdl:modelReference xsd:string .

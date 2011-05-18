@@ -23,18 +23,18 @@ ontology ows#OWSOntology
 	concept ows#OGCWebService subConceptOf wsl#FunctionalClassificationRoot
 	
 	concept ows#GetCapabilities subConceptOf posm#Operation
-	concept ows#GetCapabilitiesOutput subConceptOf posm#MessagePart
-	concept ows#GetCapabilitiesInput subConceptOf posm#MessagePart
+	concept ows#GetCapabilitiesResponse subConceptOf posm#MessagePart
+	concept ows#GetCapabilitiesRequest subConceptOf posm#MessagePart
 	
 	concept ServiceDescription subConceptOf dolce#information_object
 	
 	// Defaults
 	instance ows#DefaultGetCapabilities  memberOf ows#GetCapabilities
-		posm#hasOutput hasValue ows#DefaultGetCapabilitiesOutput
-		posm#hasInput hasValue ows#DefaultGetCapabilitiesInput
+		posm#hasOutput hasValue ows#DefaultGetCapabilitiesResponse
+		posm#hasInput hasValue ows#DefaultGetCapabilitiesRequest
 	
-	instance ows#DefaultGetCapabilitiesOutput memberOf ows#GetCapabilitiesOutput
+	instance ows#DefaultGetCapabilitiesResponse memberOf ows#GetCapabilitiesResponse
 		sawsdl#modelReference hasValue ServiceDescription
 		
-	instance ows#DefaultGetCapabilitiesInput memberOf ows#GetCapabilitiesInput
+	instance ows#DefaultGetCapabilitiesRequest memberOf ows#GetCapabilitiesRequest
 		sawsdl#modelReference hasValue xsd#string

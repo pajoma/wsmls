@@ -25,8 +25,8 @@ ontology WFS
 	concept WebFeatureService subConceptOf ows#OGCWebService
 	
 	concept DescribeFeatureType subConceptOf posm#Operation
-	concept DescribeFeatureTypeInput subConceptOf posm#MessagePart
-	concept DescribeFeatureTypeOutput subConceptOf posm#MessagePart
+	concept DescribeFeatureTypeRequest subConceptOf posm#MessagePart
+	concept DescribeFeatureTypeResponse subConceptOf posm#MessagePart
 		annotations
 			rdfs#seeAlso hasValue _"http://schemas.opengis.net/wfs/1.1.0/wsdl/wfs-util.xsd#DescribeFeatureTypeResponse"
 		endAnnotations
@@ -34,8 +34,8 @@ ontology WFS
 	
 	
 	concept GetFeature subConceptOf posm#Operation
-	concept GetFeatureInput subConceptOf posm#MessagePart
-	concept GetFeatureOutput subConceptOf posm#MessagePart
+	concept GetFeatureRequest subConceptOf posm#MessagePart
+	concept GetFeatureResponse subConceptOf posm#MessagePart
 		annotations
 			rdfs#seeAlso hasValue _"http://schemas.opengis.net/wfs/1.1.0/wfs.xsd#FeatureCollection"
 		endAnnotations
@@ -44,11 +44,11 @@ ontology WFS
 	
 	/* default instances */
 	instance DefaultDescribeFeatureType memberOf DescribeFeatureType
-		posm#hasOutput hasValue DefaultDescribeFeatureTypeOutput
-		posm#hasInput hasValue DefaultDescribeFeatureTypeInput
+		posm#hasOutput hasValue DefaultDescribeFeatureTypeResponse
+		posm#hasInput hasValue DefaultDescribeFeatureTypeRequest
 	
-	instance DefaultDescribeFeatureTypeOutput memberOf DescribeFeatureTypeOutput
+	instance DefaultDescribeFeatureTypeResponse memberOf DescribeFeatureTypeResponse
 		sawsdl#modelReference hasValue FeatureTypeDescription
 		
-	instance DefaultDescribeFeatureTypeInput memberOf DescribeFeatureTypeInput
+	instance DefaultDescribeFeatureTypeRequest memberOf DescribeFeatureTypeRequest
 		sawsdl#modelReference hasValue xsd#string
