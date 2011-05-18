@@ -24,8 +24,8 @@ ontology WPS
 	concept WebProcessingService subConceptOf ows#OGCWebService
 	
 	concept DescribeProcess subConceptOf posm#Operation
-	concept DescribeProcessInput subConceptOf posm#MessagePart
-	concept DescribeProcessOutput subConceptOf posm#MessagePart
+	concept DescribeProcessRequest subConceptOf posm#MessagePart
+	concept DescribeProcessResponse subConceptOf posm#MessagePart
 		annotations
 			rdfs#seeAlso hasValue _"http://schemas.opengis.net/wps/1.0.0/wpsDescribeProcess_response.xsd#ProcessDescriptions"
 		endAnnotations
@@ -33,11 +33,11 @@ ontology WPS
 	
 	
 	concept Execute subConceptOf posm#Operation
-	concept ExecuteInput subConceptOf posm#MessagePart
+	concept ExecuteRequest subConceptOf posm#MessagePart
 		annotations
 			rdfs#seeAlso hasValue _"http://schemas.opengis.net/wps/1.0.0/wpsExecute_request.xsd#Execute"
 		endAnnotations
-	concept ExecuteOutput subConceptOf posm#MessagePart
+	concept ExecuteResponse subConceptOf posm#MessagePart
 		annotations
 			rdfs#seeAlso hasValue _"http://schemas.opengis.net/wps/1.0.0/wpsExecute_response.xsd#ExecuteResponse"
 		endAnnotations
@@ -45,11 +45,11 @@ ontology WPS
 	
 	/* default instances */
 	instance DefaultDescribeProcess memberOf DescribeProcess
-		posm#hasOutput hasValue DefaultDecribeProcessOutput
-		posm#hasInput hasValue DefaultDecribeProcessInput
+		posm#hasOutput hasValue DefaultDescribeProcessResponse
+		posm#hasInput hasValue DefaultDescribeProcessRequest
 	
-	instance DefaultDescribeProcessOutput memberOf DescribeProcessOutput
+	instance DefaultDescribeProcessResponse memberOf DescribeProcessResponse
 		sawsdl#modelReference hasValue xsd#string
 		
-	instance DefaultDescribeProcessInput memberOf DescribeProcessInput
+	instance DefaultDescribeProcessRequest memberOf DescribeProcessRequest
 		sawsdl#modelReference hasValue xsd#string

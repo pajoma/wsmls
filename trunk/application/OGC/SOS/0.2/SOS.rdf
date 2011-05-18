@@ -25,12 +25,12 @@
 	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#Operation"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/sos#DescribeSensorInput">
+<rdf:Description rdf:about="http://purl.org/ifgi/sos#DescribeSensorRequest">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/sos#DescribeSensorOutput">
+<rdf:Description rdf:about="http://purl.org/ifgi/sos#DescribeSensorResponse">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
 	<rdfs:seeAlso rdf:resource="http://schemas.opengis.net/sensorML/1.0.1/sensorML.xsd#SensorML"/>
@@ -41,12 +41,12 @@
 	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#Operation"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/sos#GetObservationInput">
+<rdf:Description rdf:about="http://purl.org/ifgi/sos#GetObservationRequest">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/sos#GetObservationOutput">
+<rdf:Description rdf:about="http://purl.org/ifgi/sos#GetObservationResponse">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
 	<rdfs:seeAlso rdf:resource="http://schemas.opengis.net/om/1.0.0/observation.xsd#Observation"/>
@@ -54,17 +54,17 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/sos#DefaultDescribeSensor">
 	<rdf:type rdf:resource="http://purl.org/ifgi/sos#DescribeSensor"/>
-	<posm:hasOutput rdf:resource="http://purl.org/ifgi/sos#DefaultDescribeSensorOutput"/>
-	<posm:hasInput rdf:resource="http://purl.org/ifgi/sos#DefaultDescribeSensorInput"/>
+	<posm:hasOutput rdf:resource="http://purl.org/ifgi/sos#DefaultDescribeSensorResponse"/>
+	<posm:hasInput rdf:resource="http://purl.org/ifgi/sos#DefaultDescribeSensorRequest"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/sos#DefaultDescribeSensorOutput">
-	<rdf:type rdf:resource="http://purl.org/ifgi/sos#DescribeSensorOutput"/>
+<rdf:Description rdf:about="http://purl.org/ifgi/sos#DefaultDescribeSensorResponse">
+	<rdf:type rdf:resource="http://purl.org/ifgi/sos#DescribeSensorResponse"/>
 	<sawsdl:modelReference rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/sos#DefaultDescribeSensorInput">
-	<rdf:type rdf:resource="http://purl.org/ifgi/sos#DescribeSensorInput"/>
+<rdf:Description rdf:about="http://purl.org/ifgi/sos#DefaultDescribeSensorRequest">
+	<rdf:type rdf:resource="http://purl.org/ifgi/sos#DescribeSensorRequest"/>
 	<sawsdl:modelReference rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 </rdf:Description>
 

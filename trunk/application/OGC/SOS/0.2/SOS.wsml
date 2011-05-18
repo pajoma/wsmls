@@ -24,8 +24,8 @@ ontology SOS
 	concept SensorObservationService subConceptOf ows#OGCWebService
 	
 	concept DescribeSensor subConceptOf posm#Operation
-	concept DescribeSensorInput subConceptOf posm#MessagePart
-	concept DescribeSensorOutput subConceptOf posm#MessagePart
+	concept DescribeSensorRequest subConceptOf posm#MessagePart
+	concept DescribeSensorResponse subConceptOf posm#MessagePart
 		annotations
 			rdfs#seeAlso hasValue _"http://schemas.opengis.net/sensorML/1.0.1/sensorML.xsd#SensorML"
 		endAnnotations
@@ -33,8 +33,8 @@ ontology SOS
 	
 	
 	concept GetObservation subConceptOf posm#Operation
-	concept GetObservationInput subConceptOf posm#MessagePart
-	concept GetObservationOutput subConceptOf posm#MessagePart
+	concept GetObservationRequest subConceptOf posm#MessagePart
+	concept GetObservationResponse subConceptOf posm#MessagePart
 		annotations
 			rdfs#seeAlso hasValue _"http://schemas.opengis.net/om/1.0.0/observation.xsd#Observation"
 		endAnnotations
@@ -42,11 +42,11 @@ ontology SOS
 	
 	/* default instances */
 	instance DefaultDescribeSensor memberOf DescribeSensor
-		posm#hasOutput hasValue DefaultDescribeSensorOutput
-		posm#hasInput hasValue DefaultDescribeSensorInput
+		posm#hasOutput hasValue DefaultDescribeSensorResponse
+		posm#hasInput hasValue DefaultDescribeSensorRequest
 	
-	instance DefaultDescribeSensorOutput memberOf DescribeSensorOutput
+	instance DefaultDescribeSensorResponse memberOf DescribeSensorResponse
 		sawsdl#modelReference hasValue xsd#string
 		
-	instance DefaultDescribeSensorInput memberOf DescribeSensorInput
+	instance DefaultDescribeSensorRequest memberOf DescribeSensorRequest
 		sawsdl#modelReference hasValue xsd#string

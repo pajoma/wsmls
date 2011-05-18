@@ -20,30 +20,30 @@
 :DescribeSensor a rdfs:Class ;
 	rdfs:subClassOf posm:Operation .
 
-:DescribeSensorInput a rdfs:Class ;
+:DescribeSensorRequest a rdfs:Class ;
 	rdfs:subClassOf posm:MessagePart .
 
-:DescribeSensorOutput a rdfs:Class ;
+:DescribeSensorResponse a rdfs:Class ;
 	rdfs:subClassOf posm:MessagePart ;
 	rdfs:seeAlso <http://schemas.opengis.net/sensorML/1.0.1/sensorML.xsd#SensorML> .
 
 :GetObservation a rdfs:Class ;
 	rdfs:subClassOf posm:Operation .
 
-:GetObservationInput a rdfs:Class ;
+:GetObservationRequest a rdfs:Class ;
 	rdfs:subClassOf posm:MessagePart .
 
-:GetObservationOutput a rdfs:Class ;
+:GetObservationResponse a rdfs:Class ;
 	rdfs:subClassOf posm:MessagePart ;
 	rdfs:seeAlso <http://schemas.opengis.net/om/1.0.0/observation.xsd#Observation> .
 
 :DefaultDescribeSensor a :DescribeSensor ;
-	posm:hasOutput :DefaultDescribeSensorOutput ;
-	posm:hasInput :DefaultDescribeSensorInput .
+	posm:hasOutput :DefaultDescribeSensorResponse ;
+	posm:hasInput :DefaultDescribeSensorRequest .
 
-:DefaultDescribeSensorOutput a :DescribeSensorOutput ;
+:DefaultDescribeSensorResponse a :DescribeSensorResponse ;
 	sawsdl:modelReference xsd:string .
 
-:DefaultDescribeSensorInput a :DescribeSensorInput ;
+:DefaultDescribeSensorRequest a :DescribeSensorRequest ;
 	sawsdl:modelReference xsd:string .
 

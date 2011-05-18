@@ -19,30 +19,30 @@
 :DescribeProcess a rdfs:Class ;
 	rdfs:subClassOf posm:Operation .
 
-:DescribeProcessInput a rdfs:Class ;
+:DescribeProcessRequest a rdfs:Class ;
 	rdfs:subClassOf posm:MessagePart .
 
-:DescribeProcessOutput a rdfs:Class ;
+:DescribeProcessResponse a rdfs:Class ;
 	rdfs:subClassOf posm:MessagePart ;
 	rdfs:seeAlso <http://schemas.opengis.net/wps/1.0.0/wpsDescribeProcess_response.xsd#ProcessDescriptions> .
 
 :Execute a rdfs:Class ;
 	rdfs:subClassOf posm:Operation .
 
-:ExecuteInput a rdfs:Class ;
+:ExecuteRequest a rdfs:Class ;
 	rdfs:subClassOf posm:MessagePart ;
 	rdfs:seeAlso <http://schemas.opengis.net/wps/1.0.0/wpsExecute_request.xsd#Execute> .
 
-:ExecuteOutput a rdfs:Class ;
+:ExecuteResponse a rdfs:Class ;
 	rdfs:subClassOf posm:MessagePart ;
 	rdfs:seeAlso <http://schemas.opengis.net/wps/1.0.0/wpsExecute_response.xsd#ExecuteResponse> .
 
 :DefaultDescribeProcess a :DescribeProcess ;
-	posm:hasOutput :DefaultDecribeProcessOutput ;
-	posm:hasInput :DefaultDecribeProcessInput .
+	posm:hasOutput :DefaultDescribeProcessResponse ;
+	posm:hasInput :DefaultDescribeProcessRequest .
 
-:DefaultDescribeProcessOutput a :DescribeProcessOutput ;
+:DefaultDescribeProcessResponse a :DescribeProcessResponse ;
 	sawsdl:modelReference xsd:string .
 
-:DefaultDescribeProcessInput a :DescribeProcessInput ;
+:DefaultDescribeProcessRequest a :DescribeProcessRequest ;
 	sawsdl:modelReference xsd:string .
