@@ -133,8 +133,8 @@ concept Design subConceptOf Description
 		dc#title hasValue "Design@en"
 		dc#title hasValue "Design@it"
 		dc#description hasValue "A Description of the Situation, in terms of structure and function, held by an Entity for some reason.
-A design is usually accompanied by the rationales behind the construction of the designed Entity (i.e. of the reasons why a design is claimed to be as such). For example, the actual design (a Situation) of a car or of a law is based on both the specification (a Description) of the structure and the rationales used to construct cars or a specific law.
-While designs typically describe entities to be constructed, they can also be used to describe 'refunctionalized' entities, or to hypothesize unknown functions."
+			A design is usually accompanied by the rationales behind the construction of the designed Entity (i.e. of the reasons why a design is claimed to be as such). For example, the actual design (a Situation) of a car or of a law is based on both the specification (a Description) of the structure and the rationales used to construct cars or a specific law.
+			While designs typically describe entities to be constructed, they can also be used to describe 'refunctionalized' entities, or to hypothesize unknown functions."
 	endAnnotations
 	
 concept DesignedArtifact subConceptOf PhysicalArtifact
@@ -321,7 +321,7 @@ concept PhysicalAgent subConceptOf {Agent, PhysicalObject}
 			A PhysicalAgent is a substrate for (actsFor) a Social Agent"
 	endAnnotations
 	
-concept PhysicalArtifact subConceptOf Plan
+concept PhysicalArtifact subConceptOf PhysicalObject
 	annotations
 		dc#title hasValue "Physical artifact@en"
 		dc#title hasValue "Artefatto fisico@it"
@@ -442,13 +442,6 @@ concept Set subConceptOf FormalEntity
 		dc#title hasValue "Insieme@it"
 	endAnnotations
 	
-concept Role subConceptOf Concept
-	annotations
-		dc#title hasValue "Role@en"
-		dc#title hasValue "Ruolo@it"
-		dc#description hasValue "A Concept that classifies an Object"
-	endAnnotations
-	
 concept Situation subConceptOf SocialObject
 	annotations
 		dc#title hasValue "Situation@en"
@@ -475,7 +468,7 @@ concept SocialObject subConceptOf Object
 			Being dependent on communication, all social objects need to be expressed by some information object (information object are self-expressing)."
 	endAnnotations
 	
-concept SocialObjectAttribute subConceptOf Region
+concept SocialAttribute subConceptOf Region
 	annotations
 		dc#title hasValue "Social attribute@en"
 		dc#title hasValue "Caratteristica sociale@it"
@@ -578,18 +571,461 @@ concept WorkflowExecution subConceptOf PlanExecution
 	
 /* Relations */
 
-relation actsFor (ofType Agent, ofType SocialAgent)  subRelationOf associatedWith
+relation actsFor (ofType Agent, ofType SocialAgent) subRelationOf associatedWith
 	annotations
 		dc#title hasValue "acts for@en"
 		dc#title hasValue "agisce per@it"
 		dc#description hasValue "The relation holding between any Agent, and a SocialAgent. In principle, a SocialAgent requires at least one PhysicalAgent in order to act, but this dependency can be 'delegated'; e.g. a university can be acted for by a department, which on its turm is acted for by physical agents."
 	endAnnotations	
 
-relation overlaps (ofType Entity, ofType Entity)  subRelationOf associatedWith
+relation actsThrough (ofType SocialAgent, ofType Agent) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "acts through@en"
+		dc#title hasValue "agisce mediante@it"
+		dc#description hasValue "The relation holding between a PhysicalAgent and a SocialAgent. In principle, a SocialAgent requires at least one PhysicalAgent in order to act, but this dependency can be 'delegated', e.g. a university can be acted for by a department, which is acted for by physical agents. AKA isActedBy"
+	endAnnotations	
+	
+relation characterizes (ofType Concept, ofType Collection) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "characterizes@en"
+		dc#title hasValue "caratterizza@it"
+		dc#description hasValue "TA relation between concepts and collections, where a Concept is said to characterize a Collection; it corresponds to a link between the (reified) intensional and extensional interpretations of a _proper subset of_ a (reified) class. This is different from covers, because it refers to an interpretation the entire reified class.
+			E.g. the collection of vintage saxophones is characterized by the Concept 'manufactured by hand', while it gets covered by the Concept 'Saxophone' with the Parameter 'Vintage'."
+	endAnnotations	
+	
+relation classifies (ofType Concept, ofType Entity) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "classifies@en"
+		dc#title hasValue "classifica@it"
+		dc#description hasValue "A relation between a Concept and an Entity, e.g. the Role 'student' classifies a Person 'John'."
+	endAnnotations	
+	
+relation co-participatesWith (ofType Object, ofType Object) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "co-participates with@en"
+		dc#title hasValue "copartecipa con@it"
+		dc#description hasValue "A relation between two objects participating in a same Event; e.g., 'Vitas and Jimmy are playing tennis'."
+	endAnnotations	
+	
+relation conceptualizes (ofType Agent, ofType SocialObject) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "conceptualizes@en"
+		dc#title hasValue "concettualizza@it"
+		dc#description hasValue "A relation stating that an Agent is internally representing a SocialObject: situations, descriptions, concepts, etc. E.g., 'John believes in the conspiracy theory'; 'Niels Bohr created the solar-system metaphor for the atomic theory'; 'Jacques assumes all swans are white'; 'the task force members share the attack plan'.
+Conceptualizations can be distinguished into different forms, primarily based on the type of SocialObject that is conceptualized. Descriptions and concepts can be 'assumed', situations can be 'believed' or 'known', plans can be 'adopted', etc. (see ontology: http://www.ontologydesignpatterns.org/ont/dul/Conceptualization.owl.)."
+	endAnnotations	
+	
+relation concretelyExpresses (ofType InformationRealization, ofType SocialObject) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "concretely expresses@en"
+		dc#title hasValue "esprime concretamente@it"
+		dc#description hasValue "A relation between an InformationRealization and a Description, e.g. 'the printout of the Italian Constitution concretelyExpresses the Italian Constitution'. It should be supplied also with a rule stating that the InformationRealization realizes an InformationObject that expresses the Description."
+	endAnnotations
+	
+relation covers (ofType Concept, ofType Collection) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "covers@en"
+		dc#title hasValue "ricopre@it"
+		dc#description hasValue "A relation between concepts and collections, where a Concept is said to cover a Collection; it corresponds to a link between the (reified) intensional and extensional interpretations of a (reified) class.
+			E.g. the collection of vintage saxophones is covered by the Concept 'Saxophone' with the Parameter 'Vintage'."
+	endAnnotations	
+	
+relation describes (ofType Description, ofType Entity) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "describes@en"
+		dc#title hasValue "descrive@it"
+		dc#description hasValue "The relation between a Description and an Entity : a Description gives a unity to a Collection of parts (the components), or constituents, by assigning a Role to each of them in the context of a whole Object (the system).
+			A same Entity can be given different descriptions, for example, an old cradle can be given a unifying Description based on the original aesthetic design, the functionality it was built for, or a new aesthetic functionality in which it can be used as a flower pot."
+	endAnnotations
+
+relation expresses (ofType InformationObject, ofType SocialObject) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "expresses@en"
+		dc#title hasValue "esprime il concetto@it"
+		dc#description hasValue "A relation between an InformationObject and a 'meaning', generalized here as a 'SocialObject'. For example: 'A Beehive is a structure in which bees are kept, typically in the form of a dome or box.' (Oxford dictionary)'; 'the term Beehive expresses the concept Beehive in my apiculture ontology'.
+			The intuition for 'meaning' is intended to be very broad. A separate, large comment is included for those who want to investigate more on what kind of meaning can be represented in what form."
+	endAnnotations	
+	
+relation expressesConcept (ofType InformationObject, ofType Concept) subRelationOf expresses
+	annotations
+		dc#title hasValue "expresses concept@en"
+		dc#title hasValue "esprime@it"
+		dc#description hasValue "A relation between an InformationObject and a Concept , e.g. the term "dog" expresses the Concept "dog". For expressing a relational meaning, see the more general object property: expresses"
+	endAnnotations	
+	
+relation farFrom (ofType Entity, ofType Entity) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "far from@en"
+		dc#description hasValue "Generic distance relation between any Entity(s). E.g. Rome is far from Beijing, astronomy is far from necromancy."
+	endAnnotations	
+	
+relation follows (ofType Entity, ofType Entity) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "follows@en"
+		dc#title hasValue "segue@it"
+		dc#description hasValue "A relation between entities, expressing a 'sequence' schema. 
+			E.g. 'year 2000 follows 1999', 'preparing coffee' follows 'deciding what coffee to use', 'II World War follows I World War', etc. 
+			It can be used between tasks, processes or time intervals, and subproperties would fit best in order to distinguish the different uses."
+	endAnnotations	
+	
+relation DirectlyFollows (ofType Entity, ofType Entity) subRelationOf follows
+	annotations
+		dc#title hasValue "follows@en"
+		dc#title hasValue "segue@it"
+		dc#description hasValue "A relation between entities, expressing a 'sequence' schema. 
+			E.g. 'year 2000 follows 1999', 'preparing coffee' follows 'deciding what coffee to use', 'II World War follows I World War', etc. 
+			It can be used between tasks, processes or time intervals, and subproperties would fit best in order to distinguish the different uses."
+	endAnnotations	
+	
+relation hasCommonBoundary (ofType Entity, ofType Entity) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "has common boundary@en"
+		dc#description hasValue "A relation to encode either formal or informal characterizations of 'boundaries' common to two different entities: an Event that ends when another begins, two abstract regions that have a common topological boundary, two objects that are said to be 'in contact' from a commonsense perspective, etc."
+	endAnnotations	
+	
+relation hasConstituent (ofType Entity, ofType Entity) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "has constituent@en"
+		dc#title hasValue "ha costituente@it"
+		dc#description hasValue "'Constituency' depends on some layering of  the world described by the ontology. For example, scientific granularities (e.g. body-organ-tissue-cell) or ontological 'strata' (e.g. social-mental-biological-physical) are  typical layerings. 
+			Intuitively, a constituent is a part belonging to a lower layer. Since layering is actually a partition of the world described by the ontology, constituents are not properly classified as parts, although this kinship can be intuitive for common sense.
+			A desirable advantage of this distinction is that we are able to talk e.g. of physical constituents of non-physical objects (e.g. systems), while this is not possible in terms of parts.
+			Example of are the persons constituting a social system, the molecules constituting a person, the atoms constituting a river, etc. 
+			In all these examples, we notice a typical discontinuity between the constituted and the constituent object: e.g. a social system is conceptualized at a different layer from the persons that constitute it, a person is conceptualized at a different layer from the molecules that constitute them, and a river is conceptualized at a different layer from the atoms that constitute it."
+	endAnnotations
+	
+relation hasLocation (ofType Entity, ofType Entity) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "has location@en"
+		dc#title hasValue "ha localizzazione@it"
+		dc#description hasValue "A generic, relative localization, holding between any entities. E.g. 'the cat is on the mat', 'Omar is in Samarcanda', 'the wound is close to the femural artery'.
+			For 'absolute' locations, see SpaceRegion"
+	endAnnotations
+
+relation hasMember (ofType Collection, ofType Entity) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "has member@en"
+		dc#title hasValue "ha membro@it"
+		dc#description hasValue "A relation between collections and entities, e.g. 'my collection of saxophones includes an old Adolphe Sax original alto' (i.e. my collection has member an Adolphe Sax alto)."
+	endAnnotations
+	
+relation hasPart (ofType Entity, ofType Entity) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "has part@en"
+		dc#title hasValue "ha parte@it"
+		dc#description hasValue "A schematic relation between any entities, e.g. 'the human body has a brain as part', '20th century contains year 1923', 'World War II includes the Pearl Harbour event'.
+			Subproperties and restrictions can be used to specialize hasPart for objects, events, etc."
+	endAnnotations
+	
+relation hasParticipant (ofType Event, ofType Object) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "has participant@en"
+		dc#title hasValue "ha come partecipante@it"
+		dc#description hasValue "A relation between an object and a process, e.g. 'John took part in the discussion', 'a large mass of snow fell during the avalanche', or 'a cook, some sugar, flour, etc. are all present in the cooking of a cake'."
+	endAnnotations
+	
+relation hasQuality (ofType Entity, ofType Quality) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "has quality@en"
+		dc#title hasValue "ha qualità@it"
+		dc#description hasValue "A relation between entities and qualities, e.g. 'Dmitri's skin is yellowish'."
+	endAnnotations
+	
+relation hasRegion (ofType Entity, ofType Region) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "has region@en"
+		dc#title hasValue "ha attributo@it"
+		dc#description hasValue "A relation between entities and regions, e.g. 'the number of wheels of that truck is 12', 'the time of the experiment is August 9th, 2004', 'the whale has been localized at 34 degrees E, 20 degrees S'."
+	endAnnotations
+	
+relation hasSetting (ofType Entity, ofType Situation) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "has setting@en"
+		dc#title hasValue "è nel contesto di@it"
+		dc#description hasValue "A relation between entities and situations, e.g. 'this morning I've prepared my coffee with a new fantastic Arabica', i.e.: (an amount of) a new fantastic Arabica hasSetting the preparation of my coffee this morning."
+	endAnnotations
+	
+relation introduces (ofType Description, ofType SocialAgent) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "introduces@en"
+		dc#title hasValue "introduce@it"
+		dc#description hasValue "A relation between a Description and a SocialAgent, e.g. a Constitutional Charter introduces the SocialAgent 'PresidentOfRepublic'."
+	endAnnotations
+
+relation isAbout (ofType InformationObject, ofType Entity) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "is about@en"
+		dc#title hasValue "si riferisce a@it"
+		dc#description hasValue "A relation between information objects and any Entity (including information objects). It can be used to talk about e.g. entities are references of proper nouns: the proper noun 'Leonardo da Vinci' isAbout the Person Leonardo da Vinci; as well as to talk about sets of entities that can be described by a common noun: the common noun 'person' isAbout the set of all persons in a domain of discourse, which can be represented in DOLCE-Ultralite as an individual of the class: Collection .
+			The isAbout relation is reflexive (not expressible in OWL1.0), because information objects are also about themselves."
+	endAnnotations
+	
+relation isCharacterizedBy (ofType Collection, ofType Concept) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "is characterized by@en"
+		dc#title hasValue "è caratterizzato da@it"
+	endAnnotations
+	
+relation isClassifiedBy (ofType Entity, ofType Concept) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "is classified by@en"
+		dc#title hasValue "è classificato da@it"
+		dc#description hasValue "A relation between a Concept and an Entity, e.g. 'John is considered a typical rude man'; your last concert constitutes the achievement of a lifetime; '20-year-old means she's mature enough'."
+	endAnnotations
+	
+relation isConceptUsedIn (ofType Concept, ofType Description) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "is concept used in@en"
+		dc#title hasValue "è un concetto usato in@it"
+		dc#description hasValue "A more generic relation holding between a Description and a Concept. In order to be used, a Concept must be previously definedIn another Description"
+	endAnnotations
+	
+relation isConceptualizedBy (ofType SocialObject, ofType Agent) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "is conceptualized by@en"
+		dc#title hasValue "è concettualizzato da@it"
+		dc#description hasValue "A relation stating that an Agent is internally representing a Description . E.g., 'John believes in the conspiracy theory'; 'Niels Bohr created a solar-system metaphor for his atomic theory'; 'Jacques assumes all swans are white'; 'the task force shares the attack plan'."
+	endAnnotations
+	
+relation isConcretelyExpressedBy (ofType SocialObject, ofType InformationRealization) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "is concretely expressed by@en"
+		dc#title hasValue "è espresso concretamente da@it"
+		dc#description hasValue "A relation between an InformationRealization and a Description, e.g. 'the printout of the Italian Constitution concretelyExpresses the Italian Constitution'. It should be supplied also with a rule stating that the InformationRealization realizes an InformationObject that expresses the Description."
+	endAnnotations
+	
+relation isConstituentOf (ofType Entity, ofType Entity) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "is constituent of@en"
+		dc#title hasValue "è costituente di@it"
+		dc#description hasValue "'Constituency' depends on some layering of  the world described by the ontology. For example, scientific granularities (e.g. body-organ-tissue-cell) or ontological 'strata' (e.g. social-mental-biological-physical) are  typical layerings. 
+			Intuitively, a constituent is a part belonging to a lower layer. Since layering is actually a partition of the world described by the ontology, constituents are not properly classified as parts, although this kinship can be intuitive for common sense.
+			A desirable advantage of this distinction is that we are able to talk e.g. of physical constituents of non-physical objects (e.g. systems), while this is not possible in terms of parts.
+			Example of are the persons constituting a social system, the molecules constituting a person, the atoms constituting a river, etc. 
+			In all these examples, we notice a typical discontinuity between the constituted and the constituent object: e.g. a social system is conceptualized at a different layer from the persons that constitute it, a person is conceptualized at a different layer from the molecules that constitute them, and a river is conceptualized at a different layer from the atoms that constitute it."
+	endAnnotations
+	
+relation isConstraintFor (ofType Parameter, ofType Entity) subRelationOf classifies
+	annotations
+		dc#title hasValue "is constraint for@en"
+		dc#title hasValue "è un vincolo per@it"
+		dc#description hasValue "A relation between parameters and entities. It allows to assert generic constraints (encoded as parameters), e.g. MinimumAgeForDriving isConstraintFor John (where John is a legal subject under the TrafficLaw).
+			The intended semantics (not expressible in OWL) is that a Parameter isConstraintFor and Entity if the Parameter isParameterFor a Concept that classifies that Entity; moreover, it entails that a Parameter parametrizes a Region that isRegionFor that Entity. The use in OWL is therefore a shortcut to annotate what Parameter constrains what Entity"
+	endAnnotations
+	
+relation isCoveredBy (ofType Collection, ofType Concept) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "is covered by@en"
+		dc#title hasValue "è ricoperto da@it"
+		dc#description hasValue "A relation between concepts and collections, where a Concept is said to cover a Collection; it corresponds to a link between the (reified) intensional and extensional interpretations of a (reified) class.
+			E.g. the collection of vintage saxophones is covered by the Concept 'Saxophone' with the Parameter 'Vintage'."
+	endAnnotations
+	
+relation isDescribedBy (ofType Entity, ofType Description) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "is covered by@en"
+		dc#title hasValue "è descritto da@it"
+		dc#description hasValue "The relation between an Entity and a Description: a Description gives a unity to a Collection of parts (the components), or constituents, by assigning a Role to each of them in the context of a whole Object (the system).
+			A same Entity can be given different descriptions, for example, an old cradle can be given a unifying Description based on the original aesthetic design, the functionality it was built for, or a new aesthetic functionality in which it can be used as a flower pot."
+	endAnnotations
+	
+relation isExecutedIn (ofType Task, ofType Action) subRelationOf classifies
+	annotations
+		dc#title hasValue "is executed in@en"
+		dc#title hasValue "è eseguito mediante@it"
+		dc#description hasValue "A relation between an action and a task, e.g. 'putting some water in a pot and putting the pot on a fire until the water starts bubbling' executes the task 'boiling'."
+	endAnnotations
+	
+relation isExpressedBy (ofType SocialObject, ofType InformationObject) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "is expressed by@en"
+		dc#title hasValue "è espresso da@it"
+		dc#description hasValue "A relation between a dul:SocialObject (the 'meaning') and a dul:InformationObject (the 'expression'). 
+			For example: 'A Beehive is a structure in which bees are kept, typically in the form of a dome or box.' (Oxford dictionary)'; 'the term Beehive expresses the concept Beehive in my apiculture ontology'.
+			The intuition for 'meaning' is intended to be very broad. A separate, large comment is included in the encoding of 'expresses', for those who want to investigate more on what kind of meaning can be represented in what form."
+	endAnnotations
+	
+relation isIntroducedBy (ofType SocialAgent, ofType Description) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "is expressed by@en"
+		dc#title hasValue "è introdotto da@it"
+		dc#description hasValue "A relation between a Description and a SocialAgent, e.g. a Constitutional Charter introduces the SocialAgent 'PresidentOfRepublic'."
+	endAnnotations
+	
+relation isLocationOf (ofType Entity, ofType Entity) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "is location of@en"
+		dc#title hasValue "è una localizzazione di@it"
+		dc#description hasValue "A generic, relative localization, holding between any entities. E.g. 'Rome is the seat of the Pope', 'the liver is the location of the tumor'.
+			For 'absolute' locations, see SpaceRegion"
+	endAnnotations
+	
+relation isMemberOf (ofType Entity, ofType Collection) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "is member of@en"
+		dc#title hasValue "è membro di@it"
+		dc#description hasValue "A relation between collections and entities, e.g. 'the Night Watch by Rembrandt is in the Rijksmuseum collection'; 'Davide is member of the Pen Club', 'Igor is one the subjects chosen for the experiment'."
+	endAnnotations
+	
+relation isPartOf (ofType Entity, ofType Entity) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "is part of@en"
+		dc#title hasValue "è parte di@it"
+		dc#description hasValue "A relation between any entities, e.g.'brain is a part of the human body'."
+	endAnnotations
+	
+relation isParticipantIn (ofType Object, ofType Event) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "is participant in@en"
+		dc#title hasValue "is participant in@it"
+		dc#description hasValue "A relation between an object and a process, e.g. 'John took part in the discussion', 'a large mass of snow fell during the avalanche', or 'a cook, some sugar, flour, etc. are all present in the cooking of a cake'."
+	endAnnotations
+	
+relation isQualityOf (ofType Quality, ofType Entity) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "is quality of@en"
+		dc#title hasValue "è una qualità di@it"
+		dc#description hasValue "A relation between entities and qualities, e.g. 'Dmitri's skin is yellowish'."
+	endAnnotations
+	
+relation isRealizedBy (ofType InformationObject, ofType InformationRealization) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "is realized by@en"
+		dc#title hasValue "è realizzato da@it"
+		dc#description hasValue "A relation between an information realization and an information object, e.g. the paper copy of the Italian Constitution realizes the text of the Constitution."
+	endAnnotations
+	
+relation isReferenceOf (ofType Entity, ofType InformationObject) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "is reference of@en"
+		dc#title hasValue "è il riferimento di@it"
+		dc#description hasValue "A relation between information objects and any Entity (including information objects). It can be used to talk about e.g. entities are references of proper nouns: the proper noun 'Leonardo da Vinci' isAbout the Person Leonardo da Vinci; as well as to talk about sets of entities that can be described by a common noun: the common noun 'person' isAbout the set of all persons in a domain of discourse, which can be represented in DOLCE-Ultralite as an individual of the class: Collection .
+			The isReferenceOf relation is irreflexive, differently from its inverse isAbout."
+	endAnnotations
+	
+relation isReferenceOfInformationRealizedBy (ofType Entity, ofType InformationRealization) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "is reference of information realized by@en"
+		dc#title hasValue "è riferimento dell'informazione realizzata da@it"
+		dc#description hasValue "The relation between entities and information realizations, e.g. between Italy and a paper copy of the text of the Italian Constitution."
+	endAnnotations
+	
+relation isRegionFor (ofType Region, ofType Entity) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "is region for@en"
+		dc#title hasValue "è una regione di@it"
+		dc#description hasValue "A relation between entities and regions, e.g. 'the color of my car is red'."
+	endAnnotations
+	
+relation isRelatedToConcept (ofType Concept, ofType Concept) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "is related to concept@en"
+		dc#title hasValue "è associato al concetto@it"
+		dc#description hasValue "Any relation between concepts, e.g. superordinated, conceptual parthood, having a parameter, having a task, superordination, etc."
+	endAnnotations
+	
+relation isRelatedToDescription (ofType Description, ofType Description) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "is related to description@en"
+		dc#title hasValue "è associata alla descrizione@it"
+		dc#description hasValue "Any relation between descriptions."
+	endAnnotations
+	
+relation isRoleOf (ofType Role, ofType Object) subRelationOf classifies
+	annotations
+		dc#title hasValue "is role of@en"
+		dc#title hasValue "è un ruolo di@it"
+		dc#description hasValue "A relation between an object and a role, e.g. 'student' is the role of 'John'."
+	endAnnotations
+	
+relation isSatisfiedBy (ofType Description, ofType Situation) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "is satisfied by@en"
+		dc#title hasValue "è soddisfatta da@it"
+		dc#description hasValue "A relation between a Situation and a Description, e.g. the execution of a Plan satisfies that plan."
+	endAnnotations
+	
+relation isSettingFor (ofType Situation, ofType Entity) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "is setting for@en"
+		dc#title hasValue "include@it"
+		dc#description hasValue "A relation between situations and entities, e.g. 'this morning I've prepared my coffee with a new fantastic Arabica', i.e.: the preparation of my coffee this morning is the setting for (an amount of) a new fantastic Arabica."
+	endAnnotations
+	
+relation isSpecializedBy (ofType SocialObject, ofType SocialObject) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "is specialized by@en"
+		dc#title hasValue "è specializzato da@it"
+		dc#description hasValue "A partial order relation that holds between social objects. It represents the subsumption relation between e.g. a Concept and another Concept that is broader in extensional interpretation, but narrowe in intensional interpretation.
+			E.g. PhDStudent Role specializes Student Role."
+	endAnnotations
+
+relation overlaps (ofType Entity, ofType Entity) subRelationOf associatedWith
 	annotations
 		dc#title hasValue "overlaps@en"
 		dc#title hasValue "sovrapposto a@it"
 		dc#description hasValue "A schematic relation between any entities, e.g. 'the chest region overlaps with the abdomen region', 'my spoken words overlap with hers', 'the time of my leave overlaps with the time of your arrival', 'fibromyalgia overlaps with other conditions'.
 			Subproperties and restrictions can be used to specialize overlaps for objects, events, time intervals, etc."
 	endAnnotations	
+	
+relation parametrizes (ofType Parameter, ofType Region) subRelationOf classifies
+	annotations
+		dc#title hasValue "parametrizes@en"
+		dc#title hasValue "parametrizza@it"
+		dc#description hasValue "The relation between a Parameter, e.g. 'MajorAgeLimit', and a Region, e.g. '18_year'.
+			For a more data-oriented relation, see hasDataValue"
+	endAnnotations
+	
+relation precedes (ofType Entity, ofType Entity) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "precedes@en"
+		dc#title hasValue "precede@it"
+		dc#description hasValue "A relation between entities, expressing a 'sequence' schema. 
+			E.g. 'year 1999 precedes 2000', 'deciding what coffee to use' precedes 'preparing coffee', 'World War II follows World War I', 'in the Milan to Rome autoroute, Bologna precedes Florence', etc.
+			It can then be used between tasks, processes, time intervals, spatially locate objects, situations, etc. 
+			Subproperties can be defined in order to distinguish the different uses."
+	endAnnotations	
+	
+relation realizes (ofType InformationRealization, ofType InformationObject) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "realizes@en"
+		dc#title hasValue "realizza@it"
+		dc#description hasValue "A relation between an information realization and an information object, e.g. the paper copy of the Italian Constitution realizes the text of the Constitution."
+	endAnnotations	
+	
+relation realizesInformationAbout (ofType InformationRealization, ofType Entity) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "realizes information about@en"
+		dc#title hasValue "realizza informazione che si riferisce a a@it"
+		dc#description hasValue "The relation between entities and information realizations, e.g. between Italy and a paper copy of the text of the Italian Constitution."
+	endAnnotations	
+	
+relation satisfies (ofType Situation, ofType Description) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "satisfies@en"
+		dc#title hasValue "soddisfa@it"
+		dc#description hasValue "A relation between a Situation and a Description, e.g. the execution of a Plan satisfies that plan."
+	endAnnotations
+	
+relation specializes (ofType SocialObject, ofType SocialObject) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "specializes@en"
+		dc#title hasValue "specializza@it"
+		dc#description hasValue "A partial order relation that holds between social objects. 
+			It mainly represents the subsumption relation between e.g. a Concept or Description and another Concept (resp. Description) that is broader in extensional interpretation, but narrower in intensional interpretation. For example, the role PhDStudent specializes the role Student.
+			Another possible use is between a Collection that isCoveredBy a Concept A, and another Collection that isCoveredBy a Concept B that on its turm specializes A. For example, the 70,000 series Selmer Mark VI saxophone Collection specializes the Selmer Mark VI saxophone Collection."
+	endAnnotations
 
+relation unifies (ofType Description, ofType Collection) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "unifies@en"
+		dc#title hasValue "unifica@it"
+		dc#description hasValue "A Collection has a unification criterion, provided by a Description; for example, a community of practice can be unified by a shared theory or interest, e.g. the community that makes research on mirror neurons shares some core knowledge about mirror neurons, which can be represented as a Description MirrorNeuronTheory that unifies the community. There can be several unifying descriptions."
+	endAnnotations
+	
+relation usesConcept (ofType Description, ofType Concept) subRelationOf associatedWith
+	annotations
+		dc#title hasValue "uses concept@en"
+		dc#title hasValue "usa il concetto@it"
+		dc#description hasValue "A generic relation holding between a Description and a Concept. In order to be used, a Concept must be previously definedIn another Description. This last condition cannot be encoded for object properties in OWL."
+	endAnnotations
