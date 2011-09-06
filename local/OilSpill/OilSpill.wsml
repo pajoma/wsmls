@@ -1,0 +1,477 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://purl.org/envision/OilSpill#",
+	rdf _"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    rdfs _"http://www.w3.org/2000/01/rdf-schema#",
+    xsd _"http://www.w3.org/2001/XMLSchema#",
+    dc _"http://purl.org/dc/elements/1.1/",
+    DUL _"http://www.loa-cnr.it/ontologies/DUL.owl#",
+    dolce _"http://www.load-cnr.it/ontologies/DOLCE-Lite.owl#"
+ }
+
+ontology OilSpill
+	nfp
+		dc#publisher hasValue "(a)IfGI, University of Muenster"
+		dc#date hasValue "01-09-2011"
+		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+		dc#type hasValue "Domain Ontology"
+		dc#title hasValue "Domian Ontology for Oil Spill Scenario"
+		dc#description hasValue "Created by University of Münster. WSML code implemented by Marcell Roth"
+		dc#subject hasValue "Oil Spill"	
+	endnfp
+
+/* Event/Processes */
+	
+concept Wind subConceptOf dolce#Event_Process
+	nfp
+		rdfs#label hasValue "Wind@de"
+		rdfs#label hasValue "wind@en"
+		dc#description hasValue ""
+		dc#source hasValue "http://de.wikipedia.org/wiki/Verkehrssystem"
+	endnfp
+	
+concept Storm subConceptOf Wind
+	nfp
+		rdfs#label hasValue "Sturm@de"
+		rdfs#label hasValue "storm@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+	
+concept Flow subConceptOf dolce#Event_Process
+	nfp
+		rdfs#label hasValue "Strömung@de"
+		rdfs#label hasValue "flow@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+	
+concept RiverCurrent subConceptOf Flow
+	nfp
+		rdfs#label hasValue "Flussströmung@de"
+		rdfs#label hasValue "river current@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+	
+concept SeaCurrent subConceptOf Flow
+	nfp
+		rdfs#label hasValue "Meeresströmung@de"
+		rdfs#label hasValue "sea current@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+		
+concept OilSpill subConceptOf dolce#Event_Process
+	nfp
+		rdfs#label hasValue "Ölverschmutzung@de"
+		rdfs#label hasValue "oil spill@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+	
+concept Explosion subConceptOf dolce#Event_Process
+	nfp
+		rdfs#label hasValue "Explosion@de"
+		rdfs#label hasValue "explosion@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+	
+concept Accident subConceptOf dolce#Event_Process
+	nfp
+		rdfs#label hasValue "Unfall@de"
+		rdfs#label hasValue "accident@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+	
+concept PointInTime
+	nfp
+		rdfs#label hasValue "Zeitpunkt@de"
+		rdfs#label hasValue "point in time@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+	
+/* Amount of Matters */
+	
+concept Air subConceptOf dolce#amount_of_matter
+	nfp
+		rdfs#label hasValue "Luft@de"
+		rdfs#label hasValue "air@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+	
+concept Water subConceptOf dolce#amount_of_matter
+	nfp
+		rdfs#label hasValue "Wasser@de"
+		rdfs#label hasValue "water@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+	
+concept Oil subConceptOf dolce#amount_of_matter
+	nfp
+		rdfs#label hasValue "Öl@de"
+		rdfs#label hasValue "oil@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+	
+concept CrudeOil subConceptOf Oil
+	nfp
+		rdfs#label hasValue "Erdöl@de"
+		rdfs#label hasValue "crude oil@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+	
+concept BlackOil subConceptOf Oil
+	nfp
+		rdfs#label hasValue "Rohschmieröl@de"
+		rdfs#label hasValue "black oil@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+	
+/*Qualities */
+
+concept Direction subConceptOf dolce#quality
+	nfp
+		rdfs#label hasValue "Richtung@de"
+		rdfs#label hasValue "direction@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp	
+	
+concept Temperature subConceptOf dolce#quality
+	nfp
+		rdfs#label hasValue "Temperatur@de"
+		rdfs#label hasValue "temperature@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+	
+concept Velocity subConceptOf dolce#quality
+	nfp
+		rdfs#label hasValue "Geschwindigkeit@de"
+		rdfs#label hasValue "velocity@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+	
+concept Mass subConceptOf dolce#quality
+	nfp
+		rdfs#label hasValue "Masse@de"
+		rdfs#label hasValue "mass@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+	
+concept Viscosity subConceptOf dolce#quality
+	nfp
+		rdfs#label hasValue "Viskosität@de"
+		rdfs#label hasValue "viscosity@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+	
+concept Toxicity subConceptOf dolce#quality
+	nfp
+		rdfs#label hasValue "Giftigkeit/Giftgehalt@de"
+		rdfs#label hasValue "toxicity@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+	
+concept Depth subConceptOf dolce#quality
+	nfp
+		rdfs#label hasValue "Tiefe@de"
+		rdfs#label hasValue "depth@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+	
+concept Concentration subConceptOf dolce#quality
+	nfp
+		rdfs#label hasValue "Konzentration@de"
+		rdfs#label hasValue "concentration@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+	
+concept LoadVolume subConceptOf dolce#quality
+	nfp
+		rdfs#label hasValue "Ladevolumen@de"
+		rdfs#label hasValue "load volume@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+	
+concept Name subConceptOf dolce#quality
+	nfp
+		rdfs#label hasValue "Name@de"
+		rdfs#label hasValue "name@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+	
+concept Cargo subConceptOf dolce#quality
+	nfp
+		rdfs#label hasValue "Fracht@de"
+		rdfs#label hasValue "cargo@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+	
+concept ID subConceptOf dolce#quality
+	nfp
+		rdfs#label hasValue "ID@de"
+		rdfs#label hasValue "id@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+	
+concept Location subConceptOf dolce#quality
+	nfp
+		rdfs#label hasValue "Lage@de"
+		rdfs#label hasValue "location@en"
+		dc#description hasValue "The terms location and place in geography are used to identify a point or an area on the Earth's surface or elsewhere"
+		dc#source hasValue "http://en.wikipedia.org/wiki/Location_%28geography%29"
+	endnfp
+	
+concept CarryingCapacity subConceptOf dolce#quality
+	nfp
+		rdfs#label hasValue "Ladekapazität@de"
+		rdfs#label hasValue "carrying capacity@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+
+concept Tankage subConceptOf CarryingCapacity
+	nfp
+		rdfs#label hasValue "Fassungsvermögen@de"
+		rdfs#label hasValue "tankage@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+	
+concept Age subConceptOf dolce#quality
+	nfp
+		rdfs#label hasValue "Alter@de"
+		rdfs#label hasValue "age@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+	
+concept Size subConceptOf dolce#quality
+	nfp
+		rdfs#label hasValue "Größe@de"
+		rdfs#label hasValue "size@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+	
+concept AverageWeight subConceptOf dolce#quality
+	nfp
+		rdfs#label hasValue "Durchschnitssgewicht@de"
+		rdfs#label hasValue "average weigth@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+	
+concept Lethality subConceptOf dolce#quality
+	nfp
+		rdfs#label hasValue "Letalität@de"
+		rdfs#label hasValue "lethality@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+	
+concept Population subConceptOf dolce#quality
+	nfp
+		rdfs#label hasValue "Bevölkerungszahl@de"
+		rdfs#label hasValue "population@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+	
+/* GeographicalUnits */
+
+concept WaterBody subConceptOf dolce#geographical_unit
+	nfp
+		rdfs#label hasValue "Wassersäule@de"
+		rdfs#label hasValue "water column@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+
+concept WaterColumn subConceptOf WaterBody
+	nfp
+		rdfs#label hasValue "Wassersäule@de"
+		rdfs#label hasValue "water column@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp	
+	
+concept Sea subConceptOf WaterBody
+	nfp
+		rdfs#label hasValue "Meer@de"
+		rdfs#label hasValue "sea@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp	
+	
+concept OilSlick subConceptOf dolce#geographical_unit
+	nfp
+		rdfs#label hasValue "Ölschlick@de"
+		rdfs#label hasValue "oil slick@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+	
+concept TerrestrialUnit subConceptOf dolce#geographical_unit
+	nfp
+		rdfs#label hasValue "Landeinheit@de"
+		rdfs#label hasValue "terrestrial unit@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+	
+concept CoastalTerrestrialUnit subConceptOf TerrestrialUnit
+	nfp
+		rdfs#label hasValue "Küstenlandeinheit@de"
+		rdfs#label hasValue "coastal terrestrial unit@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+	
+concept Coast subConceptOf CoastalTerrestrialUnit
+	nfp
+		rdfs#label hasValue "Küste@de"
+		rdfs#label hasValue "coast@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp	
+
+concept Region subConceptOf dolce#geographical_unit
+	nfp
+		rdfs#label hasValue "Region@de"
+		rdfs#label hasValue "region@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+	
+concept Sanctuary subConceptOf Region
+	nfp
+		rdfs#label hasValue "Schutzgebiet@de"
+		rdfs#label hasValue "sanctuary@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+	
+concept Habitat subConceptOf Region
+	nfp
+		rdfs#label hasValue "Habitat@de"
+		rdfs#label hasValue "habitat@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+	
+/* Physical Objects */
+
+concept Ship subConceptOf dolce#physical_object
+	nfp
+		rdfs#label hasValue "Schiff@de"
+		rdfs#label hasValue "ship@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+	
+concept Tanker subConceptOf Ship
+	nfp
+		rdfs#label hasValue "Tankschiff@de"
+		rdfs#label hasValue "tanker@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+	
+concept Animal subConceptOf dolce#physical_object
+	nfp
+		rdfs#label hasValue "Tier@de"
+		rdfs#label hasValue "animal@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+	
+concept Fish subConceptOf Animal
+	nfp
+		rdfs#label hasValue "Fisch@de"
+		rdfs#label hasValue "Fish@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+	
+concept BonyFish subConceptOf Fish
+	nfp
+		rdfs#label hasValue "Knochenfisch@de"
+		rdfs#label hasValue "bony fish@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+	
+concept Gadoid subConceptOf BonyFish
+	nfp
+		rdfs#label hasValue "Dorsch@de"
+		rdfs#label hasValue "gadoid@en"
+		dc#description hasValue "a soft-finned fish of the family Gadidae"
+		dc#source hasValue "http://wordnet.princeton.edu/"
+	endnfp
+	
+concept Cod subConceptOf Gadoid
+	nfp
+		rdfs#label hasValue "cod@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+	
+concept Shoaling subConceptOf dolce#physical_object
+	nfp
+		rdfs#label hasValue "Tier@de"
+		rdfs#label hasValue "shoaling@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+	
+concept Gadus subConceptOf Gadoid
+	nfp
+		rdfs#label hasValue "Gadus@de"
+		rdfs#label hasValue "gadus@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+	
+concept PacificCod subConceptOf Gadoid
+	nfp
+		rdfs#label hasValue "pacific cod@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+	
+concept AtlanticCod subConceptOf Gadoid
+	nfp
+		rdfs#label hasValue "Kabeljau@de"
+		rdfs#label hasValue "atlantic cod@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+	
+concept GreenlandCod subConceptOf Gadoid
+	nfp
+		rdfs#label hasValue "greenland cod@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+	
+	
