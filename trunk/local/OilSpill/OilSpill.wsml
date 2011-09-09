@@ -4,6 +4,7 @@ namespace { _"http://purl.org/envision/OilSpill#",
     rdfs _"http://www.w3.org/2000/01/rdf-schema#",
     xsd _"http://www.w3.org/2001/XMLSchema#",
     dc _"http://purl.org/dc/elements/1.1/",
+    owl _"http://www.w3.org/2002/07/owl#",
     DUL _"http://www.loa-cnr.it/ontologies/DUL.owl#",
     dolce _"http://www.load-cnr.it/ontologies/DOLCE-Lite.owl#"
  }
@@ -25,72 +26,72 @@ concept Wind subConceptOf dolce#Event_Process
 	nfp
 		rdfs#label hasValue "Wind@de"
 		rdfs#label hasValue "wind@en"
-		dc#description hasValue ""
-		dc#source hasValue "http://de.wikipedia.org/wiki/Verkehrssystem"
+		dc#description hasValue "Moving air caused by differences in pressure. The air moves from an area of high pressure to an area of low pressure."
+		dc#source hasValue "http://en.wikipedia.org/wiki/Wind"
 	endnfp
 	
 concept Storm subConceptOf Wind
 	nfp
 		rdfs#label hasValue "Sturm@de"
 		rdfs#label hasValue "storm@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		dc#description hasValue "A meteorological definition of a terrestrial storm is a wind measuring 10 or higher on the Beaufort scale. It may be marked by strong wind, hail, thunder and/or lightning (a thunderstorm), heavy precipitation... "
+		dc#source hasValue "http://en.wikipedia.org/wiki/Storm"
 	endnfp
 	
 concept Flow subConceptOf dolce#Event_Process
 	nfp
 		rdfs#label hasValue "Strömung@de"
 		rdfs#label hasValue "flow@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		dc#description hasValue "An uninterrupted motion characteristic of fluids (liquids or gases) such as water"
+		dc#source hasValue "http://wordnetweb.princeton.edu"
 	endnfp
 	
 concept RiverCurrent subConceptOf Flow
 	nfp
 		rdfs#label hasValue "Flussströmung@de"
 		rdfs#label hasValue "river current@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		dc#description hasValue "The steady flow of water in a river influenced by gravity as the water moves downhill to reduce its potential energy."
+		dc#source hasValue "http://en.wikipedia.org/wiki/Current_(stream)"
 	endnfp
 	
 concept SeaCurrent subConceptOf Flow
 	nfp
 		rdfs#label hasValue "Meeresströmung@de"
 		rdfs#label hasValue "sea current@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		dc#description hasValue "The steady flow of surface sea water in a prevailing direction."
+		dc#source hasValue "http://wordnetweb.princeton.edu/"
 	endnfp
 		
 concept OilSpill subConceptOf dolce#Event_Process
 	nfp
 		rdfs#label hasValue "Ölverschmutzung@de"
 		rdfs#label hasValue "oil spill@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		dc#description hasValue "An oil spill is a release of oil into the ocean or coastal waters due to human activity. Oil spills include releases of crude oil from tankers, offshore platforms, drilling rigs and wells, as well as spills of refined petroleum products (such as gasoline, diesel) and their by-products, and heavier fuels used by large ships such as bunker fuel, or the spill of any oily refuse or waste oil."
+		dc#source hasValue "http://en.wikipedia.org/wiki/Oil_spill"
 	endnfp
 	
 concept Explosion subConceptOf dolce#Event_Process
 	nfp
 		rdfs#label hasValue "Explosion@de"
 		rdfs#label hasValue "explosion@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		dc#description hasValue "An explosion is a violent release of energy in an extreme manner, usually with the generation of high temperatures and the release of gases. It is caused by a chemical or nucleare reaction."
+		dc#source hasValue "http://wordnetweb.princeton.edu/"
 	endnfp
 	
 concept Accident subConceptOf dolce#Event_Process
 	nfp
 		rdfs#label hasValue "Unfall@de"
 		rdfs#label hasValue "accident@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		dc#description hasValue "An accident or mishap is a specific, unpredictable, unusual and unintended external action which occurs in a particular time and place, with no apparent and deliberate cause but with marked effects. It implies a generally negative outcome which may have been avoided or prevented had circumstances leading up to the accident been recognized, and acted upon, prior to its occurrence. Examples are crashing of automobiles, events causing fire, ..."
+		dc#source hasValue "http://en.wikipedia.org/wiki/Accident"
 	endnfp
 	
 concept PointInTime
 	nfp
 		rdfs#label hasValue "Zeitpunkt@de"
 		rdfs#label hasValue "point in time@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		dc#description hasValue "An instant of time in a predefined temporal reference system."
+		dc#source hasValue "http://wordnetweb.princeton.edu"
 	endnfp
 	
 /* Amount of Matters */
@@ -99,32 +100,32 @@ concept Air subConceptOf dolce#amount_of_matter
 	nfp
 		rdfs#label hasValue "Luft@de"
 		rdfs#label hasValue "air@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		dc#description hasValue "A mixture of gases (especially nitrogen and oxygen) in the atmosphere of Earth which is required for breathing and photosynthesis."
+		dc#source hasValue "http://en.wikipedia.org/wiki/Air"
 	endnfp
 	
 concept Water subConceptOf dolce#amount_of_matter
 	nfp
 		rdfs#label hasValue "Wasser@de"
 		rdfs#label hasValue "water@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		dc#description hasValue "Water is a chemical substance whose molecule contains one oxygen and two hydrogen atoms connected by covalent bonds. Water is a liquid at ambient conditions, but it often co-exists on Earth with its solid state, ice, and gaseous state (water vapor or steam)."
+		dc#source hasValue "http://en.wikipedia.org/wiki/Water"
 	endnfp
 	
 concept Oil subConceptOf dolce#amount_of_matter
 	nfp
 		rdfs#label hasValue "Öl@de"
 		rdfs#label hasValue "oil@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		dc#description hasValue "A slippery or viscous liquid or liquefiable substance not miscible with water. Oils have a high carbon and hydrogen content and are nonpolar substances."
+		dc#source hasValue "http://en.wikipedia.org/wiki/Oil"
 	endnfp
 	
 concept CrudeOil subConceptOf Oil
 	nfp
 		rdfs#label hasValue "Erdöl@de"
 		rdfs#label hasValue "crude oil@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		dc#description hasValue "Crude oil or petroleum is a naturally occurring, inflammable dark oil consisting mainly of hydrocarbons. It is found in geologic formations beneath the Earth's surface."
+		dc#source hasValue "http://wordnetweb.princeton.edu/"
 	endnfp
 	
 concept BlackOil subConceptOf Oil
@@ -135,70 +136,70 @@ concept BlackOil subConceptOf Oil
 		dc#source hasValue ""
 	endnfp
 	
-/*Qualities */
+/* Qualities */
 
 concept Direction subConceptOf dolce#quality
 	nfp
 		rdfs#label hasValue "Richtung@de"
 		rdfs#label hasValue "direction@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		dc#description hasValue "Direction is the information contained in the relative position of one object with respect to another object without the distance information. Directions may be either relative to some indicated reference (the violins in a full orchestra are typically seated to the left of the conductor), or absolute according to some previously agreed upon frame of reference (New York City lies due west of Madrid)."
+		dc#source hasValue "http://en.wikipedia.org/wiki/Direction_(geometry)"
 	endnfp	
 	
 concept Temperature subConceptOf dolce#quality
 	nfp
 		rdfs#label hasValue "Temperatur@de"
 		rdfs#label hasValue "temperature@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		dc#description hasValue "Temperature is a physical property of matter (corresponding to its molecular activity) that quantitatively expresses the common notions of hot and cold."
+		dc#source hasValue "http://en.wikipedia.org/wiki/Temperature"
 	endnfp
 	
 concept Velocity subConceptOf dolce#quality
 	nfp
 		rdfs#label hasValue "Geschwindigkeit@de"
 		rdfs#label hasValue "velocity@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		dc#description hasValue "Velocity is the distance travelled per unit time of an object."
+		dc#source hasValue "http://wordnetweb.princeton.edu/"
 	endnfp
 	
 concept Mass subConceptOf dolce#quality
 	nfp
 		rdfs#label hasValue "Masse@de"
 		rdfs#label hasValue "mass@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		dc#description hasValue "The property of matter that causes it to have weight in a gravitational field. Mass is measured in kilograms (kg)."
+		dc#source hasValue "http://wordnetweb.princeton.edu/"
 	endnfp
 	
 concept Viscosity subConceptOf dolce#quality
 	nfp
 		rdfs#label hasValue "Viskosität@de"
 		rdfs#label hasValue "viscosity@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		dc#description hasValue "Resistance of a liquid to shear forces (and hence to flow)."
+		dc#source hasValue "http://wordnetweb.princeton.edu/"
 	endnfp
 	
 concept Toxicity subConceptOf dolce#quality
 	nfp
 		rdfs#label hasValue "Giftigkeit/Giftgehalt@de"
 		rdfs#label hasValue "toxicity@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		dc#description hasValue "The degree to which a substance is poisonous and thus can damage an organism, such as an animal, or plant, as well as a substructure of the organism, such as a cell (cytotoxicity) or an organ."
+		dc#source hasValue "http://en.wikipedia.org/wiki/Toxicity"
 	endnfp
 	
 concept Depth subConceptOf dolce#quality
 	nfp
 		rdfs#label hasValue "Tiefe@de"
 		rdfs#label hasValue "depth@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		dc#description hasValue "The vertical distance of an object below the surface of a specified reference point."
+		dc#source hasValue "http://en.wiktionary.org/wiki/depth"
 	endnfp
 	
 concept Concentration subConceptOf dolce#quality
 	nfp
 		rdfs#label hasValue "Konzentration@de"
 		rdfs#label hasValue "concentration@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		dc#description hasValue "Concentration is defined as the abundance of a constituent divided by the total volume of a mixture."
+		dc#source hasValue "http://en.wikipedia.org/wiki/Concentration"
 	endnfp
 	
 concept LoadVolume subConceptOf dolce#quality
@@ -213,24 +214,24 @@ concept Name subConceptOf dolce#quality
 	nfp
 		rdfs#label hasValue "Name@de"
 		rdfs#label hasValue "name@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		dc#description hasValue "A word or term used for identification of a person, single thing, or category of things."
+		dc#source hasValue "http://en.wikipedia.org/wiki/Name"
 	endnfp
 	
 concept Cargo subConceptOf dolce#quality
 	nfp
 		rdfs#label hasValue "Fracht@de"
 		rdfs#label hasValue "cargo@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		dc#description hasValue "Goods transported by a large vehicle such as ship, aircraft, van, or truck."
+		dc#source hasValue "http://wordnetweb.princeton.edu/"
 	endnfp
 	
 concept ID subConceptOf dolce#quality
 	nfp
 		rdfs#label hasValue "ID@de"
 		rdfs#label hasValue "id@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		dc#description hasValue "A symbol that establishes the identity of the one bearing it."
+		dc#source hasValue "http://wordnetweb.princeton.edu/"
 	endnfp
 	
 concept Location subConceptOf dolce#quality
@@ -253,8 +254,8 @@ concept Tankage subConceptOf CarryingCapacity
 	nfp
 		rdfs#label hasValue "Fassungsvermögen@de"
 		rdfs#label hasValue "tankage@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		dc#description hasValue "The capacity of a tank or tanks."
+		dc#source hasValue "http://wordnetweb.princeton.edu/"
 	endnfp
 	
 concept Age subConceptOf dolce#quality
@@ -438,8 +439,15 @@ concept Cod subConceptOf Gadoid
 	
 concept Shoaling subConceptOf dolce#physical_object
 	nfp
-		rdfs#label hasValue "Tier@de"
+		rdfs#label hasValue "Schwarmfisch@de"
 		rdfs#label hasValue "shoaling@en"
+		dc#description hasValue ""
+		dc#source hasValue ""
+	endnfp
+	
+concept Schooling subConceptOf Shoaling
+	nfp
+		rdfs#label hasValue "schooling@en"
 		dc#description hasValue ""
 		dc#source hasValue ""
 	endnfp
@@ -473,5 +481,152 @@ concept GreenlandCod subConceptOf Gadoid
 		dc#description hasValue ""
 		dc#source hasValue ""
 	endnfp
+	
+/* relations */	
+	
+relation hasParticipant (ofType Accident, ofType Ship)
+	nfp
+		dc#title hasValue "has participant@en"
+		dc#description hasValue "Relation between an accident and a ship. Describes a ship accident."
+	endnfp
+	
+relation hasParticipant (ofType Explosion, ofType Ship)
+	nfp
+		dc#title hasValue "has participant@en"
+		dc#description hasValue "Relation between an explosion and a ship. Describes an explosion on a ship."
+	endnfp
+	
+relation participatesIn (ofType Air, ofType Wind)
+	nfp
+		dc#title hasValue "participatesIn@en"
+		dc#description hasValue "Air participates in the event 'wind'."
+	endnfp
+	
+relation hasQuality(ofType {Air, Oil, Water}, ofType Direction) subRelationOf dolce#has_quality
+	nfp
+		dc#title hasValue "has quality@en"
+		dc#description hasValue "Amount of matters like air, oil or water have quality 'direction'."
+	endnfp
+	
+relation hasQuality(ofType {Air, Oil, Water}, ofType Temperature) subRelationOf dolce#has_quality
+	nfp
+		dc#title hasValue "has quality@en"
+		dc#description hasValue "Amount of matters like air, oil or water have quality 'temperature'."
+	endnfp
+	
+relation hasQuality(ofType {Air, Oil, Water}, ofType Velocity) subRelationOf dolce#has_quality
+	nfp
+		dc#title hasValue "has quality@en"
+		dc#description hasValue "Amount of matters like air, oil or water have quality 'velocity'."
+	endnfp
+	
+relation hasQuality (ofType Cod, ofType {Age, Mass, Size}) subRelationOf dolce#has_quality
+	nfp
+		dc#title hasValue "has quality@en"
+		dc#description hasValue "A cod has several qualities, e.g. age, mass, or size."
+	endnfp
+	
+relation isSameAs (ofType Gadus, ofType Cod) subRelationOf owl#sameAs
+	nfp
+		dc#title hasValue "is same as@en"
+		dc#description hasValue "Cod is the common name for genus Gadus."
+	endnfp
+	
+relation hasQuality(ofType Oil, ofType {Mass, Viscosity}) subRelationOf dolce#has_quality
+	nfp
+		dc#title hasValue "has quality@en"
+		dc#description hasValue "Oil has quality 'mass' and viscosity."
+	endnfp
+	
+relation hasQuality(ofType OilSlick, ofType Concentration) subRelationOf dolce#has_quality
+	nfp
+		dc#title hasValue "has quality@en"
+		dc#description hasValue "Oil slick has quality 'concentration."
+	endnfp
+	
+relation participatesIn (ofType OilSlick, ofType OilSpill)
+	nfp
+		dc#title hasValue "participates in@en"
+		dc#description hasValue "Oil slick participates in oil spill."
+	endnfp
+	
+relation consistsOf (ofType OilSlick, ofType {Oil, Water})
+	nfp
+		dc#title hasValue "consists of@en"
+		dc#description hasValue "An Oil slick consists of oil and water."
+	endnfp
+	
+relation situatedIn (ofType OilSlick, ofType WaterBody)
+	nfp
+		dc#title hasValue "situated in@en"
+		dc#description hasValue "Oil slick is situated in a water body."
+	endnfp
+	
+relation happensAt (ofType OilSpill, ofType PointInTime)
+	nfp
+		dc#title hasValue "happens at@en"
+		dc#description hasValue "An oil spill happens at a specific time."
+	endnfp
+	
+relation situatedIn (ofType Sanctuary, ofType Habitat)
+	nfp
+		dc#title hasValue "situated in@en"
+		dc#description hasValue "A sanctuary is part of an habitat."
+	endnfp
+	
+relation confinedBy (ofType Sea, ofType CoastalTerrestrialUnit)
+	nfp
+		dc#title hasValue "confined by@en"
+		dc#description hasValue "The sea is confined by coastal terrestrial units, e.g. the coast."
+	endnfp
+	
+relation hasQuality (ofType Ship, ofType {LoadVolume, Name, Cargo, ID, Location, CarryingCapacity}) subRelationOf dolce#has_quality
+	nfp
+		dc#title hasValue "has quality@en"
+		dc#description hasValue "A ship has several qualities, e.g. load volume, name, carrying capacity, location,..."
+	endnfp
+	
+relation hasQuality (ofType Shoaling, ofType {AverageWeight, Lethality, Population}) subRelationOf dolce#has_quality
+	nfp
+		dc#title hasValue "has quality@en"
+		dc#description hasValue "A shoaling has several qualities, e.g. average weight, lethality , or population."
+	endnfp
+	
+relation hasProperPart (ofType Shoaling, ofType Fish)
+	nfp
+		dc#title hasValue "has proper part@en"
+		dc#description hasValue "A shoaling group includes a fish."
+	endnfp
+	
+relation hasQuality (ofType Tanker, ofType Tankage) subRelationOf dolce#has_quality
+	nfp
+		dc#title hasValue "has quality@en"
+		dc#description hasValue "A tanker has a tankage."
+	endnfp
+	
+relation participatesIn (ofType Water, ofType Flow)
+	nfp
+		dc#title hasValue "participates in@en"
+		dc#description hasValue "Water participates in a flow such as a sea current."
+	endnfp
+	
+relation hasQuality (ofType Water, ofType {Toxicity, Depth}) subRelationOf dolce#has_quality
+	nfp
+		dc#title hasValue "has quality@en"
+		dc#description hasValue "Water might have a degree of toxicity and a specific depth."
+	endnfp
+	
+relation consistsOf (ofType WaterBody, ofType Water) subRelationOf dolce#has_quality
+	nfp
+		dc#title hasValue "consists of@en"
+		dc#description hasValue "A water body consists of water."
+	endnfp
+	
+	
+/* axioms */
+
+axiom affects
+
+axiom isCausedBy
 	
 	
