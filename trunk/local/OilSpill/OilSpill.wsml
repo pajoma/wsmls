@@ -6,7 +6,8 @@ namespace { _"http://purl.org/envision/OilSpill#",
     dc _"http://purl.org/dc/elements/1.1/",
     owl _"http://www.w3.org/2002/07/owl#",
     DUL _"http://www.loa-cnr.it/ontologies/DUL.owl#",
-    dolce _"http://www.load-cnr.it/ontologies/DOLCE-Lite.owl#"
+    dolce _"http://www.load-cnr.it/ontologies/DOLCE-Lite.owl#",
+    gs _"http://purl.org/net/wsml/geospace#"
  }
 
 ontology OilSpill
@@ -29,6 +30,7 @@ concept Wind subConceptOf dolce#Event_Process
 		dc#description hasValue "Moving air caused by differences in pressure. The air moves from an area of high pressure to an area of low pressure."
 		dc#source hasValue "http://en.wikipedia.org/wiki/Wind"
 	endnfp
+	
 	
 concept Storm subConceptOf Wind
 	nfp
@@ -69,6 +71,8 @@ concept OilSpill subConceptOf dolce#Event_Process
 		dc#description hasValue "An oil spill is a release of oil into the ocean or coastal waters due to human activity. Oil spills include releases of crude oil from tankers, offshore platforms, drilling rigs and wells, as well as spills of refined petroleum products (such as gasoline, diesel) and their by-products, and heavier fuels used by large ships such as bunker fuel, or the spill of any oily refuse or waste oil."
 		dc#source hasValue "http://en.wikipedia.org/wiki/Oil_spill"
 	endnfp
+//	affects ofType {Sanctuary, Cod}
+//	isCausedBy ofType {Explosion, Accident}
 	
 concept Explosion subConceptOf dolce#Event_Process
 	nfp
@@ -103,6 +107,9 @@ concept Air subConceptOf dolce#amount_of_matter
 		dc#description hasValue "A mixture of gases (especially nitrogen and oxygen) in the atmosphere of Earth which is required for breathing and photosynthesis."
 		dc#source hasValue "http://en.wikipedia.org/wiki/Air"
 	endnfp
+	dolce#participant_in ofType Wind
+	dolce#hasQuality ofType {Direction, Temperature, Velocity}
+	
 	
 concept Water subConceptOf dolce#amount_of_matter
 	nfp
@@ -111,6 +118,8 @@ concept Water subConceptOf dolce#amount_of_matter
 		dc#description hasValue "Water is a chemical substance whose molecule contains one oxygen and two hydrogen atoms connected by covalent bonds. Water is a liquid at ambient conditions, but it often co-exists on Earth with its solid state, ice, and gaseous state (water vapor or steam)."
 		dc#source hasValue "http://en.wikipedia.org/wiki/Water"
 	endnfp
+	dolce#participant_in ofType Flow
+	dolce#hasQuality ofType {Direction, Temperature, Velocity, Toxicity, Depth}
 	
 concept Oil subConceptOf dolce#amount_of_matter
 	nfp
@@ -119,6 +128,7 @@ concept Oil subConceptOf dolce#amount_of_matter
 		dc#description hasValue "A slippery or viscous liquid or liquefiable substance not miscible with water. Oils have a high carbon and hydrogen content and are nonpolar substances."
 		dc#source hasValue "http://en.wikipedia.org/wiki/Oil"
 	endnfp
+	dolce#hasQuality ofType {Direction, Temperature, Velocity, Mass, Viscosity}
 	
 concept CrudeOil subConceptOf Oil
 	nfp
@@ -262,75 +272,79 @@ concept Age subConceptOf dolce#quality
 	nfp
 		rdfs#label hasValue "Alter@de"
 		rdfs#label hasValue "age@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		dc#description hasValue "How long something exists."
+		dc#source hasValue "http://wordnetweb.princeton.edu/"
 	endnfp
 	
 concept Size subConceptOf dolce#quality
 	nfp
 		rdfs#label hasValue "Größe@de"
 		rdfs#label hasValue "size@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		dc#description hasValue "The physical magnitude of something such as length or mass (how big it is)."
+		dc#source hasValue "http://wordnetweb.princeton.edu/"
 	endnfp
 	
 concept AverageWeight subConceptOf dolce#quality
 	nfp
 		rdfs#label hasValue "Durchschnitssgewicht@de"
 		rdfs#label hasValue "average weigth@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		dc#description hasValue "Weight is used to describe the mass of an object and is measured in kilograms. Average weigth is a measure of the \"middle\" value of the weight data set. There are many different descriptive statistics that can be chosen as a measurement of the central tendency of the data items. These include arithmetic mean, the median and the mode."
+		dc#source hasValue "http://en.wikipedia.org/wiki/Average_weight"
 	endnfp
 	
 concept Lethality subConceptOf dolce#quality
 	nfp
 		rdfs#label hasValue "Letalität@de"
 		rdfs#label hasValue "lethality@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		dc#description hasValue "The quality of being deadly. It is the ratio of deaths within a designated population with a particular condition, over a certain period of time."
+		dc#source hasValue "http://en.wikipedia.org/wiki/Case_fatality_rate"
 	endnfp
 	
-concept Population subConceptOf dolce#quality
+concept PopulationSize subConceptOf dolce#quality
 	nfp
 		rdfs#label hasValue "Bevölkerungszahl@de"
-		rdfs#label hasValue "population@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		rdfs#label hasValue "population size@en"
+		dc#description hasValue "The number of individual organisms in a population."
+		dc#source hasValue "http://en.wikipedia.org/wiki/Population_size"
 	endnfp
 	
 /* GeographicalUnits */
 
 concept WaterBody subConceptOf dolce#geographical_unit
 	nfp
-		rdfs#label hasValue "Wassersäule@de"
-		rdfs#label hasValue "water column@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		rdfs#label hasValue "Gewässer@de"
+		rdfs#label hasValue "water body@en"
+		dc#description hasValue "Any significant accumulation of water, usually covering the Earth or another planet. The term body of water most often refers to large accumulations of water, such as oceans, seas, and lakes, but it may also include smaller pools of water such as ponds, puddles or wetlands."
+		dc#source hasValue "http://en.wikipedia.org/wiki/Water_body"
 	endnfp
 
 concept WaterColumn subConceptOf WaterBody
 	nfp
 		rdfs#label hasValue "Wassersäule@de"
 		rdfs#label hasValue "water column@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		dc#description hasValue "A water column is a conceptual column of water from surface to bottom sediments. This concept is used chiefly for environmental studies evaluating the stratification or mixing (e.g. by wind induced currents) of the thermal or chemically stratified layers in a lake, stream or ocean."
+		dc#source hasValue "http://en.wikipedia.org/wiki/Water_column"
 	endnfp	
 	
 concept Sea subConceptOf WaterBody
 	nfp
 		rdfs#label hasValue "Meer@de"
 		rdfs#label hasValue "sea@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		dc#description hasValue "A division of an ocean or a large body of salt water partially enclosed by land"
+		dc#source hasValue "http://wordnetweb.princeton.edu/"
 	endnfp	
+	gs#confinedBy ofType CoastalTerrestrialUnit
 	
 concept OilSlick subConceptOf dolce#geographical_unit
 	nfp
 		rdfs#label hasValue "Ölschlick@de"
 		rdfs#label hasValue "oil slick@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		dc#description hasValue "A thin film of oil floating on top of water (especially crude oil spilled from a ship."
+		dc#source hasValue "http://wordnetweb.princeton.edu/"
 	endnfp
+	gs#situatedIn ofType WaterBody
+	dolce#hasQuality ofType Concentration
+	dolce#participant_in ofType OilSpill
 	
 concept TerrestrialUnit subConceptOf dolce#geographical_unit
 	nfp
@@ -352,32 +366,33 @@ concept Coast subConceptOf CoastalTerrestrialUnit
 	nfp
 		rdfs#label hasValue "Küste@de"
 		rdfs#label hasValue "coast@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		dc#description hasValue "The shore of a sea or ocean. It is where the land meets the sea or ocean."
+		dc#source hasValue "http://wordnetweb.princeton.edu/"
 	endnfp	
 
 concept Region subConceptOf dolce#geographical_unit
 	nfp
 		rdfs#label hasValue "Region@de"
 		rdfs#label hasValue "region@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		dc#description hasValue "The extended spatial location of something. Regions can be broadly divided by physical characteristics, human impact characteristics, and the interaction of Humanity and the environment."
+		dc#source hasValue "http://en.wikipedia.org/wiki/Region"
 	endnfp
 	
 concept Sanctuary subConceptOf Region
 	nfp
 		rdfs#label hasValue "Schutzgebiet@de"
 		rdfs#label hasValue "sanctuary@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		dc#description hasValue "A sanctuary is any place of safety. There are two main categories of sanctuaries: Human and Non-Human (plants and animals)."
+		dc#source hasValue "http://en.wikipedia.org/wiki/Sanctuary"
 	endnfp
+	gs#situatedIn ofType Habitat
 	
 concept Habitat subConceptOf Region
 	nfp
 		rdfs#label hasValue "Habitat@de"
 		rdfs#label hasValue "habitat@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		dc#description hasValue "The type of environment in which an organism or group normally lives or occurs."
+		dc#source hasValue "http://en.wikipedia.org/wiki/Habitat"
 	endnfp
 	
 /* Physical Objects */
@@ -386,40 +401,42 @@ concept Ship subConceptOf dolce#physical_object
 	nfp
 		rdfs#label hasValue "Schiff@de"
 		rdfs#label hasValue "ship@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		dc#description hasValue "A vessel that carries passengers or cargo"
+		dc#source hasValue "http://wordnetweb.princeton.edu/"
 	endnfp
+	dolce#has_quality ofType {LoadVolume, Name, Cargo, ID, Location, CarryingCapacity}
 	
 concept Tanker subConceptOf Ship
 	nfp
 		rdfs#label hasValue "Tankschiff@de"
 		rdfs#label hasValue "tanker@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		dc#description hasValue "A cargo ship designed to carry crude oil in bulk."
+		dc#source hasValue "http://wordnetweb.princeton.edu/"
 	endnfp
+	dolce#has_quality ofType Tankage
 	
 concept Animal subConceptOf dolce#physical_object
 	nfp
 		rdfs#label hasValue "Tier@de"
 		rdfs#label hasValue "animal@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		dc#description hasValue "Animals are a major group of multicellular, eukaryotic organisms of the kingdom Animalia."
+		dc#source hasValue "http://en.wikipedia.org/wiki/Animal"
 	endnfp
 	
 concept Fish subConceptOf Animal
 	nfp
 		rdfs#label hasValue "Fisch@de"
 		rdfs#label hasValue "Fish@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		dc#description hasValue "Any of various mostly cold-blooded aquatic vertebrates usually having scales and breathing through gills."
+		dc#source hasValue "http://wordnetweb.princeton.edu/"
 	endnfp
 	
 concept BonyFish subConceptOf Fish
 	nfp
 		rdfs#label hasValue "Knochenfisch@de"
 		rdfs#label hasValue "bony fish@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		dc#description hasValue "Are a taxonomic group of fish that have bony skeletons."
+		dc#source hasValue "http://en.wikipedia.org/wiki/Bony_fish"
 	endnfp
 	
 concept Gadoid subConceptOf BonyFish
@@ -430,166 +447,74 @@ concept Gadoid subConceptOf BonyFish
 		dc#source hasValue "http://wordnet.princeton.edu/"
 	endnfp
 	
+	
 concept Cod subConceptOf Gadoid
 	nfp
 		rdfs#label hasValue "cod@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		dc#description hasValue "Cod is the common name for genus Gadus"
+		dc#source hasValue "http://en.wikipedia.org/wiki/Cod"
 	endnfp
+	dolce#has_quality ofType {Age, Mass, Size}
+	owl#sameAs ofType Gadus
 	
 concept Shoaling subConceptOf dolce#physical_object
 	nfp
 		rdfs#label hasValue "Schwarmfisch@de"
 		rdfs#label hasValue "shoaling@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		dc#description hasValue "Any group of fish that stay together for social reasons"
+		dc#source hasValue "http://en.wikipedia.org/wiki/Shoaling_and_schooling"
 	endnfp
+	dolce#has_quality ofType {AverageWeight, Lethality, PopulationSize}
 	
 concept Schooling subConceptOf Shoaling
 	nfp
 		rdfs#label hasValue "schooling@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		dc#description hasValue "Any group of fish that stay together for social reasons and swimming in the same direction in a coordinated manner."
+		dc#source hasValue "http://en.wikipedia.org/wiki/Shoaling_and_schooling"
 	endnfp
 	
 concept Gadus subConceptOf Gadoid
 	nfp
-		rdfs#label hasValue "Gadus@de"
 		rdfs#label hasValue "gadus@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		dc#description hasValue "Gadus is a cod. See also concept \"Cod\"."
+		dc#source hasValue "http://en.wikipedia.org/wiki/Cod"
 	endnfp
+	owl#sameAs ofType Cod
 	
 concept PacificCod subConceptOf Gadoid
 	nfp
-		rdfs#label hasValue "pacific cod@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		rdfs#label hasValue "Pacific cod@en"
+		dc#description hasValue "The Pacific cod, Gadus macrocephalus, is an important commercial food species. It is also known as gray cod, gray goo, gray wolf, grayest or grayfish. It has three separate dorsal fins, and the catfish-like whiskers on its lower jaw. In appearance, it is similar to the Atlantic Cod."
+		dc#source hasValue "http://en.wikipedia.org/wiki/Pacific_cod"
 	endnfp
 	
 concept AtlanticCod subConceptOf Gadoid
 	nfp
 		rdfs#label hasValue "Kabeljau@de"
-		rdfs#label hasValue "atlantic cod@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		rdfs#label hasValue "Atlantic cod@en"
+		dc#description hasValue "The Atlantic cod is a well-known demersal food fish belonging to the family Gadidae. It is also commercially known as cod, codling or haberdine."
+		dc#source hasValue "http://en.wikipedia.org/wiki/Atlantic_cod"
 	endnfp
 	
 concept GreenlandCod subConceptOf Gadoid
 	nfp
-		rdfs#label hasValue "greenland cod@en"
-		dc#description hasValue ""
-		dc#source hasValue ""
+		rdfs#label hasValue "Greenland cod@en"
+		dc#description hasValue "The Greenland cod known variously as rock cod, ogac and uvac is a commercially harvested food fish. In colour the Greenland cod is generally sombre, ranging from tan to brown to silvery. Its appearance is similar to that of other cod species; generally heavy-bodied, elongate, usually with a stout caudal peduncle. They can grow to a length of 80 cm."
+		dc#source hasValue "http://en.wikipedia.org/wiki/Greenland_cod"
 	endnfp
 	
 /* relations */	
-	
-relation hasParticipant (ofType Accident, ofType Ship)
-	nfp
-		dc#title hasValue "has participant@en"
-		dc#description hasValue "Relation between an accident and a ship. Describes a ship accident."
-	endnfp
-	
-relation hasParticipant (ofType Explosion, ofType Ship)
-	nfp
-		dc#title hasValue "has participant@en"
-		dc#description hasValue "Relation between an explosion and a ship. Describes an explosion on a ship."
-	endnfp
-	
-relation participatesIn (ofType Air, ofType Wind)
-	nfp
-		dc#title hasValue "participatesIn@en"
-		dc#description hasValue "Air participates in the event 'wind'."
-	endnfp
-	
-relation hasQuality(ofType {Air, Oil, Water}, ofType Direction) subRelationOf dolce#has_quality
-	nfp
-		dc#title hasValue "has quality@en"
-		dc#description hasValue "Amount of matters like air, oil or water have quality 'direction'."
-	endnfp
-	
-relation hasQuality(ofType {Air, Oil, Water}, ofType Temperature) subRelationOf dolce#has_quality
-	nfp
-		dc#title hasValue "has quality@en"
-		dc#description hasValue "Amount of matters like air, oil or water have quality 'temperature'."
-	endnfp
-	
-relation hasQuality(ofType {Air, Oil, Water}, ofType Velocity) subRelationOf dolce#has_quality
-	nfp
-		dc#title hasValue "has quality@en"
-		dc#description hasValue "Amount of matters like air, oil or water have quality 'velocity'."
-	endnfp
-	
-relation hasQuality (ofType Cod, ofType {Age, Mass, Size}) subRelationOf dolce#has_quality
-	nfp
-		dc#title hasValue "has quality@en"
-		dc#description hasValue "A cod has several qualities, e.g. age, mass, or size."
-	endnfp
-	
-relation isSameAs (ofType Gadus, ofType Cod) subRelationOf owl#sameAs
-	nfp
-		dc#title hasValue "is same as@en"
-		dc#description hasValue "Cod is the common name for genus Gadus."
-	endnfp
-	
-relation hasQuality(ofType Oil, ofType {Mass, Viscosity}) subRelationOf dolce#has_quality
-	nfp
-		dc#title hasValue "has quality@en"
-		dc#description hasValue "Oil has quality 'mass' and viscosity."
-	endnfp
-	
-relation hasQuality(ofType OilSlick, ofType Concentration) subRelationOf dolce#has_quality
-	nfp
-		dc#title hasValue "has quality@en"
-		dc#description hasValue "Oil slick has quality 'concentration."
-	endnfp
-	
-relation participatesIn (ofType OilSlick, ofType OilSpill)
-	nfp
-		dc#title hasValue "participates in@en"
-		dc#description hasValue "Oil slick participates in oil spill."
-	endnfp
-	
+
 relation consistsOf (ofType OilSlick, ofType {Oil, Water})
 	nfp
 		dc#title hasValue "consists of@en"
 		dc#description hasValue "An Oil slick consists of oil and water."
 	endnfp
 	
-relation situatedIn (ofType OilSlick, ofType WaterBody)
+relation consistsOf (ofType WaterBody, ofType Water)
 	nfp
-		dc#title hasValue "situated in@en"
-		dc#description hasValue "Oil slick is situated in a water body."
-	endnfp
-	
-relation happensAt (ofType OilSpill, ofType PointInTime)
-	nfp
-		dc#title hasValue "happens at@en"
-		dc#description hasValue "An oil spill happens at a specific time."
-	endnfp
-	
-relation situatedIn (ofType Sanctuary, ofType Habitat)
-	nfp
-		dc#title hasValue "situated in@en"
-		dc#description hasValue "A sanctuary is part of an habitat."
-	endnfp
-	
-relation confinedBy (ofType Sea, ofType CoastalTerrestrialUnit)
-	nfp
-		dc#title hasValue "confined by@en"
-		dc#description hasValue "The sea is confined by coastal terrestrial units, e.g. the coast."
-	endnfp
-	
-relation hasQuality (ofType Ship, ofType {LoadVolume, Name, Cargo, ID, Location, CarryingCapacity}) subRelationOf dolce#has_quality
-	nfp
-		dc#title hasValue "has quality@en"
-		dc#description hasValue "A ship has several qualities, e.g. load volume, name, carrying capacity, location,..."
-	endnfp
-	
-relation hasQuality (ofType Shoaling, ofType {AverageWeight, Lethality, Population}) subRelationOf dolce#has_quality
-	nfp
-		dc#title hasValue "has quality@en"
-		dc#description hasValue "A shoaling has several qualities, e.g. average weight, lethality , or population."
+		dc#title hasValue "consists of@en"
+		dc#description hasValue "A waterbody consists of water."
 	endnfp
 	
 relation hasProperPart (ofType Shoaling, ofType Fish)
@@ -598,35 +523,136 @@ relation hasProperPart (ofType Shoaling, ofType Fish)
 		dc#description hasValue "A shoaling group includes a fish."
 	endnfp
 	
-relation hasQuality (ofType Tanker, ofType Tankage) subRelationOf dolce#has_quality
-	nfp
-		dc#title hasValue "has quality@en"
-		dc#description hasValue "A tanker has a tankage."
-	endnfp
+//relation hasParticipant (ofType Accident, ofType Ship)
+//	nfp
+//		dc#title hasValue "has participant@en"
+//		dc#description hasValue "Relation between an accident and a ship. Describes a ship accident."
+//	endnfp
+//	
+//relation hasParticipant (ofType Explosion, ofType Ship)
+//	nfp
+//		dc#title hasValue "has participant@en"
+//		dc#description hasValue "Relation between an explosion and a ship. Describes an explosion on a ship."
+//	endnfp
+//	
+//relation participatesIn (ofType Air, ofType Wind)
+//	nfp
+//		dc#title hasValue "participatesIn@en"
+//		dc#description hasValue "Air participates in the event 'wind'."
+//	endnfp
+//	
+//relation hasQuality(ofType {Air, Oil, Water}, ofType Direction) subRelationOf dolce#has_quality
+//	nfp
+//		dc#title hasValue "has quality@en"
+//		dc#description hasValue "Amount of matters like air, oil or water have quality 'direction'."
+//	endnfp
+//	
+//relation hasQuality(ofType {Air, Oil, Water}, ofType Temperature) subRelationOf dolce#has_quality
+//	nfp
+//		dc#title hasValue "has quality@en"
+//		dc#description hasValue "Amount of matters like air, oil or water have quality 'temperature'."
+//	endnfp
+//	
+//relation hasQuality(ofType {Air, Oil, Water}, ofType Velocity) subRelationOf dolce#has_quality
+//	nfp
+//		dc#title hasValue "has quality@en"
+//		dc#description hasValue "Amount of matters like air, oil or water have quality 'velocity'."
+//	endnfp
+//	
+//relation hasQuality (ofType Cod, ofType {Age, Mass, Size}) subRelationOf dolce#has_quality
+//	nfp
+//		dc#title hasValue "has quality@en"
+//		dc#description hasValue "A cod has several qualities, e.g. age, mass, or size."
+//	endnfp
+//	
+//relation isSameAs (ofType Gadus, ofType Cod) subRelationOf owl#sameAs
+//	nfp
+//		dc#title hasValue "is same as@en"
+//		dc#description hasValue "Cod is the common name for genus Gadus."
+//	endnfp
+//	
+//relation hasQuality(ofType Oil, ofType {Mass, Viscosity}) subRelationOf dolce#has_quality
+//	nfp
+//		dc#title hasValue "has quality@en"
+//		dc#description hasValue "Oil has quality 'mass' and viscosity."
+//	endnfp
+//	
+//relation hasQuality(ofType OilSlick, ofType Concentration) subRelationOf dolce#has_quality
+//	nfp
+//		dc#title hasValue "has quality@en"
+//		dc#description hasValue "Oil slick has quality 'concentration."
+//	endnfp
+//	
+//relation participatesIn (ofType OilSlick, ofType OilSpill)
+//	nfp
+//		dc#title hasValue "participates in@en"
+//		dc#description hasValue "Oil slick participates in oil spill."
+//	endnfp
 	
-relation participatesIn (ofType Water, ofType Flow)
-	nfp
-		dc#title hasValue "participates in@en"
-		dc#description hasValue "Water participates in a flow such as a sea current."
-	endnfp
+
 	
-relation hasQuality (ofType Water, ofType {Toxicity, Depth}) subRelationOf dolce#has_quality
-	nfp
-		dc#title hasValue "has quality@en"
-		dc#description hasValue "Water might have a degree of toxicity and a specific depth."
-	endnfp
+//relation situatedIn (ofType OilSlick, ofType WaterBody)
+//	nfp
+//		dc#title hasValue "situated in@en"
+//		dc#description hasValue "Oil slick is situated in a water body."
+//	endnfp
 	
-relation consistsOf (ofType WaterBody, ofType Water) subRelationOf dolce#has_quality
-	nfp
-		dc#title hasValue "consists of@en"
-		dc#description hasValue "A water body consists of water."
-	endnfp
+//relation happensAt (ofType OilSpill, ofType PointInTime)
+//	nfp
+//		dc#title hasValue "happens at@en"
+//		dc#description hasValue "An oil spill happens at a specific time."
+//	endnfp
+//	
+//relation situatedIn (ofType Sanctuary, ofType Habitat)
+//	nfp
+//		dc#title hasValue "situated in@en"
+//		dc#description hasValue "A sanctuary is part of an habitat."
+//	endnfp
+//	
+//relation confinedBy (ofType Sea, ofType CoastalTerrestrialUnit)
+//	nfp
+//		dc#title hasValue "confined by@en"
+//		dc#description hasValue "The sea is confined by coastal terrestrial units, e.g. the coast."
+//	endnfp
+//	
+//relation hasQuality (ofType Ship, ofType {LoadVolume, Name, Cargo, ID, Location, CarryingCapacity}) subRelationOf dolce#has_quality
+//	nfp
+//		dc#title hasValue "has quality@en"
+//		dc#description hasValue "A ship has several qualities, e.g. load volume, name, carrying capacity, location,..."
+//	endnfp
+//	
+//relation hasQuality (ofType Shoaling, ofType {AverageWeight, Lethality, Population}) subRelationOf dolce#has_quality
+//	nfp
+//		dc#title hasValue "has quality@en"
+//		dc#description hasValue "A shoaling has several qualities, e.g. average weight, lethality , or population."
+//	endnfp
 	
+
+//	
+//relation hasQuality (ofType Tanker, ofType Tankage) subRelationOf dolce#has_quality
+//	nfp
+//		dc#title hasValue "has quality@en"
+//		dc#description hasValue "A tanker has a tankage."
+//	endnfp
+//	
+//relation participatesIn (ofType Water, ofType Flow)
+//	nfp
+//		dc#title hasValue "participates in@en"
+//		dc#description hasValue "Water participates in a flow such as a sea current."
+//	endnfp
+//	
+//relation hasQuality (ofType Water, ofType {Toxicity, Depth}) subRelationOf dolce#has_quality
+//	nfp
+//		dc#title hasValue "has quality@en"
+//		dc#description hasValue "Water might have a degree of toxicity and a specific depth."
+//	endnfp
+	
+
 	
 /* axioms */
 
-axiom affects
-
-axiom isCausedBy
+//axiom affects
+//
+//axiom isCausedBy
 	
 	
