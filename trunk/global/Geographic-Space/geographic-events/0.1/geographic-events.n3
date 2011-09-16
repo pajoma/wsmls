@@ -1,0 +1,83 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://purl.org/net/wsml/geospace#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix wsml: <http://www.wsmo.org/wsml/wsml-syntax#> .
+@prefix dolce: <http://purl.org/net/wsml/dolce#> .
+@prefix dns: <http://purl.org/net/wsml/dolceDnS#> .
+
+# http://purl.org/dc/elements/1.1/creator: "h.michels (IFGI)"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/contributor: ""^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/type: "Domain Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/description: "A generic ontology suitable to describe specific events without human intention in the geographic space, e.g. wind, landslide, ..."^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/title: "Geographic Space Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/subject: "Geography"^^<http://www.w3.org/2001/XMLSchema#string>
+
+:movement a rdfs:Class ;
+	rdfs:subClassOf dns:physical_phenomenon ;
+	rdfs:label ""^^xsd:string ;
+	dc:description ""^^xsd:string ;
+	dc:source ""^^xsd:string .
+
+:wind a rdfs:Class ;
+	rdfs:subClassOf :movement ;
+	rdfs:label "Wind@de"^^xsd:string , "wind@en"^^xsd:string ;
+	dc:description "Moving air caused by differences in pressure. The air moves from an area of high pressure to an area of low pressure."^^xsd:string ;
+	dc:source "http://en.wikipedia.org/wiki/Wind"^^xsd:string .
+
+:storm a rdfs:Class ;
+	rdfs:subClassOf :wind ;
+	rdfs:label "Sturm@de"^^xsd:string , "storm@en"^^xsd:string ;
+	dc:description "A meteorological definition of a terrestrial storm is a wind measuring 10 or higher on the Beaufort scale. It may be marked by strong wind, hail, thunder and/or lightning (a thunderstorm), heavy precipitation... "^^xsd:string ;
+	dc:source "http://en.wikipedia.org/wiki/Storm"^^xsd:string .
+
+:flow a rdfs:Class ;
+	rdfs:subClassOf :movement ;
+	rdfs:label "Strömung@de"^^xsd:string , "flow@en"^^xsd:string ;
+	dc:description "An uninterrupted motion characteristic of fluids (liquids or gases) such as water"^^xsd:string ;
+	dc:source "http://wordnetweb.princeton.edu"^^xsd:string .
+
+:river_current a rdfs:Class ;
+	rdfs:subClassOf :flow ;
+	rdfs:label "Flussströmung@de"^^xsd:string , "river current@en"^^xsd:string ;
+	dc:description "The steady flow of water in a river influenced by gravity as the water moves downhill to reduce its potential energy."^^xsd:string ;
+	dc:source "http://en.wikipedia.org/wiki/Current_(stream)"^^xsd:string .
+
+:sea_current a rdfs:Class ;
+	rdfs:subClassOf :flow ;
+	rdfs:label "Meeresströmung@de"^^xsd:string , "sea current@en"^^xsd:string ;
+	dc:description "The steady flow of surface sea water in a prevailing direction."^^xsd:string ;
+	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
+
+:ground_movement a rdfs:Class ;
+	rdfs:subClassOf :movement ;
+	rdfs:label ""^^xsd:string ;
+	dc:description ""^^xsd:string ;
+	dc:source ""^^xsd:string .
+
+:groundwater_flow a rdfs:Class ;
+	rdfs:subClassOf :flow ;
+	rdfs:label ""^^xsd:string ;
+	dc:description ""^^xsd:string ;
+	dc:source ""^^xsd:string .
+
+:hurricane a rdfs:Class ;
+	rdfs:subClassOf :wind ;
+	rdfs:label ""^^xsd:string ;
+	dc:description ""^^xsd:string ;
+	dc:source ""^^xsd:string .
+
+:earthquake a rdfs:Class ;
+	rdfs:subClassOf :ground_movement ;
+	rdfs:label ""^^xsd:string ;
+	dc:description ""^^xsd:string ;
+	dc:source ""^^xsd:string .
+
+:precipitation a rdfs:Class ;
+	rdfs:subClassOf dns:physical_phenomenon ;
+	rdfs:label ""^^xsd:string ;
+	dc:description ""^^xsd:string ;
+	dc:source ""^^xsd:string .

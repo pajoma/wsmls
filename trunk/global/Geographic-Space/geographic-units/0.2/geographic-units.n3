@@ -40,6 +40,12 @@
 	dc:description "Land cover is the physical state of the land surface. Land Cover Units are discernible parts of Land Cover, e.g. the forest or a street"^^xsd:string ;
 	dc:subject "Units"^^xsd:string .
 
+:covers a rdf:Property ;
+	rdfs:domain :landcover_unit .
+
+dolce:participant_in a rdf:Property ;
+	rdfs:domain :landcover_unit .
+
 :vegetation_community a rdfs:Class ;
 	rdfs:subClassOf :LandCoverUnit ;
 	rdfs:label "Vegetation@de"^^xsd:string , "Vegetation@en"^^xsd:string ;

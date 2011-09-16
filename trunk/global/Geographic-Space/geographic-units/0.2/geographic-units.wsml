@@ -68,7 +68,9 @@ concept landcover_unit subConceptOf geographical_unit
 		rdfs#label hasValue "Land Cover Unit@en"
 		dc#description hasValue "Land cover is the physical state of the land surface. Land Cover Units are discernible parts of Land Cover, e.g. the forest or a street"
 		dc#subject hasValue "Units"	 
-	endAnnotations 
+	endAnnotations
+	covers ofType geographical_unit
+	dolce#participant_in ofType ground_movement
 
 
 concept vegetation_community subConceptOf LandCoverUnit

@@ -1,8 +1,8 @@
 wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
-namespace { _"http://purl.org/ifgi/dolce#",
+namespace { _"http://purl.org/net/wsml/dolce#",
      rdf _"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
      rdfs _"http://www.w3.org/2000/01/rdf-schema#",
-     dolce _"http://www.load-cnr.it/ontologies/DOLCE-Lite.owl",
+     dolce _"http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl",
      dc _"http://purl.org/dc/elements/1.1/"}
 
 ontology DOLCE_Lite
@@ -11,7 +11,7 @@ ontology DOLCE_Lite
 		dc#type hasValue "Foundational Ontology"
 		dc#title hasValue "DOLCE Foundational Ontology"	
 		dc#description hasValue "The DOLCE and DnS ontologies. OWL engineering by Aldo Gangemi. WSML Translation by Patrick Maué"
-		dc#source hasValue "http://www.loa-cnr.it/DOLCE.html"
+		dc#source hasValue "http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl"
 		dc#subject hasValue "dolce, foundational"	
      endAnnotations
 
@@ -302,7 +302,7 @@ concept temporal_region subConceptOf region
 	part ofType temporal_region
 	q_location_of ofType temporal_quality
 	
-concept time_interval subConceptOf region
+concept time_interval subConceptOf temporal_region
 	annotations
 		dc#title hasValue "Time Interval@en"
 		dc#description hasValue "A temporal region, measured according to a calendar."

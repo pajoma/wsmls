@@ -1,15 +1,15 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix : <http://purl.org/ifgi/dolce#> .
-@prefix dolce: <http://www.load-cnr.it/ontologies/DOLCE-Lite.owl#> .
+@prefix : <http://purl.org/net/wsml/dolce#> .
+@prefix dolce: <http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 
 # http://purl.org/dc/elements/1.1/publisher: "IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string>
 # http://purl.org/dc/elements/1.1/type: "Foundational Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
 # http://purl.org/dc/elements/1.1/title: "DOLCE Foundational Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
 # http://purl.org/dc/elements/1.1/description: "The DOLCE and DnS ontologies. OWL engineering by Aldo Gangemi. WSML Translation by Patrick Maué"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/source: "http://www.loa-cnr.it/DOLCE.html"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/source: "http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl"^^<http://www.w3.org/2001/XMLSchema#string>
 # http://purl.org/dc/elements/1.1/subject: "dolce, foundational"^^<http://www.w3.org/2001/XMLSchema#string>
 
 :abstract a rdfs:Class ;
@@ -259,7 +259,7 @@
 	rdfs:domain :temporal_region .
 
 :time_interval a rdfs:Class ;
-	rdfs:subClassOf :region ;
+	rdfs:subClassOf :temporal_region ;
 	dc:title "Time Interval@en"^^xsd:string ;
 	dc:description "A temporal region, measured according to a calendar."^^xsd:string ;
 	rdfs:seeAlso dolce:time-interval .

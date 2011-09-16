@@ -1,5 +1,5 @@
 wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
-namespace { _"http://www.loa-cnr.it/ontologies/DUL.owl#",
+namespace { _"http://purl.org/net/wsml/dul#",
 	rdf _"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     rdfs _"http://www.w3.org/2000/01/rdf-schema#",
     xsd _"http://www.w3.org/2001/XMLSchema#",
@@ -14,7 +14,7 @@ ontology DOLCE_Ultralite
 		dc#type hasValue "Foundational Ontology"
 		dc#title hasValue "DOLCE+DnS Ultralite"	
 		dc#description hasValue "Created by Aldo Gangemi as both a simplification and extension of DOLCE and Descriptions and Situations ontologies. WSML Translation by Marcell Roth"
-		dc#source hasValue "http://www.ontologydesignpatterns.org/ont/DUL/DUL.owl"
+		dc#source hasValue "http://www.loa-cnr.it/ontologies/DUL.owl"
 		dc#subject hasValue "dolce, foundational"	
      endAnnotations
 
@@ -641,7 +641,7 @@ relation describes (ofType Description, ofType Entity) subRelationOf associatedW
 relation expresses (ofType InformationObject, ofType SocialObject) subRelationOf associatedWith
 	annotations
 		dc#title hasValue "expresses@en"
-		dc#title hasValue "esprime il concetto@it"
+		dc#title hasValue "esprime@it"
 		dc#description hasValue "A relation between an InformationObject and a 'meaning', generalized here as a 'SocialObject'. For example: 'A Beehive is a structure in which bees are kept, typically in the form of a dome or box.' (Oxford dictionary)'; 'the term Beehive expresses the concept Beehive in my apiculture ontology'.
 			The intuition for 'meaning' is intended to be very broad. A separate, large comment is included for those who want to investigate more on what kind of meaning can be represented in what form."
 	endAnnotations	
@@ -649,8 +649,8 @@ relation expresses (ofType InformationObject, ofType SocialObject) subRelationOf
 relation expressesConcept (ofType InformationObject, ofType Concept) subRelationOf expresses
 	annotations
 		dc#title hasValue "expresses concept@en"
-		dc#title hasValue "esprime@it"
-		dc#description hasValue "A relation between an InformationObject and a Concept , e.g. the term "dog" expresses the Concept "dog". For expressing a relational meaning, see the more general object property: expresses"
+		dc#title hasValue "esprime il concetto@it"
+		dc#description hasValue "A relation between an InformationObject and a Concept , e.g. the term 'dog' expresses the Concept 'dog'. For expressing a relational meaning, see the more general object property: expresses"
 	endAnnotations	
 	
 relation farFrom (ofType Entity, ofType Entity) subRelationOf associatedWith
