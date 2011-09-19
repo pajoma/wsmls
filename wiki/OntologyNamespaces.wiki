@@ -15,16 +15,23 @@ This page provides a list of namespaces as URLs pointing to the latest versions 
 === Geographic Space ===
 
 || <font color="#FF0000">geographic-space</font> || <font color="#FF0000">http://purl.org/net/wsml/geospace</font> || <font color="#FF0000">http://code.google.com/p/wsmls/source/browse/trunk/global/Geographic-Space/geographic-space/0.3/geographic-space.rdf</font> ||
+|| <font color="#FF0000">geographic-events</font> || <font color="#FF0000">http://purl.org/net/wsml/geospace</font> || <font color="#FF0000">http://code.google.com/p/wsmls/source/browse/trunk/global/Geographic-Space/geographic-events/0.1/geographic-events.rdf</font> ||
+|| <font color="#FF0000">geographic-qualities</font> || <font color="#FF0000">http://purl.org/net/wsml/geospace</font> || <font color="#FF0000">http://code.google.com/p/wsmls/source/browse/trunk/global/Geographic-Space/geographic-qualities/0.2/geographic-qualities.rdf</font> ||
+|| <font color="#FF0000">geographic-systems</font> || <font color="#FF0000">http://purl.org/net/wsml/geospace</font> || <font color="#FF0000">http://code.google.com/p/wsmls/source/browse/trunk/global/Geographic-Space/geographic-systems/0.2/geographic-systems.rdf</font> ||
+|| <font color="#FF0000">geographic-units</font> || <font color="#FF0000">http://purl.org/net/wsml/geospace</font> || <font color="#FF0000">http://code.google.com/p/wsmls/source/browse/trunk/global/Geographic-Space/geographic-units/0.2/geographic-units.rdf</font> ||
 
-|| <font color="#FF0000">DOLCE-Lite</font> || <font color="#FF0000">http://purl.org/net/wsml/geospace</font> || <font color="#FF0000">DOLCE-Lite</font> ||
+=== Observation ===
 
-|| <font color="#FF0000">DOLCE-Lite</font> || <font color="#FF0000">http://purl.org/net/wsml/geospace</font> || <font color="#FF0000">DOLCE-Lite</font> ||
+|| <font color="#FF0000">Observation</font> || <font color="#FF0000">http://purl.org/ifgi/observation</font> || <font color="#FF0000">http://code.google.com/p/wsmls/source/browse/trunk/global/Observations/0.3/Observation.rdf</font> ||
+|| <font color="#FF0000">SSN</font> || <font color="#FF0000">http://purl.oclc.org/NET/ssnx/ssn</font> || <font color="#FF0000">http://code.google.com/p/wsmls/source/browse/trunk/global/Observations/0.3/SSN.rdf</font> ||
 
-|| <font color="#FF0000">DOLCE-Lite</font> || <font color="#FF0000">http://purl.org/net/wsml/geospace</font> || <font color="#FF0000">DOLCE-Lite</font> ||
+=== Patterns ===
 
-|| <font color="#FF0000">DOLCE-Lite</font> || <font color="#FF0000">http://purl.org/net/wsml/geospace</font> || <font color="#FF0000">DOLCE-Lite</font> ||
+|| <font color="#FF0000">Event</font> || <font color="#FF0000">http://purl.org/net/wsmls/patterns</font> || <font color="#FF0000">http://code.google.com/p/wsmls/source/browse/trunk/global/Patterns/Event/0.1/Event.rdf</font> ||
 
+|| <font color="#FF0000">Role</font> || <font color="#FF0000">http://purl.org/net/wsmls/patterns</font> || <font color="#FF0000">http://code.google.com/p/wsmls/source/browse/trunk/global/Patterns/Role/0.1/Role.rdf</font> ||
 
+|| <font color="#FF0000">System</font> || <font color="#FF0000">http://purl.org/net/wsmls/patterns</font> || <font color="#FF0000">http://code.google.com/p/wsmls/source/browse/trunk/global/Patterns/System/0.1/System.rdf</font> ||
 
 #04B404
 * DOLCE-Lite: http://purl.org/net/wsml/dolce --> http://wsmls.googlecode.com/svn/trunk/global/Dolce/DOLCE-Lite.wsml
