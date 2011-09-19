@@ -2,9 +2,12 @@
 
 This page provides a list of namespaces as URLs pointing to the latest versions of the ontologies stored in this repository.
 
+
+<br>
+<br>
 == Global Ontologies ==
 
-=== DOLCE ===
+==== DOLCE ====
 
 || *Ontology* || *Namespace* || *Location* ||
 || <font color="#FF0000">DOLCE-Lite</font> || <font color="#FF0000">http://purl.org/net/wsml/dolce</font> || <font color="#FF0000">http://wsmls.googlecode.com/svn/global/Dolce/DOLCE-Lite.rdf</font> ||
@@ -12,7 +15,7 @@ This page provides a list of namespaces as URLs pointing to the latest versions 
 || <font color="#FF0000">DOLCE_ExtendedDnS</font> || <font color="#FF0000">http://purl.org/net/wsml/dolceDnS</font> || <font color="#FF0000">http://wsmls.googlecode.com/svn/trunk/global/Dolce-Modules/ExtendedDnS/0.2/DOLCE_ExtendedDnS.rdf</font> ||
 || <font color="#FF0000">DOLCE_SpatialRelationS</font> || <font color="#FF0000">http://purl.org/net/wsml/dolceSpatial</font> || <font color="#FF0000">http://wsmls.googlecode.com/svn/trunk/global/Dolce-Modules/SpatialRelations/0.2/DOLCE_SpatialRelations.rdf</font> ||
 
-=== Geographic Space ===
+==== Geographic Space ====
 
 || *Ontology* || *Namespace* || *Location* ||
 || <font color="#FF0000">geographic-space</font> || <font color="#FF0000">http://purl.org/net/wsml/geospace</font> || <font color="#FF0000">http://wsmls.googlecode.com/svn/trunk/global/Geographic-Space/geographic-space/0.3/geographic-space.rdf</font> ||
@@ -27,16 +30,18 @@ This page provides a list of namespaces as URLs pointing to the latest versions 
 || <font color="#FF0000">Observation</font> || <font color="#FF0000">http://purl.org/ifgi/observation</font> || <font color="#FF0000">http://wsmls.googlecode.com/svn/trunk/global/Observations/0.3/Observation.rdf</font> ||
 || <font color="#FF0000">SSN</font> || <font color="#FF0000">http://purl.oclc.org/NET/ssnx/ssn</font> || <font color="#FF0000">http://wsmls.googlecode.com/svn/trunk/global/Observations/0.3/SSN.rdf</font> ||
 
-=== Patterns ===
+==== Patterns ====
 
 || *Ontology* || *Namespace* || *Location* ||
 || <font color="#FF0000">Event</font> || <font color="#FF0000">http://purl.org/net/wsmls/patterns</font> || <font color="#FF0000">http://wsmls.googlecode.com/svn/trunk/global/Patterns/Event/0.1/Event.rdf</font> ||
 || <font color="#FF0000">Role</font> || <font color="#FF0000">http://purl.org/net/wsmls/patterns</font> || <font color="#FF0000">http://wsmls.googlecode.com/svn/trunk/global/Patterns/Role/0.1/Role.rdf</font> ||
 || <font color="#FF0000">System</font> || <font color="#FF0000">http://purl.org/net/wsmls/patterns</font> || <font color="#FF0000">http://wsmls.googlecode.com/svn/trunk/global/Patterns/System/0.1/System.rdf</font> ||
 
-== Application ==
+<br>
+<br>
+== Application Ontologies ==
 
-=== OGC ===
+==== OGC ====
 
 || *Ontology* || *Namespace* || *Location* ||
 || <font color="#FF0000">COV</font> || <font color="#FF0000">http://purl.org/ifgi/cov</font> || <font color="#FF0000">http://wsmls.googlecode.com/svn/trunk/application/OGC/COV/0.1/COV.rdf</font> ||
@@ -52,13 +57,16 @@ This page provides a list of namespaces as URLs pointing to the latest versions 
 || <font color="#04B404">WPS</font> || <font color="#FF0000">http://purl.org/ifgi/wps</font> || <font color="#FF0000">http://wsmls.googlecode.com/svn/trunk/application/OGC/WPS/0.2/WPS.rdf</font> ||
 || <font color="#FF0000">XLink</font> || <font color="#FF0000">http://purl.net/ifgi/xlink</font> || <font color="#FF0000">http://wsmls.googlecode.com/svn/trunk/application/OGC/XLink/XLink.rdf</font> ||
 
-=== WSMO ===
+==== WSMO ====
 
 || *Ontology* || *Namespace* || *Location* ||
 || <font color="#FF0000">POSM</font> || <font color="#FF0000">http://www.wsmo.org/ns/posm/0.2</font> || <font color="#FF0000">http://wsmls.googlecode.com/svn/trunk/application/WSMO/POSM/0.2/POSM.rdf</font> ||
 || <font color="#FF0000">WSL</font> || <font color="#FF0000">http://www.wsmo.org/ns/wsmo-lite</font> || <font color="#FF0000">http://wsmls.googlecode.com/svn/trunk/application/WSMO/WSL/0.1/WSL.rdf</font> ||
 
-== Local ==
+
+<br>
+<br>
+== Local Ontologies ==
 
 || *Ontology* || *Namespace* || *Location* ||
 || <font color="#FF0000">Landslide</font> || <font color="#FF0000">http://purl.org/ifgi/Landslide</font> || <font color="#FF0000">http://wsmls.googlecode.com/svn/trunk/local/Noise/NoiseAll.rdf</font> ||
