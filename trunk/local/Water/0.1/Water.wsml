@@ -9,7 +9,7 @@ namespace { _"http://swing.uni-muenster.de/core/water/",
      }
 
 ontology WaterScenario
-     nonFunctionalProperties
+     annotations
 		dc#creator hasValue "h.michels (IFGI)"
 		dc#contributor hasValue "p.maue (IFGI)"
 		dc#publisher hasValue "(a)IfGI, University of Muenster"
@@ -22,7 +22,7 @@ ontology WaterScenario
 		dc#subject hasValue "GDI-Grid, Hydrology"
 		rdfs#comments hasValue "A try to model such a complex system like a river and its
 		environment."
-	endNonFunctionalProperties
+	endAnnotations
 
 /*
 A natural stream arising in a given drainage basin but not wholly dependent for its flow on surface drainage in its immediate area, 
@@ -34,29 +34,29 @@ and discharging at a fixed point into another body of water. (Source: BJGEO)
 	//Systems
 
 	concept Watercourse subConceptOf geo#GeographicSystem
-		nfp
+		annotations
 			rdfs#label hasValue "Wasserlauf@de"
 			rdfs#label hasValue "watercourse@en"
 			dc#description hasValue "a water body with some current"
 			dc#source hasValue ""
 			dc#subject hasValue "Hydrosphere"
 			rdfs#comments hasValue ""
-		endnfp 
+		endAnnotations 
 		ptns#involvedPhysicalEndurant impliesType geo#WaterBody
 	 
 	concept Lake subConceptOf geo#GeographicSystem
-		nfp
+		annotations
 			rdfs#label hasValue "See@de"
 			rdfs#label hasValue "lake@en"
 			dc#description hasValue "a waterbody without a stream"
 			dc#source hasValue ""
 			dc#subject hasValue "Hydrosphere"
 			rdfs#comments hasValue ""
-		endnfp 
+		endAnnotations 
 		ptns#involvedPhysicalEndurant impliesType geo#WaterBody
 	
 	concept RiverSystem subConceptOf geo#GeographicSystem
-		nfp
+		annotations
 			rdfs#label hasValue "Fluss@de"
 			rdfs#label hasValue "river@en"
 			dc#description hasValue "Total of rivers which consist of the mainsteam river and
@@ -64,7 +64,7 @@ and discharging at a fixed point into another body of water. (Source: BJGEO)
 			dc#source hasValue "http://de.wikipedia.org/wiki/Flusssystem"
 			dc#subject hasValue "Hydrosphere, Systems"
 			rdfs#comments hasValue ""
-		endnfp
+		endAnnotations
 		ptns#involvedPhysicalEndurant impliesType RiverWaterBody
 		ptns#involvedPhysicalEndurant impliesType Reach
 		ptns#involvedPhysicalEndurant impliesType Channel
@@ -80,7 +80,7 @@ and discharging at a fixed point into another body of water. (Source: BJGEO)
 	*/
 		
 	concept DrainageBasin subConceptOf geo#GeomorphologicalUnit
-		nfp
+		annotations
 			rdfs#label hasValue "Einzugsgebiet@de"
 			rdfs#label hasValue "drainage basin@en"
 			dc#description hasValue "A drainage basin is an extent of land where water from
@@ -90,10 +90,10 @@ and discharging at a fixed point into another body of water. (Source: BJGEO)
 			dc#source hasValue "http://en.wikipedia.org/wiki/Drainage_basin"
 			dc#subject hasValue "Hydrosphere"
 			rdfs#comments hasValue ""
-		endnfp	
+		endAnnotations	
 		
 	concept Watershed subConceptOf geo#GeomorphologicalUnit
-		nfp
+		annotations
 			rdfs#label hasValue "Einzugsgebietsgrenze@de"
 			rdfs#label hasValue "watershed@en"
 			dc#description hasValue "Watershed is a ridge of land that seperates two
@@ -101,11 +101,11 @@ and discharging at a fixed point into another body of water. (Source: BJGEO)
 			dc#source hasValue "http://wordnet.princeton.edu/perl/webwn?s=watershed"
 			dc#subject hasValue "Hydrosphere"
 			rdfs#comments hasValue ""
-		endnfp		
+		endAnnotations		
 		dolce#part\-of impliesType DrainageBasin
 
 	concept FloodPlain subConceptOf geo#GeomorphologicalUnit
-		nfp
+		annotations
 			rdfs#label hasValue "Ueberflutungsgebiet@de"
 			rdfs#label hasValue "flood plain@en"
 			dc#description hasValue "Flood plain is flat or nearly flat land adjacent
@@ -113,27 +113,27 @@ and discharging at a fixed point into another body of water. (Source: BJGEO)
 			dc#source hasValue "http://en.wikipedia.org/wiki/Floodplain"
 			dc#subject hasValue "Geography"
 			rdfs#comments hasValue ""
-		endnfp		
+		endAnnotations		
 		dolce#part\-of impliesType DrainageBasin
 		geo#confinedBy impliesType Watershed
 		
 		// TODO: adjacent to a river 
 			
 	concept RiverWaterBody subConceptOf geo#WaterBody
-		nfp
+		annotations
 			rdfs#label hasValue "Wasserkoerper des Flusses@de"
 			rdfs#label hasValue "river waterbody@en"
 			dc#description hasValue "Instance of a waterbody"
 			dc#source hasValue "http://de.wikipedia.org/wiki/Wasserk%C3%B6rper"
 			dc#subject hasValue "Hydrosphere"
 			rdfs#comments hasValue "One example for a waterbody"
-		endnfp		
+		endAnnotations		
 		dolce#participates\-in impliesType Current
 		geo#confinedBy impliesType Channel
 	
 			
 	concept Bank subConceptOf geo#GeomorphologicalUnit
-		nfp
+		annotations
 			rdfs#label hasValue "Flussufer@de"
 			rdfs#label hasValue "bank@en"
 			dc#description hasValue "Bank is the sloping ground that borders a stream and
@@ -141,23 +141,23 @@ and discharging at a fixed point into another body of water. (Source: BJGEO)
 			dc#source hasValue "http://brazos.org/Water_Glossary.htm"
 			dc#subject hasValue "Geography"
 			rdfs#comments hasValue ""
-		endnfp
+		endAnnotations
 		dolce#part\-of impliesType Channel
 			
 	concept Riverbed subConceptOf geo#GeomorphologicalUnit
-		nfp
+		annotations
 			rdfs#label hasValue "Flussbett@de"
 			rdfs#label hasValue "riverbed@en"
 			dc#description hasValue "RIVERBEDWki"
 			dc#source hasValue ""
 			dc#subject hasValue "Geography"
 			rdfs#comments hasValue ""
-		endnfp
+		endAnnotations
 		dolce#has\-quality impliesType StreamGradient
 		dolce#part\-of impliesType Channel
 	
 	concept Reach subConceptOf dolce#endurant
-		nfp
+		annotations
 			rdfs#label hasValue "Flussabschnitt@de"
 			rdfs#label hasValue "reach@en"
 			dc#description hasValue "A reach in geography is an expanse, or widening, of a stream
@@ -165,11 +165,11 @@ and discharging at a fixed point into another body of water. (Source: BJGEO)
 			dc#source hasValue "http://en.wikipedia.org/wiki/Reach_(geography)"
 			dc#subject hasValue "Hydrosphere"
 			rdfs#comments hasValue ""
-		endnfp
+		endAnnotations
 		dolce#has\-quality impliesType WaterLevel
 	
 	concept Channel subConceptOf geo#GeomorphologicalUnit
-		nfp
+		annotations
 			rdfs#label hasValue "Kanal@de"
 			rdfs#label hasValue "channel@en"
 			dc#description hasValue "A channel is the physical confine of a river,
@@ -177,24 +177,24 @@ and discharging at a fixed point into another body of water. (Source: BJGEO)
 			dc#source hasValue "http://en.wikipedia.org/wiki/Channel_(geography)"
 			dc#subject hasValue "Hydrosphere"
 			rdfs#comments hasValue "man-made or natural"
-		endnfp
+		endAnnotations
 	
 	//Events
 	
 	concept Flow subConceptOf ptns#Event
-		nfp
+		annotations
 			rdfs#label hasValue "Fluss@de"
 			rdfs#label hasValue "flow@en"
 			dc#description hasValue "the motion characteristic of fluids"
 			dc#source hasValue "http://wordnet.princeton.edu/perl/webwn?s=flow"
 			dc#subject hasValue "Quality"
 			rdfs#comments hasValue "It is not a river."
-		endnfp
+		endAnnotations
 		dolce#has\-quality impliesType {VolumetricFlowRate, Continuity}
 		ptns#changes impliesType WaterLevel
 	
 	concept Current subConceptOf Flow
-		nfp
+		annotations
 			rdfs#label hasValue "Stroemung@de"
 			rdfs#label hasValue "current@en"
 			dc#description hasValue "A current, in a river or stream, is the flow of water
@@ -202,23 +202,23 @@ and discharging at a fixed point into another body of water. (Source: BJGEO)
 			dc#source hasValue "http://en.wikipedia.org/wiki/Current_(fluid)"
 			dc#subject hasValue "Quality"
 			rdfs#comments hasValue ""
-		endnfp
+		endAnnotations
 	
 	concept Torrent subConceptOf Current
-		nfp
+		annotations
 			rdfs#label hasValue "reissender Strom@de"
 			rdfs#label hasValue "torrent@en"
 			dc#description hasValue "a violently fast stream of water"
 			dc#source hasValue "http://as200l.princeton.edu/perl/webwn?s=torrent"
 			dc#subject hasValue "Quality, Hydrosphere"
 			rdfs#comments hasValue ""
-		endnfp
+		endAnnotations
 	
 	
 	//Qualities
 	
 	concept UnitTime subConceptOf dolce#quality
-		nfp
+		annotations
 			rdfs#label hasValue "Zeiteinheit@de"
 			rdfs#label hasValue "unit time@en"
 			dc#description hasValue "Time is a component of the measuring system used to
@@ -227,13 +227,13 @@ and discharging at a fixed point into another body of water. (Source: BJGEO)
 			dc#source hasValue {"http://en.wikipedia.org/wiki/Time" , "http://de.wikipedia.org/wiki/Zeiteinheit"}
 			dc#subject hasValue "Units"
 			rdfs#comments hasValue "In our case the second is important"
-		endnfp
+		endAnnotations
 		
 		// TODO: add QualitySpace
 		//Which Qualityspace?
 	
 	concept Volume subConceptOf dolce#quality
-		nfp
+		annotations
 			rdfs#label hasValue "Volumen@de"
 			rdfs#label hasValue "volume@en"
 			dc#description hasValue "The amount of 3-dimensional space occupied
@@ -241,24 +241,24 @@ and discharging at a fixed point into another body of water. (Source: BJGEO)
 			dc#source hasValue "http://en.wikipedia.org/wiki/Volume"
 			rdfs#comments hasValue ""
 			dc#subject hasValue "Quality"
-		endnfp
+		endAnnotations
 		
 		// TODO: add QualitySpace
 	
 	concept VolumeOfWaterbody subConceptOf Volume
-		nfp
+		annotations
 			rdfs#label hasValue "Volumen des Wasserk�rpers@de"
 			rdfs#label hasValue "volume of waterbody@en"
 			dc#description hasValue "Volume of a defined waterbody"
 			dc#source hasValue ""
 			dc#subject hasValue "Quality"
 			rdfs#comments hasValue ""
-		endnfp
+		endAnnotations
 		
 		// TODO: add QualitySpace
 	
 	concept StreamGradient subConceptOf geo#Slope
-		nfp
+		annotations
 			rdfs#label hasValue "Flussneigung@de"
 			rdfs#label hasValue "stream gradient@en"
 			dc#description hasValue "The stream gradient ist the slope of a stream�s channel
@@ -266,11 +266,11 @@ and discharging at a fixed point into another body of water. (Source: BJGEO)
 			dc#source hasValue "www.wwnorton.com/college/geo/earth2/glossary/s.htm"
 			dc#subject hasValue "Quality"
 			rdfs#comments hasValue ""
-		endnfp
+		endAnnotations
 		// TODO: add QualitySpace
 		
 	concept VolumetricFlowRate subConceptOf dolce#quality
-		nfp
+		annotations
 			rdfs#label hasValue "Durchfluss@de"
 			rdfs#label hasValue "volumetric flow rate@en"
 			dc#description hasValue "The volumetric flow rate, also volume flow rate and rate
@@ -281,22 +281,22 @@ and discharging at a fixed point into another body of water. (Source: BJGEO)
 			dc#source hasValue "http://en.wikipedia.org/wiki/Volumetric_flow_rate"
 			dc#subject hasValue "Quality"
 			rdfs#comments hasValue ""
-		endnfp
+		endAnnotations
 		derivedQuality impliesType {UnitTime, VolumeOfWaterbody}
-			nfp
+			annotations
 				rdfs#label hasValue "zusammengesetzte Qualitaet@de"
 				rdfs#label hasValue "composed quality@en"
 				dc#description hasValue ""
 				dc#source hasValue ""
 				rdfs#comments hasValue ""
-			endNonFunctionalProperties
+			endAnnotations
 			
 		// TODO: add QualitySpace
 		// TODO: move to Quality namespace
 		//Which Quality namespace?
 	
 	concept Continuity subConceptOf dolce#quality
-		nfp
+		annotations
 			rdfs#label hasValue "bestaendigFlussneigung@de"
 			rdfs#label hasValue "steady@en"
 			dc#description hasValue "A steady flow is one in which the conditions
@@ -305,21 +305,21 @@ and discharging at a fixed point into another body of water. (Source: BJGEO)
 			dc#source hasValue "staff.fit.ac.cy/eng.fm/classes/amee202/amee202_cn_chapter04.doc"
 			dc#subject hasValue "Quality"
 			rdfs#comments hasValue ""
-		endnfp
+		endAnnotations
 	
 	
 	concept WaterLevel subConceptOf geo#Elevation
-		nfp
+		annotations
 			rdfs#label hasValue "Pegelstand@de"
 			rdfs#label hasValue "water level@en"
 			dc#description hasValue "The height of the water surface measured above a datum"
 			dc#source hasValue "http://amsglossary.allenpress.com/glossary/browse?s=w&p=7"
 			rdfs#comments hasValue ""
 			dc#subject hasValue "Quality"
-		endnfp
+		endAnnotations
 	
 	concept SeaLevel subConceptOf WaterLevel
-		nfp
+		annotations
 			rdfs#label hasValue "Meeresspiegel@de"
 			rdfs#label hasValue "sea level@en"
 			dc#description hasValue "The height of the sea at a given time measured relative
@@ -328,4 +328,4 @@ and discharging at a fixed point into another body of water. (Source: BJGEO)
 			http://en.wikipedia.org/wiki/Sea_level"
 			rdfs#comments hasValue ""
 			dc#subject hasValue "Quality"
-		endnfp
+		endAnnotations
