@@ -1,0 +1,160 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://purl.net/concepts/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix xlink: <http://www.w3.org/1999/xlink#> .
+
+# http://purl.org/dc/elements/1.1/creator: "pajoma"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/date: "12-02-2010"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/type: "Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/title: "GML 3.0 candidate xlinks schema."^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/description: "A GML feature is a (representation of a) identifiable real-world object in a selected domain of discourse. The feature schema provides a framework for the creation of GML features and feature collections."^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/source: "http://schemas.opengis.net/xlink/1.0.0/"^^<http://www.w3.org/2001/XMLSchema#string>
+
+xlink:simpleLink a rdfs:Class .
+
+:type a rdf:Property ;
+	rdfs:domain xlink:simpleLink .
+
+xlink:href a rdf:Property ;
+	rdfs:domain xlink:simpleLink .
+
+xlink:role a rdf:Property ;
+	rdfs:domain xlink:simpleLink .
+
+xlink:arcrole a rdf:Property ;
+	rdfs:domain xlink:simpleLink .
+
+xlink:title a rdf:Property ;
+	rdfs:domain xlink:simpleLink .
+
+xlink:show a rdf:Property ;
+	rdfs:domain xlink:simpleLink .
+
+xlink:actuate a rdf:Property ;
+	rdfs:domain xlink:simpleLink .
+
+xlink:extendedLink a rdfs:Class .
+
+:type a rdf:Property ;
+	rdfs:domain xlink:extendedLink .
+
+xlink:role a rdf:Property ;
+	rdfs:domain xlink:extendedLink .
+
+xlink:title a rdf:Property ;
+	rdfs:domain xlink:extendedLink .
+
+xlink:locatorLink a rdfs:Class .
+
+:type a rdf:Property ;
+	rdfs:domain xlink:locatorLink .
+
+xlink:href a rdf:Property ;
+	rdfs:domain xlink:locatorLink .
+
+xlink:role a rdf:Property ;
+	rdfs:domain xlink:locatorLink .
+
+xlink:title a rdf:Property ;
+	rdfs:domain xlink:locatorLink .
+
+xlink:label a rdf:Property ;
+	rdfs:domain xlink:locatorLink .
+
+xlink:arcLink a rdfs:Class .
+
+:type a rdf:Property ;
+	rdfs:domain xlink:arcLink .
+
+xlink:arcrole a rdf:Property ;
+	rdfs:domain xlink:arcLink .
+
+xlink:title a rdf:Property ;
+	rdfs:domain xlink:arcLink .
+
+xlink:from a rdf:Property ;
+	rdfs:domain xlink:arcLink .
+
+xlink:to a rdf:Property ;
+	rdfs:domain xlink:arcLink .
+
+xlink:show a rdf:Property ;
+	rdfs:domain xlink:arcLink .
+
+xlink:actuate a rdf:Property ;
+	rdfs:domain xlink:arcLink .
+
+xlink:resourceLink a rdfs:Class .
+
+:type a rdf:Property ;
+	rdfs:domain xlink:resourceLink .
+
+xlink:role a rdf:Property ;
+	rdfs:domain xlink:resourceLink .
+
+xlink:title a rdf:Property ;
+	rdfs:domain xlink:resourceLink .
+
+xlink:label a rdf:Property ;
+	rdfs:domain xlink:resourceLink .
+
+xlink:titleLink a rdfs:Class .
+
+:type a rdf:Property ;
+	rdfs:domain xlink:titleLink .
+
+xlink:emptyLink a rdfs:Class .
+
+:type a rdf:Property ;
+	rdfs:domain xlink:emptyLink .
+
+xlink:href a rdfs:Class .
+
+:value a rdf:Property ;
+	rdfs:domain xlink:href .
+
+xlink:role a rdfs:Class .
+
+:value a rdf:Property ;
+	rdfs:domain xlink:role .
+
+xlink:arcrole a rdfs:Class .
+
+:value a rdf:Property ;
+	rdfs:domain xlink:arcrole .
+
+xlink:title a rdfs:Class .
+
+:value a rdf:Property ;
+	rdfs:domain xlink:title .
+
+xlink:show a rdfs:Class ;
+	dc:description "The 'show' attribute is used to communicate the desired presentation of the ending resource on traversal from the starting resource; it's value should be treated as follows: new - load ending resource in a new window, frame, pane, or other presentation context replace - load the resource in the same window, frame, pane, or other presentation context embed - load ending resource in place of the presentation of the starting resource other - behavior is unconstrained; examine other markup in the link for hints none - behavior is unconstrained"^^xsd:string .
+
+:value a rdf:Property ;
+	rdfs:domain xlink:show .
+
+xlink:actuate a rdfs:Class ;
+	dc:description "The 'actuate' attribute is used to communicate the desired timing of traversal from the starting resource to the ending resource; it's value should be treated as follows: onLoad - traverse to the ending resource immediately on loading the starting resource onRequest - traverse from the starting resource to the ending resource only on a post-loading event triggered for this purpose other - behavior is unconstrained; examine other markup in link for hints none - behavior is unconstrained"^^xsd:string .
+
+:value a rdf:Property ;
+	rdfs:domain xlink:actuate .
+
+xlink:label a rdfs:Class .
+
+:value a rdf:Property ;
+	rdfs:domain xlink:label .
+
+xlink:from a rdfs:Class .
+
+:value a rdf:Property ;
+	rdfs:domain xlink:from .
+
+xlink:to a rdfs:Class .
+
+:value a rdf:Property ;
+	rdfs:domain xlink:to .

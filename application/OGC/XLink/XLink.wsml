@@ -7,7 +7,7 @@ xlink _"http://www.w3.org/1999/xlink"
 
 
 ontology XLink
-	nonFunctionalProperties
+	annotations
 		dc#creator hasValue "pajoma"
 		dc#publisher hasValue "(a)IfGI, University of Muenster"
 		dc#date hasValue "12-02-2010"
@@ -16,7 +16,7 @@ ontology XLink
 		dc#title hasValue "GML 3.0 candidate xlinks schema."
 		dc#description hasValue "A GML feature is a (representation of a) identifiable real-world object in a selected domain of discourse. The feature schema provides a framework for the creation of GML features and feature collections."
 		dc#source hasValue "http://schemas.opengis.net/xlink/1.0.0/"
-	endNonFunctionalProperties
+	endAnnotations
 
 	/*attribute groups*/
 
@@ -77,15 +77,15 @@ ontology XLink
 		value ofType _string
 		
 	concept xlink#show
-		nonFunctionalProperties
+		annotations
 			dc#description hasValue "The 'show' attribute is used to communicate the desired presentation of the ending resource on traversal from the starting resource; it's value should be treated as follows: new - load ending resource in a new window, frame, pane, or other presentation context replace - load the resource in the same window, frame, pane, or other presentation context embed - load ending resource in place of the presentation of the starting resource other - behavior is unconstrained; examine other markup in the link for hints none - behavior is unconstrained"
-		endNonFunctionalProperties
+		endAnnotations
 		value ofType _string
 		
 	concept xlink#actuate
-		nonFunctionalProperties
+		annotations
 			dc#description hasValue "The 'actuate' attribute is used to communicate the desired timing of traversal from the starting resource to the ending resource; it's value should be treated as follows: onLoad - traverse to the ending resource immediately on loading the starting resource onRequest - traverse from the starting resource to the ending resource only on a post-loading event triggered for this purpose other - behavior is unconstrained; examine other markup in link for hints none - behavior is unconstrained"
-		endNonFunctionalProperties
+		endAnnotations
 		value ofType _string
 		
 	concept xlink#label

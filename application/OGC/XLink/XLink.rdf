@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns="http://purl.net/concepts/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:xlink="http://www.w3.org/1999/xlink#">
+<!-- http://purl.org/dc/elements/1.1/creator: "pajoma"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/date: "12-02-2010"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/type: "Ontology"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/title: "GML 3.0 candidate xlinks schema."^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/description: "A GML feature is a (representation of a) identifiable real-world object in a selected domain of discourse. The feature schema provides a framework for the creation of GML features and feature collections."^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/source: "http://schemas.opengis.net/xlink/1.0.0/"^^<http://www.w3.org/2001/XMLSchema#string> -->
+
+<rdf:Description rdf:about="http://www.w3.org/1999/xlink#simpleLink">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.net/concepts/type">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#simpleLink"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/1999/xlink#href">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#simpleLink"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/1999/xlink#role">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#simpleLink"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/1999/xlink#arcrole">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#simpleLink"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/1999/xlink#title">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#simpleLink"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/1999/xlink#show">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#simpleLink"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/1999/xlink#actuate">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#simpleLink"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/1999/xlink#extendedLink">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.net/concepts/type">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#extendedLink"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/1999/xlink#role">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#extendedLink"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/1999/xlink#title">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#extendedLink"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/1999/xlink#locatorLink">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.net/concepts/type">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#locatorLink"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/1999/xlink#href">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#locatorLink"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/1999/xlink#role">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#locatorLink"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/1999/xlink#title">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#locatorLink"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/1999/xlink#label">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#locatorLink"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/1999/xlink#arcLink">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.net/concepts/type">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#arcLink"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/1999/xlink#arcrole">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#arcLink"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/1999/xlink#title">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#arcLink"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/1999/xlink#from">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#arcLink"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/1999/xlink#to">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#arcLink"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/1999/xlink#show">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#arcLink"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/1999/xlink#actuate">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#arcLink"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/1999/xlink#resourceLink">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.net/concepts/type">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#resourceLink"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/1999/xlink#role">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#resourceLink"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/1999/xlink#title">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#resourceLink"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/1999/xlink#label">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#resourceLink"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/1999/xlink#titleLink">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.net/concepts/type">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#titleLink"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/1999/xlink#emptyLink">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.net/concepts/type">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#emptyLink"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/1999/xlink#href">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.net/concepts/value">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#href"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/1999/xlink#role">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.net/concepts/value">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#role"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/1999/xlink#arcrole">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.net/concepts/value">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#arcrole"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/1999/xlink#title">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.net/concepts/value">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#title"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/1999/xlink#show">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The 'show' attribute is used to communicate the desired presentation of the ending resource on traversal from the starting resource; it's value should be treated as follows: new - load ending resource in a new window, frame, pane, or other presentation context replace - load the resource in the same window, frame, pane, or other presentation context embed - load ending resource in place of the presentation of the starting resource other - behavior is unconstrained; examine other markup in the link for hints none - behavior is unconstrained</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.net/concepts/value">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#show"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/1999/xlink#actuate">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The 'actuate' attribute is used to communicate the desired timing of traversal from the starting resource to the ending resource; it's value should be treated as follows: onLoad - traverse to the ending resource immediately on loading the starting resource onRequest - traverse from the starting resource to the ending resource only on a post-loading event triggered for this purpose other - behavior is unconstrained; examine other markup in link for hints none - behavior is unconstrained</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.net/concepts/value">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#actuate"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/1999/xlink#label">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.net/concepts/value">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#label"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/1999/xlink#from">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.net/concepts/value">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#from"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/1999/xlink#to">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.net/concepts/value">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#to"/>
+</rdf:Description>
+
+</rdf:RDF>
