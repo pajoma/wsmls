@@ -62,6 +62,7 @@ This page provides a list of namespaces as URLs pointing to the latest versions 
 || *Ontology* || *Namespace* || *Location* ||
 || <font color="#FF0000">POSM</font> || <font color="#FF0000">http://www.wsmo.org/ns/posm/0.2</font> || <font color="#FF0000">http://wsmls.googlecode.com/svn/trunk/application/WSMO/POSM/0.2/POSM.rdf</font> ||
 || <font color="#FF0000">WSL</font> || <font color="#FF0000">http://www.wsmo.org/ns/wsmo-lite</font> || <font color="#FF0000">http://wsmls.googlecode.com/svn/trunk/application/WSMO/WSL/0.1/WSL.rdf</font> ||
+|| <font color="#FF0000">Annotation</font> || <font color="#FF0000">http://purl.org/ifgi/annotations</font> || <font color="#FF0000">http://wsmls.googlecode.com/svn/trunk/application/Annotation/Annotation.rdf</font> ||
 
 
 <br>
