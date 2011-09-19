@@ -9,7 +9,7 @@ namespace { _"http://swing.uni-muenster.de/core/",
      }
 
 ontology NoiseAll
-     nonFunctionalProperties
+     annotations
 		dc#creator hasValue "h.michels (IFGI)"
 		dc#contributor hasValue "p.maue (IFGI)"
 		dc#publisher hasValue "(a)IfGI, University of Muenster"
@@ -22,12 +22,12 @@ ontology NoiseAll
 		dc#subject hasValue "GDI-Grid"
 		// , Pollution, Traffic, Infrastructure, Vehicle, Sound Emission, Intensity, Noise Barrier, Street, Road, Car, Geographical Space, Junction, Physical Endurant, City, Direction Change
 		rdfs#comments hasValue "Traffic plays the role of a system in a given environment"
-	endNonFunctionalProperties
+	endAnnotations
 	
 	//Systems
 	
 	concept TrafficSystem subConceptOf geo#GeographicSystem
-		nfp
+		annotations
 			rdfs#label hasValue "Vekehrssystem@de"
 			rdfs#label hasValue "traffic system@en"
 			dc#description hasValue "Consists of the traffic infrastructure and all means
@@ -36,7 +36,7 @@ ontology NoiseAll
 			dc#source hasValue "http://de.wikipedia.org/wiki/Verkehrssystem"
 			dc#subject hasValue "Systems, Traffic"
 			rdfs#comments hasValue ""
-		endnfp
+		endAnnotations
 		patterns#involvedPhysicalEndurant impliesType Vehicle
 		patterns#involvedPhysicalEndurant impliesType RoadNetwork
 		patterns#involvedPerdurant impliesType TrafficFlow
@@ -53,7 +53,7 @@ ontology NoiseAll
 	//Collectives
 
 	concept Infrastructure subConceptOf dolce#collective
-		nfp
+		annotations
 			rdfs#label hasValue "Infrastruktur@de"
 			rdfs#label hasValue "infrastructure@en"
 			dc#description hasValue "refers to the features (facilities/services) of a system
@@ -63,7 +63,7 @@ ontology NoiseAll
 			"http://www.dsokolov.com/e107_plugins/content/content.php?content.13"}
 			dc#subject hasValue "Collectives"
 			rdfs#comments hasValue ""
-		endnfp
+		endAnnotations
 		dolce#consists\-of impliesType RoadNetwork
 	
 	//Set
@@ -72,17 +72,17 @@ ontology NoiseAll
 	//Objects
 		
 		concept NoiseImissionEnvironment subConceptOf geo#GeographicalUnit
-		nfp
+		annotations
 			rdfs#label hasValue "Laermeinzugsgebiet@de"
 			rdfs#label hasValue "noise imission environment@en"
 			dc#description hasValue "describes the environment of an receiver where the noise arrives"
 			dc#source hasValue "http://www.muelheim-ruhr.de/cms/technische_grundbegriffe__glossar1.html"
 			dc#subject hasValue "Environment, Accoustics"
 			rdfs#comments hasValue ""
-		endnfp
+		endAnnotations
 	
 	concept RoadNetwork subConceptOf dolce#physical\-endurant
-		nfp
+		annotations
 			rdfs#label hasValue "Steckennetz@de"
 			rdfs#label hasValue "road network@en"
 			dc#description hasValue "The overall framework for transportation mobility as it
@@ -93,10 +93,10 @@ ontology NoiseAll
 			dc#source hasValue "www.fortmillsc.org/client_resources/compplan/key_terminology.doc"
 			dc#subject hasValue "Infrastructure, Roads"
 			rdfs#comments hasValue ""
-		endnfp
+		endAnnotations
 			
 	concept	Junction subConceptOf dolce#physical\-endurant
-		nfp
+		annotations
 			rdfs#label hasValue "Knotenpunkt@de"
 			rdfs#label hasValue "junction@en"
 			dc#description hasValue "the place where two or more things come together"
@@ -104,10 +104,10 @@ ontology NoiseAll
 			WordNet&o2=&o0=1&o7=&o5=&o1=1&o6=&o4=&o3=&h=11000000000000000000000000"
 			dc#subject hasValue "Infrastructure, Roads"
 			rdfs#comments hasValue ""
-		endnfp
+		endAnnotations
 	
 	concept	Road subConceptOf dolce#physical\-endurant
-		nfp
+		annotations
 			rdfs#label hasValue "Strecke@de"
 			rdfs#label hasValue "road@en"
 			dc#description hasValue "an open way (generally public) for travel or transportation"
@@ -115,11 +115,11 @@ ontology NoiseAll
 			=&o4=&o3=&s=road&i=1&h=1000000#c"
 			dc#subject hasValue "Infrastructure, Roads"
 			rdfs#comments hasValue ""
-		endnfp
+		endAnnotations
 		dolce#part\-of impliesType RoadNetwork
 		
 	concept	Crossing subConceptOf Junction
-		nfp
+		annotations
 			rdfs#label hasValue "Kreuzung von Linien@de"
 			rdfs#label hasValue "crossing@en"
 			dc#description hasValue "Crossing is a point where two lines (paths or arcs etc.)
@@ -128,29 +128,29 @@ ontology NoiseAll
 			1&o6=&o4=&o3=&s=crossing"
 			dc#subject hasValue "Infrastructure, Roads"
 			rdfs#comments hasValue ""
-		endnfp
+		endAnnotations
 		dolce#part\-of impliesType RoadNetwork
 		intersects impliesType Road
-			nfp
+			annotations
 				rdfs#label hasValue "schneidet@de"
 				rdfs#label hasValue "intersects@en"
 				dc#description hasValue ""
 				dc#source hasValue ""
 				rdfs#comments hasValue ""
-			endnfp	
+			endAnnotations	
 	
 	concept	Intersection subConceptOf Crossing
-		nfp
+		annotations
 			rdfs#label hasValue "Kreuzung@de"
 			rdfs#label hasValue "intersection@en"
 			dc#description hasValue "Intersection is a junction where one road/street crosses another"
 			dc#source hasValue ""
 			dc#subject hasValue "Infrastructure, Roads"
 			rdfs#comments hasValue ""
-		endnfp
+		endAnnotations
 	
 	concept	Interchange subConceptOf Crossing
-		nfp
+		annotations
 			rdfs#label hasValue "Autobahnkreuz@de"
 			rdfs#label hasValue "interchange@en"
 			dc#description hasValue "Interchange is a junction of highways on different levels
@@ -159,10 +159,10 @@ ontology NoiseAll
 			6=&o4=&o3=&s=interchange"
 			dc#subject hasValue "Infrastructure, Roads"
 			rdfs#comments hasValue ""
-		endnfp
+		endAnnotations
 	
 	concept	Roundabout subConceptOf Crossing
-		nfp
+		annotations
 			rdfs#label hasValue "Kreisverkehr@de"
 			rdfs#label hasValue "roundabout@en"
 			dc#description hasValue "Roundabout is a road junction at which traffic streams
@@ -171,10 +171,10 @@ ontology NoiseAll
 			1&o6=&o4=&o3=&s=roundabout"
 			dc#subject hasValue "Infrastructure, Roads"
 			rdfs#comments hasValue ""
-		endnfp
+		endAnnotations
 			
 	concept	Street subConceptOf dolce#physical\-endurant
-		nfp
+		annotations
 			rdfs#label hasValue "Strasse@de"
 			rdfs#label hasValue "street@en"
 			dc#description hasValue "a street is a public thoroughfare in the built environment including sidewalks"
@@ -182,7 +182,7 @@ ontology NoiseAll
 			"http://wordnet.princeton.edu/perl/webwn?s=street"}
 		    dc#subject hasValue "Infrastructure, Roads"
 			rdfs#comments hasValue ""
-		endnfp
+		endAnnotations
 		dolce#part\-of impliesType Road
 		geo#sourroundedBy impliesType geo#Environment
 			
@@ -193,18 +193,18 @@ ontology NoiseAll
 //		 	?object[surroundedBy ofType ?env] memberOf Street.
 			
 	concept	StreetSection subConceptOf dolce#endurant
-		nfp
+		annotations
 			rdfs#label hasValue "Strassensegment@de"
 			rdfs#label hasValue "street segment@en"
 			dc#description hasValue "a defined part of a street by yourself or a defined part by a department"
 			dc#source hasValue ""
 			dc#subject hasValue "Infrastructure, Roads"
 			rdfs#comments hasValue ""
-		endnfp
+		endAnnotations
 		dolce#part\-of impliesType Street
 			
 	concept	Vehicle subConceptOf dolce#physical\-endurant
-		nfp
+		annotations
 			rdfs#label hasValue "Fahrzeug@de"
 			rdfs#label hasValue "vehicle@en"
 			dc#description hasValue "a mobile conveyance for carrying or transporting goods or persons"
@@ -212,12 +212,12 @@ ontology NoiseAll
 			"http://wordnet.princeton.edu/perl/webwn?s=vehicle"}
 			dc#subject hasValue "Transportation"
 			rdfs#comments hasValue ""
-		endnfp
+		endAnnotations
 		dolce#participates\-in impliesType {TrafficFlow, SoundEmission}
 		
 	
 	concept Vehicles subConceptOf dolce#set
-		nfp
+		annotations
 			rdfs#label hasValue "Fahrzeuge@de"
 			rdfs#label hasValue "vehicles@en"
 			dc#description hasValue "a mobile conveyance for carrying or transporting goods or persons"
@@ -225,22 +225,22 @@ ontology NoiseAll
 			"http://wordnet.princeton.edu/perl/webwn?s=vehicle"}
 			dc#subject hasValue "Transportation"
 			rdfs#comments hasValue ""
-		endnfp
+		endAnnotations
 		dolce#consists\-of impliesType Vehicle
 		dolce#has\-quality impliesType TrafficDensity		
 			
 	concept Car subConceptOf Vehicle
-		nfp
+		annotations
 			rdfs#label hasValue "Personenkraftwagen@de"
 			rdfs#label hasValue "car@en"
 			dc#description hasValue "a car is a wheeled motor vehicle for transportating passengers"
 			dc#source hasValue "http://en.wikipedia.org/wiki/Car"
 			dc#subject hasValue "Transportation, Roads"
 			rdfs#comments hasValue ""
-		endnfp
+		endAnnotations
 		
 	concept Tire subConceptOf dolce#physical\-endurant
-		nfp
+		annotations
 			rdfs#label hasValue "Reifen@de"
 			rdfs#label hasValue "tire@en"
 			dc#description hasValue "are ring-shaped parts, either pneumatic or solid
@@ -249,12 +249,12 @@ ontology NoiseAll
 			dc#source hasValue "http://en.wikipedia.org/wiki/Tire"
 			dc#subject hasValue "Transportation, Roads"
 			rdfs#comments hasValue ""
-		endnfp
+		endAnnotations
 		dolce#part\-of impliesType Vehicle
 		dolce#has\-quality impliesType TireType
 		
 	concept	TireType subConceptOf dolce#quality
-		nfp
+		annotations
 			rdfs#label hasValue "Reifenart@de"
 			rdfs#label hasValue "tire type@en"
 			dc#description hasValue "Classification of tires into several standard types,
@@ -262,10 +262,10 @@ ontology NoiseAll
 			dc#source hasValue "http://en.wikipedia.org/wiki/Tire"
 			dc#subject hasValue "Transportation, Roads, Quality"
 			rdfs#comments hasValue ""
-		endnfp			
+		endAnnotations			
 			
 	concept Building subConceptOf {geo#GeographicalUnit}
-		nfp
+		annotations
 			rdfs#label hasValue "Gebaeude@de"
 			rdfs#label hasValue "building@en"
 			dc#description hasValue "a fixed construction with walls, foundation, and roof, such as a house,
@@ -273,34 +273,34 @@ ontology NoiseAll
 			dc#source hasValue "http://www.cdc.gov/nceh/publications/books/housing/definitions.htm"
 			dc#subject hasValue "Construction"
 			rdfs#comments hasValue ""
-		endnfp	
+		endAnnotations	
 		geo#situatedIn impliesType UrbanizedArea
 	
 	concept Tree subConceptOf {geo#GeographicalUnit}
-		nfp
+		annotations
 			rdfs#label hasValue "Gebaeude@de"
 			rdfs#label hasValue "building@en"
 			dc#description hasValue "a woody plant with one to a few stems and many branches"
 			dc#source hasValue "http://extension.usu.edu/forestry/UtahForests/Trees_BotanicalGlossary.htm#t"
 			dc#subject hasValue "Plants"
 			rdfs#comments hasValue ""
-		endnfp
+		endAnnotations
 		geo#situatedIn impliesType UrbanizedArea
 		
 	concept UrbanizedArea subConceptOf geo#GeographicalUnit
-		nfp
+		annotations
 			rdfs#label hasValue "st�dtisches Gebiet@de"
 			rdfs#label hasValue "UrbanizedArea@en"
 			dc#description hasValue "a geographical area constituting a city or town"
 			dc#source hasValue "http://wordnetweb.princeton.edu/perl/webwn?s=urban%20area"
 			dc#subject hasValue "Environment"
 			rdfs#comments hasValue ""
-		endnfp
+		endAnnotations
 		
 	//Events
 	
 	concept Pollution subConceptOf dolce#perdurant
-		nfp
+		annotations
 			rdfs#label hasValue "Kontamination@de"
 			rdfs#label hasValue "pollution@en"
 			dc#description hasValue "it is the introduction of contaminants into an environment that causes instability,
@@ -308,10 +308,10 @@ ontology NoiseAll
 			dc#source hasValue "http://en.wikipedia.org/wiki/Pollution"
 			dc#subject hasValue "Pollution"
 			rdfs#comments hasValue ""
-		endnfp
+		endAnnotations
 			
 	concept SoundEmission subConceptOf patterns#Event
-		nfp
+		annotations
 			rdfs#label hasValue "Ger�uschemission@de"
 			rdfs#label hasValue "sound emission@en"
 			dc#description hasValue "the source which sends out sound waves who take injurious
@@ -320,23 +320,23 @@ ontology NoiseAll
 			dc#source hasValue "http://de.wikipedia.org/wiki/L%C3%A4rmemission"
 			dc#subject hasValue "Accoustics"
 			rdfs#comments hasValue ""
-		endnfp
+		endAnnotations
 		patterns#initiates impliesType Noise
 		patterns#changes impliesType Intensity
 			
 	concept Noise subConceptOf Pollution
-		nfp
+		annotations
 			rdfs#label hasValue "L�rm@de"
 			rdfs#label hasValue "noise@en"
 			dc#description hasValue ""
 			dc#source hasValue ""
 			dc#subject hasValue "Noise"
 			rdfs#comments hasValue ""
-		endnfp	
+		endAnnotations	
 		dolce#has\-quality impliesType Intensity
 	
 	concept TrafficFlow subConceptOf dolce#perdurant
-		nfp
+		annotations
 			rdfs#label hasValue "Verkehrsfluss@de"
 			rdfs#label hasValue "traffic flow@en"
 			dc#description hasValue "measured number of vehicles who cross
@@ -344,12 +344,12 @@ ontology NoiseAll
 			dc#source hasValue "http://de.wikipedia.org/wiki/Verkehrsfluss"
 			dc#subject hasValue "Traffic"
 			rdfs#comments hasValue ""
-		endnfp	
+		endAnnotations	
 	
 	//Roles
 	
 	concept NoiseBarrier subConceptOf patterns#Role
-		nfp
+		annotations
 			rdfs#label hasValue "Laermbarriere@de"
 			rdfs#label hasValue "noise barrier@en"
 			dc#description hasValue "it is an exterior structure designed to protect/lag sensitive land
@@ -358,7 +358,7 @@ ontology NoiseAll
 			"http://de.wikipedia.org/wiki/L%C3%A4rmschutzwand"}
 			dc#subject hasValue "Accoustics"
 			rdfs#comments hasValue ""
-		endnfp
+		endAnnotations
 		patterns#isPlayedBy impliesType {Building, Tree}
 		dolce#has\-quality impliesType {Refraction, Reflection, Diffraction}
 	
@@ -366,7 +366,7 @@ ontology NoiseAll
 	//Endurants
 	
 	concept Sound subConceptOf dolce#endurant
-		nfp
+		annotations
 			rdfs#label hasValue "Schall@de"
 			rdfs#label hasValue "sound@en"
 			dc#description hasValue "sound is a wave produced by the vibration of an object
@@ -375,13 +375,13 @@ ontology NoiseAll
 			"http://en.wikipedia.org/wiki/Sound_Wave"}
 			dc#subject hasValue "Accoustics"
 			rdfs#comments hasValue ""
-		endnfp	
+		endAnnotations	
 		dolce#has\-quality impliesType Intensity
 			
 	//Qualities
 	
 	concept	Intensity subConceptOf dolce#quality
-		nfp
+		annotations
 			rdfs#label hasValue "Intensit�t@de"
 			rdfs#label hasValue "intensity@en"
 			dc#description hasValue "the amount of energy transmitted"
@@ -389,10 +389,10 @@ ontology NoiseAll
 			=intensity&sub=Search+WordNet&o2=&o0=1&o7=&o5=&o1=1&o6=&o4=&o3=&h=0"
 			dc#subject hasValue "Quality"
 			rdfs#comments hasValue ""
-		endnfp
+		endAnnotations
 	
 	concept	TrafficDensity subConceptOf dolce#quality
-		nfp
+		annotations
 			rdfs#label hasValue "Verkehrsdichte@de"
 			rdfs#label hasValue "traffic density@en"
 			dc#description hasValue "Traffic density is the number of vehicles of different traffic carrier
@@ -400,12 +400,12 @@ ontology NoiseAll
 			dc#source hasValue "http://de.wikipedia.org/wiki/Verkehrsdichte"
 			dc#subject hasValue "Quality, Traffic"
 			rdfs#comments hasValue ""
-		endnfp
+		endAnnotations
 		
 
 	
 	concept Refraction subConceptOf dolce#quality
-		nfp
+		annotations
 			rdfs#label hasValue "Brechung@de"
 			rdfs#label hasValue "refraction@en"
 			dc#description hasValue "The change in direction of a wave due to change in its speed
@@ -414,10 +414,10 @@ ontology NoiseAll
 			"http://en.wikipedia.org/wiki/Refraction"}
 			dc#subject hasValue "Quality"
 			rdfs#comments hasValue ""
-		endnfp
+		endAnnotations
 		
 	concept Reflection subConceptOf dolce#quality
-		nfp
+		annotations
 			rdfs#label hasValue "Reflektion@de"
 			rdfs#label hasValue "reflection@en"
 			dc#description hasValue "the change in direction of a wave at an interface
@@ -427,10 +427,10 @@ ontology NoiseAll
 			"http://wordnet.princeton.edu/perl/webwn?s=reflection"}
 			dc#subject hasValue "Quality"
 			rdfs#comments hasValue ""
-		endnfp			
+		endAnnotations			
 		
 	concept Diffraction subConceptOf dolce#quality
-		nfp
+		annotations
 			rdfs#label hasValue "Beugung@de"
 			rdfs#label hasValue "diffraction@en"
 			dc#description hasValue "The change in direction of a wave due to change in its speed
@@ -439,4 +439,4 @@ ontology NoiseAll
 			"http://en.wikipedia.org/wiki/Refraction"}
 			dc#subject hasValue "Quality"
 			rdfs#comments hasValue ""
-		endnfp		
+		endAnnotations		
