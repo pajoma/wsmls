@@ -1,5 +1,5 @@
 wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
-namespace { _"http://purl.net/concepts/",
+namespace { _"http://purl.net/ifgi/xlink#",
 dc _"http://purl.org/dc/elements/1.1/", 
 xlink _"http://www.w3.org/1999/xlink"
  }
