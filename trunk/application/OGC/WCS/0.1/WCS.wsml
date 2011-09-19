@@ -25,11 +25,11 @@ ontology WCS
 	concept WebCoverageService subConceptOf ows#OGCWebService
 	
 	concept DescribeCoverage subConceptOf posm#Operation
-	concept DescribeCoverageInput subConceptOf posm#MessagePart
+	concept DescribeCoverageRequest subConceptOf posm#MessagePart
 		annotations
 			rdfs#seeAlso hasValue _"http://schemas.opengis.net/wcs/1.1/wcsDescribeCoverage.xsd#DescribeCoverage"
 		endAnnotations
-	concept DescribeCoverageOutput subConceptOf posm#MessagePart
+	concept DescribeCoverageResponse subConceptOf posm#MessagePart
 		annotations
 			rdfs#seeAlso hasValue _"http://schemas.opengis.net/wcs/1.1/wcsDescribeCoverage.xsd#CoverageDescriptions"
 		endAnnotations
@@ -37,11 +37,11 @@ ontology WCS
 	
 	
 	concept GetCoverage subConceptOf posm#Operation
-	concept GetCoverageInput subConceptOf posm#MessagePart
+	concept GetCoverageRequest subConceptOf posm#MessagePart
 		annotations
 			rdfs#seeAlso hasValue _"http://schemas.opengis.net/wcs/1.1/wcsGetCoverage.xsd#GetCoverage"
 		endAnnotations
-	concept GetCoverageOutput subConceptOf posm#MessagePart
+	concept GetCoverageResponse subConceptOf posm#MessagePart
 		annotations
 			rdfs#seeAlso hasValue _"http://schemas.opengis.net/wcs/1.1/wcsCoverages.xsd#Coverages"
 		endAnnotations
@@ -50,12 +50,12 @@ ontology WCS
 	
 	/* default instances */
 	instance DefaultDescribeCoverage memberOf DescribeCoverage
-		posm#hasOutput hasValue DefaultDescribeCoverageOutput
-		posm#hasInput hasValue DefaultDescribeCoverageInput
+		posm#hasOutput hasValue DefaultDescribeCoverageResponse
+		posm#hasInput hasValue DefaultDescribeCoverageRequest
 	
-	instance DefaultDescribeCoverageOutput memberOf DescribeCoverageOutput
+	instance DefaultDescribeCoverageResponse memberOf DescribeCoverageResponse
 		sawsdl#modelReference hasValue CoverageDescription
 		
-	instance DefaultDescribeCoverageInput memberOf DescribeCoverageInput
+	instance DefaultDescribeCoverageRequest memberOf DescribeCoverageRequest
 		sawsdl#modelReference hasValue xsd#string
 		

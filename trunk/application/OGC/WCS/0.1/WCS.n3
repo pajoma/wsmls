@@ -20,22 +20,22 @@
 :DescribeCoverage a rdfs:Class ;
 	rdfs:subClassOf posm:Operation .
 
-:DescribeCoverageInput a rdfs:Class ;
+:DescribeCoverageRequest a rdfs:Class ;
 	rdfs:subClassOf posm:MessagePart ;
 	rdfs:seeAlso <http://schemas.opengis.net/wcs/1.1/wcsDescribeCoverage.xsd#DescribeCoverage> .
 
-:DescribeCoverageOutput a rdfs:Class ;
+:DescribeCoverageResponse a rdfs:Class ;
 	rdfs:subClassOf posm:MessagePart ;
 	rdfs:seeAlso <http://schemas.opengis.net/wcs/1.1/wcsDescribeCoverage.xsd#CoverageDescriptions> .
 
 :GetCoverage a rdfs:Class ;
 	rdfs:subClassOf posm:Operation .
 
-:GetCoverageInput a rdfs:Class ;
+:GetCoverageRequest a rdfs:Class ;
 	rdfs:subClassOf posm:MessagePart ;
 	rdfs:seeAlso <http://schemas.opengis.net/wcs/1.1/wcsGetCoverage.xsd#GetCoverage> .
 
-:GetCoverageOutput a rdfs:Class ;
+:GetCoverageResponse a rdfs:Class ;
 	rdfs:subClassOf posm:MessagePart ;
 	rdfs:seeAlso <http://schemas.opengis.net/wcs/1.1/wcsCoverages.xsd#Coverages> .
 
@@ -43,11 +43,11 @@
 	rdfs:subClassOf dolce:information_object .
 
 :DefaultDescribeCoverage a :DescribeCoverage ;
-	posm:hasOutput :DefaultDescribeCoverageOutput ;
-	posm:hasInput :DefaultDescribeCoverageInput .
+	posm:hasOutput :DefaultDescribeCoverageResponse ;
+	posm:hasInput :DefaultDescribeCoverageRequest .
 
-:DefaultDescribeCoverageOutput a :DescribeCoverageOutput ;
+:DefaultDescribeCoverageResponse a :DescribeCoverageResponse ;
 	sawsdl:modelReference :CoverageDescription .
 
-:DefaultDescribeCoverageInput a :DescribeCoverageInput ;
+:DefaultDescribeCoverageRequest a :DescribeCoverageRequest ;
 	sawsdl:modelReference xsd:string .

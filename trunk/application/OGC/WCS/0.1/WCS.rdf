@@ -25,13 +25,13 @@
 	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#Operation"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/wcs#DescribeCoverageInput">
+<rdf:Description rdf:about="http://purl.org/ifgi/wcs#DescribeCoverageRequest">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
 	<rdfs:seeAlso rdf:resource="http://schemas.opengis.net/wcs/1.1/wcsDescribeCoverage.xsd#DescribeCoverage"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/wcs#DescribeCoverageOutput">
+<rdf:Description rdf:about="http://purl.org/ifgi/wcs#DescribeCoverageResponse">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
 	<rdfs:seeAlso rdf:resource="http://schemas.opengis.net/wcs/1.1/wcsDescribeCoverage.xsd#CoverageDescriptions"/>
@@ -42,13 +42,13 @@
 	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#Operation"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/wcs#GetCoverageInput">
+<rdf:Description rdf:about="http://purl.org/ifgi/wcs#GetCoverageRequest">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
 	<rdfs:seeAlso rdf:resource="http://schemas.opengis.net/wcs/1.1/wcsGetCoverage.xsd#GetCoverage"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/wcs#GetCoverageOutput">
+<rdf:Description rdf:about="http://purl.org/ifgi/wcs#GetCoverageResponse">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
 	<rdfs:seeAlso rdf:resource="http://schemas.opengis.net/wcs/1.1/wcsCoverages.xsd#Coverages"/>
@@ -61,17 +61,17 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/wcs#DefaultDescribeCoverage">
 	<rdf:type rdf:resource="http://purl.org/ifgi/wcs#DescribeCoverage"/>
-	<posm:hasOutput rdf:resource="http://purl.org/ifgi/wcs#DefaultDescribeCoverageOutput"/>
-	<posm:hasInput rdf:resource="http://purl.org/ifgi/wcs#DefaultDescribeCoverageInput"/>
+	<posm:hasOutput rdf:resource="http://purl.org/ifgi/wcs#DefaultDescribeCoverageResponse"/>
+	<posm:hasInput rdf:resource="http://purl.org/ifgi/wcs#DefaultDescribeCoverageRequest"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/wcs#DefaultDescribeCoverageOutput">
-	<rdf:type rdf:resource="http://purl.org/ifgi/wcs#DescribeCoverageOutput"/>
+<rdf:Description rdf:about="http://purl.org/ifgi/wcs#DefaultDescribeCoverageResponse">
+	<rdf:type rdf:resource="http://purl.org/ifgi/wcs#DescribeCoverageResponse"/>
 	<sawsdl:modelReference rdf:resource="http://purl.org/ifgi/wcs#CoverageDescription"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/wcs#DefaultDescribeCoverageInput">
-	<rdf:type rdf:resource="http://purl.org/ifgi/wcs#DescribeCoverageInput"/>
+<rdf:Description rdf:about="http://purl.org/ifgi/wcs#DefaultDescribeCoverageRequest">
+	<rdf:type rdf:resource="http://purl.org/ifgi/wcs#DescribeCoverageRequest"/>
 	<sawsdl:modelReference rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 </rdf:Description>
 
