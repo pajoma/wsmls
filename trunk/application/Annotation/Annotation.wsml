@@ -6,7 +6,7 @@ namespace { _"http://purl.org/ifgi/annotations#",
  }
 
 ontology Annotation
-	nonFunctionalProperties
+	annotations
 		dc#creator hasValue "s.schade (IFGI)"
 		dc#hasVersion hasValue "0.1 beta"
 		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
@@ -14,29 +14,29 @@ ontology Annotation
 		dc#title hasValue "Annotation Ontology"	
 		dc#description hasValue "This ontology captures the old and new relations for implementing annotations"
 		dc#subject hasValue "annotation, reference, domain, measure"
-	endNonFunctionalProperties
+	endAnnotations
 
 // old:
 relation annotate/2
-	nonFunctionalProperties
+	annotations
 		dc#title hasValue "annotate relation"	
 		dc#description hasValue "..."
 		rdfs#seeAlso hasValue "http://dolce/klien/swing..."
-	endNonFunctionalProperties
+	endAnnotations
 
 // new:
 relation domainReference/2
-	nonFunctionalProperties
+	annotations
 		dc#title hasValue "relation to the domain model"	
 		dc#description hasValue "..."
 		rdfs#seeAlso hasValue "annotate relation"
-	endNonFunctionalProperties
+	endAnnotations
 
 relation measureReference/2
-	nonFunctionalProperties
+	annotations
 		dc#title hasValue "relation to the reference space"	
 		dc#description hasValue "..."
-	endNonFunctionalProperties
+	endAnnotations
 
 
  
