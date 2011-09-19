@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://purl.org/net/concepts/patterns#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/#> .
+@prefix wsml: <http://www.wsmo.org/wsml/wsml-syntax#> .
+@prefix dolce: <http://www.load-cnr.it/ontologies/DOLCE-Lite.owl#> .
+
+# http://purl.org/dc/elements/1.1/#creator: "p.maue© (IFGI)"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/#contributor: "h.michels (IFGI)"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/#publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/#rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/#type: "Semantic Pattern"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/#title: "Semantic Pattern: Systems"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/#subject: "Pattern, Systems "^^<http://www.w3.org/2001/XMLSchema#string>
+
+:System a rdfs:Class .
+
+:involvedPhysicalEndurant a rdf:Property ;
+	rdfs:domain :System ;
+	rdfs:range dolce:physical-endurant .
+
+:involvedPerdurant a rdf:Property ;
+	rdfs:domain :System ;
+	rdfs:range dolce:perdurant .
+
+:Model a rdfs:Class ;
+	rdfs:subClassOf :geographic_quality ;
+	rdfs:label "Model@en"^^xsd:string ;
+	dc:description "Models simulate phenomena in reality"^^xsd:string .
