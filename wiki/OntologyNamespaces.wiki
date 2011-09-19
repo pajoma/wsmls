@@ -1,0 +1,30 @@
+= Ontology Namespaces =
+
+This page provides a list of namespaces as URLs pointing to the latest versions of the ontologies stored in this repository.
+
+== Global Ontologies ==
+
+=== DOLCE ===
+
+|| *Ontology* || *Namespace* || *Location* ||
+|| <font color="#FF0000">DOLCE-Lite</font> || <font color="#FF0000">http://purl.org/net/wsml/dolce</font> || <font color="#FF0000">http://wsmls.googlecode.com/svn/trunk/global/Dolce/DOLCE-Lite.rdf</font> ||
+|| <font color="#FF0000">DOLCE-Ultralite</font> || <font color="#FF0000">http://purl.org/net/wsml/dul</font> || <font color="#FF0000">http://code.google.com/p/wsmls/source/browse/trunk/global/Dolce/0.3/DOLCE-Ultralite.rdf</font> ||
+|| <font color="#FF0000">DOLCE_ExtendedDnS</font> || <font color="#FF0000">http://purl.org/net/wsml/dolceDnS</font> || <font color="#FF0000">http://code.google.com/p/wsmls/source/browse/trunk/global/Dolce-Modules/ExtendedDnS/0.2/DOLCE_ExtendedDnS.rdf</font> ||
+|| <font color="#FF0000">DOLCE_SpatialRelations</font> || <font color="#FF0000">http://purl.org/net/wsml/dolceSpatial</font> || <font color="#FF0000">http://code.google.com/p/wsmls/source/browse/trunk/global/Dolce-Modules/SpatialRelations/0.2/DOLCE_SpatialRelations.rdf</font> ||
+
+=== Geographic Space ===
+
+|| <font color="#FF0000">geographic-space</font> || <font color="#FF0000">http://purl.org/net/wsml/geospace</font> || <font color="#FF0000">http://code.google.com/p/wsmls/source/browse/trunk/global/Geographic-Space/geographic-space/0.3/geographic-space.rdf</font> ||
+
+|| <font color="#FF0000">DOLCE-Lite</font> || <font color="#FF0000">http://purl.org/net/wsml/geospace</font> || <font color="#FF0000">DOLCE-Lite</font> ||
+
+|| <font color="#FF0000">DOLCE-Lite</font> || <font color="#FF0000">http://purl.org/net/wsml/geospace</font> || <font color="#FF0000">DOLCE-Lite</font> ||
+
+|| <font color="#FF0000">DOLCE-Lite</font> || <font color="#FF0000">http://purl.org/net/wsml/geospace</font> || <font color="#FF0000">DOLCE-Lite</font> ||
+
+|| <font color="#FF0000">DOLCE-Lite</font> || <font color="#FF0000">http://purl.org/net/wsml/geospace</font> || <font color="#FF0000">DOLCE-Lite</font> ||
+
+
+
+#04B404
+* DOLCE-Lite: http://purl.org/net/wsml/dolce --> http://wsmls.googlecode.com/svn/trunk/global/Dolce/DOLCE-Lite.wsml
