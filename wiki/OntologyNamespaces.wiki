@@ -71,9 +71,9 @@ This page provides a list of namespaces as URLs pointing to the latest versions 
 
 || *Ontology* || *Namespace* || *Location* ||
 || <font color="#04B404">Landslide</font> || <font color="#04B404">http://purl.org/ifgi/landslide</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/local/landslide/0.1/landslide.rdf</font> ||
-|| <font color="#FF0000">!NoiseAll</font> || <font color="#FF0000">http://swing.uni-muenster.de/core/</font> || <font color="#FF0000">http://wsmls.googlecode.com/svn/trunk/application/WSMO/POSM/0.2/POSM.rdf</font> ||
-|| <font color="#FF0000">!OilSpill</font> || <font color="#FF0000">http://purl.org/ifgi/OilSpill</font> || <font color="#FF0000">http://wsmls.googlecode.com/svn/trunk/local/OilSpill/0.1/OilSpill.rdf</font> ||
-|| <font color="#FF0000">!UrbanizedAreaFeature</font> || <font color="#FF0000">http://ifgipedia.uni-muenster.de/envision-simple-use-case</font> || <font color="#FF0000">http://wsmls.googlecode.com/svn/trunk/local/SimpleUseCase/UrbanizedAreaFeature.rdf</font> ||
-|| <font color="#FF0000">!WaterLevelObservation</font> || <font color="#FF0000">http://ifgipedia.uni-muenster.de/envision-simple-use-case</font> || <font color="#FF0000">http://wsmls.googlecode.com/svn/trunk/local/SimpleUseCase/WaterLevelObservation.rdf</font> ||
-|| <font color="#FF0000">!RiverModel</font> || <font color="#FF0000">http://swing.uni-muenster.de/core/RiverModel</font> || <font color="#FF0000">http://wsmls.googlecode.com/svn/trunk/local/Water/0.1/RiverModel.rdf</font> ||
-|| <font color="#FF0000">Water</font> || <font color="#FF0000">http://swing.uni-muenster.de/core/water/</font> || <font color="#FF0000">http://wsmls.googlecode.com/svn/trunk/local/Water/0.1/Water.rdf</font> ||
+|| <font color="#04B404">!NoiseAll</font> || <font color="#04B404">http://purl.org/ifgi/noise</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/local/noise/noiseall.rdf</font> ||
+|| <font color="#04B404">!OilSpill</font> || <font color="#04B404">http://purl.org/ifgi/oilspill</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/local/oilspill/0.1/oilspill.rdf</font> ||
+|| <font color="#04B404">!UrbanizedAreaFeature</font> || <font color="#04B404">http://purl.org/ifgi/suc/urbanizedarea</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/local/simpleusecase/urbanizedareafeature.rdf</font> ||
+|| <font color="#04B404">!WaterLevelObservation</font> || <font color="#04B404">http://purl.org/ifgi/suc/waterlevelobservation</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/local/simpleusecase/waterlevelobservation.rdf</font> ||
+|| <font color="#04B404">!RiverModel</font> || <font color="#04B404">http://purl.org/ifgi/rivermodel</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/local/water/0.1/rivermodel.rdf</font> ||
+|| <font color="#04B404">Water</font> || <font color="#04B404">http://purl.org/ifgi/water/</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/local/water/0.1/water.rdf</font> ||
