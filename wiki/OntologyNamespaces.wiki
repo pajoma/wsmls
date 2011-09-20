@@ -18,13 +18,13 @@ This page provides a list of namespaces as URLs pointing to the latest versions 
 ==== Geographic Space ====
 
 || *Ontology* || *Namespace* || *Location* ||
-|| <font color="#FF0000">geographic-space</font> || <font color="#FF0000">http://purl.org/net/wsml/geospace</font> || <font color="#FF0000">http://wsmls.googlecode.com/svn/trunk/global/Geographic-Space/geographic-space/0.3/geographic-space.rdf</font> ||
-|| <font color="#FF0000">geographic-events</font> || <font color="#FF0000">http://purl.org/net/wsml/geospace</font> || <font color="#FF0000">http://wsmls.googlecode.com/svn/trunk/global/Geographic-Space/geographic-events/0.1/geographic-events.rdf</font> ||
-|| <font color="#FF0000">geographic-qualities</font> || <font color="#FF0000">http://purl.org/net/wsml/geospace</font> || <font color="#FF0000">http://wsmls.googlecode.com/svn/trunk/global/Geographic-Space/geographic-qualities/0.2/geographic-qualities.rdf</font> ||
-|| <font color="#FF0000">geographic-systems</font> || <font color="#FF0000">http://purl.org/net/wsml/geospace</font> || <font color="#FF0000">http://wsmls.googlecode.com/svn/trunk/global/Geographic-Space/geographic-systems/0.2/geographic-systems.rdf</font> ||
-|| <font color="#FF0000">geographic-units</font> || <font color="#FF0000">http://purl.org/net/wsml/geospace</font> || <font color="#FF0000">http://wsmls.googlecode.com/svn/trunk/global/Geographic-Space/geographic-units/0.2/geographic-units.rdf</font> ||
+|| <font color="#04B404">geographic-space</font> || <font color="#04B404">http://purl.org/ifgi/geospace</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Geographic-Space/geographic-space/0.3/geographic-space.rdf</font> ||
+|| <font color="#04B404">geographic-events</font> || <font color="#04B404">http://purl.org/ifgi/geoevents</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Geographic-Space/geographic-events/0.1/geographic-events.rdf</font> ||
+|| <font color="#04B404">geographic-qualities</font> || <font color="#04B404">http://purl.org/ifgi/geoqualities</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Geographic-Space/geographic-qualities/0.2/geographic-qualities.rdf</font> ||
+|| <font color="#04B404">geographic-systems</font> || <font color="#04B404">http://purl.org/ifgi/geosystems</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Geographic-Space/geographic-systems/0.2/geographic-systems.rdf</font> ||
+|| <font color="#04B404">geographic-units</font> || <font color="#04B404">http://purl.org/ifgi/geounits</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Geographic-Space/geographic-units/0.2/geographic-units.rdf</font> ||
 
-=== Observation ===
+==== Observation ====
 
 || *Ontology* || *Namespace* || *Location* ||
 || <font color="#FF0000">Observation</font> || <font color="#FF0000">http://purl.org/ifgi/observation</font> || <font color="#FF0000">http://wsmls.googlecode.com/svn/trunk/global/Observations/0.3/Observation.rdf</font> ||
