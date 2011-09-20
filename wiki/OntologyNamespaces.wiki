@@ -62,7 +62,7 @@ This page provides a list of namespaces as URLs pointing to the latest versions 
 || *Ontology* || *Namespace* || *Location* ||
 || <font color="#FF0000">POSM</font> || <font color="#FF0000">http://www.wsmo.org/ns/posm/0.2</font> || <font color="#FF0000">http://wsmls.googlecode.com/svn/trunk/application/WSMO/POSM/0.2/POSM.rdf</font> ||
 || <font color="#FF0000">WSL</font> || <font color="#FF0000">http://www.wsmo.org/ns/wsmo-lite</font> || <font color="#FF0000">http://wsmls.googlecode.com/svn/trunk/application/WSMO/WSL/0.1/WSL.rdf</font> ||
-|| <font color="#FF0000">Annotation</font> || <font color="#FF0000">http://purl.org/ifgi/annotations</font> || <font color="#FF0000">http://wsmls.googlecode.com/svn/trunk/application/Annotation/Annotation.rdf</font> ||
+|| <font color="#04B404">Annotation</font> || <font color="#04B404">http://purl.org/ifgi/annotations</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/application/Annotation/Annotation.rdf</font> ||
 
 
 <br>
@@ -70,7 +70,7 @@ This page provides a list of namespaces as URLs pointing to the latest versions 
 == Local Ontologies ==
 
 || *Ontology* || *Namespace* || *Location* ||
-|| <font color="#FF0000">Landslide</font> || <font color="#FF0000">http://purl.org/ifgi/landslide</font> || <font color="#FF0000">http://wsmls.googlecode.com/svn/trunk/local/landslide/0.1/landslide.rdf</font> ||
+|| <font color="#04B404">Landslide</font> || <font color="#04B404">http://purl.org/ifgi/landslide</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/local/landslide/0.1/landslide.rdf</font> ||
 || <font color="#FF0000">!NoiseAll</font> || <font color="#FF0000">http://swing.uni-muenster.de/core/</font> || <font color="#FF0000">http://wsmls.googlecode.com/svn/trunk/application/WSMO/POSM/0.2/POSM.rdf</font> ||
 || <font color="#FF0000">!OilSpill</font> || <font color="#FF0000">http://purl.org/ifgi/OilSpill</font> || <font color="#FF0000">http://wsmls.googlecode.com/svn/trunk/local/OilSpill/0.1/OilSpill.rdf</font> ||
 || <font color="#FF0000">!UrbanizedAreaFeature</font> || <font color="#FF0000">http://ifgipedia.uni-muenster.de/envision-simple-use-case</font> || <font color="#FF0000">http://wsmls.googlecode.com/svn/trunk/local/SimpleUseCase/UrbanizedAreaFeature.rdf</font> ||
