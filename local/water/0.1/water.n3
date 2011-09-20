@@ -1,0 +1,287 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://swing.uni-muenster.de/core/water/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ptns: <http://purl.org/net/concepts/patterns#> .
+@prefix geo: <http://swing.uni-muenster.de/core/GeographicSpace/> .
+@prefix dolce: <http://www.load-cnr.it/ontologies/DOLCE-Lite.owl#> .
+
+# http://purl.org/dc/elements/1.1/creator: "h.michels (IFGI)"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/contributor: "p.maue (IFGI)"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/type: "Domain Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/title: "GDI Grid Water Scenario Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/description: "This ontology captures the domain knowledge for a river and its
+# 		environment in the content of flooding"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/source: ""^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/subject: "GDI-Grid, Hydrology"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://www.w3.org/2000/01/rdf-schema#comments: "A try to model such a complex system like a river and its
+# 		environment."^^<http://www.w3.org/2001/XMLSchema#string>
+
+:Watercourse a rdfs:Class ;
+	rdfs:subClassOf geo:GeographicSystem ;
+	rdfs:label "Wasserlauf@de"^^xsd:string , "watercourse@en"^^xsd:string ;
+	dc:description "a water body with some current"^^xsd:string ;
+	dc:source ""^^xsd:string ;
+	dc:subject "Hydrosphere"^^xsd:string ;
+	rdfs:comments ""^^xsd:string .
+
+ptns:involvedPhysicalEndurant a rdf:Property ;
+	rdfs:domain :Watercourse ;
+	rdfs:range geo:WaterBody .
+
+:Lake a rdfs:Class ;
+	rdfs:subClassOf geo:GeographicSystem ;
+	rdfs:label "See@de"^^xsd:string , "lake@en"^^xsd:string ;
+	dc:description "a waterbody without a stream"^^xsd:string ;
+	dc:source ""^^xsd:string ;
+	dc:subject "Hydrosphere"^^xsd:string ;
+	rdfs:comments ""^^xsd:string .
+
+ptns:involvedPhysicalEndurant a rdf:Property ;
+	rdfs:domain :Lake ;
+	rdfs:range geo:WaterBody .
+
+:RiverSystem a rdfs:Class ;
+	rdfs:subClassOf geo:GeographicSystem ;
+	rdfs:label "Fluss@de"^^xsd:string , "river@en"^^xsd:string ;
+	dc:description """Total of rivers which consist of the mainsteam river and
+			all his direct and indirect tributaries"""^^xsd:string ;
+	dc:source "http://de.wikipedia.org/wiki/Flusssystem"^^xsd:string ;
+	dc:subject "Hydrosphere, Systems"^^xsd:string ;
+	rdfs:comments ""^^xsd:string .
+
+ptns:involvedPhysicalEndurant a rdf:Property ;
+	rdfs:domain :RiverSystem ;
+	rdfs:range :Reach , :Channel , :RiverWaterBody .
+
+ptns:involvedPerdurant a rdf:Property ;
+	rdfs:domain :RiverSystem ;
+	rdfs:range :Current .
+
+:DrainageBasin a rdfs:Class ;
+	rdfs:subClassOf geo:GeomorphologicalUnit ;
+	rdfs:label "Einzugsgebiet@de"^^xsd:string , "drainage basin@en"^^xsd:string ;
+	dc:description """A drainage basin is an extent of land where water from
+			rain or snow melt drains downhill into a body of water, such as a river, and 
+			includes the streams and rivers that convey the water and the land surfaces from
+			which water drains into those channel"""^^xsd:string ;
+	dc:source "http://en.wikipedia.org/wiki/Drainage_basin"^^xsd:string ;
+	dc:subject "Hydrosphere"^^xsd:string ;
+	rdfs:comments ""^^xsd:string .
+
+:Watershed a rdfs:Class ;
+	rdfs:subClassOf geo:GeomorphologicalUnit ;
+	rdfs:label "Einzugsgebietsgrenze@de"^^xsd:string , "watershed@en"^^xsd:string ;
+	dc:description """Watershed is a ridge of land that seperates two
+			adjacent (neighbouring) river systems"""^^xsd:string ;
+	dc:source "http://wordnet.princeton.edu/perl/webwn?s=watershed"^^xsd:string ;
+	dc:subject "Hydrosphere"^^xsd:string ;
+	rdfs:comments ""^^xsd:string .
+
+dolce:part-of a rdf:Property ;
+	rdfs:domain :Watershed ;
+	rdfs:range :DrainageBasin .
+
+:FloodPlain a rdfs:Class ;
+	rdfs:subClassOf geo:GeomorphologicalUnit ;
+	rdfs:label "Ueberflutungsgebiet@de"^^xsd:string , "flood plain@en"^^xsd:string ;
+	dc:description """Flood plain is flat or nearly flat land adjacent
+			to a stream or river, that experiences occasional or periodic flooding"""^^xsd:string ;
+	dc:source "http://en.wikipedia.org/wiki/Floodplain"^^xsd:string ;
+	dc:subject "Geography"^^xsd:string ;
+	rdfs:comments ""^^xsd:string .
+
+dolce:part-of a rdf:Property ;
+	rdfs:domain :FloodPlain ;
+	rdfs:range :DrainageBasin .
+
+geo:confinedBy a rdf:Property ;
+	rdfs:domain :FloodPlain ;
+	rdfs:range :Watershed .
+
+:RiverWaterBody a rdfs:Class ;
+	rdfs:subClassOf geo:WaterBody ;
+	rdfs:label "Wasserkoerper des Flusses@de"^^xsd:string , "river waterbody@en"^^xsd:string ;
+	dc:description "Instance of a waterbody"^^xsd:string ;
+	dc:source "http://de.wikipedia.org/wiki/Wasserk%C3%B6rper"^^xsd:string ;
+	dc:subject "Hydrosphere"^^xsd:string ;
+	rdfs:comments "One example for a waterbody"^^xsd:string .
+
+dolce:participates-in a rdf:Property ;
+	rdfs:domain :RiverWaterBody ;
+	rdfs:range :Current .
+
+geo:confinedBy a rdf:Property ;
+	rdfs:domain :RiverWaterBody ;
+	rdfs:range :Channel .
+
+:Bank a rdfs:Class ;
+	rdfs:subClassOf geo:GeomorphologicalUnit ;
+	rdfs:label "Flussufer@de"^^xsd:string , "bank@en"^^xsd:string ;
+	dc:description """Bank is the sloping ground that borders a stream and
+			confines the water in the natural channel when the water level or flow is normal"""^^xsd:string ;
+	dc:source "http://brazos.org/Water_Glossary.htm"^^xsd:string ;
+	dc:subject "Geography"^^xsd:string ;
+	rdfs:comments ""^^xsd:string .
+
+dolce:part-of a rdf:Property ;
+	rdfs:domain :Bank ;
+	rdfs:range :Channel .
+
+:Riverbed a rdfs:Class ;
+	rdfs:subClassOf geo:GeomorphologicalUnit ;
+	rdfs:label "Flussbett@de"^^xsd:string , "riverbed@en"^^xsd:string ;
+	dc:description "RIVERBEDWki"^^xsd:string ;
+	dc:source ""^^xsd:string ;
+	dc:subject "Geography"^^xsd:string ;
+	rdfs:comments ""^^xsd:string .
+
+dolce:has-quality a rdf:Property ;
+	rdfs:domain :Riverbed ;
+	rdfs:range :StreamGradient .
+
+dolce:part-of a rdf:Property ;
+	rdfs:domain :Riverbed ;
+	rdfs:range :Channel .
+
+:Reach a rdfs:Class ;
+	rdfs:subClassOf dolce:endurant ;
+	rdfs:label "Flussabschnitt@de"^^xsd:string , "reach@en"^^xsd:string ;
+	dc:description """A reach in geography is an expanse, or widening, of a stream
+			or river channel"""^^xsd:string ;
+	dc:source "http://en.wikipedia.org/wiki/Reach_(geography)"^^xsd:string ;
+	dc:subject "Hydrosphere"^^xsd:string ;
+	rdfs:comments ""^^xsd:string .
+
+dolce:has-quality a rdf:Property ;
+	rdfs:domain :Reach ;
+	rdfs:range :WaterLevel .
+
+:Channel a rdfs:Class ;
+	rdfs:subClassOf geo:GeomorphologicalUnit ;
+	rdfs:label "Kanal@de"^^xsd:string , "channel@en"^^xsd:string ;
+	dc:description """A channel is the physical confine of a river,
+			slough or ocean strait consisting of a bed and banks"""^^xsd:string ;
+	dc:source "http://en.wikipedia.org/wiki/Channel_(geography)"^^xsd:string ;
+	dc:subject "Hydrosphere"^^xsd:string ;
+	rdfs:comments "man-made or natural"^^xsd:string .
+
+:Flow a rdfs:Class ;
+	rdfs:subClassOf ptns:Event ;
+	rdfs:label "Fluss@de"^^xsd:string , "flow@en"^^xsd:string ;
+	dc:description "the motion characteristic of fluids"^^xsd:string ;
+	dc:source "http://wordnet.princeton.edu/perl/webwn?s=flow"^^xsd:string ;
+	dc:subject "Quality"^^xsd:string ;
+	rdfs:comments "It is not a river."^^xsd:string .
+
+dolce:has-quality a rdf:Property ;
+	rdfs:domain :Flow ;
+	rdfs:range :VolumetricFlowRate , :Continuity .
+
+ptns:changes a rdf:Property ;
+	rdfs:domain :Flow ;
+	rdfs:range :WaterLevel .
+
+:Current a rdfs:Class ;
+	rdfs:subClassOf :Flow ;
+	rdfs:label "Stroemung@de"^^xsd:string , "current@en"^^xsd:string ;
+	dc:description """A current, in a river or stream, is the flow of water
+			influenced by gravity as the water moves downhill to reduce its potential energy"""^^xsd:string ;
+	dc:source "http://en.wikipedia.org/wiki/Current_(fluid)"^^xsd:string ;
+	dc:subject "Quality"^^xsd:string ;
+	rdfs:comments ""^^xsd:string .
+
+:Torrent a rdfs:Class ;
+	rdfs:subClassOf :Current ;
+	rdfs:label "reissender Strom@de"^^xsd:string , "torrent@en"^^xsd:string ;
+	dc:description "a violently fast stream of water"^^xsd:string ;
+	dc:source "http://as200l.princeton.edu/perl/webwn?s=torrent"^^xsd:string ;
+	dc:subject "Quality, Hydrosphere"^^xsd:string ;
+	rdfs:comments ""^^xsd:string .
+
+:UnitTime a rdfs:Class ;
+	rdfs:subClassOf dolce:quality ;
+	rdfs:label "Zeiteinheit@de"^^xsd:string , "unit time@en"^^xsd:string ;
+	dc:description """Time is a component of the measuring system used to
+			sequence events, to compare the durations of events and the intervals between them,
+			and to quantify the motions of objects. Unit time is a physical unit to measure time (sequence)"""^^xsd:string ;
+	dc:source "http://en.wikipedia.org/wiki/Time"^^xsd:string , "http://de.wikipedia.org/wiki/Zeiteinheit"^^xsd:string ;
+	dc:subject "Units"^^xsd:string ;
+	rdfs:comments "In our case the second is important"^^xsd:string .
+
+:Volume a rdfs:Class ;
+	rdfs:subClassOf dolce:quality ;
+	rdfs:label "Volumen@de"^^xsd:string , "volume@en"^^xsd:string ;
+	dc:description """The amount of 3-dimensional space occupied
+			by an any solid, plasma, vacuum or theoretical object often quantified numerically"""^^xsd:string ;
+	dc:source "http://en.wikipedia.org/wiki/Volume"^^xsd:string ;
+	rdfs:comments ""^^xsd:string ;
+	dc:subject "Quality"^^xsd:string .
+
+:VolumeOfWaterbody a rdfs:Class ;
+	rdfs:subClassOf :Volume ;
+	rdfs:label "Volumen des Wasserk�rpers@de"^^xsd:string , "volume of waterbody@en"^^xsd:string ;
+	dc:description "Volume of a defined waterbody"^^xsd:string ;
+	dc:source ""^^xsd:string ;
+	dc:subject "Quality"^^xsd:string ;
+	rdfs:comments ""^^xsd:string .
+
+:StreamGradient a rdfs:Class ;
+	rdfs:subClassOf geo:Slope ;
+	rdfs:label "Flussneigung@de"^^xsd:string , "stream gradient@en"^^xsd:string ;
+	dc:description """The stream gradient ist the slope of a stream�s channel
+			in the downstream direction."""^^xsd:string ;
+	dc:source "www.wwnorton.com/college/geo/earth2/glossary/s.htm"^^xsd:string ;
+	dc:subject "Quality"^^xsd:string ;
+	rdfs:comments ""^^xsd:string .
+
+:VolumetricFlowRate a rdfs:Class ;
+	rdfs:subClassOf dolce:quality ;
+	rdfs:label "Durchfluss@de"^^xsd:string , "volumetric flow rate@en"^^xsd:string ;
+	dc:description """The volumetric flow rate, also volume flow rate and rate
+			of fluid flow, is the volume of fluid which passes through a given surface per
+			unit time, mostly measured in cubic metre per second. Volumetric flow rate should
+			not be confused with volumetric flux, the integration of a flux over an area gives
+			the volumetric flow rate"""^^xsd:string ;
+	dc:source "http://en.wikipedia.org/wiki/Volumetric_flow_rate"^^xsd:string ;
+	dc:subject "Quality"^^xsd:string ;
+	rdfs:comments ""^^xsd:string .
+
+:derivedQuality a rdf:Property ;
+	rdfs:label "zusammengesetzte Qualitaet@de"^^xsd:string , "composed quality@en"^^xsd:string ;
+	dc:description ""^^xsd:string ;
+	dc:source ""^^xsd:string ;
+	rdfs:comments ""^^xsd:string ;
+	rdfs:domain :VolumetricFlowRate ;
+	rdfs:range :UnitTime , :VolumeOfWaterbody .
+
+:Continuity a rdfs:Class ;
+	rdfs:subClassOf dolce:quality ;
+	rdfs:label "bestaendigFlussneigung@de"^^xsd:string , "steady@en"^^xsd:string ;
+	dc:description """A steady flow is one in which the conditions
+			(velocity, pressure and cross-section) may differ from point to point
+			but DO NOT change with time"""^^xsd:string ;
+	dc:source "staff.fit.ac.cy/eng.fm/classes/amee202/amee202_cn_chapter04.doc"^^xsd:string ;
+	dc:subject "Quality"^^xsd:string ;
+	rdfs:comments ""^^xsd:string .
+
+:WaterLevel a rdfs:Class ;
+	rdfs:subClassOf geo:Elevation ;
+	rdfs:label "Pegelstand@de"^^xsd:string , "water level@en"^^xsd:string ;
+	dc:description "The height of the water surface measured above a datum"^^xsd:string ;
+	dc:source "http://amsglossary.allenpress.com/glossary/browse?s=w&p=7"^^xsd:string ;
+	rdfs:comments ""^^xsd:string ;
+	dc:subject "Quality"^^xsd:string .
+
+:SeaLevel a rdfs:Class ;
+	rdfs:subClassOf :WaterLevel ;
+	rdfs:label "Meeresspiegel@de"^^xsd:string , "sea level@en"^^xsd:string ;
+	dc:description """The height of the sea at a given time measured relative
+			to some datum, such as mean sea level"""^^xsd:string ;
+	dc:source """http://ioc3.unesco.org/itic/contents.php
+			http://en.wikipedia.org/wiki/Sea_level"""^^xsd:string ;
+	rdfs:comments ""^^xsd:string ;
+	dc:subject "Quality"^^xsd:string .
