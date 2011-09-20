@@ -1,0 +1,330 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://purl.org/ifgi/Landslide#",
+	rdf _"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    rdfs _"http://www.w3.org/2000/01/rdf-schema#",
+    xsd _"http://www.w3.org/2001/XMLSchema#",
+    dc _"http://purl.org/dc/elements/1.1/",
+    owl _"http://www.w3.org/2002/07/owl#",
+    DUL _"http://www.loa-cnr.it/ontologies/DUL.owl#",
+    dolce _"http://www.load-cnr.it/ontologies/DOLCE-Lite.owl#",
+    gs _"http://purl.org/net/wsml/geospace#",
+    dns _"http://purl.org/net/wsml/dolceDnS#",
+    oil _"http://purl.org/ifgi/OilSpill#"
+    }
+
+ontology Landslide
+    annotations
+    	dc#creator hasValue "Auriol Degbelo (IFGI)"
+		dc#contributor hasValue "Henry Michels (IFGI)"
+        dc#description hasValue {"ENVISION: Ontology for the landslide use case"}
+        dc#publisher hasValue "(a)IfGI, University of Muenster"
+		dc#date hasValue "11-09-2011"
+		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+		dc#type hasValue "Domain Ontology"
+		dc#title hasValue "Domian Ontology for landslide Scenarios"
+		dc#subject hasValue "Landslide"
+    endAnnotations
+    
+    importsOntology {oil#OilSpill, gs#geographic_units, gs#geographic_qualities}
+
+	/*
+		Events/Processes
+	*/
+
+	concept landslide subConceptOf gs#ground_movement
+		annotations
+			dc#identifier hasValue "landslide@en"
+			dc#identifier hasValue "Hangrutsch@de"
+			dc#description hasValue ""
+			dc#source hasValue ""
+		endAnnotations
+
+	concept deep_landslide subConceptOf landslide
+		annotations
+			dc#identifier hasValue "deep landslide@en"
+			dc#identifier hasValue ""
+			dc#description hasValue ""
+			dc#source hasValue ""
+		endAnnotations
+
+	concept shallow_landslide subConceptOf landslide
+		annotations
+			dc#identifier hasValue "shallow landslide@en"
+			dc#identifier hasValue ""
+			dc#description hasValue ""
+			dc#source hasValue ""
+		endAnnotations
+	
+	concept flood subConceptOf dolce#event
+		annotations
+			dc#identifier hasValue "flood@en"
+			dc#identifier hasValue "Flut@de"
+			dc#description hasValue ""
+			dc#source hasValue ""
+		endAnnotations
+		//causes ofType landslide
+		//affects ofType gs#landcover_unit
+	
+	concept insolation subConceptOf dns#physical_phenomenon
+		annotations
+			dc#identifier hasValue "insolation@en"
+			dc#identifier hasValue "Sonneneinstrahlung@de"
+			dc#description hasValue ""
+			dc#source hasValue ""
+		endAnnotations
+		//affects ofType gs#landcover_unit
+	
+	concept infiltration subConceptOf dns#physical_phenomenon
+		annotations
+			dc#identifier hasValue "infiltration@en"
+			dc#identifier hasValue "Versickerung@de"
+			dc#description hasValue ""
+			dc#source hasValue ""
+		endAnnotations
+		//affects ofType gs#landcover_unit
+		//causes ofType landslide
+	
+	concept erosion subConceptOf dns#physical_phenomenon
+		annotations
+			dc#identifier hasValue "erosion@en"
+			dc#identifier hasValue "Erosion@de"
+			dc#description hasValue ""
+			dc#source hasValue ""
+		endAnnotations
+		//affects ofType gs#landcover_unit
+		//causes ofType landslide
+	
+	concept evapotranspiration subConceptOf dns#physical_phenomenon
+		annotations
+			dc#identifier hasValue "evapotranspiration@en"
+			dc#identifier hasValue "Evapotranspiration@de"
+			dc#description hasValue ""
+			dc#source hasValue ""
+		endAnnotations
+	
+	concept evaporation subConceptOf evapotranspiration
+		annotations
+			dc#identifier hasValue "evaporation@en"
+			dc#identifier hasValue "Evaporation@de"
+			dc#description hasValue ""
+			dc#source hasValue ""
+		endAnnotations
+
+	/*
+	Endurants
+	*/
+
+	concept mountain subConceptOf gs#geomorphological_unit
+		annotations
+			dc#identifier hasValue "mountain@en"
+			dc#identifier hasValue "Berg@de"
+			dc#description hasValue ""
+			dc#source hasValue ""
+		endAnnotations
+
+	concept hillside subConceptOf gs#geographical_unit
+		annotations
+			dc#identifier hasValue "hillside@en"
+			dc#identifier hasValue "Hang@de"
+			dc#description hasValue ""
+			dc#source hasValue ""
+		endAnnotations
+    	dolce#part_of impliesType mountain
+
+	concept catchment_area subConceptOf oil#region
+		annotations
+			dc#identifier hasValue "catchment area@en"
+			dc#identifier hasValue "Einzugsgebiet@de"
+			dc#description hasValue ""
+			dc#source hasValue ""
+		endAnnotations
+		owl#sameAs ofType watershed
+	
+	concept watershed
+		annotations
+			dc#identifier hasValue "watershed@en"
+			dc#identifier hasValue "Einzugsgebiet@de"
+			dc#description hasValue ""
+			dc#source hasValue ""
+		endAnnotations
+		owl#sameAs ofType catchment_area
+
+	concept surfacewater subConceptOf oil#water
+		annotations
+			dc#identifier hasValue "surface water@en"
+			dc#identifier hasValue "Oberflächenwasser@de"
+			dc#description hasValue ""
+			dc#source hasValue ""
+		endAnnotations
+
+	concept groundwater subConceptOf oil#water
+		annotations
+			dc#identifier hasValue "groundwater@en"
+			dc#identifier hasValue "Grundwasser@de"
+			dc#description hasValue ""
+			dc#source hasValue ""
+		endAnnotations
+
+	concept debris subConceptOf gs#landcover_unit
+		annotations
+			dc#identifier hasValue "debris@en"
+			dc#identifier hasValue "Geroell@de"
+			dc#description hasValue ""
+			dc#source hasValue ""
+		endAnnotations
+
+	concept rock subConceptOf gs#landcover_unit
+		annotations
+			dc#identifier hasValue "rock@en"
+			dc#identifier hasValue "Stein@de"
+			dc#description hasValue ""
+			dc#source hasValue ""
+		endAnnotations
+     	dolce#has_quality ofType porosity
+
+	concept soil subConceptOf gs#landcover_unit
+		annotations
+			dc#identifier hasValue "soil@en"
+			dc#identifier hasValue "Boden@de"
+			dc#identifier hasValue "Erde@de"
+			dc#description hasValue ""
+			dc#source hasValue ""
+		endAnnotations
+    	is_layered_by ofType subsoil
+    	dolce#has_quality ofType {moisture, water_table, permeability, density, cohesion, angle_of_internal_friction}
+
+	concept borehole subConceptOf gs#anthropogenic_unit
+		annotations
+			dc#identifier hasValue "borehole@en"
+			dc#identifier hasValue "Bohrloch@de"
+			dc#description hasValue ""
+			dc#source hasValue ""
+		endAnnotations
+    	dolce#has_quality ofType {oil#depth, diameter}
+
+	concept rail subConceptOf gs#anthropogenic_unit
+		annotations
+			dc#identifier hasValue "rail@en"
+			dc#identifier hasValue "Schiene@de"
+			dc#description hasValue ""
+			dc#source hasValue ""
+		endAnnotations
+
+	concept electric_main subConceptOf gs#anthropogenic_unit
+		annotations
+			dc#identifier hasValue "electric main@en"
+			dc#identifier hasValue "elektrische Leitung@de"
+			dc#description hasValue ""
+			dc#source hasValue ""
+		endAnnotations
+
+	concept road subConceptOf gs#anthropogenic_unit
+		annotations
+			dc#identifier hasValue "road@en"
+			dc#identifier hasValue "Strasse@de"
+			dc#description hasValue ""
+			dc#source hasValue ""
+		endAnnotations
+
+ 	concept building subConceptOf gs#anthropogenic_unit
+ 		annotations
+			dc#identifier hasValue "building@en"
+			dc#identifier hasValue "Gebaeude@de"
+			dc#description hasValue ""
+			dc#source hasValue ""
+		endAnnotations
+
+	concept subsoil subConceptOf soil
+		annotations
+			dc#identifier hasValue "subsoil@en"
+			dc#identifier hasValue "Unterboden@de"
+			dc#description hasValue ""
+			dc#source hasValue ""
+		endAnnotations
+    	dolce#has_quality ofType thickness
+     
+     /*
+     	Qualities
+     */
+     
+     concept height subConceptOf dolce#quality
+		annotations
+			dc#identifier hasValue "height@en"
+			dc#identifier hasValue "Hoehe@de"
+			dc#description hasValue ""
+			dc#source hasValue ""
+		endAnnotations
+		owl#sameAs ofType gs#elevation
+	
+	concept porosity subConceptOf dolce#quality
+		annotations
+			dc#identifier hasValue "porosity@en"
+			dc#identifier hasValue "Poroesität@de"
+			dc#description hasValue ""
+			dc#source hasValue ""
+		endAnnotations
+		
+	concept cohesion subConceptOf dolce#quality
+		annotations
+			dc#identifier hasValue "cohesion@en"
+			dc#identifier hasValue "Kohaesion@de"
+			dc#description hasValue ""
+			dc#source hasValue ""
+		endAnnotations
+	
+	concept water_table subConceptOf dolce#quality
+		annotations
+			dc#identifier hasValue "water table@en"
+			dc#identifier hasValue "Wasserspiegel@de"
+			dc#description hasValue ""
+			dc#source hasValue ""
+		endAnnotations
+		
+	concept density subConceptOf dolce#quality
+		annotations
+			dc#identifier hasValue "density@en"
+			dc#identifier hasValue "Dichte@de"
+			dc#description hasValue ""
+			dc#source hasValue ""
+		endAnnotations
+		
+	concept moisture subConceptOf dolce#quality
+		annotations
+			dc#identifier hasValue "moisture@en"
+			dc#identifier hasValue "Feuchtigkeit@de"
+			dc#description hasValue ""
+			dc#source hasValue ""
+		endAnnotations
+		
+	concept permeability subConceptOf dolce#quality
+		annotations
+			dc#identifier hasValue "permeability@en"
+			dc#identifier hasValue "Durchlaessigkeit@de"
+			dc#description hasValue ""
+			dc#source hasValue ""
+		endAnnotations
+		
+	concept angle_of_internal_friction subConceptOf dolce#quality
+		annotations
+			dc#identifier hasValue "angle of internal friction@en"
+			dc#identifier hasValue "Winkel der inneren Reibung@de"
+			dc#description hasValue ""
+			dc#source hasValue ""
+		endAnnotations
+		
+	concept diameter subConceptOf dolce#quality
+		annotations
+			dc#identifier hasValue "diameter@en"
+			dc#identifier hasValue "Durchmesser@de"
+			dc#description hasValue ""
+			dc#source hasValue ""
+		endAnnotations
+		
+	concept thickness subConceptOf dolce#quality
+		annotations
+			dc#identifier hasValue "thickness@en"
+			dc#identifier hasValue "Dicke@de"
+			dc#description hasValue ""
+			dc#source hasValue ""
+		endAnnotations
+	
