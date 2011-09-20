@@ -1,0 +1,67 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://ifgipedia.uni-muenster.de/envision-simple-use-case#",
+	dc _"http://purl.org/dc/elements/1.1/",
+	dolce _"http://purl.org/ifgi/dolce#",
+	obs _"http://purl.org/ifgi/observation#"
+ }
+
+ontology WaterlevelObservation
+
+	annotations
+        dc#publisher hasValue "IfGI, University of Muenster"
+		dc#type hasValue "Domain Ontology"
+		dc#title hasValue "Water Level Observation Ontology"	
+		dc#description hasValue "Domain ontology describing the observation of water level extending the foundational observation ontology by Henry Michels"
+		dc#source hasValue ""
+		dc#subject hasValue "observation, measurement, domain"	
+		dc#date hasValue "13-12-2010"
+     endAnnotations
+	
+	concept WaterlevelObservation subConceptOf obs#ObservationProcess
+		annotations
+			dc#identifier hasValue "water level observation@en"
+		endAnnotations
+		hasName impliesType _string
+		isPerformedBy impliesType WaterlevelSensor
+		
+	concept WaterlevelSensor subConceptOf obs#Observer
+		annotations
+			dc#identifier hasValue "water level sensor@en"
+		endAnnotations
+		performs impliesType WaterlevelObservation
+		observes impliesType Waterlevel
+	
+	concept WaterlevelValue subConceptOf obs#ObservationValue
+		annotations
+			dc#identifier hasValue "water level value@en"
+		endAnnotations
+		value impliesType _float
+		isProducedBy impliesType WaterlevelObservation
+		
+	concept Waterlevel subConceptOf Level
+		annotations
+			dc#identifier hasValue "water level@en"
+		endAnnotations
+		isObservedBy impliesType WaterlevelSensor
+		
+	concept Level subConceptOf obs#Observable
+		annotations
+			dc#identifier hasValue "level@en"
+		endAnnotations
+	
+	concept RiverWater subConceptOf Water
+		annotations
+			dc#identifier hasValue "river water@en"
+		endAnnotations
+		
+	concept GroundWater subConceptOf Water
+		annotations
+			dc#identifier hasValue "groundwater@en"
+		endAnnotations
+		
+	concept Water subConceptOf obs#ObservedEntity
+		annotations
+			dc#identifier hasValue "water@en"
+		endAnnotations
+		dolce#has_quality impliesType Waterlevel
+	

@@ -1,0 +1,71 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://ifgipedia.uni-muenster.de/envision-simple-use-case#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dolce: <http://purl.org/ifgi/dolce#> .
+@prefix obs: <http://purl.org/ifgi/observation#> .
+
+# http://purl.org/dc/elements/1.1/publisher: "IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/type: "Domain Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/title: "Water Level Observation Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/description: "Domain ontology describing the observation of water level extending the foundational observation ontology by Henry Michels"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/source: ""^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/subject: "observation, measurement, domain"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/date: "13-12-2010"^^<http://www.w3.org/2001/XMLSchema#string>
+
+:WaterlevelObservation a rdfs:Class ;
+	rdfs:subClassOf obs:ObservationProcess .
+
+:hasName a rdf:Property ;
+	rdfs:domain :WaterlevelObservation ;
+	rdfs:range xsd:string .
+
+:isPerformedBy a rdf:Property ;
+	rdfs:domain :WaterlevelObservation ;
+	rdfs:range :WaterlevelSensor .
+
+:WaterlevelSensor a rdfs:Class ;
+	rdfs:subClassOf obs:Observer .
+
+:performs a rdf:Property ;
+	rdfs:domain :WaterlevelSensor ;
+	rdfs:range :WaterlevelObservation .
+
+:observes a rdf:Property ;
+	rdfs:domain :WaterlevelSensor ;
+	rdfs:range :Waterlevel .
+
+:WaterlevelValue a rdfs:Class ;
+	rdfs:subClassOf obs:ObservationValue .
+
+:value a rdf:Property ;
+	rdfs:domain :WaterlevelValue ;
+	rdfs:range xsd:float .
+
+:isProducedBy a rdf:Property ;
+	rdfs:domain :WaterlevelValue ;
+	rdfs:range :WaterlevelObservation .
+
+:Waterlevel a rdfs:Class ;
+	rdfs:subClassOf :Level .
+
+:isObservedBy a rdf:Property ;
+	rdfs:domain :Waterlevel ;
+	rdfs:range :WaterlevelSensor .
+
+:Level a rdfs:Class ;
+	rdfs:subClassOf obs:Observable .
+
+:RiverWater a rdfs:Class ;
+	rdfs:subClassOf :Water .
+
+:GroundWater a rdfs:Class ;
+	rdfs:subClassOf :Water .
+
+:Water a rdfs:Class ;
+	rdfs:subClassOf obs:ObservedEntity .
+
+dolce:has_quality a rdf:Property ;
+	rdfs:domain :Water ;
+	rdfs:range :Waterlevel .

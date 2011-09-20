@@ -1,0 +1,119 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://swing.uni-muenster.de/core/RiverModel#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix patterns: <http://swing.uni-muenster.de/core/pattern/> .
+@prefix geo: <http://swing.uni-muenster.de/core/GeographicSpace/> .
+@prefix dolce: <http://www.load-cnr.it/ontologies/DOLCE-Lite.owl#> .
+@prefix gml: <http://swing.brgm.fr/repository/ontologies/GML212/current#> .
+
+# http://purl.org/dc/elements/1.1/creator: "p.maue (IFGI)"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/contributor: "h.michels (IFGI)"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/type: "Domain Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/title: "GDI Grid River Model Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/description: "This ontology connects the ideas of the concepts Point and Line of the
+# 		Swing-Project with the special kinds of Points and Lines out of the GDI-Grid-Project."^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/source: ""^^<http://www.w3.org/2001/XMLSchema#string>
+# http://purl.org/dc/elements/1.1/subject: "GDI-Grid"^^<http://www.w3.org/2001/XMLSchema#string>
+# http://www.w3.org/2000/01/rdf-schema#comments: ""^^<http://www.w3.org/2001/XMLSchema#string>
+
+:DistinctivePoint a rdfs:Class ;
+	rdfs:subClassOf gml:Point ;
+	rdfs:label "markanter Punkt@de"^^xsd:string , "distinctive point@en"^^xsd:string ;
+	dc:description """a marked point which helps to distinguish other points;
+			Hypernym for all terrain points"""^^xsd:string ;
+	dc:source """http://wordnet.princeton.edu/perl/webwn?s=distinctive&sub=Search+WordNet
+			&o2=&o0=1&o7=&o5=&o1=1&o6=&o4=&o3=&h=00"""^^xsd:string ;
+	dc:subject "Geometry"^^xsd:string ;
+	rdfs:comments ""^^xsd:string .
+
+:IsometricPoint a rdfs:Class ;
+	rdfs:subClassOf gml:Point ;
+	rdfs:label "Isopunkt@de"^^xsd:string , "isometric point@en"^^xsd:string ;
+	dc:description "points who are connected with a isometric line"^^xsd:string ;
+	dc:source """http://wordnet.princeton.edu/perl/webwn?o2=
+			&o0=1&o7=&o5=&o1=1&o6=&o4=&o3=&s=isometric+line&i=8&h=111100010#c"""^^xsd:string ;
+	dc:subject "Geometry"^^xsd:string ;
+	rdfs:comments ""^^xsd:string .
+
+:BreakPoint a rdfs:Class ;
+	rdfs:subClassOf :DistinctivePoint ;
+	rdfs:label "Bruchpunkt@de"^^xsd:string , "break point@en"^^xsd:string ;
+	dc:description "points who are connected with a break line"^^xsd:string ;
+	dc:source ""^^xsd:string ;
+	dc:subject "Geometry"^^xsd:string ;
+	rdfs:comments ""^^xsd:string .
+
+:Line a rdfs:Class ;
+	rdfs:subClassOf gml:LineString ;
+	rdfs:label "Linie@de"^^xsd:string , "line@en"^^xsd:string ;
+	dc:description """A line can be described as an ideal zero-width,
+			infinitely long, perfectly straight curve (the term curve in mathematics
+			includes - straight curves) containing an infinite number of points."""^^xsd:string ;
+	dc:source "http://en.wikipedia.org/wiki/Line_(mathematics)"^^xsd:string ;
+	dc:subject "Geometry"^^xsd:string ;
+	rdfs:comments "consists of 2 points as a minimum"^^xsd:string .
+
+:DistinctiveLine a rdfs:Class ;
+	rdfs:subClassOf gml:LineString ;
+	rdfs:label "markante linie@de"^^xsd:string , "distinctive line@en"^^xsd:string ;
+	dc:description """a marked line which helps to distinguish other lines; 
+			hypernym for all terrain lines e.g. break line"""^^xsd:string ;
+	dc:source """http://wordnet.princeton.edu/perl/webwn?s=distinctive
+			&sub=Search+WordNet&o2=&o0=1&o7=&o5=&o1=1&o6=&o4=&o3=&h=00"""^^xsd:string ;
+	dc:subject "Geometry"^^xsd:string ;
+	rdfs:comments ""^^xsd:string .
+
+:IsometricLine a rdfs:Class ;
+	rdfs:subClassOf :DistinctiveLine ;
+	rdfs:label "Isolinie@de"^^xsd:string , "isometric line@en"^^xsd:string ;
+	dc:description "a line connecting isometric points"^^xsd:string ;
+	dc:source """http://wordnet.princeton.edu/perl/webwn?s=isometric+line&sub=
+			Search+WordNet&o2=&o0=1&o7=&o5=&o1=1&o6=&o4=&o3=&h=0"""^^xsd:string ;
+	dc:subject "Geometry"^^xsd:string ;
+	rdfs:comments ""^^xsd:string .
+
+:SlopeLine a rdfs:Class ;
+	rdfs:subClassOf :DistinctiveLine ;
+	rdfs:label "Falllinie@de"^^xsd:string , "slope line@en"^^xsd:string ;
+	dc:description """A line on a surface which follows the direction of
+			the biggest grade; squares contour lines"""^^xsd:string ;
+	dc:source "http://de.wikipedia.org/wiki/Falllinie"^^xsd:string ;
+	dc:subject "Geometry"^^xsd:string ;
+	rdfs:comments ""^^xsd:string .
+
+:StructureLine a rdfs:Class ;
+	rdfs:subClassOf :DistinctiveLine ;
+	rdfs:label "Strukturlinie@de"^^xsd:string , "structure line@en"^^xsd:string ;
+	dc:description """A line given by the surface of the subaerial
+			geomorphological unit (break line, crest line)"""^^xsd:string ;
+	dc:source ""^^xsd:string ;
+	dc:subject "Geometry"^^xsd:string ;
+	rdfs:comments ""^^xsd:string .
+
+:BreakLine a rdfs:Class ;
+	rdfs:subClassOf :StructureLine ;
+	rdfs:label "Bruchkante@de"^^xsd:string , "break line@en"^^xsd:string ;
+	dc:description "a line where the grade changes excursivly"^^xsd:string ;
+	dc:source "http://de.wikipedia.org/wiki/Gel%C3%A4nde_(Kartografie)"^^xsd:string ;
+	dc:subject "Geometry"^^xsd:string ;
+	rdfs:comments ""^^xsd:string .
+
+:derivesFrom a rdf:Property ;
+	rdfs:label "stammt ab von@de"^^xsd:string , "derives from@en"^^xsd:string ;
+	dc:description ""^^xsd:string ;
+	rdfs:comments "A break line consists of break points"^^xsd:string ;
+	rdfs:domain :BreakLine ;
+	rdfs:range :BreakPoint .
+
+:ContourLine a rdfs:Class ;
+	rdfs:subClassOf :IsometricLine ;
+	rdfs:label "Hoehenlinie@de"^^xsd:string , "contour line@en"^^xsd:string ;
+	dc:description """A line used on a topographic map to indicate areas of
+			equal elevation above sea level"""^^xsd:string ;
+	dc:source "http://resweb.llu.edu/rford/docs/VGD/GSLVT/gslglossary.html"^^xsd:string ;
+	dc:subject "Geometry"^^xsd:string ;
+	rdfs:comments ""^^xsd:string .

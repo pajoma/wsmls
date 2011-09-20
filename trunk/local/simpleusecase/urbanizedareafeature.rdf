@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns="http://ifgipedia.uni-muenster.de/envision-simple-use-case#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:dolce="http://purl.org/ifgi/dolce#"
+	xmlns:geospace="http://purl.org/net/wsml/geospace#">
+<!-- http://purl.org/dc/elements/1.1/publisher: "IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/type: "Domain Ontology"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/title: "Ontology describing landcover of an urbanized area"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/description: "more or less a simple formalization of the Corine landcover catalogue by Henry Michels"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/source: ""^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/subject: "urbanized area, landcover, domain"^^<http://www.w3.org/2001/XMLSchema#string> -->
+<!-- http://purl.org/dc/elements/1.1/date: "06-12-2010"^^<http://www.w3.org/2001/XMLSchema#string> -->
+
+<rdf:Description rdf:about="http://ifgipedia.uni-muenster.de/envision-simple-use-case#UrbanizedArea">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/net/wsml/geospace#landcover_unit"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ifgipedia.uni-muenster.de/envision-simple-use-case#ContinousUrbanizedArea">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#UrbanizedArea"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ifgipedia.uni-muenster.de/envision-simple-use-case#DiscontinousUrbanizedArea">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#UrbanizedArea"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ifgipedia.uni-muenster.de/envision-simple-use-case#LeisureUnit">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#ContinousUrbanizedArea"/>
+	<rdfs:subClassOf rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#DiscontinousUrbanizedArea"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ifgipedia.uni-muenster.de/envision-simple-use-case#CommercialUnit">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#ContinousUrbanizedArea"/>
+	<rdfs:subClassOf rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#DiscontinousUrbanizedArea"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ifgipedia.uni-muenster.de/envision-simple-use-case#IndustrialUnit">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#ContinousUrbanizedArea"/>
+	<rdfs:subClassOf rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#DiscontinousUrbanizedArea"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ifgipedia.uni-muenster.de/envision-simple-use-case#GreenUrbanUnit">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#ContinousUrbanizedArea"/>
+	<rdfs:subClassOf rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#DiscontinousUrbanizedArea"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ifgipedia.uni-muenster.de/envision-simple-use-case#TransportUnit">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#ContinousUrbanizedArea"/>
+	<rdfs:subClassOf rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#DiscontinousUrbanizedArea"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ifgipedia.uni-muenster.de/envision-simple-use-case#ConstructionUnit">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#ContinousUrbanizedArea"/>
+	<rdfs:subClassOf rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#DiscontinousUrbanizedArea"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ifgipedia.uni-muenster.de/envision-simple-use-case#DumpUnit">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#ContinousUrbanizedArea"/>
+	<rdfs:subClassOf rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#DiscontinousUrbanizedArea"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ifgipedia.uni-muenster.de/envision-simple-use-case#MineUnit">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#ContinousUrbanizedArea"/>
+	<rdfs:subClassOf rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#DiscontinousUrbanizedArea"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ifgipedia.uni-muenster.de/envision-simple-use-case#RoadNetwork">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#TransportUnit"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ifgipedia.uni-muenster.de/envision-simple-use-case#RailNetwork">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#TransportUnit"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ifgipedia.uni-muenster.de/envision-simple-use-case#Port">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:subClassOf rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#TransportUnit"/>
+</rdf:Description>
+
+</rdf:RDF>

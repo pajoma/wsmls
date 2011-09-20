@@ -1,0 +1,90 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://ifgipedia.uni-muenster.de/envision-simple-use-case#",
+	dc _"http://purl.org/dc/elements/1.1/",
+	dolce _"http://purl.org/ifgi/dolce#",
+	geospace _"http://purl.org/net/wsml/geospace#"
+ }
+
+ontology UrbanizedAreaFeature
+
+	annotations
+        dc#publisher hasValue "IfGI, University of Muenster"
+		dc#type hasValue "Domain Ontology"
+		dc#title hasValue "Ontology describing landcover of an urbanized area"	
+		dc#description hasValue "more or less a simple formalization of the Corine landcover catalogue by Henry Michels"
+		dc#source hasValue ""
+		dc#subject hasValue "urbanized area, landcover, domain"	
+		dc#date hasValue "06-12-2010"
+     endAnnotations
+	
+	concept UrbanizedArea subConceptOf geospace#landcover_unit
+		annotations
+			dc#identifier hasValue "urbanized area@en"
+		endAnnotations
+	
+	concept ContinuousUrbanizedArea subConceptOf UrbanizedArea
+		annotations
+			dc#identifier hasValue "continuous urbanized area@en"
+		endAnnotations
+	
+	concept DiscontinuousUrbanizedArea subConceptOf UrbanizedArea
+		annotations
+			dc#identifier hasValue "discontinuous urbanized area@en"
+		endAnnotations
+	
+	concept LeisureUnit subConceptOf {ContinuousUrbanizedArea, DiscontinuousUrbanizedArea}
+		annotations
+			dc#identifier hasValue "leisure unit@en"
+		endAnnotations
+	
+	concept CommercialUnit subConceptOf {ContinuousUrbanizedArea, DiscontinuousUrbanizedArea}
+		annotations
+			dc#identifier hasValue "commercial unit@en"
+		endAnnotations
+	
+	concept IndustrialUnit subConceptOf {ContinuousUrbanizedArea, DiscontinuousUrbanizedArea}
+		annotations
+			dc#identifier hasValue "industrial unit@en"
+		endAnnotations
+	
+	concept GreenUrbanUnit subConceptOf {ContinuousUrbanizedArea, DiscontinuousUrbanizedArea}
+		annotations
+			dc#identifier hasValue "green urban unit@en"
+		endAnnotations
+	
+	concept TransportUnit subConceptOf {ContinuousUrbanizedArea, DiscontinuousUrbanizedArea}
+		annotations
+			dc#identifier hasValue "transport unit@en"
+		endAnnotations
+	
+	concept ConstructionUnit subConceptOf {ContinuousUrbanizedArea, DiscontinuousUrbanizedArea}
+		annotations
+			dc#identifier hasValue "construction unit@en"
+		endAnnotations
+	
+	concept DumpUnit subConceptOf {ContinuousUrbanizedArea, DiscontinuousUrbanizedArea}
+		annotations
+			dc#identifier hasValue "dump unit@en"
+		endAnnotations
+	
+	concept MineUnit subConceptOf {ContinuousUrbanizedArea, DiscontinuousUrbanizedArea}
+		annotations
+			dc#identifier hasValue "mine unit@en"
+		endAnnotations
+	
+	concept RoadNetwork subConceptOf TransportUnit
+		annotations
+			dc#identifier hasValue "road network@en"
+		endAnnotations
+	
+	concept RailNetwork subConceptOf TransportUnit
+		annotations
+			dc#identifier hasValue "rail network@en"
+		endAnnotations
+	
+	concept Port subConceptOf TransportUnit
+		annotations
+			dc#identifier hasValue "port@en"
+		endAnnotations
+	
+	
