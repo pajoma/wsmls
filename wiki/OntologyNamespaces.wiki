@@ -1,7 +1,6 @@
 = Ontology Namespaces =
 
-This page provides a list of namespaces as URLs pointing to the latest versions of the ontologies stored in this repository.
-
+All ontologies of this repository are listed here. Ontologies highlighted green enable namespace which point directly to the ontology which means the namespace can be used as an URL to retrieve the concerning ontology in RDF format.
 
 <br>
 <br>
