@@ -1,21 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF
+	xmlns="http://purl.org/ifgi/annotations#"
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-	xmlns="http://purl.org/ifgi/annotations#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns:wsml="http://www.wsmo.org/wsml/wsml-syntax#">
-<!-- http://purl.org/dc/elements/1.1/creator: "s.schade (IFGI)"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/hasVersion: "0.1 beta"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/type: "Annotation Ontology"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/title: "Annotation Ontology"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/description: "This ontology captures the old and new relations for implementing annotations"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/subject: "annotation, reference, domain, measure"^^<http://www.w3.org/2001/XMLSchema#string> -->
+
+<rdf:Description rdf:nodeID="node16a8i5n2fx1">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<rdfs:label>Annotation</rdfs:label>
+	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
+	<dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">s.schade (IFGI)</dc:creator>
+	<dc:hasVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1 beta</dc:hasVersion>
+	<dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://creativecommons.org/licenses/by/3.0/</dc:rights>
+	<dc:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Annotation Ontology</dc:type>
+	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Annotation Ontology</dc:title>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This ontology captures the old and new relations for implementing annotations</dc:description>
+	<dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">annotation, reference, domain, measure</dc:subject>
+</rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/annotations#annotate">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">annotate@en</dc:identifier>
 	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">annotate relation</dc:title>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">...</dc:description>
 	<rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dolce/klien/swing...</rdfs:seeAlso>
@@ -23,6 +31,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/annotations#domainReference">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">domain reference@en</dc:identifier>
 	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">relation to the domain model</dc:title>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">...</dc:description>
 	<rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">annotate relation</rdfs:seeAlso>
@@ -30,6 +39,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/annotations#measureReference">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">measure reference@en</dc:identifier>
 	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">relation to the reference space</dc:title>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">...</dc:description>
 </rdf:Description>

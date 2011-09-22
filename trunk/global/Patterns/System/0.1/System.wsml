@@ -1,10 +1,10 @@
 wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
-namespace { _"http://purl.org/net/concepts/patterns#",
+namespace { _"http://purl.org/ifgi/patterns/system#",
 		dc _"http://purl.org/dc/elements/1.1/#", 
      	wsml _"http://www.wsmo.org/wsml/wsml-syntax#",
      	rdf _"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
      	rdfs _"http://www.w3.org/2000/01/rdf-schema#",
-     	dolce _"http://www.load-cnr.it/ontologies/DOLCE-Lite.owl"	
+     	dolce _"http://purl.org/ifgi/dolce"
      	}
 
 ontology Systems 
@@ -17,13 +17,18 @@ ontology Systems
 		dc#title hasValue "Semantic Pattern: Systems"	
 		dc#subject hasValue "Pattern, Systems "			
      endAnnotations
+	 
+	 importsOntology {_"http://purl.org/ifgi/dolce"}
  
 concept System
-	involvedPhysicalEndurant impliesType dolce#physical\-endurant
+	annotations
+		dc#identifier hasValue "system@en"
+	endAnnotations
+	involvedPhysicalEndurant impliesType dolce#physical_endurant
 	involvedPerdurant impliesType dolce#perdurant
 
-concept Model subConceptOf geographic_quality
+concept Model
 	annotations
-		rdfs#label hasValue "Model@en"
+		dc#indentifier hasValue "Model@en"
 		dc#description hasValue "Models simulate phenomena in reality" 
 	endAnnotations 

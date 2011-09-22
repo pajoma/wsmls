@@ -18,27 +18,46 @@ ontology WPS
 		dc#title hasValue "OGC Web Processing Service"
 	endAnnotations
 	
-
+	importsOntology {_"http://purl.org/ifgi/ows/0.2#", _"http://www.wsmo.org/ns/posm/0.2#"}
 	
 	/* POSM related stuff */
 	concept WebProcessingService subConceptOf ows#OGCWebService
+		annotations
+			dc#identifier hasValue "Web processing service@en"
+		endAnnotations
 	
 	concept DescribeProcess subConceptOf posm#Operation
+		annotations
+			dc#identifier hasValue "describe process@en"
+		endAnnotations
+		
 	concept DescribeProcessRequest subConceptOf posm#MessagePart
+		annotations
+			dc#identifier hasValue "describe process request@en"
+		endAnnotations
+		
 	concept DescribeProcessResponse subConceptOf posm#MessagePart
 		annotations
+			dc#identifier hasValue "describe process response@en"
 			rdfs#seeAlso hasValue _"http://schemas.opengis.net/wps/1.0.0/wpsDescribeProcess_response.xsd#ProcessDescriptions"
 		endAnnotations
 
 	
 	
 	concept Execute subConceptOf posm#Operation
+		annotations
+			dc#identifier hasValue "execute@en"
+		endAnnotations
+		
 	concept ExecuteRequest subConceptOf posm#MessagePart
 		annotations
+			dc#identifier hasValue "execute request@en"
 			rdfs#seeAlso hasValue _"http://schemas.opengis.net/wps/1.0.0/wpsExecute_request.xsd#Execute"
 		endAnnotations
+		
 	concept ExecuteResponse subConceptOf posm#MessagePart
 		annotations
+			dc#identifier hasValue "execute response@en"
 			rdfs#seeAlso hasValue _"http://schemas.opengis.net/wps/1.0.0/wpsExecute_response.xsd#ExecuteResponse"
 		endAnnotations
 		

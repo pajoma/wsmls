@@ -1,17 +1,32 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix : <http://www.wsmo.org/ns/wsmo-lite#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 
+_:node16a8i5n2fx114 a owl:Ontology ;
+	rdfs:label "WSL" ;
+	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-core" .
 
-:FunctionalClassificationRoot a rdfs:Class .
+:FunctionalClassificationRoot a rdfs:Class ;
+	rdfs:label "http://www.wsmo.org/ns/wsmo-lite#FunctionalClassificationRoot" ;
+	dc:identifier "functional classification root@en"^^xsd:string .
 
-:NonfunctionalParameter a rdfs:Class .
+:NonfunctionalParameter a rdfs:Class ;
+	rdfs:label "http://www.wsmo.org/ns/wsmo-lite#NonfunctionalParameter" ;
+	dc:identifier "non-functional parameter@en"^^xsd:string .
 
-:Condition a rdfs:Class .
+:Condition a rdfs:Class ;
+	rdfs:label "http://www.wsmo.org/ns/wsmo-lite#Condition" ;
+	dc:identifier "condition@en"^^xsd:string .
 
-:Effect a rdfs:Class .
+:Effect a rdfs:Class ;
+	rdfs:label "http://www.wsmo.org/ns/wsmo-lite#Effect" ;
+	dc:identifier "effect@en"^^xsd:string .
 
-:functionalClassification a rdf:Property .
+:functionalClassification a rdf:Property ;
+	dc:identifier "functional classification@en"^^xsd:string .
 
-:usesOntology a rdf:Property .
+:usesOntology a rdf:Property ;
+	dc:identifier "uses ontology@en"^^xsd:string .

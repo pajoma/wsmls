@@ -1,57 +1,93 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix : <http://ifgipedia.uni-muenster.de/envision-simple-use-case#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://purl.org/ifgi/suc/urbanizedarea#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dolce: <http://purl.org/ifgi/dolce#> .
-@prefix geospace: <http://purl.org/net/wsml/geospace#> .
+@prefix gs: <http://purl.org/net/wsml/geospace#> .
+@prefix gu: <http://purl.org/net/wsml/geounits#> .
+@prefix ge: <http://purl.org/net/wsml/geoevents#> .
+@prefix gq: <http://purl.org/net/wsml/geoqualities#> .
 
-# http://purl.org/dc/elements/1.1/publisher: "IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/type: "Domain Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/title: "Ontology describing landcover of an urbanized area"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/description: "more or less a simple formalization of the Corine landcover catalogue by Henry Michels"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/source: ""^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/subject: "urbanized area, landcover, domain"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/date: "06-12-2010"^^<http://www.w3.org/2001/XMLSchema#string>
+_:node16a8i5n2fx422 a owl:Ontology ;
+	rdfs:label "UrbanizedAreaFeature" ;
+	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
+	owl:imports <http://purl.org/net/wsml/geospace#> , <http://purl.org/net/wsml/geounits#> , <http://purl.org/net/wsml/geoevents#> , <http://purl.org/net/wsml/geoqualities#> ;
+	dc:publisher "IfGI, University of Muenster"^^xsd:string ;
+	dc:type "Domain Ontology"^^xsd:string ;
+	dc:title "Ontology describing landcover of an urbanized area"^^xsd:string ;
+	dc:description "more or less a simple formalization of the Corine landcover catalogue by Henry Michels"^^xsd:string ;
+	dc:source ""^^xsd:string ;
+	dc:subject "urbanized area, landcover, domain"^^xsd:string ;
+	dc:date "06-12-2010"^^xsd:string .
 
 :UrbanizedArea a rdfs:Class ;
-	rdfs:subClassOf geospace:landcover_unit .
+	rdfs:label "http://purl.org/ifgi/suc/urbanizedarea#UrbanizedArea" ;
+	rdfs:subClassOf gu:landcover_unit ;
+	dc:identifier "urbanized area@en"^^xsd:string .
 
-:ContinousUrbanizedArea a rdfs:Class ;
-	rdfs:subClassOf :UrbanizedArea .
+:ContinuousUrbanizedArea a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/suc/urbanizedarea#ContinuousUrbanizedArea" ;
+	rdfs:subClassOf :UrbanizedArea ;
+	dc:identifier "continuous urbanized area@en"^^xsd:string .
 
-:DiscontinousUrbanizedArea a rdfs:Class ;
-	rdfs:subClassOf :UrbanizedArea .
+:DiscontinuousUrbanizedArea a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/suc/urbanizedarea#DiscontinuousUrbanizedArea" ;
+	rdfs:subClassOf :UrbanizedArea ;
+	dc:identifier "discontinuous urbanized area@en"^^xsd:string .
 
 :LeisureUnit a rdfs:Class ;
-	rdfs:subClassOf :ContinousUrbanizedArea , :DiscontinousUrbanizedArea .
+	rdfs:label "http://purl.org/ifgi/suc/urbanizedarea#LeisureUnit" ;
+	rdfs:subClassOf :ContinuousUrbanizedArea , :DiscontinuousUrbanizedArea ;
+	dc:identifier "leisure unit@en"^^xsd:string .
 
 :CommercialUnit a rdfs:Class ;
-	rdfs:subClassOf :ContinousUrbanizedArea , :DiscontinousUrbanizedArea .
+	rdfs:label "http://purl.org/ifgi/suc/urbanizedarea#CommercialUnit" ;
+	rdfs:subClassOf :ContinuousUrbanizedArea , :DiscontinuousUrbanizedArea ;
+	dc:identifier "commercial unit@en"^^xsd:string .
 
 :IndustrialUnit a rdfs:Class ;
-	rdfs:subClassOf :ContinousUrbanizedArea , :DiscontinousUrbanizedArea .
+	rdfs:label "http://purl.org/ifgi/suc/urbanizedarea#IndustrialUnit" ;
+	rdfs:subClassOf :ContinuousUrbanizedArea , :DiscontinuousUrbanizedArea ;
+	dc:identifier "industrial unit@en"^^xsd:string .
 
 :GreenUrbanUnit a rdfs:Class ;
-	rdfs:subClassOf :ContinousUrbanizedArea , :DiscontinousUrbanizedArea .
+	rdfs:label "http://purl.org/ifgi/suc/urbanizedarea#GreenUrbanUnit" ;
+	rdfs:subClassOf :ContinuousUrbanizedArea , :DiscontinuousUrbanizedArea ;
+	dc:identifier "green urban unit@en"^^xsd:string .
 
 :TransportUnit a rdfs:Class ;
-	rdfs:subClassOf :ContinousUrbanizedArea , :DiscontinousUrbanizedArea .
+	rdfs:label "http://purl.org/ifgi/suc/urbanizedarea#TransportUnit" ;
+	rdfs:subClassOf :ContinuousUrbanizedArea , :DiscontinuousUrbanizedArea ;
+	dc:identifier "transport unit@en"^^xsd:string .
 
 :ConstructionUnit a rdfs:Class ;
-	rdfs:subClassOf :ContinousUrbanizedArea , :DiscontinousUrbanizedArea .
+	rdfs:label "http://purl.org/ifgi/suc/urbanizedarea#ConstructionUnit" ;
+	rdfs:subClassOf :ContinuousUrbanizedArea , :DiscontinuousUrbanizedArea ;
+	dc:identifier "construction unit@en"^^xsd:string .
 
 :DumpUnit a rdfs:Class ;
-	rdfs:subClassOf :ContinousUrbanizedArea , :DiscontinousUrbanizedArea .
+	rdfs:label "http://purl.org/ifgi/suc/urbanizedarea#DumpUnit" ;
+	rdfs:subClassOf :ContinuousUrbanizedArea , :DiscontinuousUrbanizedArea ;
+	dc:identifier "dump unit@en"^^xsd:string .
 
 :MineUnit a rdfs:Class ;
-	rdfs:subClassOf :ContinousUrbanizedArea , :DiscontinousUrbanizedArea .
+	rdfs:label "http://purl.org/ifgi/suc/urbanizedarea#MineUnit" ;
+	rdfs:subClassOf :ContinuousUrbanizedArea , :DiscontinuousUrbanizedArea ;
+	dc:identifier "mine unit@en"^^xsd:string .
 
 :RoadNetwork a rdfs:Class ;
-	rdfs:subClassOf :TransportUnit .
+	rdfs:label "http://purl.org/ifgi/suc/urbanizedarea#RoadNetwork" ;
+	rdfs:subClassOf :TransportUnit ;
+	dc:identifier "road network@en"^^xsd:string .
 
 :RailNetwork a rdfs:Class ;
-	rdfs:subClassOf :TransportUnit .
+	rdfs:label "http://purl.org/ifgi/suc/urbanizedarea#RailNetwork" ;
+	rdfs:subClassOf :TransportUnit ;
+	dc:identifier "rail network@en"^^xsd:string .
 
 :Port a rdfs:Class ;
-	rdfs:subClassOf :TransportUnit .
+	rdfs:label "http://purl.org/ifgi/suc/urbanizedarea#Port" ;
+	rdfs:subClassOf :TransportUnit ;
+	dc:identifier "port@en"^^xsd:string .

@@ -1,5 +1,6 @@
 wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-core"
-namespace { _"http://www.wsmo.org/ns/posm/0.2#"
+namespace { _"http://www.wsmo.org/ns/posm/0.2#",
+	dc _"http://purl.org/dc/elements/1.1/"
  }
 
 ontology POSM
@@ -7,9 +8,15 @@ ontology POSM
 /* classes for use in structural definition of procedure-oriented services */
 
 concept Service
+	annotations
+			dc#identifier hasValue "service@en"
+	endAnnotations
     hasOperation impliesType Operation
 
 concept Operation
+	annotations
+			dc#identifier hasValue "operation@en"
+	endAnnotations
 	hasInput impliesType MessagePart
 	hasOutput impliesType MessagePart
 	hasInputFault impliesType MessagePart
@@ -18,6 +25,12 @@ concept Operation
 /* classes for use in definition of messages of procedure-oriented services */
 
 concept MessagePart
+	annotations
+			dc#identifier hasValue "message part@en"
+	endAnnotations
 	hasMessagePart impliesType MessagePart
 
 concept MessageContent subConceptOf MessagePart
+	annotations
+			dc#identifier hasValue "message content@en"
+	endAnnotations

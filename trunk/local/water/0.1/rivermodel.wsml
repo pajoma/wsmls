@@ -1,11 +1,8 @@
 wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
-namespace { _"http://swing.uni-muenster.de/core/RiverModel#",
+namespace { _"http://purl.org/ifgi/rivermodel#",
      rdf _"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
      rdfs _"http://www.w3.org/2000/01/rdf-schema#",
      dc _"http://purl.org/dc/elements/1.1/",
-     patterns _"http://swing.uni-muenster.de/core/pattern/",
-     geo _"http://swing.uni-muenster.de/core/GeographicSpace/",
-     dolce _"http://www.load-cnr.it/ontologies/DOLCE-Lite.owl",
      gml _"http://swing.brgm.fr/repository/ontologies/GML212/current#" }
 
 ontology RiverModel
@@ -24,7 +21,7 @@ ontology RiverModel
 		rdfs#comments hasValue ""
 	endAnnotations
 
-	importsOntology {gml#GML212}
+	importsOntology {_"http://swing.brgm.fr/repository/ontologies/GML212/current#"}
 	
 	concept DistinctivePoint subConceptOf gml#Point
 		annotations

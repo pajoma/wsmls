@@ -1,160 +1,270 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix : <http://purl.net/ifgi/xlink#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix xlink: <http://www.w3.org/1999/xlink#> .
 
-# http://purl.org/dc/elements/1.1/creator: "pajoma"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/date: "12-02-2010"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/type: "Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/title: "GML 3.0 candidate xlinks schema."^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/description: "A GML feature is a (representation of a) identifiable real-world object in a selected domain of discourse. The feature schema provides a framework for the creation of GML features and feature collections."^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/source: "http://schemas.opengis.net/xlink/1.0.0/"^^<http://www.w3.org/2001/XMLSchema#string>
+_:node16a8i5n2fx61 a owl:Ontology ;
+	rdfs:label "XLink" ;
+	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
+	dc:creator "pajoma"^^xsd:string ;
+	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
+	dc:date "12-02-2010"^^xsd:string ;
+	dc:rights "http://creativecommons.org/licenses/by/3.0/"^^xsd:string ;
+	dc:type "Ontology"^^xsd:string ;
+	dc:title "GML 3.0 candidate xlinks schema."^^xsd:string ;
+	dc:description "A GML feature is a (representation of a) identifiable real-world object in a selected domain of discourse. The feature schema provides a framework for the creation of GML features and feature collections."^^xsd:string ;
+	dc:source "http://schemas.opengis.net/xlink/1.0.0/"^^xsd:string .
 
-xlink:simpleLink a rdfs:Class .
+xlink:simpleLink a rdfs:Class ;
+	rdfs:label "http://www.w3.org/1999/xlink#simpleLink" ;
+	dc:identifier "simple linke@en"^^xsd:string .
 
-:type a rdf:Property ;
-	rdfs:domain xlink:simpleLink .
+_:node16a8i5n2fx62 rdfs:label "http://purl.net/ifgi/xlink#type" ;
+	rdfs:domain xlink:simpleLink ;
+	a rdf:Property ;
+	rdfs:range xsd:string .
 
-xlink:href a rdf:Property ;
-	rdfs:domain xlink:simpleLink .
+_:node16a8i5n2fx63 rdfs:label "http://www.w3.org/1999/xlink#href" ;
+	rdfs:domain xlink:simpleLink ;
+	a rdf:Property ;
+	rdfs:range xlink:href .
 
-xlink:role a rdf:Property ;
-	rdfs:domain xlink:simpleLink .
+_:node16a8i5n2fx64 rdfs:label "http://www.w3.org/1999/xlink#role" ;
+	rdfs:domain xlink:simpleLink ;
+	a rdf:Property ;
+	rdfs:range xlink:role .
 
-xlink:arcrole a rdf:Property ;
-	rdfs:domain xlink:simpleLink .
+_:node16a8i5n2fx65 rdfs:label "http://www.w3.org/1999/xlink#arcrole" ;
+	rdfs:domain xlink:simpleLink ;
+	a rdf:Property ;
+	rdfs:range xlink:arcrole .
 
-xlink:title a rdf:Property ;
-	rdfs:domain xlink:simpleLink .
+_:node16a8i5n2fx66 rdfs:label "http://www.w3.org/1999/xlink#title" ;
+	rdfs:domain xlink:simpleLink ;
+	a rdf:Property ;
+	rdfs:range xlink:title .
 
-xlink:show a rdf:Property ;
-	rdfs:domain xlink:simpleLink .
+_:node16a8i5n2fx67 rdfs:label "http://www.w3.org/1999/xlink#show" ;
+	rdfs:domain xlink:simpleLink ;
+	a rdf:Property ;
+	rdfs:range xlink:show .
 
-xlink:actuate a rdf:Property ;
-	rdfs:domain xlink:simpleLink .
+_:node16a8i5n2fx68 rdfs:label "http://www.w3.org/1999/xlink#actuate" ;
+	rdfs:domain xlink:simpleLink ;
+	a rdf:Property ;
+	rdfs:range xlink:actuate .
 
-xlink:extendedLink a rdfs:Class .
+xlink:extendedLink a rdfs:Class ;
+	rdfs:label "http://www.w3.org/1999/xlink#extendedLink" ;
+	dc:identifier "extended link@en"^^xsd:string .
 
-:type a rdf:Property ;
-	rdfs:domain xlink:extendedLink .
+_:node16a8i5n2fx69 rdfs:label "http://purl.net/ifgi/xlink#type" ;
+	rdfs:domain xlink:extendedLink ;
+	a rdf:Property ;
+	rdfs:range xsd:string .
 
-xlink:role a rdf:Property ;
-	rdfs:domain xlink:extendedLink .
+_:node16a8i5n2fx70 rdfs:label "http://www.w3.org/1999/xlink#role" ;
+	rdfs:domain xlink:extendedLink ;
+	a rdf:Property ;
+	rdfs:range xlink:role .
 
-xlink:title a rdf:Property ;
-	rdfs:domain xlink:extendedLink .
+_:node16a8i5n2fx71 rdfs:label "http://www.w3.org/1999/xlink#title" ;
+	rdfs:domain xlink:extendedLink ;
+	a rdf:Property ;
+	rdfs:range xlink:title .
 
-xlink:locatorLink a rdfs:Class .
+xlink:locatorLink a rdfs:Class ;
+	rdfs:label "http://www.w3.org/1999/xlink#locatorLink" ;
+	dc:identifier "locator link@en"^^xsd:string .
 
-:type a rdf:Property ;
-	rdfs:domain xlink:locatorLink .
+_:node16a8i5n2fx72 rdfs:label "http://purl.net/ifgi/xlink#type" ;
+	rdfs:domain xlink:locatorLink ;
+	a rdf:Property ;
+	rdfs:range xsd:string .
 
-xlink:href a rdf:Property ;
-	rdfs:domain xlink:locatorLink .
+_:node16a8i5n2fx73 rdfs:label "http://www.w3.org/1999/xlink#href" ;
+	rdfs:domain xlink:locatorLink ;
+	a rdf:Property ;
+	rdfs:range xlink:href .
 
-xlink:role a rdf:Property ;
-	rdfs:domain xlink:locatorLink .
+_:node16a8i5n2fx74 rdfs:label "http://www.w3.org/1999/xlink#role" ;
+	rdfs:domain xlink:locatorLink ;
+	a rdf:Property ;
+	rdfs:range xlink:role .
 
-xlink:title a rdf:Property ;
-	rdfs:domain xlink:locatorLink .
+_:node16a8i5n2fx75 rdfs:label "http://www.w3.org/1999/xlink#title" ;
+	rdfs:domain xlink:locatorLink ;
+	a rdf:Property ;
+	rdfs:range xlink:title .
 
-xlink:label a rdf:Property ;
-	rdfs:domain xlink:locatorLink .
+_:node16a8i5n2fx76 rdfs:label "http://www.w3.org/1999/xlink#label" ;
+	rdfs:domain xlink:locatorLink ;
+	a rdf:Property ;
+	rdfs:range xlink:label .
 
-xlink:arcLink a rdfs:Class .
+xlink:arcLink a rdfs:Class ;
+	rdfs:label "http://www.w3.org/1999/xlink#arcLink" ;
+	dc:identifier "arc link@en"^^xsd:string .
 
-:type a rdf:Property ;
-	rdfs:domain xlink:arcLink .
+_:node16a8i5n2fx77 rdfs:label "http://purl.net/ifgi/xlink#type" ;
+	rdfs:domain xlink:arcLink ;
+	a rdf:Property ;
+	rdfs:range xsd:string .
 
-xlink:arcrole a rdf:Property ;
-	rdfs:domain xlink:arcLink .
+_:node16a8i5n2fx78 rdfs:label "http://www.w3.org/1999/xlink#arcrole" ;
+	rdfs:domain xlink:arcLink ;
+	a rdf:Property ;
+	rdfs:range xlink:arcrole .
 
-xlink:title a rdf:Property ;
-	rdfs:domain xlink:arcLink .
+_:node16a8i5n2fx79 rdfs:label "http://www.w3.org/1999/xlink#title" ;
+	rdfs:domain xlink:arcLink ;
+	a rdf:Property ;
+	rdfs:range xlink:title .
 
-xlink:from a rdf:Property ;
-	rdfs:domain xlink:arcLink .
+_:node16a8i5n2fx80 rdfs:label "http://www.w3.org/1999/xlink#from" ;
+	rdfs:domain xlink:arcLink ;
+	a rdf:Property ;
+	rdfs:range xlink:from .
 
-xlink:to a rdf:Property ;
-	rdfs:domain xlink:arcLink .
+_:node16a8i5n2fx81 rdfs:label "http://www.w3.org/1999/xlink#to" ;
+	rdfs:domain xlink:arcLink ;
+	a rdf:Property ;
+	rdfs:range xlink:to .
 
-xlink:show a rdf:Property ;
-	rdfs:domain xlink:arcLink .
+_:node16a8i5n2fx82 rdfs:label "http://www.w3.org/1999/xlink#show" ;
+	rdfs:domain xlink:arcLink ;
+	a rdf:Property ;
+	rdfs:range xlink:show .
 
-xlink:actuate a rdf:Property ;
-	rdfs:domain xlink:arcLink .
+_:node16a8i5n2fx83 rdfs:label "http://www.w3.org/1999/xlink#actuate" ;
+	rdfs:domain xlink:arcLink ;
+	a rdf:Property ;
+	rdfs:range xlink:actuate .
 
-xlink:resourceLink a rdfs:Class .
+xlink:resourceLink a rdfs:Class ;
+	rdfs:label "http://www.w3.org/1999/xlink#resourceLink" ;
+	dc:identifier "resource link@en"^^xsd:string .
 
-:type a rdf:Property ;
-	rdfs:domain xlink:resourceLink .
+_:node16a8i5n2fx84 rdfs:label "http://purl.net/ifgi/xlink#type" ;
+	rdfs:domain xlink:resourceLink ;
+	a rdf:Property ;
+	rdfs:range xsd:string .
 
-xlink:role a rdf:Property ;
-	rdfs:domain xlink:resourceLink .
+_:node16a8i5n2fx85 rdfs:label "http://www.w3.org/1999/xlink#role" ;
+	rdfs:domain xlink:resourceLink ;
+	a rdf:Property ;
+	rdfs:range xlink:role .
 
-xlink:title a rdf:Property ;
-	rdfs:domain xlink:resourceLink .
+_:node16a8i5n2fx86 rdfs:label "http://www.w3.org/1999/xlink#title" ;
+	rdfs:domain xlink:resourceLink ;
+	a rdf:Property ;
+	rdfs:range xlink:title .
 
-xlink:label a rdf:Property ;
-	rdfs:domain xlink:resourceLink .
+_:node16a8i5n2fx87 rdfs:label "http://www.w3.org/1999/xlink#label" ;
+	rdfs:domain xlink:resourceLink ;
+	a rdf:Property ;
+	rdfs:range xlink:label .
 
-xlink:titleLink a rdfs:Class .
+xlink:titleLink a rdfs:Class ;
+	rdfs:label "http://www.w3.org/1999/xlink#titleLink" ;
+	dc:identifier "title link@en"^^xsd:string .
 
-:type a rdf:Property ;
-	rdfs:domain xlink:titleLink .
+_:node16a8i5n2fx88 rdfs:label "http://purl.net/ifgi/xlink#type" ;
+	rdfs:domain xlink:titleLink ;
+	a rdf:Property ;
+	rdfs:range xsd:string .
 
-xlink:emptyLink a rdfs:Class .
+xlink:emptyLink a rdfs:Class ;
+	rdfs:label "http://www.w3.org/1999/xlink#emptyLink" ;
+	dc:identifier "empty link@en"^^xsd:string .
 
-:type a rdf:Property ;
-	rdfs:domain xlink:emptyLink .
+_:node16a8i5n2fx89 rdfs:label "http://purl.net/ifgi/xlink#type" ;
+	rdfs:domain xlink:emptyLink ;
+	a rdf:Property ;
+	rdfs:range xsd:string .
 
-xlink:href a rdfs:Class .
+xlink:href a rdfs:Class ;
+	rdfs:label "http://www.w3.org/1999/xlink#href" ;
+	dc:identifier "href@en"^^xsd:string .
 
-:value a rdf:Property ;
-	rdfs:domain xlink:href .
+_:node16a8i5n2fx90 rdfs:label "http://purl.net/ifgi/xlink#value" ;
+	rdfs:domain xlink:href ;
+	a rdf:Property ;
+	rdfs:range :_iri .
 
-xlink:role a rdfs:Class .
+xlink:role a rdfs:Class ;
+	rdfs:label "http://www.w3.org/1999/xlink#role" ;
+	dc:identifier "role@en"^^xsd:string .
 
-:value a rdf:Property ;
-	rdfs:domain xlink:role .
+_:node16a8i5n2fx91 rdfs:label "http://purl.net/ifgi/xlink#value" ;
+	rdfs:domain xlink:role ;
+	a rdf:Property ;
+	rdfs:range :_iri .
 
-xlink:arcrole a rdfs:Class .
+xlink:arcrole a rdfs:Class ;
+	rdfs:label "http://www.w3.org/1999/xlink#arcrole" ;
+	dc:identifier "arcrole@en"^^xsd:string .
 
-:value a rdf:Property ;
-	rdfs:domain xlink:arcrole .
+_:node16a8i5n2fx92 rdfs:label "http://purl.net/ifgi/xlink#value" ;
+	rdfs:domain xlink:arcrole ;
+	a rdf:Property ;
+	rdfs:range :_iri .
 
-xlink:title a rdfs:Class .
+xlink:title a rdfs:Class ;
+	rdfs:label "http://www.w3.org/1999/xlink#title" ;
+	dc:identifier "title@en"^^xsd:string .
 
-:value a rdf:Property ;
-	rdfs:domain xlink:title .
+_:node16a8i5n2fx93 rdfs:label "http://purl.net/ifgi/xlink#value" ;
+	rdfs:domain xlink:title ;
+	a rdf:Property ;
+	rdfs:range xsd:string .
 
 xlink:show a rdfs:Class ;
+	rdfs:label "http://www.w3.org/1999/xlink#show" ;
+	dc:identifier "show@en"^^xsd:string ;
 	dc:description "The 'show' attribute is used to communicate the desired presentation of the ending resource on traversal from the starting resource; it's value should be treated as follows: new - load ending resource in a new window, frame, pane, or other presentation context replace - load the resource in the same window, frame, pane, or other presentation context embed - load ending resource in place of the presentation of the starting resource other - behavior is unconstrained; examine other markup in the link for hints none - behavior is unconstrained"^^xsd:string .
 
-:value a rdf:Property ;
-	rdfs:domain xlink:show .
+_:node16a8i5n2fx94 rdfs:label "http://purl.net/ifgi/xlink#value" ;
+	rdfs:domain xlink:show ;
+	a rdf:Property ;
+	rdfs:range xsd:string .
 
 xlink:actuate a rdfs:Class ;
+	rdfs:label "http://www.w3.org/1999/xlink#actuate" ;
+	dc:identifier "actuate@en"^^xsd:string ;
 	dc:description "The 'actuate' attribute is used to communicate the desired timing of traversal from the starting resource to the ending resource; it's value should be treated as follows: onLoad - traverse to the ending resource immediately on loading the starting resource onRequest - traverse from the starting resource to the ending resource only on a post-loading event triggered for this purpose other - behavior is unconstrained; examine other markup in link for hints none - behavior is unconstrained"^^xsd:string .
 
-:value a rdf:Property ;
-	rdfs:domain xlink:actuate .
+_:node16a8i5n2fx95 rdfs:label "http://purl.net/ifgi/xlink#value" ;
+	rdfs:domain xlink:actuate ;
+	a rdf:Property ;
+	rdfs:range xsd:string .
 
-xlink:label a rdfs:Class .
+xlink:label a rdfs:Class ;
+	rdfs:label "http://www.w3.org/1999/xlink#label" ;
+	dc:identifier "label@en"^^xsd:string .
 
-:value a rdf:Property ;
-	rdfs:domain xlink:label .
+_:node16a8i5n2fx96 rdfs:label "http://purl.net/ifgi/xlink#value" ;
+	rdfs:domain xlink:label ;
+	a rdf:Property ;
+	rdfs:range xsd:string .
 
-xlink:from a rdfs:Class .
+xlink:from a rdfs:Class ;
+	rdfs:label "http://www.w3.org/1999/xlink#from" ;
+	dc:identifier "from@en"^^xsd:string .
 
-:value a rdf:Property ;
-	rdfs:domain xlink:from .
+_:node16a8i5n2fx97 rdfs:label "http://purl.net/ifgi/xlink#value" ;
+	rdfs:domain xlink:from ;
+	a rdf:Property ;
+	rdfs:range xsd:string .
 
-xlink:to a rdfs:Class .
+xlink:to a rdfs:Class ;
+	rdfs:label "http://www.w3.org/1999/xlink#to" ;
+	dc:identifier "to@en"^^xsd:string .
 
-:value a rdf:Property ;
-	rdfs:domain xlink:to .
+_:node16a8i5n2fx98 rdfs:label "http://purl.net/ifgi/xlink#value" ;
+	rdfs:domain xlink:to ;
+	a rdf:Property ;
+	rdfs:range xsd:string .

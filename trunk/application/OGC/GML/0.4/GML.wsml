@@ -17,34 +17,75 @@ ontology GML
 		dc#type hasValue "Ontology"
 		dc#title hasValue "OGC Feature Ontology"
 	endAnnotations
+	
+	importsOntology {_"http://www.loa-cnr.it/ontologies/DUL.owl#"}
 
 concept AbstractGML subConceptOf DUL#InformationObject
+	annotations
+			dc#identifier hasValue "abstract GML@en"
+	endAnnotations
 
 concept AbstractFeature subConceptOf AbstractGML
+	annotations
+			dc#identifier hasValue "abstract feature@en"
+	endAnnotations
 	
 concept AbstractGeometry subConceptOf FeatureProperty
+	annotations
+			dc#identifier hasValue "abstract geometry@en"
+	endAnnotations
 
 concept FeatureProperty subConceptOf AbstractGML
+	annotations
+			dc#identifier hasValue "feature property@en"
+	endAnnotations
 
 concept FeatureCollection subConceptOf AbstractGML
+	annotations
+			dc#identifier hasValue "feature collection@en"
+	endAnnotations
 	
 concept Envelope subConceptOf DUL#InformationObject
+	annotations
+			dc#identifier hasValue "envelope@en"
+	endAnnotations
 
 // Properties
 	
 relation id (ofType AbstractGML, ofType xsd#ID)
+	annotations
+			dc#identifier hasValue "id@en"
+	endAnnotations
 
 relation hasProperty (ofType AbstractFeature, ofType FeatureProperty)
+	annotations
+			dc#identifier hasValue "has property@en"
+	endAnnotations
 
 relation gml#hasValue (ofType FeatureProperty, ofType xsd#anyType)
+	annotations
+			dc#identifier hasValue "has value@en"
+	endAnnotations
 
 relation upperCorner (ofType Envelope, ofType rdfs#Literal)
+	annotations
+			dc#identifier hasValue "upper corner@en"
+	endAnnotations
 
 relation lowerCorner (ofType Envelope, ofType rdfs#Literal)
+	annotations
+			dc#identifier hasValue "lower corner@en"
+	endAnnotations
 
 relation hasGeometry (ofType AbstractFeature, ofType AbstractGeometry) subRelationOf gml#hasProperty
+	annotations
+			dc#identifier hasValue "has geometry@en"
+	endAnnotations
 
 relation featureMember (ofType FeatureCollection, ofType AbstractFeature) subRelationOf rdfs#member
+	annotations
+			dc#identifier hasValue "feature member@en"
+	endAnnotations
 
 
 

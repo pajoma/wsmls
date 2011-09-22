@@ -1,11 +1,15 @@
 wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-core"
-namespace { _"http://swing.uni-muenster.de/core/", 
+namespace { _"http://purl.org/ifgi/noise#", 
      rdf _"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
      rdfs _"http://www.w3.org/2000/01/rdf-schema#",
      dc _"http://purl.org/dc/elements/1.1/",
-     patterns _"http://swing.uni-muenster.de/core/pattern/",
-     geo _"http://swing.uni-muenster.de/core/GeographicSpace/",
-     dolce _"http://www.load-cnr.it/ontologies/DOLCE-Lite.owl#"
+     gsy _"http://purl.org/ifgi/geosystems#",
+     dolce _"http://purl.org/ifgi/dolce#",
+	 patterns _"http://purl.org/ifgi/patterns/system#",
+	 gs _"http://purl.org/net/wsml/geospace#",
+	 gu _"http://purl.org/net/wsml/geounits#",
+	 ge _"http://purl.org/net/wsml/geoevents#",
+	 gq _"http://purl.org/net/wsml/geoqualities#"
      }
 
 ontology NoiseAll
@@ -24,9 +28,11 @@ ontology NoiseAll
 		rdfs#comments hasValue "Traffic plays the role of a system in a given environment"
 	endAnnotations
 	
+	importsOntology {_"http://purl.org/ifgi/geosystems#", _"http://purl.org/net/wsml/geospace#", _"http://purl.org/net/wsml/geounits#", _"http://purl.org/net/wsml/geoevents#", _"http://purl.org/net/wsml/geoqualities#"}
+	
 	//Systems
 	
-	concept TrafficSystem subConceptOf geo#GeographicSystem
+	concept TrafficSystem subConceptOf gsy#geographic_system
 		annotations
 			dc#identifier hasValue "Vekehrssystem@de"
 			dc#identifier hasValue "traffic system@en"
@@ -46,7 +52,7 @@ ontology NoiseAll
 	// we state that the traffic system is surrounded by a NoiseImissionEnvironment (which plays the role of the environment)
 //	axiom defineTrafficSystem
 //		definedBy
-//		 	?env[isPlayedBy ofType ?player] memberOf geo#Environment and
+//		 	?env[isPlayedBy ofType ?player] memberOf gsy#Environment and
 //		 	?player memberOf NoiseImissionEnvironment and
 //		 	?system[surroundedBy ofType ?env] memberOf TrafficSystem.
 //			
@@ -71,7 +77,7 @@ ontology NoiseAll
 	
 	//Objects
 		
-		concept NoiseImissionEnvironment subConceptOf geo#GeographicalUnit
+		concept NoiseImissionEnvironment subConceptOf gu#GeographicalUnit
 		annotations
 			dc#identifier hasValue "Laermeinzugsgebiet@de"
 			dc#identifier hasValue "noise imission environment@en"
@@ -184,11 +190,11 @@ ontology NoiseAll
 			rdfs#comments hasValue ""
 		endAnnotations
 		dolce#part\-of impliesType Road
-		geo#sourroundedBy impliesType geo#Environment
+		gs#sourroundedBy impliesType gsy#Environment
 			
 //	axiom defineStreet
 //		definedBy
-//		 	?env[isPlayedBy ofType ?player] memberOf geo#Environment and
+//		 	?env[isPlayedBy ofType ?player] memberOf gsy#Environment and
 //		 	?player memberOf UrbanizedArea and
 //		 	?object[surroundedBy ofType ?env] memberOf Street.
 			
@@ -264,7 +270,7 @@ ontology NoiseAll
 			rdfs#comments hasValue ""
 		endAnnotations			
 			
-	concept Building subConceptOf {geo#GeographicalUnit}
+	concept Building subConceptOf {gu#GeographicalUnit}
 		annotations
 			dc#identifier hasValue "Gebaeude@de"
 			dc#identifier hasValue "building@en"
@@ -274,9 +280,9 @@ ontology NoiseAll
 			dc#subject hasValue "Construction"
 			rdfs#comments hasValue ""
 		endAnnotations	
-		geo#situatedIn impliesType UrbanizedArea
+		gs#situatedIn impliesType UrbanizedArea
 	
-	concept Tree subConceptOf {geo#GeographicalUnit}
+	concept Tree subConceptOf {gu#GeographicalUnit}
 		annotations
 			dc#identifier hasValue "Gebaeude@de"
 			dc#identifier hasValue "building@en"
@@ -285,9 +291,9 @@ ontology NoiseAll
 			dc#subject hasValue "Plants"
 			rdfs#comments hasValue ""
 		endAnnotations
-		geo#situatedIn impliesType UrbanizedArea
+		gs#situatedIn impliesType UrbanizedArea
 		
-	concept UrbanizedArea subConceptOf geo#GeographicalUnit
+	concept UrbanizedArea subConceptOf gu#GeographicalUnit
 		annotations
 			dc#identifier hasValue "st�dtisches Gebiet@de"
 			dc#identifier hasValue "UrbanizedArea@en"

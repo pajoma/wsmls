@@ -19,6 +19,7 @@ ontology Annotation
 // old:
 relation annotate/2
 	annotations
+		dc#identifier hasValue "annotate@en"
 		dc#title hasValue "annotate relation"	
 		dc#description hasValue "..."
 		rdfs#seeAlso hasValue "http://dolce/klien/swing..."
@@ -27,6 +28,7 @@ relation annotate/2
 // new:
 relation domainReference/2
 	annotations
+		dc#identifier hasValue "domain reference@en"
 		dc#title hasValue "relation to the domain model"	
 		dc#description hasValue "..."
 		rdfs#seeAlso hasValue "annotate relation"
@@ -34,6 +36,7 @@ relation domainReference/2
 
 relation measureReference/2
 	annotations
+		dc#identifier hasValue "measure reference@en"
 		dc#title hasValue "relation to the reference space"	
 		dc#description hasValue "..."
 	endAnnotations

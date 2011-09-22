@@ -6,11 +6,11 @@ namespace { _"http://purl.org/ifgi/ows/0.2#",
 	posm _"http://www.wsmo.org/ns/posm/0.2#",
 	dc _"http://purl.org/dc/elements/1.1/", 
 	sawsdl _"http://www.w3.org/ns/sawsdl#",
-	dolce _"http://purl.org/net/wsml/dolceDnS#"
+	dolce _"http://purl.org/ifgi/dolceDnS#"
  }
 
 ontology ows#OWSOntology
-	importsOntology { wsl#WSL, posm#POSM } 
+	
 	 
 	annotations 
 		dc#publisher hasValue "(a)IfGI, University of Muenster"
@@ -19,22 +19,50 @@ ontology ows#OWSOntology
 		dc#type hasValue "Ontology"
 		dc#title hasValue "OWS Common"
 	endAnnotations
+	
+	importsOntology {_"http://www.wsmo.org/ns/wsmo-lite#", _"http://www.wsmo.org/ns/posm/0.2#", _"http://purl.org/ifgi/dolceDnS#"} 
 
 	concept ows#OGCWebService subConceptOf wsl#FunctionalClassificationRoot
+		annotations
+			dc#identifier hasValue "OGC Web service@en"
+		endAnnotations
 	
 	concept ows#GetCapabilities subConceptOf posm#Operation
+		annotations
+			dc#identifier hasValue "get capabilities@en"
+		endAnnotations
+	
 	concept ows#GetCapabilitiesResponse subConceptOf posm#MessagePart
+		annotations
+			dc#identifier hasValue "get capabilities response@en"
+		endAnnotations
+		
 	concept ows#GetCapabilitiesRequest subConceptOf posm#MessagePart
+		annotations
+			dc#identifier hasValue "get capabilities request@en"
+		endAnnotations
 	
 	concept ServiceDescription subConceptOf dolce#information_object
+		annotations
+			dc#identifier hasValue "service description@en"
+		endAnnotations
 	
 	// Defaults
 	instance ows#DefaultGetCapabilities  memberOf ows#GetCapabilities
+		annotations
+			dc#identifier hasValue "default get capabilities@en"
+		endAnnotations
 		posm#hasOutput hasValue ows#DefaultGetCapabilitiesResponse
 		posm#hasInput hasValue ows#DefaultGetCapabilitiesRequest
 	
 	instance ows#DefaultGetCapabilitiesResponse memberOf ows#GetCapabilitiesResponse
+		annotations
+			dc#identifier hasValue "default get capabilities response@en"
+		endAnnotations
 		sawsdl#modelReference hasValue ServiceDescription
 		
 	instance ows#DefaultGetCapabilitiesRequest memberOf ows#GetCapabilitiesRequest
+		annotations
+			dc#identifier hasValue "default get capabilities request@en"
+		endAnnotations
 		sawsdl#modelReference hasValue xsd#string

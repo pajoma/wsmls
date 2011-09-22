@@ -1,6 +1,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix : <http://purl.org/ifgi/sos#> .
 @prefix sawsdl: <http://www.w3.org/ns/sawsdl#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
@@ -8,33 +9,51 @@
 @prefix om: <http://purl.org/ifgi/om#> .
 @prefix posm: <http://www.wsmo.org/ns/posm/0.2#> .
 
-# http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/date: "25-02-2010"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/type: "Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/title: "OGC Sensor Observation Service"^^<http://www.w3.org/2001/XMLSchema#string>
+_:node16a8i5n2fx16 a owl:Ontology ;
+	rdfs:label "SOS" ;
+	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
+	owl:imports <http://purl.org/ifgi/ows/0.2#> , <http://purl.org/ifgi/om#> , <http://www.wsmo.org/ns/posm/0.2#> ;
+	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
+	dc:date "25-02-2010"^^xsd:string ;
+	dc:rights "http://creativecommons.org/licenses/by/3.0/"^^xsd:string ;
+	dc:type "Ontology"^^xsd:string ;
+	dc:title "OGC Sensor Observation Service"^^xsd:string .
 
 :SensorObservationService a rdfs:Class ;
-	rdfs:subClassOf ows:OGCWebService .
+	rdfs:label "http://purl.org/ifgi/sos#SensorObservationService" ;
+	rdfs:subClassOf ows:OGCWebService ;
+	dc:identifier "sensor observation service@en"^^xsd:string .
 
 :DescribeSensor a rdfs:Class ;
-	rdfs:subClassOf posm:Operation .
+	rdfs:label "http://purl.org/ifgi/sos#DescribeSensor" ;
+	rdfs:subClassOf posm:Operation ;
+	dc:identifier "describe sensor@en"^^xsd:string .
 
 :DescribeSensorRequest a rdfs:Class ;
-	rdfs:subClassOf posm:MessagePart .
+	rdfs:label "http://purl.org/ifgi/sos#DescribeSensorRequest" ;
+	rdfs:subClassOf posm:MessagePart ;
+	dc:identifier "describe sensor request@en"^^xsd:string .
 
 :DescribeSensorResponse a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/sos#DescribeSensorResponse" ;
 	rdfs:subClassOf posm:MessagePart ;
+	dc:identifier "describe sensor response@en"^^xsd:string ;
 	rdfs:seeAlso <http://schemas.opengis.net/sensorML/1.0.1/sensorML.xsd#SensorML> .
 
 :GetObservation a rdfs:Class ;
-	rdfs:subClassOf posm:Operation .
+	rdfs:label "http://purl.org/ifgi/sos#GetObservation" ;
+	rdfs:subClassOf posm:Operation ;
+	dc:identifier "get observation@en"^^xsd:string .
 
 :GetObservationRequest a rdfs:Class ;
-	rdfs:subClassOf posm:MessagePart .
+	rdfs:label "http://purl.org/ifgi/sos#GetObservationRequest" ;
+	rdfs:subClassOf posm:MessagePart ;
+	dc:identifier "get observation request@en"^^xsd:string .
 
 :GetObservationResponse a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/sos#GetObservationResponse" ;
 	rdfs:subClassOf posm:MessagePart ;
+	dc:identifier "get observation response@en"^^xsd:string ;
 	rdfs:seeAlso <http://schemas.opengis.net/om/1.0.0/observation.xsd#Observation> .
 
 :DefaultDescribeSensor a :DescribeSensor ;
@@ -46,4 +65,3 @@
 
 :DefaultDescribeSensorRequest a :DescribeSensorRequest ;
 	sawsdl:modelReference xsd:string .
-

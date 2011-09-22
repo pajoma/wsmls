@@ -1,39 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF
+	xmlns="http://purl.org/ifgi/patterns/system#"
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-	xmlns="http://purl.org/net/concepts/patterns#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/#"
 	xmlns:wsml="http://www.wsmo.org/wsml/wsml-syntax#"
-	xmlns:dolce="http://www.load-cnr.it/ontologies/DOLCE-Lite.owl#">
-<!-- http://purl.org/dc/elements/1.1/#creator: "p.maue© (IFGI)"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/#contributor: "h.michels (IFGI)"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/#publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/#rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/#type: "Semantic Pattern"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/#title: "Semantic Pattern: Systems"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/#subject: "Pattern, Systems "^^<http://www.w3.org/2001/XMLSchema#string> -->
+	xmlns:dolce="http://purl.org/ifgi/dolce#">
 
-<rdf:Description rdf:about="http://purl.org/net/concepts/patterns#System">
+<rdf:Description rdf:nodeID="node16a8i5n2fx297">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<rdfs:label>Systems</rdfs:label>
+	<format xmlns="http://purl.org/dc/elements/1.1/">http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</format>
+	<owl:imports rdf:resource="http://purl.org/ifgi/dolce"/>
+	<dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">p.maue© (IFGI)</dc:creator>
+	<dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">h.michels (IFGI)</dc:contributor>
+	<dc:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(a)IfGI, University of Muenster</dc:publisher>
+	<dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://creativecommons.org/licenses/by/3.0/</dc:rights>
+	<dc:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Semantic Pattern</dc:type>
+	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Semantic Pattern: Systems</dc:title>
+	<dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pattern, Systems</dc:subject>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/patterns/system#System">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/patterns/system#System</rdfs:label>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">system@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/net/concepts/patterns#involvedPhysicalEndurant">
+<rdf:Description rdf:nodeID="node16a8i5n2fx298">
+	<rdfs:label>http://purl.org/ifgi/patterns/system#involvedPhysicalEndurant</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/patterns/system#System"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:domain rdf:resource="http://purl.org/net/concepts/patterns#System"/>
-	<rdfs:range rdf:resource="http://www.load-cnr.it/ontologies/DOLCE-Lite.owl#physical-endurant"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#physical_endurant"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/net/concepts/patterns#involvedPerdurant">
+<rdf:Description rdf:nodeID="node16a8i5n2fx299">
+	<rdfs:label>http://purl.org/ifgi/patterns/system#involvedPerdurant</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/patterns/system#System"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:domain rdf:resource="http://purl.org/net/concepts/patterns#System"/>
-	<rdfs:range rdf:resource="http://www.load-cnr.it/ontologies/DOLCE-Lite.owl#perdurant"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#perdurant"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/net/concepts/patterns#Model">
+<rdf:Description rdf:about="http://purl.org/ifgi/patterns/system#Model">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:subClassOf rdf:resource="http://purl.org/net/concepts/patterns#geographic_quality"/>
-	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Model@en</rdfs:label>
+	<rdfs:label>http://purl.org/ifgi/patterns/system#Model</rdfs:label>
+	<dc:indentifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Model@en</dc:indentifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Models simulate phenomena in reality</dc:description>
 </rdf:Description>
+
+</rdf:RDF>

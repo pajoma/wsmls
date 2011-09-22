@@ -1,56 +1,91 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix : <http://purl.org/ifgi/swe/0.2#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://purl.org/ifgi/swe#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix gml: <http://purl.org/ifgi/gml/0.4#> .
 
-# http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/date: "10-11-2010"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/type: "Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/title: "OGC Sensor Web Enablement"^^<http://www.w3.org/2001/XMLSchema#string>
+_:node16a8i5n2fx18 a owl:Ontology ;
+	rdfs:label "SWE" ;
+	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
+	owl:imports <http://purl.org/ifgi/gml/0.4#> ;
+	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
+	dc:date "10-11-2010"^^xsd:string ;
+	dc:rights "http://creativecommons.org/licenses/by/3.0/"^^xsd:string ;
+	dc:type "Ontology"^^xsd:string ;
+	dc:title "OGC Sensor Web Enablement"^^xsd:string .
 
 :AbstractDataArray a rdfs:Class ;
-	rdfs:subClassOf gml:AbstractGML .
+	rdfs:label "http://purl.org/ifgi/swe#AbstractDataArray" ;
+	rdfs:subClassOf gml:AbstractGML ;
+	dc:identifier "abstract data array@en"^^xsd:string .
 
 :AbstractDataRecord a rdfs:Class ;
-	rdfs:subClassOf gml:AbstractGML .
+	rdfs:label "http://purl.org/ifgi/swe#AbstractDataRecord" ;
+	rdfs:subClassOf gml:AbstractGML ;
+	dc:identifier "abstract data record@en"^^xsd:string .
 
 :ConditionalData a rdfs:Class ;
-	rdfs:subClassOf gml:AbstractGML .
+	rdfs:label "http://purl.org/ifgi/swe#ConditionalData" ;
+	rdfs:subClassOf gml:AbstractGML ;
+	dc:identifier "conditional data@en"^^xsd:string .
 
 :ConditionalValue a rdfs:Class ;
-	rdfs:subClassOf gml:AbstractGML .
+	rdfs:label "http://purl.org/ifgi/swe#ConditionalValue" ;
+	rdfs:subClassOf gml:AbstractGML ;
+	dc:identifier "conditional value@en"^^xsd:string .
 
 :DataArray a rdfs:Class ;
-	rdfs:subClassOf gml:AbstractGML .
+	rdfs:label "http://purl.org/ifgi/swe#DataArray" ;
+	rdfs:subClassOf gml:AbstractGML ;
+	dc:identifier "data array@en"^^xsd:string .
 
 :DataRecord a rdfs:Class ;
-	rdfs:subClassOf gml:AbstractGML .
+	rdfs:label "http://purl.org/ifgi/swe#DataRecord" ;
+	rdfs:subClassOf gml:AbstractGML ;
+	dc:identifier "data record@en"^^xsd:string .
 
 :SimpleDataRecord a rdfs:Class ;
-	rdfs:subClassOf gml:AbstractGML .
+	rdfs:label "http://purl.org/ifgi/swe#SimpleDataRecord" ;
+	rdfs:subClassOf gml:AbstractGML ;
+	dc:identifier "simple data record@en"^^xsd:string .
 
 :AnyData a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/swe#AnyData" ;
 	rdfs:subClassOf gml:AbstractGML ;
+	dc:identifier "any data@en"^^xsd:string ;
 	dc:title "Any Type"^^xsd:string .
 
 :TimeObjectProperty a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/swe#TimeObjectProperty" ;
+	dc:identifier "time object property@en"^^xsd:string ;
 	dc:description "Property type not provided by GML"^^xsd:string .
 
 :Phenomenon a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/swe#Phenomenon" ;
 	rdfs:subClassOf gml:AbstractGML ;
+	dc:identifier "phenomenon@en"^^xsd:string ;
 	dc:title "Basic Phenomenon definition, and head of substitution group of specialized phenomenon defs."^^xsd:string .
 
 :TimeAggregate a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/swe#TimeAggregate" ;
 	rdfs:subClassOf gml:AbstractTimeObject ;
+	dc:identifier "time agregate@en"^^xsd:string ;
 	dc:title "an arbitrary set of TimeObjects, often TimeInstants and TimePeriods"^^xsd:string .
 
-:TimeGeometricComplex a rdfs:Class .
+:TimeGeometricComplex a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/swe#TimeGeometricComplex" ;
+	dc:identifier "time geometric complex@en"^^xsd:string .
 
-:TimeGrid a rdfs:Class .
+:TimeGrid a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/swe#TimeGrid" ;
+	dc:identifier "time grid@en"^^xsd:string .
 
-:TimeInstantGrid a rdfs:Class .
+:TimeInstantGrid a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/swe#TimeInstantGrid" ;
+	dc:identifier "time instant grid@en"^^xsd:string .
 
-:TimeIntervalGrid a rdfs:Class .
+:TimeIntervalGrid a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/swe#TimeIntervalGrid" ;
+	dc:identifier "time interval grid@en"^^xsd:string .

@@ -1,6 +1,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix : <http://purl.org/ifgi/wfs#> .
 @prefix sawsdl: <http://www.w3.org/ns/sawsdl#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
@@ -8,37 +9,57 @@
 @prefix posm: <http://www.wsmo.org/ns/posm/0.2#> .
 @prefix dolce: <http://purl.org/net/wsml/dolceDnS#> .
 
-# http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/date: "10-11-2010"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/type: "Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/title: "OGC Web Feature Service"^^<http://www.w3.org/2001/XMLSchema#string>
+_:node16a8i5n2fx22 a owl:Ontology ;
+	rdfs:label "WFS" ;
+	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
+	owl:imports <http://purl.org/ifgi/ows/0.2#> , <http://purl.org/net/wsml/dolceDnS#> , <http://www.wsmo.org/ns/posm/0.2#> ;
+	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
+	dc:date "10-11-2010"^^xsd:string ;
+	dc:rights "http://creativecommons.org/licenses/by/3.0/"^^xsd:string ;
+	dc:type "Ontology"^^xsd:string ;
+	dc:title "OGC Web Feature Service"^^xsd:string .
 
 :WebFeatureService a rdfs:Class ;
-	rdfs:subClassOf ows:OGCWebService .
+	rdfs:label "http://purl.org/ifgi/wfs#WebFeatureService" ;
+	rdfs:subClassOf ows:OGCWebService ;
+	dc:identifier "Web feature service@en"^^xsd:string .
 
 :DescribeFeatureType a rdfs:Class ;
-	rdfs:subClassOf posm:Operation .
+	rdfs:label "http://purl.org/ifgi/wfs#DescribeFeatureType" ;
+	rdfs:subClassOf posm:Operation ;
+	dc:identifier "describe feature type@en"^^xsd:string .
 
 :DescribeFeatureTypeRequest a rdfs:Class ;
-	rdfs:subClassOf posm:MessagePart .
+	rdfs:label "http://purl.org/ifgi/wfs#DescribeFeatureTypeRequest" ;
+	rdfs:subClassOf posm:MessagePart ;
+	dc:identifier "describe feature type request@en"^^xsd:string .
 
 :DescribeFeatureTypeResponse a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/wfs#DescribeFeatureTypeResponse" ;
 	rdfs:subClassOf posm:MessagePart ;
+	dc:identifier "describe feature type response@en"^^xsd:string ;
 	rdfs:seeAlso <http://schemas.opengis.net/wfs/1.1.0/wsdl/wfs-util.xsd#DescribeFeatureTypeResponse> .
 
 :GetFeature a rdfs:Class ;
-	rdfs:subClassOf posm:Operation .
+	rdfs:label "http://purl.org/ifgi/wfs#GetFeature" ;
+	rdfs:subClassOf posm:Operation ;
+	dc:identifier "get feature@en"^^xsd:string .
 
 :GetFeatureRequest a rdfs:Class ;
-	rdfs:subClassOf posm:MessagePart .
+	rdfs:label "http://purl.org/ifgi/wfs#GetFeatureRequest" ;
+	rdfs:subClassOf posm:MessagePart ;
+	dc:identifier "get feature request@en"^^xsd:string .
 
 :GetFeatureResponse a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/wfs#GetFeatureResponse" ;
 	rdfs:subClassOf posm:MessagePart ;
+	dc:identifier "get feature response@en"^^xsd:string ;
 	rdfs:seeAlso <http://schemas.opengis.net/wfs/1.1.0/wfs.xsd#FeatureCollection> .
 
 :FeatureTypeDescription a rdfs:Class ;
-	rdfs:subClassOf dolce:information_object .
+	rdfs:label "http://purl.org/ifgi/wfs#FeatureTypeDescription" ;
+	rdfs:subClassOf dolce:information_object ;
+	dc:identifier "feature type description@en"^^xsd:string .
 
 :DefaultDescribeFeatureType a :DescribeFeatureType ;
 	posm:hasOutput :DefaultDescribeFeatureTypeResponse ;

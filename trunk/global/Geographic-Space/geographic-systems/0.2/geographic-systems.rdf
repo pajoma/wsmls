@@ -1,48 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF
+	xmlns="http://purl.org/ifgi/geosystems#"
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-	xmlns="http://purl.org/net/wsml/geospace#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
-	xmlns:wsml="http://www.wsmo.org/wsml/wsml-syntax#"
-	xmlns:dolce="http://purl.org/net/wsml/dolce#"
-	xmlns:ptrn="http://purl.org/net/concepts/patterns/system#">
-<!-- http://purl.org/dc/elements/1.1/creator: "p.maue (IFGI)"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/contributor: "h.michels (IFGI)"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/type: "Domain Ontology"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/description: "A generic ontology suitable to describe objects and events in the geographic space, e.g. weather, forests, mountains, rivers, snow, ..."^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/title: "Geographic Space Ontology"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/subject: "Geography"^^<http://www.w3.org/2001/XMLSchema#string> -->
+	xmlns:ptrn="http://purl.org/ifgi/patterns/system#">
 
-<rdf:Description rdf:about="http://purl.org/net/wsml/geospace#geographic_system">
+<rdf:Description rdf:nodeID="node16a8i5n2fx241">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<rdfs:label>geographic_systems</rdfs:label>
+	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
+	<owl:imports rdf:resource="http://purl.org/ifgi/patterns/system#"/>
+	<dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">p.maue (IFGI)</dc:creator>
+	<dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">h.michels (IFGI)</dc:contributor>
+	<dc:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(a)IfGI, University of Muenster</dc:publisher>
+	<dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://creativecommons.org/licenses/by/3.0/</dc:rights>
+	<dc:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Domain Ontology</dc:type>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A generic ontology suitable to describe objects and events in the geographic space, e.g. weather, forests, mountains, rivers, snow, ...</dc:description>
+	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geographic Space Ontology</dc:title>
+	<dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geography</dc:subject>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/geosystems#geographic_system">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:subClassOf rdf:resource="http://purl.org/net/concepts/patterns/system#System"/>
-	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">System, geographisch@de</rdfs:label>
-	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">geographical system@en</rdfs:label>
-	<comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a system in the geographical space</comment>
+	<rdfs:label>http://purl.org/ifgi/geosystems#geographic_system</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/patterns/system#System"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">System, geographisch@de</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">geographical system@en</dc:identifier>
+	<dc:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a system in the geographical space</dc:comment>
 	<dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Systems</dc:subject>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/net/wsml/geospace#surroundedBy">
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">umgeben von@de</rdfs:label>
-	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sourrounded by@en</rdfs:label>
+<rdf:Description rdf:nodeID="node16a8i5n2fx242">
+	<rdfs:label>http://purl.org/ifgi/geosystems#surroundedBy</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/geosystems#geographic_system"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">umgeben von@de</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sourrounded by@en</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:source>
 	<rdfs:comments rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comments>
-	<rdfs:domain rdf:resource="http://purl.org/net/wsml/geospace#geographic_system"/>
-	<rdfs:range rdf:resource="http://purl.org/net/wsml/geospace#Environment"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/geosystems#Environment"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/net/wsml/geospace#environment">
+<rdf:Description rdf:about="http://purl.org/ifgi/geosystems#environment">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:subClassOf rdf:resource="http://purl.org/net/concepts/patterns/system#Role"/>
-	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Umgebung@de</rdfs:label>
-	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Environment@en</rdfs:label>
-	<comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">the sourrounding geographical unit of a system</comment>
+	<rdfs:label>http://purl.org/ifgi/geosystems#environment</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/patterns/system#Role"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Umgebung@de</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Environment@en</dc:identifier>
+	<dc:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">the sourrounding geographical unit of a system</dc:comment>
 	<dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Environment</dc:subject>
 </rdf:Description>
 

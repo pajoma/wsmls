@@ -1,111 +1,134 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF
+	xmlns="http://purl.org/ifgi/geoevents#"
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-	xmlns="http://purl.org/net/wsml/geospace#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
-	xmlns:wsml="http://www.wsmo.org/wsml/wsml-syntax#"
-	xmlns:dolce="http://purl.org/net/wsml/dolce#"
-	xmlns:dns="http://purl.org/net/wsml/dolceDnS#">
-<!-- http://purl.org/dc/elements/1.1/creator: "h.michels (IFGI)"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/contributor: ""^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/type: "Domain Ontology"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/description: "A generic ontology suitable to describe specific events without human intention in the geographic space, e.g. wind, landslide, ..."^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/title: "Geographic Space Ontology"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/subject: "Geography"^^<http://www.w3.org/2001/XMLSchema#string> -->
+	xmlns:dns="http://purl.org/ifgi/dolceDnS#">
 
-<rdf:Description rdf:about="http://purl.org/net/wsml/geospace#movement">
+<rdf:Description rdf:nodeID="node16a8i5n2fx227">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<rdfs:label>geographic_events</rdfs:label>
+	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
+	<owl:imports rdf:resource="http://purl.org/ifgi/dolceDnS#"/>
+	<dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">h.michels (IFGI)</dc:creator>
+	<dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:contributor>
+	<dc:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(a)IfGI, University of Muenster</dc:publisher>
+	<dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://creativecommons.org/licenses/by/3.0/</dc:rights>
+	<dc:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Domain Ontology</dc:type>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A generic ontology suitable to describe specific events without human intention in the geographic space, e.g. wind, landslide, ...</dc:description>
+	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geographic Space Ontology</dc:title>
+	<dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geography</dc:subject>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/geoevents#movement">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:subClassOf rdf:resource="http://purl.org/net/wsml/dolceDnS#physical_phenomenon"/>
-	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:label>
+	<rdfs:label>http://purl.org/ifgi/geoevents#movement</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dolceDnS#physical_phenomenon"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">movement@en</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bewegung@de</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:source>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/net/wsml/geospace#wind">
+<rdf:Description rdf:about="http://purl.org/ifgi/geoevents#wind">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:subClassOf rdf:resource="http://purl.org/net/wsml/geospace#movement"/>
-	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wind@de</rdfs:label>
-	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wind@en</rdfs:label>
+	<rdfs:label>http://purl.org/ifgi/geoevents#wind</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geoevents#movement"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wind@de</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wind@en</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moving air caused by differences in pressure. The air moves from an area of high pressure to an area of low pressure.</dc:description>
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Wind</dc:source>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/net/wsml/geospace#storm">
+<rdf:Description rdf:about="http://purl.org/ifgi/geoevents#storm">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:subClassOf rdf:resource="http://purl.org/net/wsml/geospace#wind"/>
-	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sturm@de</rdfs:label>
-	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">storm@en</rdfs:label>
-	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A meteorological definition of a terrestrial storm is a wind measuring 10 or higher on the Beaufort scale. It may be marked by strong wind, hail, thunder and/or lightning (a thunderstorm), heavy precipitation... </dc:description>
+	<rdfs:label>http://purl.org/ifgi/geoevents#storm</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geoevents#wind"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sturm@de</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">storm@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A meteorological definition of a terrestrial storm is a wind measuring 10 or higher on the Beaufort scale. It may be marked by strong wind, hail, thunder and/or lightning (a thunderstorm), heavy precipitation...</dc:description>
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Storm</dc:source>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/net/wsml/geospace#flow">
+<rdf:Description rdf:about="http://purl.org/ifgi/geoevents#flow">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:subClassOf rdf:resource="http://purl.org/net/wsml/geospace#movement"/>
-	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Strömung@de</rdfs:label>
-	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flow@en</rdfs:label>
+	<rdfs:label>http://purl.org/ifgi/geoevents#flow</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geoevents#movement"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fliessen@de</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flow@en</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An uninterrupted motion characteristic of fluids (liquids or gases) such as water</dc:description>
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://wordnetweb.princeton.edu</dc:source>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/net/wsml/geospace#river_current">
+<rdf:Description rdf:about="http://purl.org/ifgi/geoevents#river_current">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:subClassOf rdf:resource="http://purl.org/net/wsml/geospace#flow"/>
-	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flussströmung@de</rdfs:label>
-	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">river current@en</rdfs:label>
+	<rdfs:label>http://purl.org/ifgi/geoevents#river_current</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geoevents#flow"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flussströmung@de</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">river current@en</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The steady flow of water in a river influenced by gravity as the water moves downhill to reduce its potential energy.</dc:description>
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Current_(stream)</dc:source>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/net/wsml/geospace#sea_current">
+<rdf:Description rdf:about="http://purl.org/ifgi/geoevents#sea_current">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:subClassOf rdf:resource="http://purl.org/net/wsml/geospace#flow"/>
-	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meeresströmung@de</rdfs:label>
-	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sea current@en</rdfs:label>
+	<rdfs:label>http://purl.org/ifgi/geoevents#sea_current</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geoevents#flow"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meeresströmung@de</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sea current@en</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The steady flow of surface sea water in a prevailing direction.</dc:description>
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://wordnetweb.princeton.edu/</dc:source>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/net/wsml/geospace#ground_movement">
+<rdf:Description rdf:about="http://purl.org/ifgi/geoevents#ground_movement">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:subClassOf rdf:resource="http://purl.org/net/wsml/geospace#movement"/>
-	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:label>
+	<rdfs:label>http://purl.org/ifgi/geoevents#ground_movement</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geoevents#movement"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ground movement@en</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bodenbewegung@de</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:source>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/net/wsml/geospace#groundwater_flow">
+<rdf:Description rdf:about="http://purl.org/ifgi/geoevents#groundwater_flow">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:subClassOf rdf:resource="http://purl.org/net/wsml/geospace#flow"/>
-	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:label>
+	<rdfs:label>http://purl.org/ifgi/geoevents#groundwater_flow</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geoevents#flow"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">groundwater flow@en</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grundwasserströmung@de</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:source>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/net/wsml/geospace#hurricane">
+<rdf:Description rdf:about="http://purl.org/ifgi/geoevents#hurricane">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:subClassOf rdf:resource="http://purl.org/net/wsml/geospace#wind"/>
-	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:label>
+	<rdfs:label>http://purl.org/ifgi/geoevents#hurricane</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geoevents#wind"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hurricane@en</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hurrikan@de</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:source>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/net/wsml/geospace#earthquake">
+<rdf:Description rdf:about="http://purl.org/ifgi/geoevents#earthquake">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:subClassOf rdf:resource="http://purl.org/net/wsml/geospace#ground_movement"/>
-	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:label>
+	<rdfs:label>http://purl.org/ifgi/geoevents#earthquake</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geoevents#ground_movement"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">earthquake@en</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Erdbeben@de</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:source>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/net/wsml/geospace#precipitation">
+<rdf:Description rdf:about="http://purl.org/ifgi/geoevents#precipitation">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:subClassOf rdf:resource="http://purl.org/net/wsml/dolceDnS#physical_phenomenon"/>
-	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:label>
+	<rdfs:label>http://purl.org/ifgi/geoevents#precipitation</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dolceDnS#physical_phenomenon"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">precipitation@en</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Niderschlag@de</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:source>
 </rdf:Description>

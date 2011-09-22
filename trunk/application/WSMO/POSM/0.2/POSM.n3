@@ -1,38 +1,57 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix : <http://www.wsmo.org/ns/posm/0.2#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 
+_:node16a8i5n2fx106 a owl:Ontology ;
+	rdfs:label "POSM" ;
+	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-core" .
 
-:Service a rdfs:Class .
+:Service a rdfs:Class ;
+	rdfs:label "http://www.wsmo.org/ns/posm/0.2#Service" ;
+	dc:identifier "service@en"^^xsd:string .
 
-:hasOperation a rdf:Property ;
+_:node16a8i5n2fx107 rdfs:label "http://www.wsmo.org/ns/posm/0.2#hasOperation" ;
 	rdfs:domain :Service ;
+	a rdf:Property ;
 	rdfs:range :Operation .
 
-:Operation a rdfs:Class .
+:Operation a rdfs:Class ;
+	rdfs:label "http://www.wsmo.org/ns/posm/0.2#Operation" ;
+	dc:identifier "operation@en"^^xsd:string .
 
-:hasInput a rdf:Property ;
+_:node16a8i5n2fx108 rdfs:label "http://www.wsmo.org/ns/posm/0.2#hasInput" ;
 	rdfs:domain :Operation ;
+	a rdf:Property ;
 	rdfs:range :MessagePart .
 
-:hasOutput a rdf:Property ;
+_:node16a8i5n2fx109 rdfs:label "http://www.wsmo.org/ns/posm/0.2#hasOutput" ;
 	rdfs:domain :Operation ;
+	a rdf:Property ;
 	rdfs:range :MessagePart .
 
-:hasInputFault a rdf:Property ;
+_:node16a8i5n2fx110 rdfs:label "http://www.wsmo.org/ns/posm/0.2#hasInputFault" ;
 	rdfs:domain :Operation ;
+	a rdf:Property ;
 	rdfs:range :MessagePart .
 
-:hasOutputFault a rdf:Property ;
+_:node16a8i5n2fx111 rdfs:label "http://www.wsmo.org/ns/posm/0.2#hasOutputFault" ;
 	rdfs:domain :Operation ;
+	a rdf:Property ;
 	rdfs:range :MessagePart .
 
-:MessagePart a rdfs:Class .
+:MessagePart a rdfs:Class ;
+	rdfs:label "http://www.wsmo.org/ns/posm/0.2#MessagePart" ;
+	dc:identifier "message part@en"^^xsd:string .
 
-:hasMessagePart a rdf:Property ;
+_:node16a8i5n2fx112 rdfs:label "http://www.wsmo.org/ns/posm/0.2#hasMessagePart" ;
 	rdfs:domain :MessagePart ;
+	a rdf:Property ;
 	rdfs:range :MessagePart .
 
 :MessageContent a rdfs:Class ;
-	rdfs:subClassOf :MessagePart .
+	rdfs:label "http://www.wsmo.org/ns/posm/0.2#MessageContent" ;
+	rdfs:subClassOf :MessagePart ;
+	dc:identifier "message content@en"^^xsd:string .

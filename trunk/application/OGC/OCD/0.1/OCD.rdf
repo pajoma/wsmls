@@ -1,65 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF
+	xmlns="http://purl.org/ifgi/ocd#"
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-	xmlns="http://purl.org/ifgi/ocd#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
-	xmlns:gml="http://purl.org/ifgi/gml#">
-<!-- http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/date: "2010-11-24"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/type: "Ontology"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/title: "OGC Common Data"^^<http://www.w3.org/2001/XMLSchema#string> -->
+	xmlns:gml="http://purl.org/ifgi/gml/0.2#">
+
+<rdf:Description rdf:nodeID="node16a8i5n2fx7">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<rdfs:label>OCD</rdfs:label>
+	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
+	<owl:imports rdf:resource="http://purl.org/ifgi/gml/0.2#"/>
+	<dc:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(a)IfGI, University of Muenster</dc:publisher>
+	<dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010-11-24</dc:date>
+	<dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://creativecommons.org/licenses/by/3.0/</dc:rights>
+	<dc:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ontology</dc:type>
+	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OGC Common Data</dc:title>
+</rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ocd#BoundingBox">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml#AbstractGeometry"/>
+	<rdfs:label>http://purl.org/ifgi/ocd#BoundingBox</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml/0.2#AbstractGeometry"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bounding box@en</dc:identifier>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ocd#AbstractTimeObject">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml#FeatureProperty"/>
+	<rdfs:label>http://purl.org/ifgi/ocd#AbstractTimeObject</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml/0.2#FeatureProperty"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abstract time object@en</dc:identifier>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ocd#TimeSequence">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/ocd#TimeSequence</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/ocd#AbstractTimeObject"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">time sequence@en</dc:identifier>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ocd#TimePoint">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/ocd#TimePoint</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/ocd#AbstractTimeObject"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">time point@en</dc:identifier>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ocd#boundedBy">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:domain rdf:resource="http://purl.org/ifgi/gml#AbstractFeature"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/gml/0.2#AbstractFeature"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/ocd#BoundingBox"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bound by@en</dc:identifier>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ocd#upperCorner">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/ocd#BoundingBox"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">upper corner@en</dc:identifier>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ocd#lowerCorner">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/ocd#BoundingBox"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lower corner@en</dc:identifier>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ocd#hasStartPoint">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/ocd#TimeSequence"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has start point@en</dc:identifier>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ocd#hasEndPoint">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/ocd#TimeSequence"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has end point@en</dc:identifier>
 </rdf:Description>
 
 </rdf:RDF>

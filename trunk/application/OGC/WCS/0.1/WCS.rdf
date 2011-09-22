@@ -1,62 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF
+	xmlns="http://purl.org/ifgi/wcs#"
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-	xmlns="http://purl.org/ifgi/wcs#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:sawsdl="http://www.w3.org/ns/sawsdl#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
-	xmlns:ows="http://purl.org/ifgi/ows/0.3#"
+	xmlns:ows="http://purl.org/ifgi/ows/0.2#"
 	xmlns:posm="http://www.wsmo.org/ns/posm/0.2#"
 	xmlns:dolce="http://purl.org/net/wsml/dolceDnS#">
-<!-- http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/date: "25-11-2010"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/type: "Ontology"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/title: "OGC Web Coverage Service 1.1"^^<http://www.w3.org/2001/XMLSchema#string> -->
+
+<rdf:Description rdf:nodeID="node16a8i5n2fx19">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<rdfs:label>WCS</rdfs:label>
+	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
+	<owl:imports rdf:resource="http://purl.org/ifgi/ows/0.2#"/>
+	<owl:imports rdf:resource="http://purl.org/net/wsml/dolceDnS#"/>
+	<owl:imports rdf:resource="http://www.wsmo.org/ns/posm/0.2#"/>
+	<dc:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(a)IfGI, University of Muenster</dc:publisher>
+	<dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25-11-2010</dc:date>
+	<dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://creativecommons.org/licenses/by/3.0/</dc:rights>
+	<dc:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ontology</dc:type>
+	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OGC Web Coverage Service 1.1</dc:title>
+</rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/wcs#WebCoverageService">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/ows/0.3#OGCWebService"/>
+	<rdfs:label>http://purl.org/ifgi/wcs#WebCoverageService</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/ows/0.2#OGCWebService"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Web coverage service@en</dc:identifier>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/wcs#DescribeCoverage">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/wcs#DescribeCoverage</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#Operation"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">describe service@en</dc:identifier>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/wcs#DescribeCoverageRequest">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/wcs#DescribeCoverageRequest</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">describe coverage request@en</dc:identifier>
 	<rdfs:seeAlso rdf:resource="http://schemas.opengis.net/wcs/1.1/wcsDescribeCoverage.xsd#DescribeCoverage"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/wcs#DescribeCoverageResponse">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/wcs#DescribeCoverageResponse</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">describe coverage response@en</dc:identifier>
 	<rdfs:seeAlso rdf:resource="http://schemas.opengis.net/wcs/1.1/wcsDescribeCoverage.xsd#CoverageDescriptions"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/wcs#GetCoverage">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/wcs#GetCoverage</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#Operation"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">get coverage@en</dc:identifier>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/wcs#GetCoverageRequest">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/wcs#GetCoverageRequest</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">get coverage request@en</dc:identifier>
 	<rdfs:seeAlso rdf:resource="http://schemas.opengis.net/wcs/1.1/wcsGetCoverage.xsd#GetCoverage"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/wcs#GetCoverageResponse">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/wcs#GetCoverageResponse</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">get coverage response@en</dc:identifier>
 	<rdfs:seeAlso rdf:resource="http://schemas.opengis.net/wcs/1.1/wcsCoverages.xsd#Coverages"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/wcs#CoverageDescription">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/wcs#CoverageDescription</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://purl.org/net/wsml/dolceDnS#information_object"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">coverage description@en</dc:identifier>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/wcs#DefaultDescribeCoverage">

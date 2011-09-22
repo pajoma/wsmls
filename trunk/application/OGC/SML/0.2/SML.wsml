@@ -1,7 +1,7 @@
 wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
 namespace { _"http://purl.org/ifgi/sml#",
 	dc _"http://purl.org/dc/elements/1.1/", 
-	gml _"http://purl.org/ifgi/gml#"
+	gml _"http://purl.org/ifgi/gml/0.2#"
  }
 
 ontology Base
@@ -16,10 +16,15 @@ ontology Base
 		dc#source hasValue "http://schemas.opengis.net/sensorML/1.0.1/base.xsd"	
 	endAnnotations
 	
-	concept AbstractSML subConceptOf gml#AbstractFeature
+	importsOntology {_"http://purl.org/ifgi/gml/0.2#"}
 	
+	concept AbstractSML subConceptOf gml#AbstractFeature
+		annotations
+			dc#identifier hasValue "abstract sml@en"
+		endAnnotations
 	
 	concept AbstractProcess subConceptOf AbstractSML
 		annotations
 			dc#description hasValue "base substitution group for all processes"
+			dc#identifier hasValue "abstract process@en"
 		endAnnotations

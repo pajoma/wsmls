@@ -1,5 +1,6 @@
 wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-core"
-namespace { _"http://www.wsmo.org/ns/wsmo-lite#"
+namespace { _"http://www.wsmo.org/ns/wsmo-lite#",
+	dc _"http://purl.org/dc/elements/1.1/"
  }
 
 /* See W3C submission for a description:  
@@ -10,14 +11,32 @@ ontology WSL
 
 
 concept FunctionalClassificationRoot
+	annotations
+			dc#identifier hasValue "functional classification root@en"
+	endAnnotations
 
 concept NonfunctionalParameter
+	annotations
+			dc#identifier hasValue "non-functional parameter@en"
+	endAnnotations
 
 concept Condition
+	annotations
+			dc#identifier hasValue "condition@en"
+	endAnnotations
 
-concept Effect 
+concept Effect
+	annotations
+			dc#identifier hasValue "effect@en"
+	endAnnotations
 
 /* we introducted this relation to be able to map between service instances and the classification root */
 relation functionalClassification/2
+	annotations
+			dc#identifier hasValue "functional classification@en"
+	endAnnotations
 
 relation usesOntology/2
+	annotations
+			dc#identifier hasValue "uses ontology@en"
+	endAnnotations

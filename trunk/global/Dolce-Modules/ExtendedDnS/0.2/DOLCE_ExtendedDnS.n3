@@ -1,538 +1,580 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix : <http://purl.org/net/wsml/dolceDnS#> .
-@prefix dolce: <http://purl.org/net/wsml/dolce#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://purl.org/ifgi/dolceDnS#> .
+@prefix dolce: <http://purl.org/ifgi/dolce#> .
 @prefix src: <http://www.loa-cnr.it/ontologies/SpatialRelations.owl#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 
-# http://purl.org/dc/elements/1.1/publisher: "IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/type: "Foundational Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/title: "Dolce Ontology (Description and Situations)"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/description: "An ontology of collections, collectives, social units, and systems, plugins to DnS. These are placeholders for a more ambitious ontology of basic entities from the social world. OWL engineering by Aldo Gangemi. WSML Translation by Patrick Maué"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/source: "http://www.loa-cnr.it/ontologies/ExtendedDnS.owl"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/subject: "dolce, foundational, module, spatial"^^<http://www.w3.org/2001/XMLSchema#string>
+_:node16a8i5n2fx183 a owl:Ontology ;
+	rdfs:label "DOLCE_ExtendedDnS" ;
+	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
+	owl:imports <http://purl.org/ifgi/dolce#> ;
+	dc:publisher "IfGI, University of Muenster"^^xsd:string ;
+	dc:type "Foundational Ontology"^^xsd:string ;
+	dc:title "Dolce Ontology (Description and Situations)"^^xsd:string ;
+	dc:description "An ontology of collections, collectives, social units, and systems, plugins to DnS. These are placeholders for a more ambitious ontology of basic entities from the social world. OWL engineering by Aldo Gangemi. WSML Translation by Patrick Maué"^^xsd:string ;
+	dc:source "http://www.loa-cnr.it/ontologies/ExtendedDnS.owl"^^xsd:string ;
+	dc:subject "dolce, foundational, module, spatial"^^xsd:string .
 
 :agent a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#agent" ;
 	rdfs:subClassOf dolce:endurant ;
-	rdfs:label "agent@en"^^xsd:string ;
+	dc:identifier "agent@en"^^xsd:string ;
 	dc:description "A catch-all class used to join agentive objects (either physical or social). Agents are dispositionally so, in the sense that they internally represent descriptions, and in particular plans, goals and possible actions, but they do not necessarily act. In everyday language, agent is used in this sense, but also to tell that something has acted in a certain way, or to say that something has an initiator or leading role in some action. In DLP, the performs relation encodes these notions."^^xsd:string .
 
 :agentive_physical_object a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#agentive_physical_object" ;
 	rdfs:subClassOf :agent ;
-	rdfs:label "agentive_physical_object@en"^^xsd:string ;
+	dc:identifier "agentive_physical_object@en"^^xsd:string ;
 	dc:description "desc"^^xsd:string .
 
 :rational_physical_object a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#rational_physical_object" ;
 	rdfs:subClassOf :agentive_physical_object , :rational_agent ;
-	rdfs:label "rational_physical_object@en"^^xsd:string , "agent@en"^^xsd:string ;
+	dc:identifier "rational_physical_object@en"^^xsd:string , "agent@en"^^xsd:string ;
 	dc:description "In this ontology, a rational object is encoded as having the ability to internally represent meta-descriptions (descriptions that have other descriptions playing roles used by them). Other theories of rational agency assume desires and intentions for these objects, but in principle any agent can have desires and intentions: the very difference seems to be the ability to choose among different desires or intentions by going 'meta-level'."^^xsd:string , "desc"^^xsd:string .
 
 :agentive_social_object a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#agentive_social_object" ;
 	rdfs:subClassOf :agent , :social_object ;
-	rdfs:label "agentive-social-object@en"^^xsd:string ;
-	dc:description "A social object that is assumed to adopt a plan. Since social objects are dependent on physical ones, adoption involves that a social object is acted-by physical agents that 'internally represents' that plan.  For example, an institution can adopt the plan to promote or regulate some activities, but this is possible by means of the powers conferred to it by some legal system, through its representatives, and that plan has to be executed by means of the physical agents that 'act for' the institution."^^xsd:string , """A social object that is assumed to adopt a plan. Since social objects are dependent on physical
-			ones, adoption involves that a social object is acted-by physical agents that 'internally represents' that plan. For 
-			example, an institution can adopt the plan to promote or regulate some activities, but this is possible by means of 
-			the powers conferred to it by some legal system, through its representatives, and that plan has to be executed by means
-			of the physical agents that 'act for' the institution."""^^xsd:string .
+	dc:identifier "agentive-social-object@en"^^xsd:string ;
+	dc:description "A social object that is assumed to adopt a plan. Since social objects are dependent on physical ones, adoption involves that a social object is acted-by physical agents that 'internally represents' that plan. For example, an institution can adopt the plan to promote or regulate some activities, but this is possible by means of the powers conferred to it by some legal system, through its representatives, and that plan has to be executed by means of the physical agents that 'act for' the institution."^^xsd:string , "A social object that is assumed to adopt a plan. Since social objects are dependent on physical ones, adoption involves that a social object is acted-by physical agents that 'internally represents' that plan. For example, an institution can adopt the plan to promote or regulate some activities, but this is possible by means of the powers conferred to it by some legal system, through its representatives, and that plan has to be executed by means of the physical agents that 'act for' the institution."^^xsd:string .
 
-:adopts a rdf:Property ;
+_:node16a8i5n2fx184 rdfs:label "http://purl.org/ifgi/dolceDnS#adopts" ;
 	rdfs:domain :agentive_social_object ;
+	a rdf:Property ;
 	rdfs:range dolce:plan .
 
 :agentive_figure a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#agentive_figure" ;
 	rdfs:subClassOf :agentive_social_object , :agent , :figure ;
-	rdfs:label "agentive-figure@en"^^xsd:string ;
-	dc:description "Agentive figures are those which are assigned (agentive) roles from a society or community; hence, they can act like a physical agent. Typical agentive figures are societies, organizations, and in general all socially constructed persons. Agentive figures are not dependent on roles defined or used in the same descriptions they are defined or used, but they can act because they depute some powers to some of those roles. In other words, a figure classified by some agentive role can play that role because there are other roles in the descriptions that define or use the figure. Those roles classifies endurants that result to act for the figure. For example, an employee acts for an organization that deputes the role (e.g. turner) that classifies the employee. Simply put, a guy working as a turner at FIAT acts for (or on behalf of) FIAT. In complex figures, like organizations or companies, a total agency is possible when an endurant plays a delegate or representative role of the figure. Since figures are social objects, it is conceivable to find agentive figures that act for other agentive figures."^^xsd:string , """Agentive figures are those which are assigned (agentive) roles from a society or community; 
-			hence, they can act like a physical agent. Typical agentive figures are societies, organizations, and in general 
-			all socially constructed persons. Agentive figures are not dependent on roles defined or used in the same descriptions
-			they are defined or used, but they can act because they depute some powers to some of those roles. In other words, 
-			a figure classified by some agentive role can play that role because there are other roles in the descriptions that 
-			define or use the figure. Those roles classifies endurants that result to act for the figure. For example, an employee
-			acts for an organization that deputes the role (e.g. turner) that classifies the employee. Simply put, a guy working 
-			as a turner at FIAT acts for (or on behalf of) FIAT. In complex figures, like organizations or companies, a total 
-			agency is possible when an endurant plays a delegate or representative role of the figure. Since figures are social 
-			objects, it is conceivable to find agentive figures that act for other agentive figures."""^^xsd:string , """Agentive figures are those which are assigned (agentive) roles from a society or community; 
-			hence, they can act like a physical agent. Typical agentive figures are societies, organizations, and in general 
-			all socially constructed persons. Agentive figures are not dependent on roles defined or used in the same descriptions
-			they are defined or used, but they can act because they depute some powers to some of those roles. In other words, a 
-			figure classified by some agentive role can play that role because there are other roles in the descriptions that 
-			define or use the figure. Those roles classifies endurants that result to act for the figure. For example, an employee 
-			acts for an organization that deputes the role (e.g. turner) that classifies the employee. Simply put, a guy working 
-			as a turner at FIAT acts for (or on behalf of) FIAT. In complex figures, like organizations or companies, a total 
-			agency is possible when an endurant plays a delegate or representative role of the figure. Since figures are social 
-			objects, it is conceivable to find agentive figures that act for other agentive figures."""^^xsd:string .
+	dc:identifier "agentive-figure@en"^^xsd:string ;
+	dc:description "Agentive figures are those which are assigned (agentive) roles from a society or community; hence, they can act like a physical agent. Typical agentive figures are societies, organizations, and in general all socially constructed persons. Agentive figures are not dependent on roles defined or used in the same descriptions they are defined or used, but they can act because they depute some powers to some of those roles. In other words, a figure classified by some agentive role can play that role because there are other roles in the descriptions that define or use the figure. Those roles classifies endurants that result to act for the figure. For example, an employee acts for an organization that deputes the role (e.g. turner) that classifies the employee. Simply put, a guy working as a turner at FIAT acts for (or on behalf of) FIAT. In complex figures, like organizations or companies, a total agency is possible when an endurant plays a delegate or representative role of the figure. Since figures are social objects, it is conceivable to find agentive figures that act for other agentive figures."^^xsd:string , "Agentive figures are those which are assigned (agentive) roles from a society or community; hence, they can act like a physical agent. Typical agentive figures are societies, organizations, and in general all socially constructed persons. Agentive figures are not dependent on roles defined or used in the same descriptions they are defined or used, but they can act because they depute some powers to some of those roles. In other words, a figure classified by some agentive role can play that role because there are other roles in the descriptions that define or use the figure. Those roles classifies endurants that result to act for the figure. For example, an employee acts for an organization that deputes the role (e.g. turner) that classifies the employee. Simply put, a guy working as a turner at FIAT acts for (or on behalf of) FIAT. In complex figures, like organizations or companies, a total agency is possible when an endurant plays a delegate or representative role of the figure. Since figures are social objects, it is conceivable to find agentive figures that act for other agentive figures."^^xsd:string , "Agentive figures are those which are assigned (agentive) roles from a society or community; hence, they can act like a physical agent. Typical agentive figures are societies, organizations, and in general all socially constructed persons. Agentive figures are not dependent on roles defined or used in the same descriptions they are defined or used, but they can act because they depute some powers to some of those roles. In other words, a figure classified by some agentive role can play that role because there are other roles in the descriptions that define or use the figure. Those roles classifies endurants that result to act for the figure. For example, an employee acts for an organization that deputes the role (e.g. turner) that classifies the employee. Simply put, a guy working as a turner at FIAT acts for (or on behalf of) FIAT. In complex figures, like organizations or companies, a total agency is possible when an endurant plays a delegate or representative role of the figure. Since figures are social objects, it is conceivable to find agentive figures that act for other agentive figures."^^xsd:string .
 
-:plays a rdf:Property ;
+_:node16a8i5n2fx185 rdfs:label "http://purl.org/ifgi/dolceDnS#plays" ;
 	rdfs:domain :agentive_figure ;
+	a rdf:Property ;
 	rdfs:range :role .
 
 :rational_agent a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#rational_agent" ;
 	rdfs:subClassOf :agent ;
-	rdfs:label "rational-agent@en"^^xsd:string ;
+	dc:identifier "rational-agent@en"^^xsd:string ;
 	dc:description "Either a rational physical object (e.g. an animal capable of meta-representations), or a social object acted by a rational physical object (e.g. an organization)."^^xsd:string .
 
 :physical_realization a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#physical_realization" ;
 	rdfs:subClassOf dolce:spatio_temporal_particular ;
-	rdfs:label "physical-realization@en"^^xsd:string ;
+	dc:identifier "physical-realization@en"^^xsd:string ;
 	dc:description "Any physical particular that realizes a non-physical endurant. Such physical particulars can be either physical endurants, physical qualities, physical regions, perdurants with at least one physical participant, or a situation with one physical entity in its setting.Ultimately, a physical realization depends on at least one physical endurant (each of the others physical entity types depend on a physical endurant to be considered as such)."^^xsd:string .
 
 :cognitive_event a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#cognitive_event" ;
 	rdfs:subClassOf dolce:event ;
-	rdfs:label "cognitive-event@en"^^xsd:string ;
+	dc:identifier "cognitive-event@en"^^xsd:string ;
 	dc:description "An event occurring in the (embodied) mind."^^xsd:string .
 
-dolce:total_constant_participant a rdf:Property ;
+_:node16a8i5n2fx186 rdfs:label "http://purl.org/ifgi/dolce#total_constant_participant" ;
 	rdfs:domain :cognitive_event ;
+	a rdf:Property ;
 	rdfs:range :agentive_physical_object .
 
 :flux a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#flux" ;
 	rdfs:subClassOf dolce:process ;
-	rdfs:label "flux@en"^^xsd:string ;
+	dc:identifier "flux@en"^^xsd:string ;
 	dc:description "Fluxes are processes that (also) contain accomplishments as constituents. In other words, fluxes emerge out of accomplishments."^^xsd:string .
 
 :reconstructed_flux a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#reconstructed_flux" ;
 	rdfs:subClassOf :flux ;
-	rdfs:label "reconstructed-flux@en"^^xsd:string ;
+	dc:identifier "reconstructed-flux@en"^^xsd:string ;
 	dc:description "Reconstructed fluxes are fluxes that only contain accomplishments as members."^^xsd:string .
 
 :cognitive_state a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#cognitive_state" ;
 	rdfs:subClassOf dolce:state ;
-	rdfs:label "cognitive-state@en"^^xsd:string ;
+	dc:identifier "cognitive-state@en"^^xsd:string ;
 	dc:description "A state of the (embodied) mind"^^xsd:string .
 
 :action a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#action" ;
 	rdfs:subClassOf dolce:accomplishment ;
-	rdfs:label "action@en"^^xsd:string ;
-	dc:description """A Perdurant that exemplifies the intentionality of an agent. Could it be aborted, incomplete, 
-			mislead, while remaining a (potential) accomplishment ... The point here is that having a result depends on a method, 
-			then an action remains an action under incomplete results. As a matter of fact, if we neutralize intentionality, a 
-			purely topological, post-hoc view is at odds with the notion of incomplete accomplishments."""^^xsd:string .
+	dc:identifier "action@en"^^xsd:string ;
+	dc:description "A Perdurant that exemplifies the intentionality of an agent. Could it be aborted, incomplete, mislead, while remaining a (potential) accomplishment ... The point here is that having a result depends on a method, then an action remains an action under incomplete results. As a matter of fact, if we neutralize intentionality, a purely topological, post-hoc view is at odds with the notion of incomplete accomplishments."^^xsd:string .
 
-dolce:generically_dependent_on a rdf:Property ;
+_:node16a8i5n2fx187 rdfs:label "http://purl.org/ifgi/dolce#generically_dependent_on" ;
 	rdfs:domain :action ;
+	a rdf:Property ;
 	rdfs:range :cognitive_state .
 
-dolce:participant a rdf:Property ;
+_:node16a8i5n2fx188 rdfs:label "http://purl.org/ifgi/dolce#participant" ;
 	rdfs:domain :action ;
+	a rdf:Property ;
 	rdfs:range :agent .
 
 :activity a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#activity" ;
 	rdfs:subClassOf :action ;
-	rdfs:label "activity@en"^^xsd:string ;
-	dc:description """In dependency terms, an activity is an action that is generically constantly dependent on a 
-			(at least partly) shared plan adopted by participants. This condition implies that an action must be sequenced by a 
-			task.Intuitively, activities are complex actions that are at least partly conventionally planned."""^^xsd:string .
+	dc:identifier "activity@en"^^xsd:string ;
+	dc:description "In dependency terms, an activity is an action that is generically constantly dependent on a (at least partly) shared plan adopted by participants. This condition implies that an action must be sequenced by a task.Intuitively, activities are complex actions that are at least partly conventionally planned."^^xsd:string .
 
-dolce:generically_dependent_on a rdf:Property ;
+_:node16a8i5n2fx189 rdfs:label "http://purl.org/ifgi/dolce#generically_dependent_on" ;
 	rdfs:domain :activity ;
+	a rdf:Property ;
 	rdfs:range dolce:plan .
 
-dolce:part a rdf:Property ;
+_:node16a8i5n2fx190 rdfs:label "http://purl.org/ifgi/dolce#part" ;
 	rdfs:domain :activity ;
+	a rdf:Property ;
 	rdfs:range :action .
 
 :communication_event a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#communication_event" ;
 	rdfs:subClassOf dolce:accomplishment ;
-	rdfs:label "communication-event@en"^^xsd:string ;
-	dc:description """Here communication is taken in a rather wide sense, being possible as an (intentional) activity 
-			as well as a phenomenon."""^^xsd:string .
+	dc:identifier "communication-event@en"^^xsd:string ;
+	dc:description "Here communication is taken in a rather wide sense, being possible as an (intentional) activity as well as a phenomenon."^^xsd:string .
 
 :phenomenon a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#phenomenon" ;
 	rdfs:subClassOf dolce:accomplishment ;
-	rdfs:label "phenomenon@en"^^xsd:string ;
-	dc:description """A phenomenon is basically a process that does not include any intentional active participation. 
-			Therefore, it cannot be sequenced by a task. It can be seen as an accomplishment when some intentionality puts 
-			boundaries on it (although it is not claimed to be inherently intentional). On the other hand, a purely physical 
-			phenomenon does not seem to have inherent boundaries either ... and also for biological processes as well as 
-			economic processes this seems to be disputable. If the boundary hypothesis is discarded, phenomenon should migrate 
-			under process."""^^xsd:string .
+	dc:identifier "phenomenon@en"^^xsd:string ;
+	dc:description "A phenomenon is basically a process that does not include any intentional active participation. Therefore, it cannot be sequenced by a task. It can be seen as an accomplishment when some intentionality puts boundaries on it (although it is not claimed to be inherently intentional). On the other hand, a purely physical phenomenon does not seem to have inherent boundaries either ... and also for biological processes as well as economic processes this seems to be disputable. If the boundary hypothesis is discarded, phenomenon should migrate under process."^^xsd:string .
 
 :physical_phenomenon a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#physical_phenomenon" ;
 	rdfs:subClassOf :phenomenon ;
-	rdfs:label "physical-phenomenon@en"^^xsd:string ;
+	dc:identifier "physical-phenomenon@en"^^xsd:string ;
 	dc:description "A phenomenon having a physical endurant as participant"^^xsd:string .
 
-dolce:participant a rdf:Property ;
+_:node16a8i5n2fx191 rdfs:label "http://purl.org/ifgi/dolce#participant" ;
 	rdfs:domain :physical_phenomenon ;
+	a rdf:Property ;
 	rdfs:range dolce:physical_endurant .
 
 :non_agentive_physical_object a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#non_agentive_physical_object" ;
 	rdfs:subClassOf dolce:physical_object ;
-	rdfs:label "non-agentive-physical-object@en"^^xsd:string ;
-	dc:description """Within physical objects, a special place have those to which we ascribe intentions, 
-			beliefs, and desires. These are called Agentive, as opposite to Non-agentive. Intentionality is understood 
-			here as the capability of heading for/dealing with objects or states of the world. This is an important area 
-			of ontological investigation we haven't properly explored yet, so our suggestions are really very preliminary. 
-			A possible modelling of case roles has been started within the descriptions plugin that could be embedded 
-			within basic DOLCE. In general, we assume that agentive objects are constituted by non-agentive objects: an 
-			organism is constituted by bodily organs, a robot is constituted by some machinery, and so on. Among 
-			non-agentive physical objects we have for example houses, body organs, pieces of wood, etc."""^^xsd:string .
+	dc:identifier "non-agentive-physical-object@en"^^xsd:string ;
+	dc:description "Within physical objects, a special place have those to which we ascribe intentions, beliefs, and desires. These are called Agentive, as opposite to Non-agentive. Intentionality is understood here as the capability of heading for/dealing with objects or states of the world. This is an important area of ontological investigation we haven't properly explored yet, so our suggestions are really very preliminary. A possible modelling of case roles has been started within the descriptions plugin that could be embedded within basic DOLCE. In general, we assume that agentive objects are constituted by non-agentive objects: an organism is constituted by bodily organs, a robot is constituted by some machinery, and so on. Among non-agentive physical objects we have for example houses, body organs, pieces of wood, etc."^^xsd:string .
 
 :material_artifact a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#material_artifact" ;
 	rdfs:subClassOf :non_agentive_physical_object ;
-	rdfs:label "material-artifact@en"^^xsd:string ;
-	dc:description """No easy definition of artifactual properties is possible, hence it is better to rely on 
-			alternative descriptions and roles: a physical object that shows or is known to have an artifactual origin that 
-			counts in the tasks an ontology is supposed to support, will be a material artifact. On the other hand, physical 
-			objects that do not show that origin, or that origin is unimportant for the task of the ontology, will be physical 
-			bodies. Formally, a restriction is provided here that requires that the collection whose members are (at least some 
-			of the) proper parts of a material artifact is *unified* by a plan or project."""^^xsd:string .
+	dc:identifier "material-artifact@en"^^xsd:string ;
+	dc:description "No easy definition of artifactual properties is possible, hence it is better to rely on alternative descriptions and roles: a physical object that shows or is known to have an artifactual origin that counts in the tasks an ontology is supposed to support, will be a material artifact. On the other hand, physical objects that do not show that origin, or that origin is unimportant for the task of the ontology, will be physical bodies. Formally, a restriction is provided here that requires that the collection whose members are (at least some of the) proper parts of a material artifact is *unified* by a plan or project."^^xsd:string .
 
 :social_object a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#social_object" ;
 	rdfs:subClassOf dolce:non_physical_object ;
-	rdfs:label "social-object@en"^^xsd:string ;
-	dc:description """A catch-all class for entities from the social world. It includes agentive and non-agentive 
-			socially-constructed objects: descriptions, concepts, figures, collections, information objects. It could be 
-			equivalent to 'non-physical object', but we leave the possibility open of 'private' non-physical objects."""^^xsd:string .
+	dc:identifier "social-object@en"^^xsd:string ;
+	dc:description "A catch-all class for entities from the social world. It includes agentive and non-agentive socially-constructed objects: descriptions, concepts, figures, collections, information objects. It could be equivalent to 'non-physical object', but we leave the possibility open of 'private' non-physical objects."^^xsd:string .
 
 :figure a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#figure" ;
 	rdfs:subClassOf :social_object ;
-	rdfs:label "figure@en"^^xsd:string ;
-	dc:description """a.k.a. 'social individual'. Figures are social objects defined or used by descriptions, but 
-			differently from concepts, they do not classify entities. Examples of figures are organizations, political-geographic 
-			objects, sacred symbols, etc."""^^xsd:string .
+	dc:identifier "figure@en"^^xsd:string ;
+	dc:description "a.k.a. 'social individual'. Figures are social objects defined or used by descriptions, but differently from concepts, they do not classify entities. Examples of figures are organizations, political-geographic objects, sacred symbols, etc."^^xsd:string .
 
 :non_agentive_figure a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#non_agentive_figure" ;
 	rdfs:subClassOf :figure ;
-	rdfs:label "non-agentive-figure@en"^^xsd:string , "sss@en"^^xsd:string ;
+	dc:identifier "non-agentive-figure@en"^^xsd:string , "sss@en"^^xsd:string ;
 	dc:description "A typology of non-agentive figures is currently under investigation."^^xsd:string , "ssss"^^xsd:string .
 
-:plays a rdf:Property ;
+_:node16a8i5n2fx192 rdfs:label "http://purl.org/ifgi/dolceDnS#plays" ;
 	rdfs:domain :non_agentive_figure ;
+	a rdf:Property ;
 	rdfs:range :role .
 
 :non_agentive_social_object a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#non_agentive_social_object" ;
 	rdfs:subClassOf :social_object ;
-	rdfs:label "non-agentive-social-object@en"^^xsd:string ;
-	dc:description """A social object that is not agentive in the sense of adopting a plan or being acted by some 
-			physical agent. See 'agentive-social-object' for more detail."""^^xsd:string .
+	dc:identifier "non-agentive-social-object@en"^^xsd:string ;
+	dc:description "A social object that is not agentive in the sense of adopting a plan or being acted by some physical agent. See 'agentive-social-object' for more detail."^^xsd:string .
 
 :collection a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#collection" ;
 	rdfs:subClassOf :non_agentive_social_object ;
-	rdfs:label "collection@en"^^xsd:string ;
-	dc:description """Collections are social objects which, although not defined by a description, depend both on 
-			member entities and on some concepts or figures, hence indirectly on descriptions. While we could talk in general 
-			of collections of any kind of entities (events, objects, abstracts, etc.), we restrict here our attention to 
-			collections of endurants, and to the concepts that classify them (i.e. roles)."""^^xsd:string .
+	dc:identifier "collection@en"^^xsd:string ;
+	dc:description "Collections are social objects which, although not defined by a description, depend both on member entities and on some concepts or figures, hence indirectly on descriptions. While we could talk in general of collections of any kind of entities (events, objects, abstracts, etc.), we restrict here our attention to collections of endurants, and to the concepts that classify them (i.e. roles)."^^xsd:string .
 
-:unified_by a rdf:Property ;
+_:node16a8i5n2fx193 rdfs:label "http://purl.org/ifgi/dolceDnS#unified_by" ;
 	rdfs:domain :collection ;
+	a rdf:Property ;
 	rdfs:range :description .
 
-dolce:part a rdf:Property ;
+_:node16a8i5n2fx194 rdfs:label "http://purl.org/ifgi/dolce#part" ;
 	rdfs:domain :collection ;
+	a rdf:Property ;
 	rdfs:range :collection .
 
-:refined_by a rdf:Property ;
+_:node16a8i5n2fx195 rdfs:label "http://purl.org/ifgi/dolceDnS#refined_by" ;
 	rdfs:domain :collection ;
+	a rdf:Property ;
 	rdfs:range :collection .
 
-:specialized_by a rdf:Property ;
+_:node16a8i5n2fx196 rdfs:label "http://purl.org/ifgi/dolceDnS#specialized_by" ;
 	rdfs:domain :collection ;
+	a rdf:Property ;
 	rdfs:range :collection .
 
 :collective a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#collective" ;
 	rdfs:subClassOf :figure ;
-	rdfs:label "collective@en"^^xsd:string ;
+	dc:identifier "collective@en"^^xsd:string ;
 	dc:description "A collection with only agents as members."^^xsd:string .
 
-:member a rdf:Property ;
+_:node16a8i5n2fx197 rdfs:label "http://purl.org/ifgi/dolceDnS#member" ;
 	rdfs:domain :collective ;
+	a rdf:Property ;
 	rdfs:range :agent .
 
 :c_description a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#c_description" ;
 	rdfs:subClassOf :non_agentive_social_object ;
-	rdfs:label "concept@en"^^xsd:string ;
+	dc:identifier "concept@en"^^xsd:string ;
 	dc:description "AKA C-Description. A non-physical object that is defined by a description s, and whose function is classifying entities from a ground ontology in order to build situations that can satisfy s."^^xsd:string .
 
-dolce:part a rdf:Property ;
+_:node16a8i5n2fx198 rdfs:label "http://purl.org/ifgi/dolce#part" ;
 	rdfs:domain :c_description ;
+	a rdf:Property ;
 	rdfs:range :c_description .
 
-:defined_by a rdf:Property ;
+_:node16a8i5n2fx199 rdfs:label "http://purl.org/ifgi/dolceDnS#defined_by" ;
 	rdfs:domain :c_description ;
+	a rdf:Property ;
 	rdfs:range :description .
 
-:refined_by a rdf:Property ;
+_:node16a8i5n2fx200 rdfs:label "http://purl.org/ifgi/dolceDnS#refined_by" ;
 	rdfs:domain :c_description ;
+	a rdf:Property ;
 	rdfs:range :c_description .
 
-:specialized_by a rdf:Property ;
+_:node16a8i5n2fx201 rdfs:label "http://purl.org/ifgi/dolceDnS#specialized_by" ;
 	rdfs:domain :c_description ;
+	a rdf:Property ;
 	rdfs:range :c_description .
 
 :course a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#course" ;
 	rdfs:subClassOf :c_description ;
-	rdfs:label "course@en"^^xsd:string ;
+	dc:identifier "course@en"^^xsd:string ;
 	dc:description "A concept that classifies (in particular, it 'sequences') perdurants (processes, events, or states), as a component of some description. Courses are the descriptive counterpart of perdurants, and, since perdurants have endurants as participants, they are usually the function of some role."^^xsd:string .
 
-:defined_by a rdf:Property ;
+_:node16a8i5n2fx202 rdfs:label "http://purl.org/ifgi/dolceDnS#defined_by" ;
 	rdfs:domain :course ;
+	a rdf:Property ;
 	rdfs:range :description .
 
-:specialized_by a rdf:Property ;
+_:node16a8i5n2fx203 rdfs:label "http://purl.org/ifgi/dolceDnS#specialized_by" ;
 	rdfs:domain :course ;
+	a rdf:Property ;
 	rdfs:range :course .
 
-dolce:part a rdf:Property ;
+_:node16a8i5n2fx204 rdfs:label "http://purl.org/ifgi/dolce#part" ;
 	rdfs:domain :course ;
+	a rdf:Property ;
 	rdfs:range :course .
 
 :life_cycle a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#life_cycle" ;
 	rdfs:subClassOf :course ;
-	rdfs:label "life-cycle@en"^^xsd:string ;
+	dc:identifier "life-cycle@en"^^xsd:string ;
 	dc:description "The course of events typical of the life of an object (kind)"^^xsd:string .
 
 :path a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#path" ;
 	rdfs:subClassOf :course ;
-	rdfs:label "path@en"^^xsd:string ;
+	dc:identifier "path@en"^^xsd:string ;
 	dc:description "A course used to sequence phenomena (non-intentional processes)."^^xsd:string .
 
 :task a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#task" ;
 	rdfs:subClassOf :course ;
-	rdfs:label "task@en"^^xsd:string ;
-	dc:description """A course used to sequence activities or other controllable perdurants (some states, processes), 
-			usually within methods. They must be defined by a method, but can be *used* by other kinds of descriptions. They are 
-			desire targets of some role played by an agent. Tasks can be complex, and ordered according to an abstract succession 
-			relation. Tasks can relate to ground activities or decision making; the last kind deals with typical flowchart content.
-			A task is different both from a flowchart node, and from an action or action type.Tasks can be considered shortcuts for
-			plans, since at least one role played by an agent has a desire attitude towards them (possibly different from the one 
-			that puts the task into action). In principle, tasks could be transformed into explicit plans."""^^xsd:string .
+	dc:identifier "task@en"^^xsd:string ;
+	dc:description "A course used to sequence activities or other controllable perdurants (some states, processes), usually within methods. They must be defined by a method, but can be *used* by other kinds of descriptions. They are desire targets of some role played by an agent. Tasks can be complex, and ordered according to an abstract succession relation. Tasks can relate to ground activities or decision making; the last kind deals with typical flowchart content. A task is different both from a flowchart node, and from an action or action type.Tasks can be considered shortcuts for plans, since at least one role played by an agent has a desire attitude towards them (possibly different from the one that puts the task into action). In principle, tasks could be transformed into explicit plans."^^xsd:string .
 
-:defined_by a rdf:Property ;
+_:node16a8i5n2fx205 rdfs:label "http://purl.org/ifgi/dolceDnS#defined_by" ;
 	rdfs:domain :task ;
+	a rdf:Property ;
 	rdfs:range :method .
 
-:specialized_by a rdf:Property ;
+_:node16a8i5n2fx206 rdfs:label "http://purl.org/ifgi/dolceDnS#specialized_by" ;
 	rdfs:domain :task ;
+	a rdf:Property ;
 	rdfs:range :task .
 
 :parameter a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#parameter" ;
 	rdfs:subClassOf :figure ;
-	rdfs:label "parameter@en"^^xsd:string ;
+	dc:identifier "parameter@en"^^xsd:string ;
 	dc:description "ssss"^^xsd:string .
 
-:defined_by a rdf:Property ;
+_:node16a8i5n2fx207 rdfs:label "http://purl.org/ifgi/dolceDnS#defined_by" ;
 	rdfs:domain :parameter ;
+	a rdf:Property ;
 	rdfs:range :description .
 
-:valued_by a rdf:Property ;
+_:node16a8i5n2fx208 rdfs:label "http://purl.org/ifgi/dolceDnS#valued_by" ;
 	rdfs:domain :parameter ;
+	a rdf:Property ;
 	rdfs:range dolce:region .
 
-:specialized_by a rdf:Property ;
+_:node16a8i5n2fx209 rdfs:label "http://purl.org/ifgi/dolceDnS#specialized_by" ;
 	rdfs:domain :parameter ;
+	a rdf:Property ;
 	rdfs:range :parameter .
 
 :indicator a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#indicator" ;
 	rdfs:subClassOf :parameter ;
-	rdfs:label "indicator@en"^^xsd:string ;
+	dc:identifier "indicator@en"^^xsd:string ;
 	dc:description "A parameter valued by regions that are used asindicators for some behaviour or event to be checked."^^xsd:string .
 
 :role a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#role" ;
 	rdfs:subClassOf :figure ;
-	rdfs:label "role@en"^^xsd:string ;
-	dc:description """Also known as 'functional role'. A concept that classifies (in particular, it is 'played by')
-			endurants, as used in some description. Roles are the descriptive counterpart of endurants, and, as endurants 
-			participate in perdurants, they usually have courses as modal targets (see).
-			The typology of roles is still preliminary."""^^xsd:string .
+	dc:identifier "role@en"^^xsd:string ;
+	dc:description "Also known as 'functional role'. A concept that classifies (in particular, it is 'played by') endurants, as used in some description. Roles are the descriptive counterpart of endurants, and, as endurants participate in perdurants, they usually have courses as modal targets (see). The typology of roles is still preliminary."^^xsd:string .
 
-:defined_by a rdf:Property ;
+_:node16a8i5n2fx210 rdfs:label "http://purl.org/ifgi/dolceDnS#defined_by" ;
 	rdfs:domain :role ;
+	a rdf:Property ;
 	rdfs:range :description .
 
-:specialized_by a rdf:Property ;
+_:node16a8i5n2fx211 rdfs:label "http://purl.org/ifgi/dolceDnS#specialized_by" ;
 	rdfs:domain :role ;
+	a rdf:Property ;
 	rdfs:range :role .
 
 :agent_driven_role a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#agent_driven_role" ;
 	rdfs:subClassOf :role ;
-	rdfs:label "agent-driven-role@en"^^xsd:string ;
+	dc:identifier "agent-driven-role@en"^^xsd:string ;
 	dc:description "AKA Agentive-role. A role that can only be played by agents."^^xsd:string .
 
 :status a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#status" ;
 	rdfs:subClassOf :agent_driven_role ;
-	rdfs:label "status@en"^^xsd:string ;
-	dc:description """A role that involves responsibility, e.g. both duties and rights, in order to perform some 
-			task. It usually involves additional rights and/or powers in contexts (descriptions) different from the one that 
-			defines the status."""^^xsd:string .
+	dc:identifier "status@en"^^xsd:string ;
+	dc:description "A role that involves responsibility, e.g. both duties and rights, in order to perform some task. It usually involves additional rights and/or powers in contexts (descriptions) different from the one that defines the status."^^xsd:string .
 
 :description_role a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#description_role" ;
 	rdfs:subClassOf :role ;
-	rdfs:label "description-role@en"^^xsd:string ;
-	dc:description """A role played by descriptions only. Usable for metalinguistic notions, like those that deal with
-			 granular partitions of knowledge, strata of reality, argumentation, etc."""^^xsd:string .
+	dc:identifier "description-role@en"^^xsd:string ;
+	dc:description "A role played by descriptions only. Usable for metalinguistic notions, like those that deal with granular partitions of knowledge, strata of reality, argumentation, etc."^^xsd:string .
 
-:played_by a rdf:Property ;
+_:node16a8i5n2fx212 rdfs:label "http://purl.org/ifgi/dolceDnS#played_by" ;
 	rdfs:domain :description_role ;
+	a rdf:Property ;
 	rdfs:range :description .
 
 :logical_role a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#logical_role" ;
 	rdfs:subClassOf :description_role ;
-	rdfs:label "logical-role@en"^^xsd:string ;
+	dc:identifier "logical-role@en"^^xsd:string ;
 	dc:description "A role used to express logical levels within some layering description or granular partition. A typical example is the Linnean taxonomic ordering, where Phylum or Species are hierarchical roles."^^xsd:string .
 
 :social_role a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#social_role" ;
 	rdfs:subClassOf :role ;
-	rdfs:label "social-role@en"^^xsd:string ;
+	dc:identifier "social-role@en"^^xsd:string ;
 	dc:description "A role created and maintained by a society."^^xsd:string .
 
-dolce:generically_dependent_on a rdf:Property ;
+_:node16a8i5n2fx213 rdfs:label "http://purl.org/ifgi/dolce#generically_dependent_on" ;
 	rdfs:domain :social_role ;
+	a rdf:Property ;
 	rdfs:range :collective .
 
 :symmetric_role a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#symmetric_role" ;
 	rdfs:subClassOf :role ;
-	rdfs:label "symmetric-role@en"^^xsd:string ;
+	dc:identifier "symmetric-role@en"^^xsd:string ;
 	dc:description "A role played exactly by two objects at the same time, e.g.: brother, sibling."^^xsd:string .
 
 :description a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#description" ;
 	rdfs:subClassOf :non_agentive_social_object ;
-	rdfs:label "description@en"^^xsd:string ;
-	dc:description """A description is a social object which represents a conceptualization (e.g. a mental object or 
-			state), hence it is generically dependent on some agent and communicable. Descriptions define or use concepts or 
-			figures, are expressed by an information object and can be satisfied by situations. The typology of descriptions 
-			is still preliminary."""^^xsd:string .
+	dc:identifier "description@en"^^xsd:string ;
+	dc:description "A description is a social object which represents a conceptualization (e.g. a mental object or state), hence it is generically dependent on some agent and communicable. Descriptions define or use concepts or figures, are expressed by an information object and can be satisfied by situations. The typology of descriptions is still preliminary."^^xsd:string .
 
-:expressed_by a rdf:Property ;
+_:node16a8i5n2fx214 rdfs:label "http://purl.org/ifgi/dolceDnS#expressed_by" ;
 	rdfs:domain :description ;
+	a rdf:Property ;
 	rdfs:range :information_object .
 
-:refined_by a rdf:Property ;
+_:node16a8i5n2fx215 rdfs:label "http://purl.org/ifgi/dolceDnS#refined_by" ;
 	rdfs:domain :description ;
+	a rdf:Property ;
 	rdfs:range :description .
 
-:specialized_by a rdf:Property ;
+_:node16a8i5n2fx216 rdfs:label "http://purl.org/ifgi/dolceDnS#specialized_by" ;
 	rdfs:domain :description ;
+	a rdf:Property ;
 	rdfs:range :description .
 
 :constitutive_description a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#constitutive_description" ;
 	rdfs:subClassOf :description ;
-	rdfs:label "constitutive-description@en"^^xsd:string ;
+	dc:identifier "constitutive-description@en"^^xsd:string ;
 	dc:description "A description whose purpose is defining a figure."^^xsd:string .
 
-:defines_ a rdf:Property ;
+_:node16a8i5n2fx217 rdfs:label "http://purl.org/ifgi/dolceDnS#defines_" ;
 	rdfs:domain :constitutive_description ;
-	rdfs:range :figure , :role .
+	a rdf:Property ;
+	rdfs:range :role ;
+	a rdf:Property ;
+	rdfs:range :figure .
 
 :information_encoding_system a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#information_encoding_system" ;
 	rdfs:subClassOf :description ;
-	rdfs:label "information-encoding-system@en"^^xsd:string ;
+	dc:identifier "information-encoding-system@en"^^xsd:string ;
 	dc:description "An information encoding system is a description that involves information objects. They can be divided into 1) axiomatic systems, which provide roles and operations to define formal descriptions (e.g. theories), 2) combinatorial systems, which provide roles and operations to create valid information objects (e.g. grammars), 3) classification systems, which are contexts of (ev. ordered) lists of information objects, and 4) informal encoding systems, which provide roles and operations to define informal descriptions (e.g. narratives)."^^xsd:string .
 
 :method a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#method" ;
 	rdfs:subClassOf :description ;
-	rdfs:label "sss@en"^^xsd:string ;
+	dc:identifier "sss@en"^^xsd:string ;
 	dc:description "ssss"^^xsd:string .
 
-:d_uses a rdf:Property ;
+_:node16a8i5n2fx218 rdfs:label "http://purl.org/ifgi/dolceDnS#d_uses" ;
 	rdfs:domain :method ;
-	rdfs:range :role , :task .
+	a rdf:Property ;
+	rdfs:range :role ;
+	a rdf:Property ;
+	rdfs:range :task .
 
 :plan a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#plan" ;
 	rdfs:subClassOf :method ;
-	rdfs:label "plan@en"^^xsd:string ;
+	dc:identifier "plan@en"^^xsd:string ;
 	dc:description "A plan is a method for executing or performing a procedure or a stage of a procedure. A plan must use both at least one role played by an agent, and at least one task. Finally, a plan has a goal as proper part, and can also have regulations and other descriptions as proper parts."^^xsd:string .
 
-dolce:proper_part a rdf:Property ;
+_:node16a8i5n2fx219 rdfs:label "http://purl.org/ifgi/dolce#proper_part" ;
 	rdfs:domain :plan ;
-	rdfs:range :goal_ , :objective .
+	a rdf:Property ;
+	rdfs:range :goal_ ;
+	a rdf:Property ;
+	rdfs:range :objective .
 
 :project a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#project" ;
 	rdfs:subClassOf :plan ;
-	rdfs:label "project@en"^^xsd:string ;
+	dc:identifier "project@en"^^xsd:string ;
 	dc:description "A project is a proactively satisfied method. Additionally to a plan, a project includes at least one 'product' role to be played by some endurant (e.g. a house), or one 'result' role played by a perdurant with a definite participant (e.g. a restored state of a house)."^^xsd:string .
 
 :practice a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#practice" ;
 	rdfs:subClassOf :method ;
-	rdfs:label "practice@en"^^xsd:string ;
+	dc:identifier "practice@en"^^xsd:string ;
 	dc:description "A social method carried out explicitly or by tradition, spontaneously emerged, or moderately or strongly regulated. A practice has more relaxed constraints than a plan, and it's characterized by its adoption a agentive social object, e.g. a community."^^xsd:string .
 
-:adopted_by a rdf:Property ;
+_:node16a8i5n2fx220 rdfs:label "http://purl.org/ifgi/dolceDnS#adopted_by" ;
 	rdfs:domain :practice ;
+	a rdf:Property ;
 	rdfs:range :agentive_social_object .
 
 :technique a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#technique" ;
 	rdfs:subClassOf :method ;
-	rdfs:label "technique@en"^^xsd:string ;
+	dc:identifier "technique@en"^^xsd:string ;
 	dc:description "A technique is a practical method to obtain some modification in the environment (or evaluation of an environment) that fulfils some task. Differently from a plan, a technique does not necessarily contains a goal or objective as a proper part."^^xsd:string .
 
 :modal_description a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#modal_description" ;
 	rdfs:subClassOf :description ;
-	rdfs:label "modal-description@en"^^xsd:string ;
+	dc:identifier "modal-description@en"^^xsd:string ;
 	dc:description "A modal description is any part of a description that has a unity criterion consisting in the specification of a modal target (some course), and it can be a right, power, duty, etc. Notice that modal descriptions can appear in conventionalized descriptions as well as in idiosyncratic assessements, narratives, promises, etc. From the formal semantic viewpoint, a modal description is the reification of a relation involving a modal logic operator."^^xsd:string .
 
 :cognitive_modal_description a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#cognitive_modal_description" ;
 	rdfs:subClassOf :modal_description ;
-	rdfs:label "cognitive-modal-description@en"^^xsd:string ;
+	dc:identifier "cognitive-modal-description@en"^^xsd:string ;
 	dc:description "The modal descriptions depending on some mental attitude (i.e. internally represented by a physical agent), represented here by means of a relation between roles and tasks."^^xsd:string .
 
 :objective a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#objective" ;
 	rdfs:subClassOf :modal_description ;
-	rdfs:label "objective@en"^^xsd:string ;
-	dc:description "The purpose of an agent, either physical or social. It is different from a desire or goal, because it is independent from the cognitive state of a particular physical agent. In practice, an agent (physical or social) may aim at realizing an objective even though the realizing situation conflicts with a goal-situation of the same agent. In 'private' plans of a physical agent,  realizing situations usually coincide with goal-situations. Different cases occur with plans endorsed by social agents like organizations, institutions, etc."^^xsd:string .
+	dc:identifier "objective@en"^^xsd:string ;
+	dc:description "The purpose of an agent, either physical or social. It is different from a desire or goal, because it is independent from the cognitive state of a particular physical agent. In practice, an agent (physical or social) may aim at realizing an objective even though the realizing situation conflicts with a goal-situation of the same agent. In 'private' plans of a physical agent, realizing situations usually coincide with goal-situations. Different cases occur with plans endorsed by social agents like organizations, institutions, etc."^^xsd:string .
 
 :desire a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#desire" ;
 	rdfs:subClassOf :cognitive_modal_description ;
-	rdfs:label "desire@en"^^xsd:string ;
+	dc:identifier "desire@en"^^xsd:string ;
 	dc:description "Desires are characterized here as modal description dependent on the cognitive (or 'mental') states of an agent. It is difficult to say more than that without reusing an ontology of cognitive states.Informally: a desire is a description that involves some (possible or actual) 'desire towards' attitude by an agent, and is ultimately motivated by evolutionary features of an organism (or by built-in features if the agent is artificial), which are (or used to be) an advantage for it."^^xsd:string .
 
 :goal_ a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#goal_" ;
 	rdfs:subClassOf :desire ;
-	rdfs:label "goal@en"^^xsd:string ;
-	dc:description "We are proposing here a restrictive notion of goal that relies upon its desirability by some agent, which does not necessarily play a role in the execution of the plan the goal is a part of. For example, an agent can have an attitude towards some task defined in a plan, e.g. duty towards, which is different from desiring it (desire towards). We might say that a goal is usually desired by the creator or beneficiary of a plan. The minimal constraint for a goal is that it is a proper part of a plan. For example, a desire to start a relationship can become a goal if someone decides to take action (or lets someone else take it for her sake) to obtain it. A goal is different from anobjective, because the second one is independent from the cognitive state of a particular physical agent. In practice, an agent (physical or social) may aim at realizing an objective even though the realizing situation conflicts with a goal-situation of the same agent. In 'private' plans of a physical agent,  realizing situations usually coincide with goal-situations. Different cases occur with plans endorsed by social agents like organizations, institutions, etc., which are more clearly aimed at realizing objectives."^^xsd:string .
+	dc:identifier "goal@en"^^xsd:string ;
+	dc:description "We are proposing here a restrictive notion of goal that relies upon its desirability by some agent, which does not necessarily play a role in the execution of the plan the goal is a part of. For example, an agent can have an attitude towards some task defined in a plan, e.g. duty towards, which is different from desiring it (desire towards). We might say that a goal is usually desired by the creator or beneficiary of a plan. The minimal constraint for a goal is that it is a proper part of a plan. For example, a desire to start a relationship can become a goal if someone decides to take action (or lets someone else take it for her sake) to obtain it. A goal is different from anobjective, because the second one is independent from the cognitive state of a particular physical agent. In practice, an agent (physical or social) may aim at realizing an objective even though the realizing situation conflicts with a goal-situation of the same agent. In 'private' plans of a physical agent, realizing situations usually coincide with goal-situations. Different cases occur with plans endorsed by social agents like organizations, institutions, etc., which are more clearly aimed at realizing objectives."^^xsd:string .
 
 :social_description a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#social_description" ;
 	rdfs:subClassOf :description ;
-	rdfs:label "social-description@en"^^xsd:string ;
+	dc:identifier "social-description@en"^^xsd:string ;
 	dc:description "Examples of Social Descriptions are laws, norms, shares, peace treaties, etc., which are generically dependent on societies.Social descriptions are dependent on a community of agents."^^xsd:string .
 
 :regulation a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#regulation" ;
 	rdfs:subClassOf :social_description ;
-	rdfs:label "regulation@en"^^xsd:string ;
+	dc:identifier "regulation@en"^^xsd:string ;
 	dc:description "A description usually requiring a C-SAT satisfaction for a situation. Norms, codes of practice, etc. are examples."^^xsd:string .
 
 :social_relationship a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#social_relationship" ;
 	rdfs:subClassOf :social_description ;
-	rdfs:label "social-relationship@en"^^xsd:string ;
+	dc:identifier "social-relationship@en"^^xsd:string ;
 	dc:description "A social description defining roles for the interaction of rational agents."^^xsd:string .
 
 :theory a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#theory" ;
 	rdfs:subClassOf :description ;
-	rdfs:label "theory@en"^^xsd:string ;
+	dc:identifier "theory@en"^^xsd:string ;
 	dc:description "This is used in a wide cultural sense: a theory about something, expressed in a rather systematic way, but not necessarily public (although communicable in principle). An axiomatic theory is not a theory in this sense, although we can expect an axiomatic theory to be the formal representation of a generic theory."^^xsd:string .
 
 :gestalt a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#gestalt" ;
 	rdfs:subClassOf :theory ;
-	rdfs:label "gestalt@en"^^xsd:string ;
+	dc:identifier "gestalt@en"^^xsd:string ;
 	dc:description "A perceptual structure, from the descriptive viewpoint. In other words, this encodes the conditions by which a configuration, structure, or arrangement is perceived as a meaningful whole by a perceiving agent."^^xsd:string .
 
 :relation_ a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#relation_" ;
 	rdfs:subClassOf :theory ;
-	rdfs:label "relation@en"^^xsd:string ;
+	dc:identifier "relation@en"^^xsd:string ;
 	dc:description "A non-social relation(ship): formal, linguistic, etc. It is considered here a theory, because relations are established in order to give an ordering to some reality."^^xsd:string .
 
 :information_object a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#information_object" ;
 	rdfs:subClassOf :non_agentive_social_object ;
-	rdfs:label "information-object@en"^^xsd:string ;
+	dc:identifier "information-object@en"^^xsd:string ;
 	dc:description "Information objects are social objects. They are realized by some entity. They are ordered (expressed according to) by some system for information encoding. Consequently, they are dependent from an encoding as well as from a concrete realization.They can express a description (the ontological equivalent of a meaning/conceptualization), can be about any entity, and can be interpreted by an agent.From a communication perspective, an information object can play the role of 'message'. From a semiotic perspective, it playes the role of 'expression'."^^xsd:string .
 
-:ordered_by a rdf:Property ;
+_:node16a8i5n2fx221 rdfs:label "http://purl.org/ifgi/dolceDnS#ordered_by" ;
 	rdfs:domain :information_object ;
+	a rdf:Property ;
 	rdfs:range :description .
 
-:realized_by a rdf:Property ;
+_:node16a8i5n2fx222 rdfs:label "http://purl.org/ifgi/dolceDnS#realized_by" ;
 	rdfs:domain :information_object ;
+	a rdf:Property ;
 	rdfs:range :physical_realization .
 
-dolce:part a rdf:Property ;
+_:node16a8i5n2fx223 rdfs:label "http://purl.org/ifgi/dolce#part" ;
 	rdfs:domain :information_object ;
+	a rdf:Property ;
 	rdfs:range :information_object .
 
-:refined_by a rdf:Property ;
+_:node16a8i5n2fx224 rdfs:label "http://purl.org/ifgi/dolceDnS#refined_by" ;
 	rdfs:domain :information_object ;
+	a rdf:Property ;
 	rdfs:range :information_object .
 
 :component a rdf:Property ;
@@ -540,7 +582,7 @@ dolce:part a rdf:Property ;
 	rdfs:range dolce:particular ;
 	rdfs:subPropertyOf dolce:proper_part ;
 	dc:title "component@en"^^xsd:string ;
-	dc:description "'Component' is a proper part with a role (or function) in a system or a context. Roles can be different for the same entity, and the evaluation of them changes according to the kind of entity. For instance, components of endurants can 'play functional roles' in a whole, while components of perdurants are the  essential 'episodes' in their whole.As a functional part relation, component is not transitive, because functions depend on intentions and/or designs, and something intentionally essential for a direct whole, can be non-essential for another, indirect whole."^^xsd:string .
+	dc:description "'Component' is a proper part with a role (or function) in a system or a context. Roles can be different for the same entity, and the evaluation of them changes according to the kind of entity. For instance, components of endurants can 'play functional roles' in a whole, while components of perdurants are the essential 'episodes' in their whole.As a functional part relation, component is not transitive, because functions depend on intentions and/or designs, and something intentionally essential for a direct whole, can be non-essential for another, indirect whole."^^xsd:string .
 
 :d_uses a rdf:Property ;
 	rdfs:domain :description ;
@@ -596,7 +638,7 @@ dolce:part a rdf:Property ;
 	rdfs:range :description ;
 	rdfs:subPropertyOf dolce:immediate_relation ;
 	dc:title "creates@en"^^xsd:string ;
-	dc:description "An important relation between agents and descriptions is creation,  implying that a given description is *specifically* dependent on a rational agent."^^xsd:string .
+	dc:description "An important relation between agents and descriptions is creation, implying that a given description is *specifically* dependent on a rational agent."^^xsd:string .
 
 :deputes a rdf:Property ;
 	rdfs:domain :figure ;

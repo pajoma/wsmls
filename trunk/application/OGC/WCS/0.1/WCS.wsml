@@ -3,7 +3,7 @@ namespace { _"http://purl.org/ifgi/wcs#",
 	xsd _"http://www.w3.org/2001/XMLSchema#",  
 	sawsdl _"http://www.w3.org/ns/sawsdl#",
 	dc _"http://purl.org/dc/elements/1.1/",
-	ows _"http://purl.org/ifgi/ows/0.3#",
+	ows _"http://purl.org/ifgi/ows/0.2#",
 	posm _"http://www.wsmo.org/ns/posm/0.2#", 
 	rdfs _"http://www.w3.org/2000/01/rdf-schema#",
 	dolce _"http://purl.org/net/wsml/dolceDnS#"
@@ -19,34 +19,54 @@ ontology WCS
 		dc#title hasValue "OGC Web Coverage Service 1.1"
 	endAnnotations
 	
-
+	importsOntology {_"http://purl.org/ifgi/ows/0.2#", _"http://purl.org/net/wsml/dolceDnS#", _"http://www.wsmo.org/ns/posm/0.2#"}
 	
 	/* POSM related stuff */
 	concept WebCoverageService subConceptOf ows#OGCWebService
+		annotations
+			dc#identifier hasValue "Web coverage service@en"
+		endAnnotations
 	
 	concept DescribeCoverage subConceptOf posm#Operation
+		annotations
+			dc#identifier hasValue "describe service@en"
+		endAnnotations
+		
 	concept DescribeCoverageRequest subConceptOf posm#MessagePart
 		annotations
+			dc#identifier hasValue "describe coverage request@en"
 			rdfs#seeAlso hasValue _"http://schemas.opengis.net/wcs/1.1/wcsDescribeCoverage.xsd#DescribeCoverage"
 		endAnnotations
+		
 	concept DescribeCoverageResponse subConceptOf posm#MessagePart
 		annotations
+			dc#identifier hasValue "describe coverage response@en"
 			rdfs#seeAlso hasValue _"http://schemas.opengis.net/wcs/1.1/wcsDescribeCoverage.xsd#CoverageDescriptions"
 		endAnnotations
 
 	
 	
 	concept GetCoverage subConceptOf posm#Operation
+		annotations
+			dc#identifier hasValue "get coverage@en"
+		endAnnotations
+		
 	concept GetCoverageRequest subConceptOf posm#MessagePart
 		annotations
+			dc#identifier hasValue "get coverage request@en"
 			rdfs#seeAlso hasValue _"http://schemas.opengis.net/wcs/1.1/wcsGetCoverage.xsd#GetCoverage"
 		endAnnotations
+		
 	concept GetCoverageResponse subConceptOf posm#MessagePart
 		annotations
+			dc#identifier hasValue "get coverage response@en"
 			rdfs#seeAlso hasValue _"http://schemas.opengis.net/wcs/1.1/wcsCoverages.xsd#Coverages"
 		endAnnotations
 		
-	concept CoverageDescription subConceptOf dolce#information_object	
+	concept CoverageDescription subConceptOf dolce#information_object
+		annotations
+			dc#identifier hasValue "coverage description@en"
+		endAnnotations
 	
 	/* default instances */
 	instance DefaultDescribeCoverage memberOf DescribeCoverage

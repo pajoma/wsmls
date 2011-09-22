@@ -1,61 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF
+	xmlns="http://www.wsmo.org/ns/posm/0.2#"
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-	xmlns="http://www.wsmo.org/ns/posm/0.2#">
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+<rdf:Description rdf:nodeID="node16a8i5n2fx99">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<rdfs:label>POSM</rdfs:label>
+	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-core</dc:format>
+</rdf:Description>
 
 <rdf:Description rdf:about="http://www.wsmo.org/ns/posm/0.2#Service">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://www.wsmo.org/ns/posm/0.2#Service</rdfs:label>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">service@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://www.wsmo.org/ns/posm/0.2#hasOperation">
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+<rdf:Description rdf:nodeID="node16a8i5n2fx100">
+	<rdfs:label>http://www.wsmo.org/ns/posm/0.2#hasOperation</rdfs:label>
 	<rdfs:domain rdf:resource="http://www.wsmo.org/ns/posm/0.2#Service"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://www.wsmo.org/ns/posm/0.2#Operation"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://www.wsmo.org/ns/posm/0.2#Operation">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://www.wsmo.org/ns/posm/0.2#Operation</rdfs:label>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">operation@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://www.wsmo.org/ns/posm/0.2#hasInput">
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+<rdf:Description rdf:nodeID="node16a8i5n2fx101">
+	<rdfs:label>http://www.wsmo.org/ns/posm/0.2#hasInput</rdfs:label>
 	<rdfs:domain rdf:resource="http://www.wsmo.org/ns/posm/0.2#Operation"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://www.wsmo.org/ns/posm/0.2#hasOutput">
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+<rdf:Description rdf:nodeID="node16a8i5n2fx102">
+	<rdfs:label>http://www.wsmo.org/ns/posm/0.2#hasOutput</rdfs:label>
 	<rdfs:domain rdf:resource="http://www.wsmo.org/ns/posm/0.2#Operation"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://www.wsmo.org/ns/posm/0.2#hasInputFault">
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+<rdf:Description rdf:nodeID="node16a8i5n2fx103">
+	<rdfs:label>http://www.wsmo.org/ns/posm/0.2#hasInputFault</rdfs:label>
 	<rdfs:domain rdf:resource="http://www.wsmo.org/ns/posm/0.2#Operation"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://www.wsmo.org/ns/posm/0.2#hasOutputFault">
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+<rdf:Description rdf:nodeID="node16a8i5n2fx104">
+	<rdfs:label>http://www.wsmo.org/ns/posm/0.2#hasOutputFault</rdfs:label>
 	<rdfs:domain rdf:resource="http://www.wsmo.org/ns/posm/0.2#Operation"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://www.wsmo.org/ns/posm/0.2#MessagePart">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://www.wsmo.org/ns/posm/0.2#MessagePart</rdfs:label>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">message part@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://www.wsmo.org/ns/posm/0.2#hasMessagePart">
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+<rdf:Description rdf:nodeID="node16a8i5n2fx105">
+	<rdfs:label>http://www.wsmo.org/ns/posm/0.2#hasMessagePart</rdfs:label>
 	<rdfs:domain rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://www.wsmo.org/ns/posm/0.2#MessageContent">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://www.wsmo.org/ns/posm/0.2#MessageContent</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">message content@en</dc:identifier>
 </rdf:Description>
 
 </rdf:RDF>

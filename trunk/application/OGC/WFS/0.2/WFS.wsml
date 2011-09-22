@@ -19,28 +19,52 @@ ontology WFS
 		dc#title hasValue "OGC Web Feature Service"
 	endAnnotations
 	
-
+	importsOntology {_"http://purl.org/ifgi/ows/0.2#", _"http://purl.org/net/wsml/dolceDnS#", _"http://www.wsmo.org/ns/posm/0.2#"}
 	
 	/* POSM related stuff */
 	concept WebFeatureService subConceptOf ows#OGCWebService
+		annotations
+			dc#identifier hasValue "Web feature service@en"
+		endAnnotations
 	
 	concept DescribeFeatureType subConceptOf posm#Operation
+		annotations
+			dc#identifier hasValue "describe feature type@en"
+		endAnnotations
+		
 	concept DescribeFeatureTypeRequest subConceptOf posm#MessagePart
+		annotations
+			dc#identifier hasValue "describe feature type request@en"
+		endAnnotations
+		
 	concept DescribeFeatureTypeResponse subConceptOf posm#MessagePart
 		annotations
+			dc#identifier hasValue "describe feature type response@en"
 			rdfs#seeAlso hasValue _"http://schemas.opengis.net/wfs/1.1.0/wsdl/wfs-util.xsd#DescribeFeatureTypeResponse"
 		endAnnotations
 
 	
 	
 	concept GetFeature subConceptOf posm#Operation
+		annotations
+			dc#identifier hasValue "get feature@en"
+		endAnnotations
+		
 	concept GetFeatureRequest subConceptOf posm#MessagePart
+		annotations
+			dc#identifier hasValue "get feature request@en"
+		endAnnotations
+		
 	concept GetFeatureResponse subConceptOf posm#MessagePart
 		annotations
+			dc#identifier hasValue "get feature response@en"
 			rdfs#seeAlso hasValue _"http://schemas.opengis.net/wfs/1.1.0/wfs.xsd#FeatureCollection"
 		endAnnotations
 		
 	concept FeatureTypeDescription subConceptOf dolce#information_object
+		annotations
+			dc#identifier hasValue "feature type description@en"
+		endAnnotations
 	
 	/* default instances */
 	instance DefaultDescribeFeatureType memberOf DescribeFeatureType

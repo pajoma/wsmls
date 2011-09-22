@@ -18,24 +18,43 @@ ontology SOS
 		dc#title hasValue "OGC Sensor Observation Service"
 	endAnnotations
 	
-
+	importsOntology {_"http://purl.org/ifgi/ows/0.2#", _"http://purl.org/ifgi/om#", _"http://www.wsmo.org/ns/posm/0.2#"}
 	
 	/* POSM related stuff */
 	concept SensorObservationService subConceptOf ows#OGCWebService
+		annotations
+			dc#identifier hasValue "sensor observation service@en"
+		endAnnotations
 	
 	concept DescribeSensor subConceptOf posm#Operation
+		annotations
+			dc#identifier hasValue "describe sensor@en"
+		endAnnotations
+		
 	concept DescribeSensorRequest subConceptOf posm#MessagePart
+		annotations
+			dc#identifier hasValue "describe sensor request@en"
+		endAnnotations
+		
 	concept DescribeSensorResponse subConceptOf posm#MessagePart
 		annotations
+			dc#identifier hasValue "describe sensor response@en"
 			rdfs#seeAlso hasValue _"http://schemas.opengis.net/sensorML/1.0.1/sensorML.xsd#SensorML"
 		endAnnotations
-
-	
 	
 	concept GetObservation subConceptOf posm#Operation
+		annotations
+			dc#identifier hasValue "get observation@en"
+		endAnnotations
+		
 	concept GetObservationRequest subConceptOf posm#MessagePart
+		annotations
+			dc#identifier hasValue "get observation request@en"
+		endAnnotations
+		
 	concept GetObservationResponse subConceptOf posm#MessagePart
 		annotations
+			dc#identifier hasValue "get observation response@en"
 			rdfs#seeAlso hasValue _"http://schemas.opengis.net/om/1.0.0/observation.xsd#Observation"
 		endAnnotations
 		

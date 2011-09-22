@@ -1,89 +1,128 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF
+	xmlns="http://purl.org/ifgi/swe#"
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-	xmlns="http://purl.org/ifgi/swe/0.2#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:swe="http://purl.org/ifgi/swe#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns:gml="http://purl.org/ifgi/gml/0.4#">
-<!-- http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/date: "10-11-2010"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/type: "Ontology"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/title: "OGC Sensor Web Enablement"^^<http://www.w3.org/2001/XMLSchema#string> -->
 
-<rdf:Description rdf:about="http://purl.org/ifgi/swe/0.2#AbstractDataArray">
-	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml/0.4#AbstractGML"/>
+<rdf:Description rdf:nodeID="node16a8i5n2fx17">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<rdfs:label>SWE</rdfs:label>
+	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
+	<owl:imports rdf:resource="http://purl.org/ifgi/gml/0.4#"/>
+	<dc:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(a)IfGI, University of Muenster</dc:publisher>
+	<dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10-11-2010</dc:date>
+	<dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://creativecommons.org/licenses/by/3.0/</dc:rights>
+	<dc:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ontology</dc:type>
+	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OGC Sensor Web Enablement</dc:title>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/swe/0.2#AbstractDataRecord">
+<rdf:Description rdf:about="http://purl.org/ifgi/swe#AbstractDataArray">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/swe#AbstractDataArray</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml/0.4#AbstractGML"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abstract data array@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/swe/0.2#ConditionalData">
+<rdf:Description rdf:about="http://purl.org/ifgi/swe#AbstractDataRecord">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/swe#AbstractDataRecord</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml/0.4#AbstractGML"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abstract data record@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/swe/0.2#ConditionalValue">
+<rdf:Description rdf:about="http://purl.org/ifgi/swe#ConditionalData">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/swe#ConditionalData</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml/0.4#AbstractGML"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">conditional data@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/swe/0.2#DataArray">
+<rdf:Description rdf:about="http://purl.org/ifgi/swe#ConditionalValue">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/swe#ConditionalValue</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml/0.4#AbstractGML"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">conditional value@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/swe/0.2#DataRecord">
+<rdf:Description rdf:about="http://purl.org/ifgi/swe#DataArray">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/swe#DataArray</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml/0.4#AbstractGML"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">data array@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/swe/0.2#SimpleDataRecord">
+<rdf:Description rdf:about="http://purl.org/ifgi/swe#DataRecord">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/swe#DataRecord</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml/0.4#AbstractGML"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">data record@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/swe/0.2#AnyData">
+<rdf:Description rdf:about="http://purl.org/ifgi/swe#SimpleDataRecord">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/swe#SimpleDataRecord</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml/0.4#AbstractGML"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">simple data record@en</dc:identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/swe#AnyData">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/swe#AnyData</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml/0.4#AbstractGML"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">any data@en</dc:identifier>
 	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any Type</dc:title>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/swe/0.2#TimeObjectProperty">
+<rdf:Description rdf:about="http://purl.org/ifgi/swe#TimeObjectProperty">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/swe#TimeObjectProperty</rdfs:label>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">time object property@en</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Property type not provided by GML</dc:description>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/swe/0.2#Phenomenon">
+<rdf:Description rdf:about="http://purl.org/ifgi/swe#Phenomenon">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/swe#Phenomenon</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml/0.4#AbstractGML"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenomenon@en</dc:identifier>
 	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Basic Phenomenon definition, and head of substitution group of specialized phenomenon defs.</dc:title>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/swe/0.2#TimeAggregate">
+<rdf:Description rdf:about="http://purl.org/ifgi/swe#TimeAggregate">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/swe#TimeAggregate</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml/0.4#AbstractTimeObject"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">time agregate@en</dc:identifier>
 	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">an arbitrary set of TimeObjects, often TimeInstants and TimePeriods</dc:title>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/swe/0.2#TimeGeometricComplex">
+<rdf:Description rdf:about="http://purl.org/ifgi/swe#TimeGeometricComplex">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/swe#TimeGeometricComplex</rdfs:label>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">time geometric complex@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/swe/0.2#TimeGrid">
+<rdf:Description rdf:about="http://purl.org/ifgi/swe#TimeGrid">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/swe#TimeGrid</rdfs:label>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">time grid@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/swe/0.2#TimeInstantGrid">
+<rdf:Description rdf:about="http://purl.org/ifgi/swe#TimeInstantGrid">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/swe#TimeInstantGrid</rdfs:label>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">time instant grid@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/swe/0.2#TimeIntervalGrid">
+<rdf:Description rdf:about="http://purl.org/ifgi/swe#TimeIntervalGrid">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/swe#TimeIntervalGrid</rdfs:label>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">time interval grid@en</dc:identifier>
 </rdf:Description>
 
 </rdf:RDF>

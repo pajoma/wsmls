@@ -1,11 +1,8 @@
 wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
-namespace { _"http://purl.org/net/wsml/geospace#", 
+namespace { _"http://purl.org/ifgi/geosystems#", 
 		dc _"http://purl.org/dc/elements/1.1/",
-     	wsml _"http://www.wsmo.org/wsml/wsml-syntax#",
-     	rdf _"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
      	rdfs _"http://www.w3.org/2000/01/rdf-schema#",
-     	dolce _"http://purl.org/net/wsml/dolce#",
-     	ptrn _"http://purl.org/net/concepts/patterns/system#"
+     	ptrn _"http://purl.org/ifgi/patterns/system#"
      	}
 
 ontology geographic_systems
@@ -19,19 +16,20 @@ ontology geographic_systems
 		dc#title hasValue "Geographic Space Ontology"	
 		dc#subject hasValue "Geography"			
      endAnnotations
-
+	
+	importsOntology {_"http://purl.org/ifgi/patterns/system#"}
 
 concept geographic_system subConceptOf ptrn#System
 	annotations
-		rdfs#label hasValue "System, geographisch@de"
-		rdfs#label hasValue "geographical system@en"
-		comment hasValue "a system in the geographical space"
+		dc#identifier hasValue "System, geographisch@de"
+		dc#identifier hasValue "geographical system@en"
+		dc#comment hasValue "a system in the geographical space"
 		dc#subject hasValue "Systems"		
 	endAnnotations 
 	surroundedBy impliesType Environment
 			annotations
-				rdfs#label hasValue "umgeben von@de"
-				rdfs#label hasValue "sourrounded by@en"
+				dc#identifier hasValue "umgeben von@de"
+				dc#identifier hasValue "sourrounded by@en"
 				dc#description hasValue ""
 				dc#source hasValue ""
 				rdfs#comments hasValue ""
@@ -41,9 +39,9 @@ concept geographic_system subConceptOf ptrn#System
 /* environment is an example of a region without a defined boundary (but a well-defined center) */
 concept environment subConceptOf ptrn#Role
 	annotations
-		rdfs#label hasValue "Umgebung@de"
-		rdfs#label hasValue "Environment@en"
-		comment hasValue "the sourrounding geographical unit of a system"
+		dc#identifier hasValue "Umgebung@de"
+		dc#identifier hasValue "Environment@en"
+		dc#comment hasValue "the sourrounding geographical unit of a system"
 		dc#subject hasValue "Environment"	
 	endAnnotations 
 	

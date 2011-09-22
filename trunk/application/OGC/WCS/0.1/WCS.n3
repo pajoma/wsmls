@@ -1,46 +1,67 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix : <http://purl.org/ifgi/wcs#> .
 @prefix sawsdl: <http://www.w3.org/ns/sawsdl#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix ows: <http://purl.org/ifgi/ows/0.3#> .
+@prefix ows: <http://purl.org/ifgi/ows/0.2#> .
 @prefix posm: <http://www.wsmo.org/ns/posm/0.2#> .
 @prefix dolce: <http://purl.org/net/wsml/dolceDnS#> .
 
-# http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/date: "25-11-2010"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/type: "Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/title: "OGC Web Coverage Service 1.1"^^<http://www.w3.org/2001/XMLSchema#string>
+_:node16a8i5n2fx20 a owl:Ontology ;
+	rdfs:label "WCS" ;
+	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
+	owl:imports <http://purl.org/ifgi/ows/0.2#> , <http://purl.org/net/wsml/dolceDnS#> , <http://www.wsmo.org/ns/posm/0.2#> ;
+	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
+	dc:date "25-11-2010"^^xsd:string ;
+	dc:rights "http://creativecommons.org/licenses/by/3.0/"^^xsd:string ;
+	dc:type "Ontology"^^xsd:string ;
+	dc:title "OGC Web Coverage Service 1.1"^^xsd:string .
 
 :WebCoverageService a rdfs:Class ;
-	rdfs:subClassOf ows:OGCWebService .
+	rdfs:label "http://purl.org/ifgi/wcs#WebCoverageService" ;
+	rdfs:subClassOf ows:OGCWebService ;
+	dc:identifier "Web coverage service@en"^^xsd:string .
 
 :DescribeCoverage a rdfs:Class ;
-	rdfs:subClassOf posm:Operation .
+	rdfs:label "http://purl.org/ifgi/wcs#DescribeCoverage" ;
+	rdfs:subClassOf posm:Operation ;
+	dc:identifier "describe service@en"^^xsd:string .
 
 :DescribeCoverageRequest a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/wcs#DescribeCoverageRequest" ;
 	rdfs:subClassOf posm:MessagePart ;
+	dc:identifier "describe coverage request@en"^^xsd:string ;
 	rdfs:seeAlso <http://schemas.opengis.net/wcs/1.1/wcsDescribeCoverage.xsd#DescribeCoverage> .
 
 :DescribeCoverageResponse a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/wcs#DescribeCoverageResponse" ;
 	rdfs:subClassOf posm:MessagePart ;
+	dc:identifier "describe coverage response@en"^^xsd:string ;
 	rdfs:seeAlso <http://schemas.opengis.net/wcs/1.1/wcsDescribeCoverage.xsd#CoverageDescriptions> .
 
 :GetCoverage a rdfs:Class ;
-	rdfs:subClassOf posm:Operation .
+	rdfs:label "http://purl.org/ifgi/wcs#GetCoverage" ;
+	rdfs:subClassOf posm:Operation ;
+	dc:identifier "get coverage@en"^^xsd:string .
 
 :GetCoverageRequest a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/wcs#GetCoverageRequest" ;
 	rdfs:subClassOf posm:MessagePart ;
+	dc:identifier "get coverage request@en"^^xsd:string ;
 	rdfs:seeAlso <http://schemas.opengis.net/wcs/1.1/wcsGetCoverage.xsd#GetCoverage> .
 
 :GetCoverageResponse a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/wcs#GetCoverageResponse" ;
 	rdfs:subClassOf posm:MessagePart ;
+	dc:identifier "get coverage response@en"^^xsd:string ;
 	rdfs:seeAlso <http://schemas.opengis.net/wcs/1.1/wcsCoverages.xsd#Coverages> .
 
 :CoverageDescription a rdfs:Class ;
-	rdfs:subClassOf dolce:information_object .
+	rdfs:label "http://purl.org/ifgi/wcs#CoverageDescription" ;
+	rdfs:subClassOf dolce:information_object ;
+	dc:identifier "coverage description@en"^^xsd:string .
 
 :DefaultDescribeCoverage a :DescribeCoverage ;
 	posm:hasOutput :DefaultDescribeCoverageResponse ;

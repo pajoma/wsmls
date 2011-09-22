@@ -1,10 +1,8 @@
 wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
-namespace { _"http://purl.org/net/wsml/geospace#", 
+namespace { _"http://purl.org/ifgi/geoqualities#", 
 		dc _"http://purl.org/dc/elements/1.1/",
-     	wsml _"http://www.wsmo.org/wsml/wsml-syntax#",
-     	rdf _"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
      	rdfs _"http://www.w3.org/2000/01/rdf-schema#",
-     	dolce _"http://purl.org/net/wsml/dolce#"
+     	dolce _"http://purl.org/ifgi/dolce#"
      	}
 
 ontology geographic_qualities
@@ -18,16 +16,18 @@ ontology geographic_qualities
 		dc#title hasValue "Geographic Space Ontology"	
 		dc#subject hasValue "Geography, Quality"		
      endAnnotations
+	 
+	 importsOntology {_"http://purl.org/ifgi/dolce#"}
  
 concept aspect subConceptOf geographic_quality
 	annotations
-		rdfs#label hasValue "Aspect@en"
+		dc#identifier hasValue "Aspect@en"
 		dc#description hasValue "In geography, aspect refers to the horizontal direction to which Slope faces." 
 	endAnnotations 
 
 concept altitude subConceptOf geographic_quality
 	annotations
-		rdfs#label hasValue "Altitude@en"
+		dc#identifier hasValue "Altitude@en"
 		dc#description hasValue "The height or vertical elevation of a point above a reference surface. Altitude measurements are usually based on a given reference datum, such as mean sea level." 
 		dc#relation hasValue _"http://en.wikipedia.org/wiki/Altitude"
 	endAnnotations 
@@ -35,16 +35,16 @@ concept altitude subConceptOf geographic_quality
 	
 concept elevation subConceptOf geographic_quality
 		annotations
-			rdfs#label hasValue "Hoehe@de"
-			rdfs#label hasValue "elevation@en"
+			dc#identifier hasValue "Hoehe@de"
+			dc#identifier hasValue "elevation@en"
 			dc#description hasValue "The elevation of a geographic location is its height above a fixed reference point, often the mean sea level"
 			dc#source hasValue "en.wikipedia.org/wiki/Elevation"
 		endAnnotations
 			
 concept slope subConceptOf geographic_quality
 	annotations
-		rdfs#label hasValue "Slope@en"
-		rdfs#label hasValue "Gefaelle@de"
+		dc#identifier hasValue "Slope@en"
+		dc#identifier hasValue "Gefaelle@de"
 		dc#description hasValue "The degree to which a surface tends upward or downward." 
 	endAnnotations
 	
@@ -55,15 +55,15 @@ concept grade subConceptOf geographic_quality
 		
 concept spatial_extent subConceptOf geographic_quality
 	annotations
-		rdfs#label hasValue "Spatial Extent@en"
-		rdfs#label hasValue "raeumliche Ausdehnung@de"
+		dc#identifier hasValue "Spatial Extent@en"
+		dc#identifier hasValue "raeumliche Ausdehnung@de"
 		dc#description hasValue "" 
 	endAnnotations 
 	
 concept terrain subConceptOf geographic_quality
 	annotations
-		rdfs#label hasValue "Terrain@en"
-		rdfs#label hasValue "Gelände@de"
+		dc#identifier hasValue "Terrain@en"
+		dc#identifier hasValue "Gelände@de"
 		dc#description hasValue "The area of the surface with a distinctive geological character" 
 	endAnnotations
 	
@@ -71,8 +71,8 @@ concept terrain subConceptOf geographic_quality
 	
 concept texture subConceptOf geographic_quality
 	annotations
-		rdfs#label hasValue "Texture@en"
-		rdfs#label hasValue "Textur@de"
+		dc#identifier hasValue "Texture@en"
+		dc#identifier hasValue "Textur@de"
 		dc#description hasValue "" 
 	endAnnotations
 	

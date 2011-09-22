@@ -1,10 +1,8 @@
 wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
-namespace { _"http://purl.org/net/concepts/patterns#", 
+namespace { _"http://purl.org/ifgi/patterns/role#", 
 		dc _"http://purl.org/dc/elements/1.1/#", 
-     	wsml _"http://www.wsmo.org/wsml/wsml-syntax#",
-     	rdf _"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
      	rdfs _"http://www.w3.org/2000/01/rdf-schema#",
-     	dul _"http://www.loa-cnr.it/ontologies/DUL.owl"	
+     	dul _"http://purl.org/ifgi/dul"
      	}
 
 ontology RolePattern
@@ -17,16 +15,18 @@ ontology RolePattern
 		dc#title hasValue "Semantic Pattern: Role"	
 		dc#subject hasValue "Pattern, Role"			
      endAnnotations
+	 
+	 importsOntology {_"http://purl.org/ifgi/dul"}
      
 concept Role
 	annotations
-		dc#label hasValue "Role@en"
-		dc#label hasValue "Rolle@de"
+		dc#identifier hasValue "Role@en"
+		dc#identifier hasValue "Rolle@de"
 	endAnnotations 
 	isPlayedBy impliesType 	dul#Agent
 			annotations
-				rdfs#label hasValue "wird gespielt von@de"
-				rdfs#label hasValue "is played by@en"
+				dc#identifier hasValue "wird gespielt von@de"
+				dc#identifier hasValue "is played by@en"
 				dc#description hasValue ""
 				dc#source hasValue ""
 				rdfs#comments hasValue ""
@@ -34,8 +34,8 @@ concept Role
 	
 concept TemporaryRole
 	annotations
-		rdfs#label hasValue "Temporary Role@en"
-		rdfs#label hasValue "Rolle, vorübergehend@de"
+		dc#identifier hasValue "Temporary Role@en"
+		dc#identifier hasValue "Rolle, vorübergehend@de"
 		rdfs#comments hasValue "A role which is played only a certain time, e.g. a student" 
 	endAnnotations 
 	startTime impliesType dul#TimeInterval

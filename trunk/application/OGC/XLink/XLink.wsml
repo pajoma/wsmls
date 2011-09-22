@@ -21,6 +21,9 @@ ontology XLink
 	/*attribute groups*/
 
 	concept xlink#simpleLink 
+		annotations
+			dc#identifier hasValue "simple linke@en"
+		endAnnotations
 		type ofType _string
 		xlink#href ofType xlink#href
 		xlink#role ofType xlink#role
@@ -30,11 +33,17 @@ ontology XLink
 		xlink#actuate ofType xlink#actuate
 		
 	concept xlink#extendedLink
+		annotations
+			dc#identifier hasValue "extended link@en"
+		endAnnotations
 		type ofType _string
 		xlink#role ofType xlink#role
 		xlink#title ofType xlink#title
 	
 	concept xlink#locatorLink
+		annotations
+			dc#identifier hasValue "locator link@en"
+		endAnnotations
 		type ofType _string
 		xlink#href ofType xlink#href
 		xlink#role ofType xlink#role
@@ -42,6 +51,9 @@ ontology XLink
 		xlink#label ofType xlink#label
 
 	concept xlink#arcLink
+		annotations
+			dc#identifier hasValue "arc link@en"
+		endAnnotations
 		type ofType _string
 		xlink#arcrole ofType xlink#arcrole
 		xlink#title ofType xlink#title
@@ -51,48 +63,80 @@ ontology XLink
 		xlink#actuate ofType xlink#actuate	
 	
 	concept xlink#resourceLink
+		annotations
+			dc#identifier hasValue "resource link@en"
+		endAnnotations
 		type ofType _string
 		xlink#role ofType xlink#role
 		xlink#title ofType xlink#title
 		xlink#label ofType xlink#label
 	
 	concept xlink#titleLink
+		annotations
+			dc#identifier hasValue "title link@en"
+		endAnnotations
 		type ofType _string
 	
 	concept xlink#emptyLink
+		annotations
+			dc#identifier hasValue "empty link@en"
+		endAnnotations
 		type ofType _string
 	
 	/*attributes*/
 	
 	concept xlink#href
+		annotations
+			dc#identifier hasValue "href@en"
+		endAnnotations
 		value ofType _iri
 		
 	concept xlink#role
+		annotations
+			dc#identifier hasValue "role@en"
+		endAnnotations
 		value ofType _iri
 		
 	concept xlink#arcrole
+		annotations
+			dc#identifier hasValue "arcrole@en"
+		endAnnotations
 		value ofType _iri
 		
 	concept xlink#title
+		annotations
+			dc#identifier hasValue "title@en"
+		endAnnotations
 		value ofType _string
 		
 	concept xlink#show
 		annotations
+			dc#identifier hasValue "show@en"
 			dc#description hasValue "The 'show' attribute is used to communicate the desired presentation of the ending resource on traversal from the starting resource; it's value should be treated as follows: new - load ending resource in a new window, frame, pane, or other presentation context replace - load the resource in the same window, frame, pane, or other presentation context embed - load ending resource in place of the presentation of the starting resource other - behavior is unconstrained; examine other markup in the link for hints none - behavior is unconstrained"
 		endAnnotations
 		value ofType _string
 		
 	concept xlink#actuate
 		annotations
+			dc#identifier hasValue "actuate@en"
 			dc#description hasValue "The 'actuate' attribute is used to communicate the desired timing of traversal from the starting resource to the ending resource; it's value should be treated as follows: onLoad - traverse to the ending resource immediately on loading the starting resource onRequest - traverse from the starting resource to the ending resource only on a post-loading event triggered for this purpose other - behavior is unconstrained; examine other markup in link for hints none - behavior is unconstrained"
 		endAnnotations
 		value ofType _string
 		
 	concept xlink#label
+		annotations
+			dc#identifier hasValue "label@en"
+		endAnnotations
 		value ofType _string
 		
 	concept xlink#from
+		annotations
+			dc#identifier hasValue "from@en"
+		endAnnotations
 		value ofType _string
 		
 	concept xlink#to
+		annotations
+			dc#identifier hasValue "to@en"
+		endAnnotations
 		value ofType _string

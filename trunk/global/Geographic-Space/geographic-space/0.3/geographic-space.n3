@@ -1,56 +1,67 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix : <http://purl.org/net/wsml/geospace#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://purl.org/ifgi/geospace#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix wsml: <http://www.wsmo.org/wsml/wsml-syntax#> .
-@prefix dolce: <http://purl.org/net/wsml/dolce#> .
-@prefix dolceSpatial: <http://purl.org/net/wsml/dolceSpatial#> .
+@prefix dolce: <http://purl.org/ifgi/dolce#> .
+@prefix dolceSpatial: <http://purl.org/ifgi/dolceSpatial#> .
 
-# http://purl.org/dc/elements/1.1/creator: "p.maue (ifgi)"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/contributor: "e.klien (ifgi), s.schade (ifgi)"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/type: "Domain Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/description: "A generic ontology suitable to describe objects and events in the geographic space, e.g. weather, forests, mountains, rivers, snow, ..."^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/title: "Geographic Space Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/subject: "Geography"^^<http://www.w3.org/2001/XMLSchema#string>
+_:node16a8i5n2fx236 a owl:Ontology ;
+	rdfs:label "geographic_space" ;
+	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
+	owl:imports <http://purl.org/ifgi/dolceSpatial#> ;
+	dc:creator "p.maue (ifgi)"^^xsd:string ;
+	dc:contributor "e.klien (ifgi), s.schade (ifgi)"^^xsd:string ;
+	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
+	dc:rights "http://creativecommons.org/licenses/by/3.0/"^^xsd:string ;
+	dc:type "Domain Ontology"^^xsd:string ;
+	dc:description "A generic ontology suitable to describe objects and events in the geographic space, e.g. weather, forests, mountains, rivers, snow, ..."^^xsd:string ;
+	dc:title "Geographic Space Ontology"^^xsd:string ;
+	dc:subject "Geography"^^xsd:string .
 
 :geographical_unit a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geospace#geographical_unit" ;
 	rdfs:subClassOf dolce:physical_object ;
-	rdfs:label "Geographical Unit@en"^^xsd:string , "Geographische Einheit@de"^^xsd:string ;
+	dc:identifier "Geographical Unit@en"^^xsd:string , "Geographische Einheit@de"^^xsd:string ;
 	dc:description "Something which is identified as entity on geographic scale"^^xsd:string .
 
-dolceSpatial:spatial_location a rdf:Property ;
+_:node16a8i5n2fx237 rdfs:label "http://purl.org/ifgi/dolceSpatial#spatial_location" ;
 	rdfs:domain :geographical_unit ;
+	a rdf:Property ;
 	rdfs:range :geographical_space_region .
 
-dolce:has_quality a rdf:Property ;
+_:node16a8i5n2fx238 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
 	rdfs:domain :geographical_unit ;
+	a rdf:Property ;
 	rdfs:range :geographical_quality .
 
-:confined_by a rdf:Property ;
-	rdfs:label "begrenzt durch@de"^^xsd:string , "confined by@en"^^xsd:string ;
+_:node16a8i5n2fx239 rdfs:label "http://purl.org/ifgi/geospace#confined_by" ;
+	rdfs:domain :geographical_unit ;
+	dc:identifier "begrenzt durch@de"^^xsd:string , "confined by@en"^^xsd:string ;
 	dc:description ""^^xsd:string ;
 	dc:source ""^^xsd:string ;
 	rdfs:comments ""^^xsd:string ;
-	rdfs:domain :geographical_unit ;
+	a rdf:Property ;
 	rdfs:range :geographical_unit .
 
-:situated_in a rdf:Property ;
-	rdfs:label "situiert in@de"^^xsd:string , "situated in@en"^^xsd:string ;
+_:node16a8i5n2fx240 rdfs:label "http://purl.org/ifgi/geospace#situated_in" ;
+	rdfs:domain :geographical_unit ;
+	dc:identifier "situiert in@de"^^xsd:string , "situated in@en"^^xsd:string ;
 	dc:description "The area in which something is located in"^^xsd:string ;
 	dc:source ""^^xsd:string ;
 	rdfs:comments ""^^xsd:string ;
-	rdfs:domain :geographical_unit ;
+	a rdf:Property ;
 	rdfs:range :geographical_unit .
 
 :geographical_space_region a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geospace#geographical_space_region" ;
 	rdfs:subClassOf dolce:space_region ;
-	rdfs:label "Geographical Space@en"^^xsd:string , "Geographische Raum@de"^^xsd:string ;
+	dc:identifier "Geographical Space@en"^^xsd:string , "Geographische Raum@de"^^xsd:string ;
 	dc:description "Geographic space refers to the space of our world in which we live and work."^^xsd:string .
 
 :geographical_quality a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geospace#geographical_quality" ;
 	rdfs:subClassOf dolce:physical_quality ;
-	rdfs:label "Geographic Quality@en"^^xsd:string , "Geographische QualitÃ¤t@de"^^xsd:string ;
-	dc:description "Qualities restricted to geographic objects. Only large scale objects have a terrain or a skyline "^^xsd:string .
+	dc:identifier "Geographic Quality@en"^^xsd:string , "Geographische Qualität@de"^^xsd:string ;
+	dc:description "Qualities restricted to geographic objects. Only large scale objects have a terrain or a skyline"^^xsd:string .

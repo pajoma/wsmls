@@ -1,7 +1,7 @@
 wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
 namespace { _"http://purl.org/ifgi/om#",
 dc _"http://purl.org/dc/elements/1.1/", 
-gml _"http://purl.org/ifgi/gml#",
+gml _"http://purl.org/ifgi/gml/0.2#",
 ssn _"http://purl.oclc.org/NET/ssnx/ssn#",
 xsd _"http://www.w3.org/2001/XMLSchema#"
  }
@@ -11,7 +11,7 @@ xsd _"http://www.w3.org/2001/XMLSchema#"
  */
 
 ontology ObservationsAndMeasurements
-	importsOntology {Feature}
+	
 
 	annotations
 		dc#publisher hasValue "(a)IfGI, University of Muenster"
@@ -24,29 +24,61 @@ ontology ObservationsAndMeasurements
 		dc#source hasValue "http://purl.oclc.org/NET/ssnx/ssn#"
 	endAnnotations
 	
+	importsOntology {_"http://purl.org/ifgi/gml/0.2#", _"http://purl.oclc.org/NET/ssnx/ssn#"}
+	
 	/*elements*/
 
 	concept ObservationCollection subConceptOf gml#AbstractFeature
+		annotations
+			dc#identifier hasValue "observation collection@en"
+		endAnnotations
 		
 	concept Observation subConceptOf {gml#AbstractFeature, ssn#Observation}
+		annotations
+			dc#identifier hasValue "observation@en"
+		endAnnotations
 
 	concept Sensor subConceptOf ssn#Sensor
+		annotations
+			dc#identifier hasValue "sensor@en"
+		endAnnotations
 	
 	concept Property subConceptOf ssn#Property
+		annotations
+			dc#identifier hasValue "property@en"
+		endAnnotations
 	
 	concept FeatureOfInterest subConceptOf ssn#FeatureOfInterest
+		annotations
+			dc#identifier hasValue "feature of interest@en"
+		endAnnotations
 	
 	concept SensorOutput subConceptOf ssn#SensorOutput
+		annotations
+			dc#identifier hasValue "sensor output@en"
+		endAnnotations
 	
 	concept ObservationValue subConceptOf ssn#ObservationValue
+		annotations
+			dc#identifier hasValue "observation value@en"
+		endAnnotations
 
 	// Properties
 	
 	relation member (ofType ObservationCollection, ofType Observation)
+		annotations
+			dc#identifier hasValue "member@en"
+		endAnnotations
 	
 	relation hasQuantityUnitOfMeasurement (ofType ObservationValue, ofType xsd#string)
+		annotations
+			dc#identifier hasValue "has quantity unit of measurement@en"
+		endAnnotations
 	
 	relation hasQuantityValue (ofType ObservationValue, ofType xsd#string)
+		annotations
+			dc#identifier hasValue "has quantity value@en"
+		endAnnotations
 	
 	
 		
