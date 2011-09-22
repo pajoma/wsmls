@@ -1,28 +1,35 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix : <http://purl.org/ifgi/annotations#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix wsml: <http://www.wsmo.org/wsml/wsml-syntax#> .
 
-# http://purl.org/dc/elements/1.1/creator: "s.schade (IFGI)"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/hasVersion: "0.1 beta"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/type: "Annotation Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/title: "Annotation Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/description: "This ontology captures the old and new relations for implementing annotations"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/subject: "annotation, reference, domain, measure"^^<http://www.w3.org/2001/XMLSchema#string>
+_:node16a8i5n2fx2 a owl:Ontology ;
+	rdfs:label "Annotation" ;
+	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
+	dc:creator "s.schade (IFGI)"^^xsd:string ;
+	dc:hasVersion "0.1 beta"^^xsd:string ;
+	dc:rights "http://creativecommons.org/licenses/by/3.0/"^^xsd:string ;
+	dc:type "Annotation Ontology"^^xsd:string ;
+	dc:title "Annotation Ontology"^^xsd:string ;
+	dc:description "This ontology captures the old and new relations for implementing annotations"^^xsd:string ;
+	dc:subject "annotation, reference, domain, measure"^^xsd:string .
 
 :annotate a rdf:Property ;
+	dc:identifier "annotate@en"^^xsd:string ;
 	dc:title "annotate relation"^^xsd:string ;
 	dc:description "..."^^xsd:string ;
 	rdfs:seeAlso "http://dolce/klien/swing..."^^xsd:string .
 
 :domainReference a rdf:Property ;
+	dc:identifier "domain reference@en"^^xsd:string ;
 	dc:title "relation to the domain model"^^xsd:string ;
 	dc:description "..."^^xsd:string ;
 	rdfs:seeAlso "annotate relation"^^xsd:string .
 
 :measureReference a rdf:Property ;
+	dc:identifier "measure reference@en"^^xsd:string ;
 	dc:title "relation to the reference space"^^xsd:string ;
 	dc:description "..."^^xsd:string .

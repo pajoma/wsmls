@@ -1,8 +1,11 @@
 wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
-namespace { _"http://ifgipedia.uni-muenster.de/envision-simple-use-case#",
+namespace { _"http://purl.org/ifgi/suc/urbanizedarea#",
 	dc _"http://purl.org/dc/elements/1.1/",
 	dolce _"http://purl.org/ifgi/dolce#",
-	geospace _"http://purl.org/net/wsml/geospace#"
+	gs _"http://purl.org/net/wsml/geospace#",
+	gu _"http://purl.org/net/wsml/geounits#",
+	ge _"http://purl.org/net/wsml/geoevents#",
+	gq _"http://purl.org/net/wsml/geoqualities#"
  }
 
 ontology UrbanizedAreaFeature
@@ -16,8 +19,10 @@ ontology UrbanizedAreaFeature
 		dc#subject hasValue "urbanized area, landcover, domain"	
 		dc#date hasValue "06-12-2010"
      endAnnotations
+	 
+	 importsOntology {_"http://purl.org/net/wsml/geospace#", _"http://purl.org/net/wsml/geounits#", _"http://purl.org/net/wsml/geoevents#", _"http://purl.org/net/wsml/geoqualities#"}
 	
-	concept UrbanizedArea subConceptOf geospace#landcover_unit
+	concept UrbanizedArea subConceptOf gu#landcover_unit
 		annotations
 			dc#identifier hasValue "urbanized area@en"
 		endAnnotations

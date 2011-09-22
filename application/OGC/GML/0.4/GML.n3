@@ -1,61 +1,85 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix : <http://purl.org/ifgi/gml/0.2#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix DUL: <http://www.loa-cnr.it/ontologies/DUL.owl#> .
 
-# http://purl.org/dc/elements/1.1/creator: "Marcell Roth"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/date: "03-02-2011"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/type: "Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/title: "OGC Feature Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
+_:node16a8i5n2fx6 a owl:Ontology ;
+	rdfs:label "GML" ;
+	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
+	owl:imports <http://www.loa-cnr.it/ontologies/DUL.owl#> ;
+	dc:creator "Marcell Roth"^^xsd:string ;
+	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
+	dc:date "03-02-2011"^^xsd:string ;
+	dc:rights "http://creativecommons.org/licenses/by/3.0/"^^xsd:string ;
+	dc:type "Ontology"^^xsd:string ;
+	dc:title "OGC Feature Ontology"^^xsd:string .
 
 :AbstractGML a rdfs:Class ;
-	rdfs:subClassOf DUL:InformationObject .
+	rdfs:label "http://purl.org/ifgi/gml/0.2#AbstractGML" ;
+	rdfs:subClassOf DUL:InformationObject ;
+	dc:identifier "abstract GML@en"^^xsd:string .
 
 :AbstractFeature a rdfs:Class ;
-	rdfs:subClassOf :AbstractGML .
+	rdfs:label "http://purl.org/ifgi/gml/0.2#AbstractFeature" ;
+	rdfs:subClassOf :AbstractGML ;
+	dc:identifier "abstract feature@en"^^xsd:string .
 
 :AbstractGeometry a rdfs:Class ;
-	rdfs:subClassOf :FeatureProperty .
+	rdfs:label "http://purl.org/ifgi/gml/0.2#AbstractGeometry" ;
+	rdfs:subClassOf :FeatureProperty ;
+	dc:identifier "abstract geometry@en"^^xsd:string .
 
 :FeatureProperty a rdfs:Class ;
-	rdfs:subClassOf :AbstractGML .
+	rdfs:label "http://purl.org/ifgi/gml/0.2#FeatureProperty" ;
+	rdfs:subClassOf :AbstractGML ;
+	dc:identifier "feature property@en"^^xsd:string .
 
 :FeatureCollection a rdfs:Class ;
-	rdfs:subClassOf :AbstractGML .
+	rdfs:label "http://purl.org/ifgi/gml/0.2#FeatureCollection" ;
+	rdfs:subClassOf :AbstractGML ;
+	dc:identifier "feature collection@en"^^xsd:string .
 
 :Envelope a rdfs:Class ;
-	rdfs:subClassOf DUL:InformationObject .
+	rdfs:label "http://purl.org/ifgi/gml/0.2#Envelope" ;
+	rdfs:subClassOf DUL:InformationObject ;
+	dc:identifier "envelope@en"^^xsd:string .
 
 :id a rdf:Property ;
 	rdfs:domain :AbstractGML ;
-	rdfs:range xsd:ID .
+	rdfs:range xsd:ID ;
+	dc:identifier "id@en"^^xsd:string .
 
 :hasProperty a rdf:Property ;
 	rdfs:domain :AbstractFeature ;
-	rdfs:range :FeatureProperty .
+	rdfs:range :FeatureProperty ;
+	dc:identifier "has property@en"^^xsd:string .
 
 :hasValue a rdf:Property ;
 	rdfs:domain :FeatureProperty ;
-	rdfs:range xsd:anyType .
+	rdfs:range xsd:anyType ;
+	dc:identifier "has value@en"^^xsd:string .
 
 :upperCorner a rdf:Property ;
 	rdfs:domain :Envelope ;
-	rdfs:range rdfs:Literal .
+	rdfs:range rdfs:Literal ;
+	dc:identifier "upper corner@en"^^xsd:string .
 
 :lowerCorner a rdf:Property ;
 	rdfs:domain :Envelope ;
-	rdfs:range rdfs:Literal .
+	rdfs:range rdfs:Literal ;
+	dc:identifier "lower corner@en"^^xsd:string .
 
 :hasGeometry a rdf:Property ;
 	rdfs:domain :AbstractFeature ;
 	rdfs:range :AbstractGeometry ;
-	rdfs:subPropertyOf :hasProperty .
+	rdfs:subPropertyOf :hasProperty ;
+	dc:identifier "has geometry@en"^^xsd:string .
 
 :featureMember a rdf:Property ;
 	rdfs:domain :FeatureCollection ;
 	rdfs:range :AbstractFeature ;
-	rdfs:subPropertyOf rdfs:member .
+	rdfs:subPropertyOf rdfs:member ;
+	dc:identifier "feature member@en"^^xsd:string .

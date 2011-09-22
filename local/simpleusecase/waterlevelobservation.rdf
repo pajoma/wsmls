@@ -1,106 +1,138 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF
+	xmlns="http://purl.org/ifgi/suc/waterlevelobservation#"
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-	xmlns="http://ifgipedia.uni-muenster.de/envision-simple-use-case#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns:dolce="http://purl.org/ifgi/dolce#"
 	xmlns:obs="http://purl.org/ifgi/observation#">
-<!-- http://purl.org/dc/elements/1.1/publisher: "IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/type: "Domain Ontology"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/title: "Water Level Observation Ontology"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/description: "Domain ontology describing the observation of water level extending the foundational observation ontology by Henry Michels"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/source: ""^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/subject: "observation, measurement, domain"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/date: "13-12-2010"^^<http://www.w3.org/2001/XMLSchema#string> -->
 
-<rdf:Description rdf:about="http://ifgipedia.uni-muenster.de/envision-simple-use-case#WaterlevelObservation">
-	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/observation#ObservationProcess"/>
+<rdf:Description rdf:nodeID="node16a8i5n2fx423">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<rdfs:label>WaterlevelObservation</rdfs:label>
+	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
+	<owl:imports rdf:resource="http://purl.org/ifgi/observation#"/>
+	<dc:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IfGI, University of Muenster</dc:publisher>
+	<dc:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Domain Ontology</dc:type>
+	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Water Level Observation Ontology</dc:title>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Domain ontology describing the observation of water level extending the foundational observation ontology by Henry Michels</dc:description>
+	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:source>
+	<dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">observation, measurement, domain</dc:subject>
+	<dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13-12-2010</dc:date>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://ifgipedia.uni-muenster.de/envision-simple-use-case#hasName">
+<rdf:Description rdf:about="http://purl.org/ifgi/suc/waterlevelobservation#WaterlevelObservation">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/suc/waterlevelobservation#WaterlevelObservation</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/observation#ObservationProcess"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">water level observation@en</dc:identifier>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node16a8i5n2fx424">
+	<rdfs:label>http://purl.org/ifgi/suc/waterlevelobservation#hasName</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/suc/waterlevelobservation#WaterlevelObservation"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:domain rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#WaterlevelObservation"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://ifgipedia.uni-muenster.de/envision-simple-use-case#isPerformedBy">
+<rdf:Description rdf:nodeID="node16a8i5n2fx425">
+	<rdfs:label>http://purl.org/ifgi/suc/waterlevelobservation#isPerformedBy</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/suc/waterlevelobservation#WaterlevelObservation"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:domain rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#WaterlevelObservation"/>
-	<rdfs:range rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#WaterlevelSensor"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/suc/waterlevelobservation#WaterlevelSensor"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://ifgipedia.uni-muenster.de/envision-simple-use-case#WaterlevelSensor">
+<rdf:Description rdf:about="http://purl.org/ifgi/suc/waterlevelobservation#WaterlevelSensor">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/suc/waterlevelobservation#WaterlevelSensor</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/observation#Observer"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">water level sensor@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://ifgipedia.uni-muenster.de/envision-simple-use-case#performs">
+<rdf:Description rdf:nodeID="node16a8i5n2fx426">
+	<rdfs:label>http://purl.org/ifgi/suc/waterlevelobservation#performs</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/suc/waterlevelobservation#WaterlevelSensor"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:domain rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#WaterlevelSensor"/>
-	<rdfs:range rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#WaterlevelObservation"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/suc/waterlevelobservation#WaterlevelObservation"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://ifgipedia.uni-muenster.de/envision-simple-use-case#observes">
+<rdf:Description rdf:nodeID="node16a8i5n2fx427">
+	<rdfs:label>http://purl.org/ifgi/suc/waterlevelobservation#observes</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/suc/waterlevelobservation#WaterlevelSensor"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:domain rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#WaterlevelSensor"/>
-	<rdfs:range rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#Waterlevel"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/suc/waterlevelobservation#Waterlevel"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://ifgipedia.uni-muenster.de/envision-simple-use-case#WaterlevelValue">
+<rdf:Description rdf:about="http://purl.org/ifgi/suc/waterlevelobservation#WaterlevelValue">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/suc/waterlevelobservation#WaterlevelValue</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/observation#ObservationValue"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">water level value@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://ifgipedia.uni-muenster.de/envision-simple-use-case#value">
+<rdf:Description rdf:nodeID="node16a8i5n2fx428">
+	<rdfs:label>http://purl.org/ifgi/suc/waterlevelobservation#value</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/suc/waterlevelobservation#WaterlevelValue"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:domain rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#WaterlevelValue"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://ifgipedia.uni-muenster.de/envision-simple-use-case#isProducedBy">
+<rdf:Description rdf:nodeID="node16a8i5n2fx429">
+	<rdfs:label>http://purl.org/ifgi/suc/waterlevelobservation#isProducedBy</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/suc/waterlevelobservation#WaterlevelValue"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:domain rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#WaterlevelValue"/>
-	<rdfs:range rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#WaterlevelObservation"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/suc/waterlevelobservation#WaterlevelObservation"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://ifgipedia.uni-muenster.de/envision-simple-use-case#Waterlevel">
+<rdf:Description rdf:about="http://purl.org/ifgi/suc/waterlevelobservation#Waterlevel">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:subClassOf rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#Level"/>
+	<rdfs:label>http://purl.org/ifgi/suc/waterlevelobservation#Waterlevel</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/suc/waterlevelobservation#Level"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">water level@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://ifgipedia.uni-muenster.de/envision-simple-use-case#isObservedBy">
+<rdf:Description rdf:nodeID="node16a8i5n2fx430">
+	<rdfs:label>http://purl.org/ifgi/suc/waterlevelobservation#isObservedBy</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/suc/waterlevelobservation#Waterlevel"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:domain rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#Waterlevel"/>
-	<rdfs:range rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#WaterlevelSensor"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/suc/waterlevelobservation#WaterlevelSensor"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://ifgipedia.uni-muenster.de/envision-simple-use-case#Level">
+<rdf:Description rdf:about="http://purl.org/ifgi/suc/waterlevelobservation#Level">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/suc/waterlevelobservation#Level</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/observation#Observable"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">level@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://ifgipedia.uni-muenster.de/envision-simple-use-case#RiverWater">
+<rdf:Description rdf:about="http://purl.org/ifgi/suc/waterlevelobservation#RiverWater">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:subClassOf rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#Water"/>
+	<rdfs:label>http://purl.org/ifgi/suc/waterlevelobservation#RiverWater</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/suc/waterlevelobservation#Water"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">river water@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://ifgipedia.uni-muenster.de/envision-simple-use-case#GroundWater">
+<rdf:Description rdf:about="http://purl.org/ifgi/suc/waterlevelobservation#GroundWater">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:subClassOf rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#Water"/>
+	<rdfs:label>http://purl.org/ifgi/suc/waterlevelobservation#GroundWater</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/suc/waterlevelobservation#Water"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">groundwater@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://ifgipedia.uni-muenster.de/envision-simple-use-case#Water">
+<rdf:Description rdf:about="http://purl.org/ifgi/suc/waterlevelobservation#Water">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/suc/waterlevelobservation#Water</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/observation#ObservedEntity"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">water@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolce#has_quality">
+<rdf:Description rdf:nodeID="node16a8i5n2fx431">
+	<rdfs:label>http://purl.org/ifgi/dolce#has_quality</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/suc/waterlevelobservation#Water"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:domain rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#Water"/>
-	<rdfs:range rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#Waterlevel"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/suc/waterlevelobservation#Waterlevel"/>
 </rdf:Description>
 
 </rdf:RDF>

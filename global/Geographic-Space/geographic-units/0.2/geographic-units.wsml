@@ -1,11 +1,9 @@
 wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
-namespace { _"http://purl.org/net/wsml/geospace#", 
+namespace { _"http://purl.org/ifgi/geounits#", 
 		dc _"http://purl.org/dc/elements/1.1/",
-     	wsml _"http://www.wsmo.org/wsml/wsml-syntax#",
-     	rdf _"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
      	rdfs _"http://www.w3.org/2000/01/rdf-schema#",
-     	dolce _"http://purl.org/net/wsml/dolce#",
-     	dolceSpatial _"http://purl.org/net/wsml/dolceSpatial#"
+     	dolce _"http://purl.org/ifgi/dolce#",
+     	dolceSpatial _"http://purl.org/ifgi/dolceSpatial#"
      	}
 
 ontology geographic_units
@@ -19,20 +17,21 @@ ontology geographic_units
 		dc#title hasValue "Geographic Space Ontology"	
 		dc#subject hasValue "Geography"			
      endAnnotations
-
+	
+	importsOntology {_"http://purl.org/ifgi/dolceSpatial#"}
 
 concept natural_unit subConceptOf geographical_unit
 	annotations
-		rdfs#label hasValue "Natürliche Einheit@de"
-		rdfs#label hasValue "Natural Unit@en"
+		dc#identifier hasValue "Natürliche Einheit@de"
+		dc#identifier hasValue "Natural Unit@en"
 		dc#description hasValue "A geographic unit created naturally" 
 		dc#subject hasValue "Units"	
 	endAnnotations 
 
 concept anthropogenic_unit subConceptOf geographical_unit
 	annotations
-		rdfs#label hasValue "Vom Menschen erbautes Objekt@de"
-		rdfs#label hasValue "Anthropogenic Unit@en"
+		dc#identifier hasValue "Vom Menschen erbautes Objekt@de"
+		dc#identifier hasValue "Anthropogenic Unit@en"
 		dc#description hasValue "A geographic unit created by humans" 
 		dc#subject hasValue "Units"	
 	endAnnotations 
@@ -46,8 +45,8 @@ concept anthropogenic_unit subConceptOf geographical_unit
 */
 concept geomorphological_unit subConceptOf geographical_unit
 	annotations
-		rdfs#label hasValue "Geomorphologische Einheit@de"
-		rdfs#label hasValue "Geomorphological Unit@en"
+		dc#identifier hasValue "Geomorphologische Einheit@de"
+		dc#identifier hasValue "Geomorphological Unit@en"
 		dc#description hasValue "A landform comprises a geomorphological unit" 
 		dc#subject hasValue "Units"	
 	endAnnotations 
@@ -64,19 +63,24 @@ concept geomorphological_unit subConceptOf geographical_unit
  */
 concept landcover_unit subConceptOf geographical_unit
 	annotations
-		rdfs#label hasValue "Einheit der Landbedeckung@de"
-		rdfs#label hasValue "Land Cover Unit@en"
+		dc#identifier hasValue "Einheit der Landbedeckung@de"
+		dc#identifier hasValue "Land Cover Unit@en"
 		dc#description hasValue "Land cover is the physical state of the land surface. Land Cover Units are discernible parts of Land Cover, e.g. the forest or a street"
 		dc#subject hasValue "Units"	 
 	endAnnotations
 	covers ofType geographical_unit
+		annotations
+			dc#identifier hasValue "cover@en"
+			dc#identifier hasValue "bedecken@de"
+			dc#description hasValue "" 
+		endAnnotations
 	dolce#participant_in ofType ground_movement
 
 
 concept vegetation_community subConceptOf LandCoverUnit
 	annotations
-		rdfs#label hasValue "Vegetation@de"
-		rdfs#label hasValue "Vegetation@en"
+		dc#identifier hasValue "Vegetation@de"
+		dc#identifier hasValue "Vegetation@en"
 		dc#description hasValue "The plants of an area considered in general or as communities, but not taxonomically;" 
 		dc#subject hasValue "LandCover"	
 	endAnnotations 
@@ -85,8 +89,8 @@ concept vegetation_community subConceptOf LandCoverUnit
 
 concept forest subConceptOf vegetation_community
 	annotations
-		rdfs#label hasValue "Wald@de"
-		rdfs#label hasValue "forest@en"
+		dc#identifier hasValue "Wald@de"
+		dc#identifier hasValue "forest@en"
 		comment hasValue "A vegetation community dominated by trees and other woody shrubs, growing close enough together that the tree tops touch or overlap, creating various degrees of shade on the forest floor. It may produce benefits such as timber, recreation, wildlife habitat, etc. (Source: DUNSTE)"
 		dc#subject hasValue "LandCover"
 	endAnnotations 
@@ -99,16 +103,16 @@ and have a vital part to play maintaining the ecological balance of the world. (
 */
 concept grassland subConceptOf vegetation_community
 	annotations
-		rdfs#label hasValue "Gruenland@de"
-		rdfs#label hasValue "grassland@en"
+		dc#identifier hasValue "Gruenland@de"
+		dc#identifier hasValue "grassland@en"
 		comment hasValue "A vegetation community in which grasses are the most conspicuous plants"
 		dc#subject hasValue "LandCover"
 	endAnnotations 
 	
 concept brushwood subConceptOf vegetation_community
 	annotations
-		rdfs#label hasValue "Unterholz@de"
-		rdfs#label hasValue "brushwood@en"
+		dc#identifier hasValue "Unterholz@de"
+		dc#identifier hasValue "brushwood@en"
 		comment hasValue "Branches and twigs fallen from trees and shrubs; small trees and shrubs "
 		dc#subject hasValue "LandCover"
 	endAnnotations  
@@ -118,8 +122,8 @@ concept brushwood subConceptOf vegetation_community
 system, and the waterbody is just a (essential) part of it) */
 concept waterbody subConceptOf landcover_unit
 	annotations
-		rdfs#label hasValue "Gewaesser@de"
-		rdfs#label hasValue "water body@en"
+		dc#identifier hasValue "Gewaesser@de"
+		dc#identifier hasValue "water body@en"
 		comment hasValue "any kind of accumulation of water, as oceans, rivers or lakes"
 		dc#subject hasValue "LandCover"
 	endAnnotations 

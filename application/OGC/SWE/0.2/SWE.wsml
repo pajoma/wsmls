@@ -1,6 +1,6 @@
 wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
-namespace { _"http://purl.org/ifgi/swe/0.2#",
-	swe _"http://purl.org/ifgi/swe/0.2#",
+namespace { _"http://purl.org/ifgi/swe#",
+	swe _"http://purl.org/ifgi/swe#",
 	dc _"http://purl.org/dc/elements/1.1/",
 	gml _"http://purl.org/ifgi/gml/0.4#"
  }
@@ -15,32 +15,55 @@ ontology SWE
 		dc#title hasValue "OGC Sensor Web Enablement"
 	endAnnotations
 	
+	importsOntology {_"http://purl.org/ifgi/gml/0.4#"}
+	
 	//AggregateTypes
 	
 	concept swe#AbstractDataArray subConceptOf gml#AbstractGML
+		annotations
+			dc#identifier hasValue "abstract data array@en"
+		endAnnotations
 	
- 	concept swe#AbstractDataArray subConceptOf gml#AbstractGML
- 	
  	concept swe#AbstractDataRecord subConceptOf gml#AbstractGML
+		annotations
+			dc#identifier hasValue "abstract data record@en"
+		endAnnotations
  	
  	concept swe#ConditionalData subConceptOf gml#AbstractGML
+		annotations
+			dc#identifier hasValue "conditional data@en"
+		endAnnotations
  	
  	concept swe#ConditionalValue subConceptOf gml#AbstractGML
+		annotations
+			dc#identifier hasValue "conditional value@en"
+		endAnnotations
  	
  	concept swe#DataArray subConceptOf gml#AbstractGML
+		annotations
+			dc#identifier hasValue "data array@en"
+		endAnnotations
  	
  	concept swe#DataRecord subConceptOf gml#AbstractGML
+		annotations
+			dc#identifier hasValue "data record@en"
+		endAnnotations
  	
  	concept swe#SimpleDataRecord subConceptOf gml#AbstractGML
+		annotations
+			dc#identifier hasValue "simple data record@en"
+		endAnnotations
 		
 	// not in schema, to accomodate the anyType thing
 	concept swe#AnyData subConceptOf gml#AbstractGML
 		annotations
+			dc#identifier hasValue "any data@en"
 			dc#title hasValue "Any Type"
 		endAnnotations
 	
 	concept swe#TimeObjectProperty
 		annotations
+			dc#identifier hasValue "time object property@en"
 			dc#description hasValue "Property type not provided by GML"
 		endAnnotations
 	
@@ -48,6 +71,7 @@ ontology SWE
 		
 	concept swe#Phenomenon subConceptOf gml#AbstractGML
  		annotations
+			dc#identifier hasValue "phenomenon@en"
  			dc#title hasValue "Basic Phenomenon definition, and head of substitution group of specialized phenomenon defs."
  		endAnnotations
  	
@@ -55,14 +79,27 @@ ontology SWE
  		
  	concept swe#TimeAggregate subConceptOf gml#AbstractTimeObject
  		annotations
+			dc#identifier hasValue "time agregate@en"
  			dc#title hasValue "an arbitrary set of TimeObjects, often TimeInstants and TimePeriods"
  		endAnnotations
  		
 	concept swe#TimeGeometricComplex
+		annotations
+			dc#identifier hasValue "time geometric complex@en"
+		endAnnotations
 	
 	concept swe#TimeGrid
+		annotations
+			dc#identifier hasValue "time grid@en"
+		endAnnotations
 	
 	concept swe#TimeInstantGrid
+		annotations
+			dc#identifier hasValue "time instant grid@en"
+		endAnnotations
 	
 	concept swe#TimeIntervalGrid
+		annotations
+			dc#identifier hasValue "time interval grid@en"
+		endAnnotations
 	

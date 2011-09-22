@@ -1,44 +1,62 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix : <http://purl.org/ifgi/ocd#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix gml: <http://purl.org/ifgi/gml#> .
+@prefix gml: <http://purl.org/ifgi/gml/0.2#> .
 
-# http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/date: "2010-11-24"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/type: "Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/title: "OGC Common Data"^^<http://www.w3.org/2001/XMLSchema#string>
+_:node16a8i5n2fx8 a owl:Ontology ;
+	rdfs:label "OCD" ;
+	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
+	owl:imports <http://purl.org/ifgi/gml/0.2#> ;
+	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
+	dc:date "2010-11-24"^^xsd:string ;
+	dc:rights "http://creativecommons.org/licenses/by/3.0/"^^xsd:string ;
+	dc:type "Ontology"^^xsd:string ;
+	dc:title "OGC Common Data"^^xsd:string .
 
 :BoundingBox a rdfs:Class ;
-	rdfs:subClassOf gml:AbstractGeometry .
+	rdfs:label "http://purl.org/ifgi/ocd#BoundingBox" ;
+	rdfs:subClassOf gml:AbstractGeometry ;
+	dc:identifier "bounding box@en"^^xsd:string .
 
 :AbstractTimeObject a rdfs:Class ;
-	rdfs:subClassOf gml:FeatureProperty .
+	rdfs:label "http://purl.org/ifgi/ocd#AbstractTimeObject" ;
+	rdfs:subClassOf gml:FeatureProperty ;
+	dc:identifier "abstract time object@en"^^xsd:string .
 
 :TimeSequence a rdfs:Class ;
-	rdfs:subClassOf :AbstractTimeObject .
+	rdfs:label "http://purl.org/ifgi/ocd#TimeSequence" ;
+	rdfs:subClassOf :AbstractTimeObject ;
+	dc:identifier "time sequence@en"^^xsd:string .
 
 :TimePoint a rdfs:Class ;
-	rdfs:subClassOf :AbstractTimeObject .
+	rdfs:label "http://purl.org/ifgi/ocd#TimePoint" ;
+	rdfs:subClassOf :AbstractTimeObject ;
+	dc:identifier "time point@en"^^xsd:string .
 
 :boundedBy a rdf:Property ;
 	rdfs:domain gml:AbstractFeature ;
-	rdfs:range :BoundingBox .
+	rdfs:range :BoundingBox ;
+	dc:identifier "bound by@en"^^xsd:string .
 
 :upperCorner a rdf:Property ;
 	rdfs:domain :BoundingBox ;
-	rdfs:range rdfs:Literal .
+	rdfs:range rdfs:Literal ;
+	dc:identifier "upper corner@en"^^xsd:string .
 
 :lowerCorner a rdf:Property ;
 	rdfs:domain :BoundingBox ;
-	rdfs:range rdfs:Literal .
+	rdfs:range rdfs:Literal ;
+	dc:identifier "lower corner@en"^^xsd:string .
 
 :hasStartPoint a rdf:Property ;
 	rdfs:domain :TimeSequence ;
-	rdfs:range xsd:dateTime .
+	rdfs:range xsd:dateTime ;
+	dc:identifier "has start point@en"^^xsd:string .
 
 :hasEndPoint a rdf:Property ;
 	rdfs:domain :TimeSequence ;
-	rdfs:range xsd:dateTime .
+	rdfs:range xsd:dateTime ;
+	dc:identifier "has end point@en"^^xsd:string .

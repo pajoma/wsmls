@@ -1,11 +1,16 @@
 wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-core"
-namespace { _"http://swing.uni-muenster.de/core/water/", 
+namespace { _"http://purl.org/ifgi/water#", 
      rdf _"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
      rdfs _"http://www.w3.org/2000/01/rdf-schema#",
      dc _"http://purl.org/dc/elements/1.1/",
-     ptns _"http://purl.org/net/concepts/patterns#",
-     geo _"http://swing.uni-muenster.de/core/GeographicSpace/",
-     dolce _"http://www.load-cnr.it/ontologies/DOLCE-Lite.owl" 
+     ptns _"http://purl.org/ifgi/patterns/system#",
+	 ptne _"http://purl.org/ifgi/patterns/event#",
+     dolce _"http://purl.org/ifgi/dolce#",
+	 gsy _"http://purl.org/ifgi/geosystems#",
+	 gs _"http://purl.org/net/wsml/geospace#",
+	 gu _"http://purl.org/net/wsml/geounits#",
+	 ge _"http://purl.org/net/wsml/geoevents#",
+	 gq _"http://purl.org/net/wsml/geoqualities#"
      }
 
 ontology WaterScenario
@@ -23,6 +28,8 @@ ontology WaterScenario
 		rdfs#comments hasValue "A try to model such a complex system like a river and its
 		environment."
 	endAnnotations
+	
+	importsOntology {_"http://purl.org/ifgi/patterns/system#", _"http://purl.org/ifgi/patterns/event#", _"http://purl.org/ifgi/geosystems#", _"http://purl.org/net/wsml/geospace#", _"http://purl.org/net/wsml/geounits#", _"http://purl.org/net/wsml/geoevents#", _"http://purl.org/net/wsml/geoqualities#"}
 
 /*
 A natural stream arising in a given drainage basin but not wholly dependent for its flow on surface drainage in its immediate area, 
@@ -33,7 +40,7 @@ and discharging at a fixed point into another body of water. (Source: BJGEO)
 
 	//Systems
 
-	concept Watercourse subConceptOf geo#GeographicSystem
+	concept Watercourse subConceptOf gsy#GeographicSystem
 		annotations
 			dc#identifier hasValue "Wasserlauf@de"
 			dc#identifier hasValue "watercourse@en"
@@ -42,9 +49,9 @@ and discharging at a fixed point into another body of water. (Source: BJGEO)
 			dc#subject hasValue "Hydrosphere"
 			rdfs#comments hasValue ""
 		endAnnotations 
-		ptns#involvedPhysicalEndurant impliesType geo#WaterBody
+		ptns#involvedPhysicalEndurant impliesType gu#WaterBody
 	 
-	concept Lake subConceptOf geo#GeographicSystem
+	concept Lake subConceptOf gsy#GeographicSystem
 		annotations
 			dc#identifier hasValue "See@de"
 			dc#identifier hasValue "lake@en"
@@ -53,9 +60,9 @@ and discharging at a fixed point into another body of water. (Source: BJGEO)
 			dc#subject hasValue "Hydrosphere"
 			rdfs#comments hasValue ""
 		endAnnotations 
-		ptns#involvedPhysicalEndurant impliesType geo#WaterBody
+		ptns#involvedPhysicalEndurant impliesType gu#WaterBody
 	
-	concept RiverSystem subConceptOf geo#GeographicSystem
+	concept RiverSystem subConceptOf gsy#GeographicSystem
 		annotations
 			dc#identifier hasValue "Fluss@de"
 			dc#identifier hasValue "river@en"
@@ -79,7 +86,7 @@ and discharging at a fixed point into another body of water. (Source: BJGEO)
 		 	?system[surroundedBy ofType ?env] memberOf RiverSystem.
 	*/
 		
-	concept DrainageBasin subConceptOf geo#GeomorphologicalUnit
+	concept DrainageBasin subConceptOf gu#GeomorphologicalUnit
 		annotations
 			dc#identifier hasValue "Einzugsgebiet@de"
 			dc#identifier hasValue "drainage basin@en"
@@ -92,7 +99,7 @@ and discharging at a fixed point into another body of water. (Source: BJGEO)
 			rdfs#comments hasValue ""
 		endAnnotations	
 		
-	concept Watershed subConceptOf geo#GeomorphologicalUnit
+	concept Watershed subConceptOf gu#GeomorphologicalUnit
 		annotations
 			dc#identifier hasValue "Einzugsgebietsgrenze@de"
 			dc#identifier hasValue "watershed@en"
@@ -104,7 +111,7 @@ and discharging at a fixed point into another body of water. (Source: BJGEO)
 		endAnnotations		
 		dolce#part\-of impliesType DrainageBasin
 
-	concept FloodPlain subConceptOf geo#GeomorphologicalUnit
+	concept FloodPlain subConceptOf gu#GeomorphologicalUnit
 		annotations
 			dc#identifier hasValue "Ueberflutungsgebiet@de"
 			dc#identifier hasValue "flood plain@en"
@@ -115,11 +122,11 @@ and discharging at a fixed point into another body of water. (Source: BJGEO)
 			rdfs#comments hasValue ""
 		endAnnotations		
 		dolce#part\-of impliesType DrainageBasin
-		geo#confinedBy impliesType Watershed
+		gs#confinedBy impliesType Watershed
 		
 		// TODO: adjacent to a river 
 			
-	concept RiverWaterBody subConceptOf geo#WaterBody
+	concept RiverWaterBody subConceptOf gu#WaterBody
 		annotations
 			dc#identifier hasValue "Wasserkoerper des Flusses@de"
 			dc#identifier hasValue "river waterbody@en"
@@ -129,10 +136,10 @@ and discharging at a fixed point into another body of water. (Source: BJGEO)
 			rdfs#comments hasValue "One example for a waterbody"
 		endAnnotations		
 		dolce#participates\-in impliesType Current
-		geo#confinedBy impliesType Channel
+		gs#confinedBy impliesType Channel
 	
 			
-	concept Bank subConceptOf geo#GeomorphologicalUnit
+	concept Bank subConceptOf gu#GeomorphologicalUnit
 		annotations
 			dc#identifier hasValue "Flussufer@de"
 			dc#identifier hasValue "bank@en"
@@ -144,7 +151,7 @@ and discharging at a fixed point into another body of water. (Source: BJGEO)
 		endAnnotations
 		dolce#part\-of impliesType Channel
 			
-	concept Riverbed subConceptOf geo#GeomorphologicalUnit
+	concept Riverbed subConceptOf gu#GeomorphologicalUnit
 		annotations
 			dc#identifier hasValue "Flussbett@de"
 			dc#identifier hasValue "riverbed@en"
@@ -168,7 +175,7 @@ and discharging at a fixed point into another body of water. (Source: BJGEO)
 		endAnnotations
 		dolce#has\-quality impliesType WaterLevel
 	
-	concept Channel subConceptOf geo#GeomorphologicalUnit
+	concept Channel subConceptOf gu#GeomorphologicalUnit
 		annotations
 			dc#identifier hasValue "Kanal@de"
 			dc#identifier hasValue "channel@en"
@@ -257,7 +264,7 @@ and discharging at a fixed point into another body of water. (Source: BJGEO)
 		
 		// TODO: add QualitySpace
 	
-	concept StreamGradient subConceptOf geo#Slope
+	concept StreamGradient subConceptOf gq#Slope
 		annotations
 			dc#identifier hasValue "Flussneigung@de"
 			dc#identifier hasValue "stream gradient@en"
@@ -308,7 +315,7 @@ and discharging at a fixed point into another body of water. (Source: BJGEO)
 		endAnnotations
 	
 	
-	concept WaterLevel subConceptOf geo#Elevation
+	concept WaterLevel subConceptOf gq#Elevation
 		annotations
 			dc#identifier hasValue "Pegelstand@de"
 			dc#identifier hasValue "water level@en"

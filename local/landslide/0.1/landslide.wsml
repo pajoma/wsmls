@@ -1,15 +1,17 @@
 wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
-namespace { _"http://purl.org/ifgi/Landslide#",
+namespace { _"http://purl.org/ifgi/landslide#",
 	rdf _"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     rdfs _"http://www.w3.org/2000/01/rdf-schema#",
     xsd _"http://www.w3.org/2001/XMLSchema#",
     dc _"http://purl.org/dc/elements/1.1/",
     owl _"http://www.w3.org/2002/07/owl#",
-    DUL _"http://www.loa-cnr.it/ontologies/DUL.owl#",
-    dolce _"http://www.load-cnr.it/ontologies/DOLCE-Lite.owl#",
-    gs _"http://purl.org/net/wsml/geospace#",
-    dns _"http://purl.org/net/wsml/dolceDnS#",
-    oil _"http://purl.org/ifgi/OilSpill#"
+    dolce _"http://purl.org/ifgi/dolce#",
+    gu _"http://purl.org/ifgi/geounits#",
+	gq _"http://purl.org/ifgi/geoqualities#",
+	gs _"http://purl.org/ifgi/geospace#",
+	ge _"http://purl.org/ifgi/geoevents#",
+    dns _"http://purl.org/ifgi/dolceDnS#",
+    oil _"http://purl.org/ifgi/oilspill#"
     }
 
 ontology Landslide
@@ -25,13 +27,13 @@ ontology Landslide
 		dc#subject hasValue "Landslide"
     endAnnotations
     
-    importsOntology {oil#OilSpill, gs#geographic_units, gs#geographic_qualities}
+    importsOntology {_"http://purl.org/ifgi/geounits#", _"http://purl.org/ifgi/geoqualities#", _"http://purl.org/ifgi/geospace#", _"http://purl.org/ifgi/geoevents#", _"http://purl.org/ifgi/oilspill#"}
 
 	/*
 		Events/Processes
 	*/
 
-	concept landslide subConceptOf gs#ground_movement
+	concept landslide subConceptOf ge#ground_movement
 		annotations
 			dc#identifier hasValue "landslide@en"
 			dc#identifier hasValue "Hangrutsch@de"
@@ -114,7 +116,7 @@ ontology Landslide
 	Endurants
 	*/
 
-	concept mountain subConceptOf gs#geomorphological_unit
+	concept mountain subConceptOf gu#geomorphological_unit
 		annotations
 			dc#identifier hasValue "mountain@en"
 			dc#identifier hasValue "Berg@de"
@@ -165,7 +167,7 @@ ontology Landslide
 			dc#source hasValue ""
 		endAnnotations
 
-	concept debris subConceptOf gs#landcover_unit
+	concept debris subConceptOf gu#landcover_unit
 		annotations
 			dc#identifier hasValue "debris@en"
 			dc#identifier hasValue "Geroell@de"
@@ -173,7 +175,7 @@ ontology Landslide
 			dc#source hasValue ""
 		endAnnotations
 
-	concept rock subConceptOf gs#landcover_unit
+	concept rock subConceptOf gu#landcover_unit
 		annotations
 			dc#identifier hasValue "rock@en"
 			dc#identifier hasValue "Stein@de"
@@ -182,7 +184,7 @@ ontology Landslide
 		endAnnotations
      	dolce#has_quality ofType porosity
 
-	concept soil subConceptOf gs#landcover_unit
+	concept soil subConceptOf gu#landcover_unit
 		annotations
 			dc#identifier hasValue "soil@en"
 			dc#identifier hasValue "Boden@de"
@@ -193,7 +195,7 @@ ontology Landslide
     	is_layered_by ofType subsoil
     	dolce#has_quality ofType {moisture, water_table, permeability, density, cohesion, angle_of_internal_friction}
 
-	concept borehole subConceptOf gs#anthropogenic_unit
+	concept borehole subConceptOf gu#anthropogenic_unit
 		annotations
 			dc#identifier hasValue "borehole@en"
 			dc#identifier hasValue "Bohrloch@de"
@@ -202,7 +204,7 @@ ontology Landslide
 		endAnnotations
     	dolce#has_quality ofType {oil#depth, diameter}
 
-	concept rail subConceptOf gs#anthropogenic_unit
+	concept rail subConceptOf gu#anthropogenic_unit
 		annotations
 			dc#identifier hasValue "rail@en"
 			dc#identifier hasValue "Schiene@de"
@@ -210,7 +212,7 @@ ontology Landslide
 			dc#source hasValue ""
 		endAnnotations
 
-	concept electric_main subConceptOf gs#anthropogenic_unit
+	concept electric_main subConceptOf gu#anthropogenic_unit
 		annotations
 			dc#identifier hasValue "electric main@en"
 			dc#identifier hasValue "elektrische Leitung@de"
@@ -218,7 +220,7 @@ ontology Landslide
 			dc#source hasValue ""
 		endAnnotations
 
-	concept road subConceptOf gs#anthropogenic_unit
+	concept road subConceptOf gu#anthropogenic_unit
 		annotations
 			dc#identifier hasValue "road@en"
 			dc#identifier hasValue "Strasse@de"
@@ -226,7 +228,7 @@ ontology Landslide
 			dc#source hasValue ""
 		endAnnotations
 
- 	concept building subConceptOf gs#anthropogenic_unit
+ 	concept building subConceptOf gu#anthropogenic_unit
  		annotations
 			dc#identifier hasValue "building@en"
 			dc#identifier hasValue "Gebaeude@de"

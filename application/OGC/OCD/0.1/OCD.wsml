@@ -3,7 +3,7 @@ namespace { _"http://purl.org/ifgi/ocd#",
 	xsd _"http://www.w3.org/2001/XMLSchema#",  
 	dc _"http://purl.org/dc/elements/1.1/", 
 	rdfs _"http://www.w3.org/2000/01/rdf-schema#",
-	gml _"http://purl.org/ifgi/gml#"
+	gml _"http://purl.org/ifgi/gml/0.2#"
  }
 
 ontology OCD
@@ -15,23 +15,52 @@ ontology OCD
 		dc#type hasValue "Ontology"
 		dc#title hasValue "OGC Common Data"
 	endAnnotations
+	
+	importsOntology {_"http://purl.org/ifgi/gml/0.2#"}
 
 	concept BoundingBox subConceptOf gml#AbstractGeometry
+		annotations
+			dc#identifier hasValue "bounding box@en"
+		endAnnotations
 	
 	concept AbstractTimeObject subConceptOf gml#FeatureProperty
+		annotations
+			dc#identifier hasValue "abstract time object@en"
+		endAnnotations
 	
 	concept TimeSequence subConceptOf AbstractTimeObject
+		annotations
+			dc#identifier hasValue "time sequence@en"
+		endAnnotations
 	
 	concept TimePoint subConceptOf AbstractTimeObject
+		annotations
+			dc#identifier hasValue "time point@en"
+		endAnnotations
 	
 	// Properties
 	
 	relation boundedBy (ofType gml#AbstractFeature, ofType BoundingBox)
+		annotations
+			dc#identifier hasValue "bound by@en"
+		endAnnotations
 	
 	relation upperCorner (ofType BoundingBox, ofType rdfs#Literal)
+		annotations
+			dc#identifier hasValue "upper corner@en"
+		endAnnotations
 
 	relation lowerCorner (ofType BoundingBox, ofType rdfs#Literal)
+		annotations
+			dc#identifier hasValue "lower corner@en"
+		endAnnotations
 	
 	relation hasStartPoint (ofType TimeSequence, ofType xsd#dateTime)
+		annotations
+			dc#identifier hasValue "has start point@en"
+		endAnnotations
 	
 	relation hasEndPoint (ofType TimeSequence, ofType xsd#dateTime)
+		annotations
+			dc#identifier hasValue "has end point@en"
+		endAnnotations

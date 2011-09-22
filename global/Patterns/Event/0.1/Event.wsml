@@ -1,11 +1,9 @@
 wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-core"
-namespace { _"http://purl.org/net/wsmls/patterns#", 
+namespace { _"http://purl.org/ifgi/patterns/event#", 
      rdf _"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
      rdfs _"http://www.w3.org/2000/01/rdf-schema#",
      dc _"http://purl.org/dc/elements/1.1/",
-     patterns _"http://swing.uni-muenster.de/core/pattern/",
-     geo _"http://swing.uni-muenster.de/core/GeographicSpace/",
-     dolce _"http://purl.org/net/wsmls/dolce#"
+     dolce _"http://purl.org/ifgi/dolce#"
      }
 
 ontology EventPattern
@@ -18,24 +16,26 @@ ontology EventPattern
 		dc#title hasValue "Semantic Pattern: Event"	
 		dc#subject hasValue "Pattern, Event"
      endAnnotations
+	 
+	 importsOntology {_"http://purl.org/ifgi/dolce#"}
      
     concept Event subConceptOf dolce#perdurant
 	annotations
-		dc#label hasValue "event@en"
-		dc#label hasValue "Event@de"
+		dc#identifier hasValue "event@en"
+		dc#identifier hasValue "Event@de"
 	endAnnotations 
 		initiates impliesType dolce#perdurant
 			annotations
-				rdfs#label hasValue "initiiert@de"
-				rdfs#label hasValue "initiate@en"
+				dc#identifier hasValue "initiiert@de"
+				dc#identifier hasValue "initiate@en"
 				dc#description hasValue ""
 				dc#source hasValue ""
 				rdfs#comments hasValue ""
 			endAnnotations
 		changes impliesType dolce#quality
 			annotations
-				rdfs#label hasValue "ver�ndert@de"
-				rdfs#label hasValue "changes@en"
+				dc#identifier hasValue "ver�ndert@de"
+				dc#identifier hasValue "changes@en"
 				dc#description hasValue "an event changes something (here Quality)"
 				dc#source hasValue ""
 				rdfs#comments hasValue ""

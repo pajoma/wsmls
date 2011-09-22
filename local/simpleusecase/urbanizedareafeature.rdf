@@ -1,96 +1,138 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF
+	xmlns="http://purl.org/ifgi/suc/urbanizedarea#"
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-	xmlns="http://ifgipedia.uni-muenster.de/envision-simple-use-case#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns:dolce="http://purl.org/ifgi/dolce#"
-	xmlns:geospace="http://purl.org/net/wsml/geospace#">
-<!-- http://purl.org/dc/elements/1.1/publisher: "IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/type: "Domain Ontology"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/title: "Ontology describing landcover of an urbanized area"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/description: "more or less a simple formalization of the Corine landcover catalogue by Henry Michels"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/source: ""^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/subject: "urbanized area, landcover, domain"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/date: "06-12-2010"^^<http://www.w3.org/2001/XMLSchema#string> -->
+	xmlns:gs="http://purl.org/net/wsml/geospace#"
+	xmlns:gu="http://purl.org/net/wsml/geounits#"
+	xmlns:ge="http://purl.org/net/wsml/geoevents#"
+	xmlns:gq="http://purl.org/net/wsml/geoqualities#">
 
-<rdf:Description rdf:about="http://ifgipedia.uni-muenster.de/envision-simple-use-case#UrbanizedArea">
-	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:subClassOf rdf:resource="http://purl.org/net/wsml/geospace#landcover_unit"/>
+<rdf:Description rdf:nodeID="node16a8i5n2fx421">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<rdfs:label>UrbanizedAreaFeature</rdfs:label>
+	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
+	<owl:imports rdf:resource="http://purl.org/net/wsml/geospace#"/>
+	<owl:imports rdf:resource="http://purl.org/net/wsml/geounits#"/>
+	<owl:imports rdf:resource="http://purl.org/net/wsml/geoevents#"/>
+	<owl:imports rdf:resource="http://purl.org/net/wsml/geoqualities#"/>
+	<dc:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IfGI, University of Muenster</dc:publisher>
+	<dc:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Domain Ontology</dc:type>
+	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ontology describing landcover of an urbanized area</dc:title>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">more or less a simple formalization of the Corine landcover catalogue by Henry Michels</dc:description>
+	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:source>
+	<dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">urbanized area, landcover, domain</dc:subject>
+	<dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">06-12-2010</dc:date>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://ifgipedia.uni-muenster.de/envision-simple-use-case#ContinousUrbanizedArea">
+<rdf:Description rdf:about="http://purl.org/ifgi/suc/urbanizedarea#UrbanizedArea">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:subClassOf rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#UrbanizedArea"/>
+	<rdfs:label>http://purl.org/ifgi/suc/urbanizedarea#UrbanizedArea</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/net/wsml/geounits#landcover_unit"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">urbanized area@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://ifgipedia.uni-muenster.de/envision-simple-use-case#DiscontinousUrbanizedArea">
+<rdf:Description rdf:about="http://purl.org/ifgi/suc/urbanizedarea#ContinuousUrbanizedArea">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:subClassOf rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#UrbanizedArea"/>
+	<rdfs:label>http://purl.org/ifgi/suc/urbanizedarea#ContinuousUrbanizedArea</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/suc/urbanizedarea#UrbanizedArea"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">continuous urbanized area@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://ifgipedia.uni-muenster.de/envision-simple-use-case#LeisureUnit">
+<rdf:Description rdf:about="http://purl.org/ifgi/suc/urbanizedarea#DiscontinuousUrbanizedArea">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:subClassOf rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#ContinousUrbanizedArea"/>
-	<rdfs:subClassOf rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#DiscontinousUrbanizedArea"/>
+	<rdfs:label>http://purl.org/ifgi/suc/urbanizedarea#DiscontinuousUrbanizedArea</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/suc/urbanizedarea#UrbanizedArea"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">discontinuous urbanized area@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://ifgipedia.uni-muenster.de/envision-simple-use-case#CommercialUnit">
+<rdf:Description rdf:about="http://purl.org/ifgi/suc/urbanizedarea#LeisureUnit">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:subClassOf rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#ContinousUrbanizedArea"/>
-	<rdfs:subClassOf rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#DiscontinousUrbanizedArea"/>
+	<rdfs:label>http://purl.org/ifgi/suc/urbanizedarea#LeisureUnit</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/suc/urbanizedarea#ContinuousUrbanizedArea"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/suc/urbanizedarea#DiscontinuousUrbanizedArea"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">leisure unit@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://ifgipedia.uni-muenster.de/envision-simple-use-case#IndustrialUnit">
+<rdf:Description rdf:about="http://purl.org/ifgi/suc/urbanizedarea#CommercialUnit">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:subClassOf rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#ContinousUrbanizedArea"/>
-	<rdfs:subClassOf rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#DiscontinousUrbanizedArea"/>
+	<rdfs:label>http://purl.org/ifgi/suc/urbanizedarea#CommercialUnit</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/suc/urbanizedarea#ContinuousUrbanizedArea"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/suc/urbanizedarea#DiscontinuousUrbanizedArea"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">commercial unit@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://ifgipedia.uni-muenster.de/envision-simple-use-case#GreenUrbanUnit">
+<rdf:Description rdf:about="http://purl.org/ifgi/suc/urbanizedarea#IndustrialUnit">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:subClassOf rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#ContinousUrbanizedArea"/>
-	<rdfs:subClassOf rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#DiscontinousUrbanizedArea"/>
+	<rdfs:label>http://purl.org/ifgi/suc/urbanizedarea#IndustrialUnit</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/suc/urbanizedarea#ContinuousUrbanizedArea"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/suc/urbanizedarea#DiscontinuousUrbanizedArea"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">industrial unit@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://ifgipedia.uni-muenster.de/envision-simple-use-case#TransportUnit">
+<rdf:Description rdf:about="http://purl.org/ifgi/suc/urbanizedarea#GreenUrbanUnit">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:subClassOf rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#ContinousUrbanizedArea"/>
-	<rdfs:subClassOf rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#DiscontinousUrbanizedArea"/>
+	<rdfs:label>http://purl.org/ifgi/suc/urbanizedarea#GreenUrbanUnit</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/suc/urbanizedarea#ContinuousUrbanizedArea"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/suc/urbanizedarea#DiscontinuousUrbanizedArea"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">green urban unit@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://ifgipedia.uni-muenster.de/envision-simple-use-case#ConstructionUnit">
+<rdf:Description rdf:about="http://purl.org/ifgi/suc/urbanizedarea#TransportUnit">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:subClassOf rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#ContinousUrbanizedArea"/>
-	<rdfs:subClassOf rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#DiscontinousUrbanizedArea"/>
+	<rdfs:label>http://purl.org/ifgi/suc/urbanizedarea#TransportUnit</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/suc/urbanizedarea#ContinuousUrbanizedArea"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/suc/urbanizedarea#DiscontinuousUrbanizedArea"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">transport unit@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://ifgipedia.uni-muenster.de/envision-simple-use-case#DumpUnit">
+<rdf:Description rdf:about="http://purl.org/ifgi/suc/urbanizedarea#ConstructionUnit">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:subClassOf rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#ContinousUrbanizedArea"/>
-	<rdfs:subClassOf rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#DiscontinousUrbanizedArea"/>
+	<rdfs:label>http://purl.org/ifgi/suc/urbanizedarea#ConstructionUnit</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/suc/urbanizedarea#ContinuousUrbanizedArea"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/suc/urbanizedarea#DiscontinuousUrbanizedArea"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">construction unit@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://ifgipedia.uni-muenster.de/envision-simple-use-case#MineUnit">
+<rdf:Description rdf:about="http://purl.org/ifgi/suc/urbanizedarea#DumpUnit">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:subClassOf rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#ContinousUrbanizedArea"/>
-	<rdfs:subClassOf rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#DiscontinousUrbanizedArea"/>
+	<rdfs:label>http://purl.org/ifgi/suc/urbanizedarea#DumpUnit</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/suc/urbanizedarea#ContinuousUrbanizedArea"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/suc/urbanizedarea#DiscontinuousUrbanizedArea"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dump unit@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://ifgipedia.uni-muenster.de/envision-simple-use-case#RoadNetwork">
+<rdf:Description rdf:about="http://purl.org/ifgi/suc/urbanizedarea#MineUnit">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:subClassOf rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#TransportUnit"/>
+	<rdfs:label>http://purl.org/ifgi/suc/urbanizedarea#MineUnit</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/suc/urbanizedarea#ContinuousUrbanizedArea"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/suc/urbanizedarea#DiscontinuousUrbanizedArea"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mine unit@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://ifgipedia.uni-muenster.de/envision-simple-use-case#RailNetwork">
+<rdf:Description rdf:about="http://purl.org/ifgi/suc/urbanizedarea#RoadNetwork">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:subClassOf rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#TransportUnit"/>
+	<rdfs:label>http://purl.org/ifgi/suc/urbanizedarea#RoadNetwork</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/suc/urbanizedarea#TransportUnit"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">road network@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://ifgipedia.uni-muenster.de/envision-simple-use-case#Port">
+<rdf:Description rdf:about="http://purl.org/ifgi/suc/urbanizedarea#RailNetwork">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:subClassOf rdf:resource="http://ifgipedia.uni-muenster.de/envision-simple-use-case#TransportUnit"/>
+	<rdfs:label>http://purl.org/ifgi/suc/urbanizedarea#RailNetwork</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/suc/urbanizedarea#TransportUnit"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rail network@en</dc:identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/suc/urbanizedarea#Port">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/suc/urbanizedarea#Port</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/suc/urbanizedarea#TransportUnit"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">port@en</dc:identifier>
 </rdf:Description>
 
 </rdf:RDF>

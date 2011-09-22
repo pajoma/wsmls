@@ -1,60 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF
+	xmlns="http://purl.org/ifgi/wfs#"
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-	xmlns="http://purl.org/ifgi/wfs#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:sawsdl="http://www.w3.org/ns/sawsdl#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns:ows="http://purl.org/ifgi/ows/0.2#"
 	xmlns:posm="http://www.wsmo.org/ns/posm/0.2#"
 	xmlns:dolce="http://purl.org/net/wsml/dolceDnS#">
-<!-- http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/date: "10-11-2010"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/type: "Ontology"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/title: "OGC Web Feature Service"^^<http://www.w3.org/2001/XMLSchema#string> -->
+
+<rdf:Description rdf:nodeID="node16a8i5n2fx21">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<rdfs:label>WFS</rdfs:label>
+	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
+	<owl:imports rdf:resource="http://purl.org/ifgi/ows/0.2#"/>
+	<owl:imports rdf:resource="http://purl.org/net/wsml/dolceDnS#"/>
+	<owl:imports rdf:resource="http://www.wsmo.org/ns/posm/0.2#"/>
+	<dc:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(a)IfGI, University of Muenster</dc:publisher>
+	<dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10-11-2010</dc:date>
+	<dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://creativecommons.org/licenses/by/3.0/</dc:rights>
+	<dc:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ontology</dc:type>
+	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OGC Web Feature Service</dc:title>
+</rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/wfs#WebFeatureService">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/wfs#WebFeatureService</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/ows/0.2#OGCWebService"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Web feature service@en</dc:identifier>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/wfs#DescribeFeatureType">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/wfs#DescribeFeatureType</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#Operation"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">describe feature type@en</dc:identifier>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/wfs#DescribeFeatureTypeRequest">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/wfs#DescribeFeatureTypeRequest</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">describe feature type request@en</dc:identifier>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/wfs#DescribeFeatureTypeResponse">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/wfs#DescribeFeatureTypeResponse</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">describe feature type response@en</dc:identifier>
 	<rdfs:seeAlso rdf:resource="http://schemas.opengis.net/wfs/1.1.0/wsdl/wfs-util.xsd#DescribeFeatureTypeResponse"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/wfs#GetFeature">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/wfs#GetFeature</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#Operation"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">get feature@en</dc:identifier>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/wfs#GetFeatureRequest">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/wfs#GetFeatureRequest</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">get feature request@en</dc:identifier>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/wfs#GetFeatureResponse">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/wfs#GetFeatureResponse</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">get feature response@en</dc:identifier>
 	<rdfs:seeAlso rdf:resource="http://schemas.opengis.net/wfs/1.1.0/wfs.xsd#FeatureCollection"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/wfs#FeatureTypeDescription">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/wfs#FeatureTypeDescription</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://purl.org/net/wsml/dolceDnS#information_object"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">feature type description@en</dc:identifier>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/wfs#DefaultDescribeFeatureType">

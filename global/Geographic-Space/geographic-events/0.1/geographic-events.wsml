@@ -1,11 +1,8 @@
 wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
-namespace { _"http://purl.org/net/wsml/geospace#",
+namespace { _"http://purl.org/ifgi/geoevents#",
 	dc _"http://purl.org/dc/elements/1.1/",
-    wsml _"http://www.wsmo.org/wsml/wsml-syntax#",
-    rdf _"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     rdfs _"http://www.w3.org/2000/01/rdf-schema#",
-    dolce _"http://purl.org/net/wsml/dolce#",
-    dns _"http://purl.org/net/wsml/dolceDnS#"
+    dns _"http://purl.org/ifgi/dolceDnS#"
  }
 
 ontology geographic_events
@@ -20,19 +17,21 @@ ontology geographic_events
 		dc#title hasValue "Geographic Space Ontology"	
 		dc#subject hasValue "Geography"			
     endAnnotations
+	
+	importsOntology {_"http://purl.org/ifgi/dolceDnS#"}
      
     concept movement subConceptOf dns#physical_phenomenon
     	annotations
-			rdfs#label hasValue ""
-			rdfs#label hasValue ""
+			dc#identifier hasValue "movement@en"
+			dc#identifier hasValue "Bewegung@de"
 			dc#description hasValue ""
 			dc#source hasValue ""
 		endAnnotations
 
     concept wind subConceptOf movement
 		annotations
-			rdfs#label hasValue "Wind@de"
-			rdfs#label hasValue "wind@en"
+			dc#identifier hasValue "Wind@de"
+			dc#identifier hasValue "wind@en"
 			dc#description hasValue "Moving air caused by differences in pressure. The air moves from an area of high pressure to an area of low pressure."
 			dc#source hasValue "http://en.wikipedia.org/wiki/Wind"
 		endAnnotations
@@ -40,40 +39,40 @@ ontology geographic_events
 	
 	concept storm subConceptOf wind
 		annotations
-			rdfs#label hasValue "Sturm@de"
-			rdfs#label hasValue "storm@en"
+			dc#identifier hasValue "Sturm@de"
+			dc#identifier hasValue "storm@en"
 			dc#description hasValue "A meteorological definition of a terrestrial storm is a wind measuring 10 or higher on the Beaufort scale. It may be marked by strong wind, hail, thunder and/or lightning (a thunderstorm), heavy precipitation... "
 			dc#source hasValue "http://en.wikipedia.org/wiki/Storm"
 		endAnnotations
 	
 	concept flow subConceptOf movement
 		annotations
-			rdfs#label hasValue "Strömung@de"
-			rdfs#label hasValue "flow@en"
+			dc#identifier hasValue "Fliessen@de"
+			dc#identifier hasValue "flow@en"
 			dc#description hasValue "An uninterrupted motion characteristic of fluids (liquids or gases) such as water"
 			dc#source hasValue "http://wordnetweb.princeton.edu"
 		endAnnotations
 	
 	concept river_current subConceptOf flow
 		annotations
-			rdfs#label hasValue "Flussströmung@de"
-			rdfs#label hasValue "river current@en"
+			dc#identifier hasValue "Flussströmung@de"
+			dc#identifier hasValue "river current@en"
 			dc#description hasValue "The steady flow of water in a river influenced by gravity as the water moves downhill to reduce its potential energy."
 			dc#source hasValue "http://en.wikipedia.org/wiki/Current_(stream)"
 		endAnnotations
 	
 	concept sea_current subConceptOf flow
 		annotations
-			rdfs#label hasValue "Meeresströmung@de"
-			rdfs#label hasValue "sea current@en"
+			dc#identifier hasValue "Meeresströmung@de"
+			dc#identifier hasValue "sea current@en"
 			dc#description hasValue "The steady flow of surface sea water in a prevailing direction."
 			dc#source hasValue "http://wordnetweb.princeton.edu/"
 		endAnnotations
 	
 	concept ground_movement subConceptOf movement
 		annotations
-			rdfs#label hasValue ""
-			rdfs#label hasValue ""
+			dc#identifier hasValue "ground movement@en"
+			dc#identifier hasValue "Bodenbewegung@de"
 			dc#description hasValue ""
 			dc#source hasValue ""
 		endAnnotations
@@ -81,24 +80,24 @@ ontology geographic_events
 
 	concept groundwater_flow subConceptOf flow
 		annotations
-			rdfs#label hasValue ""
-			rdfs#label hasValue ""
+			dc#identifier hasValue "groundwater flow@en"
+			dc#identifier hasValue "Grundwasserströmung@de"
 			dc#description hasValue ""
 			dc#source hasValue ""
 		endAnnotations
 
 	concept hurricane subConceptOf wind
 		annotations
-			rdfs#label hasValue ""
-			rdfs#label hasValue ""
+			dc#identifier hasValue "hurricane@en"
+			dc#identifier hasValue "Hurrikan@de"
 			dc#description hasValue ""
 			dc#source hasValue ""
 		endAnnotations
 	
 	concept earthquake subConceptOf ground_movement
 		annotations
-			rdfs#label hasValue ""
-			rdfs#label hasValue ""
+			dc#identifier hasValue "earthquake@en"
+			dc#identifier hasValue "Erdbeben@de"
 			dc#description hasValue ""
 			dc#source hasValue ""
 		endAnnotations
@@ -106,8 +105,8 @@ ontology geographic_events
 	
 	concept precipitation subConceptOf dns#physical_phenomenon
 		annotations
-			rdfs#label hasValue ""
-			rdfs#label hasValue ""
+			dc#identifier hasValue "precipitation@en"
+			dc#identifier hasValue "Niderschlag@de"
 			dc#description hasValue ""
 			dc#source hasValue ""
 		endAnnotations

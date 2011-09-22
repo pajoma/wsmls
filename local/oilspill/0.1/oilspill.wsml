@@ -1,13 +1,16 @@
 wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
-namespace { _"http://purl.org/ifgi/OilSpill#",
+namespace { _"http://purl.org/ifgi/oilspill#",
 	rdf _"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     rdfs _"http://www.w3.org/2000/01/rdf-schema#",
     xsd _"http://www.w3.org/2001/XMLSchema#",
     dc _"http://purl.org/dc/elements/1.1/",
     owl _"http://www.w3.org/2002/07/owl#",
-    DUL _"http://purl.org/net/wsml/dul#",
-    dolce _"http://purl.org/net/wsml/dolce#",
-    gs _"http://purl.org/net/wsml/geospace#"
+    DUL _"http://purl.org/ifgi/dul#",
+    dolce _"http://purl.org/ifgi/dolce#",
+    gs _"http://purl.org/net/wsml/geospace#",
+	gu _"http://purl.org/net/wsml/geounits#",
+	ge _"http://purl.org/net/wsml/geoevents#",
+	gq _"http://purl.org/net/wsml/geoqualities#"
  }
 
 ontology OilSpill
@@ -23,7 +26,7 @@ ontology OilSpill
 		dc#subject hasValue "Oil Spill"	
 	endAnnotations
 	
-	importsOntology {gs#geographic_units, gs#geographic_qualities}
+	importsOntology {_"http://purl.org/net/wsml/geospace#", _"http://purl.org/net/wsml/geounits#", _"http://purl.org/net/wsml/geoevents#", _"http://purl.org/net/wsml/geoqualities#"}
 
 /* Event/Processes */
 	
@@ -325,7 +328,7 @@ ontology OilSpill
 	
 /* GeographicalUnits */
 
-	concept water_body subConceptOf gs#landcover_unit
+	concept water_body subConceptOf gu#landcover_unit
 		annotations
 			dc#identifier hasValue "Gewässer@de"
 			dc#identifier hasValue "water body@en"
@@ -364,7 +367,7 @@ ontology OilSpill
 		dolce#participant_in ofType oil_spill
 		consists_of ofType {water, oil}
 	
-	concept terrestrial_unit subConceptOf gs#natural_unit
+	concept terrestrial_unit subConceptOf gu#natural_unit
 		annotations
 			dc#identifier hasValue "Landeinheit@de"
 			dc#identifier hasValue "terrestrial unit@en"
@@ -388,7 +391,7 @@ ontology OilSpill
 			dc#source hasValue "http://wordnetweb.princeton.edu/"
 		endAnnotations	
 
-	concept region subConceptOf dolce#geographical_unit
+	concept region subConceptOf gs#geographical_unit
 		annotations
 			dc#identifier hasValue "Region@de"
 			dc#identifier hasValue "region@en"
@@ -398,7 +401,7 @@ ontology OilSpill
 		owl#sameAs ofType zone
 		owl#sameAs ofType area
 	
-	concept zone
+	concept zone subConceptOf gs#geographical_unit
 		annotations
 			dc#identifier hasValue "zone@en"
 			dc#identifier hasValue "Zone@de"
@@ -407,7 +410,7 @@ ontology OilSpill
 		endAnnotations
 		owl#sameAs ofType region
 		
-	concept area
+	concept area subConceptOf gs#geographical_unit
 		annotations
 			dc#identifier hasValue "area@en"
 			dc#identifier hasValue "Flaeche@de"

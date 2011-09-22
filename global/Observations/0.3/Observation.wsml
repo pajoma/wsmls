@@ -2,7 +2,7 @@ wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
 namespace { _"http://purl.org/ifgi/observation#",
 	dc _"http://purl.org/dc/elements/1.1/",
 	dolce _"http://purl.org/ifgi/dolce#",
-	dns _"http://purl.org/net/wsml/dolceDnS#"
+	dns _"http://purl.org/ifgi/dolceDnS#"
  }
 
 ontology Observation
@@ -16,36 +16,66 @@ ontology Observation
 		dc#subject hasValue "observation, measurement, foundational"	
 		dc#date hasValue "10-05-2011"
      endAnnotations
+	 
+	 importsOntology {_"http://purl.org/ifgi/dolceDnS#"}
 
 	concept ObservationProcess subConceptOf dolce#process
+		annotations
+			dc#identifier hasValue "observation process@en"
+		endAnnotations
 		isPerformedBy ofType (1 1) Sensor
 		dns#realizes ofType (1 1) Observation
 		
 	concept Sensor subConceptOf dolce#non_agentive_physical_object
+		annotations
+			dc#identifier hasValue "sensor@en"
+		endAnnotations
 		performs ofType (1 *) ObservationProcess
 		observes ofType (1 *) Observable
 	
 	concept Observable subConceptOf dolce#physical_quality
+		annotations
+			dc#identifier hasValue "observable@en"
+		endAnnotations
 		isObservedBy ofType (1 *) Sensor
 		
 	concept ObservedEntity subConceptOf dolce#physical_endurant
+		annotations
+			dc#identifier hasValue "observed entity@en"
+		endAnnotations
 		dolce#has_quality ofType (1 *) Observable
 		dolce#participant_in ofType (1 *) Stimulus
 		
 	concept Stimulus subConceptOf dolce#process
+		annotations
+			dc#identifier hasValue "stimulus@en"
+		endAnnotations
 		dolce#has_participant ofType (1 *) ObservedEntity
 		isDetectedBy ofType (1 *) Sensor
 		
 	concept Observation subConceptOf dns#information_object
+		annotations
+			dc#identifier hasValue "observation@en"
+		endAnnotations
 		dns#is_realized_by ofType (1 1) ObservationProcess
 		holds ofType (1 1) {ObservationValue, dolce#space_region, dolce#temporal_region}
 		
 	concept ObservationValue subConceptOf dolce#abstract_quality
+		annotations
+			dc#identifier hasValue "observation value@en"
+		endAnnotations
 		value ofType {_integer, _float, _boolean, _string}
 		dolce#q_location ofType (1 1) dolce#measurement_unit
 	
 	relation performs (ofType Sensor, ofType ObservationProcess)  subRelationOf dolce#participant_in
+		annotations
+			dc#identifier hasValue "performs@en"
+		endAnnotations
+		
 	relation isPerformedBy (ofType ObservationProcess, ofType Sensor)  subRelationOf dolce#participant
+		annotations
+			dc#identifier hasValue "is performed by@en"
+		endAnnotations
 	
 	axiom performs_inverse_isPerformedBy
     	definedBy

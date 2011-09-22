@@ -1,48 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF
+	xmlns="http://purl.org/ifgi/patterns/event#"
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-	xmlns="http://purl.org/net/wsmls/patterns#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
-	xmlns:patterns="http://swing.uni-muenster.de/core/pattern/"
-	xmlns:geo="http://swing.uni-muenster.de/core/GeographicSpace/"
-	xmlns:dolce="http://purl.org/net/wsmls/dolce#">
-<!-- http://purl.org/dc/elements/1.1/creator: "h.michels (IFGI)"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/contributor: ""^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/type: "Semantic Pattern"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/title: "Semantic Pattern: Event"^^<http://www.w3.org/2001/XMLSchema#string> -->
-<!-- http://purl.org/dc/elements/1.1/subject: "Pattern, Event"^^<http://www.w3.org/2001/XMLSchema#string> -->
+	xmlns:dolce="http://purl.org/ifgi/dolce#">
 
-<rdf:Description rdf:about="http://purl.org/net/wsmls/patterns#Event">
-	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:subClassOf rdf:resource="http://purl.org/net/wsmls/dolce#perdurant"/>
-	<dc:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">event@en</dc:label>
-	<dc:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Event@de</dc:label>
+<rdf:Description rdf:nodeID="node16a8i5n2fx283">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<rdfs:label>EventPattern</rdfs:label>
+	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-core</dc:format>
+	<owl:imports rdf:resource="http://purl.org/ifgi/dolce#"/>
+	<dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">h.michels (IFGI)</dc:creator>
+	<dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:contributor>
+	<dc:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(a)IfGI, University of Muenster</dc:publisher>
+	<dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://creativecommons.org/licenses/by/3.0/</dc:rights>
+	<dc:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Semantic Pattern</dc:type>
+	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Semantic Pattern: Event</dc:title>
+	<dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pattern, Event</dc:subject>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/net/wsmls/patterns#initiates">
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">initiiert@de</rdfs:label>
-	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">initiate@en</rdfs:label>
+<rdf:Description rdf:about="http://purl.org/ifgi/patterns/event#Event">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/patterns/event#Event</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dolce#perdurant"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">event@en</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Event@de</dc:identifier>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node16a8i5n2fx284">
+	<rdfs:label>http://purl.org/ifgi/patterns/event#initiates</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/patterns/event#Event"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">initiiert@de</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">initiate@en</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:source>
 	<rdfs:comments rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comments>
-	<rdfs:domain rdf:resource="http://purl.org/net/wsmls/patterns#Event"/>
-	<rdfs:range rdf:resource="http://purl.org/net/wsmls/dolce#perdurant"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#perdurant"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/net/wsmls/patterns#changes">
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ver�ndert@de</rdfs:label>
-	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">changes@en</rdfs:label>
+<rdf:Description rdf:nodeID="node16a8i5n2fx285">
+	<rdfs:label>http://purl.org/ifgi/patterns/event#changes</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/patterns/event#Event"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ver�ndert@de</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">changes@en</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">an event changes something (here Quality)</dc:description>
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:source>
 	<rdfs:comments rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comments>
-	<rdfs:domain rdf:resource="http://purl.org/net/wsmls/patterns#Event"/>
-	<rdfs:range rdf:resource="http://purl.org/net/wsmls/dolce#quality"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#quality"/>
 </rdf:Description>
 
 </rdf:RDF>

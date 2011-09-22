@@ -1,71 +1,100 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix : <http://ifgipedia.uni-muenster.de/envision-simple-use-case#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://purl.org/ifgi/suc/waterlevelobservation#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dolce: <http://purl.org/ifgi/dolce#> .
 @prefix obs: <http://purl.org/ifgi/observation#> .
 
-# http://purl.org/dc/elements/1.1/publisher: "IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/type: "Domain Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/title: "Water Level Observation Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/description: "Domain ontology describing the observation of water level extending the foundational observation ontology by Henry Michels"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/source: ""^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/subject: "observation, measurement, domain"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/date: "13-12-2010"^^<http://www.w3.org/2001/XMLSchema#string>
+_:node16a8i5n2fx432 a owl:Ontology ;
+	rdfs:label "WaterlevelObservation" ;
+	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
+	owl:imports <http://purl.org/ifgi/observation#> ;
+	dc:publisher "IfGI, University of Muenster"^^xsd:string ;
+	dc:type "Domain Ontology"^^xsd:string ;
+	dc:title "Water Level Observation Ontology"^^xsd:string ;
+	dc:description "Domain ontology describing the observation of water level extending the foundational observation ontology by Henry Michels"^^xsd:string ;
+	dc:source ""^^xsd:string ;
+	dc:subject "observation, measurement, domain"^^xsd:string ;
+	dc:date "13-12-2010"^^xsd:string .
 
 :WaterlevelObservation a rdfs:Class ;
-	rdfs:subClassOf obs:ObservationProcess .
+	rdfs:label "http://purl.org/ifgi/suc/waterlevelobservation#WaterlevelObservation" ;
+	rdfs:subClassOf obs:ObservationProcess ;
+	dc:identifier "water level observation@en"^^xsd:string .
 
-:hasName a rdf:Property ;
+_:node16a8i5n2fx433 rdfs:label "http://purl.org/ifgi/suc/waterlevelobservation#hasName" ;
 	rdfs:domain :WaterlevelObservation ;
+	a rdf:Property ;
 	rdfs:range xsd:string .
 
-:isPerformedBy a rdf:Property ;
+_:node16a8i5n2fx434 rdfs:label "http://purl.org/ifgi/suc/waterlevelobservation#isPerformedBy" ;
 	rdfs:domain :WaterlevelObservation ;
+	a rdf:Property ;
 	rdfs:range :WaterlevelSensor .
 
 :WaterlevelSensor a rdfs:Class ;
-	rdfs:subClassOf obs:Observer .
+	rdfs:label "http://purl.org/ifgi/suc/waterlevelobservation#WaterlevelSensor" ;
+	rdfs:subClassOf obs:Observer ;
+	dc:identifier "water level sensor@en"^^xsd:string .
 
-:performs a rdf:Property ;
+_:node16a8i5n2fx435 rdfs:label "http://purl.org/ifgi/suc/waterlevelobservation#performs" ;
 	rdfs:domain :WaterlevelSensor ;
+	a rdf:Property ;
 	rdfs:range :WaterlevelObservation .
 
-:observes a rdf:Property ;
+_:node16a8i5n2fx436 rdfs:label "http://purl.org/ifgi/suc/waterlevelobservation#observes" ;
 	rdfs:domain :WaterlevelSensor ;
+	a rdf:Property ;
 	rdfs:range :Waterlevel .
 
 :WaterlevelValue a rdfs:Class ;
-	rdfs:subClassOf obs:ObservationValue .
+	rdfs:label "http://purl.org/ifgi/suc/waterlevelobservation#WaterlevelValue" ;
+	rdfs:subClassOf obs:ObservationValue ;
+	dc:identifier "water level value@en"^^xsd:string .
 
-:value a rdf:Property ;
+_:node16a8i5n2fx437 rdfs:label "http://purl.org/ifgi/suc/waterlevelobservation#value" ;
 	rdfs:domain :WaterlevelValue ;
+	a rdf:Property ;
 	rdfs:range xsd:float .
 
-:isProducedBy a rdf:Property ;
+_:node16a8i5n2fx438 rdfs:label "http://purl.org/ifgi/suc/waterlevelobservation#isProducedBy" ;
 	rdfs:domain :WaterlevelValue ;
+	a rdf:Property ;
 	rdfs:range :WaterlevelObservation .
 
 :Waterlevel a rdfs:Class ;
-	rdfs:subClassOf :Level .
+	rdfs:label "http://purl.org/ifgi/suc/waterlevelobservation#Waterlevel" ;
+	rdfs:subClassOf :Level ;
+	dc:identifier "water level@en"^^xsd:string .
 
-:isObservedBy a rdf:Property ;
+_:node16a8i5n2fx439 rdfs:label "http://purl.org/ifgi/suc/waterlevelobservation#isObservedBy" ;
 	rdfs:domain :Waterlevel ;
+	a rdf:Property ;
 	rdfs:range :WaterlevelSensor .
 
 :Level a rdfs:Class ;
-	rdfs:subClassOf obs:Observable .
+	rdfs:label "http://purl.org/ifgi/suc/waterlevelobservation#Level" ;
+	rdfs:subClassOf obs:Observable ;
+	dc:identifier "level@en"^^xsd:string .
 
 :RiverWater a rdfs:Class ;
-	rdfs:subClassOf :Water .
+	rdfs:label "http://purl.org/ifgi/suc/waterlevelobservation#RiverWater" ;
+	rdfs:subClassOf :Water ;
+	dc:identifier "river water@en"^^xsd:string .
 
 :GroundWater a rdfs:Class ;
-	rdfs:subClassOf :Water .
+	rdfs:label "http://purl.org/ifgi/suc/waterlevelobservation#GroundWater" ;
+	rdfs:subClassOf :Water ;
+	dc:identifier "groundwater@en"^^xsd:string .
 
 :Water a rdfs:Class ;
-	rdfs:subClassOf obs:ObservedEntity .
+	rdfs:label "http://purl.org/ifgi/suc/waterlevelobservation#Water" ;
+	rdfs:subClassOf obs:ObservedEntity ;
+	dc:identifier "water@en"^^xsd:string .
 
-dolce:has_quality a rdf:Property ;
+_:node16a8i5n2fx440 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
 	rdfs:domain :Water ;
+	a rdf:Property ;
 	rdfs:range :Waterlevel .
