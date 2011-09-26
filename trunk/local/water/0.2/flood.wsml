@@ -1,0 +1,49 @@
+namespace { _"http://purl.org/ifgi/water/flood#",
+	 rdf _"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+     rdfs _"http://www.w3.org/2000/01/rdf-schema#",
+     dc _"http://purl.org/dc/elements/1.1/",
+     dolce _"http://purl.org/ifgi/dolce#",
+     dns _"http://purl.org/ifgi/dolceDnS#",
+	 gsy _"http://purl.org/ifgi/geosystems#",
+	 gs _"http://purl.org/net/wsml/geospace#",
+	 gu _"http://purl.org/net/wsml/geounits#",
+	 ge _"http://purl.org/net/wsml/geoevents#",
+	 gq _"http://purl.org/net/wsml/geoqualities#"
+     }
+
+ontology FloodScenario
+     annotations
+		dc#creator hasValue "h.michels (IFGI)"
+		dc#contributor hasValue ""
+		dc#publisher hasValue "(a)IfGI, University of Muenster"
+		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+		dc#type hasValue "Domain Ontology"
+		dc#title hasValue "Envision flood scenario ontology"	
+		dc#description hasValue "This ontology captures the domain knowledge for a river and its environment in the content of flooding"
+		dc#source hasValue ""
+		dc#subject hasValue ""
+		rdfs#comments hasValue ""
+	endAnnotations
+	
+	importsOntology {_"http://purl.org/ifgi/dolceDnS#"}
+
+/*
+A natural stream arising in a given drainage basin but not wholly dependent for its flow on surface drainage in its immediate area, 
+flowing in a channel with a well-defined bed between visible banks or through a definite depression in the land, having a definite 
+and permanent or periodic supply of water, and usually, but not necessarily, having a perceptible current in a particular direction 
+and discharging at a fixed point into another body of water. (Source: BJGEO)
+*/
+
+	//Systems
+
+	concept flood subConceptOf dns#physical_phenomenon
+		annotations
+			dc#identifier hasValue "Flut@de"
+			dc#identifier hasValue "flood@en"
+			dc#description hasValue ""
+			dc#source hasValue ""
+		endAnnotations 
+		//causes ofType landslide
+		//affects ofType gs#landcover_unit
+
+

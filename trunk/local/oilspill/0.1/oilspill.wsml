@@ -58,14 +58,6 @@ ontology OilSpill
 			dc#source hasValue "http://en.wikipedia.org/wiki/Accident"
 		endAnnotations
 	
-	concept point_in_time subConceptOf dolce#temporal_quality
-		annotations
-			dc#identifier hasValue "Zeitpunkt@de"
-			dc#identifier hasValue "point in time@en"
-			dc#description hasValue "An instant of time in a predefined temporal reference system."
-			dc#source hasValue "http://wordnetweb.princeton.edu"
-		endAnnotations
-	
 /* Amount of Matters */
 	
 	concept air subConceptOf dolce#amount_of_matter
@@ -116,7 +108,7 @@ ontology OilSpill
 	
 /* Qualities */
 
-	concept amount subConceptOf dolce#quality
+	concept amount subConceptOf dolce#physical_quality
 		annotations
 			dc#identifier hasValue "amount@en"
 			dc#identifier hasValue "Menge@de"
@@ -124,7 +116,7 @@ ontology OilSpill
 			dc#source hasValue ""
 		endAnnotations
 	
-	concept pressure subConceptOf dolce#quality
+	concept pressure subConceptOf dolce#physical_quality
 		annotations
 			dc#identifier hasValue "pressure@en"
 			dc#identifier hasValue "Druck@de"
@@ -132,7 +124,7 @@ ontology OilSpill
 			dc#source hasValue ""
 		endAnnotations
 	
-	concept humidity subConceptOf dolce#quality
+	concept humidity subConceptOf dolce#physical_quality
 		annotations
 			dc#identifier hasValue "humidity@en"
 			dc#identifier hasValue "Feuchtigkeit@de"
@@ -140,7 +132,7 @@ ontology OilSpill
 			dc#source hasValue ""
 		endAnnotations
 	
-	concept direction subConceptOf dolce#quality
+	concept direction subConceptOf dolce#physical_quality
 		annotations
 			dc#identifier hasValue "Richtung@de"
 			dc#identifier hasValue "direction@en"
@@ -148,7 +140,7 @@ ontology OilSpill
 			dc#source hasValue "http://en.wikipedia.org/wiki/Direction_(geometry)"
 		endAnnotations	
 	
-	concept temperature subConceptOf dolce#quality
+	concept temperature subConceptOf dolce#physical_quality
 		annotations
 			dc#identifier hasValue "Temperatur@de"
 			dc#identifier hasValue "temperature@en"
@@ -156,7 +148,7 @@ ontology OilSpill
 			dc#source hasValue "http://en.wikipedia.org/wiki/Temperature"
 		endAnnotations
 	
-	concept velocity subConceptOf dolce#quality
+	concept velocity subConceptOf dolce#physical_quality
 		annotations
 			dc#identifier hasValue "Geschwindigkeit@de"
 			dc#identifier hasValue "velocity@en"
@@ -164,7 +156,7 @@ ontology OilSpill
 			dc#source hasValue "http://wordnetweb.princeton.edu/"
 		endAnnotations
 	
-	concept mass subConceptOf dolce#quality
+	concept mass subConceptOf dolce#physical_quality
 		annotations
 			dc#identifier hasValue "Masse@de"
 			dc#identifier hasValue "mass@en"
@@ -172,7 +164,7 @@ ontology OilSpill
 			dc#source hasValue "http://wordnetweb.princeton.edu/"
 		endAnnotations
 	
-	concept viscosity subConceptOf dolce#quality
+	concept viscosity subConceptOf dolce#physical_quality
 		annotations
 			dc#identifier hasValue "Viskosität@de"
 			dc#identifier hasValue "viscosity@en"
@@ -180,7 +172,7 @@ ontology OilSpill
 			dc#source hasValue "http://wordnetweb.princeton.edu/"
 		endAnnotations
 	
-	concept toxicity subConceptOf dolce#quality
+	concept toxicity subConceptOf dolce#physical_quality
 		annotations
 			dc#identifier hasValue "Giftigkeit/Giftgehalt@de"
 			dc#identifier hasValue "toxicity@en"
@@ -188,7 +180,7 @@ ontology OilSpill
 			dc#source hasValue "http://en.wikipedia.org/wiki/Toxicity"
 		endAnnotations
 	
-	concept depth subConceptOf dolce#quality
+	concept depth subConceptOf dolce#physical_quality
 		annotations
 			dc#identifier hasValue "Tiefe@de"
 			dc#identifier hasValue "depth@en"
@@ -196,7 +188,7 @@ ontology OilSpill
 			dc#source hasValue "http://en.wiktionary.org/wiki/depth"
 		endAnnotations
 	
-	concept concentration subConceptOf dolce#quality
+	concept concentration subConceptOf dolce#physical_quality
 		annotations
 			dc#identifier hasValue "Konzentration@de"
 			dc#identifier hasValue "concentration@en"
@@ -212,7 +204,7 @@ ontology OilSpill
 			dc#source hasValue ""
 		endAnnotations
 	
-	concept load_volume subConceptOf dolce#quality
+	concept load_volume subConceptOf dolce#physical_quality
 		annotations
 			dc#identifier hasValue "Ladevolumen@de"
 			dc#identifier hasValue "load volume@en"
@@ -220,7 +212,7 @@ ontology OilSpill
 			dc#source hasValue ""
 		endAnnotations
 	
-	concept name subConceptOf dolce#quality
+	concept name subConceptOf dolce#physical_quality
 		annotations
 			dc#identifier hasValue "Name@de"
 			dc#identifier hasValue "name@en"
@@ -228,7 +220,7 @@ ontology OilSpill
 			dc#source hasValue "http://en.wikipedia.org/wiki/Name"
 		endAnnotations
 	
-	concept cargo subConceptOf dolce#quality
+	concept cargo subConceptOf dolce#physical_quality
 		annotations
 			dc#identifier hasValue "Fracht@de"
 			dc#identifier hasValue "cargo@en"
@@ -236,7 +228,7 @@ ontology OilSpill
 			dc#source hasValue "http://wordnetweb.princeton.edu/"
 		endAnnotations
 	
-	concept id subConceptOf dolce#quality
+	concept id subConceptOf dolce#physical_quality
 		annotations
 			dc#identifier hasValue "ID@de"
 			dc#identifier hasValue "id@en"
@@ -244,7 +236,7 @@ ontology OilSpill
 			dc#source hasValue "http://wordnetweb.princeton.edu/"
 		endAnnotations
 	
-//	concept Location subConceptOf dolce#quality
+//	concept Location subConceptOf dolce#physical_quality
 //		annotations
 //			dc#identifier hasValue "Lage@de"
 //			dc#identifier hasValue "location@en"
@@ -252,7 +244,7 @@ ontology OilSpill
 //			dc#source hasValue "http://en.wikipedia.org/wiki/Location_%28geography%29"
 //		endAnnotations
 	
-	concept carrying_capacity subConceptOf dolce#quality
+	concept carrying_capacity subConceptOf dolce#physical_quality
 		annotations
 			dc#identifier hasValue "Ladekapazität@de"
 			dc#identifier hasValue "carrying capacity@en"
@@ -268,7 +260,7 @@ ontology OilSpill
 			dc#source hasValue "http://wordnetweb.princeton.edu/"
 		endAnnotations
 	
-	concept age subConceptOf dolce#quality
+	concept age subConceptOf dolce#physical_quality
 		annotations
 			dc#identifier hasValue "Alter@de"
 			dc#identifier hasValue "age@en"
@@ -276,7 +268,7 @@ ontology OilSpill
 			dc#source hasValue "http://wordnetweb.princeton.edu/"
 		endAnnotations
 	
-	concept size subConceptOf dolce#quality
+	concept size subConceptOf dolce#physical_quality
 		annotations
 			dc#identifier hasValue "Größe@de"
 			dc#identifier hasValue "size@en"
@@ -284,7 +276,7 @@ ontology OilSpill
 			dc#source hasValue "http://wordnetweb.princeton.edu/"
 		endAnnotations
 	
-	concept average_weight subConceptOf dolce#quality
+	concept average_weight subConceptOf dolce#physical_quality
 		annotations
 			dc#identifier hasValue "Durchschnitssgewicht@de"
 			dc#identifier hasValue "average weigth@en"
@@ -292,7 +284,7 @@ ontology OilSpill
 			dc#source hasValue "http://en.wikipedia.org/wiki/Average_weight"
 		endAnnotations
 	
-	concept lethality subConceptOf dolce#quality
+	concept lethality subConceptOf dolce#physical_quality
 		annotations
 			dc#identifier hasValue "Letalität@de"
 			dc#identifier hasValue "lethality@en"
@@ -300,7 +292,7 @@ ontology OilSpill
 			dc#source hasValue "http://en.wikipedia.org/wiki/Case_fatality_rate"
 		endAnnotations
 	
-	concept population_size subConceptOf dolce#quality
+	concept population_size subConceptOf dolce#physical_quality
 		annotations
 			dc#identifier hasValue "Bevölkerungszahl@de"
 			dc#identifier hasValue "population size@en"
@@ -308,7 +300,7 @@ ontology OilSpill
 			dc#source hasValue "http://en.wikipedia.org/wiki/Population_size"
 		endAnnotations
 	
-	concept water_gauge subConceptOf dolce#quality
+	concept water_gauge subConceptOf dolce#physical_quality
 		annotations
 			dc#identifier hasValue "water gauge@en"
 			dc#identifier hasValue "Wasserstand@de"
@@ -317,7 +309,7 @@ ontology OilSpill
 		endAnnotations
 		owl#sameAs ofType water_level
 		
-	concept water_level subConceptOf dolce#quality
+	concept water_level subConceptOf dolce#physical_quality
 		annotations
 			dc#identifier hasValue "water level@en"
 			dc#identifier hasValue "Wasserstand@de"
@@ -446,6 +438,7 @@ ontology OilSpill
 			dc#source hasValue "http://wordnetweb.princeton.edu/"
 		endAnnotations
 		dolce#has_quality ofType {load_volume, name, cargo, id, carrying_capacity}
+		dolce#participant_in ofType {explosion, accident}
 	
 	concept tanker subConceptOf ship
 		annotations

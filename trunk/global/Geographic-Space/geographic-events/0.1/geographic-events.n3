@@ -4,9 +4,10 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix : <http://purl.org/ifgi/geoevents#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dolce: <http://purl.org/ifgi/dolce#> .
 @prefix dns: <http://purl.org/ifgi/dolceDnS#> .
 
-_:node16a8i5n2fx228 a owl:Ontology ;
+_:node16aj9afiix4 a owl:Ontology ;
 	rdfs:label "geographic_events" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/dolceDnS#> ;
@@ -19,9 +20,26 @@ _:node16a8i5n2fx228 a owl:Ontology ;
 	dc:title "Geographic Space Ontology"^^xsd:string ;
 	dc:subject "Geography"^^xsd:string .
 
+:natural_event a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geoevents#natural_event" ;
+	rdfs:subClassOf dns:physical_phenomenon ;
+	dc:identifier "natural event@en"^^xsd:string , "natuerliches Phänomen@de"^^xsd:string ;
+	dc:description ""^^xsd:string ;
+	dc:source ""^^xsd:string .
+
+_:node16aj9afiix5 rdfs:label "http://purl.org/ifgi/geoevents#has_start_point" ;
+	rdfs:domain :natural_event ;
+	a rdf:Property ;
+	rdfs:range :point_in_time .
+
+_:node16aj9afiix6 rdfs:label "http://purl.org/ifgi/geoevents#has_duration" ;
+	rdfs:domain :natural_event ;
+	a rdf:Property ;
+	rdfs:range :time_interval .
+
 :movement a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/geoevents#movement" ;
-	rdfs:subClassOf dns:physical_phenomenon ;
+	rdfs:subClassOf :natural_event ;
 	dc:identifier "movement@en"^^xsd:string , "Bewegung@de"^^xsd:string ;
 	dc:description ""^^xsd:string ;
 	dc:source ""^^xsd:string .
@@ -95,3 +113,31 @@ _:node16a8i5n2fx228 a owl:Ontology ;
 	dc:identifier "precipitation@en"^^xsd:string , "Niderschlag@de"^^xsd:string ;
 	dc:description ""^^xsd:string ;
 	dc:source ""^^xsd:string .
+
+:point_in_time a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geoevents#point_in_time" ;
+	rdfs:subClassOf dolce:temporal_quality ;
+	dc:identifier "Zeitpunkt@de"^^xsd:string , "point in time@en"^^xsd:string ;
+	dc:description "An instant of time in a predefined temporal reference system."^^xsd:string ;
+	dc:source "http://wordnetweb.princeton.edu"^^xsd:string .
+
+:time_interval a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geoevents#time_interval" ;
+	rdfs:subClassOf dolce:temporal_quality ;
+	dc:identifier "Zeitraum@de"^^xsd:string , "time interval@en"^^xsd:string ;
+	dc:description ""^^xsd:string ;
+	dc:source ""^^xsd:string .
+
+:has_start_point a rdf:Property ;
+	rdfs:domain :natural_event ;
+	rdfs:range :point_in_time ;
+	rdfs:subPropertyOf dolce:has_quality ;
+	dc:identifier "has start point@en"^^xsd:string , "hat Startpunkt@de"^^xsd:string ;
+	dc:description ""^^xsd:string .
+
+:has_duration a rdf:Property ;
+	rdfs:domain :natural_event ;
+	rdfs:range :time_interval ;
+	rdfs:subPropertyOf dolce:has_quality ;
+	dc:identifier "has duration@en"^^xsd:string , "hat Dauer@de"^^xsd:string ;
+	dc:description ""^^xsd:string .

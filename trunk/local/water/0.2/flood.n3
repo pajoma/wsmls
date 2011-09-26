@@ -1,0 +1,35 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://purl.org/ifgi/water/flood#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dolce: <http://purl.org/ifgi/dolce#> .
+@prefix dns: <http://purl.org/ifgi/dolceDnS#> .
+@prefix gsy: <http://purl.org/ifgi/geosystems#> .
+@prefix gs: <http://purl.org/net/wsml/geospace#> .
+@prefix gu: <http://purl.org/net/wsml/geounits#> .
+@prefix ge: <http://purl.org/net/wsml/geoevents#> .
+@prefix gq: <http://purl.org/net/wsml/geoqualities#> .
+
+_:node16aisg6smx2 a owl:Ontology ;
+	rdfs:label "FloodScenario" ;
+	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-full" ;
+	owl:imports <http://purl.org/ifgi/dolceDnS#> ;
+	dc:creator "h.michels (IFGI)"^^xsd:string ;
+	dc:contributor ""^^xsd:string ;
+	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
+	dc:rights "http://creativecommons.org/licenses/by/3.0/"^^xsd:string ;
+	dc:type "Domain Ontology"^^xsd:string ;
+	dc:title "Envision flood scenario ontology"^^xsd:string ;
+	dc:description "This ontology captures the domain knowledge for a river and its environment in the content of flooding"^^xsd:string ;
+	dc:source ""^^xsd:string ;
+	dc:subject ""^^xsd:string ;
+	rdfs:comments ""^^xsd:string .
+
+:flood a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/water/flood#flood" ;
+	rdfs:subClassOf dns:physical_phenomenon ;
+	dc:identifier "Flut@de"^^xsd:string , "flood@en"^^xsd:string ;
+	dc:description ""^^xsd:string ;
+	dc:source ""^^xsd:string .

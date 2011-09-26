@@ -2,6 +2,7 @@ wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
 namespace { _"http://purl.org/ifgi/geoevents#",
 	dc _"http://purl.org/dc/elements/1.1/",
     rdfs _"http://www.w3.org/2000/01/rdf-schema#",
+    dolce _"http://purl.org/ifgi/dolce#",
     dns _"http://purl.org/ifgi/dolceDnS#"
  }
 
@@ -19,8 +20,18 @@ ontology geographic_events
     endAnnotations
 	
 	importsOntology {_"http://purl.org/ifgi/dolceDnS#"}
+	
+	concept natural_event subConceptOf dns#physical_phenomenon
+    	annotations
+			dc#identifier hasValue "natural event@en"
+			dc#identifier hasValue "natuerliches Phänomen@de"
+			dc#description hasValue ""
+			dc#source hasValue ""
+		endAnnotations
+		has_start_point ofType point_in_time
+		has_duration ofType time_interval
      
-    concept movement subConceptOf dns#physical_phenomenon
+    concept movement subConceptOf natural_event
     	annotations
 			dc#identifier hasValue "movement@en"
 			dc#identifier hasValue "Bewegung@de"
@@ -111,6 +122,38 @@ ontology geographic_events
 			dc#source hasValue ""
 		endAnnotations
 		//causes ofType {infiltration, flood, erosion}
+		
+	//temporal qualities
 	
+	concept point_in_time subConceptOf dolce#temporal_quality
+		annotations
+			dc#identifier hasValue "Zeitpunkt@de"
+			dc#identifier hasValue "point in time@en"
+			dc#description hasValue "An instant of time in a predefined temporal reference system."
+			dc#source hasValue "http://wordnetweb.princeton.edu"
+		endAnnotations
+		
+	concept time_interval subConceptOf dolce#temporal_quality
+		annotations
+			dc#identifier hasValue "Zeitraum@de"
+			dc#identifier hasValue "time interval@en"
+			dc#description hasValue ""
+			dc#source hasValue ""
+		endAnnotations
 	
+	//temporal relations
+	
+	relation has_start_point (ofType natural_event, ofType point_in_time) subRelationOf dolce#has_quality
+		annotations
+			dc#identifier hasValue "has start point@en"
+			dc#identifier hasValue "hat Startpunkt@de"
+			dc#description hasValue ""
+		endAnnotations
+	
+	relation has_duration (ofType natural_event, ofType time_interval) subRelationOf dolce#has_quality
+		annotations
+			dc#identifier hasValue "has duration@en"
+			dc#identifier hasValue "hat Dauer@de"
+			dc#description hasValue ""
+		endAnnotations
 

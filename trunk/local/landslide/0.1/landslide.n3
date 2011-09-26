@@ -12,7 +12,7 @@
 @prefix dns: <http://purl.org/ifgi/dolceDnS#> .
 @prefix oil: <http://purl.org/ifgi/oilspill#> .
 
-_:node16a8i5n2fx313 a owl:Ontology ;
+_:node16aj9afiix17 a owl:Ontology ;
 	rdfs:label "Landslide" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/geounits#> , <http://purl.org/ifgi/geoqualities#> , <http://purl.org/ifgi/geospace#> , <http://purl.org/ifgi/geoevents#> , <http://purl.org/ifgi/oilspill#> ;
@@ -44,13 +44,6 @@ _:node16a8i5n2fx313 a owl:Ontology ;
 	rdfs:label "http://purl.org/ifgi/landslide#shallow_landslide" ;
 	rdfs:subClassOf :landslide ;
 	dc:identifier "shallow landslide@en"^^xsd:string , ""^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
-
-:flood a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/landslide#flood" ;
-	rdfs:subClassOf dolce:event ;
-	dc:identifier "flood@en"^^xsd:string , "Flut@de"^^xsd:string ;
 	dc:description ""^^xsd:string ;
 	dc:source ""^^xsd:string .
 
@@ -103,7 +96,7 @@ _:node16a8i5n2fx313 a owl:Ontology ;
 	dc:description ""^^xsd:string ;
 	dc:source ""^^xsd:string .
 
-_:node16a8i5n2fx314 rdfs:label "http://purl.org/ifgi/dolce#part_of" ;
+_:node16aj9afiix18 rdfs:label "http://purl.org/ifgi/dolce#part_of" ;
 	rdfs:domain :hillside ;
 	a rdf:Property ;
 	rdfs:range :mountain .
@@ -115,7 +108,7 @@ _:node16a8i5n2fx314 rdfs:label "http://purl.org/ifgi/dolce#part_of" ;
 	dc:description ""^^xsd:string ;
 	dc:source ""^^xsd:string .
 
-_:node16a8i5n2fx315 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
+_:node16aj9afiix19 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
 	rdfs:domain :catchment_area ;
 	a rdf:Property ;
 	rdfs:range :watershed .
@@ -126,7 +119,7 @@ _:node16a8i5n2fx315 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
 	dc:description ""^^xsd:string ;
 	dc:source ""^^xsd:string .
 
-_:node16a8i5n2fx316 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
+_:node16aj9afiix20 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
 	rdfs:domain :watershed ;
 	a rdf:Property ;
 	rdfs:range :catchment_area .
@@ -159,7 +152,7 @@ _:node16a8i5n2fx316 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
 	dc:description ""^^xsd:string ;
 	dc:source ""^^xsd:string .
 
-_:node16a8i5n2fx317 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
+_:node16aj9afiix21 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
 	rdfs:domain :rock ;
 	a rdf:Property ;
 	rdfs:range :porosity .
@@ -171,12 +164,12 @@ _:node16a8i5n2fx317 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
 	dc:description ""^^xsd:string ;
 	dc:source ""^^xsd:string .
 
-_:node16a8i5n2fx318 rdfs:label "http://purl.org/ifgi/landslide#is_layered_by" ;
+_:node16aj9afiix22 rdfs:label "http://purl.org/ifgi/landslide#is_layered_by" ;
 	rdfs:domain :soil ;
 	a rdf:Property ;
 	rdfs:range :subsoil .
 
-_:node16a8i5n2fx319 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
+_:node16aj9afiix23 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
 	rdfs:domain :soil ;
 	a rdf:Property ;
 	rdfs:range :angle_of_internal_friction ;
@@ -198,7 +191,7 @@ _:node16a8i5n2fx319 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
 	dc:description ""^^xsd:string ;
 	dc:source ""^^xsd:string .
 
-_:node16a8i5n2fx320 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
+_:node16aj9afiix24 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
 	rdfs:domain :borehole ;
 	a rdf:Property ;
 	rdfs:range oil:depth ;
@@ -240,82 +233,96 @@ _:node16a8i5n2fx320 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
 	dc:description ""^^xsd:string ;
 	dc:source ""^^xsd:string .
 
-_:node16a8i5n2fx321 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
+_:node16aj9afiix25 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
 	rdfs:domain :subsoil ;
 	a rdf:Property ;
 	rdfs:range :thickness .
 
+:grassland a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/landslide#grassland" ;
+	rdfs:subClassOf gu:vegetation_community ;
+	dc:identifier "Gruenland@de"^^xsd:string , "grassland@en"^^xsd:string ;
+	:comment "A vegetation community in which grasses are the most conspicuous plants"^^xsd:string ;
+	dc:subject "LandCover"^^xsd:string .
+
+:forest a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/landslide#forest" ;
+	rdfs:subClassOf gu:vegetation_community ;
+	dc:identifier "Wald@de"^^xsd:string , "forest@en"^^xsd:string ;
+	:comment "A vegetation community dominated by trees and other woody shrubs, growing close enough together that the tree tops touch or overlap, creating various degrees of shade on the forest floor. It may produce benefits such as timber, recreation, wildlife habitat, etc. (Source: DUNSTE)"^^xsd:string ;
+	dc:subject "LandCover"^^xsd:string .
+
 :height a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#height" ;
-	rdfs:subClassOf dolce:quality ;
+	rdfs:subClassOf dolce:physical_quality ;
 	dc:identifier "height@en"^^xsd:string , "Hoehe@de"^^xsd:string ;
 	dc:description ""^^xsd:string ;
 	dc:source ""^^xsd:string .
 
-_:node16a8i5n2fx322 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
+_:node16aj9afiix26 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
 	rdfs:domain :height ;
 	a rdf:Property ;
 	rdfs:range gs:elevation .
 
 :porosity a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#porosity" ;
-	rdfs:subClassOf dolce:quality ;
+	rdfs:subClassOf dolce:physical_quality ;
 	dc:identifier "porosity@en"^^xsd:string , "Poroesität@de"^^xsd:string ;
 	dc:description ""^^xsd:string ;
 	dc:source ""^^xsd:string .
 
 :cohesion a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#cohesion" ;
-	rdfs:subClassOf dolce:quality ;
+	rdfs:subClassOf dolce:physical_quality ;
 	dc:identifier "cohesion@en"^^xsd:string , "Kohaesion@de"^^xsd:string ;
 	dc:description ""^^xsd:string ;
 	dc:source ""^^xsd:string .
 
 :water_table a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#water_table" ;
-	rdfs:subClassOf dolce:quality ;
+	rdfs:subClassOf dolce:physical_quality ;
 	dc:identifier "water table@en"^^xsd:string , "Wasserspiegel@de"^^xsd:string ;
 	dc:description ""^^xsd:string ;
 	dc:source ""^^xsd:string .
 
 :density a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#density" ;
-	rdfs:subClassOf dolce:quality ;
+	rdfs:subClassOf dolce:physical_quality ;
 	dc:identifier "density@en"^^xsd:string , "Dichte@de"^^xsd:string ;
 	dc:description ""^^xsd:string ;
 	dc:source ""^^xsd:string .
 
 :moisture a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#moisture" ;
-	rdfs:subClassOf dolce:quality ;
+	rdfs:subClassOf dolce:physical_quality ;
 	dc:identifier "moisture@en"^^xsd:string , "Feuchtigkeit@de"^^xsd:string ;
 	dc:description ""^^xsd:string ;
 	dc:source ""^^xsd:string .
 
 :permeability a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#permeability" ;
-	rdfs:subClassOf dolce:quality ;
+	rdfs:subClassOf dolce:physical_quality ;
 	dc:identifier "permeability@en"^^xsd:string , "Durchlaessigkeit@de"^^xsd:string ;
 	dc:description ""^^xsd:string ;
 	dc:source ""^^xsd:string .
 
 :angle_of_internal_friction a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#angle_of_internal_friction" ;
-	rdfs:subClassOf dolce:quality ;
+	rdfs:subClassOf dolce:physical_quality ;
 	dc:identifier "angle of internal friction@en"^^xsd:string , "Winkel der inneren Reibung@de"^^xsd:string ;
 	dc:description ""^^xsd:string ;
 	dc:source ""^^xsd:string .
 
 :diameter a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#diameter" ;
-	rdfs:subClassOf dolce:quality ;
+	rdfs:subClassOf dolce:physical_quality ;
 	dc:identifier "diameter@en"^^xsd:string , "Durchmesser@de"^^xsd:string ;
 	dc:description ""^^xsd:string ;
 	dc:source ""^^xsd:string .
 
 :thickness a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#thickness" ;
-	rdfs:subClassOf dolce:quality ;
+	rdfs:subClassOf dolce:physical_quality ;
 	dc:identifier "thickness@en"^^xsd:string , "Dicke@de"^^xsd:string ;
 	dc:description ""^^xsd:string ;
 	dc:source ""^^xsd:string .
