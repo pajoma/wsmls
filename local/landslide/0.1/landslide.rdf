@@ -14,7 +14,7 @@
 	xmlns:dns="http://purl.org/ifgi/dolceDnS#"
 	xmlns:oil="http://purl.org/ifgi/oilspill#">
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx303">
+<rdf:Description rdf:nodeID="node16aj9afiix7">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>Landslide</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -60,16 +60,6 @@
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/landslide#landslide"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">shallow landslide@en</dc:identifier>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:identifier>
-	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
-	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:source>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://purl.org/ifgi/landslide#flood">
-	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:label>http://purl.org/ifgi/landslide#flood</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dolce#event"/>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flood@en</dc:identifier>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flut@de</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:source>
 </rdf:Description>
@@ -144,7 +134,7 @@
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:source>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx304">
+<rdf:Description rdf:nodeID="node16aj9afiix8">
 	<rdfs:label>http://purl.org/ifgi/dolce#part_of</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/landslide#hillside"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -161,7 +151,7 @@
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:source>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx305">
+<rdf:Description rdf:nodeID="node16aj9afiix9">
 	<rdfs:label>http://www.w3.org/2002/07/owl#sameAs</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/landslide#catchment_area"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -177,7 +167,7 @@
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:source>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx306">
+<rdf:Description rdf:nodeID="node16aj9afiix10">
 	<rdfs:label>http://www.w3.org/2002/07/owl#sameAs</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/landslide#watershed"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -224,7 +214,7 @@
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:source>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx307">
+<rdf:Description rdf:nodeID="node16aj9afiix11">
 	<rdfs:label>http://purl.org/ifgi/dolce#has_quality</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/landslide#rock"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -242,14 +232,14 @@
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:source>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx308">
+<rdf:Description rdf:nodeID="node16aj9afiix12">
 	<rdfs:label>http://purl.org/ifgi/landslide#is_layered_by</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/landslide#soil"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/landslide#subsoil"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx309">
+<rdf:Description rdf:nodeID="node16aj9afiix13">
 	<rdfs:label>http://purl.org/ifgi/dolce#has_quality</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/landslide#soil"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -276,7 +266,7 @@
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:source>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx310">
+<rdf:Description rdf:nodeID="node16aj9afiix14">
 	<rdfs:label>http://purl.org/ifgi/dolce#has_quality</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/landslide#borehole"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -335,24 +325,44 @@
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:source>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx311">
+<rdf:Description rdf:nodeID="node16aj9afiix15">
 	<rdfs:label>http://purl.org/ifgi/dolce#has_quality</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/landslide#subsoil"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/landslide#thickness"/>
 </rdf:Description>
 
+<rdf:Description rdf:about="http://purl.org/ifgi/landslide#grassland">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/landslide#grassland</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geounits#vegetation_community"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gruenland@de</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">grassland@en</dc:identifier>
+	<comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A vegetation community in which grasses are the most conspicuous plants</comment>
+	<dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LandCover</dc:subject>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/landslide#forest">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/landslide#forest</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geounits#vegetation_community"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wald@de</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">forest@en</dc:identifier>
+	<comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A vegetation community dominated by trees and other woody shrubs, growing close enough together that the tree tops touch or overlap, creating various degrees of shade on the forest floor. It may produce benefits such as timber, recreation, wildlife habitat, etc. (Source: DUNSTE)</comment>
+	<dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LandCover</dc:subject>
+</rdf:Description>
+
 <rdf:Description rdf:about="http://purl.org/ifgi/landslide#height">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/landslide#height</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dolce#quality"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dolce#physical_quality"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">height@en</dc:identifier>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hoehe@de</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:source>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx312">
+<rdf:Description rdf:nodeID="node16aj9afiix16">
 	<rdfs:label>http://www.w3.org/2002/07/owl#sameAs</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/landslide#height"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -362,7 +372,7 @@
 <rdf:Description rdf:about="http://purl.org/ifgi/landslide#porosity">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/landslide#porosity</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dolce#quality"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dolce#physical_quality"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">porosity@en</dc:identifier>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Poroesität@de</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
@@ -372,7 +382,7 @@
 <rdf:Description rdf:about="http://purl.org/ifgi/landslide#cohesion">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/landslide#cohesion</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dolce#quality"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dolce#physical_quality"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cohesion@en</dc:identifier>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kohaesion@de</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
@@ -382,7 +392,7 @@
 <rdf:Description rdf:about="http://purl.org/ifgi/landslide#water_table">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/landslide#water_table</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dolce#quality"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dolce#physical_quality"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">water table@en</dc:identifier>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wasserspiegel@de</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
@@ -392,7 +402,7 @@
 <rdf:Description rdf:about="http://purl.org/ifgi/landslide#density">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/landslide#density</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dolce#quality"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dolce#physical_quality"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">density@en</dc:identifier>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dichte@de</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
@@ -402,7 +412,7 @@
 <rdf:Description rdf:about="http://purl.org/ifgi/landslide#moisture">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/landslide#moisture</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dolce#quality"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dolce#physical_quality"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">moisture@en</dc:identifier>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Feuchtigkeit@de</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
@@ -412,7 +422,7 @@
 <rdf:Description rdf:about="http://purl.org/ifgi/landslide#permeability">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/landslide#permeability</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dolce#quality"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dolce#physical_quality"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">permeability@en</dc:identifier>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Durchlaessigkeit@de</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
@@ -422,7 +432,7 @@
 <rdf:Description rdf:about="http://purl.org/ifgi/landslide#angle_of_internal_friction">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/landslide#angle_of_internal_friction</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dolce#quality"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dolce#physical_quality"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">angle of internal friction@en</dc:identifier>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Winkel der inneren Reibung@de</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
@@ -432,7 +442,7 @@
 <rdf:Description rdf:about="http://purl.org/ifgi/landslide#diameter">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/landslide#diameter</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dolce#quality"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dolce#physical_quality"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">diameter@en</dc:identifier>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Durchmesser@de</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
@@ -442,7 +452,7 @@
 <rdf:Description rdf:about="http://purl.org/ifgi/landslide#thickness">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/landslide#thickness</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dolce#quality"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dolce#physical_quality"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thickness@en</dc:identifier>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dicke@de</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>

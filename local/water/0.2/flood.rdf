@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns="http://purl.org/ifgi/water/flood#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:dolce="http://purl.org/ifgi/dolce#"
+	xmlns:dns="http://purl.org/ifgi/dolceDnS#"
+	xmlns:gsy="http://purl.org/ifgi/geosystems#"
+	xmlns:gs="http://purl.org/net/wsml/geospace#"
+	xmlns:gu="http://purl.org/net/wsml/geounits#"
+	xmlns:ge="http://purl.org/net/wsml/geoevents#"
+	xmlns:gq="http://purl.org/net/wsml/geoqualities#">
+
+<rdf:Description rdf:nodeID="node16aisg6smx1">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<rdfs:label>FloodScenario</rdfs:label>
+	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-full</dc:format>
+	<owl:imports rdf:resource="http://purl.org/ifgi/dolceDnS#"/>
+	<dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">h.michels (IFGI)</dc:creator>
+	<dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:contributor>
+	<dc:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(a)IfGI, University of Muenster</dc:publisher>
+	<dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://creativecommons.org/licenses/by/3.0/</dc:rights>
+	<dc:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Domain Ontology</dc:type>
+	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Envision flood scenario ontology</dc:title>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This ontology captures the domain knowledge for a river and its environment in the content of flooding</dc:description>
+	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:source>
+	<dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:subject>
+	<rdfs:comments rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comments>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#flood">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/water/flood#flood</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dolceDnS#physical_phenomenon"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flut@de</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flood@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
+	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:source>
+</rdf:Description>
+
+</rdf:RDF>

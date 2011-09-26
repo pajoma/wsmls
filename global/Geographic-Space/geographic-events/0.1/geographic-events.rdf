@@ -6,9 +6,10 @@
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:dolce="http://purl.org/ifgi/dolce#"
 	xmlns:dns="http://purl.org/ifgi/dolceDnS#">
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx227">
+<rdf:Description rdf:nodeID="node16aj9afiix1">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>geographic_events</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -23,10 +24,34 @@
 	<dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geography</dc:subject>
 </rdf:Description>
 
+<rdf:Description rdf:about="http://purl.org/ifgi/geoevents#natural_event">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/geoevents#natural_event</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dolceDnS#physical_phenomenon"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">natural event@en</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">natuerliches Phänomen@de</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
+	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:source>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node16aj9afiix2">
+	<rdfs:label>http://purl.org/ifgi/geoevents#has_start_point</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/geoevents#natural_event"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/geoevents#point_in_time"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node16aj9afiix3">
+	<rdfs:label>http://purl.org/ifgi/geoevents#has_duration</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/geoevents#natural_event"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/geoevents#time_interval"/>
+</rdf:Description>
+
 <rdf:Description rdf:about="http://purl.org/ifgi/geoevents#movement">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/geoevents#movement</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dolceDnS#physical_phenomenon"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geoevents#natural_event"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">movement@en</dc:identifier>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bewegung@de</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
@@ -131,6 +156,46 @@
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Niderschlag@de</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/geoevents#point_in_time">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/geoevents#point_in_time</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dolce#temporal_quality"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zeitpunkt@de</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">point in time@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An instant of time in a predefined temporal reference system.</dc:description>
+	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://wordnetweb.princeton.edu</dc:source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/geoevents#time_interval">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/geoevents#time_interval</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dolce#temporal_quality"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zeitraum@de</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">time interval@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
+	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/geoevents#has_start_point">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/geoevents#natural_event"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/geoevents#point_in_time"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#has_quality"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has start point@en</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hat Startpunkt@de</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/geoevents#has_duration">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/geoevents#natural_event"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/geoevents#time_interval"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#has_quality"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has duration@en</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hat Dauer@de</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
 </rdf:Description>
 
 </rdf:RDF>
