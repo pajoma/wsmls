@@ -1,0 +1,186 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://ifgipedia.uni-muenster.de/event-processing-project/", 
+     dc _"http://purl.org/dc/elements/1.1/", 
+     dolce _"http://www.load-cnr.it/ontologies/DOLCE-Lite.owl#",
+     wsmostudio _"http://www.wsmostudio.org#" }
+
+ontology AffectingEnvironment
+     nonFunctionalProperties
+          dc#description hasValue "Umwelt Ontology implementing von Uexkuells notion of Umwelt based on Smith Niche."
+          dc#publisher hasValue "(c) IfGI, University of Muenster"
+          dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+          dc#type hasValue "Ontology"
+          wsmostudio#version hasValue "0.8.0"
+          dc#title hasValue "Umwelt Ontology"
+          dc#source hasValue "http://ifgipedia.uni-muenster.de/event-processing-project#"
+          dc#date hasValue "12-10-2010" //3.30pm
+     endNonFunctionalProperties
+
+//====== Concepts ======
+
+
+concept UniversalEnvironment
+      surrounds ofType (1 *) dolce#PhysicalObject
+
+concept Agent subConceptOf dolce#PhysicalAgentiveObject
+      isSurroundedBy ofType (1 1) UniversalUmwelt
+      participantIn ofType (1 *) Activity
+      hasName ofType _string
+      hasContact ofType (1 1) Contact
+      hasAddress ofType (1 *) Address
+     
+concept Activity subConceptOf dolce#Process
+     define ofType (1 1) AffectingEnvironment
+     hasParticipant ofType (1 1) Agent
+     partOf ofType (1 *) CompoundActivity
+     hasStartTime ofType _dateTime
+     hasEndTime ofType _dateTime
+     
+concept CompoundActivity subConceptOf dolce#Process
+     hasPart ofType (1 *) Activity
+     define ofType (1 1) CompoundActivityUmwelt 
+
+concept AffectingEnvironment
+     partOf ofType (1 1) UniversalEnvironment
+     partOf ofType (1 1) CompoundAffectingEnvironment
+     isDefinedBy ofType (1 1) Activity
+     hasPart ofType (1 *) Object
+     
+concept CompoundAffectingEnvironment
+     isDefinedBy ofType (1 1) CompoundActivity
+     hasPart ofType (1 *) AffectingEnvironment
+     
+concept Object subConceptOf dolce#PhysicalObject
+     hasState ofType (1 *) State
+     partOf ofType (1 *) AffectingEnvironment
+     
+concept State subConceptOf dolce#Quality
+
+concept Address
+	hasStreet ofType _string
+	hasStreetnumber ofType _int
+	hasPostalCode ofType _int
+	hasCountry ofType _string
+	
+concept Contact
+	hasEMail ofType _string
+	hasMobilePhoneNumber ofType _decimal
+
+//===== Relations =====
+relation define (ofType {Activity, CompoundActivity}, ofType {AffectingEnvironment, CompoundAffectingEnvironment})
+relation isDefinedBy (ofType {AffectingEnvironment, CompoundAffectingEnvironment}, ofType {Activity, CompoundActivity})
+
+relation participantIn (ofType Agent, ofType Activity)
+relation hasParticipant (ofType Activity, ofType Agent)
+
+relation surrounds (ofType UniversalEnvironment, ofType dolce#PhysicalObject)
+relation isSurroundedBy (ofType dolce#PhysicalObject, ofType UniversalEnvironment)
+
+relation partOf (ofType dolce#Particular, ofType dolce#Particular)
+relation hasPart (ofType dolce#Particular, ofType dolce#Particular)
+
+//===== Axioms =====
+//=Mereology-Axioms=
+//reflexivity of parthood 
+axiom parthood_reflexiv
+     definedBy
+          ?x memberOf dolce#Particular and 
+          partOf(?x,?x) implies true.
+          ?x memberOf dolce#Particular and 
+          hasPart(?x,?x) implies true.
+
+//transitivity of parthood 
+axiom parthood_transitive
+     definedBy
+          ?x memberOf dolce#Particular and
+          ?y memberOf dolce#Particular and
+          ?z memberOf dolce#Particular and 
+          partOf(?x,?y) and partOf(?y,?z) implies partOf(?x,?z).
+          ?x memberOf dolce#Particular and
+          ?y memberOf dolce#Particular and
+          ?z memberOf dolce#Particular and 
+          hasPart(?x,?y) and partOf(?y,?z) implies partOf(?x,?z).
+
+//antisymmetry of parthood    
+axiom parthood_antisymmetric
+     definedBy
+          ?x memberOf dolce#Particular and
+          ?y memberOf dolce#Particular and
+          partOf(?x,?y) and partOf(?y,?x) implies ?x = ?y. //WSML-Rule violation: No equivalent symbol allowed in head.
+
+//inversion of partOf
+axiom partOf_inverse_hasPart
+     definedBy
+          ?x memberOf dolce#Particular and
+          ?y memberOf dolce#Particular and
+          partOf(?x,?y) implies hasPart(?y,?x).
+          ?x memberOf dolce#Particular and
+          ?y memberOf dolce#Particular and
+          hasPart(?x,?y) implies partOf(?y,?x).
+          
+//inversion of define
+axiom define_inverse_isDefinedBy
+     definedBy
+          ?x memberOf {Activity, CompoundActivity} and
+          ?y memberOf {AffectingEnvironment, CompoundAffectingEnvironment} and
+          define(?x,?y) implies isDefinedBy(?y,?x).
+          ?x memberOf {AffectingEnvironment, CompoundAffectingEnvironment} and
+          ?y memberOf {Activity, CompoundActivity} and
+          isDefinedBy(?x,?y) implies define(?y,?x).
+          
+//inversion of participantIn
+axiom participantIn_inverse_hasParticipant
+     definedBy
+          ?x memberOf Agent and
+          ?y memberOf Activity and
+          participantIn(?x,?y) implies hasParticipant(?y,?x).
+          ?x memberOf Activity and
+          ?y memberOf Agent and
+          hasParticipant(?x,?y) implies participantIn(?y,?x).
+          
+//inversion of isSurroundedBy
+axiom isSurroundedBy_inverse_surrounds
+     definedBy
+          ?x memberOf dolce#PhysicalObject and
+          ?y memberOf UniversalEnvironment and
+          isSurroundedBy(?x,?y) implies surrounds(?y,?x).
+          ?x memberOf UniversalEnvironment and
+          ?y memberOf dolce#PhysicalObject and
+          surrounds(?x,?y) implies isSurroundedBy(?y,?x).
+    
+//=Environment Axioms=
+//An AffectingEnvironment of an agent is part of the agent's UniversalUmwelt.  
+axiom A1
+     definedBy
+          ?x memberOf Agent and
+          ?e memberOf AffectingEnvironment and
+          ?a memberOf Activity and
+          ?u memberOf UniversalEnvironment and
+          ?x[participantIn hasValue ?a, isSurroundedBy hasValue ?u] and
+          ?u[define hasValue ?e] implies
+          ?e[partOf hasValue ?u].
+       
+//If a CompoundAffectingEnvironment has a CompoundActivity, then all the AffectingEnvironment for the Activities that are part of the CompoundActivity, are also parts of the CompoundAffectingEnvironment
+axiom A2
+     definedBy
+          ?c memberOf CompoundAffectingEnvironment and
+          ?y memberOf CompoundActivity and
+          ?c[isDefinedBy hasValue ?y] and
+          ?a memberOf AffectingEnvironment and
+          ?x memberOf Activity and
+          ?a[isDefinedBy hasValue ?x] and
+          ?c[hasPart hasValue ?a] implies
+          ?y[hasPart hasValue ?x].
+
+//If a CompoundAffectingEnvironment has an AffectingEnvironment as part, then the Activity of the AffectingEnvironment is part of the CompoundActivity of the CompoundAffectingEnvironment
+axiom A3
+     definedBy
+          ?c memberOf CompoundAffectingEnvironment and
+          ?y memberOf CompoundActivity and
+          ?c[isDefinedBy hasValue ?y] and
+          ?a memberOf AffectingEnvironment and
+          ?x memberOf Activity and
+          ?a[isDefinedBy hasValue ?x] and
+          ?y[hasPart hasValue ?x] implies
+          ?c[hasPart hasValue ?a].
+          
