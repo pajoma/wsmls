@@ -10,11 +10,12 @@
 @prefix gu: <http://purl.org/net/wsml/geounits#> .
 @prefix ge: <http://purl.org/net/wsml/geoevents#> .
 @prefix gq: <http://purl.org/net/wsml/geoqualities#> .
+@prefix ls: <http://purl.org/ifgi/landslide#> .
 
-_:node16aj9afiix54 a owl:Ontology ;
+_:node16d8paspdx54 a owl:Ontology ;
 	rdfs:label "OilSpill" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
-	owl:imports <http://purl.org/net/wsml/geospace#> , <http://purl.org/net/wsml/geounits#> , <http://purl.org/net/wsml/geoevents#> , <http://purl.org/net/wsml/geoqualities#> ;
+	owl:imports <http://purl.org/net/wsml/geospace#> , <http://purl.org/net/wsml/geounits#> , <http://purl.org/net/wsml/geoevents#> , <http://purl.org/net/wsml/geoqualities#> , <http://purl.org/ifgi/landslide#> ;
 	dc:creator "Marcell Roth (IFGI)"^^xsd:string ;
 	dc:contributor "Henry Michels (IFGI)"^^xsd:string ;
 	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
@@ -53,12 +54,12 @@ _:node16aj9afiix54 a owl:Ontology ;
 	dc:description "A mixture of gases (especially nitrogen and oxygen) in the atmosphere of Earth which is required for breathing and photosynthesis."^^xsd:string ;
 	dc:source "http://en.wikipedia.org/wiki/Air"^^xsd:string .
 
-_:node16aj9afiix55 rdfs:label "http://purl.org/ifgi/dolce#participant_in" ;
+_:node16d8paspdx55 rdfs:label "http://purl.org/ifgi/dolce#participant_in" ;
 	rdfs:domain :air ;
 	a rdf:Property ;
 	rdfs:range gs:wind .
 
-_:node16aj9afiix56 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
+_:node16d8paspdx56 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
 	rdfs:domain :air ;
 	a rdf:Property ;
 	rdfs:range :temperature ;
@@ -78,14 +79,14 @@ _:node16aj9afiix56 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
 	dc:description "Water is a chemical substance whose molecule contains one oxygen and two hydrogen atoms connected by covalent bonds. Water is a liquid at ambient conditions, but it often co-exists on Earth with its solid state, ice, and gaseous state (water vapor or steam)."^^xsd:string ;
 	dc:source "http://en.wikipedia.org/wiki/Water"^^xsd:string .
 
-_:node16aj9afiix57 rdfs:label "http://purl.org/ifgi/dolce#participant_in" ;
+_:node16d8paspdx57 rdfs:label "http://purl.org/ifgi/dolce#participant_in" ;
 	rdfs:domain :water ;
 	a rdf:Property ;
 	rdfs:range gs:precipitation ;
 	a rdf:Property ;
 	rdfs:range gs:flow .
 
-_:node16aj9afiix58 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
+_:node16d8paspdx58 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
 	rdfs:domain :water ;
 	a rdf:Property ;
 	rdfs:range :temperature ;
@@ -105,7 +106,7 @@ _:node16aj9afiix58 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
 	dc:description "A slippery or viscous liquid or liquefiable substance not miscible with water. Oils have a high carbon and hydrogen content and are nonpolar substances."^^xsd:string ;
 	dc:source "http://en.wikipedia.org/wiki/Oil"^^xsd:string .
 
-_:node16aj9afiix59 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
+_:node16d8paspdx59 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
 	rdfs:domain :oil ;
 	a rdf:Property ;
 	rdfs:range :temperature ;
@@ -129,29 +130,29 @@ _:node16aj9afiix59 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
 	rdfs:label "http://purl.org/ifgi/oilspill#black_oil" ;
 	rdfs:subClassOf :oil ;
 	dc:identifier "Rohschmieröl@de"^^xsd:string , "black oil@en"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:description "Low-grade, black petroleum oil used to lubricate slow-moving or rough-surfaced machinery"^^xsd:string ;
+	dc:source "http://www.answers.com/topic/black-oil"^^xsd:string .
 
 :amount a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/oilspill#amount" ;
 	rdfs:subClassOf dolce:physical_quality ;
 	dc:identifier "amount@en"^^xsd:string , "Menge@de"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:description "how much there is or how many there are of something that you can quantify"^^xsd:string ;
+	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
 :pressure a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/oilspill#pressure" ;
 	rdfs:subClassOf dolce:physical_quality ;
 	dc:identifier "pressure@en"^^xsd:string , "Druck@de"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:description "the force applied to a unit area of surface; measured in pascals (SI unit) or in dynes (cgs unit)"^^xsd:string ;
+	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
 :humidity a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/oilspill#humidity" ;
-	rdfs:subClassOf dolce:physical_quality ;
-	dc:identifier "humidity@en"^^xsd:string , "Feuchtigkeit@de"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	rdfs:subClassOf ls:moisture ;
+	dc:identifier "humidity@en"^^xsd:string , "Luftfeuchtigkeit@de"^^xsd:string ;
+	dc:description "the amount of water vapor in the air"^^xsd:string ;
+	dc:source "http://en.wikipedia.org/wiki/Humidity"^^xsd:string .
 
 :direction a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/oilspill#direction" ;
@@ -213,15 +214,15 @@ _:node16aj9afiix59 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
 	rdfs:label "http://purl.org/ifgi/oilspill#oil_concentration" ;
 	rdfs:subClassOf :concentration ;
 	dc:identifier "oil concentration@en"^^xsd:string , "Oelkonzentration@de"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:description "concentration of oil within a water column"^^xsd:string ;
+	dc:source "(Henry)"^^xsd:string .
 
 :load_volume a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/oilspill#load_volume" ;
 	rdfs:subClassOf dolce:physical_quality ;
 	dc:identifier "Ladevolumen@de"^^xsd:string , "load volume@en"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:description "The volume of all objects belonging to the cargo"^^xsd:string ;
+	dc:source "(Henry)"^^xsd:string .
 
 :name a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/oilspill#name" ;
@@ -248,8 +249,8 @@ _:node16aj9afiix59 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
 	rdfs:label "http://purl.org/ifgi/oilspill#carrying_capacity" ;
 	rdfs:subClassOf dolce:physical_quality ;
 	dc:identifier "Ladekapazität@de"^^xsd:string , "carrying capacity@en"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:description "capacity of a cargo-space"^^xsd:string ;
+	dc:source "(Henry)"^^xsd:string .
 
 :tankage a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/oilspill#tankage" ;
@@ -297,10 +298,10 @@ _:node16aj9afiix59 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
 	rdfs:label "http://purl.org/ifgi/oilspill#water_gauge" ;
 	rdfs:subClassOf dolce:physical_quality ;
 	dc:identifier "water gauge@en"^^xsd:string , "Wasserstand@de"^^xsd:string ;
-	dc:description ""^^xsd:string ;
+	dc:description "the level of the surface of a body of water. Don't confuse with the definition of water gauge in wordnet. We don't mean the measerung device here."^^xsd:string ;
 	dc:source ""^^xsd:string .
 
-_:node16aj9afiix60 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
+_:node16d8paspdx60 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
 	rdfs:domain :water_gauge ;
 	a rdf:Property ;
 	rdfs:range :water_level .
@@ -309,10 +310,10 @@ _:node16aj9afiix60 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
 	rdfs:label "http://purl.org/ifgi/oilspill#water_level" ;
 	rdfs:subClassOf dolce:physical_quality ;
 	dc:identifier "water level@en"^^xsd:string , "Wasserstand@de"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:description "the level of the surface of a body of water"^^xsd:string ;
+	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
-_:node16aj9afiix61 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
+_:node16d8paspdx61 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
 	rdfs:domain :water_level ;
 	a rdf:Property ;
 	rdfs:range :water_gauge .
@@ -324,7 +325,7 @@ _:node16aj9afiix61 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
 	dc:description "Any significant accumulation of water, usually covering the Earth or another planet. The term body of water most often refers to large accumulations of water, such as oceans, seas, and lakes, but it may also include smaller pools of water such as ponds, puddles or wetlands."^^xsd:string ;
 	dc:source "http://en.wikipedia.org/wiki/Water_body"^^xsd:string .
 
-_:node16aj9afiix62 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
+_:node16d8paspdx62 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
 	rdfs:domain :water_body ;
 	a rdf:Property ;
 	rdfs:range :depth ;
@@ -333,7 +334,7 @@ _:node16aj9afiix62 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
 	a rdf:Property ;
 	rdfs:range :water_gauge .
 
-_:node16aj9afiix63 rdfs:label "http://purl.org/ifgi/oilspill#consists_of" ;
+_:node16d8paspdx63 rdfs:label "http://purl.org/ifgi/oilspill#consists_of" ;
 	rdfs:domain :water_body ;
 	a rdf:Property ;
 	rdfs:range :water .
@@ -352,7 +353,7 @@ _:node16aj9afiix63 rdfs:label "http://purl.org/ifgi/oilspill#consists_of" ;
 	dc:description "A division of an ocean or a large body of salt water partially enclosed by land"^^xsd:string ;
 	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
-_:node16aj9afiix64 rdfs:label "http://purl.org/net/wsml/geospace#confined_by" ;
+_:node16d8paspdx64 rdfs:label "http://purl.org/net/wsml/geospace#confined_by" ;
 	rdfs:domain :sea ;
 	a rdf:Property ;
 	rdfs:range :coastal_terrestrial_unit .
@@ -364,22 +365,22 @@ _:node16aj9afiix64 rdfs:label "http://purl.org/net/wsml/geospace#confined_by" ;
 	dc:description "A thin film of oil floating on top of water (especially crude oil spilled from a ship."^^xsd:string ;
 	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
-_:node16aj9afiix65 rdfs:label "http://purl.org/net/wsml/geospace#situated_in" ;
+_:node16d8paspdx65 rdfs:label "http://purl.org/net/wsml/geospace#situated_in" ;
 	rdfs:domain :oil_slick ;
 	a rdf:Property ;
 	rdfs:range :water_body .
 
-_:node16aj9afiix66 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
+_:node16d8paspdx66 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
 	rdfs:domain :oil_slick ;
 	a rdf:Property ;
 	rdfs:range :concentration .
 
-_:node16aj9afiix67 rdfs:label "http://purl.org/ifgi/dolce#participant_in" ;
+_:node16d8paspdx67 rdfs:label "http://purl.org/ifgi/dolce#participant_in" ;
 	rdfs:domain :oil_slick ;
 	a rdf:Property ;
 	rdfs:range :oil_spill .
 
-_:node16aj9afiix68 rdfs:label "http://purl.org/ifgi/oilspill#consists_of" ;
+_:node16d8paspdx68 rdfs:label "http://purl.org/ifgi/oilspill#consists_of" ;
 	rdfs:domain :oil_slick ;
 	a rdf:Property ;
 	rdfs:range :water ;
@@ -390,15 +391,15 @@ _:node16aj9afiix68 rdfs:label "http://purl.org/ifgi/oilspill#consists_of" ;
 	rdfs:label "http://purl.org/ifgi/oilspill#terrestrial_unit" ;
 	rdfs:subClassOf gu:natural_unit ;
 	dc:identifier "Landeinheit@de"^^xsd:string , "terrestrial unit@en"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:description "http://irtg.ifgi.de/students/jens-ortmann/#thesis"^^xsd:string ;
+	dc:source "http://ifgi.uni-muenster.de/~klien/publications/Klien_PhDThesis_full.pdf"^^xsd:string .
 
 :coastal_terrestrial_unit a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/oilspill#coastal_terrestrial_unit" ;
 	rdfs:subClassOf :terrestrial_unit ;
 	dc:identifier "Küstenlandeinheit@de"^^xsd:string , "coastal terrestrial unit@en"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:description "A TerrestrialUnit that is near the sea."^^xsd:string ;
+	dc:source "http://irtg.ifgi.de/students/jens-ortmann/#thesis"^^xsd:string .
 
 :coast a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/oilspill#coast" ;
@@ -414,7 +415,7 @@ _:node16aj9afiix68 rdfs:label "http://purl.org/ifgi/oilspill#consists_of" ;
 	dc:description "The extended spatial location of something. Regions can be broadly divided by physical characteristics, human impact characteristics, and the interaction of Humanity and the environment."^^xsd:string ;
 	dc:source "http://en.wikipedia.org/wiki/Region"^^xsd:string .
 
-_:node16aj9afiix69 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
+_:node16d8paspdx69 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
 	rdfs:domain :region ;
 	a rdf:Property ;
 	rdfs:range :zone ;
@@ -425,10 +426,10 @@ _:node16aj9afiix69 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
 	rdfs:label "http://purl.org/ifgi/oilspill#zone" ;
 	rdfs:subClassOf gs:geographical_unit ;
 	dc:identifier "zone@en"^^xsd:string , "Zone@de"^^xsd:string ;
-	dc:description ""^^xsd:string ;
+	dc:description "see concept region"^^xsd:string ;
 	dc:source ""^^xsd:string .
 
-_:node16aj9afiix70 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
+_:node16d8paspdx70 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
 	rdfs:domain :zone ;
 	a rdf:Property ;
 	rdfs:range :region .
@@ -437,10 +438,10 @@ _:node16aj9afiix70 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
 	rdfs:label "http://purl.org/ifgi/oilspill#area" ;
 	rdfs:subClassOf gs:geographical_unit ;
 	dc:identifier "area@en"^^xsd:string , "Flaeche@de"^^xsd:string ;
-	dc:description ""^^xsd:string ;
+	dc:description "see concept region"^^xsd:string ;
 	dc:source ""^^xsd:string .
 
-_:node16aj9afiix71 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
+_:node16d8paspdx71 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
 	rdfs:domain :area ;
 	a rdf:Property ;
 	rdfs:range :region .
@@ -452,7 +453,7 @@ _:node16aj9afiix71 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
 	dc:description "A sanctuary is any place of safety. There are two main categories of sanctuaries: Human and Non-Human (plants and animals)."^^xsd:string ;
 	dc:source "http://en.wikipedia.org/wiki/Sanctuary"^^xsd:string .
 
-_:node16aj9afiix72 rdfs:label "http://purl.org/net/wsml/geospace#situated_in" ;
+_:node16d8paspdx72 rdfs:label "http://purl.org/net/wsml/geospace#situated_in" ;
 	rdfs:domain :sanctuary ;
 	a rdf:Property ;
 	rdfs:range :habitat .
@@ -471,7 +472,7 @@ _:node16aj9afiix72 rdfs:label "http://purl.org/net/wsml/geospace#situated_in" ;
 	dc:description "A vessel that carries passengers or cargo"^^xsd:string ;
 	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
-_:node16aj9afiix73 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
+_:node16d8paspdx73 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
 	rdfs:domain :ship ;
 	a rdf:Property ;
 	rdfs:range :id ;
@@ -484,7 +485,7 @@ _:node16aj9afiix73 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
 	a rdf:Property ;
 	rdfs:range :name .
 
-_:node16aj9afiix74 rdfs:label "http://purl.org/ifgi/dolce#participant_in" ;
+_:node16d8paspdx74 rdfs:label "http://purl.org/ifgi/dolce#participant_in" ;
 	rdfs:domain :ship ;
 	a rdf:Property ;
 	rdfs:range :explosion ;
@@ -498,7 +499,7 @@ _:node16aj9afiix74 rdfs:label "http://purl.org/ifgi/dolce#participant_in" ;
 	dc:description "A cargo ship designed to carry crude oil in bulk."^^xsd:string ;
 	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
-_:node16aj9afiix75 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
+_:node16d8paspdx75 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
 	rdfs:domain :tanker ;
 	a rdf:Property ;
 	rdfs:range :tankage .
@@ -534,11 +535,11 @@ _:node16aj9afiix75 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
 :cod a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/oilspill#cod" ;
 	rdfs:subClassOf :gadoid ;
-	dc:identifier "cod@en"^^xsd:string ;
+	dc:identifier "cod@en"^^xsd:string , "Dorsch@de"^^xsd:string ;
 	dc:description "Cod is the common name for genus Gadus"^^xsd:string ;
 	dc:source "http://en.wikipedia.org/wiki/Cod"^^xsd:string .
 
-_:node16aj9afiix76 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
+_:node16d8paspdx76 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
 	rdfs:domain :cod ;
 	a rdf:Property ;
 	rdfs:range :size ;
@@ -547,7 +548,7 @@ _:node16aj9afiix76 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
 	a rdf:Property ;
 	rdfs:range :mass .
 
-_:node16aj9afiix77 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
+_:node16d8paspdx77 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
 	rdfs:domain :cod ;
 	a rdf:Property ;
 	rdfs:range :gadus .
@@ -555,11 +556,11 @@ _:node16aj9afiix77 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
 :shoaling a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/oilspill#shoaling" ;
 	rdfs:subClassOf dolce:physical_object ;
-	dc:identifier "Schwarmfisch@de"^^xsd:string , "shoaling@en"^^xsd:string ;
+	dc:identifier "Fischschwarm@de"^^xsd:string , "shoaling@en"^^xsd:string ;
 	dc:description "Any group of fish that stay together for social reasons"^^xsd:string ;
 	dc:source "http://en.wikipedia.org/wiki/Shoaling_and_schooling"^^xsd:string .
 
-_:node16aj9afiix78 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
+_:node16d8paspdx78 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
 	rdfs:domain :shoaling ;
 	a rdf:Property ;
 	rdfs:range :average_weight ;
@@ -568,7 +569,7 @@ _:node16aj9afiix78 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
 	a rdf:Property ;
 	rdfs:range :population_size .
 
-_:node16aj9afiix79 rdfs:label "http://purl.org/ifgi/dolce#proper_part_of" ;
+_:node16d8paspdx79 rdfs:label "http://purl.org/ifgi/dolce#proper_part_of" ;
 	rdfs:domain :shoaling ;
 	a rdf:Property ;
 	rdfs:range :fish .
@@ -576,18 +577,18 @@ _:node16aj9afiix79 rdfs:label "http://purl.org/ifgi/dolce#proper_part_of" ;
 :schooling a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/oilspill#schooling" ;
 	rdfs:subClassOf :shoaling ;
-	dc:identifier "schooling@en"^^xsd:string ;
+	dc:identifier "schooling@en"^^xsd:string , "Fischschwarm@de"^^xsd:string ;
 	dc:description "Any group of fish that stay together for social reasons and swimming in the same direction in a coordinated manner."^^xsd:string ;
 	dc:source "http://en.wikipedia.org/wiki/Shoaling_and_schooling"^^xsd:string .
 
 :gadus a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/oilspill#gadus" ;
 	rdfs:subClassOf :gadoid ;
-	dc:identifier "gadus@en"^^xsd:string ;
+	dc:identifier "gadus@en"^^xsd:string , "Dorsch@de"^^xsd:string ;
 	dc:description "Gadus is a cod. See also concept \"Cod\"."^^xsd:string ;
 	dc:source "http://en.wikipedia.org/wiki/Cod"^^xsd:string .
 
-_:node16aj9afiix80 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
+_:node16d8paspdx80 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
 	rdfs:domain :gadus ;
 	a rdf:Property ;
 	rdfs:range :cod .
@@ -616,5 +617,6 @@ _:node16aj9afiix80 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
 :consists_of a rdf:Property ;
 	rdfs:domain dolce:physical_object ;
 	rdfs:range dolce:amount_of_matter ;
-	dc:identifier "consists of@en"^^xsd:string ;
-	dc:description ""^^xsd:string .
+	dc:identifier "consists of@en"^^xsd:string , "besteht aus@de"^^xsd:string ;
+	dc:description "be composed of"^^xsd:string ;
+	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .

@@ -37,69 +37,69 @@ ontology Landslide
 		annotations
 			dc#identifier hasValue "landslide@en"
 			dc#identifier hasValue "Hangrutsch@de"
-			dc#description hasValue ""
-			dc#source hasValue ""
+			dc#description hasValue "a slide of a large mass of dirt and rock down a mountain or cliff"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
 		endAnnotations
 
 	concept deep_landslide subConceptOf landslide
 		annotations
 			dc#identifier hasValue "deep landslide@en"
-			dc#identifier hasValue ""
-			dc#description hasValue ""
-			dc#source hasValue ""
+			dc#identifier hasValue "tief gehender Hangrutsch@de"
+			dc#description hasValue "Landslides in which the sliding surface is mostly deeply located below the maximum rooting depth of trees (typically to depths greater than ten meters)."
+			dc#source hasValue "en.wikipedia.org/wiki/Landslide"
 		endAnnotations
 
 	concept shallow_landslide subConceptOf landslide
 		annotations
 			dc#identifier hasValue "shallow landslide@en"
-			dc#identifier hasValue ""
-			dc#description hasValue ""
-			dc#source hasValue ""
+			dc#identifier hasValue "flach gehender Hangrutsch@de"
+			dc#description hasValue "Landslide in which the sliding surface is located within the soil mantle or weathered bedrock (typically to a depth from few decimetres to some metres)."
+			dc#source hasValue "en.wikipedia.org/wiki/Landslide"
 		endAnnotations
 	
-	concept insolation subConceptOf dns#physical_phenomenon
+	concept insolation subConceptOf ge#natural_event
 		annotations
 			dc#identifier hasValue "insolation@en"
 			dc#identifier hasValue "Sonneneinstrahlung@de"
-			dc#description hasValue ""
-			dc#source hasValue ""
+			dc#description hasValue "incident solar radiation"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
 		endAnnotations
 		//affects ofType gs#landcover_unit
 	
-	concept infiltration subConceptOf dns#physical_phenomenon
+	concept infiltration subConceptOf ge#natural_event
 		annotations
 			dc#identifier hasValue "infiltration@en"
 			dc#identifier hasValue "Versickerung@de"
-			dc#description hasValue ""
-			dc#source hasValue ""
+			dc#description hasValue "(the slow passage of a liquid through a filtering medium"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
 		endAnnotations
 		//affects ofType gs#landcover_unit
 		//causes ofType landslide
 	
-	concept erosion subConceptOf dns#physical_phenomenon
+	concept erosion subConceptOf ge#natural_event
 		annotations
 			dc#identifier hasValue "erosion@en"
 			dc#identifier hasValue "Erosion@de"
-			dc#description hasValue ""
-			dc#source hasValue ""
+			dc#description hasValue "condition in which the earth's surface is worn away by the action of water and wind"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
 		endAnnotations
 		//affects ofType gs#landcover_unit
 		//causes ofType landslide
 	
-	concept evapotranspiration subConceptOf dns#physical_phenomenon
+	concept evapotranspiration subConceptOf ge#natural_event
 		annotations
 			dc#identifier hasValue "evapotranspiration@en"
 			dc#identifier hasValue "Evapotranspiration@de"
-			dc#description hasValue ""
-			dc#source hasValue ""
+			dc#description hasValue "the sum of evaporation and plant transpiration from the Earth's land surface to atmosphere. Evaporation accounts for the movement of water to the air from sources such as the soil, canopy interception, and waterbodies."
+			dc#source hasValue "http://en.wikipedia.org/wiki/Evapotranspiration"
 		endAnnotations
 	
 	concept evaporation subConceptOf evapotranspiration
 		annotations
 			dc#identifier hasValue "evaporation@en"
 			dc#identifier hasValue "Evaporation@de"
-			dc#description hasValue ""
-			dc#source hasValue ""
+			dc#description hasValue "the process of extracting moisture"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
 		endAnnotations
 
 	/*
@@ -110,16 +110,16 @@ ontology Landslide
 		annotations
 			dc#identifier hasValue "mountain@en"
 			dc#identifier hasValue "Berg@de"
-			dc#description hasValue ""
-			dc#source hasValue ""
+			dc#description hasValue "a land mass that projects well above its surroundings; higher than a hill"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
 		endAnnotations
 
 	concept hillside subConceptOf gs#geographical_unit
 		annotations
 			dc#identifier hasValue "hillside@en"
 			dc#identifier hasValue "Hang@de"
-			dc#description hasValue ""
-			dc#source hasValue ""
+			dc#description hasValue "The side of a hill, situated between the foot and the summit."
+			dc#source hasValue "http://www.thefreedictionary.com/hillside"
 		endAnnotations
     	dolce#part_of impliesType mountain
 
@@ -127,8 +127,8 @@ ontology Landslide
 		annotations
 			dc#identifier hasValue "catchment area@en"
 			dc#identifier hasValue "Einzugsgebiet@de"
-			dc#description hasValue ""
-			dc#source hasValue ""
+			dc#description hasValue "the entire geographical area drained by a river and its tributaries; an area characterized by all runoff being conveyed to the same outlet"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
 		endAnnotations
 		owl#sameAs ofType watershed
 	
@@ -136,8 +136,8 @@ ontology Landslide
 		annotations
 			dc#identifier hasValue "watershed@en"
 			dc#identifier hasValue "Einzugsgebiet@de"
-			dc#description hasValue ""
-			dc#source hasValue ""
+			dc#description hasValue "the entire geographical area drained by a river and its tributaries; an area characterized by all runoff being conveyed to the same outlet"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
 		endAnnotations
 		owl#sameAs ofType catchment_area
 
@@ -145,32 +145,32 @@ ontology Landslide
 		annotations
 			dc#identifier hasValue "surface water@en"
 			dc#identifier hasValue "Oberflächenwasser@de"
-			dc#description hasValue ""
-			dc#source hasValue ""
+			dc#description hasValue "Surface water is water collecting on the ground or in a stream, river, lake, wetland, or ocean"
+			dc#source hasValue "http://en.wikipedia.org/wiki/Surface_water"
 		endAnnotations
 
 	concept groundwater subConceptOf oil#water
 		annotations
 			dc#identifier hasValue "groundwater@en"
 			dc#identifier hasValue "Grundwasser@de"
-			dc#description hasValue ""
-			dc#source hasValue ""
+			dc#description hasValue "underground water that is held in the soil and in pervious rocks"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
 		endAnnotations
 
 	concept debris subConceptOf gu#landcover_unit
 		annotations
 			dc#identifier hasValue "debris@en"
 			dc#identifier hasValue "Geroell@de"
-			dc#description hasValue ""
-			dc#source hasValue ""
+			dc#description hasValue "the remains of geological activity including landslides, volcanic explosions, avalanches, mudflows or Glacial lake outburst floods (Jökulhlaups) and moraine, lahars, and lava eruptions"
+			dc#source hasValue "http://en.wikipedia.org/wiki/Debris"
 		endAnnotations
 
 	concept rock subConceptOf gu#landcover_unit
 		annotations
 			dc#identifier hasValue "rock@en"
 			dc#identifier hasValue "Stein@de"
-			dc#description hasValue ""
-			dc#source hasValue ""
+			dc#description hasValue "a lump or mass of hard consolidated mineral matter"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
 		endAnnotations
      	dolce#has_quality ofType porosity
 
@@ -179,18 +179,18 @@ ontology Landslide
 			dc#identifier hasValue "soil@en"
 			dc#identifier hasValue "Boden@de"
 			dc#identifier hasValue "Erde@de"
-			dc#description hasValue ""
-			dc#source hasValue ""
+			dc#description hasValue "material in the top layer of the surface of the earth in which plants can grow (especially with reference to its quality or use)"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
 		endAnnotations
     	is_layered_by ofType subsoil
-    	dolce#has_quality ofType {moisture, water_table, permeability, density, cohesion, angle_of_internal_friction}
+    	dolce#has_quality ofType {moisture, water_table, permeability, density, cohesion, angle_of_repose}
 
 	concept borehole subConceptOf gu#anthropogenic_unit
 		annotations
 			dc#identifier hasValue "borehole@en"
 			dc#identifier hasValue "Bohrloch@de"
-			dc#description hasValue ""
-			dc#source hasValue ""
+			dc#description hasValue "A borehole is the generalized term for any narrow shaft bored in the ground, either vertically or horizontally."
+			dc#source hasValue "http://en.wikipedia.org/wiki/Borehole"
 		endAnnotations
     	dolce#has_quality ofType {oil#depth, diameter}
 
@@ -198,40 +198,40 @@ ontology Landslide
 		annotations
 			dc#identifier hasValue "rail@en"
 			dc#identifier hasValue "Schiene@de"
-			dc#description hasValue ""
-			dc#source hasValue ""
+			dc#description hasValue "a bar or pair of parallel bars of rolled steel making the railway along which railroad cars or other vehicles can roll"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
 		endAnnotations
 
 	concept electric_main subConceptOf gu#anthropogenic_unit
 		annotations
 			dc#identifier hasValue "electric main@en"
 			dc#identifier hasValue "elektrische Leitung@de"
-			dc#description hasValue ""
-			dc#source hasValue ""
+			dc#description hasValue "a main that distributes electricity"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
 		endAnnotations
 
 	concept road subConceptOf gu#anthropogenic_unit
 		annotations
 			dc#identifier hasValue "road@en"
 			dc#identifier hasValue "Strasse@de"
-			dc#description hasValue ""
-			dc#source hasValue ""
+			dc#description hasValue "A road is a thoroughfare, route, or way on land between two places, which typically has been paved or otherwise improved to allow travel by some conveyance, including a horse, cart, or motor vehicle."
+			dc#source hasValue "http://en.wikipedia.org/wiki/Road"
 		endAnnotations
 
  	concept building subConceptOf gu#anthropogenic_unit
  		annotations
 			dc#identifier hasValue "building@en"
 			dc#identifier hasValue "Gebaeude@de"
-			dc#description hasValue ""
-			dc#source hasValue ""
+			dc#description hasValue "a structure that has a roof and walls and stands more or less permanently in one place"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
 		endAnnotations
 
 	concept subsoil subConceptOf soil
 		annotations
 			dc#identifier hasValue "subsoil@en"
 			dc#identifier hasValue "Unterboden@de"
-			dc#description hasValue ""
-			dc#source hasValue ""
+			dc#description hasValue "the layer of soil between the topsoil and bedrock"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
 		endAnnotations
     	dolce#has_quality ofType thickness
     
@@ -259,8 +259,8 @@ ontology Landslide
 		annotations
 			dc#identifier hasValue "height@en"
 			dc#identifier hasValue "Hoehe@de"
-			dc#description hasValue ""
-			dc#source hasValue ""
+			dc#description hasValue "the vertical dimension of extension; distance from the base of something to the top"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
 		endAnnotations
 		owl#sameAs ofType gs#elevation
 	
@@ -268,71 +268,71 @@ ontology Landslide
 		annotations
 			dc#identifier hasValue "porosity@en"
 			dc#identifier hasValue "Poroesität@de"
-			dc#description hasValue ""
-			dc#source hasValue ""
+			dc#description hasValue "the property of being porous; being able to absorb fluids"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
 		endAnnotations
 		
 	concept cohesion subConceptOf dolce#physical_quality
 		annotations
 			dc#identifier hasValue "cohesion@en"
 			dc#identifier hasValue "Kohaesion@de"
-			dc#description hasValue ""
-			dc#source hasValue ""
+			dc#description hasValue "Cohesion is the component of shear strength of a rock or soil that is independent of interparticle friction."
+			dc#source hasValue "http://en.wikipedia.org/wiki/Cohesion_%28geology%29"
 		endAnnotations
 	
 	concept water_table subConceptOf dolce#physical_quality
 		annotations
 			dc#identifier hasValue "water table@en"
 			dc#identifier hasValue "Wasserspiegel@de"
-			dc#description hasValue ""
-			dc#source hasValue ""
+			dc#description hasValue "underground surface below which the ground is wholly saturated with water"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
 		endAnnotations
 		
 	concept density subConceptOf dolce#physical_quality
 		annotations
 			dc#identifier hasValue "density@en"
 			dc#identifier hasValue "Dichte@de"
-			dc#description hasValue ""
-			dc#source hasValue ""
+			dc#description hasValue "the amount per unit size"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
 		endAnnotations
 		
 	concept moisture subConceptOf dolce#physical_quality
 		annotations
 			dc#identifier hasValue "moisture@en"
 			dc#identifier hasValue "Feuchtigkeit@de"
-			dc#description hasValue ""
-			dc#source hasValue ""
+			dc#description hasValue "wetness caused by water"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
 		endAnnotations
 		
 	concept permeability subConceptOf dolce#physical_quality
 		annotations
 			dc#identifier hasValue "permeability@en"
 			dc#identifier hasValue "Durchlaessigkeit@de"
-			dc#description hasValue ""
-			dc#source hasValue ""
+			dc#description hasValue "the property of something that can be pervaded by a liquid (as by osmosis or diffusion)"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
 		endAnnotations
 		
-	concept angle_of_internal_friction subConceptOf dolce#physical_quality
+	concept angle_of_repose subConceptOf dolce#physical_quality
 		annotations
-			dc#identifier hasValue "angle of internal friction@en"
-			dc#identifier hasValue "Winkel der inneren Reibung@de"
-			dc#description hasValue ""
-			dc#source hasValue ""
+			dc#identifier hasValue "angle of repose@en"
+			dc#identifier hasValue "Reibungswinkel@de"
+			dc#description hasValue "The angle of repose or, more precisely, the critical angle of repose,[1] of a granular material is the steepest angle of descent or dip of the slope relative to the horizontal plane when material on the slope face is on the verge of sliding. This angle is in the range 0°–90°."
+			dc#source hasValue "http://en.wikipedia.org/wiki/Angle_of_repose"
 		endAnnotations
 		
 	concept diameter subConceptOf dolce#physical_quality
 		annotations
 			dc#identifier hasValue "diameter@en"
 			dc#identifier hasValue "Durchmesser@de"
-			dc#description hasValue ""
-			dc#source hasValue ""
+			dc#description hasValue "the length of a straight line passing through the center of a circle and connecting two points on the circumference"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
 		endAnnotations
 		
 	concept thickness subConceptOf dolce#physical_quality
 		annotations
 			dc#identifier hasValue "thickness@en"
 			dc#identifier hasValue "Dicke@de"
-			dc#description hasValue ""
-			dc#source hasValue ""
+			dc#description hasValue "the dimension through an object as opposed to its length or width"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
 		endAnnotations
 	

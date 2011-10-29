@@ -7,7 +7,7 @@
 @prefix dolce: <http://purl.org/ifgi/dolce#> .
 @prefix dns: <http://purl.org/ifgi/dolceDnS#> .
 
-_:node16aj9afiix4 a owl:Ontology ;
+_:node16d8paspdx4 a owl:Ontology ;
 	rdfs:label "geographic_events" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/dolceDnS#> ;
@@ -24,15 +24,15 @@ _:node16aj9afiix4 a owl:Ontology ;
 	rdfs:label "http://purl.org/ifgi/geoevents#natural_event" ;
 	rdfs:subClassOf dns:physical_phenomenon ;
 	dc:identifier "natural event@en"^^xsd:string , "natuerliches Phänomen@de"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:description "a non-artificial event in the physical sense, and therefore not produced by humans, although it may affect humans (such as pathogens, aging, natural disasters, death)"^^xsd:string ;
+	dc:source "http://en.wikipedia.org/wiki/Natural_phenomenon"^^xsd:string .
 
-_:node16aj9afiix5 rdfs:label "http://purl.org/ifgi/geoevents#has_start_point" ;
+_:node16d8paspdx5 rdfs:label "http://purl.org/ifgi/geoevents#has_start_point" ;
 	rdfs:domain :natural_event ;
 	a rdf:Property ;
 	rdfs:range :point_in_time .
 
-_:node16aj9afiix6 rdfs:label "http://purl.org/ifgi/geoevents#has_duration" ;
+_:node16d8paspdx6 rdfs:label "http://purl.org/ifgi/geoevents#has_duration" ;
 	rdfs:domain :natural_event ;
 	a rdf:Property ;
 	rdfs:range :time_interval .
@@ -41,8 +41,8 @@ _:node16aj9afiix6 rdfs:label "http://purl.org/ifgi/geoevents#has_duration" ;
 	rdfs:label "http://purl.org/ifgi/geoevents#movement" ;
 	rdfs:subClassOf :natural_event ;
 	dc:identifier "movement@en"^^xsd:string , "Bewegung@de"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:description "a natural event that involves a change in the position or location of something"^^xsd:string ;
+	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
 :wind a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/geoevents#wind" ;
@@ -83,36 +83,36 @@ _:node16aj9afiix6 rdfs:label "http://purl.org/ifgi/geoevents#has_duration" ;
 	rdfs:label "http://purl.org/ifgi/geoevents#ground_movement" ;
 	rdfs:subClassOf :movement ;
 	dc:identifier "ground movement@en"^^xsd:string , "Bodenbewegung@de"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:description "movement of certain parts of the earth's surface"^^xsd:string ;
+	dc:source "(Henry)"^^xsd:string .
 
 :groundwater_flow a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/geoevents#groundwater_flow" ;
 	rdfs:subClassOf :flow ;
 	dc:identifier "groundwater flow@en"^^xsd:string , "Grundwasserströmung@de"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:description "part of streamflow that has infiltrated the ground, has entered the phreatic zone, and has been discharged into a stream channel, via springs or seepage water."^^xsd:string ;
+	dc:source "http://en.wikipedia.org/wiki/Groundwater_flow"^^xsd:string .
 
 :hurricane a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/geoevents#hurricane" ;
 	rdfs:subClassOf :wind ;
 	dc:identifier "hurricane@en"^^xsd:string , "Hurrikan@de"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:description "a severe tropical cyclone usually with heavy rains and winds moving at 63-136 knots (12 on the Beaufort scale)"^^xsd:string ;
+	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
 :earthquake a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/geoevents#earthquake" ;
 	rdfs:subClassOf :ground_movement ;
 	dc:identifier "earthquake@en"^^xsd:string , "Erdbeben@de"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:description "shaking and vibration at the surface of the earth resulting from underground movement along a fault plane or from volcanic activity"^^xsd:string ;
+	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
 :precipitation a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/geoevents#precipitation" ;
 	rdfs:subClassOf dns:physical_phenomenon ;
 	dc:identifier "precipitation@en"^^xsd:string , "Niderschlag@de"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:description "the falling to earth of any form of water (rain or snow or hail or sleet or mist)"^^xsd:string ;
+	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
 :point_in_time a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/geoevents#point_in_time" ;
@@ -125,8 +125,8 @@ _:node16aj9afiix6 rdfs:label "http://purl.org/ifgi/geoevents#has_duration" ;
 	rdfs:label "http://purl.org/ifgi/geoevents#time_interval" ;
 	rdfs:subClassOf dolce:temporal_quality ;
 	dc:identifier "Zeitraum@de"^^xsd:string , "time interval@en"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:description "a definite length of time marked off by two instants"^^xsd:string ;
+	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
 :has_start_point a rdf:Property ;
 	rdfs:domain :natural_event ;
