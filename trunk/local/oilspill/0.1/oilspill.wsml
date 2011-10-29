@@ -10,7 +10,8 @@ namespace { _"http://purl.org/ifgi/oilspill#",
     gs _"http://purl.org/net/wsml/geospace#",
 	gu _"http://purl.org/net/wsml/geounits#",
 	ge _"http://purl.org/net/wsml/geoevents#",
-	gq _"http://purl.org/net/wsml/geoqualities#"
+	gq _"http://purl.org/net/wsml/geoqualities#",
+	ls _"http://purl.org/ifgi/landslide#"
  }
 
 ontology OilSpill
@@ -26,7 +27,7 @@ ontology OilSpill
 		dc#subject hasValue "Oil Spill"	
 	endAnnotations
 	
-	importsOntology {_"http://purl.org/net/wsml/geospace#", _"http://purl.org/net/wsml/geounits#", _"http://purl.org/net/wsml/geoevents#", _"http://purl.org/net/wsml/geoqualities#"}
+	importsOntology {_"http://purl.org/net/wsml/geospace#", _"http://purl.org/net/wsml/geounits#", _"http://purl.org/net/wsml/geoevents#", _"http://purl.org/net/wsml/geoqualities#", _"http://purl.org/ifgi/landslide#"}
 
 /* Event/Processes */
 	
@@ -102,8 +103,8 @@ ontology OilSpill
 		annotations
 			dc#identifier hasValue "Rohschmieröl@de"
 			dc#identifier hasValue "black oil@en"
-			dc#description hasValue ""
-			dc#source hasValue ""
+			dc#description hasValue "Low-grade, black petroleum oil used to lubricate slow-moving or rough-surfaced machinery"
+			dc#source hasValue "http://www.answers.com/topic/black-oil"
 		endAnnotations
 	
 /* Qualities */
@@ -112,24 +113,24 @@ ontology OilSpill
 		annotations
 			dc#identifier hasValue "amount@en"
 			dc#identifier hasValue "Menge@de"
-			dc#description hasValue ""
-			dc#source hasValue ""
+			dc#description hasValue "how much there is or how many there are of something that you can quantify"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
 		endAnnotations
 	
 	concept pressure subConceptOf dolce#physical_quality
 		annotations
 			dc#identifier hasValue "pressure@en"
 			dc#identifier hasValue "Druck@de"
-			dc#description hasValue ""
-			dc#source hasValue ""
+			dc#description hasValue "the force applied to a unit area of surface; measured in pascals (SI unit) or in dynes (cgs unit)"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
 		endAnnotations
 	
-	concept humidity subConceptOf dolce#physical_quality
+	concept humidity subConceptOf ls#moisture
 		annotations
 			dc#identifier hasValue "humidity@en"
-			dc#identifier hasValue "Feuchtigkeit@de"
-			dc#description hasValue ""
-			dc#source hasValue ""
+			dc#identifier hasValue "Luftfeuchtigkeit@de"
+			dc#description hasValue "the amount of water vapor in the air"
+			dc#source hasValue "http://en.wikipedia.org/wiki/Humidity"
 		endAnnotations
 	
 	concept direction subConceptOf dolce#physical_quality
@@ -200,16 +201,16 @@ ontology OilSpill
 		annotations
 			dc#identifier hasValue "oil concentration@en"
 			dc#identifier hasValue "Oelkonzentration@de"
-			dc#description hasValue ""
-			dc#source hasValue ""
+			dc#description hasValue "concentration of oil within a water column"
+			dc#source hasValue "(Henry)"
 		endAnnotations
 	
 	concept load_volume subConceptOf dolce#physical_quality
 		annotations
 			dc#identifier hasValue "Ladevolumen@de"
 			dc#identifier hasValue "load volume@en"
-			dc#description hasValue ""
-			dc#source hasValue ""
+			dc#description hasValue "The volume of all objects belonging to the cargo"
+			dc#source hasValue "(Henry)"
 		endAnnotations
 	
 	concept name subConceptOf dolce#physical_quality
@@ -248,8 +249,8 @@ ontology OilSpill
 		annotations
 			dc#identifier hasValue "Ladekapazität@de"
 			dc#identifier hasValue "carrying capacity@en"
-			dc#description hasValue ""
-			dc#source hasValue ""
+			dc#description hasValue "capacity of a cargo-space"
+			dc#source hasValue "(Henry)"
 		endAnnotations
 
 	concept tankage subConceptOf carrying_capacity
@@ -304,7 +305,7 @@ ontology OilSpill
 		annotations
 			dc#identifier hasValue "water gauge@en"
 			dc#identifier hasValue "Wasserstand@de"
-			dc#description hasValue ""
+			dc#description hasValue "the level of the surface of a body of water. Don't confuse with the definition of water gauge in wordnet. We don't mean the measerung device here."
 			dc#source hasValue ""
 		endAnnotations
 		owl#sameAs ofType water_level
@@ -313,8 +314,8 @@ ontology OilSpill
 		annotations
 			dc#identifier hasValue "water level@en"
 			dc#identifier hasValue "Wasserstand@de"
-			dc#description hasValue ""
-			dc#source hasValue ""
+			dc#description hasValue "the level of the surface of a body of water"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
 		endAnnotations
 		owl#sameAs ofType water_gauge
 	
@@ -363,16 +364,16 @@ ontology OilSpill
 		annotations
 			dc#identifier hasValue "Landeinheit@de"
 			dc#identifier hasValue "terrestrial unit@en"
-			dc#description hasValue ""
-			dc#source hasValue ""
+			dc#description hasValue "http://irtg.ifgi.de/students/jens-ortmann/#thesis"
+			dc#source hasValue "http://ifgi.uni-muenster.de/~klien/publications/Klien_PhDThesis_full.pdf"
 		endAnnotations
 	
 	concept coastal_terrestrial_unit subConceptOf terrestrial_unit
 		annotations
 			dc#identifier hasValue "Küstenlandeinheit@de"
 			dc#identifier hasValue "coastal terrestrial unit@en"
-			dc#description hasValue ""
-			dc#source hasValue ""
+			dc#description hasValue "A TerrestrialUnit that is near the sea."
+			dc#source hasValue "http://irtg.ifgi.de/students/jens-ortmann/#thesis"
 		endAnnotations
 	
 	concept coast subConceptOf coastal_terrestrial_unit
@@ -397,7 +398,7 @@ ontology OilSpill
 		annotations
 			dc#identifier hasValue "zone@en"
 			dc#identifier hasValue "Zone@de"
-			dc#description hasValue ""
+			dc#description hasValue "see concept region"
 			dc#source hasValue ""
 		endAnnotations
 		owl#sameAs ofType region
@@ -406,7 +407,7 @@ ontology OilSpill
 		annotations
 			dc#identifier hasValue "area@en"
 			dc#identifier hasValue "Flaeche@de"
-			dc#description hasValue ""
+			dc#description hasValue "see concept region"
 			dc#source hasValue ""
 		endAnnotations
 		owl#sameAs ofType region
@@ -485,6 +486,7 @@ ontology OilSpill
 	concept cod subConceptOf gadoid
 		annotations
 			dc#identifier hasValue "cod@en"
+			dc#identifier hasValue "Dorsch@de"
 			dc#description hasValue "Cod is the common name for genus Gadus"
 			dc#source hasValue "http://en.wikipedia.org/wiki/Cod"
 		endAnnotations
@@ -493,7 +495,7 @@ ontology OilSpill
 	
 	concept shoaling subConceptOf dolce#physical_object
 		annotations
-			dc#identifier hasValue "Schwarmfisch@de"
+			dc#identifier hasValue "Fischschwarm@de"
 			dc#identifier hasValue "shoaling@en"
 			dc#description hasValue "Any group of fish that stay together for social reasons"
 			dc#source hasValue "http://en.wikipedia.org/wiki/Shoaling_and_schooling"
@@ -504,6 +506,7 @@ ontology OilSpill
 	concept schooling subConceptOf shoaling
 		annotations
 			dc#identifier hasValue "schooling@en"
+			dc#identifier hasValue "Fischschwarm@de"
 			dc#description hasValue "Any group of fish that stay together for social reasons and swimming in the same direction in a coordinated manner."
 			dc#source hasValue "http://en.wikipedia.org/wiki/Shoaling_and_schooling"
 		endAnnotations
@@ -511,6 +514,7 @@ ontology OilSpill
 	concept gadus subConceptOf gadoid
 		annotations
 			dc#identifier hasValue "gadus@en"
+			dc#identifier hasValue "Dorsch@de"
 			dc#description hasValue "Gadus is a cod. See also concept \"Cod\"."
 			dc#source hasValue "http://en.wikipedia.org/wiki/Cod"
 		endAnnotations
@@ -543,7 +547,9 @@ ontology OilSpill
 	relation consists_of (ofType dolce#physical_object, ofType dolce#amount_of_matter)
 		annotations
 			dc#identifier hasValue "consists of@en"
-			dc#description hasValue ""
+			dc#identifier hasValue "besteht aus@de"
+			dc#description hasValue "be composed of"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
 		endAnnotations
 	
 //relation consistsOf (ofType WaterBody, ofType Water)

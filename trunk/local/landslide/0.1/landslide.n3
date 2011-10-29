@@ -12,7 +12,7 @@
 @prefix dns: <http://purl.org/ifgi/dolceDnS#> .
 @prefix oil: <http://purl.org/ifgi/oilspill#> .
 
-_:node16aj9afiix17 a owl:Ontology ;
+_:node16d8paspdx17 a owl:Ontology ;
 	rdfs:label "Landslide" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/geounits#> , <http://purl.org/ifgi/geoqualities#> , <http://purl.org/ifgi/geospace#> , <http://purl.org/ifgi/geoevents#> , <http://purl.org/ifgi/oilspill#> ;
@@ -30,73 +30,73 @@ _:node16aj9afiix17 a owl:Ontology ;
 	rdfs:label "http://purl.org/ifgi/landslide#landslide" ;
 	rdfs:subClassOf ge:ground_movement ;
 	dc:identifier "landslide@en"^^xsd:string , "Hangrutsch@de"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:description "a slide of a large mass of dirt and rock down a mountain or cliff"^^xsd:string ;
+	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
 :deep_landslide a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#deep_landslide" ;
 	rdfs:subClassOf :landslide ;
-	dc:identifier "deep landslide@en"^^xsd:string , ""^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:identifier "deep landslide@en"^^xsd:string , "tief gehender Hangrutsch@de"^^xsd:string ;
+	dc:description "Landslides in which the sliding surface is mostly deeply located below the maximum rooting depth of trees (typically to depths greater than ten meters)."^^xsd:string ;
+	dc:source "en.wikipedia.org/wiki/Landslide"^^xsd:string .
 
 :shallow_landslide a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#shallow_landslide" ;
 	rdfs:subClassOf :landslide ;
-	dc:identifier "shallow landslide@en"^^xsd:string , ""^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:identifier "shallow landslide@en"^^xsd:string , "flach gehender Hangrutsch@de"^^xsd:string ;
+	dc:description "Landslide in which the sliding surface is located within the soil mantle or weathered bedrock (typically to a depth from few decimetres to some metres)."^^xsd:string ;
+	dc:source "en.wikipedia.org/wiki/Landslide"^^xsd:string .
 
 :insolation a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#insolation" ;
-	rdfs:subClassOf dns:physical_phenomenon ;
+	rdfs:subClassOf ge:natural_event ;
 	dc:identifier "insolation@en"^^xsd:string , "Sonneneinstrahlung@de"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:description "incident solar radiation"^^xsd:string ;
+	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
 :infiltration a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#infiltration" ;
-	rdfs:subClassOf dns:physical_phenomenon ;
+	rdfs:subClassOf ge:natural_event ;
 	dc:identifier "infiltration@en"^^xsd:string , "Versickerung@de"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:description "(the slow passage of a liquid through a filtering medium"^^xsd:string ;
+	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
 :erosion a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#erosion" ;
-	rdfs:subClassOf dns:physical_phenomenon ;
+	rdfs:subClassOf ge:natural_event ;
 	dc:identifier "erosion@en"^^xsd:string , "Erosion@de"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:description "condition in which the earth's surface is worn away by the action of water and wind"^^xsd:string ;
+	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
 :evapotranspiration a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#evapotranspiration" ;
-	rdfs:subClassOf dns:physical_phenomenon ;
+	rdfs:subClassOf ge:natural_event ;
 	dc:identifier "evapotranspiration@en"^^xsd:string , "Evapotranspiration@de"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:description "the sum of evaporation and plant transpiration from the Earth's land surface to atmosphere. Evaporation accounts for the movement of water to the air from sources such as the soil, canopy interception, and waterbodies."^^xsd:string ;
+	dc:source "http://en.wikipedia.org/wiki/Evapotranspiration"^^xsd:string .
 
 :evaporation a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#evaporation" ;
 	rdfs:subClassOf :evapotranspiration ;
 	dc:identifier "evaporation@en"^^xsd:string , "Evaporation@de"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:description "the process of extracting moisture"^^xsd:string ;
+	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
 :mountain a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#mountain" ;
 	rdfs:subClassOf gu:geomorphological_unit ;
 	dc:identifier "mountain@en"^^xsd:string , "Berg@de"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:description "a land mass that projects well above its surroundings; higher than a hill"^^xsd:string ;
+	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
 :hillside a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#hillside" ;
 	rdfs:subClassOf gs:geographical_unit ;
 	dc:identifier "hillside@en"^^xsd:string , "Hang@de"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:description "The side of a hill, situated between the foot and the summit."^^xsd:string ;
+	dc:source "http://www.thefreedictionary.com/hillside"^^xsd:string .
 
-_:node16aj9afiix18 rdfs:label "http://purl.org/ifgi/dolce#part_of" ;
+_:node16d8paspdx18 rdfs:label "http://purl.org/ifgi/dolce#part_of" ;
 	rdfs:domain :hillside ;
 	a rdf:Property ;
 	rdfs:range :mountain .
@@ -105,10 +105,10 @@ _:node16aj9afiix18 rdfs:label "http://purl.org/ifgi/dolce#part_of" ;
 	rdfs:label "http://purl.org/ifgi/landslide#catchment_area" ;
 	rdfs:subClassOf oil:region ;
 	dc:identifier "catchment area@en"^^xsd:string , "Einzugsgebiet@de"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:description "the entire geographical area drained by a river and its tributaries; an area characterized by all runoff being conveyed to the same outlet"^^xsd:string ;
+	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
-_:node16aj9afiix19 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
+_:node16d8paspdx19 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
 	rdfs:domain :catchment_area ;
 	a rdf:Property ;
 	rdfs:range :watershed .
@@ -116,10 +116,10 @@ _:node16aj9afiix19 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
 :watershed a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#watershed" ;
 	dc:identifier "watershed@en"^^xsd:string , "Einzugsgebiet@de"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:description "the entire geographical area drained by a river and its tributaries; an area characterized by all runoff being conveyed to the same outlet"^^xsd:string ;
+	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
-_:node16aj9afiix20 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
+_:node16d8paspdx20 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
 	rdfs:domain :watershed ;
 	a rdf:Property ;
 	rdfs:range :catchment_area .
@@ -128,31 +128,31 @@ _:node16aj9afiix20 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
 	rdfs:label "http://purl.org/ifgi/landslide#surfacewater" ;
 	rdfs:subClassOf oil:water ;
 	dc:identifier "surface water@en"^^xsd:string , "Oberflächenwasser@de"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:description "Surface water is water collecting on the ground or in a stream, river, lake, wetland, or ocean"^^xsd:string ;
+	dc:source "http://en.wikipedia.org/wiki/Surface_water"^^xsd:string .
 
 :groundwater a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#groundwater" ;
 	rdfs:subClassOf oil:water ;
 	dc:identifier "groundwater@en"^^xsd:string , "Grundwasser@de"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:description "underground water that is held in the soil and in pervious rocks"^^xsd:string ;
+	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
 :debris a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#debris" ;
 	rdfs:subClassOf gu:landcover_unit ;
 	dc:identifier "debris@en"^^xsd:string , "Geroell@de"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:description "the remains of geological activity including landslides, volcanic explosions, avalanches, mudflows or Glacial lake outburst floods (Jökulhlaups) and moraine, lahars, and lava eruptions"^^xsd:string ;
+	dc:source "http://en.wikipedia.org/wiki/Debris"^^xsd:string .
 
 :rock a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#rock" ;
 	rdfs:subClassOf gu:landcover_unit ;
 	dc:identifier "rock@en"^^xsd:string , "Stein@de"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:description "a lump or mass of hard consolidated mineral matter"^^xsd:string ;
+	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
-_:node16aj9afiix21 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
+_:node16d8paspdx21 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
 	rdfs:domain :rock ;
 	a rdf:Property ;
 	rdfs:range :porosity .
@@ -161,18 +161,18 @@ _:node16aj9afiix21 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
 	rdfs:label "http://purl.org/ifgi/landslide#soil" ;
 	rdfs:subClassOf gu:landcover_unit ;
 	dc:identifier "soil@en"^^xsd:string , "Boden@de"^^xsd:string , "Erde@de"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:description "material in the top layer of the surface of the earth in which plants can grow (especially with reference to its quality or use)"^^xsd:string ;
+	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
-_:node16aj9afiix22 rdfs:label "http://purl.org/ifgi/landslide#is_layered_by" ;
+_:node16d8paspdx22 rdfs:label "http://purl.org/ifgi/landslide#is_layered_by" ;
 	rdfs:domain :soil ;
 	a rdf:Property ;
 	rdfs:range :subsoil .
 
-_:node16aj9afiix23 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
+_:node16d8paspdx23 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
 	rdfs:domain :soil ;
 	a rdf:Property ;
-	rdfs:range :angle_of_internal_friction ;
+	rdfs:range :angle_of_repose ;
 	a rdf:Property ;
 	rdfs:range :permeability ;
 	a rdf:Property ;
@@ -188,10 +188,10 @@ _:node16aj9afiix23 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
 	rdfs:label "http://purl.org/ifgi/landslide#borehole" ;
 	rdfs:subClassOf gu:anthropogenic_unit ;
 	dc:identifier "borehole@en"^^xsd:string , "Bohrloch@de"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:description "A borehole is the generalized term for any narrow shaft bored in the ground, either vertically or horizontally."^^xsd:string ;
+	dc:source "http://en.wikipedia.org/wiki/Borehole"^^xsd:string .
 
-_:node16aj9afiix24 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
+_:node16d8paspdx24 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
 	rdfs:domain :borehole ;
 	a rdf:Property ;
 	rdfs:range oil:depth ;
@@ -202,38 +202,38 @@ _:node16aj9afiix24 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
 	rdfs:label "http://purl.org/ifgi/landslide#rail" ;
 	rdfs:subClassOf gu:anthropogenic_unit ;
 	dc:identifier "rail@en"^^xsd:string , "Schiene@de"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:description "a bar or pair of parallel bars of rolled steel making the railway along which railroad cars or other vehicles can roll"^^xsd:string ;
+	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
 :electric_main a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#electric_main" ;
 	rdfs:subClassOf gu:anthropogenic_unit ;
 	dc:identifier "electric main@en"^^xsd:string , "elektrische Leitung@de"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:description "a main that distributes electricity"^^xsd:string ;
+	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
 :road a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#road" ;
 	rdfs:subClassOf gu:anthropogenic_unit ;
 	dc:identifier "road@en"^^xsd:string , "Strasse@de"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:description "A road is a thoroughfare, route, or way on land between two places, which typically has been paved or otherwise improved to allow travel by some conveyance, including a horse, cart, or motor vehicle."^^xsd:string ;
+	dc:source "http://en.wikipedia.org/wiki/Road"^^xsd:string .
 
 :building a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#building" ;
 	rdfs:subClassOf gu:anthropogenic_unit ;
 	dc:identifier "building@en"^^xsd:string , "Gebaeude@de"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:description "a structure that has a roof and walls and stands more or less permanently in one place"^^xsd:string ;
+	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
 :subsoil a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#subsoil" ;
 	rdfs:subClassOf :soil ;
 	dc:identifier "subsoil@en"^^xsd:string , "Unterboden@de"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:description "the layer of soil between the topsoil and bedrock"^^xsd:string ;
+	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
-_:node16aj9afiix25 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
+_:node16d8paspdx25 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
 	rdfs:domain :subsoil ;
 	a rdf:Property ;
 	rdfs:range :thickness .
@@ -256,10 +256,10 @@ _:node16aj9afiix25 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
 	rdfs:label "http://purl.org/ifgi/landslide#height" ;
 	rdfs:subClassOf dolce:physical_quality ;
 	dc:identifier "height@en"^^xsd:string , "Hoehe@de"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:description "the vertical dimension of extension; distance from the base of something to the top"^^xsd:string ;
+	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
-_:node16aj9afiix26 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
+_:node16d8paspdx26 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
 	rdfs:domain :height ;
 	a rdf:Property ;
 	rdfs:range gs:elevation .
@@ -268,61 +268,61 @@ _:node16aj9afiix26 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
 	rdfs:label "http://purl.org/ifgi/landslide#porosity" ;
 	rdfs:subClassOf dolce:physical_quality ;
 	dc:identifier "porosity@en"^^xsd:string , "Poroesität@de"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:description "the property of being porous; being able to absorb fluids"^^xsd:string ;
+	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
 :cohesion a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#cohesion" ;
 	rdfs:subClassOf dolce:physical_quality ;
 	dc:identifier "cohesion@en"^^xsd:string , "Kohaesion@de"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:description "Cohesion is the component of shear strength of a rock or soil that is independent of interparticle friction."^^xsd:string ;
+	dc:source "http://en.wikipedia.org/wiki/Cohesion_%28geology%29"^^xsd:string .
 
 :water_table a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#water_table" ;
 	rdfs:subClassOf dolce:physical_quality ;
 	dc:identifier "water table@en"^^xsd:string , "Wasserspiegel@de"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:description "underground surface below which the ground is wholly saturated with water"^^xsd:string ;
+	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
 :density a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#density" ;
 	rdfs:subClassOf dolce:physical_quality ;
 	dc:identifier "density@en"^^xsd:string , "Dichte@de"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:description "the amount per unit size"^^xsd:string ;
+	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
 :moisture a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#moisture" ;
 	rdfs:subClassOf dolce:physical_quality ;
 	dc:identifier "moisture@en"^^xsd:string , "Feuchtigkeit@de"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:description "wetness caused by water"^^xsd:string ;
+	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
 :permeability a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#permeability" ;
 	rdfs:subClassOf dolce:physical_quality ;
 	dc:identifier "permeability@en"^^xsd:string , "Durchlaessigkeit@de"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:description "the property of something that can be pervaded by a liquid (as by osmosis or diffusion)"^^xsd:string ;
+	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
-:angle_of_internal_friction a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/landslide#angle_of_internal_friction" ;
+:angle_of_repose a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/landslide#angle_of_repose" ;
 	rdfs:subClassOf dolce:physical_quality ;
-	dc:identifier "angle of internal friction@en"^^xsd:string , "Winkel der inneren Reibung@de"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:identifier "angle of repose@en"^^xsd:string , "Reibungswinkel@de"^^xsd:string ;
+	dc:description "The angle of repose or, more precisely, the critical angle of repose,[1] of a granular material is the steepest angle of descent or dip of the slope relative to the horizontal plane when material on the slope face is on the verge of sliding. This angle is in the range 0°–90°."^^xsd:string ;
+	dc:source "http://en.wikipedia.org/wiki/Angle_of_repose"^^xsd:string .
 
 :diameter a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#diameter" ;
 	rdfs:subClassOf dolce:physical_quality ;
 	dc:identifier "diameter@en"^^xsd:string , "Durchmesser@de"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:description "the length of a straight line passing through the center of a circle and connecting two points on the circumference"^^xsd:string ;
+	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
 :thickness a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#thickness" ;
 	rdfs:subClassOf dolce:physical_quality ;
 	dc:identifier "thickness@en"^^xsd:string , "Dicke@de"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:source ""^^xsd:string .
+	dc:description "the dimension through an object as opposed to its length or width"^^xsd:string ;
+	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
