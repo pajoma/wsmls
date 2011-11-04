@@ -57,8 +57,8 @@ All ontologies of this repository are listed here. Ontologies highlighted green 
 ==== WSMO ====
 
 || *Ontology* || *Namespace* || *Location* ||
-|| <font color="#FF0000">POSM</font> || <font color="#FF0000">http://www.wsmo.org/ns/posm/0.2</font> || <font color="#FF0000">http://wsmls.googlecode.com/svn/trunk/application/WSMO/POSM/0.2/POSM.rdf</font> ||
-|| <font color="#FF0000">WSL</font> || <font color="#FF0000">http://www.wsmo.org/ns/wsmo-lite</font> || <font color="#FF0000">http://wsmls.googlecode.com/svn/trunk/application/WSMO/WSL/0.1/WSL.rdf</font> ||
+|| <font color="#FF0000">POSM</font> || <font color="#04B404">http://purl.org/ifgi/posm</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/application/WSMO/POSM/0.2/POSM.rdf</font> ||
+|| <font color="#FF0000">WSL</font> || <font color="#04B404">>http://purl.org/ifgi/wsl</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/application/WSMO/WSL/0.1/WSL.rdf</font> ||
 || <font color="#04B404">Annotation</font> || <font color="#04B404">http://purl.org/ifgi/annotations</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/application/Annotation/Annotation.rdf</font> ||
 
 
