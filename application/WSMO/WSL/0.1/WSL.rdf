@@ -1,48 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF
-	xmlns="http://www.wsmo.org/ns/wsmo-lite#"
+	xmlns="http://purl.org/ifgi/wsl#"
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/">
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx113">
+<rdf:Description rdf:nodeID="node16dn68gagx27">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>WSL</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-core</dc:format>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://www.wsmo.org/ns/wsmo-lite#FunctionalClassificationRoot">
+<rdf:Description rdf:about="http://purl.org/ifgi/wsl#FunctionalClassificationRoot">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:label>http://www.wsmo.org/ns/wsmo-lite#FunctionalClassificationRoot</rdfs:label>
+	<rdfs:label>http://purl.org/ifgi/wsl#FunctionalClassificationRoot</rdfs:label>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">functional classification root@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://www.wsmo.org/ns/wsmo-lite#NonfunctionalParameter">
+<rdf:Description rdf:about="http://purl.org/ifgi/wsl#NonfunctionalParameter">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:label>http://www.wsmo.org/ns/wsmo-lite#NonfunctionalParameter</rdfs:label>
+	<rdfs:label>http://purl.org/ifgi/wsl#NonfunctionalParameter</rdfs:label>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">non-functional parameter@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://www.wsmo.org/ns/wsmo-lite#Condition">
+<rdf:Description rdf:about="http://purl.org/ifgi/wsl#Condition">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:label>http://www.wsmo.org/ns/wsmo-lite#Condition</rdfs:label>
+	<rdfs:label>http://purl.org/ifgi/wsl#Condition</rdfs:label>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">condition@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://www.wsmo.org/ns/wsmo-lite#Effect">
+<rdf:Description rdf:about="http://purl.org/ifgi/wsl#Effect">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:label>http://www.wsmo.org/ns/wsmo-lite#Effect</rdfs:label>
+	<rdfs:label>http://purl.org/ifgi/wsl#Effect</rdfs:label>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">effect@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://www.wsmo.org/ns/wsmo-lite#functionalClassification">
+<rdf:Description rdf:about="http://purl.org/ifgi/wsl#functionalClassification">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">functional classification@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://www.wsmo.org/ns/wsmo-lite#usesOntology">
+<rdf:Description rdf:about="http://purl.org/ifgi/wsl#usesOntology">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uses ontology@en</dc:identifier>
 </rdf:Description>

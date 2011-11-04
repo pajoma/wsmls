@@ -1,40 +1,59 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix : <http://purl.org/ifgi/wps#> .
 @prefix sawsdl: <http://www.w3.org/ns/sawsdl#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix ows: <http://purl.org/ifgi/ows/0.2#> .
-@prefix posm: <http://www.wsmo.org/ns/posm/0.2#> .
+@prefix posm: <http://purl.org/ifgi/posm#> .
 
-# http://purl.org/dc/elements/1.1/publisher: "(a)IfGI, University of Muenster"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/date: "10-11-2010"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/rights: "http://creativecommons.org/licenses/by/3.0/"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/type: "Ontology"^^<http://www.w3.org/2001/XMLSchema#string>
-# http://purl.org/dc/elements/1.1/title: "OGC Web Processing Service"^^<http://www.w3.org/2001/XMLSchema#string>
+_:node16dn68gagx12 a owl:Ontology ;
+	rdfs:label "WPS" ;
+	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
+	owl:imports <http://purl.org/ifgi/ows/0.2#> , <http://purl.org/ifgi/posm#> ;
+	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
+	dc:date "10-11-2010"^^xsd:string ;
+	dc:rights "http://creativecommons.org/licenses/by/3.0/"^^xsd:string ;
+	dc:type "Ontology"^^xsd:string ;
+	dc:title "OGC Web Processing Service"^^xsd:string .
 
 :WebProcessingService a rdfs:Class ;
-	rdfs:subClassOf ows:OGCWebService .
+	rdfs:label "http://purl.org/ifgi/wps#WebProcessingService" ;
+	rdfs:subClassOf ows:OGCWebService ;
+	dc:identifier "Web processing service@en"^^xsd:string .
 
 :DescribeProcess a rdfs:Class ;
-	rdfs:subClassOf posm:Operation .
+	rdfs:label "http://purl.org/ifgi/wps#DescribeProcess" ;
+	rdfs:subClassOf posm:Operation ;
+	dc:identifier "describe process@en"^^xsd:string .
 
 :DescribeProcessRequest a rdfs:Class ;
-	rdfs:subClassOf posm:MessagePart .
+	rdfs:label "http://purl.org/ifgi/wps#DescribeProcessRequest" ;
+	rdfs:subClassOf posm:MessagePart ;
+	dc:identifier "describe process request@en"^^xsd:string .
 
 :DescribeProcessResponse a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/wps#DescribeProcessResponse" ;
 	rdfs:subClassOf posm:MessagePart ;
+	dc:identifier "describe process response@en"^^xsd:string ;
 	rdfs:seeAlso <http://schemas.opengis.net/wps/1.0.0/wpsDescribeProcess_response.xsd#ProcessDescriptions> .
 
 :Execute a rdfs:Class ;
-	rdfs:subClassOf posm:Operation .
+	rdfs:label "http://purl.org/ifgi/wps#Execute" ;
+	rdfs:subClassOf posm:Operation ;
+	dc:identifier "execute@en"^^xsd:string .
 
 :ExecuteRequest a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/wps#ExecuteRequest" ;
 	rdfs:subClassOf posm:MessagePart ;
+	dc:identifier "execute request@en"^^xsd:string ;
 	rdfs:seeAlso <http://schemas.opengis.net/wps/1.0.0/wpsExecute_request.xsd#Execute> .
 
 :ExecuteResponse a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/wps#ExecuteResponse" ;
 	rdfs:subClassOf posm:MessagePart ;
+	dc:identifier "execute response@en"^^xsd:string ;
 	rdfs:seeAlso <http://schemas.opengis.net/wps/1.0.0/wpsExecute_response.xsd#ExecuteResponse> .
 
 :DefaultDescribeProcess a :DescribeProcess ;

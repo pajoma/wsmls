@@ -4,7 +4,7 @@ namespace { _"http://purl.org/ifgi/wfs#",
 	sawsdl _"http://www.w3.org/ns/sawsdl#",
 	dc _"http://purl.org/dc/elements/1.1/",
 	ows _"http://purl.org/ifgi/ows/0.2#",
-	posm _"http://www.wsmo.org/ns/posm/0.2#", 
+	posm _"http://purl.org/ifgi/posm#", 
 	rdfs _"http://www.w3.org/2000/01/rdf-schema#",
 	dolce _"http://purl.org/net/wsml/dolceDnS#"
  }
@@ -19,7 +19,7 @@ ontology WFS
 		dc#title hasValue "OGC Web Feature Service"
 	endAnnotations
 	
-	importsOntology {_"http://purl.org/ifgi/ows/0.2#", _"http://purl.org/net/wsml/dolceDnS#", _"http://www.wsmo.org/ns/posm/0.2#"}
+	importsOntology {_"http://purl.org/ifgi/ows/0.2#", _"http://purl.org/net/wsml/dolceDnS#", _"http://purl.org/ifgi/posm#"}
 	
 	/* POSM related stuff */
 	concept WebFeatureService subConceptOf ows#OGCWebService

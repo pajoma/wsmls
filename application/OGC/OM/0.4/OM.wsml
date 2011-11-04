@@ -2,7 +2,7 @@ wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
 namespace { _"http://purl.org/ifgi/om#",
 dc _"http://purl.org/dc/elements/1.1/", 
 gml _"http://purl.org/ifgi/gml/0.2#",
-ssn _"http://purl.oclc.org/NET/ssnx/ssn#",
+ssn _"http://purl.org/ifgi/ssn#",
 xsd _"http://www.w3.org/2001/XMLSchema#"
  }
 
@@ -24,7 +24,7 @@ ontology ObservationsAndMeasurements
 		dc#source hasValue "http://purl.oclc.org/NET/ssnx/ssn#"
 	endAnnotations
 	
-	importsOntology {_"http://purl.org/ifgi/gml/0.2#", _"http://purl.oclc.org/NET/ssnx/ssn#"}
+	importsOntology {_"http://purl.org/ifgi/gml/0.2#", _"http://purl.org/ifgi/ssn#"}
 	
 	/*elements*/
 

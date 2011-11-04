@@ -2,56 +2,56 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix : <http://www.wsmo.org/ns/posm/0.2#> .
+@prefix : <http://purl.org/ifgi/posm#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 
-_:node16a8i5n2fx106 a owl:Ontology ;
+_:node16dn68gagx20 a owl:Ontology ;
 	rdfs:label "POSM" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-core" .
 
 :Service a rdfs:Class ;
-	rdfs:label "http://www.wsmo.org/ns/posm/0.2#Service" ;
+	rdfs:label "http://purl.org/ifgi/posm#Service" ;
 	dc:identifier "service@en"^^xsd:string .
 
-_:node16a8i5n2fx107 rdfs:label "http://www.wsmo.org/ns/posm/0.2#hasOperation" ;
+_:node16dn68gagx21 rdfs:label "http://purl.org/ifgi/posm#hasOperation" ;
 	rdfs:domain :Service ;
 	a rdf:Property ;
 	rdfs:range :Operation .
 
 :Operation a rdfs:Class ;
-	rdfs:label "http://www.wsmo.org/ns/posm/0.2#Operation" ;
+	rdfs:label "http://purl.org/ifgi/posm#Operation" ;
 	dc:identifier "operation@en"^^xsd:string .
 
-_:node16a8i5n2fx108 rdfs:label "http://www.wsmo.org/ns/posm/0.2#hasInput" ;
+_:node16dn68gagx22 rdfs:label "http://purl.org/ifgi/posm#hasInput" ;
 	rdfs:domain :Operation ;
 	a rdf:Property ;
 	rdfs:range :MessagePart .
 
-_:node16a8i5n2fx109 rdfs:label "http://www.wsmo.org/ns/posm/0.2#hasOutput" ;
+_:node16dn68gagx23 rdfs:label "http://purl.org/ifgi/posm#hasOutput" ;
 	rdfs:domain :Operation ;
 	a rdf:Property ;
 	rdfs:range :MessagePart .
 
-_:node16a8i5n2fx110 rdfs:label "http://www.wsmo.org/ns/posm/0.2#hasInputFault" ;
+_:node16dn68gagx24 rdfs:label "http://purl.org/ifgi/posm#hasInputFault" ;
 	rdfs:domain :Operation ;
 	a rdf:Property ;
 	rdfs:range :MessagePart .
 
-_:node16a8i5n2fx111 rdfs:label "http://www.wsmo.org/ns/posm/0.2#hasOutputFault" ;
+_:node16dn68gagx25 rdfs:label "http://purl.org/ifgi/posm#hasOutputFault" ;
 	rdfs:domain :Operation ;
 	a rdf:Property ;
 	rdfs:range :MessagePart .
 
 :MessagePart a rdfs:Class ;
-	rdfs:label "http://www.wsmo.org/ns/posm/0.2#MessagePart" ;
+	rdfs:label "http://purl.org/ifgi/posm#MessagePart" ;
 	dc:identifier "message part@en"^^xsd:string .
 
-_:node16a8i5n2fx112 rdfs:label "http://www.wsmo.org/ns/posm/0.2#hasMessagePart" ;
+_:node16dn68gagx26 rdfs:label "http://purl.org/ifgi/posm#hasMessagePart" ;
 	rdfs:domain :MessagePart ;
 	a rdf:Property ;
 	rdfs:range :MessagePart .
 
 :MessageContent a rdfs:Class ;
-	rdfs:label "http://www.wsmo.org/ns/posm/0.2#MessageContent" ;
+	rdfs:label "http://purl.org/ifgi/posm#MessageContent" ;
 	rdfs:subClassOf :MessagePart ;
 	dc:identifier "message content@en"^^xsd:string .

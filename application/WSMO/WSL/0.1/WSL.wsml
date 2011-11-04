@@ -1,5 +1,5 @@
 wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-core"
-namespace { _"http://www.wsmo.org/ns/wsmo-lite#",
+namespace { _"http://purl.org/ifgi/wsl#",
 	dc _"http://purl.org/dc/elements/1.1/"
  }
 

@@ -5,12 +5,12 @@
 @prefix : <http://purl.org/ifgi/om#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix gml: <http://purl.org/ifgi/gml/0.2#> .
-@prefix ssn: <http://purl.oclc.org/NET/ssnx/ssn#> .
+@prefix ssn: <http://purl.org/ifgi/ssn#> .
 
-_:node16a8i5n2fx10 a owl:Ontology ;
+_:node16dn68gagx2 a owl:Ontology ;
 	rdfs:label "ObservationsAndMeasurements" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
-	owl:imports <http://purl.org/ifgi/gml/0.2#> , <http://purl.oclc.org/NET/ssnx/ssn#> ;
+	owl:imports <http://purl.org/ifgi/gml/0.2#> , <http://purl.org/ifgi/ssn#> ;
 	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
 	dc:date "2011-02-03"^^xsd:string ;
 	dc:rights "http://creativecommons.org/licenses/by/3.0/"^^xsd:string ;

@@ -5,7 +5,7 @@ namespace { _"http://purl.org/ifgi/sos#",
 	dc _"http://purl.org/dc/elements/1.1/",
 	ows _"http://purl.org/ifgi/ows/0.2#",
 	om _"http://purl.org/ifgi/om#",
-	posm _"http://www.wsmo.org/ns/posm/0.2#", 
+	posm _"http://purl.org/ifgi/posm#", 
 	rdfs _"http://www.w3.org/2000/01/rdf-schema#"
  }
 
@@ -18,7 +18,7 @@ ontology SOS
 		dc#title hasValue "OGC Sensor Observation Service"
 	endAnnotations
 	
-	importsOntology {_"http://purl.org/ifgi/ows/0.2#", _"http://purl.org/ifgi/om#", _"http://www.wsmo.org/ns/posm/0.2#"}
+	importsOntology {_"http://purl.org/ifgi/ows/0.2#", _"http://purl.org/ifgi/om#", _"http://purl.org/ifgi/posm#"}
 	
 	/* POSM related stuff */
 	concept SensorObservationService subConceptOf ows#OGCWebService

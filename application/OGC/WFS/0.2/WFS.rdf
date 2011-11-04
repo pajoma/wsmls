@@ -8,16 +8,16 @@
 	xmlns:sawsdl="http://www.w3.org/ns/sawsdl#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns:ows="http://purl.org/ifgi/ows/0.2#"
-	xmlns:posm="http://www.wsmo.org/ns/posm/0.2#"
+	xmlns:posm="http://purl.org/ifgi/posm#"
 	xmlns:dolce="http://purl.org/net/wsml/dolceDnS#">
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx21">
+<rdf:Description rdf:nodeID="node16dn68gagx9">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>WFS</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
 	<owl:imports rdf:resource="http://purl.org/ifgi/ows/0.2#"/>
 	<owl:imports rdf:resource="http://purl.org/net/wsml/dolceDnS#"/>
-	<owl:imports rdf:resource="http://www.wsmo.org/ns/posm/0.2#"/>
+	<owl:imports rdf:resource="http://purl.org/ifgi/posm#"/>
 	<dc:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(a)IfGI, University of Muenster</dc:publisher>
 	<dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10-11-2010</dc:date>
 	<dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://creativecommons.org/licenses/by/3.0/</dc:rights>
@@ -35,21 +35,21 @@
 <rdf:Description rdf:about="http://purl.org/ifgi/wfs#DescribeFeatureType">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/wfs#DescribeFeatureType</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#Operation"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/posm#Operation"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">describe feature type@en</dc:identifier>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/wfs#DescribeFeatureTypeRequest">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/wfs#DescribeFeatureTypeRequest</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/posm#MessagePart"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">describe feature type request@en</dc:identifier>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/wfs#DescribeFeatureTypeResponse">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/wfs#DescribeFeatureTypeResponse</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/posm#MessagePart"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">describe feature type response@en</dc:identifier>
 	<rdfs:seeAlso rdf:resource="http://schemas.opengis.net/wfs/1.1.0/wsdl/wfs-util.xsd#DescribeFeatureTypeResponse"/>
 </rdf:Description>
@@ -57,21 +57,21 @@
 <rdf:Description rdf:about="http://purl.org/ifgi/wfs#GetFeature">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/wfs#GetFeature</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#Operation"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/posm#Operation"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">get feature@en</dc:identifier>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/wfs#GetFeatureRequest">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/wfs#GetFeatureRequest</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/posm#MessagePart"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">get feature request@en</dc:identifier>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/wfs#GetFeatureResponse">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/wfs#GetFeatureResponse</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/posm#MessagePart"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">get feature response@en</dc:identifier>
 	<rdfs:seeAlso rdf:resource="http://schemas.opengis.net/wfs/1.1.0/wfs.xsd#FeatureCollection"/>
 </rdf:Description>

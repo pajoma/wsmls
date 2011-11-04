@@ -1,5 +1,5 @@
 wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-core"
-namespace { _"http://www.wsmo.org/ns/posm/0.2#",
+namespace { _"http://purl.org/ifgi/posm#",
 	dc _"http://purl.org/dc/elements/1.1/"
  }
 
@@ -9,7 +9,7 @@ ontology POSM
 
 concept Service
 	annotations
-			dc#identifier hasValue "service@en"
+		dc#identifier hasValue "service@en"
 	endAnnotations
     hasOperation impliesType Operation
 
@@ -34,3 +34,5 @@ concept MessageContent subConceptOf MessagePart
 	annotations
 			dc#identifier hasValue "message content@en"
 	endAnnotations
+	
+	
