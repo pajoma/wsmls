@@ -1,9 +1,9 @@
 wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-core"
 namespace { _"http://purl.org/ifgi/ows/0.2#", 
 	ows _"http://purl.org/ifgi/ows/0.2#",
-	wsl _"http://www.wsmo.org/ns/wsmo-lite#", 
+	wsl _"http://purl.org/ifgi/wsl#", 
 	xsd _"http://www.w3.org/2001/XMLSchema#", 
-	posm _"http://www.wsmo.org/ns/posm/0.2#",
+	posm _"http://purl.org/ifgi/posm#",
 	dc _"http://purl.org/dc/elements/1.1/", 
 	sawsdl _"http://www.w3.org/ns/sawsdl#",
 	dolce _"http://purl.org/ifgi/dolceDnS#"

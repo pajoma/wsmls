@@ -6,13 +6,13 @@
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:ows="http://purl.org/ifgi/ows/0.2#"
-	xmlns:wsl="http://www.wsmo.org/ns/wsmo-lite#"
-	xmlns:posm="http://www.wsmo.org/ns/posm/0.2#"
+	xmlns:wsl="http://purl.org/ifgi/wsl#"
+	xmlns:posm="http://purl.org/ifgi/posm#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns:sawsdl="http://www.w3.org/ns/sawsdl#"
 	xmlns:dolce="http://purl.org/ifgi/dolceDnS#">
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx11">
+<rdf:Description rdf:nodeID="node16dn68gagx3">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>OWSOntology</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-core</dc:format>
@@ -29,28 +29,28 @@
 <rdf:Description rdf:about="http://purl.org/ifgi/ows/0.2#OGCWebService">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/ows/0.2#OGCWebService</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/wsmo-lite#FunctionalClassificationRoot"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/wsl#FunctionalClassificationRoot"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OGC Web service@en</dc:identifier>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ows/0.2#GetCapabilities">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/ows/0.2#GetCapabilities</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#Operation"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/posm#Operation"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">get capabilities@en</dc:identifier>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ows/0.2#GetCapabilitiesResponse">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/ows/0.2#GetCapabilitiesResponse</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/posm#MessagePart"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">get capabilities response@en</dc:identifier>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ows/0.2#GetCapabilitiesRequest">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/ows/0.2#GetCapabilitiesRequest</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/posm/0.2#MessagePart"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/posm#MessagePart"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">get capabilities request@en</dc:identifier>
 </rdf:Description>
 

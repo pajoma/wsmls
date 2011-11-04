@@ -1,5 +1,5 @@
 wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
-namespace { _"http://purl.oclc.org/NET/ssnx/ssn#",
+namespace { _"http://purl.org/ifgi/ssn#",
 	rdf _"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     rdfs _"http://www.w3.org/2000/01/rdf-schema#",
     xsd _"http://www.w3.org/2001/XMLSchema#",

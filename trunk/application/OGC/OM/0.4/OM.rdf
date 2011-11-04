@@ -7,14 +7,14 @@
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns:gml="http://purl.org/ifgi/gml/0.2#"
-	xmlns:ssn="http://purl.oclc.org/NET/ssnx/ssn#">
+	xmlns:ssn="http://purl.org/ifgi/ssn#">
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx9">
+<rdf:Description rdf:nodeID="node16dn68gagx1">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>ObservationsAndMeasurements</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
 	<owl:imports rdf:resource="http://purl.org/ifgi/gml/0.2#"/>
-	<owl:imports rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#"/>
+	<owl:imports rdf:resource="http://purl.org/ifgi/ssn#"/>
 	<dc:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(a)IfGI, University of Muenster</dc:publisher>
 	<dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011-02-03</dc:date>
 	<dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://creativecommons.org/licenses/by/3.0/</dc:rights>
@@ -36,42 +36,42 @@
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/om#Observation</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml/0.2#AbstractFeature"/>
-	<rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/ssn#Observation"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">observation@en</dc:identifier>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/om#Sensor">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/om#Sensor</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Sensor"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/ssn#Sensor"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sensor@en</dc:identifier>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/om#Property">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/om#Property</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/ssn#Property"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">property@en</dc:identifier>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/om#FeatureOfInterest">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/om#FeatureOfInterest</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/ssn#FeatureOfInterest"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">feature of interest@en</dc:identifier>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/om#SensorOutput">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/om#SensorOutput</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SensorOutput"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/ssn#SensorOutput"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sensor output@en</dc:identifier>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/om#ObservationValue">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/om#ObservationValue</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#ObservationValue"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/ssn#ObservationValue"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">observation value@en</dc:identifier>
 </rdf:Description>
 

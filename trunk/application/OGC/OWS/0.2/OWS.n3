@@ -3,13 +3,13 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix : <http://purl.org/ifgi/ows/0.2#> .
-@prefix wsl: <http://www.wsmo.org/ns/wsmo-lite#> .
-@prefix posm: <http://www.wsmo.org/ns/posm/0.2#> .
+@prefix wsl: <http://purl.org/ifgi/wsl#> .
+@prefix posm: <http://purl.org/ifgi/posm#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix sawsdl: <http://www.w3.org/ns/sawsdl#> .
 @prefix dolce: <http://purl.org/ifgi/dolceDnS#> .
 
-_:node16a8i5n2fx12 a owl:Ontology ;
+_:node16dn68gagx4 a owl:Ontology ;
 	rdfs:label "OWSOntology" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-core" ;
 	owl:imports <http://www.wsmo.org/ns/wsmo-lite#> , <http://www.wsmo.org/ns/posm/0.2#> , <http://purl.org/ifgi/dolceDnS#> ;

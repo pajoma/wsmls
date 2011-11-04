@@ -6,13 +6,13 @@
 @prefix sawsdl: <http://www.w3.org/ns/sawsdl#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix ows: <http://purl.org/ifgi/ows/0.2#> .
-@prefix posm: <http://www.wsmo.org/ns/posm/0.2#> .
+@prefix posm: <http://purl.org/ifgi/posm#> .
 @prefix dolce: <http://purl.org/net/wsml/dolceDnS#> .
 
-_:node16a8i5n2fx22 a owl:Ontology ;
+_:node16dn68gagx10 a owl:Ontology ;
 	rdfs:label "WFS" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
-	owl:imports <http://purl.org/ifgi/ows/0.2#> , <http://purl.org/net/wsml/dolceDnS#> , <http://www.wsmo.org/ns/posm/0.2#> ;
+	owl:imports <http://purl.org/ifgi/ows/0.2#> , <http://purl.org/net/wsml/dolceDnS#> , <http://purl.org/ifgi/posm#> ;
 	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
 	dc:date "10-11-2010"^^xsd:string ;
 	dc:rights "http://creativecommons.org/licenses/by/3.0/"^^xsd:string ;
