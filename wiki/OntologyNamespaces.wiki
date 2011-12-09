@@ -34,6 +34,17 @@ All ontologies of this repository are listed here. Ontologies highlighted green 
 || <font color="#04B404">Role</font> || <font color="#04B404">http://purl.org/ifgi/patterns/role</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Patterns/Role/0.1/Role.rdf</font> ||
 || <font color="#04B404">System</font> || <font color="#04B404">http://purl.org/ifgi/patterns/system</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Patterns/System/0.1/System.rdf</font> ||
 
+==== Scenario-specific Domain Ontologies ====
+
+|| *Ontology* || *Namespace* || *Location* ||
+|| <font color="#04B404">Landslide</font> || <font color="#04B404">http://purl.org/ifgi/landslide</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/local/landslide/0.1/landslide.rdf</font> ||
+|| <font color="#04B404">!NoiseAll</font> || <font color="#04B404">http://purl.org/ifgi/noise</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/local/noise/noiseall.rdf</font> ||
+|| <font color="#04B404">!OilSpill</font> || <font color="#04B404">http://purl.org/ifgi/oilspill</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/local/oilspill/0.1/oilspill.rdf</font> ||
+|| <font color="#04B404">!UrbanizedAreaFeature</font> || <font color="#04B404">http://purl.org/ifgi/suc/urbanizedarea</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/local/simpleusecase/urbanizedareafeature.rdf</font> ||
+|| <font color="#04B404">!WaterLevelObservation</font> || <font color="#04B404">http://purl.org/ifgi/suc/waterlevelobservation</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/local/simpleusecase/waterlevelobservation.rdf</font> ||
+|| <font color="#04B404">!RiverModel</font> || <font color="#04B404">http://purl.org/ifgi/rivermodel</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/local/water/0.1/rivermodel.rdf</font> ||
+|| <font color="#04B404">Water</font> || <font color="#04B404">http://purl.org/ifgi/water</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/local/water/0.1/water.rdf</font> ||
+
 <br>
 <br>
 == Application Ontologies ==
@@ -45,7 +56,7 @@ All ontologies of this repository are listed here. Ontologies highlighted green 
 || <font color="#04B404">GML</font> || <font color="#04B404">http://purl.org/ifgi/gml/0.2</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/application/OGC/GML/0.4/GML.rdf</font> ||
 || <font color="#04B404">OCD</font> || <font color="#04B404">http://purl.org/ifgi/ocd</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/application/OGC/OCD/0.1/OCD.rdf</font> ||
 || <font color="#04B404">OM</font> || <font color="#04B404">http://purl.org/ifgi/om</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/application/OGC/OM/0.4/OM.rdf</font> ||
-|| <font color="#04B404">OWS</font> || <font color="#FF0000">http://purl.org/ifgi/ows/0.2</font> || <font color="#FF0000">http://wsmls.googlecode.com/svn/trunk/application/OGC/OWS/0.2/OWS.rdf</font> ||
+|| <font color="#04B404">OWS</font> || <font color="#04B404">http://purl.org/ifgi/ows/0.2</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/application/OGC/OWS/0.2/OWS.rdf</font> ||
 || <font color="#04B404">SML</font> || <font color="#04B404">http://purl.org/ifgi/sml</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/application/OGC/SML/0.2/SML.rdf</font> ||
 || <font color="#04B404">SOS</font> || <font color="#04B404">http://purl.org/ifgi/sos</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/application/OGC/SOS/0.2/SOS.rdf</font> ||
 || <font color="#04B404">SWE</font> || <font color="#04B404">http://purl.org/ifgi/swe</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/application/OGC/SWE/0.2/SWE.rdf</font> ||
@@ -61,16 +72,3 @@ All ontologies of this repository are listed here. Ontologies highlighted green 
 || <font color="#04B404">WSL</font> || <font color="#04B404">http://purl.org/ifgi/wsl</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/application/WSMO/WSL/0.1/WSL.rdf</font> ||
 || <font color="#04B404">Annotation</font> || <font color="#04B404">http://purl.org/ifgi/annotations</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/application/Annotation/Annotation.rdf</font> ||
 
-
-<br>
-<br>
-== Local Ontologies ==
-
-|| *Ontology* || *Namespace* || *Location* ||
-|| <font color="#04B404">Landslide</font> || <font color="#04B404">http://purl.org/ifgi/landslide</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/local/landslide/0.1/landslide.rdf</font> ||
-|| <font color="#04B404">!NoiseAll</font> || <font color="#04B404">http://purl.org/ifgi/noise</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/local/noise/noiseall.rdf</font> ||
-|| <font color="#04B404">!OilSpill</font> || <font color="#04B404">http://purl.org/ifgi/oilspill</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/local/oilspill/0.1/oilspill.rdf</font> ||
-|| <font color="#04B404">!UrbanizedAreaFeature</font> || <font color="#04B404">http://purl.org/ifgi/suc/urbanizedarea</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/local/simpleusecase/urbanizedareafeature.rdf</font> ||
-|| <font color="#04B404">!WaterLevelObservation</font> || <font color="#04B404">http://purl.org/ifgi/suc/waterlevelobservation</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/local/simpleusecase/waterlevelobservation.rdf</font> ||
-|| <font color="#04B404">!RiverModel</font> || <font color="#04B404">http://purl.org/ifgi/rivermodel</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/local/water/0.1/rivermodel.rdf</font> ||
-|| <font color="#04B404">Water</font> || <font color="#04B404">http://purl.org/ifgi/water</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/local/water/0.1/water.rdf</font> ||
