@@ -6,15 +6,16 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix gml: <http://purl.org/ifgi/gml/0.2#> .
 
-_:node16a8i5n2fx8 a owl:Ontology ;
+_:node16kg83qlpx6 a owl:Ontology ;
 	rdfs:label "OCD" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/gml/0.2#> ;
 	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
-	dc:date "2010-11-24"^^xsd:string ;
+	dc:date "2012-01-27"^^xsd:string ;
 	dc:rights "http://creativecommons.org/licenses/by/3.0/"^^xsd:string ;
 	dc:type "Ontology"^^xsd:string ;
-	dc:title "OGC Common Data"^^xsd:string .
+	dc:title "OGC Common Data"^^xsd:string ;
+	dc:description "DEPRECATED"^^xsd:string .
 
 :BoundingBox a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/ocd#BoundingBox" ;

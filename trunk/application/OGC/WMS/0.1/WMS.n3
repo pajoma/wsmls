@@ -1,0 +1,70 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://purl.org/ifgi/wms#> .
+@prefix sawsdl: <http://www.w3.org/ns/sawsdl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ows: <http://purl.org/ifgi/ows/0.2#> .
+@prefix posm: <http://purl.org/ifgi/posm#> .
+@prefix dolce: <http://purl.org/net/wsml/dolceDnS#> .
+
+_:node16kg83qlpx22 a owl:Ontology ;
+	rdfs:label "WFS" ;
+	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
+	owl:imports <http://purl.org/ifgi/ows/0.2#> , <http://purl.org/net/wsml/dolceDnS#> , <http://purl.org/ifgi/posm#> ;
+	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
+	dc:date "2012-01-27"^^xsd:string ;
+	dc:rights "http://creativecommons.org/licenses/by/3.0/"^^xsd:string ;
+	dc:type "Ontology"^^xsd:string ;
+	dc:title "OGC Web Map Service"^^xsd:string .
+
+:WebMapService a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/wms#WebMapService" ;
+	rdfs:subClassOf ows:OGCWebService ;
+	dc:identifier "Web feature service@en"^^xsd:string .
+
+:GetFeatureInfo a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/wms#GetFeatureInfo" ;
+	rdfs:subClassOf posm:Operation ;
+	dc:identifier "Get feature info@en"^^xsd:string .
+
+:GetFeatureInfoRequest a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/wms#GetFeatureInfoRequest" ;
+	rdfs:subClassOf posm:MessagePart ;
+	dc:identifier "Get feature info request@en"^^xsd:string .
+
+:GetFeatureInfoResponse a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/wms#GetFeatureInfoResponse" ;
+	rdfs:subClassOf posm:MessagePart ;
+	dc:identifier "Get feature info response@en"^^xsd:string .
+
+:GetMap a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/wms#GetMap" ;
+	rdfs:subClassOf posm:Operation ;
+	dc:identifier "get map@en"^^xsd:string .
+
+:GetMapRequest a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/wms#GetMapRequest" ;
+	rdfs:subClassOf posm:MessagePart ;
+	dc:identifier "get map request@en"^^xsd:string .
+
+:GetMapResponse a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/wms#GetMapResponse" ;
+	rdfs:subClassOf posm:MessagePart ;
+	dc:identifier "get map response@en"^^xsd:string .
+
+:LayerDescription a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/wms#LayerDescription" ;
+	rdfs:subClassOf dolce:information_object ;
+	dc:identifier "layer description@en"^^xsd:string .
+
+:DefaultGetFeatureInfo a :GetFeatureInfo ;
+	posm:hasOutput :DefaultGetFeatureInfoResponse ;
+	posm:hasInput :DefaultGetFeatureInfoRequest .
+
+:DefaultGetFeatureInfoResponse a :GetFeatureInfoResponse ;
+	sawsdl:modelReference :FeatureTypeDescription .
+
+:DefaultGetFeatureInfoRequest a :GetFeatureInfoRequest ;
+	sawsdl:modelReference xsd:string .

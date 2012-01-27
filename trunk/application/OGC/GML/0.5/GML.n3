@@ -1,0 +1,114 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://purl.org/ifgi/gml/0.2#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix DUL: <http://www.loa-cnr.it/ontologies/DUL.owl#> .
+@prefix ogc: <http://purl.org/ifgi/geosparql#> .
+@prefix time: <http://purl.org/ifgi/time#> .
+
+_:node16kg83qlpx4 a owl:Ontology ;
+	rdfs:label "GML" ;
+	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
+	owl:imports <http://www.loa-cnr.it/ontologies/DUL.owl#> , <http://purl.org/ifgi/geosparql#> , <http://purl.org/ifgi/time#> ;
+	dc:creator "Marcell Roth"^^xsd:string ;
+	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
+	dc:date "2012-01-27"^^xsd:string ;
+	dc:rights "http://creativecommons.org/licenses/by/3.0/"^^xsd:string ;
+	dc:type "Ontology"^^xsd:string ;
+	dc:title "OGC Feature Ontology"^^xsd:string .
+
+:AbstractGML a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/gml/0.2#AbstractGML" ;
+	rdfs:subClassOf DUL:InformationObject ;
+	dc:identifier "abstract GML@en"^^xsd:string ;
+	dc:description "deprecated"^^xsd:string .
+
+:AbstractFeature a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/gml/0.2#AbstractFeature" ;
+	rdfs:subClassOf :AbstractGML ;
+	dc:identifier "abstract feature@en"^^xsd:string ;
+	dc:description "deprecated"^^xsd:string .
+
+:AbstractGeometry a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/gml/0.2#AbstractGeometry" ;
+	rdfs:subClassOf :FeatureProperty ;
+	dc:identifier "abstract geometry@en"^^xsd:string ;
+	dc:description "deprecated"^^xsd:string .
+
+:FeatureProperty a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/gml/0.2#FeatureProperty" ;
+	rdfs:subClassOf ogc:SpatialObject ;
+	dc:identifier "feature property@en"^^xsd:string .
+
+:FeatureCollection a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/gml/0.2#FeatureCollection" ;
+	rdfs:subClassOf ogc:SpatialObject ;
+	dc:identifier "feature collection@en"^^xsd:string .
+
+:Envelope a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/gml/0.2#Envelope" ;
+	rdfs:subClassOf DUL:InformationObject ;
+	dc:identifier "envelope@en"^^xsd:string ;
+	dc:description "deprecated"^^xsd:string .
+
+:SpatioTemporalFeature a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/gml/0.2#SpatioTemporalFeature" ;
+	rdfs:subClassOf ogc:Feature ;
+	dc:identifier "Spatio Temporal Feature@en"^^xsd:string .
+
+:id a rdf:Property ;
+	rdfs:domain ogc:Feature ;
+	rdfs:range xsd:ID ;
+	dc:identifier "id@en"^^xsd:string .
+
+:hasProperty a rdf:Property ;
+	rdfs:domain ogc:Feature ;
+	rdfs:range :FeatureProperty ;
+	dc:identifier "has property@en"^^xsd:string .
+
+:hasValue a rdf:Property ;
+	rdfs:domain :FeatureProperty ;
+	rdfs:range xsd:anyType ;
+	dc:identifier "has value@en"^^xsd:string .
+
+:upperCorner a rdf:Property ;
+	rdfs:domain :Envelope ;
+	rdfs:range rdfs:Literal ;
+	dc:identifier "upper corner@en"^^xsd:string ;
+	dc:description "deprecated"^^xsd:string .
+
+:lowerCorner a rdf:Property ;
+	rdfs:domain :Envelope ;
+	rdfs:range rdfs:Literal ;
+	dc:identifier "lower corner@en"^^xsd:string ;
+	dc:description "deprecated"^^xsd:string .
+
+:hasGeometry a rdf:Property ;
+	rdfs:domain :AbstractFeature ;
+	rdfs:range :AbstractGeometry ;
+	rdfs:subPropertyOf :hasProperty ;
+	dc:identifier "has geometry@en"^^xsd:string ;
+	dc:description "deprecated"^^xsd:string .
+
+:featureMember a rdf:Property ;
+	rdfs:domain :FeatureCollection ;
+	rdfs:range ogc:Feature ;
+	rdfs:subPropertyOf rdfs:member ;
+	dc:identifier "feature member@en"^^xsd:string .
+
+:boundedBy a rdf:Property ;
+	rdfs:domain ogc:Feature ;
+	rdfs:range ogc:Polygon ;
+	dc:identifier "bounded by@en"^^xsd:string .
+
+:startTime a rdf:Property ;
+	rdfs:domain :SpatioTemporalFeature ;
+	rdfs:range time:Instant ;
+	dc:identifier "start time@en"^^xsd:string .
+
+:duration a rdf:Property ;
+	rdfs:domain :SpatioTemporalFeature ;
+	rdfs:range time:Interval ;
+	dc:identifier "duration@en"^^xsd:string .

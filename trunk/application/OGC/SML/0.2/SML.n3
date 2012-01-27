@@ -6,12 +6,12 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix gml: <http://purl.org/ifgi/gml/0.2#> .
 
-_:node16a8i5n2fx14 a owl:Ontology ;
+_:node16kg83qlpx12 a owl:Ontology ;
 	rdfs:label "Base" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/gml/0.2#> ;
 	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
-	dc:date "28-03-2010"^^xsd:string ;
+	dc:date "2012-03-28"^^xsd:string ;
 	dc:rights "http://creativecommons.org/licenses/by/3.0/"^^xsd:string ;
 	dc:type "Ontology"^^xsd:string ;
 	dc:title "OGC SensorML Base"^^xsd:string ;
@@ -20,7 +20,7 @@ _:node16a8i5n2fx14 a owl:Ontology ;
 
 :AbstractSML a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/sml#AbstractSML" ;
-	rdfs:subClassOf gml:AbstractFeature ;
+	rdfs:subClassOf gml:Feature ;
 	dc:identifier "abstract sml@en"^^xsd:string .
 
 :AbstractProcess a rdfs:Class ;

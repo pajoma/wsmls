@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns="http://purl.org/ifgi/wms#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:sawsdl="http://www.w3.org/ns/sawsdl#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:ows="http://purl.org/ifgi/ows/0.2#"
+	xmlns:posm="http://purl.org/ifgi/posm#"
+	xmlns:dolce="http://purl.org/net/wsml/dolceDnS#">
+
+<rdf:Description rdf:nodeID="node16kg83qlpx21">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<rdfs:label>WFS</rdfs:label>
+	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
+	<owl:imports rdf:resource="http://purl.org/ifgi/ows/0.2#"/>
+	<owl:imports rdf:resource="http://purl.org/net/wsml/dolceDnS#"/>
+	<owl:imports rdf:resource="http://purl.org/ifgi/posm#"/>
+	<dc:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(a)IfGI, University of Muenster</dc:publisher>
+	<dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-01-27</dc:date>
+	<dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://creativecommons.org/licenses/by/3.0/</dc:rights>
+	<dc:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ontology</dc:type>
+	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OGC Web Map Service</dc:title>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/wms#WebMapService">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/wms#WebMapService</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/ows/0.2#OGCWebService"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Web feature service@en</dc:identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/wms#GetFeatureInfo">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/wms#GetFeatureInfo</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/posm#Operation"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Get feature info@en</dc:identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/wms#GetFeatureInfoRequest">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/wms#GetFeatureInfoRequest</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/posm#MessagePart"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Get feature info request@en</dc:identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/wms#GetFeatureInfoResponse">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/wms#GetFeatureInfoResponse</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/posm#MessagePart"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Get feature info response@en</dc:identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/wms#GetMap">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/wms#GetMap</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/posm#Operation"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">get map@en</dc:identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/wms#GetMapRequest">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/wms#GetMapRequest</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/posm#MessagePart"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">get map request@en</dc:identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/wms#GetMapResponse">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/wms#GetMapResponse</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/posm#MessagePart"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">get map response@en</dc:identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/wms#LayerDescription">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/wms#LayerDescription</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/net/wsml/dolceDnS#information_object"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">layer description@en</dc:identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/wms#DefaultGetFeatureInfo">
+	<rdf:type rdf:resource="http://purl.org/ifgi/wms#GetFeatureInfo"/>
+	<posm:hasOutput rdf:resource="http://purl.org/ifgi/wms#DefaultGetFeatureInfoResponse"/>
+	<posm:hasInput rdf:resource="http://purl.org/ifgi/wms#DefaultGetFeatureInfoRequest"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/wms#DefaultGetFeatureInfoResponse">
+	<rdf:type rdf:resource="http://purl.org/ifgi/wms#GetFeatureInfoResponse"/>
+	<sawsdl:modelReference rdf:resource="http://purl.org/ifgi/wms#FeatureTypeDescription"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/wms#DefaultGetFeatureInfoRequest">
+	<rdf:type rdf:resource="http://purl.org/ifgi/wms#GetFeatureInfoRequest"/>
+	<sawsdl:modelReference rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+
+</rdf:RDF>

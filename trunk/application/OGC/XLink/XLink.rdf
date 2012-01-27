@@ -8,13 +8,13 @@
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns:xlink="http://www.w3.org/1999/xlink#">
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx23">
+<rdf:Description rdf:nodeID="node16kg83qlpx25">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>XLink</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
 	<dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pajoma</dc:creator>
 	<dc:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(a)IfGI, University of Muenster</dc:publisher>
-	<dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12-02-2010</dc:date>
+	<dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010-02-12</dc:date>
 	<dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://creativecommons.org/licenses/by/3.0/</dc:rights>
 	<dc:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ontology</dc:type>
 	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GML 3.0 candidate xlinks schema.</dc:title>
@@ -28,49 +28,49 @@
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">simple linke@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx24">
+<rdf:Description rdf:nodeID="node16kg83qlpx26">
 	<rdfs:label>http://purl.net/ifgi/xlink#type</rdfs:label>
 	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#simpleLink"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx25">
+<rdf:Description rdf:nodeID="node16kg83qlpx27">
 	<rdfs:label>http://www.w3.org/1999/xlink#href</rdfs:label>
 	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#simpleLink"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://www.w3.org/1999/xlink#href"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx26">
+<rdf:Description rdf:nodeID="node16kg83qlpx28">
 	<rdfs:label>http://www.w3.org/1999/xlink#role</rdfs:label>
 	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#simpleLink"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://www.w3.org/1999/xlink#role"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx27">
+<rdf:Description rdf:nodeID="node16kg83qlpx29">
 	<rdfs:label>http://www.w3.org/1999/xlink#arcrole</rdfs:label>
 	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#simpleLink"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://www.w3.org/1999/xlink#arcrole"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx28">
+<rdf:Description rdf:nodeID="node16kg83qlpx30">
 	<rdfs:label>http://www.w3.org/1999/xlink#title</rdfs:label>
 	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#simpleLink"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://www.w3.org/1999/xlink#title"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx29">
+<rdf:Description rdf:nodeID="node16kg83qlpx31">
 	<rdfs:label>http://www.w3.org/1999/xlink#show</rdfs:label>
 	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#simpleLink"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://www.w3.org/1999/xlink#show"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx30">
+<rdf:Description rdf:nodeID="node16kg83qlpx32">
 	<rdfs:label>http://www.w3.org/1999/xlink#actuate</rdfs:label>
 	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#simpleLink"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -83,21 +83,21 @@
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">extended link@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx31">
+<rdf:Description rdf:nodeID="node16kg83qlpx33">
 	<rdfs:label>http://purl.net/ifgi/xlink#type</rdfs:label>
 	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#extendedLink"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx32">
+<rdf:Description rdf:nodeID="node16kg83qlpx34">
 	<rdfs:label>http://www.w3.org/1999/xlink#role</rdfs:label>
 	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#extendedLink"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://www.w3.org/1999/xlink#role"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx33">
+<rdf:Description rdf:nodeID="node16kg83qlpx35">
 	<rdfs:label>http://www.w3.org/1999/xlink#title</rdfs:label>
 	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#extendedLink"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -110,35 +110,35 @@
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">locator link@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx34">
+<rdf:Description rdf:nodeID="node16kg83qlpx36">
 	<rdfs:label>http://purl.net/ifgi/xlink#type</rdfs:label>
 	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#locatorLink"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx35">
+<rdf:Description rdf:nodeID="node16kg83qlpx37">
 	<rdfs:label>http://www.w3.org/1999/xlink#href</rdfs:label>
 	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#locatorLink"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://www.w3.org/1999/xlink#href"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx36">
+<rdf:Description rdf:nodeID="node16kg83qlpx38">
 	<rdfs:label>http://www.w3.org/1999/xlink#role</rdfs:label>
 	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#locatorLink"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://www.w3.org/1999/xlink#role"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx37">
+<rdf:Description rdf:nodeID="node16kg83qlpx39">
 	<rdfs:label>http://www.w3.org/1999/xlink#title</rdfs:label>
 	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#locatorLink"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://www.w3.org/1999/xlink#title"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx38">
+<rdf:Description rdf:nodeID="node16kg83qlpx40">
 	<rdfs:label>http://www.w3.org/1999/xlink#label</rdfs:label>
 	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#locatorLink"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -151,49 +151,49 @@
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">arc link@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx39">
+<rdf:Description rdf:nodeID="node16kg83qlpx41">
 	<rdfs:label>http://purl.net/ifgi/xlink#type</rdfs:label>
 	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#arcLink"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx40">
+<rdf:Description rdf:nodeID="node16kg83qlpx42">
 	<rdfs:label>http://www.w3.org/1999/xlink#arcrole</rdfs:label>
 	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#arcLink"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://www.w3.org/1999/xlink#arcrole"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx41">
+<rdf:Description rdf:nodeID="node16kg83qlpx43">
 	<rdfs:label>http://www.w3.org/1999/xlink#title</rdfs:label>
 	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#arcLink"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://www.w3.org/1999/xlink#title"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx42">
+<rdf:Description rdf:nodeID="node16kg83qlpx44">
 	<rdfs:label>http://www.w3.org/1999/xlink#from</rdfs:label>
 	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#arcLink"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://www.w3.org/1999/xlink#from"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx43">
+<rdf:Description rdf:nodeID="node16kg83qlpx45">
 	<rdfs:label>http://www.w3.org/1999/xlink#to</rdfs:label>
 	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#arcLink"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://www.w3.org/1999/xlink#to"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx44">
+<rdf:Description rdf:nodeID="node16kg83qlpx46">
 	<rdfs:label>http://www.w3.org/1999/xlink#show</rdfs:label>
 	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#arcLink"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://www.w3.org/1999/xlink#show"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx45">
+<rdf:Description rdf:nodeID="node16kg83qlpx47">
 	<rdfs:label>http://www.w3.org/1999/xlink#actuate</rdfs:label>
 	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#arcLink"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -206,28 +206,28 @@
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resource link@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx46">
+<rdf:Description rdf:nodeID="node16kg83qlpx48">
 	<rdfs:label>http://purl.net/ifgi/xlink#type</rdfs:label>
 	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#resourceLink"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx47">
+<rdf:Description rdf:nodeID="node16kg83qlpx49">
 	<rdfs:label>http://www.w3.org/1999/xlink#role</rdfs:label>
 	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#resourceLink"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://www.w3.org/1999/xlink#role"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx48">
+<rdf:Description rdf:nodeID="node16kg83qlpx50">
 	<rdfs:label>http://www.w3.org/1999/xlink#title</rdfs:label>
 	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#resourceLink"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://www.w3.org/1999/xlink#title"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx49">
+<rdf:Description rdf:nodeID="node16kg83qlpx51">
 	<rdfs:label>http://www.w3.org/1999/xlink#label</rdfs:label>
 	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#resourceLink"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -240,7 +240,7 @@
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">title link@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx50">
+<rdf:Description rdf:nodeID="node16kg83qlpx52">
 	<rdfs:label>http://purl.net/ifgi/xlink#type</rdfs:label>
 	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#titleLink"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -253,7 +253,7 @@
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">empty link@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx51">
+<rdf:Description rdf:nodeID="node16kg83qlpx53">
 	<rdfs:label>http://purl.net/ifgi/xlink#type</rdfs:label>
 	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#emptyLink"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -266,7 +266,7 @@
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">href@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx52">
+<rdf:Description rdf:nodeID="node16kg83qlpx54">
 	<rdfs:label>http://purl.net/ifgi/xlink#value</rdfs:label>
 	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#href"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -279,7 +279,7 @@
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">role@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx53">
+<rdf:Description rdf:nodeID="node16kg83qlpx55">
 	<rdfs:label>http://purl.net/ifgi/xlink#value</rdfs:label>
 	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#role"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -292,7 +292,7 @@
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">arcrole@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx54">
+<rdf:Description rdf:nodeID="node16kg83qlpx56">
 	<rdfs:label>http://purl.net/ifgi/xlink#value</rdfs:label>
 	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#arcrole"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -305,7 +305,7 @@
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">title@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx55">
+<rdf:Description rdf:nodeID="node16kg83qlpx57">
 	<rdfs:label>http://purl.net/ifgi/xlink#value</rdfs:label>
 	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#title"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -319,7 +319,7 @@
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The 'show' attribute is used to communicate the desired presentation of the ending resource on traversal from the starting resource; it's value should be treated as follows: new - load ending resource in a new window, frame, pane, or other presentation context replace - load the resource in the same window, frame, pane, or other presentation context embed - load ending resource in place of the presentation of the starting resource other - behavior is unconstrained; examine other markup in the link for hints none - behavior is unconstrained</dc:description>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx56">
+<rdf:Description rdf:nodeID="node16kg83qlpx58">
 	<rdfs:label>http://purl.net/ifgi/xlink#value</rdfs:label>
 	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#show"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -333,7 +333,7 @@
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The 'actuate' attribute is used to communicate the desired timing of traversal from the starting resource to the ending resource; it's value should be treated as follows: onLoad - traverse to the ending resource immediately on loading the starting resource onRequest - traverse from the starting resource to the ending resource only on a post-loading event triggered for this purpose other - behavior is unconstrained; examine other markup in link for hints none - behavior is unconstrained</dc:description>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx57">
+<rdf:Description rdf:nodeID="node16kg83qlpx59">
 	<rdfs:label>http://purl.net/ifgi/xlink#value</rdfs:label>
 	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#actuate"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -346,7 +346,7 @@
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">label@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx58">
+<rdf:Description rdf:nodeID="node16kg83qlpx60">
 	<rdfs:label>http://purl.net/ifgi/xlink#value</rdfs:label>
 	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#label"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -359,7 +359,7 @@
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">from@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx59">
+<rdf:Description rdf:nodeID="node16kg83qlpx61">
 	<rdfs:label>http://purl.net/ifgi/xlink#value</rdfs:label>
 	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#from"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -372,7 +372,7 @@
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">to@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx60">
+<rdf:Description rdf:nodeID="node16kg83qlpx62">
 	<rdfs:label>http://purl.net/ifgi/xlink#value</rdfs:label>
 	<rdfs:domain rdf:resource="http://www.w3.org/1999/xlink#to"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>

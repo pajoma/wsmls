@@ -1,0 +1,81 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://purl.org/ifgi/cov#> .
+@prefix gml: <http://purl.org/ifgi/gml/0.2#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix swe: <http://purl.org/ifgi/swe#> .
+
+_:node16kg83qlpx2 a owl:Ontology ;
+	rdfs:label "COV" ;
+	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
+	owl:imports <http://purl.org/ifgi/gml/0.2#> , <http://purl.org/ifgi/swe#> ;
+	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
+	dc:date "2012-01-27"^^xsd:string ;
+	dc:rights "http://creativecommons.org/licenses/by/3.0/"^^xsd:string ;
+	dc:type "Ontology"^^xsd:string ;
+	dc:title "OGC GML Coverage compliant to WCS specification"^^xsd:string .
+
+:Coverages a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/cov#Coverages" ;
+	rdfs:subClassOf gml:AbstractFeature ;
+	dc:identifier "coverages@en"^^xsd:string ;
+	dc:description "deprecated"^^xsd:string .
+
+:Coverage a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/cov#Coverage" ;
+	rdfs:subClassOf gml:FeatureCollection ;
+	dc:identifier "coverage@en"^^xsd:string .
+
+:CoverageProperty a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/cov#CoverageProperty" ;
+	rdfs:subClassOf gml:FeatureProperty ;
+	dc:identifier "coverage property@en"^^xsd:string .
+
+:Range a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/cov#Range" ;
+	rdfs:subClassOf :CoverageProperty ;
+	dc:identifier "range@en"^^xsd:string .
+
+:CoverageFunction a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/cov#CoverageFunction" ;
+	rdfs:subClassOf :CoverageProperty ;
+	dc:identifier "coverage function@en"^^xsd:string .
+
+:Field a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/cov#Field" ;
+	rdfs:subClassOf :CoverageProperty ;
+	dc:identifier "field@en"^^xsd:string .
+
+:InterpolationMethod a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/cov#InterpolationMethod" ;
+	rdfs:subClassOf :CoverageProperty ;
+	dc:identifier "interpolation method@en"^^xsd:string .
+
+:coverageMember a rdf:Property ;
+	rdfs:domain :Coverages ;
+	rdfs:range :Coverage ;
+	rdfs:subPropertyOf rdfs:member ;
+	dc:identifier "coverage member@en"^^xsd:string ;
+	dc:description "deprecated"^^xsd:string .
+
+:hasMappingRule a rdf:Property ;
+	rdfs:domain :CoverageFunction ;
+	rdfs:range xsd:string ;
+	dc:identifier "has mapping rule@en"^^xsd:string .
+
+:dataRecordProperty a rdf:Property ;
+	rdfs:domain :Range ;
+	rdfs:range swe:DataRecord ;
+	dc:identifier "data record property@en"^^xsd:string .
+
+:interpolationMethod a rdf:Property ;
+	rdfs:domain :Field ;
+	rdfs:range :InterpolationMethod ;
+	dc:identifier "interpolation method@en"^^xsd:string .
+
+:interpolationMethodId a rdf:Property ;
+	rdfs:domain :InterpolationMethod ;
+	rdfs:range xsd:string ;
+	dc:identifier "interpolation method id@en"^^xsd:string .

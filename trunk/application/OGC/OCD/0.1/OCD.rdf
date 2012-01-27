@@ -8,16 +8,17 @@
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns:gml="http://purl.org/ifgi/gml/0.2#">
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx7">
+<rdf:Description rdf:nodeID="node16kg83qlpx5">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>OCD</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
 	<owl:imports rdf:resource="http://purl.org/ifgi/gml/0.2#"/>
 	<dc:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(a)IfGI, University of Muenster</dc:publisher>
-	<dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010-11-24</dc:date>
+	<dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-01-27</dc:date>
 	<dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://creativecommons.org/licenses/by/3.0/</dc:rights>
 	<dc:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ontology</dc:type>
 	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OGC Common Data</dc:title>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEPRECATED</dc:description>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ocd#BoundingBox">
