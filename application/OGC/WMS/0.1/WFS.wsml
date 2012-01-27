@@ -1,0 +1,76 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://purl.org/ifgi/wms#",
+	xsd _"http://www.w3.org/2001/XMLSchema#",  
+	sawsdl _"http://www.w3.org/ns/sawsdl#",
+	dc _"http://purl.org/dc/elements/1.1/",
+	ows _"http://purl.org/ifgi/ows/0.2#",
+	posm _"http://purl.org/ifgi/posm#", 
+	rdfs _"http://www.w3.org/2000/01/rdf-schema#",
+	dolce _"http://purl.org/net/wsml/dolceDnS#"
+ }
+
+ontology WFS
+
+	annotations
+		dc#publisher hasValue "(a)IfGI, University of Muenster"
+		dc#date hasValue "2012-01-27"
+		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+		dc#type hasValue "Ontology"
+		dc#title hasValue "OGC Web Map Service"
+	endAnnotations
+	
+	importsOntology {_"http://purl.org/ifgi/ows/0.2#", _"http://purl.org/net/wsml/dolceDnS#", _"http://purl.org/ifgi/posm#"}
+	
+	/* POSM related stuff */
+	concept WebMapService subConceptOf ows#OGCWebService
+		annotations
+			dc#identifier hasValue "Web feature service@en"
+		endAnnotations
+	
+	concept GetFeatureInfo subConceptOf posm#Operation
+		annotations
+			dc#identifier hasValue "Get feature info@en"
+		endAnnotations
+		
+	concept GetFeatureInfoRequest subConceptOf posm#MessagePart
+		annotations
+			dc#identifier hasValue "Get feature info request@en"
+		endAnnotations
+		
+	concept GetFeatureInfoResponse subConceptOf posm#MessagePart
+		annotations
+			dc#identifier hasValue "Get feature info response@en"
+		endAnnotations
+
+	
+	
+	concept GetMap subConceptOf posm#Operation
+		annotations
+			dc#identifier hasValue "get map@en"
+		endAnnotations
+		
+	concept GetMapRequest subConceptOf posm#MessagePart
+		annotations
+			dc#identifier hasValue "get map request@en"
+		endAnnotations
+		
+	concept GetMapResponse subConceptOf posm#MessagePart
+		annotations
+			dc#identifier hasValue "get map response@en"
+		endAnnotations
+		
+	concept LayerDescription subConceptOf dolce#information_object
+		annotations
+			dc#identifier hasValue "layer description@en"
+		endAnnotations
+	
+	/* default instances */
+	instance DefaultGetFeatureInfo memberOf GetFeatureInfo
+		posm#hasOutput hasValue DefaultGetFeatureInfoResponse
+		posm#hasInput hasValue DefaultGetFeatureInfoRequest
+	
+	instance DefaultGetFeatureInfoResponse memberOf GetFeatureInfoResponse
+		sawsdl#modelReference hasValue FeatureTypeDescription
+		
+	instance DefaultGetFeatureInfoRequest memberOf GetFeatureInfoRequest
+		sawsdl#modelReference hasValue xsd#string
