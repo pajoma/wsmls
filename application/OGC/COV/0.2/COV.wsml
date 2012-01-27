@@ -1,0 +1,83 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://purl.org/ifgi/cov#",
+	gml _"http://purl.org/ifgi/gml/0.2#",
+	xsd _"http://www.w3.org/2001/XMLSchema#",  
+	dc _"http://purl.org/dc/elements/1.1/", 
+	rdfs _"http://www.w3.org/2000/01/rdf-schema#",
+	swe _"http://purl.org/ifgi/swe#"
+ }
+
+ontology COV
+
+	annotations
+		dc#publisher hasValue "(a)IfGI, University of Muenster"
+		dc#date hasValue "2012-01-27"
+		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+		dc#type hasValue "Ontology"
+		dc#title hasValue "OGC GML Coverage compliant to WCS specification"
+	endAnnotations
+	
+	importsOntology {_"http://purl.org/ifgi/gml/0.2#", _"http://purl.org/ifgi/swe#"}
+	
+	concept Coverages subConceptOf gml#AbstractFeature
+		annotations
+			dc#identifier hasValue "coverages@en"
+			dc#description hasValue "deprecated"
+		endAnnotations
+	
+	concept Coverage subConceptOf gml#FeatureCollection
+		annotations
+			dc#identifier hasValue "coverage@en"
+		endAnnotations
+	
+	concept CoverageProperty subConceptOf gml#FeatureProperty
+		annotations
+			dc#identifier hasValue "coverage property@en"
+		endAnnotations
+	
+	concept Range subConceptOf CoverageProperty
+		annotations
+			dc#identifier hasValue "range@en"
+		endAnnotations
+	
+	concept CoverageFunction subConceptOf CoverageProperty
+		annotations
+			dc#identifier hasValue "coverage function@en"
+		endAnnotations
+	
+	concept Field subConceptOf CoverageProperty
+		annotations
+			dc#identifier hasValue "field@en"
+		endAnnotations
+	
+	concept InterpolationMethod	subConceptOf CoverageProperty
+		annotations
+			dc#identifier hasValue "interpolation method@en"
+		endAnnotations
+	
+	relation coverageMember (ofType Coverages, ofType Coverage) subRelationOf rdfs#member
+		annotations
+			dc#identifier hasValue "coverage member@en"
+			dc#description hasValue "deprecated"
+		endAnnotations
+	
+	relation hasMappingRule (ofType CoverageFunction, ofType xsd#string)
+		annotations
+			dc#identifier hasValue "has mapping rule@en"
+		endAnnotations
+	
+	relation dataRecordProperty (ofType Range, ofType swe#DataRecord)
+		annotations
+			dc#identifier hasValue "data record property@en"
+		endAnnotations
+	
+	relation interpolationMethod (ofType Field, ofType InterpolationMethod)
+		annotations
+			dc#identifier hasValue "interpolation method@en"
+		endAnnotations
+	
+	relation interpolationMethodId (ofType InterpolationMethod, ofType xsd#string)
+		annotations
+			dc#identifier hasValue "interpolation method id@en"
+		endAnnotations
+	

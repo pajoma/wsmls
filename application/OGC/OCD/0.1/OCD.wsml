@@ -10,10 +10,11 @@ ontology OCD
 
 	annotations 
 		dc#publisher hasValue "(a)IfGI, University of Muenster"
-		dc#date hasValue "2010-11-24"
+		dc#date hasValue "2012-01-27"
 		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
 		dc#type hasValue "Ontology"
 		dc#title hasValue "OGC Common Data"
+		dc#description hasValue "DEPRECATED"
 	endAnnotations
 	
 	importsOntology {_"http://purl.org/ifgi/gml/0.2#"}

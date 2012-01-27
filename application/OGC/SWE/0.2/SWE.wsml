@@ -2,20 +2,20 @@ wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
 namespace { _"http://purl.org/ifgi/swe#",
 	swe _"http://purl.org/ifgi/swe#",
 	dc _"http://purl.org/dc/elements/1.1/",
-	gml _"http://purl.org/ifgi/gml/0.4#"
+	gml _"http://purl.org/ifgi/gml/0.2#"
  }
 
 ontology SWE
 	
 	annotations
 		dc#publisher hasValue "(a)IfGI, University of Muenster"
-		dc#date hasValue "10-11-2010"
+		dc#date hasValue "2010-11-10"
 		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
 		dc#type hasValue "Ontology"
 		dc#title hasValue "OGC Sensor Web Enablement"
 	endAnnotations
 	
-	importsOntology {_"http://purl.org/ifgi/gml/0.4#"}
+	importsOntology {_"http://purl.org/ifgi/gml/0.2"}
 	
 	//AggregateTypes
 	

@@ -46,6 +46,11 @@ ontology ows#OWSOntology
 		annotations
 			dc#identifier hasValue "service description@en"
 		endAnnotations
+		
+	concept RequestParameter
+		annotations
+			dc#identifier hasValue "request parameter@en"
+		endAnnotations
 	
 	// Defaults
 	instance ows#DefaultGetCapabilities  memberOf ows#GetCapabilities
