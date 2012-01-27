@@ -9,12 +9,12 @@
 @prefix posm: <http://purl.org/ifgi/posm#> .
 @prefix dolce: <http://purl.org/net/wsml/dolceDnS#> .
 
-_:node16dn68gagx10 a owl:Ontology ;
+_:node16kg83qlpx20 a owl:Ontology ;
 	rdfs:label "WFS" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/ows/0.2#> , <http://purl.org/net/wsml/dolceDnS#> , <http://purl.org/ifgi/posm#> ;
 	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
-	dc:date "10-11-2010"^^xsd:string ;
+	dc:date "2010-11-10"^^xsd:string ;
 	dc:rights "http://creativecommons.org/licenses/by/3.0/"^^xsd:string ;
 	dc:type "Ontology"^^xsd:string ;
 	dc:title "OGC Web Feature Service"^^xsd:string .

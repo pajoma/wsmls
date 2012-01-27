@@ -4,14 +4,14 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix : <http://purl.org/ifgi/swe#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix gml: <http://purl.org/ifgi/gml/0.4#> .
+@prefix gml: <http://purl.org/ifgi/gml/0.2#> .
 
-_:node16a8i5n2fx18 a owl:Ontology ;
+_:node16kg83qlpx16 a owl:Ontology ;
 	rdfs:label "SWE" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
-	owl:imports <http://purl.org/ifgi/gml/0.4#> ;
+	owl:imports <http://purl.org/ifgi/gml/0.2> ;
 	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
-	dc:date "10-11-2010"^^xsd:string ;
+	dc:date "2010-11-10"^^xsd:string ;
 	dc:rights "http://creativecommons.org/licenses/by/3.0/"^^xsd:string ;
 	dc:type "Ontology"^^xsd:string ;
 	dc:title "OGC Sensor Web Enablement"^^xsd:string .

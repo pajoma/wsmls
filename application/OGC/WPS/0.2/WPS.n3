@@ -8,12 +8,12 @@
 @prefix ows: <http://purl.org/ifgi/ows/0.2#> .
 @prefix posm: <http://purl.org/ifgi/posm#> .
 
-_:node16dn68gagx12 a owl:Ontology ;
+_:node16kg83qlpx24 a owl:Ontology ;
 	rdfs:label "WPS" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/ows/0.2#> , <http://purl.org/ifgi/posm#> ;
 	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
-	dc:date "10-11-2010"^^xsd:string ;
+	dc:date "2010-11-10"^^xsd:string ;
 	dc:rights "http://creativecommons.org/licenses/by/3.0/"^^xsd:string ;
 	dc:type "Ontology"^^xsd:string ;
 	dc:title "OGC Web Processing Service"^^xsd:string .
@@ -55,6 +55,14 @@ _:node16dn68gagx12 a owl:Ontology ;
 	rdfs:subClassOf posm:MessagePart ;
 	dc:identifier "execute response@en"^^xsd:string ;
 	rdfs:seeAlso <http://schemas.opengis.net/wps/1.0.0/wpsExecute_response.xsd#ExecuteResponse> .
+
+:ExecuteInput a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/wps#ExecuteInput" ;
+	dc:identifier "execute input@en"^^xsd:string .
+
+:ExecuteOutput a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/wps#ExecuteOutput" ;
+	dc:identifier "execute output@en"^^xsd:string .
 
 :DefaultDescribeProcess a :DescribeProcess ;
 	posm:hasOutput :DefaultDescribeProcessResponse ;

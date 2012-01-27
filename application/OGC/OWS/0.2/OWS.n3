@@ -9,7 +9,7 @@
 @prefix sawsdl: <http://www.w3.org/ns/sawsdl#> .
 @prefix dolce: <http://purl.org/ifgi/dolceDnS#> .
 
-_:node16dn68gagx4 a owl:Ontology ;
+_:node16kg83qlpx10 a owl:Ontology ;
 	rdfs:label "OWSOntology" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-core" ;
 	owl:imports <http://www.wsmo.org/ns/wsmo-lite#> , <http://www.wsmo.org/ns/posm/0.2#> , <http://purl.org/ifgi/dolceDnS#> ;
@@ -43,6 +43,10 @@ _:node16dn68gagx4 a owl:Ontology ;
 	rdfs:label "http://purl.org/ifgi/ows/0.2#ServiceDescription" ;
 	rdfs:subClassOf dolce:information_object ;
 	dc:identifier "service description@en"^^xsd:string .
+
+:RequestParameter a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/ows/0.2#RequestParameter" ;
+	dc:identifier "request parameter@en"^^xsd:string .
 
 :DefaultGetCapabilities a :GetCapabilities ;
 	dc:identifier "default get capabilities@en"^^xsd:string ;

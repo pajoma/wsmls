@@ -24,7 +24,7 @@ ontology GML
 
 concept AbstractGML subConceptOf DUL#InformationObject
 	annotations
-			dc#identifier hasValue "abstract GML@en
+			dc#identifier hasValue "abstract GML@en"
 			dc#description hasValue "deprecated"
 	endAnnotations
 

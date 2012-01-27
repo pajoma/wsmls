@@ -12,7 +12,7 @@
 	xmlns:sawsdl="http://www.w3.org/ns/sawsdl#"
 	xmlns:dolce="http://purl.org/ifgi/dolceDnS#">
 
-<rdf:Description rdf:nodeID="node16dn68gagx3">
+<rdf:Description rdf:nodeID="node16kg83qlpx9">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>OWSOntology</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-core</dc:format>
@@ -59,6 +59,12 @@
 	<rdfs:label>http://purl.org/ifgi/ows/0.2#ServiceDescription</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dolceDnS#information_object"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">service description@en</dc:identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/ows/0.2#RequestParameter">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/ows/0.2#RequestParameter</rdfs:label>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">request parameter@en</dc:identifier>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ows/0.2#DefaultGetCapabilities">
