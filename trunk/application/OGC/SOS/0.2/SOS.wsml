@@ -12,7 +12,7 @@ namespace { _"http://purl.org/ifgi/sos#",
 ontology SOS
 	annotations
 		dc#publisher hasValue "(a)IfGI, University of Muenster"
-		dc#date hasValue "25-02-2010"
+		dc#date hasValue "2011-02-25"
 		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
 		dc#type hasValue "Ontology"
 		dc#title hasValue "OGC Sensor Observation Service"

@@ -10,7 +10,7 @@ ontology XLink
 	annotations
 		dc#creator hasValue "pajoma"
 		dc#publisher hasValue "(a)IfGI, University of Muenster"
-		dc#date hasValue "12-02-2010"
+		dc#date hasValue "2010-02-12"
 		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
 		dc#type hasValue "Ontology"
 		dc#title hasValue "GML 3.0 candidate xlinks schema."

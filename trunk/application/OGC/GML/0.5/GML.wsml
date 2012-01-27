@@ -1,0 +1,123 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://purl.org/ifgi/gml/0.2#",
+	gml _"http://purl.org/ifgi/gml/0.2#",
+	xsd _"http://www.w3.org/2001/XMLSchema#",  
+	dc _"http://purl.org/dc/elements/1.1/", 
+	rdfs _"http://www.w3.org/2000/01/rdf-schema#",
+	DUL _"http://www.loa-cnr.it/ontologies/DUL.owl#",
+	ogc _"http://purl.org/ifgi/geosparql#",
+	time _"http://purl.org/ifgi/time#"
+ }
+
+ontology GML
+
+	annotations
+		dc#creator hasValue "Marcell Roth"
+		dc#publisher hasValue "(a)IfGI, University of Muenster"
+		dc#date hasValue "2012-01-27"
+		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+		dc#type hasValue "Ontology"
+		dc#title hasValue "OGC Feature Ontology"
+	endAnnotations
+	
+	importsOntology {_"http://www.loa-cnr.it/ontologies/DUL.owl#", _"http://purl.org/ifgi/geosparql#", _"http://purl.org/ifgi/time#"}
+
+concept AbstractGML subConceptOf DUL#InformationObject
+	annotations
+			dc#identifier hasValue "abstract GML@en
+			dc#description hasValue "deprecated"
+	endAnnotations
+
+concept AbstractFeature subConceptOf AbstractGML
+	annotations
+			dc#identifier hasValue "abstract feature@en"
+			dc#description hasValue "deprecated"
+	endAnnotations
+	
+concept AbstractGeometry subConceptOf FeatureProperty
+	annotations
+			dc#identifier hasValue "abstract geometry@en"
+			dc#description hasValue "deprecated"
+	endAnnotations
+
+concept FeatureProperty subConceptOf ogc#SpatialObject
+	annotations
+			dc#identifier hasValue "feature property@en"
+	endAnnotations
+
+concept FeatureCollection subConceptOf ogc#SpatialObject
+	annotations
+			dc#identifier hasValue "feature collection@en"
+	endAnnotations
+	
+concept Envelope subConceptOf DUL#InformationObject
+	annotations
+			dc#identifier hasValue "envelope@en"
+			dc#description hasValue "deprecated"
+	endAnnotations
+	
+concept SpatioTemporalFeature subConceptOf ogc#Feature
+	annotations
+			dc#identifier hasValue "Spatio Temporal Feature@en"
+	endAnnotations
+
+// Properties
+	
+relation id (ofType ogc#Feature, ofType xsd#ID)
+	annotations
+			dc#identifier hasValue "id@en"
+	endAnnotations
+
+relation hasProperty (ofType ogc#Feature, ofType FeatureProperty)
+	annotations
+			dc#identifier hasValue "has property@en"
+	endAnnotations
+
+relation gml#hasValue (ofType FeatureProperty, ofType xsd#anyType)
+	annotations
+			dc#identifier hasValue "has value@en"
+	endAnnotations
+
+relation upperCorner (ofType Envelope, ofType rdfs#Literal)
+	annotations
+			dc#identifier hasValue "upper corner@en"
+			dc#description hasValue "deprecated"
+	endAnnotations
+
+relation lowerCorner (ofType Envelope, ofType rdfs#Literal)
+	annotations
+			dc#identifier hasValue "lower corner@en"
+			dc#description hasValue "deprecated"
+	endAnnotations
+
+relation hasGeometry (ofType AbstractFeature, ofType AbstractGeometry) subRelationOf gml#hasProperty
+	annotations
+			dc#identifier hasValue "has geometry@en"
+			dc#description hasValue "deprecated"
+	endAnnotations
+
+relation featureMember (ofType FeatureCollection, ofType ogc#Feature) subRelationOf rdfs#member
+	annotations
+			dc#identifier hasValue "feature member@en"
+	endAnnotations
+	
+relation boundedBy (ofType ogc#Feature, ofType ogc#Polygon)
+	annotations
+			dc#identifier hasValue "bounded by@en"
+	endAnnotations
+	
+relation startTime (ofType SpatioTemporalFeature, ofType time#Instant)
+	annotations
+			dc#identifier hasValue "start time@en"
+	endAnnotations
+	
+relation duration (ofType SpatioTemporalFeature, ofType time#Interval)
+	annotations
+			dc#identifier hasValue "duration@en"
+	endAnnotations
+	
+
+
+
+
+

@@ -8,7 +8,7 @@ ontology Base
 
 	annotations
 		dc#publisher hasValue "(a)IfGI, University of Muenster"
-		dc#date hasValue "28-03-2010"
+		dc#date hasValue "2012-03-28"
 		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
 		dc#type hasValue "Ontology"
 		dc#title hasValue "OGC SensorML Base"
@@ -18,7 +18,7 @@ ontology Base
 	
 	importsOntology {_"http://purl.org/ifgi/gml/0.2#"}
 	
-	concept AbstractSML subConceptOf gml#AbstractFeature
+	concept AbstractSML subConceptOf gml#Feature
 		annotations
 			dc#identifier hasValue "abstract sml@en"
 		endAnnotations

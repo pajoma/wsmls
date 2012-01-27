@@ -12,7 +12,7 @@ ontology WPS
 
 	annotations
 		dc#publisher hasValue "(a)IfGI, University of Muenster"
-		dc#date hasValue "10-11-2010"
+		dc#date hasValue "2010-11-10"
 		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
 		dc#type hasValue "Ontology"
 		dc#title hasValue "OGC Web Processing Service"
@@ -59,6 +59,16 @@ ontology WPS
 		annotations
 			dc#identifier hasValue "execute response@en"
 			rdfs#seeAlso hasValue _"http://schemas.opengis.net/wps/1.0.0/wpsExecute_response.xsd#ExecuteResponse"
+		endAnnotations
+		
+	concept ExecuteInput 
+		annotations
+			dc#identifier hasValue "execute input@en"
+		endAnnotations
+		
+	concept ExecuteOutput 
+		annotations
+			dc#identifier hasValue "execute output@en"
 		endAnnotations
 		
 	
