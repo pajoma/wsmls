@@ -58,10 +58,12 @@ _:node16kg83qlpx24 a owl:Ontology ;
 
 :ExecuteInput a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/wps#ExecuteInput" ;
+	rdfs:subClassOf posm:MessagePart ;
 	dc:identifier "execute input@en"^^xsd:string .
 
 :ExecuteOutput a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/wps#ExecuteOutput" ;
+	rdfs:subClassOf posm:MessagePart ;
 	dc:identifier "execute output@en"^^xsd:string .
 
 :DefaultDescribeProcess a :DescribeProcess ;
