@@ -61,12 +61,12 @@ ontology WPS
 			rdfs#seeAlso hasValue _"http://schemas.opengis.net/wps/1.0.0/wpsExecute_response.xsd#ExecuteResponse"
 		endAnnotations
 		
-	concept ExecuteInput 
+	concept ExecuteInput subConceptOf posm#MessagePart
 		annotations
 			dc#identifier hasValue "execute input@en"
 		endAnnotations
 		
-	concept ExecuteOutput 
+	concept ExecuteOutput subConceptOf posm#MessagePart
 		annotations
 			dc#identifier hasValue "execute output@en"
 		endAnnotations

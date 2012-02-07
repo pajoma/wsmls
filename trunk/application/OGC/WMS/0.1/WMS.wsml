@@ -70,7 +70,7 @@ ontology WFS
 		posm#hasInput hasValue DefaultGetFeatureInfoRequest
 	
 	instance DefaultGetFeatureInfoResponse memberOf GetFeatureInfoResponse
-		sawsdl#modelReference hasValue FeatureTypeDescription
+		sawsdl#modelReference hasValue LayerDescription
 		
 	instance DefaultGetFeatureInfoRequest memberOf GetFeatureInfoRequest
 		sawsdl#modelReference hasValue xsd#string

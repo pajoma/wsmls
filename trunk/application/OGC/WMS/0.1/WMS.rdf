@@ -89,7 +89,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/wms#DefaultGetFeatureInfoResponse">
 	<rdf:type rdf:resource="http://purl.org/ifgi/wms#GetFeatureInfoResponse"/>
-	<sawsdl:modelReference rdf:resource="http://purl.org/ifgi/wms#FeatureTypeDescription"/>
+	<sawsdl:modelReference rdf:resource="http://purl.org/ifgi/wms#LayerDescription"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/wms#DefaultGetFeatureInfoRequest">

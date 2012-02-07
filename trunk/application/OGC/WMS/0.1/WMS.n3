@@ -64,7 +64,7 @@ _:node16kg83qlpx22 a owl:Ontology ;
 	posm:hasInput :DefaultGetFeatureInfoRequest .
 
 :DefaultGetFeatureInfoResponse a :GetFeatureInfoResponse ;
-	sawsdl:modelReference :FeatureTypeDescription .
+	sawsdl:modelReference :LayerDescription .
 
 :DefaultGetFeatureInfoRequest a :GetFeatureInfoRequest ;
 	sawsdl:modelReference xsd:string .
