@@ -1,0 +1,139 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://purl.org/ifgi/geo#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+_:node16lc4qmetx2 a owl:Ontology ;
+	rdfs:label "GeoSPARQL" ;
+	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
+	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
+	dc:date "2012-02-07"^^xsd:string ;
+	dc:rights "http://creativecommons.org/licenses/by/3.0/"^^xsd:string ;
+	dc:type "Ontology"^^xsd:string ;
+	dc:title "OGC GeoSPARQL Ontology"^^xsd:string ;
+	dc:description "Taken from the GeoSPARQL ontology"^^xsd:string ;
+	dc:source "See http://www.w3.org/2011/02/GeoSPARQL.pdf"^^xsd:string .
+
+:SpatialObject a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geo#SpatialObject" .
+
+:Feature a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geo#Feature" ;
+	rdfs:subClassOf :SpatialObject .
+
+:Geometry a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geo#Geometry" ;
+	rdfs:subClassOf :SpatialObject .
+
+:Point a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geo#Point" ;
+	rdfs:subClassOf :Geometry .
+
+:Curve a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geo#Curve" ;
+	rdfs:subClassOf :Geometry .
+
+:Surface a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geo#Surface" ;
+	rdfs:subClassOf :Geometry .
+
+:GeometryCollection a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geo#GeometryCollection" ;
+	rdfs:subClassOf :Geometry .
+
+:ArcString a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geo#ArcString" ;
+	rdfs:subClassOf :Curve .
+
+:LineString a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geo#LineString" ;
+	rdfs:subClassOf :Curve .
+
+:Polygon a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geo#Polygon" ;
+	rdfs:subClassOf :Surface .
+
+:PolyhedralSurface a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geo#PolyhedralSurface" ;
+	rdfs:subClassOf :Surface .
+
+:Triangle a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geo#Triangle" ;
+	rdfs:subClassOf :Polygon .
+
+:TIN a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geo#TIN" ;
+	rdfs:subClassOf :PolyhedralSurface .
+
+:MultiPoint a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geo#MultiPoint" ;
+	rdfs:subClassOf :GeometryCollection .
+
+:MultiCurve a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geo#MultiCurve" ;
+	rdfs:subClassOf :GeometryCollection .
+
+:MultiSurface a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geo#MultiSurface" ;
+	rdfs:subClassOf :GeometryCollection .
+
+:MultiArcString a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geo#MultiArcString" ;
+	rdfs:subClassOf :MultiCurve .
+
+:MultiLineString a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geo#MultiLineString" ;
+	rdfs:subClassOf :MultiCurve .
+
+:MultiPolygon a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geo#MultiPolygon" ;
+	rdfs:subClassOf :MultiSurface .
+
+:WKTLiteral a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geo#WKTLiteral" .
+
+:GMLLiteral a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geo#GMLLiteral" ;
+	rdfs:subClassOf rdf:XMLLiteral .
+
+:defaultGeometry a rdf:Property ;
+	rdfs:domain :Feature ;
+	rdfs:range :Geometry .
+
+:hasGeometry a rdf:Property ;
+	rdfs:domain :Feature ;
+	rdfs:range :Geometry .
+
+:isEmpty a rdf:Property ;
+	rdfs:domain :Geometry ;
+	rdfs:range xsd:boolean .
+
+:isSimple a rdf:Property ;
+	rdfs:domain :Geometry ;
+	rdfs:range xsd:boolean .
+
+:is3D a rdf:Property ;
+	rdfs:domain :Geometry ;
+	rdfs:range xsd:boolean .
+
+:asWKT a rdf:Property ;
+	rdfs:domain :Geometry ;
+	rdfs:range :WKTLiteral .
+
+:asGML a rdf:Property ;
+	rdfs:domain :Geometry ;
+	rdfs:range :GMLLiteral .
+
+:spatialDimension a rdf:Property ;
+	rdfs:domain :Geometry ;
+	rdfs:range xsd:integer .
+
+:dimension a rdf:Property ;
+	rdfs:domain :Geometry ;
+	rdfs:range xsd:integer .
+
+:coordinateDimension a rdf:Property ;
+	rdfs:domain :Geometry ;
+	rdfs:range xsd:integer .
