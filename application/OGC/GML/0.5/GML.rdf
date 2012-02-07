@@ -9,9 +9,9 @@
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns:DUL="http://www.loa-cnr.it/ontologies/DUL.owl#"
 	xmlns:ogc="http://purl.org/ifgi/geosparql#"
-	xmlns:time="http://purl.org/ifgi/time#">
+	xmlns:time="http://w3.org/2006/time#">
 
-<rdf:Description rdf:nodeID="node16kg83qlpx3">
+<rdf:Description rdf:nodeID="node16lc2ued0x1">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>GML</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -143,14 +143,14 @@
 <rdf:Description rdf:about="http://purl.org/ifgi/gml/0.2#startTime">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/gml/0.2#SpatioTemporalFeature"/>
-	<rdfs:range rdf:resource="http://purl.org/ifgi/time#Instant"/>
+	<rdfs:range rdf:resource="http://w3.org/2006/time#Instant"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">start time@en</dc:identifier>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/gml/0.2#duration">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/gml/0.2#SpatioTemporalFeature"/>
-	<rdfs:range rdf:resource="http://purl.org/ifgi/time#Interval"/>
+	<rdfs:range rdf:resource="http://w3.org/2006/time#Interval"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">duration@en</dc:identifier>
 </rdf:Description>
 
