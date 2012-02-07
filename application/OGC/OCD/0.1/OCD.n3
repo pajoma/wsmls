@@ -6,7 +6,7 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix gml: <http://purl.org/ifgi/gml/0.2#> .
 
-_:node16kg83qlpx6 a owl:Ontology ;
+_:node16lc3h6nvx2 a owl:Ontology ;
 	rdfs:label "OCD" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/gml/0.2#> ;
@@ -20,44 +20,58 @@ _:node16kg83qlpx6 a owl:Ontology ;
 :BoundingBox a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/ocd#BoundingBox" ;
 	rdfs:subClassOf gml:AbstractGeometry ;
-	dc:identifier "bounding box@en"^^xsd:string .
+	dc:identifier "bounding box@en"^^xsd:string ;
+	dc:description "deprecated"^^xsd:string .
+
+:Layer a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/ocd#Layer" ;
+	rdfs:subClassOf gml:FeatureCollection ;
+	dc:identifier "layer@en"^^xsd:string .
 
 :AbstractTimeObject a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/ocd#AbstractTimeObject" ;
 	rdfs:subClassOf gml:FeatureProperty ;
-	dc:identifier "abstract time object@en"^^xsd:string .
+	dc:identifier "abstract time object@en"^^xsd:string ;
+	dc:description "deprecated"^^xsd:string .
 
 :TimeSequence a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/ocd#TimeSequence" ;
 	rdfs:subClassOf :AbstractTimeObject ;
-	dc:identifier "time sequence@en"^^xsd:string .
+	dc:identifier "time sequence@en"^^xsd:string ;
+	dc:description "deprecated"^^xsd:string .
 
 :TimePoint a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/ocd#TimePoint" ;
 	rdfs:subClassOf :AbstractTimeObject ;
-	dc:identifier "time point@en"^^xsd:string .
+	dc:identifier "time point@en"^^xsd:string ;
+	dc:description "deprecated"^^xsd:string .
 
 :boundedBy a rdf:Property ;
 	rdfs:domain gml:AbstractFeature ;
 	rdfs:range :BoundingBox ;
-	dc:identifier "bound by@en"^^xsd:string .
+	dc:identifier "bound by@en"^^xsd:string ;
+	dc:description "deprecated"^^xsd:string .
 
 :upperCorner a rdf:Property ;
 	rdfs:domain :BoundingBox ;
 	rdfs:range rdfs:Literal ;
-	dc:identifier "upper corner@en"^^xsd:string .
+	dc:identifier "upper corner@en"^^xsd:string ;
+	dc:description "deprecated"^^xsd:string .
 
 :lowerCorner a rdf:Property ;
 	rdfs:domain :BoundingBox ;
 	rdfs:range rdfs:Literal ;
-	dc:identifier "lower corner@en"^^xsd:string .
+	dc:identifier "lower corner@en"^^xsd:string ;
+	dc:description "deprecated"^^xsd:string .
 
 :hasStartPoint a rdf:Property ;
 	rdfs:domain :TimeSequence ;
 	rdfs:range xsd:dateTime ;
-	dc:identifier "has start point@en"^^xsd:string .
+	dc:identifier "has start point@en"^^xsd:string ;
+	dc:description "deprecated"^^xsd:string .
 
 :hasEndPoint a rdf:Property ;
 	rdfs:domain :TimeSequence ;
 	rdfs:range xsd:dateTime ;
-	dc:identifier "has end point@en"^^xsd:string .
+	dc:identifier "has end point@en"^^xsd:string ;
+	dc:description "deprecated"^^xsd:string .

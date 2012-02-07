@@ -22,21 +22,30 @@ ontology OCD
 	concept BoundingBox subConceptOf gml#AbstractGeometry
 		annotations
 			dc#identifier hasValue "bounding box@en"
+			dc#description hasValue "deprecated"
+		endAnnotations
+	
+	concept Layer subConceptOf gml#FeatureCollection
+		annotations
+			dc#identifier hasValue "layer@en"
 		endAnnotations
 	
 	concept AbstractTimeObject subConceptOf gml#FeatureProperty
 		annotations
 			dc#identifier hasValue "abstract time object@en"
+			dc#description hasValue "deprecated"
 		endAnnotations
 	
 	concept TimeSequence subConceptOf AbstractTimeObject
 		annotations
 			dc#identifier hasValue "time sequence@en"
+			dc#description hasValue "deprecated"
 		endAnnotations
 	
 	concept TimePoint subConceptOf AbstractTimeObject
 		annotations
 			dc#identifier hasValue "time point@en"
+			dc#description hasValue "deprecated"
 		endAnnotations
 	
 	// Properties
@@ -44,24 +53,29 @@ ontology OCD
 	relation boundedBy (ofType gml#AbstractFeature, ofType BoundingBox)
 		annotations
 			dc#identifier hasValue "bound by@en"
+			dc#description hasValue "deprecated"
 		endAnnotations
 	
 	relation upperCorner (ofType BoundingBox, ofType rdfs#Literal)
 		annotations
 			dc#identifier hasValue "upper corner@en"
+			dc#description hasValue "deprecated"
 		endAnnotations
 
 	relation lowerCorner (ofType BoundingBox, ofType rdfs#Literal)
 		annotations
 			dc#identifier hasValue "lower corner@en"
+			dc#description hasValue "deprecated"
 		endAnnotations
 	
 	relation hasStartPoint (ofType TimeSequence, ofType xsd#dateTime)
 		annotations
 			dc#identifier hasValue "has start point@en"
+			dc#description hasValue "deprecated"
 		endAnnotations
 	
 	relation hasEndPoint (ofType TimeSequence, ofType xsd#dateTime)
 		annotations
 			dc#identifier hasValue "has end point@en"
+			dc#description hasValue "deprecated"
 		endAnnotations
