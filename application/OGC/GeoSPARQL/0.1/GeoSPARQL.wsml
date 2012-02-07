@@ -1,0 +1,84 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://purl.org/ifgi/geo#",
+	xsd _"http://www.w3.org/2001/XMLSchema#",  
+	dc _"http://purl.org/dc/elements/1.1/", 
+	rdfs _"http://www.w3.org/2000/01/rdf-schema#",
+	rdf _"http://www.w3.org/1999/02/22-rdf-syntax-ns"
+ }
+
+ontology GeoSPARQL
+
+	annotations
+		dc#publisher hasValue "(a)IfGI, University of Muenster"
+		dc#date hasValue "2012-02-07"
+		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+		dc#type hasValue "Ontology"
+		dc#title hasValue "OGC GeoSPARQL Ontology"
+		dc#description hasValue "Taken from the GeoSPARQL ontology"
+		dc#source hasValue "See http://www.w3.org/2011/02/GeoSPARQL.pdf"
+	endAnnotations
+	
+concept SpatialObject
+
+concept Feature subConceptOf SpatialObject
+
+concept Geometry subConceptOf SpatialObject
+
+concept Point subConceptOf Geometry
+
+concept Curve subConceptOf Geometry
+
+concept Surface subConceptOf Geometry
+
+concept GeometryCollection subConceptOf Geometry
+
+concept ArcString subConceptOf Curve
+
+concept LineString subConceptOf Curve
+
+concept Polygon subConceptOf Surface
+
+concept PolyhedralSurface subConceptOf Surface
+
+concept Triangle subConceptOf Polygon
+
+concept TIN subConceptOf PolyhedralSurface
+
+concept MultiPoint subConceptOf GeometryCollection
+
+concept MultiCurve subConceptOf GeometryCollection
+
+concept MultiSurface subConceptOf GeometryCollection
+
+concept MultiArcString subConceptOf MultiCurve
+
+concept MultiLineString subConceptOf MultiCurve
+
+concept MultiPolygon subConceptOf MultiSurface
+
+concept WKTLiteral
+
+concept GMLLiteral subConceptOf rdf#XMLLiteral
+
+
+// Properties
+
+relation defaultGeometry (ofType Feature, ofType Geometry)
+
+relation hasGeometry (ofType Feature, ofType Geometry)
+
+relation isEmpty (ofType Geometry, ofType xsd#boolean)
+
+relation isSimple (ofType Geometry, ofType xsd#boolean)
+
+relation is3D (ofType Geometry, ofType xsd#boolean)
+
+relation asWKT (ofType Geometry, ofType WKTLiteral)
+
+relation asGML (ofType Geometry, ofType GMLLiteral)
+
+relation spatialDimension (ofType Geometry, ofType xsd#integer)
+
+relation dimension (ofType Geometry, ofType xsd#integer)
+
+relation coordinateDimension (ofType Geometry, ofType xsd#integer)
