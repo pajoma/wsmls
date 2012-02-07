@@ -6,9 +6,9 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix DUL: <http://www.loa-cnr.it/ontologies/DUL.owl#> .
 @prefix ogc: <http://purl.org/ifgi/geosparql#> .
-@prefix time: <http://purl.org/ifgi/time#> .
+@prefix time: <http://w3.org/2006/time#> .
 
-_:node16kg83qlpx4 a owl:Ontology ;
+_:node16lc2ued0x2 a owl:Ontology ;
 	rdfs:label "GML" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://www.loa-cnr.it/ontologies/DUL.owl#> , <http://purl.org/ifgi/geosparql#> , <http://purl.org/ifgi/time#> ;
