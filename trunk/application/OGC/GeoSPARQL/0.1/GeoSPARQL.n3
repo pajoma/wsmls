@@ -5,7 +5,7 @@
 @prefix : <http://purl.org/ifgi/geosparql#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 
-_:node16lc4qmetx2 a owl:Ontology ;
+_:node16lent8itx2 a owl:Ontology ;
 	rdfs:label "GeoSPARQL" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
@@ -17,85 +17,85 @@ _:node16lc4qmetx2 a owl:Ontology ;
 	dc:source "See http://www.w3.org/2011/02/GeoSPARQL.pdf"^^xsd:string .
 
 :SpatialObject a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/geo#SpatialObject" .
+	rdfs:label "http://purl.org/ifgi/geosparql#SpatialObject" .
 
 :Feature a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/geo#Feature" ;
+	rdfs:label "http://purl.org/ifgi/geosparql#Feature" ;
 	rdfs:subClassOf :SpatialObject .
 
 :Geometry a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/geo#Geometry" ;
+	rdfs:label "http://purl.org/ifgi/geosparql#Geometry" ;
 	rdfs:subClassOf :SpatialObject .
 
 :Point a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/geo#Point" ;
+	rdfs:label "http://purl.org/ifgi/geosparql#Point" ;
 	rdfs:subClassOf :Geometry .
 
 :Curve a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/geo#Curve" ;
+	rdfs:label "http://purl.org/ifgi/geosparql#Curve" ;
 	rdfs:subClassOf :Geometry .
 
 :Surface a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/geo#Surface" ;
+	rdfs:label "http://purl.org/ifgi/geosparql#Surface" ;
 	rdfs:subClassOf :Geometry .
 
 :GeometryCollection a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/geo#GeometryCollection" ;
+	rdfs:label "http://purl.org/ifgi/geosparql#GeometryCollection" ;
 	rdfs:subClassOf :Geometry .
 
 :ArcString a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/geo#ArcString" ;
+	rdfs:label "http://purl.org/ifgi/geosparql#ArcString" ;
 	rdfs:subClassOf :Curve .
 
 :LineString a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/geo#LineString" ;
+	rdfs:label "http://purl.org/ifgi/geosparql#LineString" ;
 	rdfs:subClassOf :Curve .
 
 :Polygon a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/geo#Polygon" ;
+	rdfs:label "http://purl.org/ifgi/geosparql#Polygon" ;
 	rdfs:subClassOf :Surface .
 
 :PolyhedralSurface a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/geo#PolyhedralSurface" ;
+	rdfs:label "http://purl.org/ifgi/geosparql#PolyhedralSurface" ;
 	rdfs:subClassOf :Surface .
 
 :Triangle a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/geo#Triangle" ;
+	rdfs:label "http://purl.org/ifgi/geosparql#Triangle" ;
 	rdfs:subClassOf :Polygon .
 
 :TIN a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/geo#TIN" ;
+	rdfs:label "http://purl.org/ifgi/geosparql#TIN" ;
 	rdfs:subClassOf :PolyhedralSurface .
 
 :MultiPoint a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/geo#MultiPoint" ;
+	rdfs:label "http://purl.org/ifgi/geosparql#MultiPoint" ;
 	rdfs:subClassOf :GeometryCollection .
 
 :MultiCurve a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/geo#MultiCurve" ;
+	rdfs:label "http://purl.org/ifgi/geosparql#MultiCurve" ;
 	rdfs:subClassOf :GeometryCollection .
 
 :MultiSurface a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/geo#MultiSurface" ;
+	rdfs:label "http://purl.org/ifgi/geosparql#MultiSurface" ;
 	rdfs:subClassOf :GeometryCollection .
 
 :MultiArcString a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/geo#MultiArcString" ;
+	rdfs:label "http://purl.org/ifgi/geosparql#MultiArcString" ;
 	rdfs:subClassOf :MultiCurve .
 
 :MultiLineString a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/geo#MultiLineString" ;
+	rdfs:label "http://purl.org/ifgi/geosparql#MultiLineString" ;
 	rdfs:subClassOf :MultiCurve .
 
 :MultiPolygon a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/geo#MultiPolygon" ;
+	rdfs:label "http://purl.org/ifgi/geosparql#MultiPolygon" ;
 	rdfs:subClassOf :MultiSurface .
 
 :WKTLiteral a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/geo#WKTLiteral" .
+	rdfs:label "http://purl.org/ifgi/geosparql#WKTLiteral" .
 
 :GMLLiteral a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/geo#GMLLiteral" ;
+	rdfs:label "http://purl.org/ifgi/geosparql#GMLLiteral" ;
 	rdfs:subClassOf rdf:XMLLiteral .
 
 :defaultGeometry a rdf:Property ;

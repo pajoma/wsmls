@@ -7,7 +7,7 @@
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/">
 
-<rdf:Description rdf:nodeID="node16lc4qmetx1">
+<rdf:Description rdf:nodeID="node16lent8itx1">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>GeoSPARQL</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -20,187 +20,187 @@
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">See http://www.w3.org/2011/02/GeoSPARQL.pdf</dc:source>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/geo#SpatialObject">
+<rdf:Description rdf:about="http://purl.org/ifgi/geosparql#SpatialObject">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:label>http://purl.org/ifgi/geo#SpatialObject</rdfs:label>
+	<rdfs:label>http://purl.org/ifgi/geosparql#SpatialObject</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/geo#Feature">
+<rdf:Description rdf:about="http://purl.org/ifgi/geosparql#Feature">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:label>http://purl.org/ifgi/geo#Feature</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geo#SpatialObject"/>
+	<rdfs:label>http://purl.org/ifgi/geosparql#Feature</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geosparql#SpatialObject"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/geo#Geometry">
+<rdf:Description rdf:about="http://purl.org/ifgi/geosparql#Geometry">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:label>http://purl.org/ifgi/geo#Geometry</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geo#SpatialObject"/>
+	<rdfs:label>http://purl.org/ifgi/geosparql#Geometry</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geosparql#SpatialObject"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/geo#Point">
+<rdf:Description rdf:about="http://purl.org/ifgi/geosparql#Point">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:label>http://purl.org/ifgi/geo#Point</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geo#Geometry"/>
+	<rdfs:label>http://purl.org/ifgi/geosparql#Point</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geosparql#Geometry"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/geo#Curve">
+<rdf:Description rdf:about="http://purl.org/ifgi/geosparql#Curve">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:label>http://purl.org/ifgi/geo#Curve</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geo#Geometry"/>
+	<rdfs:label>http://purl.org/ifgi/geosparql#Curve</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geosparql#Geometry"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/geo#Surface">
+<rdf:Description rdf:about="http://purl.org/ifgi/geosparql#Surface">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:label>http://purl.org/ifgi/geo#Surface</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geo#Geometry"/>
+	<rdfs:label>http://purl.org/ifgi/geosparql#Surface</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geosparql#Geometry"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/geo#GeometryCollection">
+<rdf:Description rdf:about="http://purl.org/ifgi/geosparql#GeometryCollection">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:label>http://purl.org/ifgi/geo#GeometryCollection</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geo#Geometry"/>
+	<rdfs:label>http://purl.org/ifgi/geosparql#GeometryCollection</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geosparql#Geometry"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/geo#ArcString">
+<rdf:Description rdf:about="http://purl.org/ifgi/geosparql#ArcString">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:label>http://purl.org/ifgi/geo#ArcString</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geo#Curve"/>
+	<rdfs:label>http://purl.org/ifgi/geosparql#ArcString</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geosparql#Curve"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/geo#LineString">
+<rdf:Description rdf:about="http://purl.org/ifgi/geosparql#LineString">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:label>http://purl.org/ifgi/geo#LineString</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geo#Curve"/>
+	<rdfs:label>http://purl.org/ifgi/geosparql#LineString</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geosparql#Curve"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/geo#Polygon">
+<rdf:Description rdf:about="http://purl.org/ifgi/geosparql#Polygon">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:label>http://purl.org/ifgi/geo#Polygon</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geo#Surface"/>
+	<rdfs:label>http://purl.org/ifgi/geosparql#Polygon</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geosparql#Surface"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/geo#PolyhedralSurface">
+<rdf:Description rdf:about="http://purl.org/ifgi/geosparql#PolyhedralSurface">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:label>http://purl.org/ifgi/geo#PolyhedralSurface</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geo#Surface"/>
+	<rdfs:label>http://purl.org/ifgi/geosparql#PolyhedralSurface</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geosparql#Surface"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/geo#Triangle">
+<rdf:Description rdf:about="http://purl.org/ifgi/geosparql#Triangle">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:label>http://purl.org/ifgi/geo#Triangle</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geo#Polygon"/>
+	<rdfs:label>http://purl.org/ifgi/geosparql#Triangle</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geosparql#Polygon"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/geo#TIN">
+<rdf:Description rdf:about="http://purl.org/ifgi/geosparql#TIN">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:label>http://purl.org/ifgi/geo#TIN</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geo#PolyhedralSurface"/>
+	<rdfs:label>http://purl.org/ifgi/geosparql#TIN</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geosparql#PolyhedralSurface"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/geo#MultiPoint">
+<rdf:Description rdf:about="http://purl.org/ifgi/geosparql#MultiPoint">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:label>http://purl.org/ifgi/geo#MultiPoint</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geo#GeometryCollection"/>
+	<rdfs:label>http://purl.org/ifgi/geosparql#MultiPoint</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geosparql#GeometryCollection"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/geo#MultiCurve">
+<rdf:Description rdf:about="http://purl.org/ifgi/geosparql#MultiCurve">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:label>http://purl.org/ifgi/geo#MultiCurve</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geo#GeometryCollection"/>
+	<rdfs:label>http://purl.org/ifgi/geosparql#MultiCurve</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geosparql#GeometryCollection"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/geo#MultiSurface">
+<rdf:Description rdf:about="http://purl.org/ifgi/geosparql#MultiSurface">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:label>http://purl.org/ifgi/geo#MultiSurface</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geo#GeometryCollection"/>
+	<rdfs:label>http://purl.org/ifgi/geosparql#MultiSurface</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geosparql#GeometryCollection"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/geo#MultiArcString">
+<rdf:Description rdf:about="http://purl.org/ifgi/geosparql#MultiArcString">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:label>http://purl.org/ifgi/geo#MultiArcString</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geo#MultiCurve"/>
+	<rdfs:label>http://purl.org/ifgi/geosparql#MultiArcString</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geosparql#MultiCurve"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/geo#MultiLineString">
+<rdf:Description rdf:about="http://purl.org/ifgi/geosparql#MultiLineString">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:label>http://purl.org/ifgi/geo#MultiLineString</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geo#MultiCurve"/>
+	<rdfs:label>http://purl.org/ifgi/geosparql#MultiLineString</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geosparql#MultiCurve"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/geo#MultiPolygon">
+<rdf:Description rdf:about="http://purl.org/ifgi/geosparql#MultiPolygon">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:label>http://purl.org/ifgi/geo#MultiPolygon</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geo#MultiSurface"/>
+	<rdfs:label>http://purl.org/ifgi/geosparql#MultiPolygon</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geosparql#MultiSurface"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/geo#WKTLiteral">
+<rdf:Description rdf:about="http://purl.org/ifgi/geosparql#WKTLiteral">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:label>http://purl.org/ifgi/geo#WKTLiteral</rdfs:label>
+	<rdfs:label>http://purl.org/ifgi/geosparql#WKTLiteral</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/geo#GMLLiteral">
+<rdf:Description rdf:about="http://purl.org/ifgi/geosparql#GMLLiteral">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:label>http://purl.org/ifgi/geo#GMLLiteral</rdfs:label>
+	<rdfs:label>http://purl.org/ifgi/geosparql#GMLLiteral</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/geo#defaultGeometry">
+<rdf:Description rdf:about="http://purl.org/ifgi/geosparql#defaultGeometry">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:domain rdf:resource="http://purl.org/ifgi/geo#Feature"/>
-	<rdfs:range rdf:resource="http://purl.org/ifgi/geo#Geometry"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/geosparql#Feature"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/geosparql#Geometry"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/geo#hasGeometry">
+<rdf:Description rdf:about="http://purl.org/ifgi/geosparql#hasGeometry">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:domain rdf:resource="http://purl.org/ifgi/geo#Feature"/>
-	<rdfs:range rdf:resource="http://purl.org/ifgi/geo#Geometry"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/geosparql#Feature"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/geosparql#Geometry"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/geo#isEmpty">
+<rdf:Description rdf:about="http://purl.org/ifgi/geosparql#isEmpty">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:domain rdf:resource="http://purl.org/ifgi/geo#Geometry"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/geosparql#Geometry"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/geo#isSimple">
+<rdf:Description rdf:about="http://purl.org/ifgi/geosparql#isSimple">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:domain rdf:resource="http://purl.org/ifgi/geo#Geometry"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/geosparql#Geometry"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/geo#is3D">
+<rdf:Description rdf:about="http://purl.org/ifgi/geosparql#is3D">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:domain rdf:resource="http://purl.org/ifgi/geo#Geometry"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/geosparql#Geometry"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/geo#asWKT">
+<rdf:Description rdf:about="http://purl.org/ifgi/geosparql#asWKT">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:domain rdf:resource="http://purl.org/ifgi/geo#Geometry"/>
-	<rdfs:range rdf:resource="http://purl.org/ifgi/geo#WKTLiteral"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/geosparql#Geometry"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/geosparql#WKTLiteral"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/geo#asGML">
+<rdf:Description rdf:about="http://purl.org/ifgi/geosparql#asGML">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:domain rdf:resource="http://purl.org/ifgi/geo#Geometry"/>
-	<rdfs:range rdf:resource="http://purl.org/ifgi/geo#GMLLiteral"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/geosparql#Geometry"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/geosparql#GMLLiteral"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/geo#spatialDimension">
+<rdf:Description rdf:about="http://purl.org/ifgi/geosparql#spatialDimension">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:domain rdf:resource="http://purl.org/ifgi/geo#Geometry"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/geosparql#Geometry"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/geo#dimension">
+<rdf:Description rdf:about="http://purl.org/ifgi/geosparql#dimension">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:domain rdf:resource="http://purl.org/ifgi/geo#Geometry"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/geosparql#Geometry"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/geo#coordinateDimension">
+<rdf:Description rdf:about="http://purl.org/ifgi/geosparql#coordinateDimension">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:domain rdf:resource="http://purl.org/ifgi/geo#Geometry"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/geosparql#Geometry"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
 </rdf:Description>
 
