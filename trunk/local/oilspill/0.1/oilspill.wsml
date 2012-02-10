@@ -501,7 +501,7 @@ ontology OilSpill
 			dc#source hasValue "http://en.wikipedia.org/wiki/Shoaling_and_schooling"
 		endAnnotations
 		dolce#has_quality ofType {average_weight, lethality, population_size}
-		dolce#proper_part_of ofType fish
+		dolce#proper_has_part ofType fish
 	
 	concept schooling subConceptOf shoaling
 		annotations

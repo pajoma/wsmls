@@ -26,7 +26,7 @@ concept geographic_system subConceptOf ptrn#System
 		dc#comment hasValue "a system in the geographical space"
 		dc#subject hasValue "Systems"		
 	endAnnotations 
-	surroundedBy impliesType Environment
+	surroundedBy impliesType environment
 			annotations
 				dc#identifier hasValue "umgeben von@de"
 				dc#identifier hasValue "sourrounded by@en"

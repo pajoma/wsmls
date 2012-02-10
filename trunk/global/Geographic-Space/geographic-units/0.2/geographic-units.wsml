@@ -3,7 +3,9 @@ namespace { _"http://purl.org/ifgi/geounits#",
 		dc _"http://purl.org/dc/elements/1.1/",
      	rdfs _"http://www.w3.org/2000/01/rdf-schema#",
      	dolce _"http://purl.org/ifgi/dolce#",
-     	dolceSpatial _"http://purl.org/ifgi/dolceSpatial#"
+     	dolceSpatial _"http://purl.org/ifgi/dolceSpatial#",
+     	geospace _"http://purl.org/ifgi/geospace#",
+     	geoevent _"http://purl.org/ifgi/geoevents#"
      	}
 
 ontology geographic_units
@@ -18,9 +20,9 @@ ontology geographic_units
 		dc#subject hasValue "Geography"			
      endAnnotations
 	
-	importsOntology {_"http://purl.org/ifgi/dolceSpatial#"}
+	importsOntology {_"http://purl.org/ifgi/dolceSpatial#", _"http://purl.org/ifgi/geospace#", _"http://purl.org/ifgi/geoevents#"}
 
-concept natural_unit subConceptOf geographical_unit
+concept natural_unit subConceptOf geospace#geographical_unit
 	annotations
 		dc#identifier hasValue "Natürliche Einheit@de"
 		dc#identifier hasValue "Natural Unit@en"
@@ -28,7 +30,7 @@ concept natural_unit subConceptOf geographical_unit
 		dc#subject hasValue "Units"	
 	endAnnotations 
 
-concept anthropogenic_unit subConceptOf geographical_unit
+concept anthropogenic_unit subConceptOf geospace#geographical_unit
 	annotations
 		dc#identifier hasValue "Vom Menschen erbautes Objekt@de"
 		dc#identifier hasValue "Anthropogenic Unit@en"
@@ -43,7 +45,7 @@ concept anthropogenic_unit subConceptOf geographical_unit
  	Geomorphology is the study of landforms
  	check out: http://en.wikipedia.org/wiki/Landforms
 */
-concept geomorphological_unit subConceptOf geographical_unit
+concept geomorphological_unit subConceptOf geospace#geographical_unit
 	annotations
 		dc#identifier hasValue "Geomorphologische Einheit@de"
 		dc#identifier hasValue "Geomorphological Unit@en"
@@ -61,23 +63,23 @@ concept geomorphological_unit subConceptOf geographical_unit
  
 
  */
-concept landcover_unit subConceptOf geographical_unit
+concept landcover_unit subConceptOf geospace#geographical_unit
 	annotations
 		dc#identifier hasValue "Einheit der Landbedeckung@de"
 		dc#identifier hasValue "Land Cover Unit@en"
 		dc#description hasValue "Land cover is the physical state of the land surface. Land Cover Units are discernible parts of Land Cover, e.g. the forest or a street"
 		dc#subject hasValue "Units"	 
 	endAnnotations
-	covers ofType geographical_unit
+	covers ofType geospace#geographical_unit
 		annotations
 			dc#identifier hasValue "cover@en"
 			dc#identifier hasValue "bedecken@de"
 			dc#description hasValue "" 
 		endAnnotations
-	dolce#participant_in ofType ground_movement
+	dolce#participant_in ofType geoevent#ground_movement
 
 
-concept vegetation_community subConceptOf LandCoverUnit
+concept vegetation_community subConceptOf landcover_unit
 	annotations
 		dc#identifier hasValue "Vegetation@de"
 		dc#identifier hasValue "Vegetation@en"

@@ -7,13 +7,17 @@
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns:dolce="http://purl.org/ifgi/dolce#"
-	xmlns:dolceSpatial="http://purl.org/ifgi/dolceSpatial#">
+	xmlns:dolceSpatial="http://purl.org/ifgi/dolceSpatial#"
+	xmlns:geospace="http://purl.org/ifgi/geospace#"
+	xmlns:geoevent="http://purl.org/ifgi/geoevents#">
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx245">
+<rdf:Description rdf:nodeID="node16ljqakpux7">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>geographic_units</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
 	<owl:imports rdf:resource="http://purl.org/ifgi/dolceSpatial#"/>
+	<owl:imports rdf:resource="http://purl.org/ifgi/geospace#"/>
+	<owl:imports rdf:resource="http://purl.org/ifgi/geoevents#"/>
 	<dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">p.maue (IFGI)</dc:creator>
 	<dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">e.klien (IFGI)</dc:contributor>
 	<dc:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(a)IfGI, University of Muenster</dc:publisher>
@@ -27,7 +31,7 @@
 <rdf:Description rdf:about="http://purl.org/ifgi/geounits#natural_unit">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/geounits#natural_unit</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geounits#geographical_unit"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geospace#geographical_unit"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Natürliche Einheit@de</dc:identifier>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Natural Unit@en</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A geographic unit created naturally</dc:description>
@@ -37,7 +41,7 @@
 <rdf:Description rdf:about="http://purl.org/ifgi/geounits#anthropogenic_unit">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/geounits#anthropogenic_unit</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geounits#geographical_unit"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geospace#geographical_unit"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vom Menschen erbautes Objekt@de</dc:identifier>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anthropogenic Unit@en</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A geographic unit created by humans</dc:description>
@@ -47,7 +51,7 @@
 <rdf:Description rdf:about="http://purl.org/ifgi/geounits#geomorphological_unit">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/geounits#geomorphological_unit</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geounits#geographical_unit"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geospace#geographical_unit"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geomorphologische Einheit@de</dc:identifier>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geomorphological Unit@en</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A landform comprises a geomorphological unit</dc:description>
@@ -57,34 +61,34 @@
 <rdf:Description rdf:about="http://purl.org/ifgi/geounits#landcover_unit">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/geounits#landcover_unit</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geounits#geographical_unit"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geospace#geographical_unit"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Einheit der Landbedeckung@de</dc:identifier>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Land Cover Unit@en</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Land cover is the physical state of the land surface. Land Cover Units are discernible parts of Land Cover, e.g. the forest or a street</dc:description>
 	<dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Units</dc:subject>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx246">
+<rdf:Description rdf:nodeID="node16ljqakpux8">
 	<rdfs:label>http://purl.org/ifgi/geounits#covers</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/geounits#landcover_unit"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cover@en</dc:identifier>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bedecken@de</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:range rdf:resource="http://purl.org/ifgi/geounits#geographical_unit"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/geospace#geographical_unit"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx247">
+<rdf:Description rdf:nodeID="node16ljqakpux9">
 	<rdfs:label>http://purl.org/ifgi/dolce#participant_in</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/geounits#landcover_unit"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:range rdf:resource="http://purl.org/ifgi/geounits#ground_movement"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/geoevents#ground_movement"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/geounits#vegetation_community">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/geounits#vegetation_community</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geounits#LandCoverUnit"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geounits#landcover_unit"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vegetation@de</dc:identifier>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vegetation@en</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The plants of an area considered in general or as communities, but not taxonomically;</dc:description>
