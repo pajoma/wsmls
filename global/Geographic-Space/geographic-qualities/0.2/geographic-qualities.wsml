@@ -2,7 +2,8 @@ wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
 namespace { _"http://purl.org/ifgi/geoqualities#", 
 		dc _"http://purl.org/dc/elements/1.1/",
      	rdfs _"http://www.w3.org/2000/01/rdf-schema#",
-     	dolce _"http://purl.org/ifgi/dolce#"
+     	dolce _"http://purl.org/ifgi/dolce#",
+     	geospace _"http://purl.org/ifgi/geospace#"
      	}
 
 ontology geographic_qualities
@@ -17,15 +18,15 @@ ontology geographic_qualities
 		dc#subject hasValue "Geography, Quality"		
      endAnnotations
 	 
-	 importsOntology {_"http://purl.org/ifgi/dolce#"}
+	 importsOntology {_"http://purl.org/ifgi/dolce#", _"http://purl.org/ifgi/geospace#"}
  
-concept aspect subConceptOf geographic_quality
+concept aspect subConceptOf geospace#geographical_quality
 	annotations
 		dc#identifier hasValue "Aspect@en"
 		dc#description hasValue "In geography, aspect refers to the horizontal direction to which Slope faces." 
 	endAnnotations 
 
-concept altitude subConceptOf geographic_quality
+concept altitude subConceptOf geospace#geographical_quality
 	annotations
 		dc#identifier hasValue "Altitude@en"
 		dc#description hasValue "The height or vertical elevation of a point above a reference surface. Altitude measurements are usually based on a given reference datum, such as mean sea level." 
@@ -33,7 +34,7 @@ concept altitude subConceptOf geographic_quality
 	endAnnotations 
 		
 	
-concept elevation subConceptOf geographic_quality
+concept elevation subConceptOf geospace#geographical_quality
 		annotations
 			dc#identifier hasValue "Hoehe@de"
 			dc#identifier hasValue "elevation@en"
@@ -41,26 +42,26 @@ concept elevation subConceptOf geographic_quality
 			dc#source hasValue "en.wikipedia.org/wiki/Elevation"
 		endAnnotations
 			
-concept slope subConceptOf geographic_quality
+concept slope subConceptOf geospace#geographical_quality
 	annotations
 		dc#identifier hasValue "Slope@en"
 		dc#identifier hasValue "Gefaelle@de"
 		dc#description hasValue "The degree to which a surface tends upward or downward." 
 	endAnnotations
 	
-concept grade subConceptOf geographic_quality
+concept grade subConceptOf geospace#geographical_quality
 	annotations
 		rdfs#seeAlso hasValue slope
 	endAnnotations
 		
-concept spatial_extent subConceptOf geographic_quality
+concept spatial_extent subConceptOf geospace#geographical_quality
 	annotations
 		dc#identifier hasValue "Spatial Extent@en"
 		dc#identifier hasValue "raeumliche Ausdehnung@de"
 		dc#description hasValue "" 
 	endAnnotations 
 	
-concept terrain subConceptOf geographic_quality
+concept terrain subConceptOf geospace#geographical_quality
 	annotations
 		dc#identifier hasValue "Terrain@en"
 		dc#identifier hasValue "Gelände@de"
@@ -69,7 +70,7 @@ concept terrain subConceptOf geographic_quality
 	
 
 	
-concept texture subConceptOf geographic_quality
+concept texture subConceptOf geospace#geographical_quality
 	annotations
 		dc#identifier hasValue "Texture@en"
 		dc#identifier hasValue "Textur@de"

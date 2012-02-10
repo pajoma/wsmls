@@ -6,11 +6,13 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dolce: <http://purl.org/ifgi/dolce#> .
 @prefix dolceSpatial: <http://purl.org/ifgi/dolceSpatial#> .
+@prefix geospace: <http://purl.org/ifgi/geospace#> .
+@prefix geoevent: <http://purl.org/ifgi/geoevents#> .
 
-_:node16a8i5n2fx248 a owl:Ontology ;
+_:node16ljqakpux10 a owl:Ontology ;
 	rdfs:label "geographic_units" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
-	owl:imports <http://purl.org/ifgi/dolceSpatial#> ;
+	owl:imports <http://purl.org/ifgi/dolceSpatial#> , <http://purl.org/ifgi/geospace#> , <http://purl.org/ifgi/geoevents#> ;
 	dc:creator "p.maue (IFGI)"^^xsd:string ;
 	dc:contributor "e.klien (IFGI)"^^xsd:string ;
 	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
@@ -22,47 +24,47 @@ _:node16a8i5n2fx248 a owl:Ontology ;
 
 :natural_unit a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/geounits#natural_unit" ;
-	rdfs:subClassOf :geographical_unit ;
+	rdfs:subClassOf geospace:geographical_unit ;
 	dc:identifier "Natürliche Einheit@de"^^xsd:string , "Natural Unit@en"^^xsd:string ;
 	dc:description "A geographic unit created naturally"^^xsd:string ;
 	dc:subject "Units"^^xsd:string .
 
 :anthropogenic_unit a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/geounits#anthropogenic_unit" ;
-	rdfs:subClassOf :geographical_unit ;
+	rdfs:subClassOf geospace:geographical_unit ;
 	dc:identifier "Vom Menschen erbautes Objekt@de"^^xsd:string , "Anthropogenic Unit@en"^^xsd:string ;
 	dc:description "A geographic unit created by humans"^^xsd:string ;
 	dc:subject "Units"^^xsd:string .
 
 :geomorphological_unit a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/geounits#geomorphological_unit" ;
-	rdfs:subClassOf :geographical_unit ;
+	rdfs:subClassOf geospace:geographical_unit ;
 	dc:identifier "Geomorphologische Einheit@de"^^xsd:string , "Geomorphological Unit@en"^^xsd:string ;
 	dc:description "A landform comprises a geomorphological unit"^^xsd:string ;
 	dc:subject "Units"^^xsd:string .
 
 :landcover_unit a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/geounits#landcover_unit" ;
-	rdfs:subClassOf :geographical_unit ;
+	rdfs:subClassOf geospace:geographical_unit ;
 	dc:identifier "Einheit der Landbedeckung@de"^^xsd:string , "Land Cover Unit@en"^^xsd:string ;
 	dc:description "Land cover is the physical state of the land surface. Land Cover Units are discernible parts of Land Cover, e.g. the forest or a street"^^xsd:string ;
 	dc:subject "Units"^^xsd:string .
 
-_:node16a8i5n2fx249 rdfs:label "http://purl.org/ifgi/geounits#covers" ;
+_:node16ljqakpux11 rdfs:label "http://purl.org/ifgi/geounits#covers" ;
 	rdfs:domain :landcover_unit ;
 	dc:identifier "cover@en"^^xsd:string , "bedecken@de"^^xsd:string ;
 	dc:description ""^^xsd:string ;
 	a rdf:Property ;
-	rdfs:range :geographical_unit .
+	rdfs:range geospace:geographical_unit .
 
-_:node16a8i5n2fx250 rdfs:label "http://purl.org/ifgi/dolce#participant_in" ;
+_:node16ljqakpux12 rdfs:label "http://purl.org/ifgi/dolce#participant_in" ;
 	rdfs:domain :landcover_unit ;
 	a rdf:Property ;
-	rdfs:range :ground_movement .
+	rdfs:range geoevent:ground_movement .
 
 :vegetation_community a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/geounits#vegetation_community" ;
-	rdfs:subClassOf :LandCoverUnit ;
+	rdfs:subClassOf :landcover_unit ;
 	dc:identifier "Vegetation@de"^^xsd:string , "Vegetation@en"^^xsd:string ;
 	dc:description "The plants of an area considered in general or as communities, but not taxonomically;"^^xsd:string ;
 	dc:subject "LandCover"^^xsd:string .

@@ -8,7 +8,7 @@
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns:ptrn="http://purl.org/ifgi/patterns/system#">
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx241">
+<rdf:Description rdf:nodeID="node16ljqakpux3">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>geographic_systems</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -33,7 +33,7 @@
 	<dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Systems</dc:subject>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx242">
+<rdf:Description rdf:nodeID="node16ljqakpux4">
 	<rdfs:label>http://purl.org/ifgi/geosystems#surroundedBy</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/geosystems#geographic_system"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">umgeben von@de</dc:identifier>
@@ -42,7 +42,7 @@
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:source>
 	<rdfs:comments rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comments>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:range rdf:resource="http://purl.org/ifgi/geosystems#Environment"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/geosystems#environment"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/geosystems#environment">
