@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dul: <http://purl.org/ifgi/dul#> .
+@prefix ssn: <http://purl.oclc.org/NET/ssnx/ssn#> .
+@prefix : <http://purl.org/ifgi/event-observation#> .
+
+_:node873y49832u a owl:Ontology;
+	rdfs:label "Event-observationOntology";
+	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight";
+	owl:imports <http://purl.org/ifgi/ssn#>;
+	dc:creator "Alejandro Llaves";
+	dc:title "Event-observation Ontology";
+	dc:description "Extension of the SSN ontology that allows to represent occurrences inferred from Event Processing of observations".
+	
+:EventProcessingAgent a rdfs:Class;
+	rdfs:label "http://purl.org/ifgi/event-observation#eventProcessingAgent";
+	rdfs:subClassOf ssn:Sensor;
+	dc:identifier "event processing agent@en"^^xsd:string.
+	
+:EventObservation a rdfs:Class;
+	rdfs:label "http://purl.org/ifgi/event-observation#eventObservation";
+	rdfs:subClassOf ssn:Observation;
+	dc:identifier "event observation@en"^^xsd:string.
+
+:EventDetectionProcedure a rdfs:Class;
+	rdfs:label "http://purl.org/ifgi/event-observation#eventDetectionProcedure";
+	rdfs:subClassOf ssn:Sensing;
+	dc:identifier "event detection procedure@en"^^xsd:string.
+
+:EventObservationDescription a rdfs:Class;
+	rdfs:label "http://purl.org/ifgi/event-observation#eventObservationDescription";
+	rdfs:subClassOf dul:Description;
+	dc:identifier "event observation description@en"^^xsd:string.
+	
+:EventObservationType a rdfs:Class;
+	rdfs:label "http://purl.org/ifgi/event-observation#eventObservationType";
+	rdfs:subClassOf dul:EventType;
+	dc:identifier "event observation type@en"^^xsd:string.
