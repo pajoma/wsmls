@@ -1,0 +1,40 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://purl.org/ifgi/event-observation#",
+		dc _"http://purl.org/dc/elements/1.1/",
+		ssn _"http://purl.org/ifgi/ssn#",
+		dul _"http://purl.org/ifgi/dul#"
+ }
+
+ontology EventObservation
+	annotations
+		dc#title hasValue "Event-observation Ontology"
+		dc#description hasValue "Extension of the SSN model that allows to represent occurrences inferred from Event Processing of observations"
+		dc#creator hasValue "Alejandro Llaves"
+	endAnnotations
+	
+	importsOntology {_"http://purl.org/ifgi/ssn#"}
+	
+	concept EventProcessingAgent subConceptOf ssn#Sensor
+			annotations
+				dc#identifier hasValue "event processing agent@en"
+			endAnnotations
+		
+	concept EventObservation subConceptOf ssn#Observation
+			annotations
+				dc#identifier hasValue "event observation@en"
+			endAnnotations
+			
+	concept EventDetectionProcedure subConceptOf ssn#Sensing
+			annotations
+				dc#identifier hasValue "event detection procedure@en"
+			endAnnotations
+			
+	concept EventObservationDescription subConceptOf dul#Description
+			annotations
+				dc#identifier hasValue "event observation description@en"
+			endAnnotations
+			
+	concept EventObservationType subConceptOf dul#EventType
+			annotations
+				dc#identifier hasValue "event observation type@en"
+			endAnnotations
