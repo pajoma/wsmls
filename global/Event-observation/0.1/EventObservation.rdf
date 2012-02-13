@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+		 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+		 xmlns:ssn="http://purl.org/ifgi/ssn#" 
+		 xmlns:xsd="http://www.w3.org/2001/XMLSchema#" 
+		 xmlns:dc="http://purl.org/dc/elements/1.1/" 
+		 xmlns:dul="http://purl.org/ifgi/dul#" 
+		 xmlns:owl="http://www.w3.org/2002/07/owl#">
+		 
+	<owl:Ontology>
+		<rdfs:label>Event-observationOntology</rdfs:label>
+		<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
+		<owl:imports rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#" />
+		<dc:creator>Alejandro Llaves</dc:creator>
+		<dc:title>Event-observation Ontology</dc:title>
+		<dc:description>Extension of the SSN ontology that allows to represent occurrences inferred from Event Processing of observations</dc:description>
+	</owl:Ontology>
+	
+	<rdfs:Class rdf:about="http://purl.org/ifgi/event-observation#EventProcessingAgent">
+		<rdfs:label>http://purl.org/ifgi/event-observation#eventProcessingAgent</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Sensor" />
+		<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">event processing agent@en</dc:identifier>
+	</rdfs:Class>
+	
+	<rdfs:Class rdf:about="http://purl.org/ifgi/event-observation#EventObservation">
+		<rdfs:label>http://purl.org/ifgi/event-observation#eventObservation</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Observation" />
+		<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">event observation@en</dc:identifier>
+	</rdfs:Class>
+	
+	<rdfs:Class rdf:about="http://purl.org/ifgi/event-observation#EventDetectionProcedure">
+		<rdfs:label>http://purl.org/ifgi/event-observation#eventDetectionProcedure</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Sensing" />
+		<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">event detection procedure@en</dc:identifier>
+	</rdfs:Class>
+	
+	<rdfs:Class rdf:about="http://purl.org/ifgi/event-observation#EventObservationDescription">
+		<rdfs:label>http://purl.org/ifgi/event-observation#eventObservationDescription</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dul#Description" />
+		<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">event observation description@en</dc:identifier>
+	</rdfs:Class>
+	
+	<rdfs:Class rdf:about="http://purl.org/ifgi/event-observation#EventObservationType">
+		<rdfs:label>http://purl.org/ifgi/event-observation#eventObservationType</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dul#EventType" />
+		<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">event observation type@en</dc:identifier>
+	</rdfs:Class>
+</rdf:RDF>
