@@ -133,15 +133,15 @@ concept waterbody subConceptOf landcover_unit
 	
 
 relation landcover_unit_covers (ofType landcover_unit, ofType geospace#geographical_unit)
-		annotations
-			dc#identifier hasValue "cover@en"
-			dc#identifier hasValue "bedecken@de"
-			dc#description hasValue "" 
-		endAnnotations
+	annotations
+		dc#identifier hasValue "cover@en"
+		dc#identifier hasValue "bedecken@de"
+		dc#description hasValue "" 
+	endAnnotations
 
 relation landcover_unit_particpant_in (ofType landcover_unit, ofType geoevent#ground_movement) subRelationOf dolce#participant_in
 	annotations
-			dc#identifier hasValue "participant in@en"
-			dc#identifier hasValue "teilnehmen an@de"
-			dc#description hasValue "" 
-		endAnnotations
+		dc#identifier hasValue "participant in@en"
+		dc#identifier hasValue "teilnehmen an@de"
+		dc#description hasValue "" 
+	endAnnotations
