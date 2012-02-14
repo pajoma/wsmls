@@ -70,13 +70,13 @@ concept landcover_unit subConceptOf geospace#geographical_unit
 		dc#description hasValue "Land cover is the physical state of the land surface. Land Cover Units are discernible parts of Land Cover, e.g. the forest or a street"
 		dc#subject hasValue "Units"	 
 	endAnnotations
-	covers ofType geospace#geographical_unit
-		annotations
-			dc#identifier hasValue "cover@en"
-			dc#identifier hasValue "bedecken@de"
-			dc#description hasValue "" 
-		endAnnotations
-	dolce#participant_in ofType geoevent#ground_movement
+//	covers ofType geospace#geographical_unit
+//		annotations
+//			dc#identifier hasValue "cover@en"
+//			dc#identifier hasValue "bedecken@de"
+//			dc#description hasValue "" 
+//		endAnnotations
+//	dolce#participant_in ofType geoevent#ground_movement
 
 
 concept vegetation_community subConceptOf landcover_unit
@@ -132,6 +132,16 @@ concept waterbody subConceptOf landcover_unit
 	/* dolce#has\-quality impliesType water#VolumeOfWaterbody */
 	
 
-	
+relation landcover_unit_covers (ofType landcover_unit, ofType geospace#geographical_unit)
+		annotations
+			dc#identifier hasValue "cover@en"
+			dc#identifier hasValue "bedecken@de"
+			dc#description hasValue "" 
+		endAnnotations
 
-
+relation landcover_unit_particpant_in (ofType landcover_unit, ofType geoevent#ground_movement) subRelationOf dolce#participant_in
+	annotations
+			dc#identifier hasValue "participant in@en"
+			dc#identifier hasValue "teilnehmen an@de"
+			dc#description hasValue "" 
+		endAnnotations

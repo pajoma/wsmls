@@ -8,7 +8,7 @@ namespace { _"http://purl.org/ifgi/geosystems#",
 ontology geographic_systems
      annotations
      	dc#creator hasValue "p.maue (IFGI)"
-		dc#contributor hasValue "h.michels (IFGI)"
+		dc#contributor hasValue "h.michels and m. roth(IFGI)"
 		dc#publisher hasValue "(a)IfGI, University of Muenster"
 		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
 		dc#type hasValue "Domain Ontology"
@@ -26,14 +26,14 @@ concept geographic_system subConceptOf ptrn#System
 		dc#comment hasValue "a system in the geographical space"
 		dc#subject hasValue "Systems"		
 	endAnnotations 
-	surroundedBy impliesType environment
-			annotations
-				dc#identifier hasValue "umgeben von@de"
-				dc#identifier hasValue "sourrounded by@en"
-				dc#description hasValue ""
-				dc#source hasValue ""
-				rdfs#comments hasValue ""
-			endAnnotations
+//	surroundedBy impliesType environment
+//			annotations
+//				dc#identifier hasValue "umgeben von@de"
+//				dc#identifier hasValue "sourrounded by@en"
+//				dc#description hasValue ""
+//				dc#source hasValue ""
+//				rdfs#comments hasValue ""
+//			endAnnotations
 			
 		
 /* environment is an example of a region without a defined boundary (but a well-defined center) */
@@ -45,7 +45,9 @@ concept environment subConceptOf ptrn#Role
 		dc#subject hasValue "Environment"	
 	endAnnotations 
 	
-
-	
+relation geographic_system_surroundedBy (ofType geographic_system, ofType environment)
+	annotations
+		dc#identifier hasValue "surrounded by"
+	endAnnotations
 
 

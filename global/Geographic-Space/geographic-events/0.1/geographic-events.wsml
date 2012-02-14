@@ -10,7 +10,7 @@ ontology geographic_events
 
 	annotations
      	dc#creator hasValue "h.michels (IFGI)"
-		dc#contributor hasValue ""
+		dc#contributor hasValue "m.roth (IFGI)"
 		dc#publisher hasValue "(a)IfGI, University of Muenster"
 		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
 		dc#type hasValue "Domain Ontology"
@@ -28,8 +28,8 @@ ontology geographic_events
 			dc#description hasValue "a non-artificial event in the physical sense, and therefore not produced by humans, although it may affect humans (such as pathogens, aging, natural disasters, death)"
 			dc#source hasValue "http://en.wikipedia.org/wiki/Natural_phenomenon"
 		endAnnotations
-		has_start_point ofType point_in_time
-		has_duration ofType time_interval
+//		has_start_point ofType point_in_time
+//		has_duration ofType time_interval
      
     concept movement subConceptOf natural_event
     	annotations
@@ -143,14 +143,14 @@ ontology geographic_events
 	
 	//temporal relations
 	
-	relation has_start_point (ofType natural_event, ofType point_in_time) subRelationOf dolce#has_quality
+	relation natural_event_has_start_point (ofType natural_event, ofType point_in_time) subRelationOf dolce#has_quality
 		annotations
 			dc#identifier hasValue "has start point@en"
 			dc#identifier hasValue "hat Startpunkt@de"
 			dc#description hasValue ""
 		endAnnotations
 	
-	relation has_duration (ofType natural_event, ofType time_interval) subRelationOf dolce#has_quality
+	relation natural_event_has_duration (ofType natural_event, ofType time_interval) subRelationOf dolce#has_quality
 		annotations
 			dc#identifier hasValue "has duration@en"
 			dc#identifier hasValue "hat Dauer@de"

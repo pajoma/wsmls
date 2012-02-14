@@ -27,25 +27,25 @@ concept geographical_unit subConceptOf dolce#physical_object
 		dc#identifier hasValue "Geographische Einheit@de"
 		dc#description hasValue "Something which is identified as entity on geographic scale" 
 	endAnnotations 
-	dolceSpatial#spatial_location impliesType geographical_space_region
-	dolce#has_quality impliesType geographical_quality
-	confined_by impliesType geographical_unit
-			annotations
-				dc#identifier hasValue "begrenzt durch@de"
-				dc#identifier hasValue "confined by@en"
-				dc#description hasValue ""
-				dc#source hasValue ""
-				rdfs#comments hasValue ""
-			endAnnotations
-	situated_in impliesType geographical_unit
-			annotations
-				dc#identifier hasValue "situiert in@de"
-				dc#identifier hasValue "situated in@en"
-				dc#description hasValue "The area in which something is located in"
-				dc#source hasValue ""
-				rdfs#comments hasValue ""
-			endAnnotations
-	
+//	dolceSpatial#spatial_location impliesType geographical_space_region
+//	dolce#has_quality impliesType geographical_quality
+//	confined_by impliesType geographical_unit
+//			annotations
+//				dc#identifier hasValue "begrenzt durch@de"
+//				dc#identifier hasValue "confined by@en"
+//				dc#description hasValue ""
+//				dc#source hasValue ""
+//				rdfs#comments hasValue ""
+//			endAnnotations
+//	situated_in impliesType geographical_unit
+//			annotations
+//				dc#identifier hasValue "situiert in@de"
+//				dc#identifier hasValue "situated in@en"
+//				dc#description hasValue "The area in which something is located in"
+//				dc#source hasValue ""
+//				rdfs#comments hasValue ""
+//			endAnnotations
+			
 concept geographical_space_region subConceptOf dolce#space_region
 	annotations
 		dc#identifier hasValue "Geographical Space@en"
@@ -60,4 +60,25 @@ concept geographical_quality subConceptOf dolce#physical_quality
 		dc#description hasValue "Qualities restricted to geographic objects. Only large scale objects have a terrain or a skyline " 
 	endAnnotations 
 	
-
+relation geographical_unit_spatial_location (ofType geographical_unit, ofType geographical_space_region) subRelationOf dolceSpatial#spatial_location
+	annotations
+		dc#identifier hasValue "spatial location@en"
+	endAnnotations 
+	
+relation geographical_unit_has_quality (ofType geographical_unit, ofType geographical_quality)
+	annotations
+		dc#identifier hasValue "has quality@en"
+	endAnnotations 
+	
+relation geographical_unit_confined_by (ofType geographical_unit, ofType geographical_unit) subRelationOf dolce#has_quality
+	annotations
+		dc#identifier hasValue "begrenzt durch@de"
+		dc#identifier hasValue "confined by@en"
+	endAnnotations
+	
+relation geographical_unit_situated_in (ofType geographical_unit, ofType geographical_unit) subRelationOf dolce#has_quality
+	annotations
+		dc#identifier hasValue "situiert in@de"
+		dc#identifier hasValue "situated in@en"
+		dc#description hasValue "The area in which something is located in"
+	endAnnotations
