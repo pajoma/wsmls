@@ -7,12 +7,12 @@
 @prefix dolce: <http://purl.org/ifgi/dolce#> .
 @prefix dns: <http://purl.org/ifgi/dolceDnS#> .
 
-_:node16lts4m0ux2 a owl:Ontology ;
+_:node16lut4ug7x4 a owl:Ontology ;
 	rdfs:label "geographic_events" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/dolceDnS#> ;
 	dc:creator "h.michels (IFGI)"^^xsd:string ;
-	dc:contributor "m.roth (IFGI)"^^xsd:string ;
+	dc:contributor ""^^xsd:string ;
 	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
 	dc:rights "http://creativecommons.org/licenses/by/3.0/"^^xsd:string ;
 	dc:type "Domain Ontology"^^xsd:string ;
@@ -26,6 +26,16 @@ _:node16lts4m0ux2 a owl:Ontology ;
 	dc:identifier "natural event@en"^^xsd:string , "natuerliches Phänomen@de"^^xsd:string ;
 	dc:description "a non-artificial event in the physical sense, and therefore not produced by humans, although it may affect humans (such as pathogens, aging, natural disasters, death)"^^xsd:string ;
 	dc:source "http://en.wikipedia.org/wiki/Natural_phenomenon"^^xsd:string .
+
+_:node16lut4ug7x5 rdfs:label "http://purl.org/ifgi/geoevents#has_start_point" ;
+	rdfs:domain :natural_event ;
+	a rdf:Property ;
+	rdfs:range :point_in_time .
+
+_:node16lut4ug7x6 rdfs:label "http://purl.org/ifgi/geoevents#has_duration" ;
+	rdfs:domain :natural_event ;
+	a rdf:Property ;
+	rdfs:range :time_interval .
 
 :movement a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/geoevents#movement" ;
@@ -118,14 +128,14 @@ _:node16lts4m0ux2 a owl:Ontology ;
 	dc:description "a definite length of time marked off by two instants"^^xsd:string ;
 	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
-:natural_event_has_start_point a rdf:Property ;
+:has_start_point a rdf:Property ;
 	rdfs:domain :natural_event ;
 	rdfs:range :point_in_time ;
 	rdfs:subPropertyOf dolce:has_quality ;
 	dc:identifier "has start point@en"^^xsd:string , "hat Startpunkt@de"^^xsd:string ;
 	dc:description ""^^xsd:string .
 
-:natural_event_has_duration a rdf:Property ;
+:has_duration a rdf:Property ;
 	rdfs:domain :natural_event ;
 	rdfs:range :time_interval ;
 	rdfs:subPropertyOf dolce:has_quality ;
