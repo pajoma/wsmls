@@ -9,7 +9,7 @@
 	xmlns:dolce="http://purl.org/ifgi/dolce#"
 	xmlns:dns="http://purl.org/ifgi/dolceDnS#">
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx251">
+<rdf:Description rdf:nodeID="node16m5g9gi4x101">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>Observation</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -30,16 +30,17 @@
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">observation process@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx252">
+<rdf:Description rdf:about="http://purl.org/ifgi/observation#ObservationProcess-isPerformedBy">
 	<rdfs:label>http://purl.org/ifgi/observation#isPerformedBy</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/observation#ObservationProcess"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/observation#Sensor"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx253">
+<rdf:Description rdf:about="http://purl.org/ifgi/observation#ObservationProcess-realizes">
 	<rdfs:label>http://purl.org/ifgi/dolceDnS#realizes</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/observation#ObservationProcess"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolceDnS#realizes"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/observation#Observation"/>
 </rdf:Description>
@@ -51,14 +52,14 @@
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sensor@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx254">
+<rdf:Description rdf:about="http://purl.org/ifgi/observation#Sensor-performs">
 	<rdfs:label>http://purl.org/ifgi/observation#performs</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/observation#Sensor"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/observation#ObservationProcess"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx255">
+<rdf:Description rdf:about="http://purl.org/ifgi/observation#Sensor-observes">
 	<rdfs:label>http://purl.org/ifgi/observation#observes</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/observation#Sensor"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -72,7 +73,7 @@
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">observable@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx256">
+<rdf:Description rdf:about="http://purl.org/ifgi/observation#Observable-isObservedBy">
 	<rdfs:label>http://purl.org/ifgi/observation#isObservedBy</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/observation#Observable"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -86,16 +87,18 @@
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">observed entity@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx257">
+<rdf:Description rdf:about="http://purl.org/ifgi/observation#ObservedEntity-has_quality">
 	<rdfs:label>http://purl.org/ifgi/dolce#has_quality</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/observation#ObservedEntity"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#has_quality"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/observation#Observable"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx258">
+<rdf:Description rdf:about="http://purl.org/ifgi/observation#ObservedEntity-participant_in">
 	<rdfs:label>http://purl.org/ifgi/dolce#participant_in</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/observation#ObservedEntity"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#participant_in"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/observation#Stimulus"/>
 </rdf:Description>
@@ -107,14 +110,15 @@
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stimulus@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx259">
+<rdf:Description rdf:about="http://purl.org/ifgi/observation#Stimulus-has_participant">
 	<rdfs:label>http://purl.org/ifgi/dolce#has_participant</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/observation#Stimulus"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#has_participant"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/observation#ObservedEntity"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx260">
+<rdf:Description rdf:about="http://purl.org/ifgi/observation#Stimulus-isDetectedBy">
 	<rdfs:label>http://purl.org/ifgi/observation#isDetectedBy</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/observation#Stimulus"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -128,14 +132,15 @@
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">observation@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx261">
+<rdf:Description rdf:about="http://purl.org/ifgi/observation#Observation-is_realized_by">
 	<rdfs:label>http://purl.org/ifgi/dolceDnS#is_realized_by</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/observation#Observation"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolceDnS#is_realized_by"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/observation#ObservationProcess"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx262">
+<rdf:Description rdf:about="http://purl.org/ifgi/observation#Observation-holds">
 	<rdfs:label>http://purl.org/ifgi/observation#holds</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/observation#Observation"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -153,7 +158,7 @@
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">observation value@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx263">
+<rdf:Description rdf:about="http://purl.org/ifgi/observation#ObservationValue-value">
 	<rdfs:label>http://purl.org/ifgi/observation#value</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/observation#ObservationValue"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -166,15 +171,17 @@
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx264">
+<rdf:Description rdf:about="http://purl.org/ifgi/observation#ObservationValue-q_location">
 	<rdfs:label>http://purl.org/ifgi/dolce#q_location</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/observation#ObservationValue"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#q_location"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#measurement_unit"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/observation#performs">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/observation#performs"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/observation#Sensor"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/observation#ObservationProcess"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#participant_in"/>
@@ -183,13 +190,14 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/observation#isPerformedBy">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/observation#isPerformedBy"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/observation#ObservationProcess"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/observation#Sensor"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#participant"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is performed by@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx265">
+<rdf:Description rdf:nodeID="node16m5g9gi4x102">
 	<rdfs:label>http://purl.org/ifgi/observation#performs_inverse_isPerformedBy</rdfs:label>
 	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
 	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?x memberOf _"http://purl.org/ifgi/observation#Sensor"

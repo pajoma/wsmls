@@ -9,7 +9,7 @@
 @prefix posm: <http://purl.org/ifgi/posm#> .
 @prefix dolce: <http://purl.org/net/wsml/dolceDnS#> .
 
-_:node16kg83qlpx18 a owl:Ontology ;
+_:node16m5g9gi4x22 a owl:Ontology ;
 	rdfs:label "WCS" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/ows/0.2#> , <http://purl.org/net/wsml/dolceDnS#> , <http://purl.org/ifgi/posm#> ;
@@ -64,11 +64,11 @@ _:node16kg83qlpx18 a owl:Ontology ;
 	dc:identifier "coverage description@en"^^xsd:string .
 
 :DefaultDescribeCoverage a :DescribeCoverage ;
-	posm:hasOutput :DefaultDescribeCoverageResponse ;
-	posm:hasInput :DefaultDescribeCoverageRequest .
+	:DescribeCoverage-hasOutput :DefaultDescribeCoverageResponse ;
+	:DescribeCoverage-hasInput :DefaultDescribeCoverageRequest .
 
 :DefaultDescribeCoverageResponse a :DescribeCoverageResponse ;
-	sawsdl:modelReference :CoverageDescription .
+	:DescribeCoverageResponse-modelReference :CoverageDescription .
 
 :DefaultDescribeCoverageRequest a :DescribeCoverageRequest ;
-	sawsdl:modelReference xsd:string .
+	:DescribeCoverageRequest-modelReference xsd:string .

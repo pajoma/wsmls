@@ -7,7 +7,7 @@
 @prefix dolce: <http://www.load-cnr.it/ontologies/DOLCE-Lite.owl#> .
 @prefix wsmostudio: <http://www.wsmostudio.org#> .
 
-_:node16cbbib2ox29 a owl:Ontology ;
+_:node16m5g9gi4x81 a owl:Ontology ;
 	rdfs:label "AffectingEnvironment" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	dc:description ""^^xsd:string ;
@@ -22,12 +22,12 @@ _:node16cbbib2ox29 a owl:Ontology ;
 :UniversalEnvironment a rdfs:Class ;
 	rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/UniversalEnvironment" .
 
-_:node16cbbib2ox30 rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/surrounds" ;
+:UniversalEnvironment-surrounds rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/surrounds" ;
 	rdfs:domain :UniversalEnvironment ;
 	a rdf:Property ;
 	rdfs:range :Agent .
 
-_:node16cbbib2ox31 rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/hasPart" ;
+:UniversalEnvironment-hasPart rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/hasPart" ;
 	rdfs:domain :UniversalEnvironment ;
 	a rdf:Property ;
 	rdfs:range :AffectingEnvironment .
@@ -36,12 +36,12 @@ _:node16cbbib2ox31 rdfs:label "http://ifgipedia.uni-muenster.de/event-processing
 	rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/Agent" ;
 	rdfs:subClassOf dolce:agentive_physical_object .
 
-_:node16cbbib2ox32 rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/isSurroundedBy" ;
+:Agent-isSurroundedBy rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/isSurroundedBy" ;
 	rdfs:domain :Agent ;
 	a rdf:Property ;
 	rdfs:range :UniversalUmwelt .
 
-_:node16cbbib2ox33 rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/participantIn" ;
+:Agent-participantIn rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/participantIn" ;
 	rdfs:domain :Agent ;
 	a rdf:Property ;
 	rdfs:range :Activity .
@@ -50,32 +50,32 @@ _:node16cbbib2ox33 rdfs:label "http://ifgipedia.uni-muenster.de/event-processing
 	rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/Activity" ;
 	rdfs:subClassOf dolce:action .
 
-_:node16cbbib2ox34 rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/determine" ;
+:Activity-determine rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/determine" ;
 	rdfs:domain :Activity ;
 	a rdf:Property ;
 	rdfs:range :AffectingEnvironment .
 
-_:node16cbbib2ox35 rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/hasParticipant" ;
+:Activity-hasParticipant rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/hasParticipant" ;
 	rdfs:domain :Activity ;
 	a rdf:Property ;
 	rdfs:range :Agent .
 
-_:node16cbbib2ox36 rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/partOf" ;
+:Activity-partOf rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/partOf" ;
 	rdfs:domain :Activity ;
 	a rdf:Property ;
 	rdfs:range :Activity .
 
-_:node16cbbib2ox37 rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/hasPart" ;
+:Activity-hasPart rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/hasPart" ;
 	rdfs:domain :Activity ;
 	a rdf:Property ;
 	rdfs:range :Activity .
 
-_:node16cbbib2ox38 rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/hasStartPoint" ;
+:Activity-hasStartPoint rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/hasStartPoint" ;
 	rdfs:domain :Activity ;
 	a rdf:Property ;
 	rdfs:range xsd:dateTime .
 
-_:node16cbbib2ox39 rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/hasEndPoint" ;
+:Activity-hasEndPoint rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/hasEndPoint" ;
 	rdfs:domain :Activity ;
 	a rdf:Property ;
 	rdfs:range xsd:dateTime .
@@ -83,21 +83,21 @@ _:node16cbbib2ox39 rdfs:label "http://ifgipedia.uni-muenster.de/event-processing
 :AffectingEnvironment a rdfs:Class ;
 	rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/AffectingEnvironment" .
 
-_:node16cbbib2ox40 rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/partOf" ;
+:AffectingEnvironment-partOf rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/partOf" ;
 	rdfs:domain :AffectingEnvironment ;
 	a rdf:Property ;
 	rdfs:range :AffectingEnvironment ;
 	a rdf:Property ;
 	rdfs:range :UniversalEnvironment .
 
-_:node16cbbib2ox41 rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/hasPart" ;
+:AffectingEnvironment-hasPart rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/hasPart" ;
 	rdfs:domain :AffectingEnvironment ;
 	a rdf:Property ;
 	rdfs:range :Object ;
 	a rdf:Property ;
 	rdfs:range :AffectingEnvironment .
 
-_:node16cbbib2ox42 rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/isDeterminedBy" ;
+:AffectingEnvironment-isDeterminedBy rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/isDeterminedBy" ;
 	rdfs:domain :AffectingEnvironment ;
 	a rdf:Property ;
 	rdfs:range :Activity .
@@ -106,12 +106,12 @@ _:node16cbbib2ox42 rdfs:label "http://ifgipedia.uni-muenster.de/event-processing
 	rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/Object" ;
 	rdfs:subClassOf dolce:physical_object .
 
-_:node16cbbib2ox43 rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/hasState" ;
+:Object-hasState rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/hasState" ;
 	rdfs:domain :Object ;
 	a rdf:Property ;
 	rdfs:range :State .
 
-_:node16cbbib2ox44 rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/partOf" ;
+:Object-partOf rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/partOf" ;
 	rdfs:domain :Object ;
 	a rdf:Property ;
 	rdfs:range :AffectingEnvironment .
@@ -120,56 +120,66 @@ _:node16cbbib2ox44 rdfs:label "http://ifgipedia.uni-muenster.de/event-processing
 	rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/State" ;
 	rdfs:subClassOf dolce:physical_quality .
 
-_:node16cbbib2ox45 rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/hasObject" ;
+:State-hasObject rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/hasObject" ;
 	rdfs:domain :State ;
 	a rdf:Property ;
 	rdfs:range :Object .
 
 :determine a rdf:Property ;
+	rdfs:label :determine ;
 	rdfs:domain :Activity ;
 	rdfs:range :AffectingEnvironment .
 
 :isDeterminedBy a rdf:Property ;
+	rdfs:label :isDeterminedBy ;
 	rdfs:domain :AffectingEnvironment ;
 	rdfs:range :Activity .
 
 :participantIn a rdf:Property ;
+	rdfs:label :participantIn ;
 	rdfs:domain :Agent ;
 	rdfs:range :Activity ;
 	rdfs:subPropertyOf dolce:participant_in .
 
 :hasParticipant a rdf:Property ;
+	rdfs:label :hasParticipant ;
 	rdfs:domain :Activity ;
 	rdfs:range :Agent ;
 	rdfs:subPropertyOf dolce:participant .
 
 :surrounds a rdf:Property ;
+	rdfs:label :surrounds ;
 	rdfs:domain :UniversalEnvironment ;
 	rdfs:range :Agent .
 
 :isSurroundedBy a rdf:Property ;
+	rdfs:label :isSurroundedBy ;
 	rdfs:domain :Agent ;
 	rdfs:range :UniversalEnvironment .
 
 :hasState a rdf:Property ;
+	rdfs:label :hasState ;
 	rdfs:domain :Object ;
 	rdfs:range :State .
 
 :hasObject a rdf:Property ;
+	rdfs:label :hasObject ;
 	rdfs:domain :State ;
 	rdfs:range :Object .
 
 :partOf a rdf:Property ;
+	rdfs:label :partOf ;
 	rdfs:domain :Activity , :AffectingEnvironment , :Object ;
 	rdfs:range :Activity , :AffectingEnvironment , :UniversalEnvironment ;
 	rdfs:subPropertyOf dolce:part_of .
 
 :hasPart a rdf:Property ;
+	rdfs:label :hasPart ;
 	rdfs:domain :Activity , :AffectingEnvironment , :UniversalEnvironment ;
 	rdfs:range :Activity , :AffectingEnvironment , :Object ;
 	rdfs:subPropertyOf dolce:part .
 
-_:node16cbbib2ox46 rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/parthood_reflexive" ;
+_:node16m5g9gi4x82 rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/parthood_reflexive" ;
 	a <http://www.wsmo.org/wsml/wsml-syntax#Axiom> ;
 	rdf:value """?x memberOf {_\"http://ifgipedia.uni-muenster.de/event-processing-project/Activity\",_\"http://ifgipedia.uni-muenster.de/event-processing-project/AffectingEnvironment\"}
  and _\"http://ifgipedia.uni-muenster.de/event-processing-project/partOf\"(?x,?x)
@@ -179,7 +189,7 @@ true. """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> , """?x memberOf 
  implies 
 true. """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> .
 
-_:node16cbbib2ox47 rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/parthood_transitive" ;
+_:node16m5g9gi4x83 rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/parthood_transitive" ;
 	a <http://www.wsmo.org/wsml/wsml-syntax#Axiom> ;
 	rdf:value """?x memberOf {_\"http://ifgipedia.uni-muenster.de/event-processing-project/Object\",_\"http://ifgipedia.uni-muenster.de/event-processing-project/AffectingEnvironment\",_\"http://ifgipedia.uni-muenster.de/event-processing-project/Activity\"}
  and ?y memberOf {_\"http://ifgipedia.uni-muenster.de/event-processing-project/AffectingEnvironment\",_\"http://ifgipedia.uni-muenster.de/event-processing-project/Activity\"}
@@ -195,7 +205,7 @@ _\"http://ifgipedia.uni-muenster.de/event-processing-project/partOf\"(?x,?z). ""
  implies 
 _\"http://ifgipedia.uni-muenster.de/event-processing-project/hasPart\"(?x,?z). """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> .
 
-_:node16cbbib2ox48 rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/parthood_antisymmetric" ;
+_:node16m5g9gi4x84 rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/parthood_antisymmetric" ;
 	a <http://www.wsmo.org/wsml/wsml-syntax#Axiom> ;
 	rdf:value """?x memberOf {_\"http://ifgipedia.uni-muenster.de/event-processing-project/Activity\",_\"http://ifgipedia.uni-muenster.de/event-processing-project/AffectingEnvironment\"}
  and ?y memberOf {_\"http://ifgipedia.uni-muenster.de/event-processing-project/Activity\",_\"http://ifgipedia.uni-muenster.de/event-processing-project/AffectingEnvironment\"}
@@ -204,7 +214,7 @@ _:node16cbbib2ox48 rdfs:label "http://ifgipedia.uni-muenster.de/event-processing
  implies 
 ?x = ?y. """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> .
 
-_:node16cbbib2ox49 rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/partOf_inverse_hasPart" ;
+_:node16m5g9gi4x85 rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/partOf_inverse_hasPart" ;
 	a <http://www.wsmo.org/wsml/wsml-syntax#Axiom> ;
 	rdf:value """?x memberOf {_\"http://ifgipedia.uni-muenster.de/event-processing-project/Object\",_\"http://ifgipedia.uni-muenster.de/event-processing-project/AffectingEnvironment\",_\"http://ifgipedia.uni-muenster.de/event-processing-project/Activity\"}
  and ?y memberOf {_\"http://ifgipedia.uni-muenster.de/event-processing-project/AffectingEnvironment\",_\"http://ifgipedia.uni-muenster.de/event-processing-project/UniversalEnvironment\",_\"http://ifgipedia.uni-muenster.de/event-processing-project/Activity\"}
@@ -216,7 +226,7 @@ _\"http://ifgipedia.uni-muenster.de/event-processing-project/hasPart\"(?y,?x). "
  implies 
 _\"http://ifgipedia.uni-muenster.de/event-processing-project/partOf\"(?y,?x). """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> .
 
-_:node16cbbib2ox50 rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/determine_inverse_isDeterminedBy" ;
+_:node16m5g9gi4x86 rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/determine_inverse_isDeterminedBy" ;
 	a <http://www.wsmo.org/wsml/wsml-syntax#Axiom> ;
 	rdf:value """?x memberOf _\"http://ifgipedia.uni-muenster.de/event-processing-project/Activity\"
  and ?y memberOf _\"http://ifgipedia.uni-muenster.de/event-processing-project/AffectingEnvironment\"
@@ -228,7 +238,7 @@ _\"http://ifgipedia.uni-muenster.de/event-processing-project/isDeterminedBy\"(?y
  implies 
 _\"http://ifgipedia.uni-muenster.de/event-processing-project/determine\"(?y,?x). """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> .
 
-_:node16cbbib2ox51 rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/participantIn_inverse_hasParticipant" ;
+_:node16m5g9gi4x87 rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/participantIn_inverse_hasParticipant" ;
 	a <http://www.wsmo.org/wsml/wsml-syntax#Axiom> ;
 	rdf:value """?x memberOf _\"http://ifgipedia.uni-muenster.de/event-processing-project/Agent\"
  and ?y memberOf _\"http://ifgipedia.uni-muenster.de/event-processing-project/Activity\"
@@ -240,7 +250,7 @@ _\"http://ifgipedia.uni-muenster.de/event-processing-project/hasParticipant\"(?y
  implies 
 _\"http://ifgipedia.uni-muenster.de/event-processing-project/participantIn\"(?y,?x). """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> .
 
-_:node16cbbib2ox52 rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/isSurroundedBy_inverse_surrounds" ;
+_:node16m5g9gi4x88 rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/isSurroundedBy_inverse_surrounds" ;
 	a <http://www.wsmo.org/wsml/wsml-syntax#Axiom> ;
 	rdf:value """?x memberOf _\"http://ifgipedia.uni-muenster.de/event-processing-project/Agent\"
  and ?y memberOf _\"http://ifgipedia.uni-muenster.de/event-processing-project/UniversalEnvironment\"
@@ -252,7 +262,7 @@ _\"http://ifgipedia.uni-muenster.de/event-processing-project/surrounds\"(?y,?x).
  implies 
 _\"http://ifgipedia.uni-muenster.de/event-processing-project/isSurroundedBy\"(?y,?x). """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> .
 
-_:node16cbbib2ox53 rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/hasState_inverse_hasObject" ;
+_:node16m5g9gi4x89 rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/hasState_inverse_hasObject" ;
 	a <http://www.wsmo.org/wsml/wsml-syntax#Axiom> ;
 	rdf:value """?x memberOf _\"http://ifgipedia.uni-muenster.de/event-processing-project/Object\"
  and ?y memberOf _\"http://ifgipedia.uni-muenster.de/event-processing-project/State\"
@@ -264,7 +274,7 @@ _\"http://ifgipedia.uni-muenster.de/event-processing-project/hasObject\"(?y,?x).
  implies 
 _\"http://ifgipedia.uni-muenster.de/event-processing-project/hasState\"(?y,?x). """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> .
 
-_:node16cbbib2ox54 rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/A1" ;
+_:node16m5g9gi4x90 rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/A1" ;
 	a <http://www.wsmo.org/wsml/wsml-syntax#Axiom> ;
 	rdf:value """?x memberOf _\"http://ifgipedia.uni-muenster.de/event-processing-project/Agent\"
  and ?e memberOf _\"http://ifgipedia.uni-muenster.de/event-processing-project/AffectingEnvironment\"
@@ -275,7 +285,7 @@ _:node16cbbib2ox54 rdfs:label "http://ifgipedia.uni-muenster.de/event-processing
  implies 
 ?e[_\"http://ifgipedia.uni-muenster.de/event-processing-project/partOf\" hasValue ?u]. """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> .
 
-_:node16cbbib2ox55 rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/A2" ;
+_:node16m5g9gi4x91 rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/A2" ;
 	a <http://www.wsmo.org/wsml/wsml-syntax#Axiom> ;
 	rdf:value """?e1 memberOf _\"http://ifgipedia.uni-muenster.de/event-processing-project/AffectingEnvironment\"
  and ?a1 memberOf _\"http://ifgipedia.uni-muenster.de/event-processing-project/Activity\"
@@ -287,7 +297,7 @@ _:node16cbbib2ox55 rdfs:label "http://ifgipedia.uni-muenster.de/event-processing
  implies 
 ?e2[_\"http://ifgipedia.uni-muenster.de/event-processing-project/hasPart\" hasValue ?e1]. """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> .
 
-_:node16cbbib2ox56 rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/A3" ;
+_:node16m5g9gi4x92 rdfs:label "http://ifgipedia.uni-muenster.de/event-processing-project/A3" ;
 	a <http://www.wsmo.org/wsml/wsml-syntax#Axiom> ;
 	rdf:value """?e1 memberOf _\"http://ifgipedia.uni-muenster.de/event-processing-project/AffectingEnvironment\"
  and ?a1 memberOf _\"http://ifgipedia.uni-muenster.de/event-processing-project/Activity\"

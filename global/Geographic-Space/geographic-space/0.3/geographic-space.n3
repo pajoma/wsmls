@@ -7,7 +7,7 @@
 @prefix dolce: <http://purl.org/ifgi/dolce#> .
 @prefix dolceSpatial: <http://purl.org/ifgi/dolceSpatial#> .
 
-_:node16a8i5n2fx236 a owl:Ontology ;
+_:node16m5g9gi4x96 a owl:Ontology ;
 	rdfs:label "geographic_space" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/dolceSpatial#> ;
@@ -26,17 +26,19 @@ _:node16a8i5n2fx236 a owl:Ontology ;
 	dc:identifier "Geographical Unit@en"^^xsd:string , "Geographische Einheit@de"^^xsd:string ;
 	dc:description "Something which is identified as entity on geographic scale"^^xsd:string .
 
-_:node16a8i5n2fx237 rdfs:label "http://purl.org/ifgi/dolceSpatial#spatial_location" ;
+:geographical_unit-spatial_location rdfs:label "http://purl.org/ifgi/dolceSpatial#spatial_location" ;
 	rdfs:domain :geographical_unit ;
+	rdfs:subPropertyOf dolceSpatial:spatial_location ;
 	a rdf:Property ;
 	rdfs:range :geographical_space_region .
 
-_:node16a8i5n2fx238 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
+:geographical_unit-has_quality rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
 	rdfs:domain :geographical_unit ;
+	rdfs:subPropertyOf dolce:has_quality ;
 	a rdf:Property ;
 	rdfs:range :geographical_quality .
 
-_:node16a8i5n2fx239 rdfs:label "http://purl.org/ifgi/geospace#confined_by" ;
+:geographical_unit-confined_by rdfs:label "http://purl.org/ifgi/geospace#confined_by" ;
 	rdfs:domain :geographical_unit ;
 	dc:identifier "begrenzt durch@de"^^xsd:string , "confined by@en"^^xsd:string ;
 	dc:description ""^^xsd:string ;
@@ -45,7 +47,7 @@ _:node16a8i5n2fx239 rdfs:label "http://purl.org/ifgi/geospace#confined_by" ;
 	a rdf:Property ;
 	rdfs:range :geographical_unit .
 
-_:node16a8i5n2fx240 rdfs:label "http://purl.org/ifgi/geospace#situated_in" ;
+:geographical_unit-situated_in rdfs:label "http://purl.org/ifgi/geospace#situated_in" ;
 	rdfs:domain :geographical_unit ;
 	dc:identifier "situiert in@de"^^xsd:string , "situated in@en"^^xsd:string ;
 	dc:description "The area in which something is located in"^^xsd:string ;
@@ -63,5 +65,5 @@ _:node16a8i5n2fx240 rdfs:label "http://purl.org/ifgi/geospace#situated_in" ;
 :geographical_quality a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/geospace#geographical_quality" ;
 	rdfs:subClassOf dolce:physical_quality ;
-	dc:identifier "Geographic Quality@en"^^xsd:string , "Geographische Qualit√§t@de"^^xsd:string ;
+	dc:identifier "Geographic Quality@en"^^xsd:string , "Geographische Qualit‰t@de"^^xsd:string ;
 	dc:description "Qualities restricted to geographic objects. Only large scale objects have a terrain or a skyline"^^xsd:string .

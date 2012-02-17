@@ -12,7 +12,7 @@
 @prefix dns: <http://purl.org/ifgi/dolceDnS#> .
 @prefix oil: <http://purl.org/ifgi/oilspill#> .
 
-_:node16d8paspdx17 a owl:Ontology ;
+_:node16m5g9gi4x114 a owl:Ontology ;
 	rdfs:label "Landslide" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/geounits#> , <http://purl.org/ifgi/geoqualities#> , <http://purl.org/ifgi/geospace#> , <http://purl.org/ifgi/geoevents#> , <http://purl.org/ifgi/oilspill#> ;
@@ -96,8 +96,9 @@ _:node16d8paspdx17 a owl:Ontology ;
 	dc:description "The side of a hill, situated between the foot and the summit."^^xsd:string ;
 	dc:source "http://www.thefreedictionary.com/hillside"^^xsd:string .
 
-_:node16d8paspdx18 rdfs:label "http://purl.org/ifgi/dolce#part_of" ;
+:hillside-part_of rdfs:label "http://purl.org/ifgi/dolce#part_of" ;
 	rdfs:domain :hillside ;
+	rdfs:subPropertyOf dolce:part_of ;
 	a rdf:Property ;
 	rdfs:range :mountain .
 
@@ -108,8 +109,9 @@ _:node16d8paspdx18 rdfs:label "http://purl.org/ifgi/dolce#part_of" ;
 	dc:description "the entire geographical area drained by a river and its tributaries; an area characterized by all runoff being conveyed to the same outlet"^^xsd:string ;
 	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
-_:node16d8paspdx19 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
+:catchment_area-sameAs rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
 	rdfs:domain :catchment_area ;
+	rdfs:subPropertyOf owl:sameAs ;
 	a rdf:Property ;
 	rdfs:range :watershed .
 
@@ -119,8 +121,9 @@ _:node16d8paspdx19 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
 	dc:description "the entire geographical area drained by a river and its tributaries; an area characterized by all runoff being conveyed to the same outlet"^^xsd:string ;
 	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
-_:node16d8paspdx20 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
+:watershed-sameAs rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
 	rdfs:domain :watershed ;
+	rdfs:subPropertyOf owl:sameAs ;
 	a rdf:Property ;
 	rdfs:range :catchment_area .
 
@@ -152,8 +155,9 @@ _:node16d8paspdx20 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
 	dc:description "a lump or mass of hard consolidated mineral matter"^^xsd:string ;
 	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
-_:node16d8paspdx21 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
+:rock-has_quality rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
 	rdfs:domain :rock ;
+	rdfs:subPropertyOf dolce:has_quality ;
 	a rdf:Property ;
 	rdfs:range :porosity .
 
@@ -164,13 +168,14 @@ _:node16d8paspdx21 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
 	dc:description "material in the top layer of the surface of the earth in which plants can grow (especially with reference to its quality or use)"^^xsd:string ;
 	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
-_:node16d8paspdx22 rdfs:label "http://purl.org/ifgi/landslide#is_layered_by" ;
+:soil-is_layered_by rdfs:label "http://purl.org/ifgi/landslide#is_layered_by" ;
 	rdfs:domain :soil ;
 	a rdf:Property ;
 	rdfs:range :subsoil .
 
-_:node16d8paspdx23 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
+:soil-has_quality rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
 	rdfs:domain :soil ;
+	rdfs:subPropertyOf dolce:has_quality ;
 	a rdf:Property ;
 	rdfs:range :angle_of_repose ;
 	a rdf:Property ;
@@ -191,8 +196,9 @@ _:node16d8paspdx23 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
 	dc:description "A borehole is the generalized term for any narrow shaft bored in the ground, either vertically or horizontally."^^xsd:string ;
 	dc:source "http://en.wikipedia.org/wiki/Borehole"^^xsd:string .
 
-_:node16d8paspdx24 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
+:borehole-has_quality rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
 	rdfs:domain :borehole ;
+	rdfs:subPropertyOf dolce:has_quality ;
 	a rdf:Property ;
 	rdfs:range oil:depth ;
 	a rdf:Property ;
@@ -233,8 +239,9 @@ _:node16d8paspdx24 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
 	dc:description "the layer of soil between the topsoil and bedrock"^^xsd:string ;
 	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
-_:node16d8paspdx25 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
+:subsoil-has_quality rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
 	rdfs:domain :subsoil ;
+	rdfs:subPropertyOf dolce:has_quality ;
 	a rdf:Property ;
 	rdfs:range :thickness .
 
@@ -259,8 +266,9 @@ _:node16d8paspdx25 rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
 	dc:description "the vertical dimension of extension; distance from the base of something to the top"^^xsd:string ;
 	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
-_:node16d8paspdx26 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
+:height-sameAs rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
 	rdfs:domain :height ;
+	rdfs:subPropertyOf owl:sameAs ;
 	a rdf:Property ;
 	rdfs:range gs:elevation .
 

@@ -12,7 +12,7 @@
 @prefix ge: <http://purl.org/net/wsml/geoevents#> .
 @prefix gq: <http://purl.org/net/wsml/geoqualities#> .
 
-_:node16a8i5n2fx346 a owl:Ontology ;
+_:node16m5g9gi4x116 a owl:Ontology ;
 	rdfs:label "NoiseAll" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-core" ;
 	owl:imports <http://purl.org/ifgi/geosystems#> , <http://purl.org/net/wsml/geospace#> , <http://purl.org/net/wsml/geounits#> , <http://purl.org/net/wsml/geoevents#> , <http://purl.org/net/wsml/geoqualities#> ;
@@ -36,15 +36,17 @@ _:node16a8i5n2fx346 a owl:Ontology ;
 	dc:subject "Systems, Traffic"^^xsd:string ;
 	rdfs:comments ""^^xsd:string .
 
-_:node16a8i5n2fx347 rdfs:label "http://purl.org/ifgi/patterns/system#involvedPhysicalEndurant" ;
+:TrafficSystem-involvedPhysicalEndurant rdfs:label "http://purl.org/ifgi/patterns/system#involvedPhysicalEndurant" ;
 	rdfs:domain :TrafficSystem ;
+	rdfs:subPropertyOf patterns:involvedPhysicalEndurant ;
 	a rdf:Property ;
 	rdfs:range :Vehicle ;
 	a rdf:Property ;
 	rdfs:range :RoadNetwork .
 
-_:node16a8i5n2fx348 rdfs:label "http://purl.org/ifgi/patterns/system#involvedPerdurant" ;
+:TrafficSystem-involvedPerdurant rdfs:label "http://purl.org/ifgi/patterns/system#involvedPerdurant" ;
 	rdfs:domain :TrafficSystem ;
+	rdfs:subPropertyOf patterns:involvedPerdurant ;
 	a rdf:Property ;
 	rdfs:range :SoundEmission ;
 	a rdf:Property ;
@@ -61,8 +63,9 @@ _:node16a8i5n2fx348 rdfs:label "http://purl.org/ifgi/patterns/system#involvedPer
 	dc:subject "Collectives"^^xsd:string ;
 	rdfs:comments ""^^xsd:string .
 
-_:node16a8i5n2fx349 rdfs:label "http://purl.org/ifgi/dolce#consists-of" ;
+:Infrastructure-consists-of rdfs:label "http://purl.org/ifgi/dolce#consists-of" ;
 	rdfs:domain :Infrastructure ;
+	rdfs:subPropertyOf dolce:consists-of ;
 	a rdf:Property ;
 	rdfs:range :RoadNetwork .
 
@@ -102,8 +105,9 @@ _:node16a8i5n2fx349 rdfs:label "http://purl.org/ifgi/dolce#consists-of" ;
 	dc:subject "Infrastructure, Roads"^^xsd:string ;
 	rdfs:comments ""^^xsd:string .
 
-_:node16a8i5n2fx350 rdfs:label "http://purl.org/ifgi/dolce#part-of" ;
+:Road-part-of rdfs:label "http://purl.org/ifgi/dolce#part-of" ;
 	rdfs:domain :Road ;
+	rdfs:subPropertyOf dolce:part-of ;
 	a rdf:Property ;
 	rdfs:range :RoadNetwork .
 
@@ -116,12 +120,13 @@ _:node16a8i5n2fx350 rdfs:label "http://purl.org/ifgi/dolce#part-of" ;
 	dc:subject "Infrastructure, Roads"^^xsd:string ;
 	rdfs:comments ""^^xsd:string .
 
-_:node16a8i5n2fx351 rdfs:label "http://purl.org/ifgi/dolce#part-of" ;
+:Crossing-part-of rdfs:label "http://purl.org/ifgi/dolce#part-of" ;
 	rdfs:domain :Crossing ;
+	rdfs:subPropertyOf dolce:part-of ;
 	a rdf:Property ;
 	rdfs:range :RoadNetwork .
 
-_:node16a8i5n2fx352 rdfs:label "http://purl.org/ifgi/noise#intersects" ;
+:Crossing-intersects rdfs:label "http://purl.org/ifgi/noise#intersects" ;
 	rdfs:domain :Crossing ;
 	dc:identifier "schneidet@de"^^xsd:string , "intersects@en"^^xsd:string ;
 	dc:description ""^^xsd:string ;
@@ -166,13 +171,15 @@ _:node16a8i5n2fx352 rdfs:label "http://purl.org/ifgi/noise#intersects" ;
 	dc:subject "Infrastructure, Roads"^^xsd:string ;
 	rdfs:comments ""^^xsd:string .
 
-_:node16a8i5n2fx353 rdfs:label "http://purl.org/ifgi/dolce#part-of" ;
+:Street-part-of rdfs:label "http://purl.org/ifgi/dolce#part-of" ;
 	rdfs:domain :Street ;
+	rdfs:subPropertyOf dolce:part-of ;
 	a rdf:Property ;
 	rdfs:range :Road .
 
-_:node16a8i5n2fx354 rdfs:label "http://purl.org/net/wsml/geospace#sourroundedBy" ;
+:Street-sourroundedBy rdfs:label "http://purl.org/net/wsml/geospace#sourroundedBy" ;
 	rdfs:domain :Street ;
+	rdfs:subPropertyOf gs:sourroundedBy ;
 	a rdf:Property ;
 	rdfs:range gsy:Environment .
 
@@ -185,8 +192,9 @@ _:node16a8i5n2fx354 rdfs:label "http://purl.org/net/wsml/geospace#sourroundedBy"
 	dc:subject "Infrastructure, Roads"^^xsd:string ;
 	rdfs:comments ""^^xsd:string .
 
-_:node16a8i5n2fx355 rdfs:label "http://purl.org/ifgi/dolce#part-of" ;
+:StreetSection-part-of rdfs:label "http://purl.org/ifgi/dolce#part-of" ;
 	rdfs:domain :StreetSection ;
+	rdfs:subPropertyOf dolce:part-of ;
 	a rdf:Property ;
 	rdfs:range :Street .
 
@@ -199,8 +207,9 @@ _:node16a8i5n2fx355 rdfs:label "http://purl.org/ifgi/dolce#part-of" ;
 	dc:subject "Transportation"^^xsd:string ;
 	rdfs:comments ""^^xsd:string .
 
-_:node16a8i5n2fx356 rdfs:label "http://purl.org/ifgi/dolce#participates-in" ;
+:Vehicle-participates-in rdfs:label "http://purl.org/ifgi/dolce#participates-in" ;
 	rdfs:domain :Vehicle ;
+	rdfs:subPropertyOf dolce:participates-in ;
 	a rdf:Property ;
 	rdfs:range :SoundEmission ;
 	a rdf:Property ;
@@ -215,13 +224,15 @@ _:node16a8i5n2fx356 rdfs:label "http://purl.org/ifgi/dolce#participates-in" ;
 	dc:subject "Transportation"^^xsd:string ;
 	rdfs:comments ""^^xsd:string .
 
-_:node16a8i5n2fx357 rdfs:label "http://purl.org/ifgi/dolce#consists-of" ;
+:Vehicles-consists-of rdfs:label "http://purl.org/ifgi/dolce#consists-of" ;
 	rdfs:domain :Vehicles ;
+	rdfs:subPropertyOf dolce:consists-of ;
 	a rdf:Property ;
 	rdfs:range :Vehicle .
 
-_:node16a8i5n2fx358 rdfs:label "http://purl.org/ifgi/dolce#has-quality" ;
+:Vehicles-has-quality rdfs:label "http://purl.org/ifgi/dolce#has-quality" ;
 	rdfs:domain :Vehicles ;
+	rdfs:subPropertyOf dolce:has-quality ;
 	a rdf:Property ;
 	rdfs:range :TrafficDensity .
 
@@ -243,13 +254,15 @@ _:node16a8i5n2fx358 rdfs:label "http://purl.org/ifgi/dolce#has-quality" ;
 	dc:subject "Transportation, Roads"^^xsd:string ;
 	rdfs:comments ""^^xsd:string .
 
-_:node16a8i5n2fx359 rdfs:label "http://purl.org/ifgi/dolce#part-of" ;
+:Tire-part-of rdfs:label "http://purl.org/ifgi/dolce#part-of" ;
 	rdfs:domain :Tire ;
+	rdfs:subPropertyOf dolce:part-of ;
 	a rdf:Property ;
 	rdfs:range :Vehicle .
 
-_:node16a8i5n2fx360 rdfs:label "http://purl.org/ifgi/dolce#has-quality" ;
+:Tire-has-quality rdfs:label "http://purl.org/ifgi/dolce#has-quality" ;
 	rdfs:domain :Tire ;
+	rdfs:subPropertyOf dolce:has-quality ;
 	a rdf:Property ;
 	rdfs:range :TireType .
 
@@ -271,8 +284,9 @@ _:node16a8i5n2fx360 rdfs:label "http://purl.org/ifgi/dolce#has-quality" ;
 	dc:subject "Construction"^^xsd:string ;
 	rdfs:comments ""^^xsd:string .
 
-_:node16a8i5n2fx361 rdfs:label "http://purl.org/net/wsml/geospace#situatedIn" ;
+:Building-situatedIn rdfs:label "http://purl.org/net/wsml/geospace#situatedIn" ;
 	rdfs:domain :Building ;
+	rdfs:subPropertyOf gs:situatedIn ;
 	a rdf:Property ;
 	rdfs:range :UrbanizedArea .
 
@@ -285,8 +299,9 @@ _:node16a8i5n2fx361 rdfs:label "http://purl.org/net/wsml/geospace#situatedIn" ;
 	dc:subject "Plants"^^xsd:string ;
 	rdfs:comments ""^^xsd:string .
 
-_:node16a8i5n2fx362 rdfs:label "http://purl.org/net/wsml/geospace#situatedIn" ;
+:Tree-situatedIn rdfs:label "http://purl.org/net/wsml/geospace#situatedIn" ;
 	rdfs:domain :Tree ;
+	rdfs:subPropertyOf gs:situatedIn ;
 	a rdf:Property ;
 	rdfs:range :UrbanizedArea .
 
@@ -317,13 +332,15 @@ _:node16a8i5n2fx362 rdfs:label "http://purl.org/net/wsml/geospace#situatedIn" ;
 	dc:subject "Accoustics"^^xsd:string ;
 	rdfs:comments ""^^xsd:string .
 
-_:node16a8i5n2fx363 rdfs:label "http://purl.org/ifgi/patterns/system#initiates" ;
+:SoundEmission-initiates rdfs:label "http://purl.org/ifgi/patterns/system#initiates" ;
 	rdfs:domain :SoundEmission ;
+	rdfs:subPropertyOf patterns:initiates ;
 	a rdf:Property ;
 	rdfs:range :Noise .
 
-_:node16a8i5n2fx364 rdfs:label "http://purl.org/ifgi/patterns/system#changes" ;
+:SoundEmission-changes rdfs:label "http://purl.org/ifgi/patterns/system#changes" ;
 	rdfs:domain :SoundEmission ;
+	rdfs:subPropertyOf patterns:changes ;
 	a rdf:Property ;
 	rdfs:range :Intensity .
 
@@ -336,8 +353,9 @@ _:node16a8i5n2fx364 rdfs:label "http://purl.org/ifgi/patterns/system#changes" ;
 	dc:subject "Noise"^^xsd:string ;
 	rdfs:comments ""^^xsd:string .
 
-_:node16a8i5n2fx365 rdfs:label "http://purl.org/ifgi/dolce#has-quality" ;
+:Noise-has-quality rdfs:label "http://purl.org/ifgi/dolce#has-quality" ;
 	rdfs:domain :Noise ;
+	rdfs:subPropertyOf dolce:has-quality ;
 	a rdf:Property ;
 	rdfs:range :Intensity .
 
@@ -359,15 +377,17 @@ _:node16a8i5n2fx365 rdfs:label "http://purl.org/ifgi/dolce#has-quality" ;
 	dc:subject "Accoustics"^^xsd:string ;
 	rdfs:comments ""^^xsd:string .
 
-_:node16a8i5n2fx366 rdfs:label "http://purl.org/ifgi/patterns/system#isPlayedBy" ;
+:NoiseBarrier-isPlayedBy rdfs:label "http://purl.org/ifgi/patterns/system#isPlayedBy" ;
 	rdfs:domain :NoiseBarrier ;
+	rdfs:subPropertyOf patterns:isPlayedBy ;
 	a rdf:Property ;
 	rdfs:range :Building ;
 	a rdf:Property ;
 	rdfs:range :Tree .
 
-_:node16a8i5n2fx367 rdfs:label "http://purl.org/ifgi/dolce#has-quality" ;
+:NoiseBarrier-has-quality rdfs:label "http://purl.org/ifgi/dolce#has-quality" ;
 	rdfs:domain :NoiseBarrier ;
+	rdfs:subPropertyOf dolce:has-quality ;
 	a rdf:Property ;
 	rdfs:range :Diffraction ;
 	a rdf:Property ;
@@ -384,8 +404,9 @@ _:node16a8i5n2fx367 rdfs:label "http://purl.org/ifgi/dolce#has-quality" ;
 	dc:subject "Accoustics"^^xsd:string ;
 	rdfs:comments ""^^xsd:string .
 
-_:node16a8i5n2fx368 rdfs:label "http://purl.org/ifgi/dolce#has-quality" ;
+:Sound-has-quality rdfs:label "http://purl.org/ifgi/dolce#has-quality" ;
 	rdfs:domain :Sound ;
+	rdfs:subPropertyOf dolce:has-quality ;
 	a rdf:Property ;
 	rdfs:range :Intensity .
 

@@ -8,7 +8,7 @@
 @prefix ows: <http://purl.org/ifgi/ows/0.2#> .
 @prefix posm: <http://purl.org/ifgi/posm#> .
 
-_:node16kg83qlpx24 a owl:Ontology ;
+_:node16m5g9gi4x28 a owl:Ontology ;
 	rdfs:label "WPS" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/ows/0.2#> , <http://purl.org/ifgi/posm#> ;
@@ -67,11 +67,11 @@ _:node16kg83qlpx24 a owl:Ontology ;
 	dc:identifier "execute output@en"^^xsd:string .
 
 :DefaultDescribeProcess a :DescribeProcess ;
-	posm:hasOutput :DefaultDescribeProcessResponse ;
-	posm:hasInput :DefaultDescribeProcessRequest .
+	:DescribeProcess-hasOutput :DefaultDescribeProcessResponse ;
+	:DescribeProcess-hasInput :DefaultDescribeProcessRequest .
 
 :DefaultDescribeProcessResponse a :DescribeProcessResponse ;
-	sawsdl:modelReference xsd:string .
+	:DescribeProcessResponse-modelReference xsd:string .
 
 :DefaultDescribeProcessRequest a :DescribeProcessRequest ;
-	sawsdl:modelReference xsd:string .
+	:DescribeProcessRequest-modelReference xsd:string .

@@ -7,7 +7,7 @@
 @prefix wsml: <http://www.wsmo.org/wsml/wsml-syntax#> .
 @prefix dolce: <http://purl.org/ifgi/dolce#> .
 
-_:node16a8i5n2fx300 a owl:Ontology ;
+_:node16m5g9gi4x112 a owl:Ontology ;
 	rdfs:label "Systems" ;
 	<http://purl.org/dc/elements/1.1/format> "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/dolce> ;
@@ -23,12 +23,12 @@ _:node16a8i5n2fx300 a owl:Ontology ;
 	rdfs:label "http://purl.org/ifgi/patterns/system#System" ;
 	dc:identifier "system@en"^^xsd:string .
 
-_:node16a8i5n2fx301 rdfs:label "http://purl.org/ifgi/patterns/system#involvedPhysicalEndurant" ;
+:System-involvedPhysicalEndurant rdfs:label "http://purl.org/ifgi/patterns/system#involvedPhysicalEndurant" ;
 	rdfs:domain :System ;
 	a rdf:Property ;
 	rdfs:range dolce:physical_endurant .
 
-_:node16a8i5n2fx302 rdfs:label "http://purl.org/ifgi/patterns/system#involvedPerdurant" ;
+:System-involvedPerdurant rdfs:label "http://purl.org/ifgi/patterns/system#involvedPerdurant" ;
 	rdfs:domain :System ;
 	a rdf:Property ;
 	rdfs:range dolce:perdurant .

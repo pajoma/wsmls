@@ -9,7 +9,7 @@
 	xmlns:dolce="http://purl.org/ifgi/dolce#"
 	xmlns:geospace="http://purl.org/ifgi/geospace#">
 
-<rdf:Description rdf:nodeID="node16ljqakpux1">
+<rdf:Description rdf:nodeID="node16m5g9gi4x93">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>geographic_qualities</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>

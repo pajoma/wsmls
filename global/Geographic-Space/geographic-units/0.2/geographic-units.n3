@@ -9,7 +9,7 @@
 @prefix geospace: <http://purl.org/ifgi/geospace#> .
 @prefix geoevent: <http://purl.org/ifgi/geoevents#> .
 
-_:node16ljqakpux10 a owl:Ontology ;
+_:node16m5g9gi4x100 a owl:Ontology ;
 	rdfs:label "geographic_units" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/dolceSpatial#> , <http://purl.org/ifgi/geospace#> , <http://purl.org/ifgi/geoevents#> ;
@@ -50,18 +50,6 @@ _:node16ljqakpux10 a owl:Ontology ;
 	dc:description "Land cover is the physical state of the land surface. Land Cover Units are discernible parts of Land Cover, e.g. the forest or a street"^^xsd:string ;
 	dc:subject "Units"^^xsd:string .
 
-_:node16ljqakpux11 rdfs:label "http://purl.org/ifgi/geounits#covers" ;
-	rdfs:domain :landcover_unit ;
-	dc:identifier "cover@en"^^xsd:string , "bedecken@de"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	a rdf:Property ;
-	rdfs:range geospace:geographical_unit .
-
-_:node16ljqakpux12 rdfs:label "http://purl.org/ifgi/dolce#participant_in" ;
-	rdfs:domain :landcover_unit ;
-	a rdf:Property ;
-	rdfs:range geoevent:ground_movement .
-
 :vegetation_community a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/geounits#vegetation_community" ;
 	rdfs:subClassOf :landcover_unit ;
@@ -96,3 +84,18 @@ _:node16ljqakpux12 rdfs:label "http://purl.org/ifgi/dolce#participant_in" ;
 	dc:identifier "Gewaesser@de"^^xsd:string , "water body@en"^^xsd:string ;
 	:comment "any kind of accumulation of water, as oceans, rivers or lakes"^^xsd:string ;
 	dc:subject "LandCover"^^xsd:string .
+
+:landcover_unit_covers a rdf:Property ;
+	rdfs:label :landcover_unit_covers ;
+	rdfs:domain :landcover_unit ;
+	rdfs:range geospace:geographical_unit ;
+	dc:identifier "cover@en"^^xsd:string , "bedecken@de"^^xsd:string ;
+	dc:description ""^^xsd:string .
+
+:landcover_unit_particpant_in a rdf:Property ;
+	rdfs:label :landcover_unit_particpant_in ;
+	rdfs:domain :landcover_unit ;
+	rdfs:range geoevent:ground_movement ;
+	rdfs:subPropertyOf dolce:participant_in ;
+	dc:identifier "participant in@en"^^xsd:string , "teilnehmen an@de"^^xsd:string ;
+	dc:description ""^^xsd:string .

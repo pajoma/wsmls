@@ -7,7 +7,7 @@
 @prefix dolce: <http://purl.org/ifgi/dolce#> .
 @prefix dns: <http://purl.org/ifgi/dolceDnS#> .
 
-_:node16lut4ug7x4 a owl:Ontology ;
+_:node16m5g9gi4x46 a owl:Ontology ;
 	rdfs:label "geographic_events" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/dolceDnS#> ;
@@ -27,12 +27,12 @@ _:node16lut4ug7x4 a owl:Ontology ;
 	dc:description "a non-artificial event in the physical sense, and therefore not produced by humans, although it may affect humans (such as pathogens, aging, natural disasters, death)"^^xsd:string ;
 	dc:source "http://en.wikipedia.org/wiki/Natural_phenomenon"^^xsd:string .
 
-_:node16lut4ug7x5 rdfs:label "http://purl.org/ifgi/geoevents#has_start_point" ;
+:natural_event-has_start_point rdfs:label "http://purl.org/ifgi/geoevents#has_start_point" ;
 	rdfs:domain :natural_event ;
 	a rdf:Property ;
 	rdfs:range :point_in_time .
 
-_:node16lut4ug7x6 rdfs:label "http://purl.org/ifgi/geoevents#has_duration" ;
+:natural_event-has_duration rdfs:label "http://purl.org/ifgi/geoevents#has_duration" ;
 	rdfs:domain :natural_event ;
 	a rdf:Property ;
 	rdfs:range :time_interval .
@@ -129,6 +129,7 @@ _:node16lut4ug7x6 rdfs:label "http://purl.org/ifgi/geoevents#has_duration" ;
 	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
 :has_start_point a rdf:Property ;
+	rdfs:label :has_start_point ;
 	rdfs:domain :natural_event ;
 	rdfs:range :point_in_time ;
 	rdfs:subPropertyOf dolce:has_quality ;
@@ -136,6 +137,7 @@ _:node16lut4ug7x6 rdfs:label "http://purl.org/ifgi/geoevents#has_duration" ;
 	dc:description ""^^xsd:string .
 
 :has_duration a rdf:Property ;
+	rdfs:label :has_duration ;
 	rdfs:domain :natural_event ;
 	rdfs:range :time_interval ;
 	rdfs:subPropertyOf dolce:has_quality ;

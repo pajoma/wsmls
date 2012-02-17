@@ -14,7 +14,7 @@
 	xmlns:gq="http://purl.org/net/wsml/geoqualities#"
 	xmlns:ls="http://purl.org/ifgi/landslide#">
 
-<rdf:Description rdf:nodeID="node16ljqakpux13">
+<rdf:Description rdf:nodeID="node16m5g9gi4x117">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>OilSpill</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -74,16 +74,18 @@
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Air</dc:source>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16ljqakpux14">
+<rdf:Description rdf:about="http://purl.org/ifgi/oilspill#air-participant_in">
 	<rdfs:label>http://purl.org/ifgi/dolce#participant_in</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/oilspill#air"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#participant_in"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/net/wsml/geospace#wind"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16ljqakpux15">
+<rdf:Description rdf:about="http://purl.org/ifgi/oilspill#air-has_quality">
 	<rdfs:label>http://purl.org/ifgi/dolce#has_quality</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/oilspill#air"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#has_quality"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/oilspill#temperature"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -106,18 +108,20 @@
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Water</dc:source>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16ljqakpux16">
+<rdf:Description rdf:about="http://purl.org/ifgi/oilspill#water-participant_in">
 	<rdfs:label>http://purl.org/ifgi/dolce#participant_in</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/oilspill#water"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#participant_in"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/net/wsml/geospace#precipitation"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/net/wsml/geospace#flow"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16ljqakpux17">
+<rdf:Description rdf:about="http://purl.org/ifgi/oilspill#water-has_quality">
 	<rdfs:label>http://purl.org/ifgi/dolce#has_quality</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/oilspill#water"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#has_quality"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/oilspill#temperature"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -140,9 +144,10 @@
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Oil</dc:source>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16ljqakpux18">
+<rdf:Description rdf:about="http://purl.org/ifgi/oilspill#oil-has_quality">
 	<rdfs:label>http://purl.org/ifgi/dolce#has_quality</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/oilspill#oil"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#has_quality"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/oilspill#temperature"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -415,9 +420,10 @@
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:source>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16ljqakpux19">
+<rdf:Description rdf:about="http://purl.org/ifgi/oilspill#water_gauge-sameAs">
 	<rdfs:label>http://www.w3.org/2002/07/owl#sameAs</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/oilspill#water_gauge"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/oilspill#water_level"/>
 </rdf:Description>
@@ -432,9 +438,10 @@
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://wordnetweb.princeton.edu/</dc:source>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16ljqakpux20">
+<rdf:Description rdf:about="http://purl.org/ifgi/oilspill#water_level-sameAs">
 	<rdfs:label>http://www.w3.org/2002/07/owl#sameAs</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/oilspill#water_level"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/oilspill#water_gauge"/>
 </rdf:Description>
@@ -449,9 +456,10 @@
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Water_body</dc:source>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16ljqakpux21">
+<rdf:Description rdf:about="http://purl.org/ifgi/oilspill#water_body-has_quality">
 	<rdfs:label>http://purl.org/ifgi/dolce#has_quality</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/oilspill#water_body"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#has_quality"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/oilspill#depth"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -460,7 +468,7 @@
 	<rdfs:range rdf:resource="http://purl.org/ifgi/oilspill#water_gauge"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16ljqakpux22">
+<rdf:Description rdf:about="http://purl.org/ifgi/oilspill#water_body-consists_of">
 	<rdfs:label>http://purl.org/ifgi/oilspill#consists_of</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/oilspill#water_body"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -487,9 +495,10 @@
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://wordnetweb.princeton.edu/</dc:source>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16ljqakpux23">
+<rdf:Description rdf:about="http://purl.org/ifgi/oilspill#sea-confined_by">
 	<rdfs:label>http://purl.org/net/wsml/geospace#confined_by</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/oilspill#sea"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/net/wsml/geospace#confined_by"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/oilspill#coastal_terrestrial_unit"/>
 </rdf:Description>
@@ -504,28 +513,31 @@
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://wordnetweb.princeton.edu/</dc:source>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16ljqakpux24">
+<rdf:Description rdf:about="http://purl.org/ifgi/oilspill#oil_slick-situated_in">
 	<rdfs:label>http://purl.org/net/wsml/geospace#situated_in</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/oilspill#oil_slick"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/net/wsml/geospace#situated_in"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/oilspill#water_body"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16ljqakpux25">
+<rdf:Description rdf:about="http://purl.org/ifgi/oilspill#oil_slick-has_quality">
 	<rdfs:label>http://purl.org/ifgi/dolce#has_quality</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/oilspill#oil_slick"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#has_quality"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/oilspill#concentration"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16ljqakpux26">
+<rdf:Description rdf:about="http://purl.org/ifgi/oilspill#oil_slick-participant_in">
 	<rdfs:label>http://purl.org/ifgi/dolce#participant_in</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/oilspill#oil_slick"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#participant_in"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/oilspill#oil_spill"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16ljqakpux27">
+<rdf:Description rdf:about="http://purl.org/ifgi/oilspill#oil_slick-consists_of">
 	<rdfs:label>http://purl.org/ifgi/oilspill#consists_of</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/oilspill#oil_slick"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -574,9 +586,10 @@
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Region</dc:source>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16ljqakpux28">
+<rdf:Description rdf:about="http://purl.org/ifgi/oilspill#region-sameAs">
 	<rdfs:label>http://www.w3.org/2002/07/owl#sameAs</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/oilspill#region"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/oilspill#zone"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -593,9 +606,10 @@
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:source>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16ljqakpux29">
+<rdf:Description rdf:about="http://purl.org/ifgi/oilspill#zone-sameAs">
 	<rdfs:label>http://www.w3.org/2002/07/owl#sameAs</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/oilspill#zone"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/oilspill#region"/>
 </rdf:Description>
@@ -610,9 +624,10 @@
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:source>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16ljqakpux30">
+<rdf:Description rdf:about="http://purl.org/ifgi/oilspill#area-sameAs">
 	<rdfs:label>http://www.w3.org/2002/07/owl#sameAs</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/oilspill#area"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/oilspill#region"/>
 </rdf:Description>
@@ -627,9 +642,10 @@
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Sanctuary</dc:source>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16ljqakpux31">
+<rdf:Description rdf:about="http://purl.org/ifgi/oilspill#sanctuary-situated_in">
 	<rdfs:label>http://purl.org/net/wsml/geospace#situated_in</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/oilspill#sanctuary"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/net/wsml/geospace#situated_in"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/oilspill#habitat"/>
 </rdf:Description>
@@ -654,9 +670,10 @@
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://wordnetweb.princeton.edu/</dc:source>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16ljqakpux32">
+<rdf:Description rdf:about="http://purl.org/ifgi/oilspill#ship-has_quality">
 	<rdfs:label>http://purl.org/ifgi/dolce#has_quality</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/oilspill#ship"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#has_quality"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/oilspill#id"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -669,9 +686,10 @@
 	<rdfs:range rdf:resource="http://purl.org/ifgi/oilspill#name"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16ljqakpux33">
+<rdf:Description rdf:about="http://purl.org/ifgi/oilspill#ship-participant_in">
 	<rdfs:label>http://purl.org/ifgi/dolce#participant_in</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/oilspill#ship"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#participant_in"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/oilspill#explosion"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -688,9 +706,10 @@
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://wordnetweb.princeton.edu/</dc:source>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16ljqakpux34">
+<rdf:Description rdf:about="http://purl.org/ifgi/oilspill#tanker-has_quality">
 	<rdfs:label>http://purl.org/ifgi/dolce#has_quality</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/oilspill#tanker"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#has_quality"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/oilspill#tankage"/>
 </rdf:Description>
@@ -745,9 +764,10 @@
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Cod</dc:source>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16ljqakpux35">
+<rdf:Description rdf:about="http://purl.org/ifgi/oilspill#cod-has_quality">
 	<rdfs:label>http://purl.org/ifgi/dolce#has_quality</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/oilspill#cod"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#has_quality"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/oilspill#size"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -756,9 +776,10 @@
 	<rdfs:range rdf:resource="http://purl.org/ifgi/oilspill#mass"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16ljqakpux36">
+<rdf:Description rdf:about="http://purl.org/ifgi/oilspill#cod-sameAs">
 	<rdfs:label>http://www.w3.org/2002/07/owl#sameAs</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/oilspill#cod"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/oilspill#gadus"/>
 </rdf:Description>
@@ -773,9 +794,10 @@
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Shoaling_and_schooling</dc:source>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16ljqakpux37">
+<rdf:Description rdf:about="http://purl.org/ifgi/oilspill#shoaling-has_quality">
 	<rdfs:label>http://purl.org/ifgi/dolce#has_quality</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/oilspill#shoaling"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#has_quality"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/oilspill#average_weight"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -784,9 +806,10 @@
 	<rdfs:range rdf:resource="http://purl.org/ifgi/oilspill#population_size"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16ljqakpux38">
+<rdf:Description rdf:about="http://purl.org/ifgi/oilspill#shoaling-proper_has_part">
 	<rdfs:label>http://purl.org/ifgi/dolce#proper_has_part</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/oilspill#shoaling"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#proper_has_part"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/oilspill#fish"/>
 </rdf:Description>
@@ -811,9 +834,10 @@
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Cod</dc:source>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16ljqakpux39">
+<rdf:Description rdf:about="http://purl.org/ifgi/oilspill#gadus-sameAs">
 	<rdfs:label>http://www.w3.org/2002/07/owl#sameAs</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/oilspill#gadus"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/oilspill#cod"/>
 </rdf:Description>
@@ -848,6 +872,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/oilspill#consists_of">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/oilspill#consists_of"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#physical_object"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#amount_of_matter"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">consists of@en</dc:identifier>

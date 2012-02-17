@@ -8,7 +8,7 @@
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns:gml="http://swing.brgm.fr/repository/ontologies/GML212/current#">
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx441">
+<rdf:Description rdf:nodeID="node16m5g9gi4x123">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>RiverModel</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -133,7 +133,7 @@
 	<rdfs:comments rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comments>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx442">
+<rdf:Description rdf:about="http://purl.org/ifgi/rivermodel#BreakLine-derivesFrom">
 	<rdfs:label>http://purl.org/ifgi/rivermodel#derivesFrom</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/rivermodel#BreakLine"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stammt ab von@de</dc:identifier>

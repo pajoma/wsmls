@@ -7,7 +7,7 @@
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/">
 
-<rdf:Description rdf:nodeID="node16dn68gagx27">
+<rdf:Description rdf:nodeID="node16m5g9gi4x33">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>WSL</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-core</dc:format>
@@ -39,11 +39,13 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/wsl#functionalClassification">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/wsl#functionalClassification"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">functional classification@en</dc:identifier>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/wsl#usesOntology">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/wsl#usesOntology"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uses ontology@en</dc:identifier>
 </rdf:Description>
 

@@ -6,7 +6,7 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix gml: <http://swing.brgm.fr/repository/ontologies/GML212/current#> .
 
-_:node16a8i5n2fx443 a owl:Ontology ;
+_:node16m5g9gi4x124 a owl:Ontology ;
 	rdfs:label "RiverModel" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://swing.brgm.fr/repository/ontologies/GML212/current#> ;
@@ -102,7 +102,7 @@ _:node16a8i5n2fx443 a owl:Ontology ;
 	dc:subject "Geometry"^^xsd:string ;
 	rdfs:comments ""^^xsd:string .
 
-_:node16a8i5n2fx444 rdfs:label "http://purl.org/ifgi/rivermodel#derivesFrom" ;
+:BreakLine-derivesFrom rdfs:label "http://purl.org/ifgi/rivermodel#derivesFrom" ;
 	rdfs:domain :BreakLine ;
 	dc:identifier "stammt ab von@de"^^xsd:string , "derives from@en"^^xsd:string ;
 	dc:description ""^^xsd:string ;

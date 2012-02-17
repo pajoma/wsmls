@@ -6,7 +6,7 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix wsml: <http://www.wsmo.org/wsml/wsml-syntax#> .
 
-_:node16a8i5n2fx2 a owl:Ontology ;
+_:node16m5g9gi4x2 a owl:Ontology ;
 	rdfs:label "Annotation" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	dc:creator "s.schade (IFGI)"^^xsd:string ;
@@ -18,18 +18,21 @@ _:node16a8i5n2fx2 a owl:Ontology ;
 	dc:subject "annotation, reference, domain, measure"^^xsd:string .
 
 :annotate a rdf:Property ;
+	rdfs:label :annotate ;
 	dc:identifier "annotate@en"^^xsd:string ;
 	dc:title "annotate relation"^^xsd:string ;
 	dc:description "..."^^xsd:string ;
 	rdfs:seeAlso "http://dolce/klien/swing..."^^xsd:string .
 
 :domainReference a rdf:Property ;
+	rdfs:label :domainReference ;
 	dc:identifier "domain reference@en"^^xsd:string ;
 	dc:title "relation to the domain model"^^xsd:string ;
 	dc:description "..."^^xsd:string ;
 	rdfs:seeAlso "annotate relation"^^xsd:string .
 
 :measureReference a rdf:Property ;
+	rdfs:label :measureReference ;
 	dc:identifier "measure reference@en"^^xsd:string ;
 	dc:title "relation to the reference space"^^xsd:string ;
 	dc:description "..."^^xsd:string .
