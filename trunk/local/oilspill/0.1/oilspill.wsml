@@ -90,12 +90,6 @@ ontology OilSpill
 			dc#source hasValue "http://en.wikipedia.org/wiki/Oil"
 		endAnnotations
 		dolce#has_quality ofType {direction, temperature, velocity, mass, viscosity, oil_type}
-		
-	concept oil_type subConceptOf dolce#physical_quality
-		annotations
-			dc#identifier hasValue "oil type@en"
-			dc#description hasValue "Oil type."
-		endAnnotations
 	
 	concept crude_oil subConceptOf oil
 		annotations
@@ -114,6 +108,12 @@ ontology OilSpill
 		endAnnotations
 	
 /* Qualities */
+
+	concept oil_type subConceptOf dolce#physical_quality
+		annotations
+			dc#identifier hasValue "oil type@en"
+			dc#description hasValue "Oil type."
+		endAnnotations
 
 	concept amount subConceptOf dolce#physical_quality
 		annotations
