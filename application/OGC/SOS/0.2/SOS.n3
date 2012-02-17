@@ -8,8 +8,8 @@
 @prefix ows: <http://purl.org/ifgi/ows/0.2#> .
 @prefix om: <http://purl.org/ifgi/om#> .
 @prefix posm: <http://purl.org/ifgi/posm#> .
-
-_:node16m5gl4c1x18 a owl:Ontology ;
+ 
+_:node16kg83qlpx14 a owl:Ontology ;
 	rdfs:label "SOS" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/ows/0.2#> , <http://purl.org/ifgi/om#> , <http://purl.org/ifgi/posm#> ;
@@ -57,11 +57,11 @@ _:node16m5gl4c1x18 a owl:Ontology ;
 	rdfs:seeAlso <http://schemas.opengis.net/om/1.0.0/observation.xsd#Observation> .
 
 :DefaultDescribeSensor a :DescribeSensor ;
-	:DescribeSensor-hasOutput :DefaultDescribeSensorResponse ;
-	:DescribeSensor-hasInput :DefaultDescribeSensorRequest .
+	posm:hasOutput :DefaultDescribeSensorResponse ;
+	posm:hasInput :DefaultDescribeSensorRequest .
 
 :DefaultDescribeSensorResponse a :DescribeSensorResponse ;
-	:DescribeSensorResponse-modelReference xsd:string .
+	sawsdl:modelReference xsd:string .
 
 :DefaultDescribeSensorRequest a :DescribeSensorRequest ;
-	:DescribeSensorRequest-modelReference xsd:string .
+	sawsdl:modelReference xsd:string .

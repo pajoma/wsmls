@@ -9,7 +9,7 @@
 	xmlns:gml="http://purl.org/ifgi/gml/0.2#"
 	xmlns:ssn="http://purl.org/ifgi/ssn#">
 
-<rdf:Description rdf:nodeID="node16m5gl4c1x11">
+<rdf:Description rdf:nodeID="node16kg83qlpx7">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>ObservationsAndMeasurements</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -77,7 +77,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/om#member">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/om#member"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/om#ObservationCollection"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/om#Observation"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">member@en</dc:identifier>
@@ -85,7 +84,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/om#hasQuantityUnitOfMeasurement">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/om#hasQuantityUnitOfMeasurement"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/om#ObservationValue"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has quantity unit of measurement@en</dc:identifier>
@@ -93,7 +91,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/om#hasQuantityValue">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/om#hasQuantityValue"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/om#ObservationValue"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has quantity value@en</dc:identifier>

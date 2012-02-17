@@ -8,8 +8,8 @@
 @prefix ows: <http://purl.org/ifgi/ows/0.2#> .
 @prefix posm: <http://purl.org/ifgi/posm#> .
 @prefix dolce: <http://purl.org/net/wsml/dolceDnS#> .
-
-_:node16m5gl4c1x24 a owl:Ontology ;
+ 
+_:node16kg83qlpx20 a owl:Ontology ;
 	rdfs:label "WFS" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/ows/0.2#> , <http://purl.org/net/wsml/dolceDnS#> , <http://purl.org/ifgi/posm#> ;
@@ -62,11 +62,11 @@ _:node16m5gl4c1x24 a owl:Ontology ;
 	dc:identifier "feature type description@en"^^xsd:string .
 
 :DefaultDescribeFeatureType a :DescribeFeatureType ;
-	:DescribeFeatureType-hasOutput :DefaultDescribeFeatureTypeResponse ;
-	:DescribeFeatureType-hasInput :DefaultDescribeFeatureTypeRequest .
+	posm:hasOutput :DefaultDescribeFeatureTypeResponse ;
+	posm:hasInput :DefaultDescribeFeatureTypeRequest .
 
 :DefaultDescribeFeatureTypeResponse a :DescribeFeatureTypeResponse ;
-	:DescribeFeatureTypeResponse-modelReference :FeatureTypeDescription .
+	sawsdl:modelReference :FeatureTypeDescription .
 
 :DefaultDescribeFeatureTypeRequest a :DescribeFeatureTypeRequest ;
-	:DescribeFeatureTypeRequest-modelReference xsd:string .
+	sawsdl:modelReference xsd:string .
