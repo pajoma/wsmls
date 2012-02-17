@@ -89,7 +89,13 @@ ontology OilSpill
 			dc#description hasValue "A slippery or viscous liquid or liquefiable substance not miscible with water. Oils have a high carbon and hydrogen content and are nonpolar substances."
 			dc#source hasValue "http://en.wikipedia.org/wiki/Oil"
 		endAnnotations
-		dolce#has_quality ofType {direction, temperature, velocity, mass, viscosity}
+		dolce#has_quality ofType {direction, temperature, velocity, mass, viscosity, oil_type}
+		
+	concept oil_type subConceptOf dolce#physical_quality
+		annotations
+			dc#identifier hasValue "oil type@en"
+			dc#description hasValue "Oil type."
+		endAnnotations
 	
 	concept crude_oil subConceptOf oil
 		annotations
@@ -352,13 +358,14 @@ ontology OilSpill
 		annotations
 			dc#identifier hasValue "Ölschlick@de"
 			dc#identifier hasValue "oil slick@en"
-			dc#description hasValue "A thin film of oil floating on top of water (especially crude oil spilled from a ship."
+			dc#description hasValue "A thin film of oil floating on top of water (especially crude oil spilled from a ship)"
 			dc#source hasValue "http://wordnetweb.princeton.edu/"
 		endAnnotations
 		gs#situated_in ofType water_body
 		dolce#has_quality ofType concentration
 		dolce#participant_in ofType oil_spill
 		consists_of ofType {water, oil}
+		dolce#hasLocation ofType gs#geographical_space_region
 	
 	concept terrestrial_unit subConceptOf gu#natural_unit
 		annotations
@@ -565,128 +572,128 @@ ontology OilSpill
 //		endAnnotations
 	
 //relation hasParticipant (ofType Accident, ofType Ship)
-//	nfp
+//	annotations
 //		dc#title hasValue "has participant@en"
 //		dc#description hasValue "Relation between an accident and a ship. Describes a ship accident."
-//	endnfp
+//	endAnnotations
 //	
 //relation hasParticipant (ofType Explosion, ofType Ship)
-//	nfp
+//	annotations
 //		dc#title hasValue "has participant@en"
 //		dc#description hasValue "Relation between an explosion and a ship. Describes an explosion on a ship."
-//	endnfp
+//	endAnnotations
 //	
 //relation participatesIn (ofType Air, ofType Wind)
-//	nfp
+//	annotations
 //		dc#title hasValue "participatesIn@en"
 //		dc#description hasValue "Air participates in the event 'wind'."
-//	endnfp
+//	endAnnotations
 //	
 //relation hasQuality(ofType {Air, Oil, Water}, ofType Direction) subRelationOf dolce#has_quality
-//	nfp
+//	annotations
 //		dc#title hasValue "has quality@en"
 //		dc#description hasValue "Amount of matters like air, oil or water have quality 'direction'."
-//	endnfp
+//	endAnnotations
 //	
 //relation hasQuality(ofType {Air, Oil, Water}, ofType Temperature) subRelationOf dolce#has_quality
-//	nfp
+//	annotations
 //		dc#title hasValue "has quality@en"
 //		dc#description hasValue "Amount of matters like air, oil or water have quality 'temperature'."
-//	endnfp
+//	endAnnotations
 //	
 //relation hasQuality(ofType {Air, Oil, Water}, ofType Velocity) subRelationOf dolce#has_quality
-//	nfp
+//	annotations
 //		dc#title hasValue "has quality@en"
 //		dc#description hasValue "Amount of matters like air, oil or water have quality 'velocity'."
-//	endnfp
+//	endAnnotations
 //	
 //relation hasQuality (ofType Cod, ofType {Age, Mass, Size}) subRelationOf dolce#has_quality
-//	nfp
+//	annotations
 //		dc#title hasValue "has quality@en"
 //		dc#description hasValue "A cod has several qualities, e.g. age, mass, or size."
-//	endnfp
+//	endAnnotations
 //	
 //relation isSameAs (ofType Gadus, ofType Cod) subRelationOf owl#sameAs
-//	nfp
+//	annotations
 //		dc#title hasValue "is same as@en"
 //		dc#description hasValue "Cod is the common name for genus Gadus."
-//	endnfp
+//	endAnnotations
 //	
 //relation hasQuality(ofType Oil, ofType {Mass, Viscosity}) subRelationOf dolce#has_quality
-//	nfp
+//	annotations
 //		dc#title hasValue "has quality@en"
 //		dc#description hasValue "Oil has quality 'mass' and viscosity."
-//	endnfp
+//	endAnnotations
 //	
 //relation hasQuality(ofType OilSlick, ofType Concentration) subRelationOf dolce#has_quality
-//	nfp
+//	annotations
 //		dc#title hasValue "has quality@en"
 //		dc#description hasValue "Oil slick has quality 'concentration."
-//	endnfp
+//	endAnnotations
 //	
 //relation participatesIn (ofType OilSlick, ofType OilSpill)
-//	nfp
+//	annotations
 //		dc#title hasValue "participates in@en"
 //		dc#description hasValue "Oil slick participates in oil spill."
-//	endnfp
+//	endAnnotations
 	
 
 	
 //relation situatedIn (ofType OilSlick, ofType WaterBody)
-//	nfp
+//	annotations
 //		dc#title hasValue "situated in@en"
 //		dc#description hasValue "Oil slick is situated in a water body."
-//	endnfp
+//	endAnnotations
 	
 //relation happensAt (ofType OilSpill, ofType PointInTime)
-//	nfp
+//	annotations
 //		dc#title hasValue "happens at@en"
 //		dc#description hasValue "An oil spill happens at a specific time."
-//	endnfp
+//	endAnnotations
 //	
 //relation situatedIn (ofType Sanctuary, ofType Habitat)
-//	nfp
+//	annotations
 //		dc#title hasValue "situated in@en"
 //		dc#description hasValue "A sanctuary is part of an habitat."
-//	endnfp
+//	endAnnotations
 //	
 //relation confinedBy (ofType Sea, ofType CoastalTerrestrialUnit)
-//	nfp
+//	annotations
 //		dc#title hasValue "confined by@en"
 //		dc#description hasValue "The sea is confined by coastal terrestrial units, e.g. the coast."
-//	endnfp
+//	endAnnotations
 //	
 //relation hasQuality (ofType Ship, ofType {LoadVolume, Name, Cargo, ID, Location, CarryingCapacity}) subRelationOf dolce#has_quality
-//	nfp
+//	annotations
 //		dc#title hasValue "has quality@en"
 //		dc#description hasValue "A ship has several qualities, e.g. load volume, name, carrying capacity, location,..."
-//	endnfp
+//	endAnnotations
 //	
 //relation hasQuality (ofType Shoaling, ofType {AverageWeight, Lethality, Population}) subRelationOf dolce#has_quality
-//	nfp
+//	annotations
 //		dc#title hasValue "has quality@en"
 //		dc#description hasValue "A shoaling has several qualities, e.g. average weight, lethality , or population."
-//	endnfp
+//	endAnnotations
 	
 
 //	
 //relation hasQuality (ofType Tanker, ofType Tankage) subRelationOf dolce#has_quality
-//	nfp
+//	annotations
 //		dc#title hasValue "has quality@en"
 //		dc#description hasValue "A tanker has a tankage."
-//	endnfp
+//	endAnnotations
 //	
 //relation participatesIn (ofType Water, ofType Flow)
-//	nfp
+//	annotations
 //		dc#title hasValue "participates in@en"
 //		dc#description hasValue "Water participates in a flow such as a sea current."
-//	endnfp
+//	endAnnotations
 //	
 //relation hasQuality (ofType Water, ofType {Toxicity, Depth}) subRelationOf dolce#has_quality
-//	nfp
+//	annotations
 //		dc#title hasValue "has quality@en"
 //		dc#description hasValue "Water might have a degree of toxicity and a specific depth."
-//	endnfp
+//	endAnnotations
 	
 
 	
