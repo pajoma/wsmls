@@ -7,7 +7,7 @@
 @prefix DUL: <http://purl.org/ifgi/dul#> .
 @prefix ssn: <http://purl.oclc.org/NET/ssnx/ssn#> .
 
-_:node16m5g9gi4x106 a owl:Ontology ;
+_:node16m5gl4c1x106 a owl:Ontology ;
 	rdfs:label "SSN_Observation" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/dul#> ;

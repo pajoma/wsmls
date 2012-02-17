@@ -7,7 +7,7 @@
 @prefix wsml: <http://www.wsmo.org/wsml/wsml-syntax#> .
 @prefix dolce: <http://purl.org/ifgi/dolce#> .
 
-_:node16m5g9gi4x112 a owl:Ontology ;
+_:node16m5gl4c1x112 a owl:Ontology ;
 	rdfs:label "Systems" ;
 	<http://purl.org/dc/elements/1.1/format> "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/dolce> ;

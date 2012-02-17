@@ -6,7 +6,7 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/#> .
 @prefix dul: <http://purl.org/ifgi/dul#> .
 
-_:node16m5g9gi4x110 a owl:Ontology ;
+_:node16m5gl4c1x110 a owl:Ontology ;
 	rdfs:label "RolePattern" ;
 	<http://purl.org/dc/elements/1.1/format> "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/dul> ;

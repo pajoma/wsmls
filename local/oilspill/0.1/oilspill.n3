@@ -12,7 +12,7 @@
 @prefix gq: <http://purl.org/net/wsml/geoqualities#> .
 @prefix ls: <http://purl.org/ifgi/landslide#> .
 
-_:node16m5g9gi4x118 a owl:Ontology ;
+_:node16m5gl4c1x118 a owl:Ontology ;
 	rdfs:label "OilSpill" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/net/wsml/geospace#> , <http://purl.org/net/wsml/geounits#> , <http://purl.org/net/wsml/geoevents#> , <http://purl.org/net/wsml/geoqualities#> , <http://purl.org/ifgi/landslide#> ;

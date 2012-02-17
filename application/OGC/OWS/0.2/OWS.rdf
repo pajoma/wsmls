@@ -12,7 +12,7 @@
 	xmlns:sawsdl="http://www.w3.org/ns/sawsdl#"
 	xmlns:dolce="http://purl.org/ifgi/dolceDnS#">
 
-<rdf:Description rdf:nodeID="node16m5g9gi4x13">
+<rdf:Description rdf:nodeID="node16m5gl4c1x13">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>OWSOntology</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-core</dc:format>

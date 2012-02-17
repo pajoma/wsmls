@@ -8,7 +8,7 @@
 	xmlns:dc="http://purl.org/dc/elements/1.1/#"
 	xmlns:dul="http://purl.org/ifgi/dul#">
 
-<rdf:Description rdf:nodeID="node16m5g9gi4x109">
+<rdf:Description rdf:nodeID="node16m5gl4c1x109">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>RolePattern</rdfs:label>
 	<format xmlns="http://purl.org/dc/elements/1.1/">http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</format>

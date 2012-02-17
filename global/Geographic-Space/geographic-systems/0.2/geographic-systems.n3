@@ -6,7 +6,7 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix ptrn: <http://purl.org/ifgi/patterns/system#> .
 
-_:node16m5g9gi4x98 a owl:Ontology ;
+_:node16m5gl4c1x98 a owl:Ontology ;
 	rdfs:label "geographic_systems" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/patterns/system#> ;

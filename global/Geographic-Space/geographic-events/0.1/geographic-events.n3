@@ -7,7 +7,7 @@
 @prefix dolce: <http://purl.org/ifgi/dolce#> .
 @prefix dns: <http://purl.org/ifgi/dolceDnS#> .
 
-_:node16m5g9gi4x46 a owl:Ontology ;
+_:node16m5gl4c1x46 a owl:Ontology ;
 	rdfs:label "geographic_events" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/dolceDnS#> ;
