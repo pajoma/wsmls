@@ -8,7 +8,7 @@
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns:gml="http://purl.org/ifgi/gml/0.2#">
 
-<rdf:Description rdf:nodeID="node16m5gl4c1x9">
+<rdf:Description rdf:nodeID="node16lc3h6nvx1">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>OCD</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -62,7 +62,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ocd#boundedBy">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/ocd#boundedBy"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/gml/0.2#AbstractFeature"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/ocd#BoundingBox"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bound by@en</dc:identifier>
@@ -71,7 +70,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ocd#upperCorner">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/ocd#upperCorner"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/ocd#BoundingBox"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">upper corner@en</dc:identifier>
@@ -80,7 +78,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ocd#lowerCorner">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/ocd#lowerCorner"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/ocd#BoundingBox"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lower corner@en</dc:identifier>
@@ -89,7 +86,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ocd#hasStartPoint">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/ocd#hasStartPoint"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/ocd#TimeSequence"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has start point@en</dc:identifier>
@@ -98,7 +94,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ocd#hasEndPoint">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/ocd#hasEndPoint"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/ocd#TimeSequence"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has end point@en</dc:identifier>

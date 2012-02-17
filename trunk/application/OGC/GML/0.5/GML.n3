@@ -8,7 +8,7 @@
 @prefix ogc: <http://purl.org/ifgi/geosparql#> .
 @prefix time: <http://w3.org/2006/time#> .
 
-_:node16m5gl4c1x8 a owl:Ontology ;
+_:node16lc2ued0x2 a owl:Ontology ;
 	rdfs:label "GML" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://www.loa-cnr.it/ontologies/DUL.owl#> , <http://purl.org/ifgi/geosparql#> , <http://purl.org/ifgi/time#> ;
@@ -59,39 +59,33 @@ _:node16m5gl4c1x8 a owl:Ontology ;
 	dc:identifier "Spatio Temporal Feature@en"^^xsd:string .
 
 :id a rdf:Property ;
-	rdfs:label :id ;
 	rdfs:domain ogc:Feature ;
 	rdfs:range xsd:ID ;
 	dc:identifier "id@en"^^xsd:string .
 
 :hasProperty a rdf:Property ;
-	rdfs:label :hasProperty ;
 	rdfs:domain ogc:Feature ;
 	rdfs:range :FeatureProperty ;
 	dc:identifier "has property@en"^^xsd:string .
 
 :hasValue a rdf:Property ;
-	rdfs:label :hasValue ;
 	rdfs:domain :FeatureProperty ;
 	rdfs:range xsd:anyType ;
 	dc:identifier "has value@en"^^xsd:string .
 
 :upperCorner a rdf:Property ;
-	rdfs:label :upperCorner ;
 	rdfs:domain :Envelope ;
 	rdfs:range rdfs:Literal ;
 	dc:identifier "upper corner@en"^^xsd:string ;
 	dc:description "deprecated"^^xsd:string .
 
 :lowerCorner a rdf:Property ;
-	rdfs:label :lowerCorner ;
 	rdfs:domain :Envelope ;
 	rdfs:range rdfs:Literal ;
 	dc:identifier "lower corner@en"^^xsd:string ;
 	dc:description "deprecated"^^xsd:string .
 
 :hasGeometry a rdf:Property ;
-	rdfs:label :hasGeometry ;
 	rdfs:domain :AbstractFeature ;
 	rdfs:range :AbstractGeometry ;
 	rdfs:subPropertyOf :hasProperty ;
@@ -99,26 +93,22 @@ _:node16m5gl4c1x8 a owl:Ontology ;
 	dc:description "deprecated"^^xsd:string .
 
 :featureMember a rdf:Property ;
-	rdfs:label :featureMember ;
 	rdfs:domain :FeatureCollection ;
 	rdfs:range ogc:Feature ;
 	rdfs:subPropertyOf rdfs:member ;
 	dc:identifier "feature member@en"^^xsd:string .
 
 :boundedBy a rdf:Property ;
-	rdfs:label :boundedBy ;
 	rdfs:domain ogc:Feature ;
 	rdfs:range ogc:Polygon ;
 	dc:identifier "bounded by@en"^^xsd:string .
 
 :startTime a rdf:Property ;
-	rdfs:label :startTime ;
 	rdfs:domain :SpatioTemporalFeature ;
 	rdfs:range time:Instant ;
 	dc:identifier "start time@en"^^xsd:string .
 
 :duration a rdf:Property ;
-	rdfs:label :duration ;
 	rdfs:domain :SpatioTemporalFeature ;
 	rdfs:range time:Interval ;
 	dc:identifier "duration@en"^^xsd:string .

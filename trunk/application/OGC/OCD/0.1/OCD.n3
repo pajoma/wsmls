@@ -6,7 +6,7 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix gml: <http://purl.org/ifgi/gml/0.2#> .
 
-_:node16m5gl4c1x10 a owl:Ontology ;
+_:node16lc3h6nvx2 a owl:Ontology ;
 	rdfs:label "OCD" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/gml/0.2#> ;
@@ -47,35 +47,30 @@ _:node16m5gl4c1x10 a owl:Ontology ;
 	dc:description "deprecated"^^xsd:string .
 
 :boundedBy a rdf:Property ;
-	rdfs:label :boundedBy ;
 	rdfs:domain gml:AbstractFeature ;
 	rdfs:range :BoundingBox ;
 	dc:identifier "bound by@en"^^xsd:string ;
 	dc:description "deprecated"^^xsd:string .
 
 :upperCorner a rdf:Property ;
-	rdfs:label :upperCorner ;
 	rdfs:domain :BoundingBox ;
 	rdfs:range rdfs:Literal ;
 	dc:identifier "upper corner@en"^^xsd:string ;
 	dc:description "deprecated"^^xsd:string .
 
 :lowerCorner a rdf:Property ;
-	rdfs:label :lowerCorner ;
 	rdfs:domain :BoundingBox ;
 	rdfs:range rdfs:Literal ;
 	dc:identifier "lower corner@en"^^xsd:string ;
 	dc:description "deprecated"^^xsd:string .
 
 :hasStartPoint a rdf:Property ;
-	rdfs:label :hasStartPoint ;
 	rdfs:domain :TimeSequence ;
 	rdfs:range xsd:dateTime ;
 	dc:identifier "has start point@en"^^xsd:string ;
 	dc:description "deprecated"^^xsd:string .
 
 :hasEndPoint a rdf:Property ;
-	rdfs:label :hasEndPoint ;
 	rdfs:domain :TimeSequence ;
 	rdfs:range xsd:dateTime ;
 	dc:identifier "has end point@en"^^xsd:string ;

@@ -8,8 +8,8 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix sawsdl: <http://www.w3.org/ns/sawsdl#> .
 @prefix dolce: <http://purl.org/ifgi/dolceDnS#> .
-
-_:node16m5gl4c1x14 a owl:Ontology ;
+ 
+_:node16kg83qlpx10 a owl:Ontology ;
 	rdfs:label "OWSOntology" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-core" ;
 	owl:imports <http://www.wsmo.org/ns/wsmo-lite#> , <http://www.wsmo.org/ns/posm/0.2#> , <http://purl.org/ifgi/dolceDnS#> ;
@@ -50,13 +50,13 @@ _:node16m5gl4c1x14 a owl:Ontology ;
 
 :DefaultGetCapabilities a :GetCapabilities ;
 	dc:identifier "default get capabilities@en"^^xsd:string ;
-	:GetCapabilities-hasOutput :DefaultGetCapabilitiesResponse ;
-	:GetCapabilities-hasInput :DefaultGetCapabilitiesRequest .
+	posm:hasOutput :DefaultGetCapabilitiesResponse ;
+	posm:hasInput :DefaultGetCapabilitiesRequest .
 
 :DefaultGetCapabilitiesResponse a :GetCapabilitiesResponse ;
 	dc:identifier "default get capabilities response@en"^^xsd:string ;
-	:GetCapabilitiesResponse-modelReference :ServiceDescription .
+	sawsdl:modelReference :ServiceDescription .
 
 :DefaultGetCapabilitiesRequest a :GetCapabilitiesRequest ;
 	dc:identifier "default get capabilities request@en"^^xsd:string ;
-	:GetCapabilitiesRequest-modelReference xsd:string .
+	sawsdl:modelReference xsd:string .

@@ -10,8 +10,8 @@
 	xmlns:ows="http://purl.org/ifgi/ows/0.2#"
 	xmlns:posm="http://purl.org/ifgi/posm#"
 	xmlns:dolce="http://purl.org/net/wsml/dolceDnS#">
-
-<rdf:Description rdf:nodeID="node16m5gl4c1x23">
+ 
+<rdf:Description rdf:nodeID="node16kg83qlpx19">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>WFS</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -85,18 +85,18 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/wfs#DefaultDescribeFeatureType">
 	<rdf:type rdf:resource="http://purl.org/ifgi/wfs#DescribeFeatureType"/>
-	<DescribeFeatureType-hasOutput rdf:resource="http://purl.org/ifgi/wfs#DefaultDescribeFeatureTypeResponse"/>
-	<DescribeFeatureType-hasInput rdf:resource="http://purl.org/ifgi/wfs#DefaultDescribeFeatureTypeRequest"/>
+	<posm:hasOutput rdf:resource="http://purl.org/ifgi/wfs#DefaultDescribeFeatureTypeResponse"/>
+	<posm:hasInput rdf:resource="http://purl.org/ifgi/wfs#DefaultDescribeFeatureTypeRequest"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/wfs#DefaultDescribeFeatureTypeResponse">
 	<rdf:type rdf:resource="http://purl.org/ifgi/wfs#DescribeFeatureTypeResponse"/>
-	<DescribeFeatureTypeResponse-modelReference rdf:resource="http://purl.org/ifgi/wfs#FeatureTypeDescription"/>
+	<sawsdl:modelReference rdf:resource="http://purl.org/ifgi/wfs#FeatureTypeDescription"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/wfs#DefaultDescribeFeatureTypeRequest">
 	<rdf:type rdf:resource="http://purl.org/ifgi/wfs#DescribeFeatureTypeRequest"/>
-	<DescribeFeatureTypeRequest-modelReference rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	<sawsdl:modelReference rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 </rdf:Description>
 
 </rdf:RDF>
