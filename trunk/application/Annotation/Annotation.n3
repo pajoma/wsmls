@@ -6,7 +6,7 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix wsml: <http://www.wsmo.org/wsml/wsml-syntax#> .
 
-_:node16m5g9gi4x2 a owl:Ontology ;
+_:node16m5gl4c1x2 a owl:Ontology ;
 	rdfs:label "Annotation" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	dc:creator "s.schade (IFGI)"^^xsd:string ;

@@ -9,7 +9,7 @@
 @prefix geospace: <http://purl.org/ifgi/geospace#> .
 @prefix geoevent: <http://purl.org/ifgi/geoevents#> .
 
-_:node16m5g9gi4x100 a owl:Ontology ;
+_:node16m5gl4c1x100 a owl:Ontology ;
 	rdfs:label "geographic_units" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/dolceSpatial#> , <http://purl.org/ifgi/geospace#> , <http://purl.org/ifgi/geoevents#> ;

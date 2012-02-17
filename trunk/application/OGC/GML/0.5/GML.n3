@@ -8,7 +8,7 @@
 @prefix ogc: <http://purl.org/ifgi/geosparql#> .
 @prefix time: <http://w3.org/2006/time#> .
 
-_:node16m5g9gi4x8 a owl:Ontology ;
+_:node16m5gl4c1x8 a owl:Ontology ;
 	rdfs:label "GML" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://www.loa-cnr.it/ontologies/DUL.owl#> , <http://purl.org/ifgi/geosparql#> , <http://purl.org/ifgi/time#> ;

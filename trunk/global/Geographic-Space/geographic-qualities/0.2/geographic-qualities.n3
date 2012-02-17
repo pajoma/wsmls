@@ -7,7 +7,7 @@
 @prefix dolce: <http://purl.org/ifgi/dolce#> .
 @prefix geospace: <http://purl.org/ifgi/geospace#> .
 
-_:node16m5g9gi4x94 a owl:Ontology ;
+_:node16m5gl4c1x94 a owl:Ontology ;
 	rdfs:label "geographic_qualities" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/dolce#> , <http://purl.org/ifgi/geospace#> ;

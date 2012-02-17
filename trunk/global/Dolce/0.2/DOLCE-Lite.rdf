@@ -8,7 +8,7 @@
 	xmlns:dolce="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/">
 
-<rdf:Description rdf:nodeID="node16m5g9gi4x35">
+<rdf:Description rdf:nodeID="node16m5gl4c1x35">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>DOLCE_Lite</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -1188,7 +1188,7 @@
 	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#overlaps"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16m5g9gi4x36">
+<rdf:Description rdf:nodeID="node16m5gl4c1x36">
 	<rdfs:label>http://purl.org/ifgi/dolce#define_inverse</rdfs:label>
 	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
 	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">_"http://purl.org/ifgi/dolce#immediate_relation"(?x,?y)

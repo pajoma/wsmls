@@ -8,7 +8,7 @@
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns:ptrn="http://purl.org/ifgi/patterns/system#">
 
-<rdf:Description rdf:nodeID="node16m5g9gi4x97">
+<rdf:Description rdf:nodeID="node16m5gl4c1x97">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>geographic_systems</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>

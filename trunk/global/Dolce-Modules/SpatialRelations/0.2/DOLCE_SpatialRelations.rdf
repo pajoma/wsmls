@@ -9,7 +9,7 @@
 	xmlns:src="http://www.loa-cnr.it/ontologies/SpatialRelations.owl#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/">
 
-<rdf:Description rdf:nodeID="node16m5g9gi4x43">
+<rdf:Description rdf:nodeID="node16m5gl4c1x43">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>DOLCE_SpatialRelations</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>

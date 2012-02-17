@@ -7,7 +7,7 @@
 @prefix src: <http://www.loa-cnr.it/ontologies/SpatialRelations.owl#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 
-_:node16m5g9gi4x44 a owl:Ontology ;
+_:node16m5gl4c1x44 a owl:Ontology ;
 	rdfs:label "DOLCE_SpatialRelations" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/dolce#> ;

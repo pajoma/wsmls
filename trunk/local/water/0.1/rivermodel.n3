@@ -6,7 +6,7 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix gml: <http://swing.brgm.fr/repository/ontologies/GML212/current#> .
 
-_:node16m5g9gi4x124 a owl:Ontology ;
+_:node16m5gl4c1x124 a owl:Ontology ;
 	rdfs:label "RiverModel" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://swing.brgm.fr/repository/ontologies/GML212/current#> ;
