@@ -9,7 +9,7 @@
 	xmlns:DUL="http://purl.org/ifgi/dul#"
 	xmlns:ssn="http://purl.oclc.org/NET/ssnx/ssn#">
 
-<rdf:Description rdf:nodeID="node16dn68gagx29">
+<rdf:Description rdf:nodeID="node16m5g9gi4x105">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>SSN_Observation</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -355,6 +355,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ssn#hasProperty">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/ssn#hasProperty"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/ssn#FeatureOfInterest"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#Property"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#hasQuality"/>
@@ -364,6 +365,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ssn#observedProperty">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/ssn#observedProperty"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/ssn#Observation"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#Property"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#isSettingFor"/>
@@ -373,6 +375,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ssn#sensingMethodUsed">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/ssn#sensingMethodUsed"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/ssn#Observation"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#Sensing"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#satisfies"/>
@@ -382,6 +385,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ssn#featureOfInterest">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/ssn#featureOfInterest"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/ssn#Observation"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#FeatureOfInterest"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#isSettingFor"/>
@@ -391,6 +395,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ssn#includesEvent">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/ssn#includesEvent"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/ssn#Observation"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#Stimulus"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#hasQuality"/>
@@ -400,6 +405,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ssn#observationResult">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/ssn#observationResult"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/ssn#Observation"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#SensorOutput"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#isSettingFor"/>
@@ -409,6 +415,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ssn#observedBy">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/ssn#observedBy"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/ssn#Observation"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#Sensor"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#includesObject"/>
@@ -417,6 +424,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ssn#observationSamplingTime">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/ssn#observationSamplingTime"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/ssn#Observation"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#hasRegion"/>
@@ -426,6 +434,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ssn#observationResultTime">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/ssn#observationResultTime"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/ssn#Observation"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#hasRegion"/>
@@ -435,6 +444,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ssn#qualityOfObservation">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/ssn#qualityOfObservation"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/ssn#Observation"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#hasProperty"/>
@@ -444,6 +454,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ssn#isPropertyOf">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/ssn#isPropertyOf"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/ssn#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#FeatureOfInterest"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#isQualityOf"/>
@@ -453,6 +464,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ssn#implements">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/ssn#implements"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/ssn#Sensor"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#Sensing"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#isDescribedBy"/>
@@ -462,6 +474,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ssn#detects">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/ssn#detects"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/ssn#Sensor"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#Stimulus"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">detects@en</dc:identifier>
@@ -470,6 +483,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ssn#observes">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/ssn#observes"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/ssn#Sensor"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#Property"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#hasQuality"/>
@@ -479,6 +493,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ssn#hasMeasurementCapability">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/ssn#hasMeasurementCapability"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/ssn#Sensor"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#MeasurementCapability"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/ssn#hasProperty"/>
@@ -488,6 +503,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ssn#isProxyFor">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/ssn#isProxyFor"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/ssn#SensorInput"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#Event"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isProxyFor@en</dc:identifier>
@@ -496,6 +512,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ssn#_hasValue">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/ssn#_hasValue"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/ssn#SensorOutput"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#ObservationValue"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#hasRegion"/>
@@ -504,6 +521,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ssn#isProducedBy">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/ssn#isProducedBy"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/ssn#SensorOutput"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#Sensor"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is produced by@en</dc:identifier>
@@ -512,6 +530,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ssn#hasOperatingRange">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/ssn#hasOperatingRange"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/ssn#System"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#OperatingRange"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/ssn#hasProperty"/>
@@ -521,6 +540,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ssn#hasSubSystem">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/ssn#hasSubSystem"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/ssn#System"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#System"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#hasPart"/>
@@ -530,6 +550,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ssn#hasDeployment">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/ssn#hasDeployment"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/ssn#Platform"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#Deployment"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#isParticipantIn"/>
@@ -541,6 +562,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ssn#hasSurvivalRange">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/ssn#hasSurvivalRange"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/ssn#System"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#SurvivalRange"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/ssn#hasProperty"/>
@@ -550,6 +572,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ssn#onPlatform">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/ssn#onPlatform"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/ssn#System"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#Platform"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#hasLocation"/>
@@ -559,6 +582,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ssn#hasOutput">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/ssn#hasOutput"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/ssn#Process"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#Output"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has output@en</dc:identifier>
@@ -566,6 +590,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ssn#hasInput">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/ssn#hasInput"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/ssn#Process"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#Input"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has input@en</dc:identifier>
@@ -573,6 +598,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ssn#hasMeasurementProperty">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/ssn#hasMeasurementProperty"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/ssn#MeasurementCapability"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#MeasurementProperty"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/ssn#hasProperty"/>
@@ -582,6 +608,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ssn#madeObservation">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/ssn#madeObservation"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/ssn#Sensor"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#Observation"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#isObjectIncludedIn"/>
@@ -591,6 +618,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ssn#forProperty">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/ssn#forProperty"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/ssn#MeasurementCapability"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#Property"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">for property@en</dc:identifier>
@@ -599,6 +627,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ssn#inCondition">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/ssn#inCondition"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/ssn#MeasurementCapability"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#Property"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">in condition@en</dc:identifier>
@@ -607,6 +636,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ssn#deployedSystem">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/ssn#deployedSystem"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/ssn#Deployment"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#System"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#hasParticipant"/>
@@ -616,6 +646,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ssn#deployedOnPlatform">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/ssn#deployedOnPlatform"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/ssn#Deployment"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#Platform"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#hasParticipant"/>
@@ -625,6 +656,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ssn#deploymentProcessPart">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/ssn#deploymentProcessPart"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/ssn#DeploymentRelatedProcess"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#DeploymentRelatedProcess"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#hasPart"/>
@@ -634,6 +666,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ssn#attachedSystem">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/ssn#attachedSystem"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/ssn#Platform"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#System"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#isLocationOf"/>
@@ -643,6 +676,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ssn#inDeployment">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/ssn#inDeployment"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/ssn#Platform"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#Deployment"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#hasQuality"/>
@@ -652,6 +686,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ssn#hasOperatingProperty">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/ssn#hasOperatingProperty"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/ssn#OperatingRange"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#OperatingProperty"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/ssn#hasProperty"/>
@@ -661,6 +696,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ssn#hasSurvivalProperty">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/ssn#hasSurvivalProperty"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/ssn#SurvivalRange"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#SurvivalProperty"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/ssn#hasProperty"/>
@@ -670,6 +706,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ssn#isRegionFor">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/ssn#isRegionFor"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/ssn#ObservationValue"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#SensorOutput"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#hasQuality"/>
@@ -679,6 +716,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ssn#endTime">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/ssn#endTime"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Region"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#hasRegion"/>
@@ -687,6 +725,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ssn#startTime">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/ssn#startTime"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Region"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#hasRegion"/>

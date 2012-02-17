@@ -9,7 +9,7 @@
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns:swe="http://purl.org/ifgi/swe#">
 
-<rdf:Description rdf:nodeID="node16kg83qlpx1">
+<rdf:Description rdf:nodeID="node16m5g9gi4x3">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>COV</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -74,6 +74,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/cov#coverageMember">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/cov#coverageMember"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/cov#Coverages"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/cov#Coverage"/>
 	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#member"/>
@@ -83,6 +84,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/cov#hasMappingRule">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/cov#hasMappingRule"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/cov#CoverageFunction"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has mapping rule@en</dc:identifier>
@@ -90,6 +92,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/cov#dataRecordProperty">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/cov#dataRecordProperty"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/cov#Range"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/swe#DataRecord"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">data record property@en</dc:identifier>
@@ -97,6 +100,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/cov#interpolationMethod">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/cov#interpolationMethod"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/cov#Field"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/cov#InterpolationMethod"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">interpolation method@en</dc:identifier>
@@ -104,6 +108,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/cov#interpolationMethodId">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/cov#interpolationMethodId"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/cov#InterpolationMethod"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">interpolation method id@en</dc:identifier>

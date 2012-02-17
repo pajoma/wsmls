@@ -7,7 +7,7 @@
 @prefix src: <http://www.loa-cnr.it/ontologies/SpatialRelations.owl#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 
-_:node16a8i5n2fx226 a owl:Ontology ;
+_:node16m5g9gi4x44 a owl:Ontology ;
 	rdfs:label "DOLCE_SpatialRelations" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/dolce#> ;
@@ -20,6 +20,7 @@ _:node16a8i5n2fx226 a owl:Ontology ;
 	dc:subject "dolce, foundational, module, spatial"^^xsd:string .
 
 :approximate_location a rdf:Property ;
+	rdfs:label :approximate_location ;
 	rdfs:domain dolce:spatio_temporal_particular ;
 	rdfs:range dolce:spatio_temporal_particular ;
 	rdfs:subPropertyOf dolce:generic_location ;
@@ -28,6 +29,7 @@ _:node16a8i5n2fx226 a owl:Ontology ;
 	rdfs:seeAlso src:approximate-location .
 
 :approximate_location_of a rdf:Property ;
+	rdfs:label :approximate_location_of ;
 	rdfs:domain dolce:spatio_temporal_particular ;
 	rdfs:range dolce:spatio_temporal_particular ;
 	rdfs:subPropertyOf dolce:generic_location_of ;
@@ -36,6 +38,7 @@ _:node16a8i5n2fx226 a owl:Ontology ;
 	rdfs:seeAlso src:approximate-location-of .
 
 :descriptive_place a rdf:Property ;
+	rdfs:label :descriptive_place ;
 	rdfs:domain dolce:endurant ;
 	rdfs:range dolce:non_physical_endurant ;
 	rdfs:subPropertyOf :approximate_location ;
@@ -44,6 +47,7 @@ _:node16a8i5n2fx226 a owl:Ontology ;
 	rdfs:seeAlso src:descriptive-place .
 
 :descriptive_place_of a rdf:Property ;
+	rdfs:label :descriptive_place_of ;
 	rdfs:domain dolce:non_physical_endurant ;
 	rdfs:range dolce:endurant ;
 	rdfs:subPropertyOf :approximate_location_of ;
@@ -52,6 +56,7 @@ _:node16a8i5n2fx226 a owl:Ontology ;
 	rdfs:seeAlso src:descriptive-place-of .
 
 :participant_place a rdf:Property ;
+	rdfs:label :participant_place ;
 	rdfs:domain dolce:perdurant ;
 	rdfs:range dolce:endurant ;
 	rdfs:subPropertyOf dolce:approximate_location ;
@@ -60,6 +65,7 @@ _:node16a8i5n2fx226 a owl:Ontology ;
 	rdfs:seeAlso src:approximate-location-of .
 
 :participant_place_of a rdf:Property ;
+	rdfs:label :participant_place_of ;
 	rdfs:domain dolce:endurant ;
 	rdfs:range dolce:perdurant ;
 	rdfs:subPropertyOf dolce:approximate_location_of ;
@@ -68,6 +74,7 @@ _:node16a8i5n2fx226 a owl:Ontology ;
 	rdfs:seeAlso src:approximate-location-of .
 
 :descriptive_origin a rdf:Property ;
+	rdfs:label :descriptive_origin ;
 	rdfs:domain dolce:endurant ;
 	rdfs:range dolce:non_physical_endurant ;
 	rdfs:subPropertyOf :descriptive_place ;
@@ -76,6 +83,7 @@ _:node16a8i5n2fx226 a owl:Ontology ;
 	rdfs:seeAlso src:descriptive-origin .
 
 :descriptive_origin_of a rdf:Property ;
+	rdfs:label :descriptive_origin_of ;
 	rdfs:domain dolce:non_physical_endurant ;
 	rdfs:range dolce:endurant ;
 	rdfs:subPropertyOf :descriptive_place_of ;
@@ -84,6 +92,7 @@ _:node16a8i5n2fx226 a owl:Ontology ;
 	rdfs:seeAlso src:descriptive-origin-of .
 
 :place a rdf:Property ;
+	rdfs:label :place ;
 	rdfs:domain dolce:endurant ;
 	rdfs:range dolce:physical_endurant ;
 	rdfs:subPropertyOf :approximate_location ;
@@ -92,6 +101,7 @@ _:node16a8i5n2fx226 a owl:Ontology ;
 	rdfs:seeAlso src:place .
 
 :place_of a rdf:Property ;
+	rdfs:label :place_of ;
 	rdfs:domain dolce:physical_endurant ;
 	rdfs:range dolce:endurant ;
 	rdfs:subPropertyOf :approximate_location_of ;
@@ -100,6 +110,7 @@ _:node16a8i5n2fx226 a owl:Ontology ;
 	rdfs:seeAlso src:place-of .
 
 :material_place a rdf:Property ;
+	rdfs:label :material_place ;
 	rdfs:domain dolce:physical_endurant ;
 	rdfs:range dolce:physical_endurant ;
 	rdfs:subPropertyOf :place ;
@@ -108,6 +119,7 @@ _:node16a8i5n2fx226 a owl:Ontology ;
 	rdfs:seeAlso src:place-of .
 
 :material_place_of a rdf:Property ;
+	rdfs:label :material_place_of ;
 	rdfs:domain dolce:physical_endurant ;
 	rdfs:range dolce:physical_endurant ;
 	rdfs:subPropertyOf :place_of ;
@@ -116,6 +128,7 @@ _:node16a8i5n2fx226 a owl:Ontology ;
 	rdfs:seeAlso src:material-place-of .
 
 :origin a rdf:Property ;
+	rdfs:label :origin ;
 	rdfs:domain dolce:physical_endurant ;
 	rdfs:range dolce:physical_endurant ;
 	rdfs:subPropertyOf :material_place ;
@@ -124,6 +137,7 @@ _:node16a8i5n2fx226 a owl:Ontology ;
 	rdfs:seeAlso src:origin .
 
 :origin_of a rdf:Property ;
+	rdfs:label :origin_of ;
 	rdfs:domain dolce:physical_endurant ;
 	rdfs:range dolce:physical_endurant ;
 	rdfs:subPropertyOf :material_place_of ;
@@ -132,6 +146,7 @@ _:node16a8i5n2fx226 a owl:Ontology ;
 	rdfs:seeAlso src:origin-of .
 
 :d_spatial_location a rdf:Property ;
+	rdfs:label :d_spatial_location ;
 	rdfs:domain dolce:non_physical_endurant ;
 	rdfs:range dolce:space_region ;
 	rdfs:subPropertyOf dolce:exact_location ;
@@ -140,6 +155,7 @@ _:node16a8i5n2fx226 a owl:Ontology ;
 	rdfs:seeAlso src:d-spatial-location .
 
 :d_spatial_location_of a rdf:Property ;
+	rdfs:label :d_spatial_location_of ;
 	rdfs:domain dolce:space_region ;
 	rdfs:range dolce:non_physical_endurant ;
 	rdfs:subPropertyOf dolce:exact_location_of ;
@@ -148,6 +164,7 @@ _:node16a8i5n2fx226 a owl:Ontology ;
 	rdfs:seeAlso src:d-spatial-location-of .
 
 :p_spatial_location a rdf:Property ;
+	rdfs:label :p_spatial_location ;
 	rdfs:domain dolce:perdurant ;
 	rdfs:range dolce:space_region ;
 	rdfs:subPropertyOf dolce:exact_location ;
@@ -156,6 +173,7 @@ _:node16a8i5n2fx226 a owl:Ontology ;
 	rdfs:seeAlso src:p-spatial-location .
 
 :p_spatial_location_of a rdf:Property ;
+	rdfs:label :p_spatial_location_of ;
 	rdfs:domain dolce:space_region ;
 	rdfs:range dolce:perdurant ;
 	rdfs:subPropertyOf dolce:exact_location_of ;
@@ -164,6 +182,7 @@ _:node16a8i5n2fx226 a owl:Ontology ;
 	rdfs:seeAlso src:p-spatial-location-of .
 
 :spatial_location a rdf:Property ;
+	rdfs:label :spatial_location ;
 	rdfs:domain dolce:physical_endurant ;
 	rdfs:range dolce:space_region ;
 	rdfs:subPropertyOf dolce:exact_location_of ;
@@ -172,6 +191,7 @@ _:node16a8i5n2fx226 a owl:Ontology ;
 	rdfs:seeAlso src:spatial-location-of .
 
 :spatial_location_of a rdf:Property ;
+	rdfs:label :spatial_location_of ;
 	rdfs:domain dolce:space_region ;
 	rdfs:range dolce:physical_endurant ;
 	rdfs:subPropertyOf dolce:exact_location_of ;

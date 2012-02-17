@@ -7,7 +7,7 @@
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/">
 
-<rdf:Description rdf:nodeID="node16lent8itx1">
+<rdf:Description rdf:nodeID="node16m5g9gi4x5">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>GeoSPARQL</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -146,60 +146,70 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/geosparql#defaultGeometry">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/geosparql#defaultGeometry"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/geosparql#Feature"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/geosparql#Geometry"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/geosparql#hasGeometry">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/geosparql#hasGeometry"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/geosparql#Feature"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/geosparql#Geometry"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/geosparql#isEmpty">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/geosparql#isEmpty"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/geosparql#Geometry"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/geosparql#isSimple">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/geosparql#isSimple"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/geosparql#Geometry"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/geosparql#is3D">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/geosparql#is3D"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/geosparql#Geometry"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/geosparql#asWKT">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/geosparql#asWKT"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/geosparql#Geometry"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/geosparql#WKTLiteral"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/geosparql#asGML">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/geosparql#asGML"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/geosparql#Geometry"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/geosparql#GMLLiteral"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/geosparql#spatialDimension">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/geosparql#spatialDimension"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/geosparql#Geometry"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/geosparql#dimension">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/geosparql#dimension"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/geosparql#Geometry"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/geosparql#coordinateDimension">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/geosparql#coordinateDimension"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/geosparql#Geometry"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
 </rdf:Description>

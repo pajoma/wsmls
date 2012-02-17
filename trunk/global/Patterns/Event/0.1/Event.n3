@@ -6,7 +6,7 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dolce: <http://purl.org/ifgi/dolce#> .
 
-_:node16a8i5n2fx286 a owl:Ontology ;
+_:node16m5g9gi4x108 a owl:Ontology ;
 	rdfs:label "EventPattern" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-core" ;
 	owl:imports <http://purl.org/ifgi/dolce#> ;
@@ -23,7 +23,7 @@ _:node16a8i5n2fx286 a owl:Ontology ;
 	rdfs:subClassOf dolce:perdurant ;
 	dc:identifier "event@en"^^xsd:string , "Event@de"^^xsd:string .
 
-_:node16a8i5n2fx287 rdfs:label "http://purl.org/ifgi/patterns/event#initiates" ;
+:Event-initiates rdfs:label "http://purl.org/ifgi/patterns/event#initiates" ;
 	rdfs:domain :Event ;
 	dc:identifier "initiiert@de"^^xsd:string , "initiate@en"^^xsd:string ;
 	dc:description ""^^xsd:string ;
@@ -32,7 +32,7 @@ _:node16a8i5n2fx287 rdfs:label "http://purl.org/ifgi/patterns/event#initiates" ;
 	a rdf:Property ;
 	rdfs:range dolce:perdurant .
 
-_:node16a8i5n2fx288 rdfs:label "http://purl.org/ifgi/patterns/event#changes" ;
+:Event-changes rdfs:label "http://purl.org/ifgi/patterns/event#changes" ;
 	rdfs:domain :Event ;
 	dc:identifier "ver�ndert@de"^^xsd:string , "changes@en"^^xsd:string ;
 	dc:description "an event changes something (here Quality)"^^xsd:string ;

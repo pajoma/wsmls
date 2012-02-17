@@ -7,7 +7,7 @@
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/">
 
-<rdf:Description rdf:nodeID="node16dn68gagx13">
+<rdf:Description rdf:nodeID="node16m5g9gi4x31">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>POSM</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-core</dc:format>
@@ -19,7 +19,7 @@
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">service@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16dn68gagx14">
+<rdf:Description rdf:about="http://purl.org/ifgi/posm#Service-hasOperation">
 	<rdfs:label>http://purl.org/ifgi/posm#hasOperation</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/posm#Service"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -32,28 +32,28 @@
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">operation@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16dn68gagx15">
+<rdf:Description rdf:about="http://purl.org/ifgi/posm#Operation-hasInput">
 	<rdfs:label>http://purl.org/ifgi/posm#hasInput</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/posm#Operation"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/posm#MessagePart"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16dn68gagx16">
+<rdf:Description rdf:about="http://purl.org/ifgi/posm#Operation-hasOutput">
 	<rdfs:label>http://purl.org/ifgi/posm#hasOutput</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/posm#Operation"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/posm#MessagePart"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16dn68gagx17">
+<rdf:Description rdf:about="http://purl.org/ifgi/posm#Operation-hasInputFault">
 	<rdfs:label>http://purl.org/ifgi/posm#hasInputFault</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/posm#Operation"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/posm#MessagePart"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16dn68gagx18">
+<rdf:Description rdf:about="http://purl.org/ifgi/posm#Operation-hasOutputFault">
 	<rdfs:label>http://purl.org/ifgi/posm#hasOutputFault</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/posm#Operation"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -66,7 +66,7 @@
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">message part@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16dn68gagx19">
+<rdf:Description rdf:about="http://purl.org/ifgi/posm#MessagePart-hasMessagePart">
 	<rdfs:label>http://purl.org/ifgi/posm#hasMessagePart</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/posm#MessagePart"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>

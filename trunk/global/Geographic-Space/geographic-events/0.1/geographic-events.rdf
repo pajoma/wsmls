@@ -9,7 +9,7 @@
 	xmlns:dolce="http://purl.org/ifgi/dolce#"
 	xmlns:dns="http://purl.org/ifgi/dolceDnS#">
 
-<rdf:Description rdf:nodeID="node16lut4ug7x1">
+<rdf:Description rdf:nodeID="node16m5g9gi4x45">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>geographic_events</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -34,14 +34,14 @@
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Natural_phenomenon</dc:source>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16lut4ug7x2">
+<rdf:Description rdf:about="http://purl.org/ifgi/geoevents#natural_event-has_start_point">
 	<rdfs:label>http://purl.org/ifgi/geoevents#has_start_point</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/geoevents#natural_event"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/geoevents#point_in_time"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16lut4ug7x3">
+<rdf:Description rdf:about="http://purl.org/ifgi/geoevents#natural_event-has_duration">
 	<rdfs:label>http://purl.org/ifgi/geoevents#has_duration</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/geoevents#natural_event"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -180,6 +180,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/geoevents#has_start_point">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/geoevents#has_start_point"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/geoevents#natural_event"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/geoevents#point_in_time"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#has_quality"/>
@@ -190,6 +191,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/geoevents#has_duration">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/geoevents#has_duration"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/geoevents#natural_event"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/geoevents#time_interval"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#has_quality"/>

@@ -14,7 +14,7 @@
 	xmlns:dns="http://purl.org/ifgi/dolceDnS#"
 	xmlns:oil="http://purl.org/ifgi/oilspill#">
 
-<rdf:Description rdf:nodeID="node16d8paspdx7">
+<rdf:Description rdf:nodeID="node16m5g9gi4x113">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>Landslide</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -134,9 +134,10 @@
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.thefreedictionary.com/hillside</dc:source>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16d8paspdx8">
+<rdf:Description rdf:about="http://purl.org/ifgi/landslide#hillside-part_of">
 	<rdfs:label>http://purl.org/ifgi/dolce#part_of</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/landslide#hillside"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#part_of"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/landslide#mountain"/>
 </rdf:Description>
@@ -151,9 +152,10 @@
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://wordnetweb.princeton.edu/</dc:source>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16d8paspdx9">
+<rdf:Description rdf:about="http://purl.org/ifgi/landslide#catchment_area-sameAs">
 	<rdfs:label>http://www.w3.org/2002/07/owl#sameAs</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/landslide#catchment_area"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/landslide#watershed"/>
 </rdf:Description>
@@ -167,9 +169,10 @@
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://wordnetweb.princeton.edu/</dc:source>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16d8paspdx10">
+<rdf:Description rdf:about="http://purl.org/ifgi/landslide#watershed-sameAs">
 	<rdfs:label>http://www.w3.org/2002/07/owl#sameAs</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/landslide#watershed"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/landslide#catchment_area"/>
 </rdf:Description>
@@ -214,9 +217,10 @@
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://wordnetweb.princeton.edu/</dc:source>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16d8paspdx11">
+<rdf:Description rdf:about="http://purl.org/ifgi/landslide#rock-has_quality">
 	<rdfs:label>http://purl.org/ifgi/dolce#has_quality</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/landslide#rock"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#has_quality"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/landslide#porosity"/>
 </rdf:Description>
@@ -232,16 +236,17 @@
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://wordnetweb.princeton.edu/</dc:source>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16d8paspdx12">
+<rdf:Description rdf:about="http://purl.org/ifgi/landslide#soil-is_layered_by">
 	<rdfs:label>http://purl.org/ifgi/landslide#is_layered_by</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/landslide#soil"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/landslide#subsoil"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16d8paspdx13">
+<rdf:Description rdf:about="http://purl.org/ifgi/landslide#soil-has_quality">
 	<rdfs:label>http://purl.org/ifgi/dolce#has_quality</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/landslide#soil"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#has_quality"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/landslide#angle_of_repose"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -266,9 +271,10 @@
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Borehole</dc:source>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16d8paspdx14">
+<rdf:Description rdf:about="http://purl.org/ifgi/landslide#borehole-has_quality">
 	<rdfs:label>http://purl.org/ifgi/dolce#has_quality</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/landslide#borehole"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#has_quality"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/oilspill#depth"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -325,9 +331,10 @@
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://wordnetweb.princeton.edu/</dc:source>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16d8paspdx15">
+<rdf:Description rdf:about="http://purl.org/ifgi/landslide#subsoil-has_quality">
 	<rdfs:label>http://purl.org/ifgi/dolce#has_quality</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/landslide#subsoil"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#has_quality"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/landslide#thickness"/>
 </rdf:Description>
@@ -362,9 +369,10 @@
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://wordnetweb.princeton.edu/</dc:source>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16d8paspdx16">
+<rdf:Description rdf:about="http://purl.org/ifgi/landslide#height-sameAs">
 	<rdfs:label>http://www.w3.org/2002/07/owl#sameAs</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/landslide#height"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/geospace#elevation"/>
 </rdf:Description>

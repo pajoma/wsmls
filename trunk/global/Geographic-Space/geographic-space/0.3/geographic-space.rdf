@@ -9,7 +9,7 @@
 	xmlns:dolce="http://purl.org/ifgi/dolce#"
 	xmlns:dolceSpatial="http://purl.org/ifgi/dolceSpatial#">
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx231">
+<rdf:Description rdf:nodeID="node16m5g9gi4x95">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>geographic_space</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -33,21 +33,23 @@
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Something which is identified as entity on geographic scale</dc:description>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx232">
+<rdf:Description rdf:about="http://purl.org/ifgi/geospace#geographical_unit-spatial_location">
 	<rdfs:label>http://purl.org/ifgi/dolceSpatial#spatial_location</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/geospace#geographical_unit"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolceSpatial#spatial_location"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/geospace#geographical_space_region"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx233">
+<rdf:Description rdf:about="http://purl.org/ifgi/geospace#geographical_unit-has_quality">
 	<rdfs:label>http://purl.org/ifgi/dolce#has_quality</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/geospace#geographical_unit"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#has_quality"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/geospace#geographical_quality"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx234">
+<rdf:Description rdf:about="http://purl.org/ifgi/geospace#geographical_unit-confined_by">
 	<rdfs:label>http://purl.org/ifgi/geospace#confined_by</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/geospace#geographical_unit"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">begrenzt durch@de</dc:identifier>
@@ -59,7 +61,7 @@
 	<rdfs:range rdf:resource="http://purl.org/ifgi/geospace#geographical_unit"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx235">
+<rdf:Description rdf:about="http://purl.org/ifgi/geospace#geographical_unit-situated_in">
 	<rdfs:label>http://purl.org/ifgi/geospace#situated_in</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/geospace#geographical_unit"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">situiert in@de</dc:identifier>
@@ -85,7 +87,7 @@
 	<rdfs:label>http://purl.org/ifgi/geospace#geographical_quality</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dolce#physical_quality"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geographic Quality@en</dc:identifier>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geographische Qualit√§t@de</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geographische Qualit‰t@de</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualities restricted to geographic objects. Only large scale objects have a terrain or a skyline</dc:description>
 </rdf:Description>
 

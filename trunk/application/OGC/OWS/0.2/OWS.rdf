@@ -12,7 +12,7 @@
 	xmlns:sawsdl="http://www.w3.org/ns/sawsdl#"
 	xmlns:dolce="http://purl.org/ifgi/dolceDnS#">
 
-<rdf:Description rdf:nodeID="node16kg83qlpx9">
+<rdf:Description rdf:nodeID="node16m5g9gi4x13">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>OWSOntology</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-core</dc:format>
@@ -70,20 +70,20 @@
 <rdf:Description rdf:about="http://purl.org/ifgi/ows/0.2#DefaultGetCapabilities">
 	<rdf:type rdf:resource="http://purl.org/ifgi/ows/0.2#GetCapabilities"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">default get capabilities@en</dc:identifier>
-	<posm:hasOutput rdf:resource="http://purl.org/ifgi/ows/0.2#DefaultGetCapabilitiesResponse"/>
-	<posm:hasInput rdf:resource="http://purl.org/ifgi/ows/0.2#DefaultGetCapabilitiesRequest"/>
+	<GetCapabilities-hasOutput rdf:resource="http://purl.org/ifgi/ows/0.2#DefaultGetCapabilitiesResponse"/>
+	<GetCapabilities-hasInput rdf:resource="http://purl.org/ifgi/ows/0.2#DefaultGetCapabilitiesRequest"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ows/0.2#DefaultGetCapabilitiesResponse">
 	<rdf:type rdf:resource="http://purl.org/ifgi/ows/0.2#GetCapabilitiesResponse"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">default get capabilities response@en</dc:identifier>
-	<sawsdl:modelReference rdf:resource="http://purl.org/ifgi/ows/0.2#ServiceDescription"/>
+	<GetCapabilitiesResponse-modelReference rdf:resource="http://purl.org/ifgi/ows/0.2#ServiceDescription"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ows/0.2#DefaultGetCapabilitiesRequest">
 	<rdf:type rdf:resource="http://purl.org/ifgi/ows/0.2#GetCapabilitiesRequest"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">default get capabilities request@en</dc:identifier>
-	<sawsdl:modelReference rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	<GetCapabilitiesRequest-modelReference rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 </rdf:Description>
 
 </rdf:RDF>

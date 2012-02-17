@@ -8,7 +8,7 @@
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns:dolce="http://purl.org/ifgi/dolce#">
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx283">
+<rdf:Description rdf:nodeID="node16m5g9gi4x107">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>EventPattern</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-core</dc:format>
@@ -30,7 +30,7 @@
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Event@de</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx284">
+<rdf:Description rdf:about="http://purl.org/ifgi/patterns/event#Event-initiates">
 	<rdfs:label>http://purl.org/ifgi/patterns/event#initiates</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/patterns/event#Event"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">initiiert@de</dc:identifier>
@@ -42,7 +42,7 @@
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#perdurant"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx285">
+<rdf:Description rdf:about="http://purl.org/ifgi/patterns/event#Event-changes">
 	<rdfs:label>http://purl.org/ifgi/patterns/event#changes</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/patterns/event#Event"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ver�ndert@de</dc:identifier>

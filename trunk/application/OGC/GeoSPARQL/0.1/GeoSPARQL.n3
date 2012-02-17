@@ -5,7 +5,7 @@
 @prefix : <http://purl.org/ifgi/geosparql#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 
-_:node16lent8itx2 a owl:Ontology ;
+_:node16m5g9gi4x6 a owl:Ontology ;
 	rdfs:label "GeoSPARQL" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
@@ -99,41 +99,51 @@ _:node16lent8itx2 a owl:Ontology ;
 	rdfs:subClassOf rdf:XMLLiteral .
 
 :defaultGeometry a rdf:Property ;
+	rdfs:label :defaultGeometry ;
 	rdfs:domain :Feature ;
 	rdfs:range :Geometry .
 
 :hasGeometry a rdf:Property ;
+	rdfs:label :hasGeometry ;
 	rdfs:domain :Feature ;
 	rdfs:range :Geometry .
 
 :isEmpty a rdf:Property ;
+	rdfs:label :isEmpty ;
 	rdfs:domain :Geometry ;
 	rdfs:range xsd:boolean .
 
 :isSimple a rdf:Property ;
+	rdfs:label :isSimple ;
 	rdfs:domain :Geometry ;
 	rdfs:range xsd:boolean .
 
 :is3D a rdf:Property ;
+	rdfs:label :is3D ;
 	rdfs:domain :Geometry ;
 	rdfs:range xsd:boolean .
 
 :asWKT a rdf:Property ;
+	rdfs:label :asWKT ;
 	rdfs:domain :Geometry ;
 	rdfs:range :WKTLiteral .
 
 :asGML a rdf:Property ;
+	rdfs:label :asGML ;
 	rdfs:domain :Geometry ;
 	rdfs:range :GMLLiteral .
 
 :spatialDimension a rdf:Property ;
+	rdfs:label :spatialDimension ;
 	rdfs:domain :Geometry ;
 	rdfs:range xsd:integer .
 
 :dimension a rdf:Property ;
+	rdfs:label :dimension ;
 	rdfs:domain :Geometry ;
 	rdfs:range xsd:integer .
 
 :coordinateDimension a rdf:Property ;
+	rdfs:label :coordinateDimension ;
 	rdfs:domain :Geometry ;
 	rdfs:range xsd:integer .

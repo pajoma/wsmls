@@ -11,7 +11,7 @@
 	xmlns:posm="http://purl.org/ifgi/posm#"
 	xmlns:dolce="http://purl.org/net/wsml/dolceDnS#">
 
-<rdf:Description rdf:nodeID="node16kg83qlpx17">
+<rdf:Description rdf:nodeID="node16m5g9gi4x21">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>WCS</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -87,18 +87,18 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/wcs#DefaultDescribeCoverage">
 	<rdf:type rdf:resource="http://purl.org/ifgi/wcs#DescribeCoverage"/>
-	<posm:hasOutput rdf:resource="http://purl.org/ifgi/wcs#DefaultDescribeCoverageResponse"/>
-	<posm:hasInput rdf:resource="http://purl.org/ifgi/wcs#DefaultDescribeCoverageRequest"/>
+	<DescribeCoverage-hasOutput rdf:resource="http://purl.org/ifgi/wcs#DefaultDescribeCoverageResponse"/>
+	<DescribeCoverage-hasInput rdf:resource="http://purl.org/ifgi/wcs#DefaultDescribeCoverageRequest"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/wcs#DefaultDescribeCoverageResponse">
 	<rdf:type rdf:resource="http://purl.org/ifgi/wcs#DescribeCoverageResponse"/>
-	<sawsdl:modelReference rdf:resource="http://purl.org/ifgi/wcs#CoverageDescription"/>
+	<DescribeCoverageResponse-modelReference rdf:resource="http://purl.org/ifgi/wcs#CoverageDescription"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/wcs#DefaultDescribeCoverageRequest">
 	<rdf:type rdf:resource="http://purl.org/ifgi/wcs#DescribeCoverageRequest"/>
-	<sawsdl:modelReference rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	<DescribeCoverageRequest-modelReference rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 </rdf:Description>
 
 </rdf:RDF>

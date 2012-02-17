@@ -9,7 +9,7 @@
 	xmlns:dolce="http://purl.org/ifgi/dolce#"
 	xmlns:obs="http://purl.org/ifgi/observation#">
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx423">
+<rdf:Description rdf:nodeID="node16m5g9gi4x121">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>WaterlevelObservation</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -30,14 +30,14 @@
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">water level observation@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx424">
+<rdf:Description rdf:about="http://purl.org/ifgi/suc/waterlevelobservation#WaterlevelObservation-hasName">
 	<rdfs:label>http://purl.org/ifgi/suc/waterlevelobservation#hasName</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/suc/waterlevelobservation#WaterlevelObservation"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx425">
+<rdf:Description rdf:about="http://purl.org/ifgi/suc/waterlevelobservation#WaterlevelObservation-isPerformedBy">
 	<rdfs:label>http://purl.org/ifgi/suc/waterlevelobservation#isPerformedBy</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/suc/waterlevelobservation#WaterlevelObservation"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -51,14 +51,14 @@
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">water level sensor@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx426">
+<rdf:Description rdf:about="http://purl.org/ifgi/suc/waterlevelobservation#WaterlevelSensor-performs">
 	<rdfs:label>http://purl.org/ifgi/suc/waterlevelobservation#performs</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/suc/waterlevelobservation#WaterlevelSensor"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/suc/waterlevelobservation#WaterlevelObservation"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx427">
+<rdf:Description rdf:about="http://purl.org/ifgi/suc/waterlevelobservation#WaterlevelSensor-observes">
 	<rdfs:label>http://purl.org/ifgi/suc/waterlevelobservation#observes</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/suc/waterlevelobservation#WaterlevelSensor"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -72,14 +72,14 @@
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">water level value@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx428">
+<rdf:Description rdf:about="http://purl.org/ifgi/suc/waterlevelobservation#WaterlevelValue-value">
 	<rdfs:label>http://purl.org/ifgi/suc/waterlevelobservation#value</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/suc/waterlevelobservation#WaterlevelValue"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx429">
+<rdf:Description rdf:about="http://purl.org/ifgi/suc/waterlevelobservation#WaterlevelValue-isProducedBy">
 	<rdfs:label>http://purl.org/ifgi/suc/waterlevelobservation#isProducedBy</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/suc/waterlevelobservation#WaterlevelValue"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -93,7 +93,7 @@
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">water level@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx430">
+<rdf:Description rdf:about="http://purl.org/ifgi/suc/waterlevelobservation#Waterlevel-isObservedBy">
 	<rdfs:label>http://purl.org/ifgi/suc/waterlevelobservation#isObservedBy</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/suc/waterlevelobservation#Waterlevel"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -128,9 +128,10 @@
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">water@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16a8i5n2fx431">
+<rdf:Description rdf:about="http://purl.org/ifgi/suc/waterlevelobservation#Water-has_quality">
 	<rdfs:label>http://purl.org/ifgi/dolce#has_quality</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/suc/waterlevelobservation#Water"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#has_quality"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/suc/waterlevelobservation#Waterlevel"/>
 </rdf:Description>

@@ -5,7 +5,7 @@
 @prefix : <http://purl.org/ifgi/wsl#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 
-_:node16dn68gagx28 a owl:Ontology ;
+_:node16m5g9gi4x34 a owl:Ontology ;
 	rdfs:label "WSL" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-core" .
 
@@ -26,7 +26,9 @@ _:node16dn68gagx28 a owl:Ontology ;
 	dc:identifier "effect@en"^^xsd:string .
 
 :functionalClassification a rdf:Property ;
+	rdfs:label :functionalClassification ;
 	dc:identifier "functional classification@en"^^xsd:string .
 
 :usesOntology a rdf:Property ;
+	rdfs:label :usesOntology ;
 	dc:identifier "uses ontology@en"^^xsd:string .

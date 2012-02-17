@@ -10,7 +10,7 @@
 	xmlns:ows="http://purl.org/ifgi/ows/0.2#"
 	xmlns:posm="http://purl.org/ifgi/posm#">
 
-<rdf:Description rdf:nodeID="node16kg83qlpx23">
+<rdf:Description rdf:nodeID="node16m5g9gi4x27">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>WPS</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -91,18 +91,18 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/wps#DefaultDescribeProcess">
 	<rdf:type rdf:resource="http://purl.org/ifgi/wps#DescribeProcess"/>
-	<posm:hasOutput rdf:resource="http://purl.org/ifgi/wps#DefaultDescribeProcessResponse"/>
-	<posm:hasInput rdf:resource="http://purl.org/ifgi/wps#DefaultDescribeProcessRequest"/>
+	<DescribeProcess-hasOutput rdf:resource="http://purl.org/ifgi/wps#DefaultDescribeProcessResponse"/>
+	<DescribeProcess-hasInput rdf:resource="http://purl.org/ifgi/wps#DefaultDescribeProcessRequest"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/wps#DefaultDescribeProcessResponse">
 	<rdf:type rdf:resource="http://purl.org/ifgi/wps#DescribeProcessResponse"/>
-	<sawsdl:modelReference rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	<DescribeProcessResponse-modelReference rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/wps#DefaultDescribeProcessRequest">
 	<rdf:type rdf:resource="http://purl.org/ifgi/wps#DescribeProcessRequest"/>
-	<sawsdl:modelReference rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	<DescribeProcessRequest-modelReference rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 </rdf:Description>
 
 </rdf:RDF>

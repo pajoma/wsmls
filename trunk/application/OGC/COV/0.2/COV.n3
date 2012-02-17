@@ -7,7 +7,7 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix swe: <http://purl.org/ifgi/swe#> .
 
-_:node16kg83qlpx2 a owl:Ontology ;
+_:node16m5g9gi4x4 a owl:Ontology ;
 	rdfs:label "COV" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/gml/0.2#> , <http://purl.org/ifgi/swe#> ;
@@ -54,6 +54,7 @@ _:node16kg83qlpx2 a owl:Ontology ;
 	dc:identifier "interpolation method@en"^^xsd:string .
 
 :coverageMember a rdf:Property ;
+	rdfs:label :coverageMember ;
 	rdfs:domain :Coverages ;
 	rdfs:range :Coverage ;
 	rdfs:subPropertyOf rdfs:member ;
@@ -61,21 +62,25 @@ _:node16kg83qlpx2 a owl:Ontology ;
 	dc:description "deprecated"^^xsd:string .
 
 :hasMappingRule a rdf:Property ;
+	rdfs:label :hasMappingRule ;
 	rdfs:domain :CoverageFunction ;
 	rdfs:range xsd:string ;
 	dc:identifier "has mapping rule@en"^^xsd:string .
 
 :dataRecordProperty a rdf:Property ;
+	rdfs:label :dataRecordProperty ;
 	rdfs:domain :Range ;
 	rdfs:range swe:DataRecord ;
 	dc:identifier "data record property@en"^^xsd:string .
 
 :interpolationMethod a rdf:Property ;
+	rdfs:label :interpolationMethod ;
 	rdfs:domain :Field ;
 	rdfs:range :InterpolationMethod ;
 	dc:identifier "interpolation method@en"^^xsd:string .
 
 :interpolationMethodId a rdf:Property ;
+	rdfs:label :interpolationMethodId ;
 	rdfs:domain :InterpolationMethod ;
 	rdfs:range xsd:string ;
 	dc:identifier "interpolation method id@en"^^xsd:string .

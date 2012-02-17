@@ -11,7 +11,7 @@
 	xmlns:geospace="http://purl.org/ifgi/geospace#"
 	xmlns:geoevent="http://purl.org/ifgi/geoevents#">
 
-<rdf:Description rdf:nodeID="node16ljqakpux7">
+<rdf:Description rdf:nodeID="node16m5g9gi4x99">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>geographic_units</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -68,23 +68,6 @@
 	<dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Units</dc:subject>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16ljqakpux8">
-	<rdfs:label>http://purl.org/ifgi/geounits#covers</rdfs:label>
-	<rdfs:domain rdf:resource="http://purl.org/ifgi/geounits#landcover_unit"/>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cover@en</dc:identifier>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bedecken@de</dc:identifier>
-	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:range rdf:resource="http://purl.org/ifgi/geospace#geographical_unit"/>
-</rdf:Description>
-
-<rdf:Description rdf:nodeID="node16ljqakpux9">
-	<rdfs:label>http://purl.org/ifgi/dolce#participant_in</rdfs:label>
-	<rdfs:domain rdf:resource="http://purl.org/ifgi/geounits#landcover_unit"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:range rdf:resource="http://purl.org/ifgi/geoevents#ground_movement"/>
-</rdf:Description>
-
 <rdf:Description rdf:about="http://purl.org/ifgi/geounits#vegetation_community">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/geounits#vegetation_community</rdfs:label>
@@ -133,6 +116,27 @@
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">water body@en</dc:identifier>
 	<comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">any kind of accumulation of water, as oceans, rivers or lakes</comment>
 	<dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LandCover</dc:subject>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/geounits#landcover_unit_covers">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/geounits#landcover_unit_covers"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/geounits#landcover_unit"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/geospace#geographical_unit"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cover@en</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bedecken@de</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/geounits#landcover_unit_particpant_in">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/geounits#landcover_unit_particpant_in"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/geounits#landcover_unit"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/geoevents#ground_movement"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#participant_in"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">participant in@en</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">teilnehmen an@de</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
 </rdf:Description>
 
 </rdf:RDF>
