@@ -28,7 +28,7 @@ ontology OilSpill
 		dc#subject hasValue "Oil Spill"	
 	endnfp
 	
-	importsOntology {_"http://purl.org/ifgi/geospace#", _"http://purl.org/ifgi/geounits#", _"http://purl.org/ifgi/geoevents#", _"http://purl.org/ifgi/geoqualities#", _"http://purl.org/ifgi/landslide#"}
+	importsOntology {_"http://purl.org/ifgi/geospace#", _"http://purl.org/ifgi/geounits#", _"http://purl.org/ifgi/geoevents#", _"http://purl.org/ifgi/geoqualities#", _"http://purl.org/ifgi/landslide#", _"http://purl.org/ifgi/dolce#", _"http://purl.org/ifgi/dul#"}
 
 /* Event/Processes */
 	
