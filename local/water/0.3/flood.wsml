@@ -1,0 +1,168 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://purl.org/ifgi/water/flood#",
+	 rdf _"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+     rdfs _"http://www.w3.org/2000/01/rdf-schema#",
+     dc _"http://purl.org/dc/elements/1.1/",
+     owl _"http://www.w3.org/2002/07/owl#",
+     dul _"http://purl.org/ifgi/dul#",
+	 gsy _"http://purl.org/ifgi/geosystems#",
+	 gs _"http://purl.org/ifgi/geospace#",
+	 gu _"http://purl.org/ifgi/geounits#",
+	 ge _"http://purl.org/ifgi/geoevents#"
+     }
+
+ontology FloodScenario
+     nfp
+		dc#creator hasValue "a.llaves (IFGI)"
+		dc#contributor hasValue "h.michels (IFGI)"
+		dc#contributor hasValue "a.baglatzi (IFGI)"
+		dc#publisher hasValue "(a)IfGI, University of Muenster"
+		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+		dc#type hasValue "Domain Ontology"
+		dc#title hasValue "Envision flood scenario ontology"	
+		dc#description hasValue "This ontology captures the domain knowledge for a river and its environment in the content of flooding."
+	endnfp
+	
+	importsOntology {
+		_"http://purl.org/ifgi/dul#",
+		_"http://purl.org/ifgi/geospace#"
+	}
+
+	// Geographical Units (Features of Interest)
+	concept River subConceptOf gs#geographical_unit
+		nfp
+			dc#identifier hasValue "river@en"
+			dc#description hasValue "A river is a natural watercourse flowing towards an ocean, a lake, a sea, or another river"
+			dc#source hasValue "http://en.wikipedia.org/wiki/River"
+		endnfp
+		dul#hasPart ofType Reservoir
+		dul#hasQuality ofType {WaterLevel, VolumetricFlowRate}
+	
+	concept Reservoir subConceptOf gs#geographical_unit
+		nfp
+			dc#identifier hasValue "reservoir@en"
+			dc#description hasValue "A reservoir or artificial lake is used to store water."
+			dc#source hasValue "http://en.wikipedia.org/wiki/Reservoir"
+		endnfp
+		dul#hasPart ofType Dam
+		dul#hasQuality ofType {WaterLevel, VolumetricFlowRate, WaterBodyVolume}
+	
+	concept HydropowerPlant subConceptOf gs#geographical_unit
+		nfp
+			dc#identifier hasValue "hydropower plant@en"
+			dc#description hasValue "A factory where electricity is generated from the force or energy of falling water."
+			dc#source hasValue "http://en.wikipedia.org/wiki/Hydropower"
+		endnfp
+		
+	concept Dam subConceptOf gs#geographical_unit
+		nfp
+			dc#identifier hasValue "dam@en"
+			dc#description hasValue "A dam is a barrier that impounds water or underground streams."
+			dc#source hasValue "http://en.wikipedia.org/wiki/Dam"
+		endnfp
+		dul#hasParameter ofType {MinWaterLevel, MaxWaterLevel}
+		dul#hasComponent ofType DamGate
+		
+		
+	// Physical Object
+	concept DamGate subConceptOf dul#PhysicalObject
+		nfp
+			dc#identifier hasValue "dam gate@en"
+			dc#description hasValue "The gate(s) of a dam control(s) the water discharge of the reservoir."
+		endnfp
+		
+	
+	// Parameters
+	concept MinWaterLevel subConceptOf dul#Parameter
+		nfp
+			dc#identifier hasValue "min water level@en"
+			dc#description hasValue "The minimum level of water allowed for a specific entity."
+		endnfp
+		
+	concept MaxWaterLevel subConceptOf dul#Parameter
+		nfp
+			dc#identifier hasValue "max water level@en"
+			dc#description hasValue "The maximum level of water allowed for a specific entity."
+		endnfp
+	
+	
+	// Properties/Qualities
+	// We don't need to model the concept "Sensor" since the SSN ontology already defines that a ssn#Property (and its subconcepts) is observed by a sensor.
+	concept Volume subConceptOf dul#Quality
+		nfp
+			dc#identifier hasValue "Volumen@de"
+			dc#identifier hasValue "volume@en"
+			dc#description hasValue "The amount of 3-dimensional space occupied
+			by an any solid, plasma, vacuum or theoretical object often quantified numerically"
+			dc#source hasValue "http://en.wikipedia.org/wiki/Volume"
+			dc#subject hasValue "Quality"
+		endnfp
+		
+	concept WaterBodyVolume subConceptOf Volume
+		nfp
+			dc#identifier hasValue "water body volume@en"
+			dc#description hasValue "The amount of 3-dimensional space occupied by a waterbody, e.g. a reservoir."
+		endnfp
+		
+	concept VolumetricFlowRate subConceptOf dul#Quality
+		nfp
+			dc#identifier hasValue "Durchfluss@de"
+			dc#identifier hasValue "volumetric flow rate@en"
+			dc#description hasValue "The volumetric flow rate, also volume flow rate and rate
+			of fluid flow, is the volume of fluid which passes through a given surface per
+			unit time, mostly measured in cubic metre per second. Volumetric flow rate should
+			not be confused with volumetric flux, the integration of a flux over an area gives
+			the volumetric flow rate"
+			dc#source hasValue "http://en.wikipedia.org/wiki/Volumetric_flow_rate"
+			dc#subject hasValue "Quality"
+		endnfp
+		owl#sameAs ofType {FlowRate, WaterDischarge, Discharge}
+		
+	concept FlowRate subConceptOf dul#Quality
+		nfp
+			dc#identifier hasValue "flow rate@en"
+			dc#description hasValue "See concept VolumetricFlowRate."
+		endnfp
+		
+	concept WaterDischarge subConceptOf dul#Quality
+		nfp
+			dc#identifier hasValue "water discharge@en"
+			dc#description hasValue "See concept VolumetricFlowRate."
+		endnfp
+		
+	concept Discharge subConceptOf dul#Quality
+		nfp
+			dc#identifier hasValue "discharge@en"
+			dc#description hasValue "See concept VolumetricFlowRate."
+		endnfp
+	
+	concept WaterLevel subConceptOf dul#Quality
+		nfp
+			dc#identifier hasValue "Pegelstand@de"
+			dc#identifier hasValue "water level@en"
+			dc#description hasValue "The height of the water surface measured above a datum"
+			dc#source hasValue "http://amsglossary.allenpress.com/glossary/browse?s=w&p=7"
+			dc#subject hasValue "Quality"
+		endnfp
+		owl#sameAs ofType {WaterStage, GaugeHeight, GageHeight}
+	
+	concept WaterStage subConceptOf dul#Quality
+		nfp
+			dc#identifier hasValue "water stage@en"
+			dc#description hasValue "See concept WaterLevel."
+		endnfp
+		
+	concept GaugeHeight subConceptOf dul#Quality
+		nfp
+			dc#identifier hasValue "gauge height@en"
+			dc#description hasValue "See concept WaterLevel."
+		endnfp
+		
+	concept GageHeight subConceptOf dul#Quality
+		nfp
+			dc#identifier hasValue "gage height@en"
+			dc#description hasValue "See concept WaterLevel."
+		endnfp
+	
+
+
