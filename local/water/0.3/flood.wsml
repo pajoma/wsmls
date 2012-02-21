@@ -5,6 +5,7 @@ namespace { _"http://purl.org/ifgi/water/flood#",
      dc _"http://purl.org/dc/elements/1.1/",
      owl _"http://www.w3.org/2002/07/owl#",
      dul _"http://purl.org/ifgi/dul#",
+     ssn _"http://purl.org/ifgi/ssn#",
 	 gsy _"http://purl.org/ifgi/geosystems#",
 	 gs _"http://purl.org/ifgi/geospace#",
 	 gu _"http://purl.org/ifgi/geounits#",
@@ -25,6 +26,7 @@ ontology FloodScenario
 	
 	importsOntology {
 		_"http://purl.org/ifgi/dul#",
+		_"http://purl.org/ifgi/ssn#",
 		_"http://purl.org/ifgi/geospace#"
 	}
 
@@ -103,6 +105,7 @@ ontology FloodScenario
 			dc#identifier hasValue "water body volume@en"
 			dc#description hasValue "The amount of 3-dimensional space occupied by a waterbody, e.g. a reservoir."
 		endnfp
+		ssn#observedBy ofType ssn#Sensor
 		
 	concept VolumetricFlowRate subConceptOf dul#Quality
 		nfp
@@ -117,6 +120,7 @@ ontology FloodScenario
 			dc#subject hasValue "Quality"
 		endnfp
 		owl#sameAs ofType {FlowRate, WaterDischarge, Discharge}
+		ssn#observedBy ofType ssn#Sensor
 		
 	concept FlowRate subConceptOf dul#Quality
 		nfp
@@ -145,6 +149,7 @@ ontology FloodScenario
 			dc#subject hasValue "Quality"
 		endnfp
 		owl#sameAs ofType {WaterStage, GaugeHeight, GageHeight}
+		ssn#observedBy ofType ssn#Sensor
 	
 	concept WaterStage subConceptOf dul#Quality
 		nfp
@@ -164,5 +169,6 @@ ontology FloodScenario
 			dc#description hasValue "See concept WaterLevel."
 		endnfp
 	
-
+	
+	
 

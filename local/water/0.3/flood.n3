@@ -5,15 +5,16 @@
 @prefix : <http://purl.org/ifgi/water/flood#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dul: <http://purl.org/ifgi/dul#> .
+@prefix ssn: <http://purl.org/ifgi/ssn#> .
 @prefix gsy: <http://purl.org/ifgi/geosystems#> .
 @prefix gs: <http://purl.org/ifgi/geospace#> .
 @prefix gu: <http://purl.org/ifgi/geounits#> .
 @prefix ge: <http://purl.org/ifgi/geoevents#> .
 
-_:node16mgdu1ifx10 a owl:Ontology ;
+_:node16mgfchr7x13 a owl:Ontology ;
 	rdfs:label "FloodScenario" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
-	owl:imports <http://purl.org/ifgi/dul#> , <http://purl.org/ifgi/geospace#> ;
+	owl:imports <http://purl.org/ifgi/dul#> , <http://purl.org/ifgi/ssn#> , <http://purl.org/ifgi/geospace#> ;
 	dc:creator "a.llaves (IFGI)"^^xsd:string ;
 	dc:contributor "h.michels (IFGI)"^^xsd:string , "a.baglatzi (IFGI)"^^xsd:string ;
 	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
@@ -29,12 +30,12 @@ _:node16mgdu1ifx10 a owl:Ontology ;
 	dc:description "A river is a natural watercourse flowing towards an ocean, a lake, a sea, or another river"^^xsd:string ;
 	dc:source "http://en.wikipedia.org/wiki/River"^^xsd:string .
 
-_:node16mgdu1ifx11 rdfs:label "http://purl.org/ifgi/dul#hasPart" ;
+_:node16mgfchr7x14 rdfs:label "http://purl.org/ifgi/dul#hasPart" ;
 	rdfs:domain :River ;
 	a rdf:Property ;
 	rdfs:range :Reservoir .
 
-_:node16mgdu1ifx12 rdfs:label "http://purl.org/ifgi/dul#hasQuality" ;
+_:node16mgfchr7x15 rdfs:label "http://purl.org/ifgi/dul#hasQuality" ;
 	rdfs:domain :River ;
 	a rdf:Property ;
 	rdfs:range :VolumetricFlowRate ;
@@ -48,12 +49,12 @@ _:node16mgdu1ifx12 rdfs:label "http://purl.org/ifgi/dul#hasQuality" ;
 	dc:description "A reservoir or artificial lake is used to store water."^^xsd:string ;
 	dc:source "http://en.wikipedia.org/wiki/Reservoir"^^xsd:string .
 
-_:node16mgdu1ifx13 rdfs:label "http://purl.org/ifgi/dul#hasPart" ;
+_:node16mgfchr7x16 rdfs:label "http://purl.org/ifgi/dul#hasPart" ;
 	rdfs:domain :Reservoir ;
 	a rdf:Property ;
 	rdfs:range :Dam .
 
-_:node16mgdu1ifx14 rdfs:label "http://purl.org/ifgi/dul#hasQuality" ;
+_:node16mgfchr7x17 rdfs:label "http://purl.org/ifgi/dul#hasQuality" ;
 	rdfs:domain :Reservoir ;
 	a rdf:Property ;
 	rdfs:range :WaterBodyVolume ;
@@ -76,14 +77,14 @@ _:node16mgdu1ifx14 rdfs:label "http://purl.org/ifgi/dul#hasQuality" ;
 	dc:description "A dam is a barrier that impounds water or underground streams."^^xsd:string ;
 	dc:source "http://en.wikipedia.org/wiki/Dam"^^xsd:string .
 
-_:node16mgdu1ifx15 rdfs:label "http://purl.org/ifgi/dul#hasParameter" ;
+_:node16mgfchr7x18 rdfs:label "http://purl.org/ifgi/dul#hasParameter" ;
 	rdfs:domain :Dam ;
 	a rdf:Property ;
 	rdfs:range :MaxWaterLevel ;
 	a rdf:Property ;
 	rdfs:range :MinWaterLevel .
 
-_:node16mgdu1ifx16 rdfs:label "http://purl.org/ifgi/dul#hasComponent" ;
+_:node16mgfchr7x19 rdfs:label "http://purl.org/ifgi/dul#hasComponent" ;
 	rdfs:domain :Dam ;
 	a rdf:Property ;
 	rdfs:range :DamGate .
@@ -120,6 +121,11 @@ _:node16mgdu1ifx16 rdfs:label "http://purl.org/ifgi/dul#hasComponent" ;
 	dc:identifier "water body volume@en"^^xsd:string ;
 	dc:description "The amount of 3-dimensional space occupied by a waterbody, e.g. a reservoir."^^xsd:string .
 
+_:node16mgfchr7x20 rdfs:label "http://purl.org/ifgi/ssn#observedBy" ;
+	rdfs:domain :WaterBodyVolume ;
+	a rdf:Property ;
+	rdfs:range ssn:Sensor .
+
 :VolumetricFlowRate a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/water/flood#VolumetricFlowRate" ;
 	rdfs:subClassOf dul:Quality ;
@@ -128,7 +134,7 @@ _:node16mgdu1ifx16 rdfs:label "http://purl.org/ifgi/dul#hasComponent" ;
 	dc:source "http://en.wikipedia.org/wiki/Volumetric_flow_rate"^^xsd:string ;
 	dc:subject "Quality"^^xsd:string .
 
-_:node16mgdu1ifx17 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
+_:node16mgfchr7x21 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
 	rdfs:domain :VolumetricFlowRate ;
 	a rdf:Property ;
 	rdfs:range :FlowRate ;
@@ -136,6 +142,11 @@ _:node16mgdu1ifx17 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
 	rdfs:range :Discharge ;
 	a rdf:Property ;
 	rdfs:range :WaterDischarge .
+
+_:node16mgfchr7x22 rdfs:label "http://purl.org/ifgi/ssn#observedBy" ;
+	rdfs:domain :VolumetricFlowRate ;
+	a rdf:Property ;
+	rdfs:range ssn:Sensor .
 
 :FlowRate a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/water/flood#FlowRate" ;
@@ -163,7 +174,7 @@ _:node16mgdu1ifx17 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
 	dc:source "http://amsglossary.allenpress.com/glossary/browse?s=w&p=7"^^xsd:string ;
 	dc:subject "Quality"^^xsd:string .
 
-_:node16mgdu1ifx18 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
+_:node16mgfchr7x23 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
 	rdfs:domain :WaterLevel ;
 	a rdf:Property ;
 	rdfs:range :GaugeHeight ;
@@ -171,6 +182,11 @@ _:node16mgdu1ifx18 rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
 	rdfs:range :WaterStage ;
 	a rdf:Property ;
 	rdfs:range :GageHeight .
+
+_:node16mgfchr7x24 rdfs:label "http://purl.org/ifgi/ssn#observedBy" ;
+	rdfs:domain :WaterLevel ;
+	a rdf:Property ;
+	rdfs:range ssn:Sensor .
 
 :WaterStage a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/water/flood#WaterStage" ;
