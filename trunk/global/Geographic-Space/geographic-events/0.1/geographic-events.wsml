@@ -19,18 +19,25 @@ ontology geographic_events
 		dc#subject hasValue "Geography"			
     endAnnotations
 	
-	importsOntology {_"http://purl.org/ifgi/dolceDnS#"}
+	importsOntology {_"http://purl.org/ifgi/dolce#", _"http://purl.org/ifgi/dolceDnS#"}
 	
 	concept natural_event subConceptOf dns#physical_phenomenon
     	annotations
 			dc#identifier hasValue "natural event@en"
-			dc#identifier hasValue "natuerliches Phänomen@de"
+			dc#identifier hasValue "natuerliches PhÃ¤nomen@de"
 			dc#description hasValue "a non-artificial event in the physical sense, and therefore not produced by humans, although it may affect humans (such as pathogens, aging, natural disasters, death)"
 			dc#source hasValue "http://en.wikipedia.org/wiki/Natural_phenomenon"
 		endAnnotations
 		has_start_point ofType point_in_time
 		has_duration ofType time_interval
      
+    concept flood subConceptOf natural_event
+      annotations
+			dc#identifier hasValue "flood@en"
+			dc#description hasValue "A flood is an overflow of an expanse of water that submerges land."
+			dc#source hasValue "http://en.wikipedia.org/wiki/Flood"
+		endAnnotations
+    
     concept movement subConceptOf natural_event
     	annotations
 			dc#identifier hasValue "movement@en"
@@ -66,7 +73,7 @@ ontology geographic_events
 	
 	concept river_current subConceptOf flow
 		annotations
-			dc#identifier hasValue "Flussströmung@de"
+			dc#identifier hasValue "FlussstrÃ¶mung@de"
 			dc#identifier hasValue "river current@en"
 			dc#description hasValue "The steady flow of water in a river influenced by gravity as the water moves downhill to reduce its potential energy."
 			dc#source hasValue "http://en.wikipedia.org/wiki/Current_(stream)"
@@ -74,7 +81,7 @@ ontology geographic_events
 	
 	concept sea_current subConceptOf flow
 		annotations
-			dc#identifier hasValue "Meeresströmung@de"
+			dc#identifier hasValue "MeeresstrÃ¶mung@de"
 			dc#identifier hasValue "sea current@en"
 			dc#description hasValue "The steady flow of surface sea water in a prevailing direction."
 			dc#source hasValue "http://wordnetweb.princeton.edu/"
@@ -92,7 +99,7 @@ ontology geographic_events
 	concept groundwater_flow subConceptOf flow
 		annotations
 			dc#identifier hasValue "groundwater flow@en"
-			dc#identifier hasValue "Grundwasserströmung@de"
+			dc#identifier hasValue "GrundwasserstrÃ¶mung@de"
 			dc#description hasValue "part of streamflow that has infiltrated the ground, has entered the phreatic zone, and has been discharged into a stream channel, via springs or seepage water."
 			dc#source hasValue "http://en.wikipedia.org/wiki/Groundwater_flow"
 		endAnnotations
