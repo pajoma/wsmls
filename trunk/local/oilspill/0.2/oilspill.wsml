@@ -13,6 +13,14 @@ namespace { _"http://purl.org/ifgi/oilspill#",
 	gq _"http://purl.org/ifgi/geoqualities#",
 	ls _"http://purl.org/ifgi/landslide#"
  }
+ 
+ /*
+   Comments on the ifgi54 meeting, Feb 22 2012
+   - Oil spill is a geographic event and has effect on certain geographic units
+   - change dolce#physical to geographical unit
+   
+   
+ */
 
 ontology OilSpill
 	nfp
@@ -24,7 +32,7 @@ ontology OilSpill
 		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
 		dc#type hasValue "Domain Ontology"
 		dc#title hasValue "Domain Ontology for Oil Spill Scenario"
-		dc#description hasValue "Created by University of Münster. WSML code implemented by Marcell Roth"
+		dc#description hasValue "Created by University of MÃ¼nster. WSML code implemented by Marcell Roth"
 		dc#subject hasValue "Oil Spill"	
 	endnfp
 	
@@ -36,7 +44,7 @@ ontology OilSpill
 		
 	concept oil_spill subConceptOf dolce#event
 		nfp
-			dc#identifier hasValue "Ölverschmutzung@de"
+			dc#identifier hasValue "Ã–lverschmutzung@de"
 			dc#identifier hasValue "oil spill@en"
 			dc#description hasValue "An oil spill is a release of oil into the ocean or coastal waters due to human activity. Oil spills include releases of crude oil from tankers, offshore platforms, drilling rigs and wells, as well as spills of refined petroleum products (such as gasoline, diesel) and their by-products, and heavier fuels used by large ships such as bunker fuel, or the spill of any oily refuse or waste oil."
 			dc#source hasValue "http://en.wikipedia.org/wiki/Oil_spill"
@@ -85,7 +93,7 @@ ontology OilSpill
 	
 	concept oil subConceptOf dolce#amount_of_matter
 		nfp
-			dc#identifier hasValue "Öl@de"
+			dc#identifier hasValue "Ã–l@de"
 			dc#identifier hasValue "oil@en"
 			dc#description hasValue "A slippery or viscous liquid or liquefiable substance not miscible with water. Oils have a high carbon and hydrogen content and are nonpolar substances."
 			dc#source hasValue "http://en.wikipedia.org/wiki/Oil"
@@ -94,7 +102,7 @@ ontology OilSpill
 	
 	concept crude_oil subConceptOf oil
 		nfp
-			dc#identifier hasValue "Erdöl@de"
+			dc#identifier hasValue "ErdÃ¶l@de"
 			dc#identifier hasValue "crude oil@en"
 			dc#description hasValue "Crude oil or petroleum is a naturally occurring, inflammable dark oil consisting mainly of hydrocarbons. It is found in geologic formations beneath the Earth's surface."
 			dc#source hasValue "http://wordnetweb.princeton.edu/"
@@ -102,7 +110,7 @@ ontology OilSpill
 	
 	concept black_oil subConceptOf oil
 		nfp
-			dc#identifier hasValue "Rohschmieröl@de"
+			dc#identifier hasValue "RohschmierÃ¶l@de"
 			dc#identifier hasValue "black oil@en"
 			dc#description hasValue "Low-grade, black petroleum oil used to lubricate slow-moving or rough-surfaced machinery"
 			dc#source hasValue "http://www.answers.com/topic/black-oil"
@@ -192,7 +200,7 @@ ontology OilSpill
 	
 	concept viscosity subConceptOf dolce#physical_quality
 		nfp
-			dc#identifier hasValue "Viskosität@de"
+			dc#identifier hasValue "ViskositÃ¤t@de"
 			dc#identifier hasValue "viscosity@en"
 			dc#description hasValue "Resistance of a liquid to shear forces (and hence to flow)."
 			dc#source hasValue "http://wordnetweb.princeton.edu/"
@@ -272,7 +280,7 @@ ontology OilSpill
 	
 	concept carrying_capacity subConceptOf dolce#physical_quality
 		nfp
-			dc#identifier hasValue "Ladekapazität@de"
+			dc#identifier hasValue "LadekapazitÃ¤t@de"
 			dc#identifier hasValue "carrying capacity@en"
 			dc#description hasValue "capacity of a cargo-space"
 			dc#source hasValue "(Henry)"
@@ -280,7 +288,7 @@ ontology OilSpill
 
 	concept tankage subConceptOf carrying_capacity
 		nfp
-			dc#identifier hasValue "Fassungsvermögen@de"
+			dc#identifier hasValue "FassungsvermÃ¶gen@de"
 			dc#identifier hasValue "tankage@en"
 			dc#description hasValue "The capacity of a tank or tanks."
 			dc#source hasValue "http://wordnetweb.princeton.edu/"
@@ -296,7 +304,7 @@ ontology OilSpill
 	
 	concept size subConceptOf dolce#physical_quality
 		nfp
-			dc#identifier hasValue "Größe@de"
+			dc#identifier hasValue "GrÃ¶ÃŸe@de"
 			dc#identifier hasValue "size@en"
 			dc#description hasValue "The physical magnitude of something such as length or mass (how big it is)."
 			dc#source hasValue "http://wordnetweb.princeton.edu/"
@@ -312,7 +320,7 @@ ontology OilSpill
 	
 	concept lethality subConceptOf dolce#physical_quality
 		nfp
-			dc#identifier hasValue "Letalität@de"
+			dc#identifier hasValue "LetalitÃ¤t@de"
 			dc#identifier hasValue "lethality@en"
 			dc#description hasValue "The quality of being deadly. It is the ratio of deaths within a designated population with a particular condition, over a certain period of time."
 			dc#source hasValue "http://en.wikipedia.org/wiki/Case_fatality_rate"
@@ -320,7 +328,7 @@ ontology OilSpill
 	
 	concept population_size subConceptOf dolce#physical_quality
 		nfp
-			dc#identifier hasValue "Bevölkerungszahl@de"
+			dc#identifier hasValue "BevÃ¶lkerungszahl@de"
 			dc#identifier hasValue "population size@en"
 			dc#description hasValue "The number of individual organisms in a population."
 			dc#source hasValue "http://en.wikipedia.org/wiki/Population_size"
@@ -348,7 +356,7 @@ ontology OilSpill
 
 	concept water_body subConceptOf gu#landcover_unit
 		nfp
-			dc#identifier hasValue "Gewässer@de"
+			dc#identifier hasValue "GewÃ¤sser@de"
 			dc#identifier hasValue "water body@en"
 			dc#description hasValue "Any significant accumulation of water, usually covering the Earth or another planet. The term body of water most often refers to large accumulations of water, such as oceans, seas, and lakes, but it may also include smaller pools of water such as ponds, puddles or wetlands."
 			dc#source hasValue "http://en.wikipedia.org/wiki/Water_body"
@@ -358,7 +366,7 @@ ontology OilSpill
 
 	concept water_column subConceptOf water_body
 		nfp
-			dc#identifier hasValue "Wassersäule@de"
+			dc#identifier hasValue "WassersÃ¤ule@de"
 			dc#identifier hasValue "water column@en"
 			dc#description hasValue "A water column is a conceptual column of water from surface to bottom sediments. This concept is used chiefly for environmental studies evaluating the stratification or mixing (e.g. by wind induced currents) of the thermal or chemically stratified layers in a lake, stream or ocean."
 			dc#source hasValue "http://en.wikipedia.org/wiki/Water_column"
@@ -375,7 +383,7 @@ ontology OilSpill
 	
 	concept oil_slick subConceptOf gs#geographical_unit
 		nfp
-			dc#identifier hasValue "Ölschlick@de"
+			dc#identifier hasValue "Ã–lschlick@de"
 			dc#identifier hasValue "oil slick@en"
 			dc#description hasValue "A thin film of oil floating on top of water (especially crude oil spilled from a ship)"
 			dc#source hasValue "http://wordnetweb.princeton.edu/"
@@ -396,7 +404,7 @@ ontology OilSpill
 	
 	concept coastal_terrestrial_unit subConceptOf terrestrial_unit
 		nfp
-			dc#identifier hasValue "Küstenlandeinheit@de"
+			dc#identifier hasValue "KÃ¼stenlandeinheit@de"
 			dc#identifier hasValue "coastal terrestrial unit@en"
 			dc#description hasValue "A TerrestrialUnit that is near the sea."
 			dc#source hasValue "http://irtg.ifgi.de/students/jens-ortmann/#thesis"
@@ -404,7 +412,7 @@ ontology OilSpill
 	
 	concept coast subConceptOf coastal_terrestrial_unit
 		nfp
-			dc#identifier hasValue "Küste@de"
+			dc#identifier hasValue "KÃ¼ste@de"
 			dc#identifier hasValue "coast@en"
 			dc#description hasValue "The shore of a sea or ocean. It is where the land meets the sea or ocean."
 			dc#source hasValue "http://wordnetweb.princeton.edu/"
