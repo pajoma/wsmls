@@ -11,6 +11,10 @@ namespace { _"http://purl.org/ifgi/water/flood#",
 	 gu _"http://purl.org/ifgi/geounits#",
 	 ge _"http://purl.org/ifgi/geoevents#"
      }
+     
+    /* Comments on the ifgi54 meeting, Feb 22 2012
+    - use geographical qualities
+    */
 
 ontology FloodScenario
      nfp
