@@ -10,7 +10,6 @@ namespace { _"http://purl.org/ifgi/landslide#",
 	gq _"http://purl.org/ifgi/geoqualities#",
 	gs _"http://purl.org/ifgi/geospace#",
 	ge _"http://purl.org/ifgi/geoevents#",
-    dns _"http://purl.org/ifgi/dulDnS#",
     oil _"http://purl.org/ifgi/oilspill#"
     }
 
