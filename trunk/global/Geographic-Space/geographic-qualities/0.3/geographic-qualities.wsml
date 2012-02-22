@@ -1,0 +1,90 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://purl.org/ifgi/geoqualities#", 
+		dc _"http://purl.org/dc/elements/1.1/",
+     	rdfs _"http://www.w3.org/2000/01/rdf-schema#",
+     	geospace _"http://purl.org/ifgi/geospace#"
+     	}
+
+ontology geographic_qualities
+     annotations
+     	dc#creator hasValue "p.maue (ifgi)"
+		dc#contributor hasValue "e.klien (ifgi), s.schade (ifgi)"
+		dc#publisher hasValue "(a)IfGI, University of Muenster"
+		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+		dc#type hasValue "Domain Ontology"
+		dc#description hasValue "A generic ontology suitable to describe objects and events in the geographic space, e.g. weather, forests, mountains, rivers, snow, ..." 
+		dc#title hasValue "Geographic Space Ontology"	
+		dc#subject hasValue "Geography, Quality"		
+     endAnnotations
+	 
+	 importsOntology { _"http://purl.org/ifgi/geospace#"}
+ 
+concept aspect subConceptOf geospace#geographical_quality
+	annotations
+		dc#identifier hasValue "Aspect@en"
+		dc#description hasValue "In geography, aspect refers to the horizontal direction to which Slope faces." 
+	endAnnotations 
+	
+concept area subConceptOf geospace#geographical_quality
+	annotations
+		dc#identifier hasValue "Area@en"
+		dc#description hasValue "The area of a geographic unit." 
+	endAnnotations 
+
+concept altitude subConceptOf geospace#geographical_quality
+	annotations
+		dc#identifier hasValue "Altitude@en"
+		dc#description hasValue "The height or vertical elevation of a point above a reference surface. Altitude measurements are usually based on a given reference datum, such as mean sea level." 
+		dc#relation hasValue _"http://en.wikipedia.org/wiki/Altitude"
+	endAnnotations 
+	
+
+concept elevation subConceptOf geospace#geographical_quality
+		annotations
+			dc#identifier hasValue "Hoehe@de"
+			dc#identifier hasValue "elevation@en"
+			dc#description hasValue "The elevation of a geographic location is its height above a fixed reference point, often the mean sea level"
+			dc#source hasValue "en.wikipedia.org/wiki/Elevation"
+		endAnnotations
+		
+concept depth subConceptOf geospace#geographical_quality
+		annotations
+			dc#identifier hasValue "Tiefe@de"
+			dc#identifier hasValue "depth@en"
+			dc#description hasValue "The depth of a body is the length measure from a fixed reference point, often the mean sea level, to the ground"
+			dc#source hasValue "en.wikipedia.org/wiki/Elevation"
+		endAnnotations
+			
+concept slope subConceptOf geospace#geographical_quality
+	annotations
+		dc#identifier hasValue "Slope@en"
+		dc#identifier hasValue "Gefaelle@de"
+		dc#description hasValue "The degree to which a surface tends upward or downward." 
+	endAnnotations
+	
+concept grade subConceptOf geospace#geographical_quality
+	annotations
+		rdfs#seeAlso hasValue slope
+	endAnnotations
+		
+concept spatial_extent subConceptOf geospace#geographical_quality
+	annotations
+		dc#identifier hasValue "Spatial Extent@en"
+		dc#identifier hasValue "raeumliche Ausdehnung@de"
+		dc#description hasValue "" 
+	endAnnotations 
+	
+concept terrain subConceptOf geospace#geographical_quality
+	annotations
+		dc#identifier hasValue "Terrain@en"
+		dc#identifier hasValue "Gelände@de"
+		dc#description hasValue "The area of the surface with a distinctive geological character" 
+	endAnnotations
+
+concept texture subConceptOf geospace#geographical_quality
+	annotations
+		dc#identifier hasValue "Texture@en"
+		dc#identifier hasValue "Textur@de"
+		dc#description hasValue "" 
+	endAnnotations
+	
