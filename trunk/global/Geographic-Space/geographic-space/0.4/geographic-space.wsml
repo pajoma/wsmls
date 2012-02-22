@@ -1,0 +1,79 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://purl.org/ifgi/geospace#", 
+		dc _"http://purl.org/dc/elements/1.1/", 
+     	rdfs _"http://www.w3.org/2000/01/rdf-schema#",
+     	dul _"http://purl.org/ifgi/dolce#",
+     	dulSp _"http://purl.org/ifgi/dolceSpatial#"
+     	}
+
+ontology geographic_space
+     annotations
+     	dc#creator hasValue "p.maue (ifgi)"
+		dc#contributor hasValue "e.klien (ifgi), s.schade (ifgi)"
+		dc#publisher hasValue "(a)IfGI, University of Muenster"
+		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+		dc#type hasValue "Domain Ontology"
+		dc#description hasValue "A generic ontology suitable to describe objects and events in the geographic space, e.g. weather, forests, mountains, rivers, snow, ..." 
+		dc#title hasValue "Geographic Space Ontology"	
+		dc#subject hasValue "Geography"			
+     endAnnotations
+	 
+	 importsOntology {_"http://purl.org/ifgi/dolceSpatial#"}
+     
+/* a unit does not have to have a precise location */
+concept geographical_unit subConceptOf dul#PhysicalPlace
+	annotations
+		dc#identifier hasValue "Geographical Unit@en"
+		dc#identifier hasValue "Geographische Einheit@de"
+		dc#description hasValue "Something which is identified as entity on geographic scale" 
+	endAnnotations 
+	dulSp#spatialLocation impliesType geographical_space_region
+	dul#hasQuality  impliesType geographical_quality
+	confined_by impliesType geographical_unit
+			annotations
+				dc#identifier hasValue "begrenzt durch@de"
+				dc#identifier hasValue "confined by@en"
+				dc#description hasValue ""
+				dc#source hasValue ""
+				rdfs#comments hasValue ""
+			endAnnotations
+	situated_in impliesType geographical_unit
+			annotations
+				dc#identifier hasValue "situiert in@de"
+				dc#identifier hasValue "situated in@en"
+				dc#description hasValue "The area in which something is located in"
+				dc#source hasValue ""
+				rdfs#comments hasValue ""
+			endAnnotations
+	nearBy impliesType geographical_unit
+			annotations
+				dc#identifier hasValue "in der Nähe von@de"
+				dc#identifier hasValue "nearby@en"
+				dc#description hasValue "This unit can be nearby to another unit"
+				dc#source hasValue ""
+				rdfs#comments hasValue ""
+			endAnnotations
+	
+
+concept geographical_space_region subConceptOf dul#SpaceRegion 
+	annotations
+		dc#identifier hasValue "Geographical Space@en"
+		dc#identifier hasValue "Geographische Raum@de"
+		dc#description hasValue "Geographic space refers to the space of our world in which we live and work." 
+	endAnnotations 
+
+concept geographical_quality subConceptOf dul#Quality
+	annotations
+		dc#identifier hasValue "Geographic Quality@en"
+		dc#identifier hasValue "Geographische Qualität@de"
+		dc#description hasValue "Qualities restricted to geographic objects. Only large scale objects have a terrain or a skyline " 
+	endAnnotations 
+	
+	
+// relations
+
+
+
+
+
+	
