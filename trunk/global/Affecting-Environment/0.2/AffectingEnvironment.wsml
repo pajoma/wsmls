@@ -16,6 +16,16 @@ ontology AffectingEnvironment
           dc#date hasValue "12-10-2010" //3.30pm
      endNonFunctionalProperties
 
+/* ifgi54 meeting 22.02.2012
+  Concepts missing:
+  - Risk and/or hazard is needed either here or in a risk ontology
+  - Probability of the event happening
+  - Predicted observation
+  - Environmental model
+  
+  
+*/
+
 //====== Concepts ======
 
 
