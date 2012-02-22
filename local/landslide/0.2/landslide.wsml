@@ -1,0 +1,371 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://purl.org/ifgi/landslide#",
+	rdf _"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    rdfs _"http://www.w3.org/2000/01/rdf-schema#",
+    xsd _"http://www.w3.org/2001/XMLSchema#",
+    dc _"http://purl.org/dc/elements/1.1/",
+    owl _"http://www.w3.org/2002/07/owl#",
+    dul _"http://purl.org/ifgi/dul#",
+    gu _"http://purl.org/ifgi/geounits#",
+	gq _"http://purl.org/ifgi/geoqualities#",
+	gs _"http://purl.org/ifgi/geospace#",
+	ge _"http://purl.org/ifgi/geoevents#",
+    dns _"http://purl.org/ifgi/dulDnS#",
+    oil _"http://purl.org/ifgi/oilspill#"
+    }
+
+ontology Landslide
+    annotations
+    	dc#creator hasValue "Auriol Degbelo (IFGI)"
+		dc#contributor hasValue "Henry Michels (IFGI)"
+        dc#description hasValue {"ENVISION: Ontology for the landslide use case"}
+        dc#publisher hasValue "(a)IfGI, University of Muenster"
+		dc#date hasValue "11-09-2011"
+		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+		dc#type hasValue "Domain Ontology"
+		dc#title hasValue "Domian Ontology for landslide Scenarios"
+		dc#subject hasValue "Landslide"
+    endAnnotations
+    
+    importsOntology {_"http://purl.org/ifgi/geounits#", _"http://purl.org/ifgi/geoqualities#", _"http://purl.org/ifgi/geospace#", _"http://purl.org/ifgi/geoevents#", _"http://purl.org/ifgi/oilspill#", _"http://purl.org/ifgi/dul#"}
+
+	/*
+		Events/Processes
+	*/
+
+	concept landslide subConceptOf ge#geographic_event
+		annotations
+			dc#identifier hasValue "landslide@en"
+			dc#identifier hasValue "Hangrutsch@de"
+			dc#description hasValue "a slide of a large mass of dirt and rock down a mountain or cliff"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endAnnotations
+	
+	concept landslide_risk subConceptOf risk
+			annotations
+			dc#identifier hasValue "landslide risk@en"
+			dc#identifier hasValue "Hangrutsch Risiko@de"
+			dc#description hasValue "the risk that a landslide occurs"
+		endAnnotations
+		
+	concept landslide_runout_zone subConceptOf predicted_observation
+		annotations
+			dc#identifier hasValue "landslide runout zone@en"
+			dc#identifier hasValue "Hangrutsch Auslaufgebiet@de"
+			dc#description hasValue "the entire area down which a landslide moves"
+		endAnnotations
+		
+	concept precipitation subConceptOf ge#geographic_event
+		annotations
+			dc#identifier hasValue "precipitation@en"
+			dc#identifier hasValue "Niederschlag@de"
+			dc#description hasValue "the falling to earth of any form of water (rain or snow or hail or sleet or mist)"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endAnnotations
+
+	concept deep_landslide subConceptOf landslide
+		annotations
+			dc#identifier hasValue "deep landslide@en"
+			dc#identifier hasValue "tief gehender Hangrutsch@de"
+			dc#description hasValue "Landslides in which the sliding surface is mostly deeply located below the maximum rooting depth of trees (typically to depths greater than ten meters)."
+			dc#source hasValue "en.wikipedia.org/wiki/Landslide"
+		endAnnotations
+
+	concept shallow_landslide subConceptOf landslide
+		annotations
+			dc#identifier hasValue "shallow landslide@en"
+			dc#identifier hasValue "flach gehender Hangrutsch@de"
+			dc#description hasValue "Landslide in which the sliding surface is located within the soil mantle or weathered bedrock (typically to a depth from few decimetres to some metres)."
+			dc#source hasValue "en.wikipedia.org/wiki/Landslide"
+		endAnnotations
+	
+	concept insolation subConceptOf ge#geographic_event
+		annotations
+			dc#identifier hasValue "insolation@en"
+			dc#identifier hasValue "Sonneneinstrahlung@de"
+			dc#description hasValue "incident solar radiation"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endAnnotations
+	
+	concept infiltration subConceptOf ge#geographic_event
+		annotations
+			dc#identifier hasValue "infiltration@en"
+			dc#identifier hasValue "Versickerung@de"
+			dc#description hasValue "(the slow passage of a liquid through a filtering medium"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endAnnotations
+	
+	concept erosion subConceptOf ge#geographic_event
+		annotations
+			dc#identifier hasValue "erosion@en"
+			dc#identifier hasValue "Erosion@de"
+			dc#description hasValue "condition in which the earth's surface is worn away by the action of water and wind"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endAnnotations
+	
+	concept evapotranspiration subConceptOf ge#geographic_event
+		annotations
+			dc#identifier hasValue "evapotranspiration@en"
+			dc#identifier hasValue "Evapotranspiration@de"
+			dc#description hasValue "the sum of evaporation and plant transpiration from the Earth's land surface to atmosphere. Evaporation accounts for the movement of water to the air from sources such as the soil, canopy interception, and waterbodies."
+			dc#source hasValue "http://en.wikipedia.org/wiki/Evapotranspiration"
+		endAnnotations
+	
+	concept evaporation subConceptOf evapotranspiration
+		annotations
+			dc#identifier hasValue "evaporation@en"
+			dc#identifier hasValue "Evaporation@de"
+			dc#description hasValue "the process of extracting moisture"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endAnnotations
+
+	/*
+	Endurants
+	*/
+
+	concept mountain subConceptOf gu#geomorphological_unit
+		annotations
+			dc#identifier hasValue "mountain@en"
+			dc#identifier hasValue "Berg@de"
+			dc#description hasValue "a land mass that projects well above its surroundings; higher than a hill"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endAnnotations
+
+	concept hillside subConceptOf gs#geographical_unit
+		annotations
+			dc#identifier hasValue "hillside@en"
+			dc#identifier hasValue "Hang@de"
+			dc#description hasValue "The side of a hill, situated between the foot and the summit."
+			dc#source hasValue "http://www.thefreedictionary.com/hillside"
+		endAnnotations
+    	dul#hasPart impliesType mountain
+
+	concept catchment_area subConceptOf gs#geographical_unit
+		annotations
+			dc#identifier hasValue "catchment area@en"
+			dc#identifier hasValue "Einzugsgebiet@de"
+			dc#description hasValue "the entire geographical area drained by a river and its tributaries; an area characterized by all runoff being conveyed to the same outlet"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endAnnotations
+		owl#sameAs ofType watershed
+	
+	concept watershed subConceptOf gs#geographical_unit
+		annotations
+			dc#identifier hasValue "watershed@en"
+			dc#identifier hasValue "Einzugsgebiet@de"
+			dc#description hasValue "the entire geographical area drained by a river and its tributaries; an area characterized by all runoff being conveyed to the same outlet"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endAnnotations
+		owl#sameAs ofType catchment_area
+
+	concept surfacewater subConceptOf oil#water
+		annotations
+			dc#identifier hasValue "surface water@en"
+			dc#identifier hasValue "Oberflächenwasser@de"
+			dc#description hasValue "Surface water is water collecting on the ground or in a stream, river, lake, wetland, or ocean"
+			dc#source hasValue "http://en.wikipedia.org/wiki/Surface_water"
+		endAnnotations
+
+	concept groundwater subConceptOf oil#water
+		annotations
+			dc#identifier hasValue "groundwater@en"
+			dc#identifier hasValue "Grundwasser@de"
+			dc#description hasValue "underground water that is held in the soil and in pervious rocks"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endAnnotations
+
+	concept debris subConceptOf gu#landcover_unit
+		annotations
+			dc#identifier hasValue "debris@en"
+			dc#identifier hasValue "Geroell@de"
+			dc#description hasValue "the remains of geological activity including landslides, volcanic explosions, avalanches, mudflows or Glacial lake outburst floods (Jökulhlaups) and moraine, lahars, and lava eruptions"
+			dc#source hasValue "http://en.wikipedia.org/wiki/Debris"
+		endAnnotations
+
+	concept rock subConceptOf gu#landcover_unit
+		annotations
+			dc#identifier hasValue "rock@en"
+			dc#identifier hasValue "Stein@de"
+			dc#description hasValue "a lump or mass of hard consolidated mineral matter"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endAnnotations
+     	dul#hasQuality ofType porosity
+
+	concept soil subConceptOf gu#landcover_unit
+		annotations
+			dc#identifier hasValue "soil@en"
+			dc#identifier hasValue "Boden@de"
+			dc#identifier hasValue "Erde@de"
+			dc#description hasValue "material in the top layer of the surface of the earth in which plants can grow (especially with reference to its quality or use)"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endAnnotations
+    	is_layered_by ofType subsoil
+    	dul#hasQuality ofType {moisture, water_table, permeability, density, cohesion, angle_of_repose, water_saturation}
+		
+	concept borehole subConceptOf gu#anthropogenic_unit
+		annotations
+			dc#identifier hasValue "borehole@en"
+			dc#identifier hasValue "Bohrloch@de"
+			dc#description hasValue "A borehole is the generalized term for any narrow shaft bored in the ground, either vertically or horizontally."
+			dc#source hasValue "http://en.wikipedia.org/wiki/Borehole"
+		endAnnotations
+    	dul#hasQuality ofType {oil#depth, diameter}
+
+	concept rail subConceptOf gu#anthropogenic_unit
+		annotations
+			dc#identifier hasValue "rail@en"
+			dc#identifier hasValue "Schiene@de"
+			dc#description hasValue "a bar or pair of parallel bars of rolled steel making the railway along which railroad cars or other vehicles can roll"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endAnnotations
+
+	concept electric_main subConceptOf gu#anthropogenic_unit
+		annotations
+			dc#identifier hasValue "electric main@en"
+			dc#identifier hasValue "elektrische Leitung@de"
+			dc#description hasValue "a main that distributes electricity"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endAnnotations
+
+	concept road subConceptOf gu#anthropogenic_unit
+		annotations
+			dc#identifier hasValue "road@en"
+			dc#identifier hasValue "Strasse@de"
+			dc#description hasValue "A road is a thoroughfare, route, or way on land between two places, which typically has been paved or otherwise improved to allow travel by some conveyance, including a horse, cart, or motor vehicle."
+			dc#source hasValue "http://en.wikipedia.org/wiki/Road"
+		endAnnotations
+
+ 	concept building subConceptOf gu#anthropogenic_unit
+ 		annotations
+			dc#identifier hasValue "building@en"
+			dc#identifier hasValue "Gebaeude@de"
+			dc#description hasValue "a structure that has a roof and walls and stands more or less permanently in one place"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endAnnotations
+
+	concept subsoil subConceptOf soil
+		annotations
+			dc#identifier hasValue "subsoil@en"
+			dc#identifier hasValue "Unterboden@de"
+			dc#description hasValue "the layer of soil between the topsoil and bedrock"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endAnnotations
+    	dul#hasQuality ofType thickness
+    
+    concept grassland subConceptOf gu#vegetation_community
+		annotations
+			dc#identifier hasValue "Gruenland@de"
+			dc#identifier hasValue "grassland@en"
+			comment hasValue "A vegetation community in which grasses are the most conspicuous plants"
+			dc#subject hasValue "LandCover"
+		endAnnotations
+		
+	concept forest subConceptOf gu#vegetation_community
+		annotations
+			dc#identifier hasValue "Wald@de"
+			dc#identifier hasValue "forest@en"
+			comment hasValue "A vegetation community dominated by trees and other woody shrubs, growing close enough together that the tree tops touch or overlap, creating various degrees of shade on the forest floor. It may produce benefits such as timber, recreation, wildlife habitat, etc. (Source: DUNSTE)"
+			dc#subject hasValue "LandCover"
+		endAnnotations 
+     
+     /*
+     	Qualities
+     */
+	 
+	 	concept geological_era subConceptOf dul#Quality
+		annotations
+			dc#identifier hasValue "geographic era@en"
+			dc#identifier hasValue "Geologisches Erdzeitalter@de"
+			dc#description hasValue "a major division of geological time; an era is usually divided into two or more periods"
+			dc#source hasValue "http://www.thefreedictionary.com/geological+era"
+		endAnnotations
+		
+		concept water_saturation subConceptOf dul#Quality
+			annotations
+			dc#identifier hasValue "water saturation@en"
+			dc#identifier hasValue "Wassersättigung@de"
+			dc#description hasValue "The fraction of water in a given pore space."
+			dc#source hasValue "http://www.glossary.oilfield.slb.com/Display.cfm?Term=water%20saturation"
+		endAnnotations
+     
+     concept height subConceptOf dul#Quality
+		annotations
+			dc#identifier hasValue "height@en"
+			dc#identifier hasValue "Hoehe@de"
+			dc#description hasValue "the vertical dimension of extension; distance from the base of something to the top"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endAnnotations
+		owl#sameAs ofType gq#elevation
+	
+	concept porosity subConceptOf dul#Quality
+		annotations
+			dc#identifier hasValue "porosity@en"
+			dc#identifier hasValue "Poroesität@de"
+			dc#description hasValue "the property of being porous; being able to absorb fluids"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endAnnotations
+		
+	concept cohesion subConceptOf dul#Quality
+		annotations
+			dc#identifier hasValue "cohesion@en"
+			dc#identifier hasValue "Kohaesion@de"
+			dc#description hasValue "Cohesion is the component of shear strength of a rock or soil that is independent of interparticle friction."
+			dc#source hasValue "http://en.wikipedia.org/wiki/Cohesion_%28geology%29"
+		endAnnotations
+	
+	concept water_table subConceptOf dul#Quality
+		annotations
+			dc#identifier hasValue "water table@en"
+			dc#identifier hasValue "Wasserspiegel@de"
+			dc#description hasValue "underground surface below which the ground is wholly saturated with water"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endAnnotations
+		
+	concept density subConceptOf dul#Quality
+		annotations
+			dc#identifier hasValue "density@en"
+			dc#identifier hasValue "Dichte@de"
+			dc#description hasValue "the amount per unit size"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endAnnotations
+		
+	concept moisture subConceptOf dul#Quality
+		annotations
+			dc#identifier hasValue "moisture@en"
+			dc#identifier hasValue "Feuchtigkeit@de"
+			dc#description hasValue "wetness caused by water"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endAnnotations
+		
+	concept permeability subConceptOf dul#Quality
+		annotations
+			dc#identifier hasValue "permeability@en"
+			dc#identifier hasValue "Durchlaessigkeit@de"
+			dc#description hasValue "the property of something that can be pervaded by a liquid (as by osmosis or diffusion)"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endAnnotations
+		
+	concept angle_of_repose subConceptOf dul#Quality
+		annotations
+			dc#identifier hasValue "angle of repose@en"
+			dc#identifier hasValue "Reibungswinkel@de"
+			dc#description hasValue "The angle of repose or, more precisely, the critical angle of repose,[1] of a granular material is the steepest angle of descent or dip of the slope relative to the horizontal plane when material on the slope face is on the verge of sliding. This angle is in the range 0°–90°."
+			dc#source hasValue "http://en.wikipedia.org/wiki/Angle_of_repose"
+		endAnnotations
+		
+	concept diameter subConceptOf dul#Quality
+		annotations
+			dc#identifier hasValue "diameter@en"
+			dc#identifier hasValue "Durchmesser@de"
+			dc#description hasValue "the length of a straight line passing through the center of a circle and connecting two points on the circumference"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endAnnotations
+		
+	concept thickness subConceptOf dul#Quality
+		annotations
+			dc#identifier hasValue "thickness@en"
+			dc#identifier hasValue "Dicke@de"
+			dc#description hasValue "the dimension through an object as opposed to its length or width"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endAnnotations
+	
