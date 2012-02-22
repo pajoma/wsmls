@@ -1,0 +1,3 @@
+Switched from DOLCE to DUL
+
+Only critical change for relation d_spatial_location, since there seems to be no equivalent for the non-physical-endurant in DUL
