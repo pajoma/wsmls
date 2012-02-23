@@ -54,7 +54,7 @@ ontology Landslide
 			dc#description hasValue "the entire area down which a landslide moves"
 		endAnnotations
 		
-	concept precipitation subConceptOf ge#geographic_event
+	concept precipitation subConceptOf ge#precipitation
 		annotations
 			dc#identifier hasValue "precipitation@en"
 			dc#identifier hasValue "Niederschlag@de"

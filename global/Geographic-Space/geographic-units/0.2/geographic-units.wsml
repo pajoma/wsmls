@@ -2,8 +2,7 @@ wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
 namespace { _"http://purl.org/ifgi/geounits#", 
 		dc _"http://purl.org/dc/elements/1.1/",
      	rdfs _"http://www.w3.org/2000/01/rdf-schema#",
-     	geospace _"http://purl.org/ifgi/geospace#",
-     	geoevent _"http://purl.org/ifgi/geoevents#"
+     	geospace _"http://purl.org/ifgi/geospace#"
      	}
 
 ontology geographical_units
@@ -18,7 +17,7 @@ ontology geographical_units
 		dc#subject hasValue "Geography"			
      endAnnotations
 	
-	importsOntology {_"http://purl.org/ifgi/geospace#", _"http://purl.org/ifgi/geoevents#"}
+	importsOntology {_"http://purl.org/ifgi/geospace#"}
 
 concept natural_unit subConceptOf geospace#geographical_unit
 	annotations
