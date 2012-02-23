@@ -1,0 +1,526 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://purl.org/ifgi/oilspill#",
+	rdf _"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    rdfs _"http://www.w3.org/2000/01/rdf-schema#",
+    xsd _"http://www.w3.org/2001/XMLSchema#",
+    dc _"http://purl.org/dc/elements/1.1/",
+    owl _"http://www.w3.org/2002/07/owl#",
+    dul _"http://purl.org/ifgi/dul#",
+    gs _"http://purl.org/ifgi/geospace#",
+	gu _"http://purl.org/ifgi/geounits#",
+	ge _"http://purl.org/ifgi/geoevents#",
+	gq _"http://purl.org/ifgi/geoqualities#"
+ }
+
+ontology OilSpill
+	nfp
+		dc#creator hasValue "Marcell Roth (IFGI)"
+		dc#contributor hasValue "Henry Michels (IFGI)"
+		dc#contributor hasValue "Alejandro Llaves (IFGI)"
+		dc#publisher hasValue "(a)IfGI, University of Muenster"
+		dc#date hasValue "16-09-2011"
+		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+		dc#type hasValue "Domain Ontology"
+		dc#title hasValue "Domain Ontology for Oil Spill Scenario"
+		dc#description hasValue "Created by University of Münster. WSML code implemented by Marcell Roth"
+		dc#subject hasValue "Oil Spill"	
+	endnfp
+	
+	importsOntology {
+		_"http://purl.org/ifgi/geospace#", 
+		_"http://purl.org/ifgi/geounits#", 
+		_"http://purl.org/ifgi/geoevents#", 
+		_"http://purl.org/ifgi/geoqualities#",
+		_"http://purl.org/ifgi/dul#"
+	}
+
+// Geographic events
+		
+	concept oil_spill subConceptOf ge#geographic_event
+		nfp
+			dc#identifier hasValue "Ölverschmutzung@de"
+			dc#identifier hasValue "oil spill@en"
+			dc#description hasValue "An oil spill is a release of oil into the ocean or coastal waters due to human activity. Oil spills include releases of crude oil from tankers, offshore platforms, drilling rigs and wells, as well as spills of refined petroleum products (such as gasoline, diesel) and their by-products, and heavier fuels used by large ships such as bunker fuel, or the spill of any oily refuse or waste oil."
+			dc#source hasValue "http://en.wikipedia.org/wiki/Oil_spill"
+		endnfp
+	
+	
+/* Amount of Matter / Substance */
+	
+	concept air subConceptOf dul#Substance
+		nfp
+			dc#identifier hasValue "Luft@de"
+			dc#identifier hasValue "air@en"
+			dc#description hasValue "A mixture of gases (especially nitrogen and oxygen) in the atmosphere of Earth which is required for breathing and photosynthesis."
+			dc#source hasValue "http://en.wikipedia.org/wiki/Air"
+		endnfp
+		dul#isParticipantIn ofType ge#wind
+		dul#hasQuality ofType {temperature, humidity, pressure}
+	
+	
+	concept water subConceptOf dul#Substance
+		nfp
+			dc#identifier hasValue "Wasser@de"
+			dc#identifier hasValue "water@en"
+			dc#description hasValue "Water is a chemical substance whose molecule contains one oxygen and two hydrogen atoms connected by covalent bonds. Water is a liquid at ambient conditions, but it often co-exists on Earth with its solid state, ice, and gaseous state (water vapor or steam)."
+			dc#source hasValue "http://en.wikipedia.org/wiki/Water"
+		endnfp
+		dul#isParticipantIn ofType {ge#flow, ge#precipitation}
+		dul#hasQuality ofType {temperature}
+	
+	concept oil subConceptOf dul#Substance		
+		nfp
+			dc#identifier hasValue "Öl@de"
+			dc#identifier hasValue "oil@en"
+			dc#description hasValue "A slippery or viscous liquid or liquefiable substance not miscible with water. Oils have a high carbon and hydrogen content and are nonpolar substances."
+			dc#source hasValue "http://en.wikipedia.org/wiki/Oil"
+		endnfp
+		dul#hasQuality ofType {viscosity, oil_type, tocixity}
+	
+	concept crude_oil subConceptOf oil
+		nfp
+			dc#identifier hasValue "Erdöl@de"
+			dc#identifier hasValue "crude oil@en"
+			dc#description hasValue "Crude oil or petroleum is a naturally occurring, inflammable dark oil consisting mainly of hydrocarbons. It is found in geologic formations beneath the Earth's surface."
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endnfp
+	
+	concept black_oil subConceptOf oil
+		nfp
+			dc#identifier hasValue "Rohschmieröl@de"
+			dc#identifier hasValue "black oil@en"
+			dc#description hasValue "Low-grade, black petroleum oil used to lubricate slow-moving or rough-surfaced machinery"
+			dc#source hasValue "http://www.answers.com/topic/black-oil"
+		endnfp
+	
+/* Qualities */
+
+	concept sea_current_speed subConceptOf velocity
+		nfp
+			dc#identifier hasValue "current speed@en"
+			dc#description hasValue "The simplest method of determining the velocity of a current involves an observer, a floating object or drifter, and a timing device. An observer then divides the distance the object traveled by the time it took the object to travel that distance, which equals the speed of the current."
+			dc#source hasValue "http://oceanservice.noaa.gov/education/kits/currents/07measure1.html"
+		endnfp
+		dul#isQualityOf ofType ge#sea_current
+
+	concept oil_type subConceptOf dul#Quality
+		nfp
+			dc#identifier hasValue "oil type@en"
+			dc#description hasValue "Oil type."
+		endnfp
+
+	concept amount subConceptOf dul#Quality
+		nfp
+			dc#identifier hasValue "amount@en"
+			dc#identifier hasValue "Menge@de"
+			dc#description hasValue "how much there is or how many there are of something that you can quantify"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endnfp
+	
+	concept pressure subConceptOf dul#Quality
+		nfp
+			dc#identifier hasValue "pressure@en"
+			dc#identifier hasValue "Druck@de"
+			dc#description hasValue "the force applied to a unit area of surface; measured in pascals (SI unit) or in dynes (cgs unit)"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endnfp
+		dul#isQualityOf ofType gu#waterbody
+	
+	concept humidity subConceptOf dul#Quality
+		nfp
+			dc#identifier hasValue "humidity@en"
+			dc#identifier hasValue "Luftfeuchtigkeit@de"
+			dc#description hasValue "the amount of water vapor in the air"
+			dc#source hasValue "http://en.wikipedia.org/wiki/Humidity"
+		endnfp
+	
+	concept wind_speed subConceptOf velocity
+		nfp
+			dc#identifier hasValue "wind speed@en"
+			dc#description hasValue "Wind speed or wind velocity is the speed of wind, the movement of air or other gases in an atmosphere."
+			dc#source hasValue "http://en.wikipedia.org/wiki/Wind_speed"
+		endnfp
+		dul#isQualityOf ofType ge#wind
+	
+	concept direction subConceptOf dul#Quality
+		nfp
+			dc#identifier hasValue "Richtung@de"
+			dc#identifier hasValue "direction@en"
+			dc#description hasValue "Direction is the information contained in the relative position of one object with respect to another object without the distance information. Directions may be either relative to some indicated reference (the violins in a full orchestra are typically seated to the left of the conductor), or absolute according to some previously agreed upon frame of reference (New York City lies due west of Madrid)."
+			dc#source hasValue "http://en.wikipedia.org/wiki/Direction_(geometry)"
+		endnfp	
+		dul#isQualityOf ofType {ge#wind, ge#sea_current}
+	
+	concept temperature subConceptOf dul#Quality
+		nfp
+			dc#identifier hasValue "Temperatur@de"
+			dc#identifier hasValue "temperature@en"
+			dc#description hasValue "Temperature is a physical property of matter (corresponding to its molecular activity) that quantitatively expresses the common notions of hot and cold."
+			dc#source hasValue "http://en.wikipedia.org/wiki/Temperature"
+		endnfp
+	
+	concept velocity subConceptOf dul#Quality
+		nfp
+			dc#identifier hasValue "Geschwindigkeit@de"
+			dc#identifier hasValue "velocity@en"
+			dc#description hasValue "Velocity is the distance travelled per unit time of an object."
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endnfp
+	
+	concept mass subConceptOf dul#Quality
+		nfp
+			dc#identifier hasValue "Masse@de"
+			dc#identifier hasValue "mass@en"
+			dc#description hasValue "The property of matter that causes it to have weight in a gravitational field. Mass is measured in kilograms (kg)."
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endnfp
+	
+	concept viscosity subConceptOf dul#Quality
+		nfp
+			dc#identifier hasValue "Viskosität@de"
+			dc#identifier hasValue "viscosity@en"
+			dc#description hasValue "Resistance of a liquid to shear forces (and hence to flow)."
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endnfp
+	
+	concept toxicity subConceptOf dul#Quality
+		nfp
+			dc#identifier hasValue "Giftigkeit/Giftgehalt@de"
+			dc#identifier hasValue "toxicity@en"
+			dc#description hasValue "The degree to which a substance is poisonous and thus can damage an organism, such as an animal, or plant, as well as a substructure of the organism, such as a cell (cytotoxicity) or an organ."
+			dc#source hasValue "http://en.wikipedia.org/wiki/Toxicity"
+		endnfp
+	
+	concept depth subConceptOf gs#geographical_quality
+		nfp
+			dc#identifier hasValue "Tiefe@de"
+			dc#identifier hasValue "depth@en"
+			dc#description hasValue "The vertical distance of an object below the surface of a specified reference point."
+			dc#source hasValue "http://en.wiktionary.org/wiki/depth"
+		endnfp
+		dul#isQualityOf ofType gu#waterbody
+	
+	concept concentration subConceptOf dul#Quality
+		nfp
+			dc#identifier hasValue "Konzentration@de"
+			dc#identifier hasValue "concentration@en"
+			dc#description hasValue "Concentration is defined as the abundance of a constituent divided by the total volume of a mixture."
+			dc#source hasValue "http://en.wikipedia.org/wiki/Concentration"
+		endnfp
+	
+	concept oil_concentration subConceptOf concentration
+		nfp
+			dc#identifier hasValue "oil concentration@en"
+			dc#identifier hasValue "Oelkonzentration@de"
+			dc#description hasValue "concentration of oil within a water column"
+			dc#source hasValue "(Henry)"
+		endnfp
+		dul#isQualityOf ofType gu#waterbody
+	
+	concept load_volume subConceptOf dul#Quality
+		nfp
+			dc#identifier hasValue "Ladevolumen@de"
+			dc#identifier hasValue "load volume@en"
+			dc#description hasValue "The volume of all objects belonging to the cargo"
+			dc#source hasValue "(Henry)"
+		endnfp
+	
+	concept name subConceptOf dul#Quality
+		nfp
+			dc#identifier hasValue "Name@de"
+			dc#identifier hasValue "name@en"
+			dc#description hasValue "A word or term used for identification of a person, single thing, or category of things."
+			dc#source hasValue "http://en.wikipedia.org/wiki/Name"
+		endnfp
+	
+	concept cargo subConceptOf dul#Quality
+		nfp
+			dc#identifier hasValue "Fracht@de"
+			dc#identifier hasValue "cargo@en"
+			dc#description hasValue "Goods transported by a large vehicle such as ship, aircraft, van, or truck."
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endnfp
+	
+	concept id subConceptOf dul#Quality
+		nfp
+			dc#identifier hasValue "ID@de"
+			dc#identifier hasValue "id@en"
+			dc#description hasValue "A symbol that establishes the identity of the one bearing it."
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endnfp
+	
+	concept carrying_capacity subConceptOf dul#Quality
+		nfp
+			dc#identifier hasValue "Ladekapazität@de"
+			dc#identifier hasValue "carrying capacity@en"
+			dc#description hasValue "capacity of a cargo-space"
+			dc#source hasValue "(Henry)"
+		endnfp
+
+	concept tankage subConceptOf carrying_capacity
+		nfp
+			dc#identifier hasValue "Fassungsvermögen@de"
+			dc#identifier hasValue "tankage@en"
+			dc#description hasValue "The capacity of a tank or tanks."
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endnfp
+	
+	concept age subConceptOf dul#Quality
+		nfp
+			dc#identifier hasValue "Alter@de"
+			dc#identifier hasValue "age@en"
+			dc#description hasValue "How long something exists."
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endnfp
+	
+	concept size subConceptOf dul#Quality
+		nfp
+			dc#identifier hasValue "Größe@de"
+			dc#identifier hasValue "size@en"
+			dc#description hasValue "The physical magnitude of something such as length or mass (how big it is)."
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endnfp
+	
+	concept average_weight subConceptOf dul#Quality
+		nfp
+			dc#identifier hasValue "Durchschnitssgewicht@de"
+			dc#identifier hasValue "average weigth@en"
+			dc#description hasValue "Weight is used to describe the mass of an object and is measured in kilograms. Average weigth is a measure of the \"middle\" value of the weight data set. There are many different descriptive statistics that can be chosen as a measurement of the central tendency of the data items. These include arithmetic mean, the median and the mode."
+			dc#source hasValue "http://en.wikipedia.org/wiki/Average_weight"
+		endnfp
+	
+	concept lethality subConceptOf dul#Quality
+		nfp
+			dc#identifier hasValue "Letalität@de"
+			dc#identifier hasValue "lethality@en"
+			dc#description hasValue "The quality of being deadly. It is the ratio of deaths within a designated population with a particular condition, over a certain period of time."
+			dc#source hasValue "http://en.wikipedia.org/wiki/Case_fatality_rate"
+		endnfp
+	
+	concept population_size subConceptOf size
+		nfp
+			dc#identifier hasValue "Bevölkerungszahl@de"
+			dc#identifier hasValue "population size@en"
+			dc#description hasValue "The number of individual organisms in a population."
+			dc#source hasValue "http://en.wikipedia.org/wiki/Population_size"
+		endnfp
+	
+	
+/* Geographical Units */
+
+	concept water_column subConceptOf gu#waterbody
+		nfp
+			dc#identifier hasValue "Wassersäule@de"
+			dc#identifier hasValue "water column@en"
+			dc#description hasValue "A water column is a conceptual column of water from surface to bottom sediments. This concept is used chiefly for environmental studies evaluating the stratification or mixing (e.g. by wind induced currents) of the thermal or chemically stratified layers in a lake, stream or ocean."
+			dc#source hasValue "http://en.wikipedia.org/wiki/Water_column"
+		endnfp	
+		dul#hasQuality ofType oil_concentration
+	
+	concept sea subConceptOf gu#waterbody
+		nfp
+			dc#identifier hasValue "Meer@de"
+			dc#identifier hasValue "sea@en"
+			dc#description hasValue "A division of an ocean or a large body of salt water partially enclosed by land"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endnfp	
+		gs#confined_by ofType coastal_terrestrial_unit
+		dul#hasQuality ofType depth
+	
+	concept oil_slick subConceptOf gs#geographical_unit
+		nfp
+			dc#identifier hasValue "Ölschlick@de"
+			dc#identifier hasValue "oil slick@en"
+			dc#description hasValue "A thin film of oil floating on top of water (especially crude oil spilled from a ship)"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endnfp
+		gs#situated_in ofType gu#waterbody
+		dul#hasQuality ofType {oil_concentration, amount, mass}
+		dul#isParticipantIn ofType oil_spill
+		consists_of ofType {water, oil}
+	
+	concept terrestrial_unit subConceptOf gu#natural_unit
+		nfp
+			dc#identifier hasValue "Landeinheit@de"
+			dc#identifier hasValue "terrestrial unit@en"
+			dc#description hasValue "http://irtg.ifgi.de/students/jens-ortmann/#thesis"
+			dc#source hasValue "http://ifgi.uni-muenster.de/~klien/publications/Klien_PhDThesis_full.pdf"
+		endnfp
+	
+	concept coastal_terrestrial_unit subConceptOf terrestrial_unit
+		nfp
+			dc#identifier hasValue "Küstenlandeinheit@de"
+			dc#identifier hasValue "coastal terrestrial unit@en"
+			dc#description hasValue "A TerrestrialUnit that is near the sea."
+			dc#source hasValue "http://irtg.ifgi.de/students/jens-ortmann/#thesis"
+		endnfp
+	
+	concept coast subConceptOf coastal_terrestrial_unit
+		nfp
+			dc#identifier hasValue "Küste@de"
+			dc#identifier hasValue "coast@en"
+			dc#description hasValue "The shore of a sea or ocean. It is where the land meets the sea or ocean."
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endnfp	
+
+	concept region subConceptOf gs#geographical_unit
+		nfp
+			dc#identifier hasValue "Region@de"
+			dc#identifier hasValue "region@en"
+			dc#description hasValue "The extended spatial location of something. Regions can be broadly divided by physical characteristics, human impact characteristics, and the interaction of Humanity and the environment."
+			dc#source hasValue "http://en.wikipedia.org/wiki/Region"
+		endnfp
+		owl#sameAs ofType zone
+		owl#sameAs ofType area
+	
+	concept zone subConceptOf gs#geographical_unit
+		nfp
+			dc#identifier hasValue "zone@en"
+			dc#identifier hasValue "Zone@de"
+			dc#description hasValue "see concept region"
+			dc#source hasValue ""
+		endnfp
+		owl#sameAs ofType region
+		
+	concept area subConceptOf gs#geographical_unit
+		nfp
+			dc#identifier hasValue "area@en"
+			dc#identifier hasValue "Flaeche@de"
+			dc#description hasValue "see concept region"
+			dc#source hasValue ""
+		endnfp
+		owl#sameAs ofType region
+	
+	concept sanctuary subConceptOf region
+		nfp
+			dc#identifier hasValue "Schutzgebiet@de"
+			dc#identifier hasValue "sanctuary@en"
+			dc#description hasValue "A sanctuary is any place of safety. There are two main categories of sanctuaries: Human and Non-Human (plants and animals)."
+			dc#source hasValue "http://en.wikipedia.org/wiki/Sanctuary"
+		endnfp
+		gs#situated_in ofType habitat
+	
+	concept habitat subConceptOf region
+		nfp
+			dc#identifier hasValue "Habitat@de"
+			dc#identifier hasValue "habitat@en"
+			dc#description hasValue "The type of environment in which an organism or group normally lives or occurs."
+			dc#source hasValue "http://en.wikipedia.org/wiki/Habitat"
+		endnfp
+	
+/* Physical Objects */
+
+	concept ship subConceptOf gu#anthropogenic_unit
+		nfp
+			dc#identifier hasValue "Schiff@de"
+			dc#identifier hasValue "ship@en"
+			dc#description hasValue "A vessel that carries passengers or cargo"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endnfp
+		dul#hasQuality ofType {load_volume, name, cargo, id, carrying_capacity}
+		dul#isParticipantIn ofType {explosion, accident}
+	
+	concept tanker subConceptOf ship
+		nfp
+			dc#identifier hasValue "Tankschiff@de"
+			dc#identifier hasValue "tanker@en"
+			dc#description hasValue "A cargo ship designed to carry crude oil in bulk."
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endnfp
+		dul#hasQuality ofType tankage
+	
+	concept animal subConceptOf gu#natural_unit
+		nfp
+			dc#identifier hasValue "Tier@de"
+			dc#identifier hasValue "animal@en"
+			dc#description hasValue "Animals are a major group of multicellular, eukaryotic organisms of the kingdom Animalia."
+			dc#source hasValue "http://en.wikipedia.org/wiki/Animal"
+		endnfp
+	
+	concept fish subConceptOf animal
+		nfp
+			dc#identifier hasValue "Fisch@de"
+			dc#identifier hasValue "Fish@en"
+			dc#description hasValue "Any of various mostly cold-blooded aquatic vertebrates usually having scales and breathing through gills."
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endnfp
+	
+//	concept bony_fish subConceptOf fish
+//		nfp
+//			dc#identifier hasValue "Knochenfisch@de"
+//			dc#identifier hasValue "bony fish@en"
+//			dc#description hasValue "Are a taxonomic group of fish that have bony skeletons."
+//			dc#source hasValue "http://en.wikipedia.org/wiki/Bony_fish"
+//		endnfp
+//	
+//	concept gadoid subConceptOf bony_fish
+//		nfp
+//			dc#identifier hasValue "Dorsch@de"
+//			dc#identifier hasValue "gadoid@en"
+//			dc#description hasValue "a soft-finned fish of the family Gadidae"
+//			dc#source hasValue "http://wordnet.princeton.edu/"
+//		endnfp
+	
+	
+	concept cod subConceptOf animal
+		nfp
+			dc#identifier hasValue "cod@en"
+			dc#identifier hasValue "Dorsch@de"
+			dc#description hasValue "Cod is the common name for genus Gadus"
+			dc#source hasValue "http://en.wikipedia.org/wiki/Cod"
+		endnfp
+		dul#hasQuality ofType {age, mass, size}
+		owl#sameAs ofType gadus
+	
+	concept shoaling subConceptOf dul#Collective
+		nfp
+			dc#identifier hasValue "Fischschwarm@de"
+			dc#identifier hasValue "shoaling@en"
+			dc#description hasValue "Any group of fish that stay together for social reasons"
+			dc#source hasValue "http://en.wikipedia.org/wiki/Shoaling_and_schooling"
+		endnfp
+		dul#hasQuality ofType {average_weight, lethality, population_size}
+		dul#hasMember ofType fish
+	
+	concept gadus subConceptOf gadoid
+		nfp
+			dc#identifier hasValue "gadus@en"
+			dc#identifier hasValue "Dorsch@de"
+			dc#description hasValue "Gadus is a cod. See also concept \"Cod\"."
+			dc#source hasValue "http://en.wikipedia.org/wiki/Cod"
+		endnfp
+		owl#sameAs ofType cod
+	
+	concept pacific_cod subConceptOf cod
+		nfp
+			dc#identifier hasValue "Pacific cod@en"
+			dc#description hasValue "The Pacific cod, Gadus macrocephalus, is an important commercial food species. It is also known as gray cod, gray goo, gray wolf, grayest or grayfish. It has three separate dorsal fins, and the catfish-like whiskers on its lower jaw. In appearance, it is similar to the Atlantic Cod."
+			dc#source hasValue "http://en.wikipedia.org/wiki/Pacific_cod"
+		endnfp
+	
+	concept atlantic_cod subConceptOf cod
+		nfp
+			dc#identifier hasValue "Kabeljau@de"
+			dc#identifier hasValue "Atlantic cod@en"
+			dc#description hasValue "The Atlantic cod is a well-known demersal food fish belonging to the family Gadidae. It is also commercially known as cod, codling or haberdine."
+			dc#source hasValue "http://en.wikipedia.org/wiki/Atlantic_cod"
+		endnfp
+	
+	concept greenland_cod subConceptOf cod
+		nfp
+			dc#identifier hasValue "Greenland cod@en"
+			dc#description hasValue "The Greenland cod known variously as rock cod, ogac and uvac is a commercially harvested food fish. In colour the Greenland cod is generally sombre, ranging from tan to brown to silvery. Its appearance is similar to that of other cod species; generally heavy-bodied, elongate, usually with a stout caudal peduncle. They can grow to a length of 80 cm."
+			dc#source hasValue "http://en.wikipedia.org/wiki/Greenland_cod"
+		endnfp
+	
+/* relations */	
+
+	relation consists_of (ofType gu#geographical_unit, ofType dul#Substance)
+		nfp
+			dc#identifier hasValue "consists of@en"
+			dc#identifier hasValue "besteht aus@de"
+			dc#description hasValue "be composed of"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endnfp
+	
+	
