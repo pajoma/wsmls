@@ -1,0 +1,79 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://purl.org/ifgi/geoevents#",
+	dc _"http://purl.org/dc/elements/1.1/",
+    rdfs _"http://www.w3.org/2000/01/rdf-schema#",
+    dul _"http://purl.org/ifgi/dul#",
+    dulSp _"http://purl.org/ifgi/dulSpatial#",
+	geospace _"http://purl.org/ifgi/geospace#", 
+	eo _"http://purl.org/ifgi/event-observation#", 
+	ge _"http://purl.org/ifgi/geoevents#", 
+	ssn _"http://purl.org/ifgi/ssn#"
+
+ }
+
+ontology geographical_model 
+
+	importsOntology {
+		_"http://purl.org/ifgi/event-observation#", 
+		_"http://purl.org/ifgi/geoevents#",
+		_"http://purl.org/ifgi/observation#", 
+		_"http://purl.org/ifgi/ssn#"
+
+	}
+
+
+concept Risk subConceptOf dul#Concept
+
+axiom linkRiskWithEvent
+	definedBy 
+		?x[dul#conceptualizes hasValue ?plan] memberOf dul#Agent and
+		?plan[isAffectedBy hasValue ?event] memberOf dul#Plan and
+		?event memberOf PredictedEvent and
+		?prob[isProbabilityOf ?event] memberOf EventProbability and
+		?risk memberOf Risk
+		implies
+		 ?plan[atRisk ?risk]. 
+		  
+
+
+relation isAffectedBy (ofType dul#Plan, ofType dul#Event)
+
+relation atRisk (ofType dul#Plan, ofType dul#Risk)
+
+concept Hazard subConceptOf dul#Concept
+	annotations
+		dc#identifier hasValue "Hazard@en"
+		dc#identifier hasValue "Gefahr@de"
+		dc#description hasValue "The possibility of an event to happen"
+	endAnnotations
+	hasProbability ofType EventProbability
+
+concept ComputationalModel subConceptOf dul#Workflow 
+
+concept GeographicalModel subConceptOf dul#Description
+
+concept EnvironmentalModel subConceptOf GeographicalModel
+
+concept SocialModel subConceptOf GeographicalModel
+
+concept ForecastModel subConceptOf ComputationalModel
+
+concept PredictedEvent subConceptOf dul#Situation
+	predicts ofType ge#geographical_event
+
+concept PredictedObservation subConceptOf VirtualObservation
+	isComputedBy ofType ForecastModel
+
+concept VirtualObservation subConceptOf ssn#Observation
+	isComputedBy ofType ComputationalModel
+
+
+concept EventProbability subConceptOf Probability
+	isProbabilityOf ofType	ge#geographical_event
+
+ 
+concept Probability subConceptOf dul#Quality
+	isProbabilityOf	ofType dul#Event
+
+
+	 
