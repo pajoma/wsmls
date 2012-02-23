@@ -10,6 +10,7 @@ namespace { _"http://purl.org/ifgi/landslide#",
 	gq _"http://purl.org/ifgi/geoqualities#",
 	gs _"http://purl.org/ifgi/geospace#",
 	ge _"http://purl.org/ifgi/geoevents#",
+	gm _"http://purl.org/ifgi/geomodels#",
     oil _"http://purl.org/ifgi/oilspill#"
     }
 
@@ -26,13 +27,13 @@ ontology Landslide
 		dc#subject hasValue "Landslide"
     endAnnotations
     
-    importsOntology {_"http://purl.org/ifgi/geounits#", _"http://purl.org/ifgi/geoqualities#", _"http://purl.org/ifgi/geospace#", _"http://purl.org/ifgi/geoevents#", _"http://purl.org/ifgi/oilspill#", _"http://purl.org/ifgi/dul#"}
+    importsOntology {_"http://purl.org/ifgi/geounits#", _"http://purl.org/ifgi/geoqualities#", _"http://purl.org/ifgi/geospace#", _"http://purl.org/ifgi/geoevents#", _"http://purl.org/ifgi/oilspill#", _"http://purl.org/ifgi/dul#", _"http://purl.org/ifgi/geomodels#"}
 
 	/*
 		Events/Processes
 	*/
 
-	concept landslide subConceptOf ge#geographic_event
+	concept landslide subConceptOf ge#geographical_event
 		annotations
 			dc#identifier hasValue "landslide@en"
 			dc#identifier hasValue "Hangrutsch@de"
@@ -40,14 +41,15 @@ ontology Landslide
 			dc#source hasValue "http://wordnetweb.princeton.edu/"
 		endAnnotations
 	
-	concept landslide_risk subConceptOf risk
-			annotations
+	concept landslide_probability subConceptOf gm#EventProbability
+		annotations
 			dc#identifier hasValue "landslide risk@en"
 			dc#identifier hasValue "Hangrutsch Risiko@de"
 			dc#description hasValue "the risk that a landslide occurs"
 		endAnnotations
+		gs#isProbabilityOf ofType landslide
 		
-	concept landslide_runout_zone subConceptOf predicted_observation
+	concept landslide_runout_zone subConceptOf gm#PredictedObservation
 		annotations
 			dc#identifier hasValue "landslide runout zone@en"
 			dc#identifier hasValue "Hangrutsch Auslaufgebiet@de"
@@ -78,7 +80,7 @@ ontology Landslide
 			dc#source hasValue "en.wikipedia.org/wiki/Landslide"
 		endAnnotations
 	
-	concept insolation subConceptOf ge#geographic_event
+	concept insolation subConceptOf ge#geographical_event
 		annotations
 			dc#identifier hasValue "insolation@en"
 			dc#identifier hasValue "Sonneneinstrahlung@de"
@@ -86,7 +88,7 @@ ontology Landslide
 			dc#source hasValue "http://wordnetweb.princeton.edu/"
 		endAnnotations
 	
-	concept infiltration subConceptOf ge#geographic_event
+	concept infiltration subConceptOf ge#geographical_event
 		annotations
 			dc#identifier hasValue "infiltration@en"
 			dc#identifier hasValue "Versickerung@de"
@@ -94,7 +96,7 @@ ontology Landslide
 			dc#source hasValue "http://wordnetweb.princeton.edu/"
 		endAnnotations
 	
-	concept erosion subConceptOf ge#geographic_event
+	concept erosion subConceptOf ge#geographical_event
 		annotations
 			dc#identifier hasValue "erosion@en"
 			dc#identifier hasValue "Erosion@de"
@@ -102,7 +104,7 @@ ontology Landslide
 			dc#source hasValue "http://wordnetweb.princeton.edu/"
 		endAnnotations
 	
-	concept evapotranspiration subConceptOf ge#geographic_event
+	concept evapotranspiration subConceptOf ge#geographical_event
 		annotations
 			dc#identifier hasValue "evapotranspiration@en"
 			dc#identifier hasValue "Evapotranspiration@de"

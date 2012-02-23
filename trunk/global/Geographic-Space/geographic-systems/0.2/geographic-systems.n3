@@ -5,11 +5,12 @@
 @prefix : <http://purl.org/ifgi/geosystems#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix ptrn: <http://purl.org/ifgi/patterns/system#> .
+@prefix role: <http://purl.org/ifgi/patterns/role#> .
 
-_:node16mkr2b3jx10 a owl:Ontology ;
+_:node16ml1r73dx4 a owl:Ontology ;
 	rdfs:label "geographic_systems" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
-	owl:imports <http://purl.org/ifgi/patterns/system#> ;
+	owl:imports <http://purl.org/ifgi/patterns/system#> , <http://purl.org/ifgi/patterns/role#> ;
 	dc:creator "p.maue (IFGI)"^^xsd:string ;
 	dc:contributor "h.michels (IFGI)"^^xsd:string ;
 	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
@@ -37,7 +38,7 @@ _:node16mkr2b3jx10 a owl:Ontology ;
 
 :environment a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/geosystems#environment" ;
-	rdfs:subClassOf ptrn:Role ;
+	rdfs:subClassOf role:Role ;
 	dc:identifier "Umgebung@de"^^xsd:string , "Environment@en"^^xsd:string ;
 	dc:comment "the sourrounding geographical unit of a system"^^xsd:string ;
 	dc:subject "Environment"^^xsd:string .

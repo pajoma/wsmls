@@ -1,0 +1,118 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://purl.org/ifgi/geomodels#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dul: <http://purl.org/ifgi/dul#> .
+@prefix dulSp: <http://purl.org/ifgi/dulSpatial#> .
+@prefix geospace: <http://purl.org/ifgi/geospace#> .
+@prefix eo: <http://purl.org/ifgi/event-observation#> .
+@prefix ge: <http://purl.org/ifgi/geoevents#> .
+@prefix ssn: <http://purl.org/ifgi/ssn#> .
+
+_:node16ml28rubx2 a owl:Ontology ;
+	rdfs:label "geographical_model" ;
+	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
+	owl:imports <http://purl.org/ifgi/event-observation#> , <http://purl.org/ifgi/geoevents#> , <http://purl.org/ifgi/observation#> , <http://purl.org/ifgi/ssn#> .
+
+:Risk a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geomodels#Risk" ;
+	rdfs:subClassOf dul:Concept ;
+	dc:identifier "Risk@en"^^xsd:string , "Risiko@de"^^xsd:string .
+
+:Hazard a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geomodels#Hazard" ;
+	rdfs:subClassOf dul:Concept ;
+	dc:identifier "Hazard@en"^^xsd:string , "Gefahr@de"^^xsd:string ;
+	dc:description "The possibility of an event to happen"^^xsd:string .
+
+:Hazard-hasProbability rdfs:label "http://purl.org/ifgi/geomodels#hasProbability" ;
+	rdfs:domain :Hazard ;
+	a rdf:Property ;
+	rdfs:range :EventProbability .
+
+:ComputationalModel a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geomodels#ComputationalModel" ;
+	rdfs:subClassOf dul:Workflow ;
+	dc:identifier "Computational Model@en"^^xsd:string , "Computermodell@de"^^xsd:string .
+
+:GeographicalModel a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geomodels#GeographicalModel" ;
+	rdfs:subClassOf dul:Description ;
+	dc:identifier "Geographical Model@en"^^xsd:string , "Geographisches Modell@de"^^xsd:string .
+
+:EnvironmentalModel a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geomodels#EnvironmentalModel" ;
+	rdfs:subClassOf :GeographicalModel ;
+	dc:identifier "Environmental Model@en"^^xsd:string , "Umweltmodell@de"^^xsd:string .
+
+:SocialModel a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geomodels#SocialModel" ;
+	rdfs:subClassOf :GeographicalModel ;
+	dc:identifier "Social Model@en"^^xsd:string , "Gesellschaftsmodell@de"^^xsd:string .
+
+:ForecastModel a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geomodels#ForecastModel" ;
+	rdfs:subClassOf :ComputationalModel ;
+	dc:identifier "Forecast Model@en"^^xsd:string , "Vorhersagemodell@de"^^xsd:string .
+
+:PredictedEvent a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geomodels#PredictedEvent" ;
+	rdfs:subClassOf dul:Situation ;
+	dc:identifier "Predicted Event@en"^^xsd:string , "Vorhergesagtes Ereignis@de"^^xsd:string .
+
+:PredictedEvent-predicts rdfs:label "http://purl.org/ifgi/geomodels#predicts" ;
+	rdfs:domain :PredictedEvent ;
+	a rdf:Property ;
+	rdfs:range ge:geographical_event .
+
+:PredictedObservation a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geomodels#PredictedObservation" ;
+	rdfs:subClassOf :VirtualObservation ;
+	dc:identifier "Predicted Observation@en"^^xsd:string , "Vorhergesagte Beobachtung@de"^^xsd:string .
+
+:PredictedObservation-isComputedBy rdfs:label "http://purl.org/ifgi/geomodels#isComputedBy" ;
+	rdfs:domain :PredictedObservation ;
+	a rdf:Property ;
+	rdfs:range :ForecastModel .
+
+:VirtualObservation a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geomodels#VirtualObservation" ;
+	rdfs:subClassOf ssn:Observation ;
+	dc:identifier "Virtual Observation@en"^^xsd:string , "Virtuelle Beobachtung@de"^^xsd:string .
+
+:VirtualObservation-isComputedBy rdfs:label "http://purl.org/ifgi/geomodels#isComputedBy" ;
+	rdfs:domain :VirtualObservation ;
+	a rdf:Property ;
+	rdfs:range :ComputationalModel .
+
+:EventProbability a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geomodels#EventProbability" ;
+	rdfs:subClassOf :Probability ;
+	dc:identifier "Event Probability@en"^^xsd:string , "Ereignis Wahrscheinlichkeit@de"^^xsd:string .
+
+:EventProbability-isProbabilityOf rdfs:label "http://purl.org/ifgi/geomodels#isProbabilityOf" ;
+	rdfs:domain :EventProbability ;
+	a rdf:Property ;
+	rdfs:range ge:geographical_event .
+
+:Probability a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geomodels#Probability" ;
+	rdfs:subClassOf dul:Quality ;
+	dc:identifier "Probability@en"^^xsd:string , "Wahrscheinlichkeit@de"^^xsd:string .
+
+:Probability-isProbabilityOf rdfs:label "http://purl.org/ifgi/geomodels#isProbabilityOf" ;
+	rdfs:domain :Probability ;
+	a rdf:Property ;
+	rdfs:range dul:Event .
+
+:isAffectedBy a rdf:Property ;
+	rdfs:label :isAffectedBy ;
+	rdfs:domain dul:Plan ;
+	rdfs:range dul:Event .
+
+:atRisk a rdf:Property ;
+	rdfs:label :atRisk ;
+	rdfs:domain dul:Plan ;
+	rdfs:range dul:Risk .

@@ -3,7 +3,8 @@ wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
 namespace { _"http://purl.org/ifgi/geosystems#", 
 		dc _"http://purl.org/dc/elements/1.1/",
      	rdfs _"http://www.w3.org/2000/01/rdf-schema#",
-     	ptrn _"http://purl.org/ifgi/patterns/system#"
+     	ptrn _"http://purl.org/ifgi/patterns/system#",
+		role _"http://purl.org/ifgi/patterns/role#"
      	}
 
 ontology geographic_systems
@@ -18,7 +19,7 @@ ontology geographic_systems
 		dc#subject hasValue "Geography"			
      endAnnotations
 	
-	importsOntology {_"http://purl.org/ifgi/patterns/system#"}
+	importsOntology {_"http://purl.org/ifgi/patterns/system#", _"http://purl.org/ifgi/patterns/role#"}
 
 concept geographical_system subConceptOf ptrn#System
 	annotations
@@ -38,7 +39,7 @@ concept geographical_system subConceptOf ptrn#System
 			
 		
 /* environment is an example of a region without a defined boundary (but a well-defined center) */
-concept environment subConceptOf ptrn#Role
+concept environment subConceptOf role#Role
 	annotations
 		dc#identifier hasValue "Umgebung@de"
 		dc#identifier hasValue "Environment@en"

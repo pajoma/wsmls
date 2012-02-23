@@ -11,9 +11,10 @@
 	xmlns:gq="http://purl.org/ifgi/geoqualities#"
 	xmlns:gs="http://purl.org/ifgi/geospace#"
 	xmlns:ge="http://purl.org/ifgi/geoevents#"
+	xmlns:gm="http://purl.org/ifgi/geomodels#"
 	xmlns:oil="http://purl.org/ifgi/oilspill#">
 
-<rdf:Description rdf:nodeID="node16mkr2b3jx13">
+<rdf:Description rdf:nodeID="node16ml1tv6kx1">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>Landslide</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -23,6 +24,7 @@
 	<owl:imports rdf:resource="http://purl.org/ifgi/geoevents#"/>
 	<owl:imports rdf:resource="http://purl.org/ifgi/oilspill#"/>
 	<owl:imports rdf:resource="http://purl.org/ifgi/dul#"/>
+	<owl:imports rdf:resource="http://purl.org/ifgi/geomodels#"/>
 	<dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Auriol Degbelo (IFGI)</dc:creator>
 	<dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Henry Michels (IFGI)</dc:contributor>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ENVISION: Ontology for the landslide use case</dc:description>
@@ -37,26 +39,34 @@
 <rdf:Description rdf:about="http://purl.org/ifgi/landslide#landslide">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/landslide#landslide</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geoevents#geographic_event"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geoevents#geographical_event"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">landslide@en</dc:identifier>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hangrutsch@de</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a slide of a large mass of dirt and rock down a mountain or cliff</dc:description>
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://wordnetweb.princeton.edu/</dc:source>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/landslide#landslide_risk">
+<rdf:Description rdf:about="http://purl.org/ifgi/landslide#landslide_probability">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:label>http://purl.org/ifgi/landslide#landslide_risk</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/landslide#risk"/>
+	<rdfs:label>http://purl.org/ifgi/landslide#landslide_probability</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geomodels#EventProbability"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">landslide risk@en</dc:identifier>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hangrutsch Risiko@de</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">the risk that a landslide occurs</dc:description>
 </rdf:Description>
 
+<rdf:Description rdf:about="http://purl.org/ifgi/landslide#landslide_probability-isProbabilityOf">
+	<rdfs:label>http://purl.org/ifgi/geospace#isProbabilityOf</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/landslide#landslide_probability"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/geospace#isProbabilityOf"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/landslide#landslide"/>
+</rdf:Description>
+
 <rdf:Description rdf:about="http://purl.org/ifgi/landslide#landslide_runout_zone">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/landslide#landslide_runout_zone</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/landslide#predicted_observation"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geomodels#PredictedObservation"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">landslide runout zone@en</dc:identifier>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hangrutsch Auslaufgebiet@de</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">the entire area down which a landslide moves</dc:description>
@@ -95,7 +105,7 @@
 <rdf:Description rdf:about="http://purl.org/ifgi/landslide#insolation">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/landslide#insolation</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geoevents#geographic_event"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geoevents#geographical_event"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">insolation@en</dc:identifier>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sonneneinstrahlung@de</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">incident solar radiation</dc:description>
@@ -105,7 +115,7 @@
 <rdf:Description rdf:about="http://purl.org/ifgi/landslide#infiltration">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/landslide#infiltration</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geoevents#geographic_event"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geoevents#geographical_event"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">infiltration@en</dc:identifier>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Versickerung@de</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(the slow passage of a liquid through a filtering medium</dc:description>
@@ -115,7 +125,7 @@
 <rdf:Description rdf:about="http://purl.org/ifgi/landslide#erosion">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/landslide#erosion</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geoevents#geographic_event"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geoevents#geographical_event"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">erosion@en</dc:identifier>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Erosion@de</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">condition in which the earth's surface is worn away by the action of water and wind</dc:description>
@@ -125,7 +135,7 @@
 <rdf:Description rdf:about="http://purl.org/ifgi/landslide#evapotranspiration">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/landslide#evapotranspiration</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geoevents#geographic_event"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geoevents#geographical_event"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">evapotranspiration@en</dc:identifier>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Evapotranspiration@de</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">the sum of evaporation and plant transpiration from the Earth's land surface to atmosphere. Evaporation accounts for the movement of water to the air from sources such as the soil, canopy interception, and waterbodies.</dc:description>

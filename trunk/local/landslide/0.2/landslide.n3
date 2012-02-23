@@ -9,12 +9,13 @@
 @prefix gq: <http://purl.org/ifgi/geoqualities#> .
 @prefix gs: <http://purl.org/ifgi/geospace#> .
 @prefix ge: <http://purl.org/ifgi/geoevents#> .
+@prefix gm: <http://purl.org/ifgi/geomodels#> .
 @prefix oil: <http://purl.org/ifgi/oilspill#> .
 
-_:node16mkr2b3jx14 a owl:Ontology ;
+_:node16ml1tv6kx2 a owl:Ontology ;
 	rdfs:label "Landslide" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
-	owl:imports <http://purl.org/ifgi/geounits#> , <http://purl.org/ifgi/geoqualities#> , <http://purl.org/ifgi/geospace#> , <http://purl.org/ifgi/geoevents#> , <http://purl.org/ifgi/oilspill#> , <http://purl.org/ifgi/dul#> ;
+	owl:imports <http://purl.org/ifgi/geounits#> , <http://purl.org/ifgi/geoqualities#> , <http://purl.org/ifgi/geospace#> , <http://purl.org/ifgi/geoevents#> , <http://purl.org/ifgi/oilspill#> , <http://purl.org/ifgi/dul#> , <http://purl.org/ifgi/geomodels#> ;
 	dc:creator "Auriol Degbelo (IFGI)"^^xsd:string ;
 	dc:contributor "Henry Michels (IFGI)"^^xsd:string ;
 	dc:description "ENVISION: Ontology for the landslide use case"^^xsd:string ;
@@ -27,20 +28,26 @@ _:node16mkr2b3jx14 a owl:Ontology ;
 
 :landslide a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#landslide" ;
-	rdfs:subClassOf ge:geographic_event ;
+	rdfs:subClassOf ge:geographical_event ;
 	dc:identifier "landslide@en"^^xsd:string , "Hangrutsch@de"^^xsd:string ;
 	dc:description "a slide of a large mass of dirt and rock down a mountain or cliff"^^xsd:string ;
 	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
-:landslide_risk a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/landslide#landslide_risk" ;
-	rdfs:subClassOf :risk ;
+:landslide_probability a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/landslide#landslide_probability" ;
+	rdfs:subClassOf gm:EventProbability ;
 	dc:identifier "landslide risk@en"^^xsd:string , "Hangrutsch Risiko@de"^^xsd:string ;
 	dc:description "the risk that a landslide occurs"^^xsd:string .
 
+:landslide_probability-isProbabilityOf rdfs:label "http://purl.org/ifgi/geospace#isProbabilityOf" ;
+	rdfs:domain :landslide_probability ;
+	rdfs:subPropertyOf gs:isProbabilityOf ;
+	a rdf:Property ;
+	rdfs:range :landslide .
+
 :landslide_runout_zone a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#landslide_runout_zone" ;
-	rdfs:subClassOf :predicted_observation ;
+	rdfs:subClassOf gm:PredictedObservation ;
 	dc:identifier "landslide runout zone@en"^^xsd:string , "Hangrutsch Auslaufgebiet@de"^^xsd:string ;
 	dc:description "the entire area down which a landslide moves"^^xsd:string .
 
@@ -67,28 +74,28 @@ _:node16mkr2b3jx14 a owl:Ontology ;
 
 :insolation a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#insolation" ;
-	rdfs:subClassOf ge:geographic_event ;
+	rdfs:subClassOf ge:geographical_event ;
 	dc:identifier "insolation@en"^^xsd:string , "Sonneneinstrahlung@de"^^xsd:string ;
 	dc:description "incident solar radiation"^^xsd:string ;
 	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
 :infiltration a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#infiltration" ;
-	rdfs:subClassOf ge:geographic_event ;
+	rdfs:subClassOf ge:geographical_event ;
 	dc:identifier "infiltration@en"^^xsd:string , "Versickerung@de"^^xsd:string ;
 	dc:description "(the slow passage of a liquid through a filtering medium"^^xsd:string ;
 	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
 :erosion a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#erosion" ;
-	rdfs:subClassOf ge:geographic_event ;
+	rdfs:subClassOf ge:geographical_event ;
 	dc:identifier "erosion@en"^^xsd:string , "Erosion@de"^^xsd:string ;
 	dc:description "condition in which the earth's surface is worn away by the action of water and wind"^^xsd:string ;
 	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
 :evapotranspiration a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#evapotranspiration" ;
-	rdfs:subClassOf ge:geographic_event ;
+	rdfs:subClassOf ge:geographical_event ;
 	dc:identifier "evapotranspiration@en"^^xsd:string , "Evapotranspiration@de"^^xsd:string ;
 	dc:description "the sum of evaporation and plant transpiration from the Earth's land surface to atmosphere. Evaporation accounts for the movement of water to the air from sources such as the soil, canopy interception, and waterbodies."^^xsd:string ;
 	dc:source "http://en.wikipedia.org/wiki/Evapotranspiration"^^xsd:string .

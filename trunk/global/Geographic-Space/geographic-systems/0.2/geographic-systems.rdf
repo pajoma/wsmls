@@ -6,13 +6,15 @@
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
-	xmlns:ptrn="http://purl.org/ifgi/patterns/system#">
+	xmlns:ptrn="http://purl.org/ifgi/patterns/system#"
+	xmlns:role="http://purl.org/ifgi/patterns/role#">
 
-<rdf:Description rdf:nodeID="node16mkr2b3jx9">
+<rdf:Description rdf:nodeID="node16ml1r73dx3">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>geographic_systems</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
 	<owl:imports rdf:resource="http://purl.org/ifgi/patterns/system#"/>
+	<owl:imports rdf:resource="http://purl.org/ifgi/patterns/role#"/>
 	<dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">p.maue (IFGI)</dc:creator>
 	<dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">h.michels (IFGI)</dc:contributor>
 	<dc:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(a)IfGI, University of Muenster</dc:publisher>
@@ -48,7 +50,7 @@
 <rdf:Description rdf:about="http://purl.org/ifgi/geosystems#environment">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/geosystems#environment</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/patterns/system#Role"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/patterns/role#Role"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Umgebung@de</dc:identifier>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Environment@en</dc:identifier>
 	<dc:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">the sourrounding geographical unit of a system</dc:comment>
