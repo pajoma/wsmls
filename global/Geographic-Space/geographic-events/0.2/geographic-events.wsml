@@ -22,7 +22,7 @@ ontology geographical_events
 	
 	importsOntology {_"http://purl.org/ifgi/dul#", _"http://purl.org/ifgi/dulSpatial#", _"http://purl.org/ifgi/geospace#"}
 	
-	concept geographic_event subConceptOf dul#Event
+	concept geographical_event subConceptOf dul#Event
     	annotations
 			dc#identifier hasValue "geographic event@en"
 			dc#identifier hasValue "natuerliches Phänomen@de"
@@ -41,7 +41,7 @@ ontology geographical_events
 			dc#source hasValue "http://wordnetweb.princeton.edu/"
 		endAnnotations
 
-    concept wind subConceptOf geographic_event
+    concept wind subConceptOf geographical_event
 		annotations
 			dc#identifier hasValue "Wind@de"
 			dc#identifier hasValue "wind@en"
@@ -116,7 +116,7 @@ ontology geographical_events
 		endAnnotations
 		//causes oftype landslide
 	
-	concept precipitation subConceptOf geographic_event
+	concept precipitation subConceptOf geographical_event
 		annotations
 			dc#identifier hasValue "precipitation@en"
 			dc#identifier hasValue "Niderschlag@de"
@@ -145,14 +145,14 @@ ontology geographical_events
 	
 	//temporal relations
 	
-	relation has_start_point (ofType geographic_event, ofType point_in_time) subRelationOf dul#hasQuality
+	relation has_start_point (ofType geographical_event, ofType point_in_time) subRelationOf dul#hasQuality
 		annotations
 			dc#identifier hasValue "has start point@en"
 			dc#identifier hasValue "hat Startpunkt@de"
 			dc#description hasValue ""
 		endAnnotations
 	
-	relation has_duration (ofType geographic_event, ofType time_interval) subRelationOf dul#hasQuality
+	relation has_duration (ofType geographical_event, ofType time_interval) subRelationOf dul#hasQuality
 		annotations
 			dc#identifier hasValue "has duration@en"
 			dc#identifier hasValue "hat Dauer@de"

@@ -8,7 +8,7 @@
 @prefix dulSp: <http://purl.org/ifgi/dulSpatial#> .
 @prefix geospace: <http://purl.org/ifgi/geospace#> .
 
-_:node16mkr2b3jx4 a owl:Ontology ;
+_:node16ml1r73dx2 a owl:Ontology ;
 	rdfs:label "geographical_events" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/dul#> , <http://purl.org/ifgi/dulSpatial#> , <http://purl.org/ifgi/geospace#> ;
@@ -21,25 +21,25 @@ _:node16mkr2b3jx4 a owl:Ontology ;
 	dc:title "Geographic Space Ontology"^^xsd:string ;
 	dc:subject "Geography"^^xsd:string .
 
-:geographic_event a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/geoevents#geographic_event" ;
+:geographical_event a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geoevents#geographical_event" ;
 	rdfs:subClassOf dul:Event ;
 	dc:identifier "geographic event@en"^^xsd:string , "natuerliches Phänomen@de"^^xsd:string ;
 	dc:description "a non-artificial event in the physical sense, and therefore not produced by humans, although it may affect humans (such as pathogens, aging, natural disasters, death)"^^xsd:string ;
 	dc:source "http://en.wikipedia.org/wiki/Natural_phenomenon"^^xsd:string .
 
-:geographic_event-has_start_point rdfs:label "http://purl.org/ifgi/geoevents#has_start_point" ;
-	rdfs:domain :geographic_event ;
+:geographical_event-has_start_point rdfs:label "http://purl.org/ifgi/geoevents#has_start_point" ;
+	rdfs:domain :geographical_event ;
 	a rdf:Property ;
 	rdfs:range :point_in_time .
 
-:geographic_event-has_duration rdfs:label "http://purl.org/ifgi/geoevents#has_duration" ;
-	rdfs:domain :geographic_event ;
+:geographical_event-has_duration rdfs:label "http://purl.org/ifgi/geoevents#has_duration" ;
+	rdfs:domain :geographical_event ;
 	a rdf:Property ;
 	rdfs:range :time_interval .
 
-:geographic_event-occursIn rdfs:label "http://purl.org/ifgi/geoevents#occursIn" ;
-	rdfs:domain :geographic_event ;
+:geographical_event-occursIn rdfs:label "http://purl.org/ifgi/geoevents#occursIn" ;
+	rdfs:domain :geographical_event ;
 	a rdf:Property ;
 	rdfs:range geospace:geographical_unit .
 
@@ -52,7 +52,7 @@ _:node16mkr2b3jx4 a owl:Ontology ;
 
 :wind a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/geoevents#wind" ;
-	rdfs:subClassOf :geographic_event ;
+	rdfs:subClassOf :geographical_event ;
 	dc:identifier "Wind@de"^^xsd:string , "wind@en"^^xsd:string ;
 	dc:description "Moving air caused by differences in pressure. The air moves from an area of high pressure to an area of low pressure."^^xsd:string ;
 	dc:source "http://en.wikipedia.org/wiki/Wind"^^xsd:string .
@@ -115,7 +115,7 @@ _:node16mkr2b3jx4 a owl:Ontology ;
 
 :precipitation a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/geoevents#precipitation" ;
-	rdfs:subClassOf :geographic_event ;
+	rdfs:subClassOf :geographical_event ;
 	dc:identifier "precipitation@en"^^xsd:string , "Niderschlag@de"^^xsd:string ;
 	dc:description "the falling to earth of any form of water (rain or snow or hail or sleet or mist)"^^xsd:string ;
 	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
@@ -136,7 +136,7 @@ _:node16mkr2b3jx4 a owl:Ontology ;
 
 :has_start_point a rdf:Property ;
 	rdfs:label :has_start_point ;
-	rdfs:domain :geographic_event ;
+	rdfs:domain :geographical_event ;
 	rdfs:range :point_in_time ;
 	rdfs:subPropertyOf dul:hasQuality ;
 	dc:identifier "has start point@en"^^xsd:string , "hat Startpunkt@de"^^xsd:string ;
@@ -144,7 +144,7 @@ _:node16mkr2b3jx4 a owl:Ontology ;
 
 :has_duration a rdf:Property ;
 	rdfs:label :has_duration ;
-	rdfs:domain :geographic_event ;
+	rdfs:domain :geographical_event ;
 	rdfs:range :time_interval ;
 	rdfs:subPropertyOf dul:hasQuality ;
 	dc:identifier "has duration@en"^^xsd:string , "hat Dauer@de"^^xsd:string ;
