@@ -2,11 +2,11 @@ wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
 namespace { _"http://purl.org/ifgi/geoevents#",
 	dc _"http://purl.org/dc/elements/1.1/",
     rdfs _"http://www.w3.org/2000/01/rdf-schema#",
-    dolce _"http://purl.org/ifgi/dolce#",
-    dns _"http://purl.org/ifgi/dolceDnS#"
+    dolce _"http://purl.org/ifgi/dul#",
+    dns _"http://purl.org/ifgi/dulDnS#"
  }
 
-ontology geographic_events
+ontology geographical_events
 
 	annotations
      	dc#creator hasValue "h.michels (IFGI)"
@@ -19,7 +19,7 @@ ontology geographic_events
 		dc#subject hasValue "Geography"			
     endAnnotations
 	
-	importsOntology {_"http://purl.org/ifgi/dolce#", _"http://purl.org/ifgi/dolceDnS#"}
+	importsOntology {_"http://purl.org/ifgi/dul#", _"http://purl.org/ifgi/dulDnS#"}
 	
 	concept natural_event subConceptOf dns#physical_phenomenon
     	annotations
@@ -132,7 +132,7 @@ ontology geographic_events
 		
 	//temporal qualities
 	
-	concept point_in_time subConceptOf dolce#temporal_quality
+	concept point_in_time subConceptOf dul#Quality
 		annotations
 			dc#identifier hasValue "Zeitpunkt@de"
 			dc#identifier hasValue "point in time@en"
@@ -140,7 +140,7 @@ ontology geographic_events
 			dc#source hasValue "http://wordnetweb.princeton.edu"
 		endAnnotations
 		
-	concept time_interval subConceptOf dolce#temporal_quality
+	concept time_interval subConceptOf dul#Quality
 		annotations
 			dc#identifier hasValue "Zeitraum@de"
 			dc#identifier hasValue "time interval@en"

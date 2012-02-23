@@ -2,13 +2,11 @@ wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
 namespace { _"http://purl.org/ifgi/geounits#", 
 		dc _"http://purl.org/dc/elements/1.1/",
      	rdfs _"http://www.w3.org/2000/01/rdf-schema#",
-     	dolce _"http://purl.org/ifgi/dolce#",
-     	dolceSpatial _"http://purl.org/ifgi/dolceSpatial#",
      	geospace _"http://purl.org/ifgi/geospace#",
      	geoevent _"http://purl.org/ifgi/geoevents#"
      	}
 
-ontology geographic_units
+ontology geographical_units
      annotations
      	dc#creator hasValue "p.maue (IFGI)"
 		dc#contributor hasValue "e.klien (IFGI)"
@@ -20,7 +18,7 @@ ontology geographic_units
 		dc#subject hasValue "Geography"			
      endAnnotations
 	
-	importsOntology {_"http://purl.org/ifgi/dolceSpatial#", _"http://purl.org/ifgi/geospace#", _"http://purl.org/ifgi/geoevents#"}
+	importsOntology {_"http://purl.org/ifgi/geospace#", _"http://purl.org/ifgi/geoevents#"}
 
 concept natural_unit subConceptOf geospace#geographical_unit
 	annotations
@@ -139,9 +137,10 @@ relation landcover_unit_covers (ofType landcover_unit, ofType geospace#geographi
 		dc#description hasValue "" 
 	endAnnotations
 
-relation landcover_unit_particpant_in (ofType landcover_unit, ofType geoevent#ground_movement) subRelationOf dolce#participant_in
-	annotations
-		dc#identifier hasValue "participant in@en"
-		dc#identifier hasValue "teilnehmen an@de"
-		dc#description hasValue "" 
-	endAnnotations
+// deprecated
+//relation landcover_unit_particpant_in (ofType landcover_unit, ofType geoevent#ground_movement) subRelationOf dolce#participant_in
+//	annotations
+//		dc#identifier hasValue "participant in@en"
+//		dc#identifier hasValue "teilnehmen an@de"
+//		dc#description hasValue "Deprecated, don't use" 
+//	endAnnotations

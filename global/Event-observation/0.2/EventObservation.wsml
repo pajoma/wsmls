@@ -4,7 +4,7 @@ namespace { _"http://purl.org/ifgi/event-observation#",
 		dc _"http://purl.org/dc/elements/1.1/",
 		ssn _"http://purl.org/ifgi/ssn#",
 		dul _"http://purl.org/ifgi/dul#",
-		dolceSpatial _"http://purl.org/ifgi/dolceSpatial#"
+		dolceSpatial _"http://purl.org/ifgi/dulSpatial#"
  }
  
 
@@ -20,7 +20,7 @@ ontology EventObservation
 	importsOntology {
 		_"http://purl.org/ifgi/dul#",
 		_"http://purl.org/ifgi/ssn#",
-		_"http://purl.org/ifgi/dolceSpatial"
+		_"http://purl.org/ifgi/dulSpatial"
 	}
 	
 	concept EventProcessingAgent subConceptOf ssn#Sensor
@@ -85,7 +85,7 @@ ontology EventObservation
 	
 
 	// Relations
-	relation observedAt (ofType EventObservation, ofType dul#SpaceRegion) subRelationOf dolceSpatial#p_spatial_location
+	relation observedAt (ofType EventObservation, ofType dul#SpaceRegion) subRelationOf dulSpatial#p_spatial_location
 		nfp
 			dc#identifier hasValue "observed at@en"
 			dc#description hasValue "A relation between an observed situation (perdurant) and a spatial region that can be a point, a place, or a geometry."

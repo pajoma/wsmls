@@ -1,0 +1,196 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://ifgipedia.uni-muenster.de/event-processing-project/", 
+     dc _"http://purl.org/dc/elements/1.1/", 
+     dolce _"http://www.load-cnr.it/ontologies/DOLCE-Lite.owl#",
+     wsmostudio _"http://www.wsmostudio.org#" }
+
+ontology AffectingEnvironment
+     nonFunctionalProperties
+          dc#description hasValue ""
+          dc#publisher hasValue "(c) IfGI, University of Muenster"
+          dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+          dc#type hasValue "Ontology"
+          wsmostudio#version hasValue "0.8.0"
+          dc#title hasValue "AffectingEnvironment Ontology"
+          dc#source hasValue "http://ifgipedia.uni-muenster.de/event-processing-project#"
+          dc#date hasValue "12-10-2010" //3.30pm
+     endNonFunctionalProperties
+
+/* ifgi54 meeting 22.02.2012
+  Concepts missing:
+  - Risk and/or hazard is needed either here or in a risk ontology
+  - Probability of the event happening
+  - Predicted observation
+  - Environmental model
+  
+  
+*/
+
+//====== Concepts ======
+
+
+concept UniversalEnvironment
+	surrounds ofType (1 1) Agent
+    hasPart ofType (0 *) AffectingEnvironment
+
+concept Agent subConceptOf dolce#agentive_physical_object
+    isSurroundedBy ofType (1 1) UniversalUmwelt
+    participantIn ofType (1 *) Activity
+     
+concept Activity subConceptOf dolce#action
+    determine ofType (1 1) AffectingEnvironment
+    hasParticipant ofType (1 1) Agent
+    partOf ofType (0 *) Activity
+    hasPart ofType (0 *) Activity
+    hasStartPoint ofType (1 1) _dateTime
+    hasEndPoint ofType (1 1) _dateTime
+     
+concept AffectingEnvironment
+    partOf ofType (1 1) UniversalEnvironment
+    partOf ofType (0 *) AffectingEnvironment
+    hasPart ofType (0 *) AffectingEnvironment
+    isDeterminedBy ofType (1 1) Activity
+    hasPart ofType (1 *) Object
+       
+concept Object subConceptOf dolce#physical_object
+    hasState ofType (1 1) State
+    partOf ofType (0 *) AffectingEnvironment
+     
+concept State subConceptOf dolce#physical_quality
+	hasObject ofType (1 *) Object
+
+//===== Relations =====
+relation determine (ofType Activity, ofType AffectingEnvironment)
+relation isDeterminedBy (ofType AffectingEnvironment, ofType Activity)
+
+relation participantIn (ofType Agent, ofType Activity) subRelationOf dolce#participant_in
+relation hasParticipant (ofType Activity, ofType Agent) subRelationOf dolce#participant
+
+relation surrounds (ofType UniversalEnvironment, ofType Agent)
+relation isSurroundedBy (ofType Agent, ofType UniversalEnvironment)
+
+relation hasState (ofType Object, ofType State)
+relation hasObject (ofType State, ofType Object)
+
+relation partOf (ofType {Activity, AffectingEnvironment, Object}, ofType {Activity, AffectingEnvironment, UniversalEnvironment}) subRelationOf dolce#part_of
+relation hasPart (ofType {Activity, AffectingEnvironment, UniversalEnvironment}, ofType {Activity, AffectingEnvironment, Object}) subRelationOf dolce#part
+
+//===== Axioms =====
+//=Mereology-Axioms=
+//reflexivity of parthood 
+axiom parthood_reflexive
+     definedBy
+          ?x memberOf {Activity, AffectingEnvironment} and 
+          partOf(?x,?x) implies true.
+          ?x memberOf {Activity, AffectingEnvironment} and 
+          hasPart(?x,?x) implies true.
+
+//transitivity of parthood 
+axiom parthood_transitive
+     definedBy
+          ?x memberOf {Object, AffectingEnvironment, Activity} and
+          ?y memberOf {AffectingEnvironment, Activity} and
+          ?z memberOf {AffectingEnvironment, UniversalEnvironment, Activity} and 
+          partOf(?x,?y) and partOf(?y,?z) implies partOf(?x,?z).
+          ?x memberOf {UniversalEnvironment, Activity, AffectingEnvironment} and
+          ?y memberOf {Activity, AffectingEnvironment} and
+          ?z memberOf {Activity, AffectingEnvironment, Object} and 
+          hasPart(?x,?y) and hasPart(?y,?z) implies hasPart(?x,?z).
+
+//antisymmetry of parthood    
+axiom parthood_antisymmetric
+     definedBy
+          ?x memberOf {Activity, AffectingEnvironment} and
+          ?y memberOf {Activity, AffectingEnvironment} and
+          partOf(?x,?y) and partOf(?y,?x) implies ?x = ?y. 
+
+//inversion of partOf - hasPart
+axiom partOf_inverse_hasPart
+     definedBy
+          ?x memberOf {Object, AffectingEnvironment, Activity} and
+          ?y memberOf {AffectingEnvironment, UniversalEnvironment, Activity} and
+          partOf(?x,?y) implies hasPart(?y,?x).
+          ?x memberOf {UniversalEnvironment, AffectingEnvironment, Activity} and
+          ?y memberOf {AffectingEnvironment, Object, Activity} and
+          hasPart(?x,?y) implies partOf(?y,?x).
+          
+//inversion of determine - determinedBy
+axiom determine_inverse_isDeterminedBy
+     definedBy
+          ?x memberOf Activity and
+          ?y memberOf AffectingEnvironment and
+          determine(?x,?y) implies isDeterminedBy(?y,?x).
+          ?x memberOf AffectingEnvironment and
+          ?y memberOf Activity and
+          isDeterminedBy(?x,?y) implies determine(?y,?x).
+          
+//inversion of participantIn - hasParticipant
+axiom participantIn_inverse_hasParticipant
+     definedBy
+          ?x memberOf Agent and
+          ?y memberOf Activity and
+          participantIn(?x,?y) implies hasParticipant(?y,?x).
+          ?x memberOf Activity and
+          ?y memberOf Agent and
+          hasParticipant(?x,?y) implies participantIn(?y,?x).
+          
+//inversion of isSurroundedBy - surrounds
+axiom isSurroundedBy_inverse_surrounds
+     definedBy
+          ?x memberOf Agent and
+          ?y memberOf UniversalEnvironment and
+          isSurroundedBy(?x,?y) implies surrounds(?y,?x).
+          ?x memberOf UniversalEnvironment and
+          ?y memberOf Agent and
+          surrounds(?x,?y) implies isSurroundedBy(?y,?x).
+          
+//inversion of hasState - hasObject
+axiom hasState_inverse_hasObject
+     definedBy
+          ?x memberOf Object and
+          ?y memberOf State and
+          hasState(?x,?y) implies hasObject(?y,?x).
+          ?x memberOf State and
+          ?y memberOf Object and
+          hasObject(?x,?y) implies hasState(?y,?x).
+    
+//=Environment Axioms=
+//An AffectingEnvironment of an agent is part of the agent's UniversalUmwelt.  
+axiom A1
+     definedBy
+          ?x memberOf Agent and
+          ?e memberOf AffectingEnvironment and
+          ?a memberOf Activity and
+          ?u memberOf UniversalEnvironment and
+          ?x[participantIn hasValue ?a, isSurroundedBy hasValue ?u] and
+          ?u[determine hasValue ?e] implies
+          ?e[partOf hasValue ?u].
+       
+/*If two individual activities define an AffectingEnvironment in each case and the first activity
+is a sub-concept of the second activity, the AffectingEnvironment of the first activity has to be
+part of the AffectingEnvironment defined by the second activity.*/
+axiom A2
+     definedBy
+          ?e1 memberOf AffectingEnvironment and
+          ?a1 memberOf Activity /* 1 */ and
+          ?e1[isDeterminedBy hasValue ?a1] and
+          ?e2 memberOf AffectingEnvironment and
+          ?a2 memberOf Activity /* 2 */ and
+          ?e2[isDeterminedBy hasValue ?a2] and
+          Activity /* 1 */ subConceptOf Activity /* 2 */ implies
+          ?e2[hasPart hasValue ?e1].
+
+/*If two individual activities define an AffectingEnvironment in each case and the first activity
+is part of the second activity, the AffectingEnvironment of the first activity has to be
+part of the AffectingEnvironment defined by the second activity.*/
+axiom A3
+     definedBy
+          ?e1 memberOf AffectingEnvironment and
+          ?a1 memberOf Activity and
+          ?e1[isDeterminedBy hasValue ?a1] and
+          ?e2 memberOf AffectingEnvironment and
+          ?a2 memberOf Activity and
+          ?e2[isDeterminedBy hasValue ?a2] and
+          ?a1[hasPart hasValue ?a2] implies
+          ?e1[hasPart hasValue ?e2].
+
