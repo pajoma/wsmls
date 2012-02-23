@@ -5,7 +5,7 @@ namespace { _"http://purl.org/ifgi/geoqualities#",
      	geospace _"http://purl.org/ifgi/geospace#"
      	}
 
-ontology geographic_qualities
+ontology geographical_qualities
      annotations
      	dc#creator hasValue "p.maue (ifgi)"
 		dc#contributor hasValue "e.klien (ifgi), s.schade (ifgi)"
@@ -87,4 +87,7 @@ concept texture subConceptOf geospace#geographical_quality
 		dc#identifier hasValue "Textur@de"
 		dc#description hasValue "" 
 	endAnnotations
+	
+	
+
 	

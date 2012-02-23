@@ -1,12 +1,12 @@
 wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
-namespace { _"http://purl.org/ifgi/dolceSpatial#",
+namespace { _"http://purl.org/ifgi/dulSpatial#",
      rdf _"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
      rdfs _"http://www.w3.org/2000/01/rdf-schema#",
      dul _"http://purl.org/ifgi/dul#",
      src _"http://www.loa-cnr.it/ontologies/SpatialRelations.owl",
      dc _"http://purl.org/dc/elements/1.1/"}
 
-ontology DOLCE_SpatialRelations
+ontology DUL_SpatialRelations
      annotations
         dc#creator hasValue "p.maue (IFGI)"
         dc#publisher hasValue "IfGI, University of Muenster"
