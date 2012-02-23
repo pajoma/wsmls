@@ -5,6 +5,8 @@ namespace { _"http://purl.org/ifgi/observation#",
 	dns _"http://purl.org/ifgi/dolceDnS#"
  }
 
+// Outdated! We use SSN.
+
 ontology Observation
 
 	 annotations
