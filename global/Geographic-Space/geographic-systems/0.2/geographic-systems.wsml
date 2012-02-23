@@ -13,7 +13,7 @@ ontology geographic_systems
 		dc#publisher hasValue "(a)IfGI, University of Muenster"
 		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
 		dc#type hasValue "Domain Ontology"
-		dc#description hasValue "" 
+		dc#description hasValue "A generic ontology suitable to describe objects and events in the geographic space, e.g. weather, forests, mountains, rivers, snow, ..." 
 		dc#title hasValue "Geographic Systems Ontology"	
 		dc#subject hasValue "Geography"			
      endAnnotations
