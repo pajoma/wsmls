@@ -8,7 +8,7 @@
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns:ptrn="http://purl.org/ifgi/patterns/system#">
 
-<rdf:Description rdf:nodeID="node16m5gl4c1x97">
+<rdf:Description rdf:nodeID="node16mkr2b3jx9">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>geographic_systems</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -19,13 +19,13 @@
 	<dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://creativecommons.org/licenses/by/3.0/</dc:rights>
 	<dc:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Domain Ontology</dc:type>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A generic ontology suitable to describe objects and events in the geographic space, e.g. weather, forests, mountains, rivers, snow, ...</dc:description>
-	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geographic Space Ontology</dc:title>
+	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geographic Systems Ontology</dc:title>
 	<dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geography</dc:subject>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/geosystems#geographic_system">
+<rdf:Description rdf:about="http://purl.org/ifgi/geosystems#geographical_system">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:label>http://purl.org/ifgi/geosystems#geographic_system</rdfs:label>
+	<rdfs:label>http://purl.org/ifgi/geosystems#geographical_system</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/patterns/system#System"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">System, geographisch@de</dc:identifier>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">geographical system@en</dc:identifier>
@@ -33,9 +33,9 @@
 	<dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Systems</dc:subject>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/geosystems#geographic_system-surroundedBy">
+<rdf:Description rdf:about="http://purl.org/ifgi/geosystems#geographical_system-surroundedBy">
 	<rdfs:label>http://purl.org/ifgi/geosystems#surroundedBy</rdfs:label>
-	<rdfs:domain rdf:resource="http://purl.org/ifgi/geosystems#geographic_system"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/geosystems#geographical_system"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">umgeben von@de</dc:identifier>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sourrounded by@en</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>

@@ -4,15 +4,12 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix : <http://purl.org/ifgi/geounits#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix dolce: <http://purl.org/ifgi/dolce#> .
-@prefix dolceSpatial: <http://purl.org/ifgi/dolceSpatial#> .
 @prefix geospace: <http://purl.org/ifgi/geospace#> .
-@prefix geoevent: <http://purl.org/ifgi/geoevents#> .
 
-_:node16m5gl4c1x100 a owl:Ontology ;
-	rdfs:label "geographic_units" ;
+_:node16mkr2b3jx12 a owl:Ontology ;
+	rdfs:label "geographical_units" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
-	owl:imports <http://purl.org/ifgi/dolceSpatial#> , <http://purl.org/ifgi/geospace#> , <http://purl.org/ifgi/geoevents#> ;
+	owl:imports <http://purl.org/ifgi/geospace#> ;
 	dc:creator "p.maue (IFGI)"^^xsd:string ;
 	dc:contributor "e.klien (IFGI)"^^xsd:string ;
 	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
@@ -90,12 +87,4 @@ _:node16m5gl4c1x100 a owl:Ontology ;
 	rdfs:domain :landcover_unit ;
 	rdfs:range geospace:geographical_unit ;
 	dc:identifier "cover@en"^^xsd:string , "bedecken@de"^^xsd:string ;
-	dc:description ""^^xsd:string .
-
-:landcover_unit_particpant_in a rdf:Property ;
-	rdfs:label :landcover_unit_particpant_in ;
-	rdfs:domain :landcover_unit ;
-	rdfs:range geoevent:ground_movement ;
-	rdfs:subPropertyOf dolce:participant_in ;
-	dc:identifier "participant in@en"^^xsd:string , "teilnehmen an@de"^^xsd:string ;
 	dc:description ""^^xsd:string .

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns="http://purl.org/ifgi/geospace#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:dul="http://purl.org/ifgi/dul#"
+	xmlns:dulSp="http://purl.org/ifgi/dulSpatial#">
+
+<rdf:Description rdf:nodeID="node16mkr2b3jx7">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<rdfs:label>geographic_space</rdfs:label>
+	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
+	<owl:imports rdf:resource="http://purl.org/ifgi/dolceSpatial#"/>
+	<dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">p.maue (ifgi)</dc:creator>
+	<dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">e.klien (ifgi), s.schade (ifgi)</dc:contributor>
+	<dc:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(a)IfGI, University of Muenster</dc:publisher>
+	<dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://creativecommons.org/licenses/by/3.0/</dc:rights>
+	<dc:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Domain Ontology</dc:type>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A generic ontology suitable to describe objects and events in the geographic space, e.g. weather, forests, mountains, rivers, snow, ...</dc:description>
+	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geographic Space Ontology</dc:title>
+	<dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geography</dc:subject>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/geospace#geographical_unit">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/geospace#geographical_unit</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dul#PhysicalPlace"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geographical Unit@en</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geographische Einheit@de</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Something which is identified as entity on geographic scale</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/geospace#geographical_unit-spatialLocation">
+	<rdfs:label>http://purl.org/ifgi/dulSpatial#spatialLocation</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/geospace#geographical_unit"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dulSpatial#spatialLocation"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/geospace#geographical_space_region"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/geospace#geographical_unit-hasQuality">
+	<rdfs:label>http://purl.org/ifgi/dul#hasQuality</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/geospace#geographical_unit"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#hasQuality"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/geospace#geographical_quality"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/geospace#geographical_unit-confined_by">
+	<rdfs:label>http://purl.org/ifgi/geospace#confined_by</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/geospace#geographical_unit"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">begrenzt durch@de</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confined by@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
+	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:source>
+	<rdfs:comments rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comments>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/geospace#geographical_unit"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/geospace#geographical_unit-situated_in">
+	<rdfs:label>http://purl.org/ifgi/geospace#situated_in</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/geospace#geographical_unit"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">situiert in@de</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">situated in@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The area in which something is located in</dc:description>
+	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:source>
+	<rdfs:comments rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comments>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/geospace#geographical_unit"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/geospace#geographical_unit-nearBy">
+	<rdfs:label>http://purl.org/ifgi/geospace#nearBy</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/geospace#geographical_unit"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">in der Nähe von@de</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nearby@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This unit can be nearby to another unit</dc:description>
+	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:source>
+	<rdfs:comments rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comments>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/geospace#geographical_unit"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/geospace#geographical_space_region">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/geospace#geographical_space_region</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dul#SpaceRegion"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geographical Space@en</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geographische Raum@de</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geographic space refers to the space of our world in which we live and work.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/geospace#geographical_quality">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/geospace#geographical_quality</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dul#Quality"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geographic Quality@en</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geographische Qualität@de</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualities restricted to geographic objects. Only large scale objects have a terrain or a skyline</dc:description>
+</rdf:Description>
+
+</rdf:RDF>

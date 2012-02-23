@@ -6,18 +6,13 @@
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
-	xmlns:dolce="http://purl.org/ifgi/dolce#"
-	xmlns:dolceSpatial="http://purl.org/ifgi/dolceSpatial#"
-	xmlns:geospace="http://purl.org/ifgi/geospace#"
-	xmlns:geoevent="http://purl.org/ifgi/geoevents#">
+	xmlns:geospace="http://purl.org/ifgi/geospace#">
 
-<rdf:Description rdf:nodeID="node16m5gl4c1x99">
+<rdf:Description rdf:nodeID="node16mkr2b3jx11">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
-	<rdfs:label>geographic_units</rdfs:label>
+	<rdfs:label>geographical_units</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
-	<owl:imports rdf:resource="http://purl.org/ifgi/dolceSpatial#"/>
 	<owl:imports rdf:resource="http://purl.org/ifgi/geospace#"/>
-	<owl:imports rdf:resource="http://purl.org/ifgi/geoevents#"/>
 	<dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">p.maue (IFGI)</dc:creator>
 	<dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">e.klien (IFGI)</dc:contributor>
 	<dc:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(a)IfGI, University of Muenster</dc:publisher>
@@ -125,17 +120,6 @@
 	<rdfs:range rdf:resource="http://purl.org/ifgi/geospace#geographical_unit"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cover@en</dc:identifier>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bedecken@de</dc:identifier>
-	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://purl.org/ifgi/geounits#landcover_unit_particpant_in">
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/geounits#landcover_unit_particpant_in"/>
-	<rdfs:domain rdf:resource="http://purl.org/ifgi/geounits#landcover_unit"/>
-	<rdfs:range rdf:resource="http://purl.org/ifgi/geoevents#ground_movement"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#participant_in"/>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">participant in@en</dc:identifier>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">teilnehmen an@de</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
 </rdf:Description>
 

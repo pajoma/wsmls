@@ -1,0 +1,182 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://purl.org/ifgi/dulSpatial#> .
+@prefix dul: <http://purl.org/ifgi/dul#> .
+@prefix src: <http://www.loa-cnr.it/ontologies/SpatialRelations.owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+_:node16mkr2b3jx2 a owl:Ontology ;
+	rdfs:label "DUL_SpatialRelations" ;
+	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
+	owl:imports <http://purl.org/ifgi/dul#> ;
+	dc:creator "p.maue (IFGI)"^^xsd:string ;
+	dc:publisher "IfGI, University of Muenster"^^xsd:string ;
+	dc:type "Foundational Ontology"^^xsd:string ;
+	dc:title "Dolce Ultra Light Ontology (Spatial Relations)"^^xsd:string ;
+	dc:description "An Ontology of spatial relations, extending the location relations from DOLCE Ultra Lite. OWL engineering by Aldo Gangemi. WSML Translation by Patrick Maué"^^xsd:string ;
+	dc:source "http://wiki.loa-cnr.it/index.php/LoaWiki:Spatial"^^xsd:string ;
+	dc:subject "dolce, , dul, foundational, module, spatial"^^xsd:string .
+
+:approximateLocation a rdf:Property ;
+	rdfs:label :approximateLocation ;
+	rdfs:domain dul:Entity ;
+	rdfs:range dul:Entity ;
+	rdfs:subPropertyOf dul:hasLocation ;
+	dc:identifier "has approximate location@en"^^xsd:string ;
+	dc:description "A spatial location relation holding between any two entities but regions. It assumes a mereotopological association (part, connection, overlaps, etc.) between shared spatial regions."^^xsd:string ;
+	rdfs:seeAlso src:approximate-location .
+
+:approximateLocationOf a rdf:Property ;
+	rdfs:label :approximateLocationOf ;
+	rdfs:domain dul:Entity ;
+	rdfs:range dul:Entity ;
+	rdfs:subPropertyOf dul:isLocationOf ;
+	dc:identifier "is approximate location of@en"^^xsd:string ;
+	dc:description "A spatial location relation holding between any two entities but regions. It assumes a mereotopological association (part, connection, overlaps, etc.) between shared spatial regions."^^xsd:string ;
+	rdfs:seeAlso src:approximate-location-of .
+
+:descriptivePlace a rdf:Property ;
+	rdfs:label :descriptivePlace ;
+	rdfs:domain dul:PhysicalObject ;
+	rdfs:range dul:Place ;
+	rdfs:subPropertyOf dul:hasLocation ;
+	dc:identifier "has descriptive place@en"^^xsd:string ;
+	dc:description "Approximate location of an endurant in a non-physical one. It assumes a shared region. AKA fiat-place."^^xsd:string ;
+	rdfs:seeAlso src:descriptive-place .
+
+:descriptivePlaceOf a rdf:Property ;
+	rdfs:label :descriptivePlaceOf ;
+	rdfs:domain dul:Place ;
+	rdfs:range dul:PhysicalObject ;
+	rdfs:subPropertyOf dul:isLocationOf ;
+	dc:identifier "is descriptive place of@en"^^xsd:string ;
+	dc:description "Approximate location of an endurant in a non-physical one. It assumes a shared region.AKA fiat-place."^^xsd:string ;
+	rdfs:seeAlso src:descriptive-place-of .
+
+:participantPlace a rdf:Property ;
+	rdfs:label :participantPlace ;
+	rdfs:domain dul:Event ;
+	rdfs:range dul:PhysicalPlace ;
+	rdfs:subPropertyOf :approximate_location ;
+	dc:identifier "has participant place@en"^^xsd:string ;
+	dc:description "The place of a perdurant as provided by a reference region at which the spatial quality of a certain endurant is q-located."^^xsd:string ;
+	rdfs:seeAlso src:participant-place .
+
+:participantPlaceOf a rdf:Property ;
+	rdfs:label :participantPlaceOf ;
+	rdfs:domain dul:PhysicalPlace ;
+	rdfs:range dul:Event ;
+	rdfs:subPropertyOf :approximate_location_of ;
+	dc:identifier "is participant place of@en"^^xsd:string ;
+	dc:description "The place of a perdurant as provided by a reference region at which the spatial quality of a certain endurant is q-located."^^xsd:string ;
+	rdfs:seeAlso src:participant-place-of .
+
+:descriptiveOrigin a rdf:Property ;
+	rdfs:label :descriptiveOrigin ;
+	rdfs:domain dul:PhysicalObject ;
+	rdfs:range dul:Place ;
+	rdfs:subPropertyOf :descriptive_place ;
+	dc:identifier "has descriptive origin@en"^^xsd:string ;
+	dc:description "Original location of an endurant in a non-physical one. It assumes a shared region between the first and the depend-on of the second (see descriptive place)."^^xsd:string ;
+	rdfs:seeAlso src:descriptive-origin .
+
+:descriptiveOriginOf a rdf:Property ;
+	rdfs:label :descriptiveOriginOf ;
+	rdfs:domain dul:Place ;
+	rdfs:range dul:PhysicalObject ;
+	rdfs:subPropertyOf :descriptive_place_of ;
+	dc:identifier "is descriptive origin of@en"^^xsd:string ;
+	dc:description "Original location of an endurant in a non-physical one. It assumes a shared region between the first and the depend-on of the second (see descriptive place)."^^xsd:string ;
+	rdfs:seeAlso src:descriptive-origin-of .
+
+:place a rdf:Property ;
+	rdfs:label :place ;
+	rdfs:domain dul:PhysicalObject ;
+	rdfs:range dul:PhysicalPlace ;
+	rdfs:subPropertyOf :approximate_location ;
+	dc:identifier "has place@en"^^xsd:string ;
+	dc:description "A relation of approximate location holding between any endurant and physical endurants. It assumes a shared physical region. Sharedness can be any mereotopological association, but no analytical definition can be done in OWL due to the lack of role value maps."^^xsd:string ;
+	rdfs:seeAlso src:place .
+
+:placeOf a rdf:Property ;
+	rdfs:label :placeOf ;
+	rdfs:domain dul:PhysicalPlace ;
+	rdfs:range dul:PhysicalObject ;
+	rdfs:subPropertyOf :approximate_location_of ;
+	dc:identifier "is place of@en"^^xsd:string ;
+	dc:description "A relation of approximate location holding between any endurant and physical endurants. It assumes a shared physical region. Sharedness can be any mereotopological association, but no analytical definition can be done in OWL due to the lack of role value maps."^^xsd:string ;
+	rdfs:seeAlso src:place-of .
+
+:materialPlace a rdf:Property ;
+	rdfs:label :materialPlace ;
+	rdfs:domain dul:PhysicalObject ;
+	rdfs:range dul:PhysicalPlace ;
+	rdfs:subPropertyOf :place ;
+	dc:identifier "has material place@en"^^xsd:string ;
+	dc:description "A relation of approximate location holding for physical endurants. It assumes a physical region that is shared by two physical endurants. Sharedness can be any mereotopological association, but no analytical definition can be done in OWL due to the lack of role value maps."^^xsd:string ;
+	rdfs:seeAlso src:place-of .
+
+:materialPlaceOf a rdf:Property ;
+	rdfs:label :materialPlaceOf ;
+	rdfs:domain dul:PhysicalPlace ;
+	rdfs:range dul:PhysicalObject ;
+	rdfs:subPropertyOf :place_of ;
+	dc:identifier "is material place of@en"^^xsd:string ;
+	dc:description "A relation of approximate location holding for physical endurants. It assumes a physical region that is shared by two physical endurants. Sharedness can be any mereotopological association, but no analytical definition can be done in OWL due to the lack of role value maps."^^xsd:string ;
+	rdfs:seeAlso src:material-place-of .
+
+:origin a rdf:Property ;
+	rdfs:label :origin ;
+	rdfs:domain dul:PhysicalObject ;
+	rdfs:range dul:PhysicalPlace ;
+	rdfs:subPropertyOf :material_place ;
+	dc:identifier "has origin@en"^^xsd:string ;
+	dc:description "The physical 'origin' of a physical endurant in the space region of the spatial quality of another physical endurant."^^xsd:string ;
+	rdfs:seeAlso src:origin .
+
+:originOf a rdf:Property ;
+	rdfs:label :originOf ;
+	rdfs:domain dul:PhysicalPlace ;
+	rdfs:range dul:PhysicalObject ;
+	rdfs:subPropertyOf :material_place_of ;
+	dc:identifier "is origin of@en"^^xsd:string ;
+	dc:description "The physical 'origin' of a physical endurant in the space region of the spatial quality of another physical endurant."^^xsd:string ;
+	rdfs:seeAlso src:origin-of .
+
+:p_spatialLocation a rdf:Property ;
+	rdfs:label :p_spatialLocation ;
+	rdfs:domain dul:Event ;
+	rdfs:range dul:SpaceRegion ;
+	rdfs:subPropertyOf dul:hasLocation ;
+	dc:identifier "has spatial location@en"^^xsd:string ;
+	dc:description "Analytical indirect location holding between perdurants and space regions."^^xsd:string ;
+	rdfs:seeAlso src:p-spatial-location .
+
+:p_spatialLocationOf a rdf:Property ;
+	rdfs:label :p_spatialLocationOf ;
+	rdfs:domain dul:SpaceRegion ;
+	rdfs:range dul:Event ;
+	rdfs:subPropertyOf dul:isLocationOf ;
+	dc:identifier "is spatial location of@en"^^xsd:string ;
+	dc:description "Analytical indirect location holding between perdurants and space regions."^^xsd:string ;
+	rdfs:seeAlso src:p-spatial-location-of .
+
+:spatialLocation a rdf:Property ;
+	rdfs:label :spatialLocation ;
+	rdfs:domain dul:PhysicalObject ;
+	rdfs:range dul:SpaceRegion ;
+	rdfs:subPropertyOf dul:hasLocation ;
+	dc:identifier "has spatial location@en"^^xsd:string ;
+	dc:description "Analytical location holding between physical endurants and spatial regions."^^xsd:string ;
+	rdfs:seeAlso src:spatial-location-of .
+
+:spatialLocationOf a rdf:Property ;
+	rdfs:label :spatialLocationOf ;
+	rdfs:domain dul:SpaceRegion ;
+	rdfs:range dul:PhysicalObject ;
+	rdfs:subPropertyOf dul:isLocationOf ;
+	dc:identifier "is spatial location of@en"^^xsd:string ;
+	dc:description "Analytical location holding between physical endurants and spatial regions."^^xsd:string ;
+	rdfs:seeAlso src:spatial-location-of .

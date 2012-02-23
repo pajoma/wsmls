@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns="http://purl.org/ifgi/dulSpatial#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:dul="http://purl.org/ifgi/dul#"
+	xmlns:src="http://www.loa-cnr.it/ontologies/SpatialRelations.owl#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+<rdf:Description rdf:nodeID="node16mkr2b3jx1">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<rdfs:label>DUL_SpatialRelations</rdfs:label>
+	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
+	<owl:imports rdf:resource="http://purl.org/ifgi/dul#"/>
+	<dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">p.maue (IFGI)</dc:creator>
+	<dc:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IfGI, University of Muenster</dc:publisher>
+	<dc:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Foundational Ontology</dc:type>
+	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dolce Ultra Light Ontology (Spatial Relations)</dc:title>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Ontology of spatial relations, extending the location relations from DOLCE Ultra Lite. OWL engineering by Aldo Gangemi. WSML Translation by Patrick Maué</dc:description>
+	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://wiki.loa-cnr.it/index.php/LoaWiki:Spatial</dc:source>
+	<dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dolce, , dul, foundational, module, spatial</dc:subject>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/dulSpatial#approximateLocation">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/dulSpatial#approximateLocation"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Entity"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Entity"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#hasLocation"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has approximate location@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A spatial location relation holding between any two entities but regions. It assumes a mereotopological association (part, connection, overlaps, etc.) between shared spatial regions.</dc:description>
+	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/SpatialRelations.owl#approximate-location"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/dulSpatial#approximateLocationOf">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/dulSpatial#approximateLocationOf"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Entity"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Entity"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#isLocationOf"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is approximate location of@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A spatial location relation holding between any two entities but regions. It assumes a mereotopological association (part, connection, overlaps, etc.) between shared spatial regions.</dc:description>
+	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/SpatialRelations.owl#approximate-location-of"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/dulSpatial#descriptivePlace">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/dulSpatial#descriptivePlace"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#PhysicalObject"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Place"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#hasLocation"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has descriptive place@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Approximate location of an endurant in a non-physical one. It assumes a shared region. AKA fiat-place.</dc:description>
+	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/SpatialRelations.owl#descriptive-place"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/dulSpatial#descriptivePlaceOf">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/dulSpatial#descriptivePlaceOf"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Place"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#PhysicalObject"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#isLocationOf"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is descriptive place of@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Approximate location of an endurant in a non-physical one. It assumes a shared region.AKA fiat-place.</dc:description>
+	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/SpatialRelations.owl#descriptive-place-of"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/dulSpatial#participantPlace">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/dulSpatial#participantPlace"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Event"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#PhysicalPlace"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dulSpatial#approximate_location"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has participant place@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The place of a perdurant as provided by a reference region at which the spatial quality of a certain endurant is q-located.</dc:description>
+	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/SpatialRelations.owl#participant-place"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/dulSpatial#participantPlaceOf">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/dulSpatial#participantPlaceOf"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#PhysicalPlace"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Event"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dulSpatial#approximate_location_of"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is participant place of@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The place of a perdurant as provided by a reference region at which the spatial quality of a certain endurant is q-located.</dc:description>
+	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/SpatialRelations.owl#participant-place-of"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/dulSpatial#descriptiveOrigin">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/dulSpatial#descriptiveOrigin"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#PhysicalObject"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Place"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dulSpatial#descriptive_place"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has descriptive origin@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Original location of an endurant in a non-physical one. It assumes a shared region between the first and the depend-on of the second (see descriptive place).</dc:description>
+	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/SpatialRelations.owl#descriptive-origin"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/dulSpatial#descriptiveOriginOf">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/dulSpatial#descriptiveOriginOf"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Place"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#PhysicalObject"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dulSpatial#descriptive_place_of"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is descriptive origin of@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Original location of an endurant in a non-physical one. It assumes a shared region between the first and the depend-on of the second (see descriptive place).</dc:description>
+	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/SpatialRelations.owl#descriptive-origin-of"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/dulSpatial#place">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/dulSpatial#place"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#PhysicalObject"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#PhysicalPlace"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dulSpatial#approximate_location"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has place@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relation of approximate location holding between any endurant and physical endurants. It assumes a shared physical region. Sharedness can be any mereotopological association, but no analytical definition can be done in OWL due to the lack of role value maps.</dc:description>
+	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/SpatialRelations.owl#place"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/dulSpatial#placeOf">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/dulSpatial#placeOf"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#PhysicalPlace"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#PhysicalObject"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dulSpatial#approximate_location_of"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is place of@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relation of approximate location holding between any endurant and physical endurants. It assumes a shared physical region. Sharedness can be any mereotopological association, but no analytical definition can be done in OWL due to the lack of role value maps.</dc:description>
+	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/SpatialRelations.owl#place-of"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/dulSpatial#materialPlace">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/dulSpatial#materialPlace"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#PhysicalObject"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#PhysicalPlace"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dulSpatial#place"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has material place@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relation of approximate location holding for physical endurants. It assumes a physical region that is shared by two physical endurants. Sharedness can be any mereotopological association, but no analytical definition can be done in OWL due to the lack of role value maps.</dc:description>
+	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/SpatialRelations.owl#place-of"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/dulSpatial#materialPlaceOf">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/dulSpatial#materialPlaceOf"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#PhysicalPlace"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#PhysicalObject"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dulSpatial#place_of"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is material place of@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relation of approximate location holding for physical endurants. It assumes a physical region that is shared by two physical endurants. Sharedness can be any mereotopological association, but no analytical definition can be done in OWL due to the lack of role value maps.</dc:description>
+	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/SpatialRelations.owl#material-place-of"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/dulSpatial#origin">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/dulSpatial#origin"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#PhysicalObject"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#PhysicalPlace"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dulSpatial#material_place"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has origin@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The physical 'origin' of a physical endurant in the space region of the spatial quality of another physical endurant.</dc:description>
+	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/SpatialRelations.owl#origin"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/dulSpatial#originOf">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/dulSpatial#originOf"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#PhysicalPlace"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#PhysicalObject"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dulSpatial#material_place_of"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is origin of@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The physical 'origin' of a physical endurant in the space region of the spatial quality of another physical endurant.</dc:description>
+	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/SpatialRelations.owl#origin-of"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/dulSpatial#p_spatialLocation">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/dulSpatial#p_spatialLocation"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Event"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#SpaceRegion"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#hasLocation"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has spatial location@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Analytical indirect location holding between perdurants and space regions.</dc:description>
+	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/SpatialRelations.owl#p-spatial-location"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/dulSpatial#p_spatialLocationOf">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/dulSpatial#p_spatialLocationOf"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#SpaceRegion"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Event"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#isLocationOf"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is spatial location of@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Analytical indirect location holding between perdurants and space regions.</dc:description>
+	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/SpatialRelations.owl#p-spatial-location-of"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/dulSpatial#spatialLocation">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/dulSpatial#spatialLocation"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#PhysicalObject"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#SpaceRegion"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#hasLocation"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has spatial location@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Analytical location holding between physical endurants and spatial regions.</dc:description>
+	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/SpatialRelations.owl#spatial-location-of"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/dulSpatial#spatialLocationOf">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label rdf:resource="http://purl.org/ifgi/dulSpatial#spatialLocationOf"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#SpaceRegion"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#PhysicalObject"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#isLocationOf"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is spatial location of@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Analytical location holding between physical endurants and spatial regions.</dc:description>
+	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/SpatialRelations.owl#spatial-location-of"/>
+</rdf:Description>
+
+</rdf:RDF>

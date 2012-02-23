@@ -6,7 +6,7 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix ptrn: <http://purl.org/ifgi/patterns/system#> .
 
-_:node16m5gl4c1x98 a owl:Ontology ;
+_:node16mkr2b3jx10 a owl:Ontology ;
 	rdfs:label "geographic_systems" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/patterns/system#> ;
@@ -16,18 +16,18 @@ _:node16m5gl4c1x98 a owl:Ontology ;
 	dc:rights "http://creativecommons.org/licenses/by/3.0/"^^xsd:string ;
 	dc:type "Domain Ontology"^^xsd:string ;
 	dc:description "A generic ontology suitable to describe objects and events in the geographic space, e.g. weather, forests, mountains, rivers, snow, ..."^^xsd:string ;
-	dc:title "Geographic Space Ontology"^^xsd:string ;
+	dc:title "Geographic Systems Ontology"^^xsd:string ;
 	dc:subject "Geography"^^xsd:string .
 
-:geographic_system a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/geosystems#geographic_system" ;
+:geographical_system a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geosystems#geographical_system" ;
 	rdfs:subClassOf ptrn:System ;
 	dc:identifier "System, geographisch@de"^^xsd:string , "geographical system@en"^^xsd:string ;
 	dc:comment "a system in the geographical space"^^xsd:string ;
 	dc:subject "Systems"^^xsd:string .
 
-:geographic_system-surroundedBy rdfs:label "http://purl.org/ifgi/geosystems#surroundedBy" ;
-	rdfs:domain :geographic_system ;
+:geographical_system-surroundedBy rdfs:label "http://purl.org/ifgi/geosystems#surroundedBy" ;
+	rdfs:domain :geographical_system ;
 	dc:identifier "umgeben von@de"^^xsd:string , "sourrounded by@en"^^xsd:string ;
 	dc:description ""^^xsd:string ;
 	dc:source ""^^xsd:string ;

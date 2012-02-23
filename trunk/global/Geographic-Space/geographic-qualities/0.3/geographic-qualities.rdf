@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns="http://purl.org/ifgi/geoqualities#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:geospace="http://purl.org/ifgi/geospace#">
+
+<rdf:Description rdf:nodeID="node16mkr2b3jx5">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<rdfs:label>geographical_qualities</rdfs:label>
+	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
+	<owl:imports rdf:resource="http://purl.org/ifgi/geospace#"/>
+	<dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">p.maue (ifgi)</dc:creator>
+	<dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">e.klien (ifgi), s.schade (ifgi)</dc:contributor>
+	<dc:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(a)IfGI, University of Muenster</dc:publisher>
+	<dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://creativecommons.org/licenses/by/3.0/</dc:rights>
+	<dc:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Domain Ontology</dc:type>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A generic ontology suitable to describe objects and events in the geographic space, e.g. weather, forests, mountains, rivers, snow, ...</dc:description>
+	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geographic Space Ontology</dc:title>
+	<dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geography, Quality</dc:subject>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/geoqualities#aspect">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/geoqualities#aspect</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geospace#geographical_quality"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aspect@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In geography, aspect refers to the horizontal direction to which Slope faces.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/geoqualities#area">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/geoqualities#area</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geospace#geographical_quality"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Area@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The area of a geographic unit.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/geoqualities#altitude">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/geoqualities#altitude</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geospace#geographical_quality"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Altitude@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The height or vertical elevation of a point above a reference surface. Altitude measurements are usually based on a given reference datum, such as mean sea level.</dc:description>
+	<dc:relation rdf:resource="http://en.wikipedia.org/wiki/Altitude"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/geoqualities#elevation">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/geoqualities#elevation</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geospace#geographical_quality"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hoehe@de</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">elevation@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The elevation of a geographic location is its height above a fixed reference point, often the mean sea level</dc:description>
+	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en.wikipedia.org/wiki/Elevation</dc:source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/geoqualities#depth">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/geoqualities#depth</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geospace#geographical_quality"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tiefe@de</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">depth@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The depth of a body is the length measure from a fixed reference point, often the mean sea level, to the ground</dc:description>
+	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en.wikipedia.org/wiki/Elevation</dc:source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/geoqualities#slope">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/geoqualities#slope</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geospace#geographical_quality"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Slope@en</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gefaelle@de</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The degree to which a surface tends upward or downward.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/geoqualities#grade">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/geoqualities#grade</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geospace#geographical_quality"/>
+	<rdfs:seeAlso rdf:resource="http://purl.org/ifgi/geoqualities#slope"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/geoqualities#spatial_extent">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/geoqualities#spatial_extent</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geospace#geographical_quality"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spatial Extent@en</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">raeumliche Ausdehnung@de</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/geoqualities#terrain">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/geoqualities#terrain</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geospace#geographical_quality"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Terrain@en</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gelände@de</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The area of the surface with a distinctive geological character</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/geoqualities#texture">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/geoqualities#texture</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geospace#geographical_quality"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Texture@en</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Textur@de</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
+</rdf:Description>
+
+</rdf:RDF>

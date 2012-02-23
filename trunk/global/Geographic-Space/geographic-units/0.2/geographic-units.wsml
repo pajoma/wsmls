@@ -136,10 +136,3 @@ relation landcover_unit_covers (ofType landcover_unit, ofType geospace#geographi
 		dc#description hasValue "" 
 	endAnnotations
 
-// deprecated
-//relation landcover_unit_particpant_in (ofType landcover_unit, ofType geoevent#ground_movement) subRelationOf dolce#participant_in
-//	annotations
-//		dc#identifier hasValue "participant in@en"
-//		dc#identifier hasValue "teilnehmen an@de"
-//		dc#description hasValue "Deprecated, don't use" 
-//	endAnnotations
