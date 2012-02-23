@@ -1,0 +1,159 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://purl.org/ifgi/geoevents#",
+	dc _"http://purl.org/dc/elements/1.1/",
+    rdfs _"http://www.w3.org/2000/01/rdf-schema#",
+    dul _"http://purl.org/ifgi/dul#",
+    dulSp _"http://purl.org/ifgi/dulSpatial#"
+ }
+
+ontology geographical_events
+
+	annotations
+     	dc#creator hasValue "h.michels (IFGI)"
+		dc#contributor hasValue ""
+		dc#publisher hasValue "(a)IfGI, University of Muenster"
+		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+		dc#type hasValue "Domain Ontology"
+		dc#description hasValue "A generic ontology suitable to describe specific events without human intention in the geographic space, e.g. wind, landslide, ..." 
+		dc#title hasValue "Geographic Space Ontology"	
+		dc#subject hasValue "Geography"			
+    endAnnotations
+	
+	importsOntology {_"http://purl.org/ifgi/dul#", _"http://purl.org/ifgi/dulSpatial#"}
+	
+	concept geographic_event subConceptOf dul#Event
+    	annotations
+			dc#identifier hasValue "geographic event@en"
+			dc#identifier hasValue "natuerliches Phänomen@de"
+			dc#description hasValue "a non-artificial event in the physical sense, and therefore not produced by humans, although it may affect humans (such as pathogens, aging, natural disasters, death)"
+			dc#source hasValue "http://en.wikipedia.org/wiki/Natural_phenomenon"
+		endAnnotations
+		has_start_point ofType point_in_time
+		has_duration ofType time_interval
+		occursIn ofType geospace#geographical_unit
+     
+    concept movement subConceptOf dul#Event
+    	annotations
+			dc#identifier hasValue "movement@en"
+			dc#identifier hasValue "Bewegung@de"
+			dc#description hasValue "a natural event that involves a change in the position or location of something"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endAnnotations
+
+    concept wind subConceptOf geographic_event
+		annotations
+			dc#identifier hasValue "Wind@de"
+			dc#identifier hasValue "wind@en"
+			dc#description hasValue "Moving air caused by differences in pressure. The air moves from an area of high pressure to an area of low pressure."
+			dc#source hasValue "http://en.wikipedia.org/wiki/Wind"
+		endAnnotations
+	
+	
+	concept storm subConceptOf wind
+		annotations
+			dc#identifier hasValue "Sturm@de"
+			dc#identifier hasValue "storm@en"
+			dc#description hasValue "A meteorological definition of a terrestrial storm is a wind measuring 10 or higher on the Beaufort scale. It may be marked by strong wind, hail, thunder and/or lightning (a thunderstorm), heavy precipitation... "
+			dc#source hasValue "http://en.wikipedia.org/wiki/Storm"
+		endAnnotations
+	
+	concept flow subConceptOf movement
+		annotations
+			dc#identifier hasValue "Fliessen@de"
+			dc#identifier hasValue "flow@en"
+			dc#description hasValue "An uninterrupted motion characteristic of fluids (liquids or gases) such as water"
+			dc#source hasValue "http://wordnetweb.princeton.edu"
+		endAnnotations
+	
+	concept river_current subConceptOf flow
+		annotations
+			dc#identifier hasValue "Flussströmung@de"
+			dc#identifier hasValue "river current@en"
+			dc#description hasValue "The steady flow of water in a river influenced by gravity as the water moves downhill to reduce its potential energy."
+			dc#source hasValue "http://en.wikipedia.org/wiki/Current_(stream)"
+		endAnnotations
+	
+	concept sea_current subConceptOf flow
+		annotations
+			dc#identifier hasValue "Meeresströmung@de"
+			dc#identifier hasValue "sea current@en"
+			dc#description hasValue "The steady flow of surface sea water in a prevailing direction."
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endAnnotations
+	
+	concept ground_movement subConceptOf movement
+		annotations
+			dc#identifier hasValue "ground movement@en"
+			dc#identifier hasValue "Bodenbewegung@de"
+			dc#description hasValue "movement of certain parts of the earth's surface"
+			dc#source hasValue "(Henry)"
+		endAnnotations
+		//affects ofType gs#landcover_unit
+
+	concept groundwater_flow subConceptOf flow
+		annotations
+			dc#identifier hasValue "groundwater flow@en"
+			dc#identifier hasValue "Grundwasserströmung@de"
+			dc#description hasValue "part of streamflow that has infiltrated the ground, has entered the phreatic zone, and has been discharged into a stream channel, via springs or seepage water."
+			dc#source hasValue "http://en.wikipedia.org/wiki/Groundwater_flow"
+		endAnnotations
+
+	concept hurricane subConceptOf wind
+		annotations
+			dc#identifier hasValue "hurricane@en"
+			dc#identifier hasValue "Hurrikan@de"
+			dc#description hasValue "a severe tropical cyclone usually with heavy rains and winds moving at 63-136 knots (12 on the Beaufort scale)"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endAnnotations
+	
+	concept earthquake subConceptOf ground_movement
+		annotations
+			dc#identifier hasValue "earthquake@en"
+			dc#identifier hasValue "Erdbeben@de"
+			dc#description hasValue "shaking and vibration at the surface of the earth resulting from underground movement along a fault plane or from volcanic activity"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endAnnotations
+		//causes oftype landslide
+	
+	concept precipitation subConceptOf geographic_event
+		annotations
+			dc#identifier hasValue "precipitation@en"
+			dc#identifier hasValue "Niderschlag@de"
+			dc#description hasValue "the falling to earth of any form of water (rain or snow or hail or sleet or mist)"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endAnnotations
+		//causes ofType {infiltration, flood, erosion}
+		
+	//temporal qualities
+	
+	concept point_in_time subConceptOf dul#Quality
+		annotations
+			dc#identifier hasValue "Zeitpunkt@de"
+			dc#identifier hasValue "point in time@en"
+			dc#description hasValue "An instant of time in a predefined temporal reference system."
+			dc#source hasValue "http://wordnetweb.princeton.edu"
+		endAnnotations
+		
+	concept time_interval subConceptOf dul#Quality
+		annotations
+			dc#identifier hasValue "Zeitraum@de"
+			dc#identifier hasValue "time interval@en"
+			dc#description hasValue "a definite length of time marked off by two instants"
+			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endAnnotations
+	
+	//temporal relations
+	
+	relation has_start_point (ofType geographic_event, ofType point_in_time) subRelationOf dul#hasQuality
+		annotations
+			dc#identifier hasValue "has start point@en"
+			dc#identifier hasValue "hat Startpunkt@de"
+			dc#description hasValue ""
+		endAnnotations
+	
+	relation has_duration (ofType geographic_event, ofType time_interval) subRelationOf dul#hasQuality
+		annotations
+			dc#identifier hasValue "has duration@en"
+			dc#identifier hasValue "hat Dauer@de"
+			dc#description hasValue ""
+		endAnnotations
