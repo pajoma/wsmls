@@ -1,0 +1,147 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://purl.org/ifgi/geounits#", 
+		dc _"http://purl.org/dc/elements/1.1/",
+     	rdfs _"http://www.w3.org/2000/01/rdf-schema#",
+     	dolce _"http://purl.org/ifgi/dolce#",
+     	dolceSpatial _"http://purl.org/ifgi/dolceSpatial#",
+     	geospace _"http://purl.org/ifgi/geospace#",
+     	geoevent _"http://purl.org/ifgi/geoevents#"
+     	}
+
+ontology geographic_units
+     annotations
+     	dc#creator hasValue "p.maue (IFGI)"
+		dc#contributor hasValue "e.klien (IFGI)"
+		dc#publisher hasValue "(a)IfGI, University of Muenster"
+		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+		dc#type hasValue "Domain Ontology"
+		dc#description hasValue "A generic ontology suitable to describe objects and events in the geographic space, e.g. weather, forests, mountains, rivers, snow, ..." 
+		dc#title hasValue "Geographic Space Ontology"	
+		dc#subject hasValue "Geography"			
+     endAnnotations
+	
+	importsOntology {_"http://purl.org/ifgi/dolceSpatial#", _"http://purl.org/ifgi/geospace#", _"http://purl.org/ifgi/geoevents#"}
+
+concept natural_unit subConceptOf geospace#geographical_unit
+	annotations
+		dc#identifier hasValue "Natürliche Einheit@de"
+		dc#identifier hasValue "Natural Unit@en"
+		dc#description hasValue "A geographic unit created naturally" 
+		dc#subject hasValue "Units"	
+	endAnnotations 
+
+concept anthropogenic_unit subConceptOf geospace#geographical_unit
+	annotations
+		dc#identifier hasValue "Vom Menschen erbautes Objekt@de"
+		dc#identifier hasValue "Anthropogenic Unit@en"
+		dc#description hasValue "A geographic unit created by humans" 
+		dc#subject hasValue "Units"	
+	endAnnotations 
+
+
+
+
+/*
+ 	Geomorphology is the study of landforms
+ 	check out: http://en.wikipedia.org/wiki/Landforms
+*/
+concept geomorphological_unit subConceptOf geospace#geographical_unit
+	annotations
+		dc#identifier hasValue "Geomorphologische Einheit@de"
+		dc#identifier hasValue "Geomorphological Unit@en"
+		dc#description hasValue "A landform comprises a geomorphological unit" 
+		dc#subject hasValue "Units"	
+	endAnnotations 
+
+/*
+ Lex Comber et al. (2005). "What is land cover?". Environment and Planning B: Planning and Design (32): 199â€“209.
+ 
+ From GEMET: 
+ Land cover is the physical state of the land surface. It is the combination of vegetation, soil, rock, water and human-made 
+ structures, which make up the earth's landscape. The land cover is the interface between the earth's crust and the atmosphere, 
+ influencing the exchange of energy and matter in the climatic system and biogeochemical cycles. (Source: BRS)
+ 
+
+ */
+concept landcover_unit subConceptOf geospace#geographical_unit
+	annotations
+		dc#identifier hasValue "Einheit der Landbedeckung@de"
+		dc#identifier hasValue "Land Cover Unit@en"
+		dc#description hasValue "Land cover is the physical state of the land surface. Land Cover Units are discernible parts of Land Cover, e.g. the forest or a street"
+		dc#subject hasValue "Units"	 
+	endAnnotations
+//	covers ofType geospace#geographical_unit
+//		annotations
+//			dc#identifier hasValue "cover@en"
+//			dc#identifier hasValue "bedecken@de"
+//			dc#description hasValue "" 
+//		endAnnotations
+//	dolce#participant_in ofType geoevent#ground_movement
+
+
+concept vegetation_community subConceptOf landcover_unit
+	annotations
+		dc#identifier hasValue "Vegetation@de"
+		dc#identifier hasValue "Vegetation@en"
+		dc#description hasValue "The plants of an area considered in general or as communities, but not taxonomically;" 
+		dc#subject hasValue "LandCover"	
+	endAnnotations 
+
+
+
+concept forest subConceptOf vegetation_community
+	annotations
+		dc#identifier hasValue "Wald@de"
+		dc#identifier hasValue "forest@en"
+		comment hasValue "A vegetation community dominated by trees and other woody shrubs, growing close enough together that the tree tops touch or overlap, creating various degrees of shade on the forest floor. It may produce benefits such as timber, recreation, wildlife habitat, etc. (Source: DUNSTE)"
+		dc#subject hasValue "LandCover"
+	endAnnotations 
+	
+/*
+Grassland cover nearly one-fifth of the Earth's land surface. They include 
+savannah, the prairies of North America, and the steppes of Russia and Central Asia. 
+Grassland ecosystems support thousands of different species, above and below the ground, 
+and have a vital part to play maintaining the ecological balance of the world. (Source: WRIGHT)
+*/
+concept grassland subConceptOf vegetation_community
+	annotations
+		dc#identifier hasValue "Gruenland@de"
+		dc#identifier hasValue "grassland@en"
+		comment hasValue "A vegetation community in which grasses are the most conspicuous plants"
+		dc#subject hasValue "LandCover"
+	endAnnotations 
+	
+concept brushwood subConceptOf vegetation_community
+	annotations
+		dc#identifier hasValue "Unterholz@de"
+		dc#identifier hasValue "brushwood@en"
+		comment hasValue "Branches and twigs fallen from trees and shrubs; small trees and shrubs "
+		dc#subject hasValue "LandCover"
+	endAnnotations  
+	
+	
+/* note that a River is not simply a subconcept of the waterbody. A River is a 
+system, and the waterbody is just a (essential) part of it) */
+concept waterbody subConceptOf landcover_unit
+	annotations
+		dc#identifier hasValue "Gewaesser@de"
+		dc#identifier hasValue "water body@en"
+		comment hasValue "any kind of accumulation of water, as oceans, rivers or lakes"
+		dc#subject hasValue "LandCover"
+	endAnnotations 
+	/* dolce#has\-quality impliesType water#VolumeOfWaterbody */
+	
+
+relation landcover_unit_covers (ofType landcover_unit, ofType geospace#geographical_unit)
+	annotations
+		dc#identifier hasValue "cover@en"
+		dc#identifier hasValue "bedecken@de"
+		dc#description hasValue "" 
+	endAnnotations
+
+relation landcover_unit_particpant_in (ofType landcover_unit, ofType geoevent#ground_movement) subRelationOf dolce#participant_in
+	annotations
+		dc#identifier hasValue "participant in@en"
+		dc#identifier hasValue "teilnehmen an@de"
+		dc#description hasValue "" 
+	endAnnotations
