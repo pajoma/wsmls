@@ -18,7 +18,7 @@ ontology geographic_space
 		dc#subject hasValue "Geography"			
      endAnnotations
 	 
-	 importsOntology {_"http://purl.org/ifgi/dolceSpatial#"}
+	 importsOntology {_"http://purl.org/ifgi/dulSpatial#", _"http://purl.org/ifgi/dul#"}
      
 /* a unit does not have to have a precise location */
 concept geographical_unit subConceptOf dul#PhysicalPlace
