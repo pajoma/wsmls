@@ -7,10 +7,10 @@
 @prefix dul: <http://purl.org/ifgi/dul#> .
 @prefix dulSp: <http://purl.org/ifgi/dulSpatial#> .
 
-_:node16mkr2b3jx8 a owl:Ontology ;
+_:node16mnvhi2mx2 a owl:Ontology ;
 	rdfs:label "geographic_space" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
-	owl:imports <http://purl.org/ifgi/dolceSpatial#> ;
+	owl:imports <http://purl.org/ifgi/dulSpatial#> , <http://purl.org/ifgi/dul#> ;
 	dc:creator "p.maue (ifgi)"^^xsd:string ;
 	dc:contributor "e.klien (ifgi), s.schade (ifgi)"^^xsd:string ;
 	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
