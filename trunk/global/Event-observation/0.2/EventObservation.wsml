@@ -4,7 +4,7 @@ namespace { _"http://purl.org/ifgi/event-observation#",
 		dc _"http://purl.org/dc/elements/1.1/",
 		ssn _"http://purl.org/ifgi/ssn#",
 		dul _"http://purl.org/ifgi/dul#",
-		dolceSpatial _"http://purl.org/ifgi/dulSpatial#"
+		dulSpatial _"http://purl.org/ifgi/dulSpatial#"
  }
  
 

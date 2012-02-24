@@ -6,12 +6,12 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix ssn: <http://purl.org/ifgi/ssn#> .
 @prefix dul: <http://purl.org/ifgi/dul#> .
-@prefix dolceSpatial: <http://purl.org/ifgi/dolceSpatial#> .
+@prefix dulSpatial: <http://purl.org/ifgi/dulSpatial#> .
 
-_:node16miv7spmx18 a owl:Ontology ;
+_:node16mna16nsx2 a owl:Ontology ;
 	rdfs:label "EventObservation" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
-	owl:imports <http://purl.org/ifgi/dul#> , <http://purl.org/ifgi/ssn#> , <http://purl.org/ifgi/dolceSpatial> ;
+	owl:imports <http://purl.org/ifgi/dul#> , <http://purl.org/ifgi/ssn#> , <http://purl.org/ifgi/dulSpatial> ;
 	dc:title "Event-observation Ontology"^^xsd:string ;
 	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
 	dc:rights "http://creativecommons.org/licenses/by/3.0/"^^xsd:string ;
@@ -24,18 +24,21 @@ _:node16miv7spmx18 a owl:Ontology ;
 	dc:identifier "event processing agent@en"^^xsd:string ;
 	dc:description "An event processing agent is a software entity that processes events. In our case it looks for specific situations defined as rules or event patterns in time-series of observations previously converted to time-series of events."^^xsd:string .
 
-_:node16miv7spmx19 rdfs:label "http://purl.org/ifgi/ssn#observes" ;
+:EventProcessingAgent-observes rdfs:label "http://purl.org/ifgi/ssn#observes" ;
 	rdfs:domain :EventProcessingAgent ;
+	rdfs:subPropertyOf ssn:observes ;
 	a rdf:Property ;
 	rdfs:range ssn:Property .
 
-_:node16miv7spmx20 rdfs:label "http://purl.org/ifgi/ssn#implements" ;
+:EventProcessingAgent-implements rdfs:label "http://purl.org/ifgi/ssn#implements" ;
 	rdfs:domain :EventProcessingAgent ;
+	rdfs:subPropertyOf ssn:implements ;
 	a rdf:Property ;
 	rdfs:range :EventDetectionProcedure .
 
-_:node16miv7spmx21 rdfs:label "http://purl.org/ifgi/ssn#detects" ;
+:EventProcessingAgent-detects rdfs:label "http://purl.org/ifgi/ssn#detects" ;
 	rdfs:domain :EventProcessingAgent ;
+	rdfs:subPropertyOf ssn:detects ;
 	a rdf:Property ;
 	rdfs:range ssn:Stimulus .
 
@@ -45,48 +48,56 @@ _:node16miv7spmx21 rdfs:label "http://purl.org/ifgi/ssn#detects" ;
 	dc:identifier "event observation@en"^^xsd:string ;
 	dc:description "Observation of a situation (subjective view of an event)."^^xsd:string .
 
-_:node16miv7spmx22 rdfs:label "http://purl.org/ifgi/event-observation#observedAt" ;
+:EventObservation-observedAt rdfs:label "http://purl.org/ifgi/event-observation#observedAt" ;
 	rdfs:domain :EventObservation ;
 	a rdf:Property ;
 	rdfs:range dul:SpaceRegion .
 
-_:node16miv7spmx23 rdfs:label "http://purl.org/ifgi/ssn#observationSamplingTime" ;
+:EventObservation-observationSamplingTime rdfs:label "http://purl.org/ifgi/ssn#observationSamplingTime" ;
 	rdfs:domain :EventObservation ;
+	rdfs:subPropertyOf ssn:observationSamplingTime ;
 	a rdf:Property ;
 	rdfs:range xsd:nonNegativeInteger .
 
-_:node16miv7spmx24 rdfs:label "http://purl.org/ifgi/ssn#sensingMethodUsed" ;
+:EventObservation-sensingMethodUsed rdfs:label "http://purl.org/ifgi/ssn#sensingMethodUsed" ;
 	rdfs:domain :EventObservation ;
+	rdfs:subPropertyOf ssn:sensingMethodUsed ;
 	a rdf:Property ;
 	rdfs:range :EventDetectionProcedure .
 
-_:node16miv7spmx25 rdfs:label "http://purl.org/ifgi/dul#satisfies" ;
+:EventObservation-satisfies rdfs:label "http://purl.org/ifgi/dul#satisfies" ;
 	rdfs:domain :EventObservation ;
+	rdfs:subPropertyOf dul:satisfies ;
 	a rdf:Property ;
 	rdfs:range :EventObservationDescription .
 
-_:node16miv7spmx26 rdfs:label "http://purl.org/ifgi/ssn#observedProperty" ;
+:EventObservation-observedProperty rdfs:label "http://purl.org/ifgi/ssn#observedProperty" ;
 	rdfs:domain :EventObservation ;
+	rdfs:subPropertyOf ssn:observedProperty ;
 	a rdf:Property ;
 	rdfs:range ssn:Property .
 
-_:node16miv7spmx27 rdfs:label "http://purl.org/ifgi/ssn#featureOfInterest" ;
+:EventObservation-featureOfInterest rdfs:label "http://purl.org/ifgi/ssn#featureOfInterest" ;
 	rdfs:domain :EventObservation ;
+	rdfs:subPropertyOf ssn:featureOfInterest ;
 	a rdf:Property ;
 	rdfs:range ssn:FeatureOfInterest .
 
-_:node16miv7spmx28 rdfs:label "http://purl.org/ifgi/ssn#observedBy" ;
+:EventObservation-observedBy rdfs:label "http://purl.org/ifgi/ssn#observedBy" ;
 	rdfs:domain :EventObservation ;
+	rdfs:subPropertyOf ssn:observedBy ;
 	a rdf:Property ;
 	rdfs:range :EventProcessingAgent .
 
-_:node16miv7spmx29 rdfs:label "http://purl.org/ifgi/ssn#includesEvent" ;
+:EventObservation-includesEvent rdfs:label "http://purl.org/ifgi/ssn#includesEvent" ;
 	rdfs:domain :EventObservation ;
+	rdfs:subPropertyOf ssn:includesEvent ;
 	a rdf:Property ;
 	rdfs:range ssn:Stimulus .
 
-_:node16miv7spmx30 rdfs:label "http://purl.org/ifgi/ssn#observationResult" ;
+:EventObservation-observationResult rdfs:label "http://purl.org/ifgi/ssn#observationResult" ;
 	rdfs:domain :EventObservation ;
+	rdfs:subPropertyOf ssn:observationResult ;
 	a rdf:Property ;
 	rdfs:range :EventProcessingAgentOutput .
 
@@ -108,8 +119,9 @@ _:node16miv7spmx30 rdfs:label "http://purl.org/ifgi/ssn#observationResult" ;
 	dc:identifier "event observation type@en"^^xsd:string ;
 	dc:description "Type of the observed situation."^^xsd:string .
 
-_:node16miv7spmx31 rdfs:label "http://purl.org/ifgi/dul#isDefinedIn" ;
+:EventObservationType-isDefinedIn rdfs:label "http://purl.org/ifgi/dul#isDefinedIn" ;
 	rdfs:domain :EventObservationType ;
+	rdfs:subPropertyOf dul:isDefinedIn ;
 	a rdf:Property ;
 	rdfs:range :EventObservationDescription .
 
@@ -119,13 +131,15 @@ _:node16miv7spmx31 rdfs:label "http://purl.org/ifgi/dul#isDefinedIn" ;
 	dc:identifier "event processing agent output@en"^^xsd:string ;
 	dc:description "Output."^^xsd:string .
 
-_:node16miv7spmx32 rdfs:label "http://purl.org/ifgi/ssn#hasValue" ;
+:EventProcessingAgentOutput-hasValue rdfs:label "http://purl.org/ifgi/ssn#hasValue" ;
 	rdfs:domain :EventProcessingAgentOutput ;
+	rdfs:subPropertyOf ssn:hasValue ;
 	a rdf:Property ;
 	rdfs:range :EventObservationValue .
 
-_:node16miv7spmx33 rdfs:label "http://purl.org/ifgi/ssn#isProducedBy" ;
+:EventProcessingAgentOutput-isProducedBy rdfs:label "http://purl.org/ifgi/ssn#isProducedBy" ;
 	rdfs:domain :EventProcessingAgentOutput ;
+	rdfs:subPropertyOf ssn:isProducedBy ;
 	a rdf:Property ;
 	rdfs:range :EventProcessingAgent .
 
@@ -135,19 +149,21 @@ _:node16miv7spmx33 rdfs:label "http://purl.org/ifgi/ssn#isProducedBy" ;
 	dc:identifier "event observation value@en"^^xsd:string ;
 	dc:description "Value of the event observation pointing to the type of the situation observed."^^xsd:string .
 
-_:node16miv7spmx34 rdfs:label "http://purl.org/ifgi/event-observation#eventObservationType" ;
+:EventObservationValue-eventObservationType rdfs:label "http://purl.org/ifgi/event-observation#eventObservationType" ;
 	rdfs:domain :EventObservationValue ;
 	a rdf:Property ;
 	rdfs:range :EventObservationType .
 
 :observedAt a rdf:Property ;
+	rdfs:label :observedAt ;
 	rdfs:domain :EventObservation ;
 	rdfs:range dul:SpaceRegion ;
-	rdfs:subPropertyOf dolceSpatial:p_spatial_location ;
+	rdfs:subPropertyOf dulSpatial:p_spatial_location ;
 	dc:identifier "observed at@en"^^xsd:string ;
 	dc:description "A relation between an observed situation (perdurant) and a spatial region that can be a point, a place, or a geometry."^^xsd:string .
 
 :eventObservationType a rdf:Property ;
+	rdfs:label :eventObservationType ;
 	rdfs:domain :EventObservationValue ;
 	rdfs:range :EventObservationType ;
 	dc:identifier "event observation type@en"^^xsd:string ;
