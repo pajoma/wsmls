@@ -6,12 +6,11 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix ssn: <http://purl.org/ifgi/ssn#> .
 @prefix dul: <http://purl.org/ifgi/dul#> .
-@prefix dulSpatial: <http://purl.org/ifgi/dulSpatial#> .
 
-_:node16mna16nsx2 a owl:Ontology ;
+_:node16n1if2pdx2 a owl:Ontology ;
 	rdfs:label "EventObservation" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
-	owl:imports <http://purl.org/ifgi/dul#> , <http://purl.org/ifgi/ssn#> , <http://purl.org/ifgi/dulSpatial> ;
+	owl:imports <http://purl.org/ifgi/dul#> , <http://purl.org/ifgi/ssn#> ;
 	dc:title "Event-observation Ontology"^^xsd:string ;
 	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
 	dc:rights "http://creativecommons.org/licenses/by/3.0/"^^xsd:string ;
@@ -51,13 +50,7 @@ _:node16mna16nsx2 a owl:Ontology ;
 :EventObservation-observedAt rdfs:label "http://purl.org/ifgi/event-observation#observedAt" ;
 	rdfs:domain :EventObservation ;
 	a rdf:Property ;
-	rdfs:range dul:SpaceRegion .
-
-:EventObservation-observationSamplingTime rdfs:label "http://purl.org/ifgi/ssn#observationSamplingTime" ;
-	rdfs:domain :EventObservation ;
-	rdfs:subPropertyOf ssn:observationSamplingTime ;
-	a rdf:Property ;
-	rdfs:range xsd:nonNegativeInteger .
+	rdfs:range dul:SpatioTemporalRegion .
 
 :EventObservation-sensingMethodUsed rdfs:label "http://purl.org/ifgi/ssn#sensingMethodUsed" ;
 	rdfs:domain :EventObservation ;
@@ -76,12 +69,6 @@ _:node16mna16nsx2 a owl:Ontology ;
 	rdfs:subPropertyOf ssn:observedProperty ;
 	a rdf:Property ;
 	rdfs:range ssn:Property .
-
-:EventObservation-featureOfInterest rdfs:label "http://purl.org/ifgi/ssn#featureOfInterest" ;
-	rdfs:domain :EventObservation ;
-	rdfs:subPropertyOf ssn:featureOfInterest ;
-	a rdf:Property ;
-	rdfs:range ssn:FeatureOfInterest .
 
 :EventObservation-observedBy rdfs:label "http://purl.org/ifgi/ssn#observedBy" ;
 	rdfs:domain :EventObservation ;
@@ -157,10 +144,9 @@ _:node16mna16nsx2 a owl:Ontology ;
 :observedAt a rdf:Property ;
 	rdfs:label :observedAt ;
 	rdfs:domain :EventObservation ;
-	rdfs:range dul:SpaceRegion ;
-	rdfs:subPropertyOf dulSpatial:p_spatial_location ;
+	rdfs:range dul:SpatioTemporalRegion ;
 	dc:identifier "observed at@en"^^xsd:string ;
-	dc:description "A relation between an observed situation (perdurant) and a spatial region that can be a point, a place, or a geometry."^^xsd:string .
+	dc:description "A relation between an observed situation (perdurant) and a spatio-temporal region."^^xsd:string .
 
 :eventObservationType a rdf:Property ;
 	rdfs:label :eventObservationType ;

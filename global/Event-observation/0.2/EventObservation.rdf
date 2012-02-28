@@ -7,16 +7,14 @@
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns:ssn="http://purl.org/ifgi/ssn#"
-	xmlns:dul="http://purl.org/ifgi/dul#"
-	xmlns:dulSpatial="http://purl.org/ifgi/dulSpatial#">
+	xmlns:dul="http://purl.org/ifgi/dul#">
 
-<rdf:Description rdf:nodeID="node16mna16nsx1">
+<rdf:Description rdf:nodeID="node16n1if2pdx1">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>EventObservation</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
 	<owl:imports rdf:resource="http://purl.org/ifgi/dul#"/>
 	<owl:imports rdf:resource="http://purl.org/ifgi/ssn#"/>
-	<owl:imports rdf:resource="http://purl.org/ifgi/dulSpatial"/>
 	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Event-observation Ontology</dc:title>
 	<dc:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(a)IfGI, University of Muenster</dc:publisher>
 	<dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://creativecommons.org/licenses/by/3.0/</dc:rights>
@@ -68,15 +66,7 @@
 	<rdfs:label>http://purl.org/ifgi/event-observation#observedAt</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/event-observation#EventObservation"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#SpaceRegion"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://purl.org/ifgi/event-observation#EventObservation-observationSamplingTime">
-	<rdfs:label>http://purl.org/ifgi/ssn#observationSamplingTime</rdfs:label>
-	<rdfs:domain rdf:resource="http://purl.org/ifgi/event-observation#EventObservation"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/ssn#observationSamplingTime"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#SpatioTemporalRegion"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/event-observation#EventObservation-sensingMethodUsed">
@@ -101,14 +91,6 @@
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/ssn#observedProperty"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#Property"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://purl.org/ifgi/event-observation#EventObservation-featureOfInterest">
-	<rdfs:label>http://purl.org/ifgi/ssn#featureOfInterest</rdfs:label>
-	<rdfs:domain rdf:resource="http://purl.org/ifgi/event-observation#EventObservation"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/ssn#featureOfInterest"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#FeatureOfInterest"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/event-observation#EventObservation-observedBy">
@@ -210,10 +192,9 @@
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label rdf:resource="http://purl.org/ifgi/event-observation#observedAt"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/event-observation#EventObservation"/>
-	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#SpaceRegion"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dulSpatial#p_spatial_location"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#SpatioTemporalRegion"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">observed at@en</dc:identifier>
-	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relation between an observed situation (perdurant) and a spatial region that can be a point, a place, or a geometry.</dc:description>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relation between an observed situation (perdurant) and a spatio-temporal region.</dc:description>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/event-observation#eventObservationType">
