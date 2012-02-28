@@ -3,97 +3,93 @@ namespace { _"http://purl.org/ifgi/event-observation#",
  		xsd _"http://www.w3.org/2001/XMLSchema#",
 		dc _"http://purl.org/dc/elements/1.1/",
 		ssn _"http://purl.org/ifgi/ssn#",
-		dul _"http://purl.org/ifgi/dul#",
-		dulSpatial _"http://purl.org/ifgi/dulSpatial#"
+		dul _"http://purl.org/ifgi/dul#"
  }
  
 
 ontology EventObservation
-	nfp
+	annotations
 		dc#title hasValue "Event-observation Ontology"
 		dc#publisher hasValue "(a)IfGI, University of Muenster"
 		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
 		dc#description hasValue "Extension of the SSN model that allows to represent occurrences inferred from Event Processing of observations"
 		dc#creator hasValue "Alejandro Llaves"
-	endnfp
+	endAnnotations
 	
 	importsOntology {
 		_"http://purl.org/ifgi/dul#",
-		_"http://purl.org/ifgi/ssn#",
-		_"http://purl.org/ifgi/dulSpatial"
+		_"http://purl.org/ifgi/ssn#"
 	}
 	
 	concept EventProcessingAgent subConceptOf ssn#Sensor
-		nfp
+		annotations
 			dc#identifier hasValue "event processing agent@en"
 			dc#description hasValue "An event processing agent is a software entity that processes events. In our case it looks 
 			for specific situations defined as rules or event patterns in time-series of observations previously converted to time-series 
 			of events."
-		endnfp
+		endAnnotations
 		ssn#observes ofType ssn#Property
 		ssn#implements ofType EventDetectionProcedure
 		ssn#detects ofType ssn#Stimulus
 		
 	concept EventObservation subConceptOf ssn#Observation
-		nfp
+		annotations
 			dc#identifier hasValue "event observation@en"
 			dc#description hasValue "Observation of a situation (subjective view of an event)."
-		endnfp
-		observedAt ofType dul#SpaceRegion
-		ssn#observationSamplingTime ofType xsd#nonNegativeInteger
+		endAnnotations
+		observedAt ofType dul#SpatioTemporalRegion
 		ssn#sensingMethodUsed ofType EventDetectionProcedure
 		dul#satisfies ofType EventObservationDescription
 		ssn#observedProperty ofType ssn#Property
-		ssn#featureOfInterest ofType ssn#FeatureOfInterest
 		ssn#observedBy ofType EventProcessingAgent
 		ssn#includesEvent ofType ssn#Stimulus
 		ssn#observationResult ofType EventProcessingAgentOutput
 			
 	concept EventDetectionProcedure subConceptOf ssn#Sensing
-		nfp
+		annotations
 			dc#identifier hasValue "event detection procedure@en"
 			dc#description hasValue "Method used to detect a specific situation from observations."
-		endnfp
+		endAnnotations
 			
 	concept EventObservationDescription subConceptOf dul#Description
-		nfp
+		annotations
 			dc#identifier hasValue "event observation description@en"
 			dc#description hasValue "Description of the observed situation."
-		endnfp
+		endAnnotations
 			
 	concept EventObservationType subConceptOf dul#EventType
-		nfp
+		annotations
 			dc#identifier hasValue "event observation type@en"
 			dc#description hasValue "Type of the observed situation."
-		endnfp
+		endAnnotations
 		dul#isDefinedIn ofType EventObservationDescription
 		
 	concept EventProcessingAgentOutput subConceptOf ssn#SensorOutput
-		nfp
+		annotations
 			dc#identifier hasValue "event processing agent output@en"
 			dc#description hasValue "Output."
-		endnfp
+		endAnnotations
 		ssn#hasValue ofType EventObservationValue
 		ssn#isProducedBy ofType EventProcessingAgent
 		
 	concept EventObservationValue subConceptOf ssn#ObservationValue
-		nfp
+		annotations
 			dc#identifier hasValue "event observation value@en"
 			dc#description hasValue "Value of the event observation pointing to the type of the situation observed."
-		endnfp
+		endAnnotations
 		eventObservationType ofType EventObservationType
 	
 
 	// Relations
-	relation observedAt (ofType EventObservation, ofType dul#SpaceRegion) subRelationOf dulSpatial#p_spatial_location
-		nfp
+	relation observedAt (ofType EventObservation, ofType dul#SpatioTemporalRegion)
+		annotations
 			dc#identifier hasValue "observed at@en"
-			dc#description hasValue "A relation between an observed situation (perdurant) and a spatial region that can be a point, a place, or a geometry."
-		endnfp
+			dc#description hasValue "A relation between an observed situation (perdurant) and a spatio-temporal region."
+		endAnnotations
 	
 	relation eventObservationType (ofType EventObservationValue, ofType EventObservationType)
-		nfp
+		annotations
 			dc#identifier hasValue "event observation type@en"
 			dc#description hasValue "The output of the event processing agent (sensor) is the detection of a situation (view of an event) defined by an event observation type."
-		endnfp
+		endAnnotations
 	
