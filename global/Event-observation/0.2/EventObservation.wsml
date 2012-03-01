@@ -3,7 +3,8 @@ namespace { _"http://purl.org/ifgi/event-observation#",
  		xsd _"http://www.w3.org/2001/XMLSchema#",
 		dc _"http://purl.org/dc/elements/1.1/",
 		ssn _"http://purl.org/ifgi/ssn#",
-		dul _"http://purl.org/ifgi/dul#"
+		dul _"http://purl.org/ifgi/dul#",
+		gm _"http://purl.org/ifgi/geomodels#"
  }
  
 
@@ -18,7 +19,8 @@ ontology EventObservation
 	
 	importsOntology {
 		_"http://purl.org/ifgi/dul#",
-		_"http://purl.org/ifgi/ssn#"
+		_"http://purl.org/ifgi/ssn#",
+		_"http://purl.org/ifgi/geomodels#"
 	}
 	
 	concept EventProcessingAgent subConceptOf ssn#Sensor
@@ -45,6 +47,14 @@ ontology EventObservation
 		ssn#includesEvent ofType ssn#Stimulus
 		ssn#observationResult ofType EventProcessingAgentOutput
 			
+	concept EventObservationDescription subConceptOf dul#Description
+		annotations
+			dc#identifier hasValue "event observation description@en"
+			dc#description hasValue "Description of the observed situation."
+		endAnnotations
+		dul#describes ofType EventObservation
+		gm#describedLocation ofType gm#DescribedLocation
+			
 	concept EventDetectionProcedure subConceptOf ssn#Sensing
 		annotations
 			dc#identifier hasValue "event detection procedure@en"
@@ -56,13 +66,6 @@ ontology EventObservation
 			dc#identifier hasValue "event observation rule@en"
 			dc#description hasValue "Rule or pattern used by the Event Processing Agent to detect the corresponding event."
 		endAnnotations		
-			
-	concept EventObservationDescription subConceptOf dul#Description
-		annotations
-			dc#identifier hasValue "event observation description@en"
-			dc#description hasValue "Description of the observed situation."
-		endAnnotations
-		dul#describes ofType EventObservation
 			
 	concept EventObservationType subConceptOf dul#EventType
 		annotations
