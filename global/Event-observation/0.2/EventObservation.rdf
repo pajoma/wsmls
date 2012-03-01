@@ -9,7 +9,7 @@
 	xmlns:ssn="http://purl.org/ifgi/ssn#"
 	xmlns:dul="http://purl.org/ifgi/dul#">
 
-<rdf:Description rdf:nodeID="node16n1if2pdx1">
+<rdf:Description rdf:nodeID="node16n70ss3dx1">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>EventObservation</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -82,7 +82,7 @@
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/event-observation#EventObservation"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#satisfies"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:range rdf:resource="http://purl.org/ifgi/event-observation#EventObservationDescription"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/event-observation#EventObservationRule"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/event-observation#EventObservation-observedProperty">
@@ -125,12 +125,28 @@
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Method used to detect a specific situation from observations.</dc:description>
 </rdf:Description>
 
+<rdf:Description rdf:about="http://purl.org/ifgi/event-observation#EventObservationRule">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/event-observation#EventObservationRule</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dul#Description"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">event observation rule@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rule or pattern used by the Event Processing Agent to detect the corresponding event.</dc:description>
+</rdf:Description>
+
 <rdf:Description rdf:about="http://purl.org/ifgi/event-observation#EventObservationDescription">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/event-observation#EventObservationDescription</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dul#Description"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">event observation description@en</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Description of the observed situation.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/event-observation#EventObservationDescription-describes">
+	<rdfs:label>http://purl.org/ifgi/dul#describes</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/event-observation#EventObservationDescription"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#describes"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/event-observation#EventObservation"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/event-observation#EventObservationType">
@@ -146,7 +162,7 @@
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/event-observation#EventObservationType"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#isDefinedIn"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:range rdf:resource="http://purl.org/ifgi/event-observation#EventObservationDescription"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/event-observation#EventObservationRule"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/event-observation#EventProcessingAgentOutput">

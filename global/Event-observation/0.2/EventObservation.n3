@@ -7,7 +7,7 @@
 @prefix ssn: <http://purl.org/ifgi/ssn#> .
 @prefix dul: <http://purl.org/ifgi/dul#> .
 
-_:node16n1if2pdx2 a owl:Ontology ;
+_:node16n70ss3dx2 a owl:Ontology ;
 	rdfs:label "EventObservation" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/dul#> , <http://purl.org/ifgi/ssn#> ;
@@ -62,7 +62,7 @@ _:node16n1if2pdx2 a owl:Ontology ;
 	rdfs:domain :EventObservation ;
 	rdfs:subPropertyOf dul:satisfies ;
 	a rdf:Property ;
-	rdfs:range :EventObservationDescription .
+	rdfs:range :EventObservationRule .
 
 :EventObservation-observedProperty rdfs:label "http://purl.org/ifgi/ssn#observedProperty" ;
 	rdfs:domain :EventObservation ;
@@ -94,11 +94,23 @@ _:node16n1if2pdx2 a owl:Ontology ;
 	dc:identifier "event detection procedure@en"^^xsd:string ;
 	dc:description "Method used to detect a specific situation from observations."^^xsd:string .
 
+:EventObservationRule a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/event-observation#EventObservationRule" ;
+	rdfs:subClassOf dul:Description ;
+	dc:identifier "event observation rule@en"^^xsd:string ;
+	dc:description "Rule or pattern used by the Event Processing Agent to detect the corresponding event."^^xsd:string .
+
 :EventObservationDescription a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/event-observation#EventObservationDescription" ;
 	rdfs:subClassOf dul:Description ;
 	dc:identifier "event observation description@en"^^xsd:string ;
 	dc:description "Description of the observed situation."^^xsd:string .
+
+:EventObservationDescription-describes rdfs:label "http://purl.org/ifgi/dul#describes" ;
+	rdfs:domain :EventObservationDescription ;
+	rdfs:subPropertyOf dul:describes ;
+	a rdf:Property ;
+	rdfs:range :EventObservation .
 
 :EventObservationType a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/event-observation#EventObservationType" ;
@@ -110,7 +122,7 @@ _:node16n1if2pdx2 a owl:Ontology ;
 	rdfs:domain :EventObservationType ;
 	rdfs:subPropertyOf dul:isDefinedIn ;
 	a rdf:Property ;
-	rdfs:range :EventObservationDescription .
+	rdfs:range :EventObservationRule .
 
 :EventProcessingAgentOutput a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/event-observation#EventProcessingAgentOutput" ;
