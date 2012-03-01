@@ -8,7 +8,7 @@
 @prefix dul: <http://purl.org/ifgi/dul#> .
 @prefix gm: <http://purl.org/ifgi/geomodels#> .
 
-_:node16n79pocbx2 a owl:Ontology ;
+_:node16n7ci77cx2 a owl:Ontology ;
 	rdfs:label "EventObservation" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/dul#> , <http://purl.org/ifgi/ssn#> , <http://purl.org/ifgi/geomodels#> ;
@@ -98,6 +98,13 @@ _:node16n79pocbx2 a owl:Ontology ;
 	a rdf:Property ;
 	rdfs:range :EventProcessingAgentOutput ;
 	rdfs:subPropertyOf ssn:observationResult .
+
+:EventObservation_prop_isClassifiedBy a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/dul#isClassifiedBy" ;
+	rdfs:domain :EventObservation ;
+	a rdf:Property ;
+	rdfs:range :EventObservationType ;
+	rdfs:subPropertyOf dul:isClassifiedBy .
 
 :EventObservationDescription a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/event-observation#EventObservationDescription" ;
