@@ -2,13 +2,14 @@ wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
 namespace { _"http://purl.org/ifgi/geomodels#",
 	dc _"http://purl.org/dc/elements/1.1/",
     rdfs _"http://www.w3.org/2000/01/rdf-schema#",
+    time _"http://www.w3.org/2006/time#",
     dul _"http://purl.org/ifgi/dul#",
     dulSp _"http://purl.org/ifgi/dulSpatial#",
 	geospace _"http://purl.org/ifgi/geospace#", 
 	eo _"http://purl.org/ifgi/event-observation#", 
 	ge _"http://purl.org/ifgi/geoevents#", 
-	ssn _"http://purl.org/ifgi/ssn#"
-
+	ssn _"http://purl.org/ifgi/ssn#",
+	geosparql _"http://purl.org/ifgi/geosparql#"
  }
 
 ontology geographical_model 
@@ -16,17 +17,13 @@ ontology geographical_model
 	importsOntology {
 		_"http://purl.org/ifgi/event-observation#", 
 		_"http://purl.org/ifgi/geoevents#",
-		_"http://purl.org/ifgi/observation#", 
-		_"http://purl.org/ifgi/ssn#"
-
+		_"http://purl.org/ifgi/ssn#",
+		_"http://purl.org/ifgi/geospace#",
+		_"http://purl.org/ifgi/dulSpatial#",
+		_"http://purl.org/ifgi/dul#",
+		_"http://purl.org/ifgi/geosparql#"	
 	}
 
-
-concept Risk subConceptOf dul#Concept
-	annotations
-		dc#identifier hasValue "Risk@en"
-		dc#identifier hasValue "Risiko@de"
-	endAnnotations
 /*
  axiom linkRiskWithEvent
 	definedBy 
@@ -39,10 +36,39 @@ concept Risk subConceptOf dul#Concept
 		 ?plan[atRisk ?risk]. 
 */	  
 
-
+// Relations
 relation isAffectedBy (ofType dul#Plan, ofType dul#Event)
+	annotations
+		dc#identifier hasValue "is affected by@en"
+	endAnnotations
 
 relation atRisk (ofType dul#Plan, ofType dul#Risk)
+	annotations
+		dc#identifier hasValue "at risk@en"
+	endAnnotations
+
+relation predicts (ofType PredictedEvent, ofType ge#geographical_event)
+	annotations
+		dc#identifier hasValue "predicts@en"
+	endAnnotations
+
+relation isComputedBy (ofType VirtualObservation, ofType ComputationalModel)
+	annotations
+		dc#identifier hasValue "is computed by@en"
+	endAnnotations
+	
+relation describedLocation (ofType dul#Description, ofType DescribedLocation)
+	annotations
+		dc#identifier hasValue "described location@en"
+	endAnnotations
+	
+
+// Concepts
+concept Risk subConceptOf dul#Concept
+	annotations
+		dc#identifier hasValue "Risk@en"
+		dc#identifier hasValue "Risiko@de"
+	endAnnotations
 
 concept Hazard subConceptOf dul#Concept
 	annotations
@@ -50,7 +76,6 @@ concept Hazard subConceptOf dul#Concept
 		dc#identifier hasValue "Gefahr@de"
 		dc#description hasValue "The possibility of an event to happen"
 	endAnnotations
-	hasProbability ofType EventProbability
 
 concept ComputationalModel subConceptOf dul#Workflow 
 	annotations
@@ -109,7 +134,7 @@ concept EventProbability subConceptOf Probability
 		dc#identifier hasValue "Event Probability@en"
 		dc#identifier hasValue "Ereignis Wahrscheinlichkeit@de"
 	endAnnotations
-	isProbabilityOf ofType	ge#geographical_event
+	dul#isQualityOf ofType {ge#geographical_event, Hazard}
 
  
 concept Probability subConceptOf dul#Quality
@@ -117,7 +142,7 @@ concept Probability subConceptOf dul#Quality
 		dc#identifier hasValue "Probability@en"
 		dc#identifier hasValue "Wahrscheinlichkeit@de"
 	endAnnotations
-	isProbabilityOf	ofType dul#Event
+	dul#isQualityOf	ofType dul#Event
 
 	
 concept PredictedEventObservationDescription subConceptOf dul#Description
@@ -125,5 +150,11 @@ concept PredictedEventObservationDescription subConceptOf dul#Description
 		dc#identifier hasValue "Description of Predicted Event Observation@en"
 	endAnnotations
 	dul#describes ofType PredictedObservation
+	describedLocation ofType DescribedLocation
+	
+concept DescribedLocation subConceptOf {geospace#geographical_space_region, geosparql#Geometry, time#TemporalEntity}
+	annotations
+		dc#identifier hasValue "Spatio-temporal location of an event observation."
+	endAnnotations
 
 	 

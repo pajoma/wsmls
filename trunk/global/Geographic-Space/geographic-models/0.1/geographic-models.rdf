@@ -6,21 +6,26 @@
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:time="http://www.w3.org/2006/time#"
 	xmlns:dul="http://purl.org/ifgi/dul#"
 	xmlns:dulSp="http://purl.org/ifgi/dulSpatial#"
 	xmlns:geospace="http://purl.org/ifgi/geospace#"
 	xmlns:eo="http://purl.org/ifgi/event-observation#"
 	xmlns:ge="http://purl.org/ifgi/geoevents#"
-	xmlns:ssn="http://purl.org/ifgi/ssn#">
+	xmlns:ssn="http://purl.org/ifgi/ssn#"
+	xmlns:geosparql="http://purl.org/ifgi/geosparql#">
 
-<rdf:Description rdf:nodeID="node16ml28rubx1">
+<rdf:Description rdf:nodeID="node16n79bd2nx1">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>geographical_model</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
 	<owl:imports rdf:resource="http://purl.org/ifgi/event-observation#"/>
 	<owl:imports rdf:resource="http://purl.org/ifgi/geoevents#"/>
-	<owl:imports rdf:resource="http://purl.org/ifgi/observation#"/>
 	<owl:imports rdf:resource="http://purl.org/ifgi/ssn#"/>
+	<owl:imports rdf:resource="http://purl.org/ifgi/geospace#"/>
+	<owl:imports rdf:resource="http://purl.org/ifgi/dulSpatial#"/>
+	<owl:imports rdf:resource="http://purl.org/ifgi/dul#"/>
+	<owl:imports rdf:resource="http://purl.org/ifgi/geosparql#"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/geomodels#Risk">
@@ -38,13 +43,6 @@
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hazard@en</dc:identifier>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gefahr@de</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The possibility of an event to happen</dc:description>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://purl.org/ifgi/geomodels#Hazard-hasProbability">
-	<rdfs:label>http://purl.org/ifgi/geomodels#hasProbability</rdfs:label>
-	<rdfs:domain rdf:resource="http://purl.org/ifgi/geomodels#Hazard"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:range rdf:resource="http://purl.org/ifgi/geomodels#EventProbability"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/geomodels#ComputationalModel">
@@ -95,24 +93,26 @@
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vorhergesagtes Ereignis@de</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/geomodels#PredictedEvent-predicts">
+<rdf:Description rdf:about="http://purl.org/ifgi/geomodels#PredictedEvent_prop_predicts">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/geomodels#predicts</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/geomodels#PredictedEvent"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/geoevents#geographical_event"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/geomodels#PredictedObservation">
+<rdf:Description rdf:about="http://purl.org/ifgi/geomodels#PredictedEventObservation">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:label>http://purl.org/ifgi/geomodels#PredictedObservation</rdfs:label>
+	<rdfs:label>http://purl.org/ifgi/geomodels#PredictedEventObservation</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geomodels#VirtualObservation"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predicted Observation@en</dc:identifier>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vorhergesagte Beobachtung@de</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/geomodels#PredictedObservation-isComputedBy">
+<rdf:Description rdf:about="http://purl.org/ifgi/geomodels#PredictedEventObservation_prop_isComputedBy">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/geomodels#isComputedBy</rdfs:label>
-	<rdfs:domain rdf:resource="http://purl.org/ifgi/geomodels#PredictedObservation"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/geomodels#PredictedEventObservation"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/geomodels#ForecastModel"/>
 </rdf:Description>
@@ -125,7 +125,8 @@
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Virtuelle Beobachtung@de</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/geomodels#VirtualObservation-isComputedBy">
+<rdf:Description rdf:about="http://purl.org/ifgi/geomodels#VirtualObservation_prop_isComputedBy">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/geomodels#isComputedBy</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/geomodels#VirtualObservation"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -140,11 +141,15 @@
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ereignis Wahrscheinlichkeit@de</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/geomodels#EventProbability-isProbabilityOf">
-	<rdfs:label>http://purl.org/ifgi/geomodels#isProbabilityOf</rdfs:label>
+<rdf:Description rdf:about="http://purl.org/ifgi/geomodels#EventProbability_prop_isQualityOf">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/dul#isQualityOf</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/geomodels#EventProbability"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/geoevents#geographical_event"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/geomodels#Hazard"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#isQualityOf"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/geomodels#Probability">
@@ -155,25 +160,81 @@
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wahrscheinlichkeit@de</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/geomodels#Probability-isProbabilityOf">
-	<rdfs:label>http://purl.org/ifgi/geomodels#isProbabilityOf</rdfs:label>
+<rdf:Description rdf:about="http://purl.org/ifgi/geomodels#Probability_prop_isQualityOf">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/dul#isQualityOf</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/geomodels#Probability"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Event"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#isQualityOf"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/geomodels#PredictedEventObservationDescription">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/geomodels#PredictedEventObservationDescription</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dul#Description"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Description of Predicted Event Observation@en</dc:identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/geomodels#PredictedEventObservationDescription_prop_describes">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/dul#describes</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/geomodels#PredictedEventObservationDescription"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/geomodels#PredictedObservation"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#describes"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/geomodels#PredictedEventObservationDescription_prop_describedLocation">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/geomodels#describedLocation</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/geomodels#PredictedEventObservationDescription"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/geomodels#DescribedLocation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/geomodels#DescribedLocation">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/geomodels#DescribedLocation</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geospace#geographical_space_region"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geosparql#Geometry"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spatio-temporal location of an event observation.</dc:identifier>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/geomodels#isAffectedBy">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/geomodels#isAffectedBy"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Plan"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Event"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is affected by@en</dc:identifier>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/geomodels#atRisk">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/geomodels#atRisk"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Plan"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Risk"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">at risk@en</dc:identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/geomodels#predicts">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/geomodels#PredictedEvent"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/geoevents#geographical_event"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">predicts@en</dc:identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/geomodels#isComputedBy">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/geomodels#VirtualObservation"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/geomodels#ComputationalModel"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is computed by@en</dc:identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/geomodels#describedLocation">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Description"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/geomodels#DescribedLocation"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">described location@en</dc:identifier>
 </rdf:Description>
 
 </rdf:RDF>
