@@ -33,8 +33,12 @@ ontology EventObservation
 			annotations
 				dc#identifier hasValue "event observation description@en"
 			endAnnotations
+			dul#describes ofType EventObservation
 			
 	concept EventObservationType subConceptOf dul#EventType
 			annotations
 				dc#identifier hasValue "event observation type@en"
 			endAnnotations
+
+			
+	

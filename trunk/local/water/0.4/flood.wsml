@@ -9,6 +9,7 @@ namespace { _"http://purl.org/ifgi/water/flood#",
 	 gsy _"http://purl.org/ifgi/geosystems#",
 	 gs _"http://purl.org/ifgi/geospace#",
 	 gu _"http://purl.org/ifgi/geounits#",
+	 evob _"http://purl.org/ifgi/event-observation#", 
 	 ge _"http://purl.org/ifgi/geoevents#"
      }
 
@@ -28,7 +29,9 @@ ontology FloodScenario
 		_"http://purl.org/ifgi/dul#",
 		_"http://purl.org/ifgi/ssn#",
 		_"http://purl.org/ifgi/geospace#",
-		_"http://purl.org/ifgi/geounits#"
+		_"http://purl.org/ifgi/geounits#",		
+		_"http://purl.org/ifgi/event-observation#"
+		
 	}
 
 	// Geographical Units (Features of Interest)
@@ -202,6 +205,81 @@ ontology FloodScenario
 		ssn#observedBy ofType ssn#Sensor
 
 
+		
+		// Event observation types
+	concept WaterLevelChange subConceptOf evob#EventObservationType
+		nfp 
+			dc#identifier hasValue "Water level change@en"
+			dc#description hasValue "Relevant change in the water level of a water body."
+		endnfp
+	
+	concept NormalStageToActionStage subConceptOf WaterLevelChange
+		nfp 
+			dc#identifier hasValue "Normal stage to action stage@en"
+			dc#description hasValue "Transition from normal stage to action stage, the stage which, when reached by a rising stream, 
+			represents the level where the NWS or a partner/user needs to take some type of mitigation action in preparation for possible 
+			significant hydrologic activity."
+			dc#source hasValue "See Action Stage at http://www.weather.gov/glossary/index.php?letter=a"
+		endnfp
+	
+	concept ActionStageToMinorFloodingStage subConceptOf WaterLevelChange
+		nfp 
+			dc#identifier hasValue "Action stage to minor flooding stage@en"
+			dc#description hasValue "Transition from action stage to minor floding stage: minimal or no property damage, but possibly some public threat."
+			dc#source hasValue "See Flood Categories at http://www.weather.gov/glossary/index.php?letter=f"
+		endnfp
+	
+	concept MinorFloodingStageToModerateFloodingStage subConceptOf WaterLevelChange
+		nfp 
+			dc#identifier hasValue "Minor flooding stage to moderate flooding stage@en"
+			dc#description hasValue "Transition from minor flooding stage to moderate flooding stage: some inundation of structures and roads near stream. Some evacuations of people and/or transfer of property to higher elevations."
+			dc#source hasValue "See Flood Categories at http://www.weather.gov/glossary/index.php?letter=f"
+		endnfp
+	
+	concept ModerateFloodingStageToMajorFloodingStage subConceptOf WaterLevelChange
+		nfp 
+			dc#identifier hasValue "Moderate flooding stage to major flooding stage@en"
+			dc#description hasValue "Transition from moderate flooding stage to major flooding stage: extensive inundation of structures and roads. Significant evacuations of people and/or transfer of property to higher elevations."
+			dc#source hasValue "See Flood Categories at http://www.weather.gov/glossary/index.php?letter=f"
+		endnfp
+	
+	concept MajorFloodingStageToModerateFloodingStage subConceptOf WaterLevelChange
+		nfp 
+			dc#identifier hasValue "Major flooding stage to moderate flooding stage@en"
+			dc#description hasValue "Transition from major flooding stage to moderate flooding stage: some inundation of structures and roads near stream. Some evacuations of people and/or transfer of property to higher elevations."
+			dc#source hasValue "See Flood Categories at http://www.weather.gov/glossary/index.php?letter=f"
+		endnfp
+	
+	concept ModerateFloodingStageToMinorFloodingStage subConceptOf WaterLevelChange
+		nfp 
+			dc#identifier hasValue "Moderate flooding stage to minor flooding stage@en"
+			dc#description hasValue "Transition from moderate flooding stage to minor flooding stage: minimal or no property damage, but possibly some public threat."
+			dc#source hasValue "See Flood Categories at http://www.weather.gov/glossary/index.php?letter=f"
+		endnfp
+	
+	concept MinorFloodingStageToActionStage subConceptOf WaterLevelChange
+		nfp 
+			dc#identifier hasValue "Minor flooding stage to action stage@en"
+			dc#description hasValue "Transition from minor flooding stage to action stage, the stage which, when reached by a rising stream, 
+			represents the level where the NWS or a partner/user needs to take some type of mitigation action in preparation for possible 
+			significant hydrologic activity."
+			dc#source hasValue "See Action Stage at http://www.weather.gov/glossary/index.php?letter=a"
+		endnfp
+	
+	concept ActionStageToNormalStage subConceptOf WaterLevelChange
+		nfp 
+			dc#identifier hasValue "Action stage to normal stage@en"
+			dc#description hasValue "Transition from action stage to the normal stage of the corresponding water body."
+		endnfp
+
+	
+	// Geographical events
+	concept Flood subConceptOf ge#geographical_event
+		nfp
+			dc#identifier hasValue "Flood@en"
+			dc#description hasValue "A flood is an overflow of an expanse of water that submerges land."
+			dc#source hasValue "http://en.wikipedia.org/wiki/Flood"
+		endnfp
 
 
 
