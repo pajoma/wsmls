@@ -39,7 +39,7 @@ ontology EventObservation
 		endAnnotations
 		observedAt ofType dul#SpatioTemporalRegion
 		ssn#sensingMethodUsed ofType EventDetectionProcedure
-		dul#satisfies ofType EventObservationDescription
+		dul#satisfies ofType EventObservationRule
 		ssn#observedProperty ofType ssn#Property
 		ssn#observedBy ofType EventProcessingAgent
 		ssn#includesEvent ofType ssn#Stimulus
@@ -51,18 +51,25 @@ ontology EventObservation
 			dc#description hasValue "Method used to detect a specific situation from observations."
 		endAnnotations
 			
+	concept EventObservationRule subConceptOf dul#Description
+		annotations
+			dc#identifier hasValue "event observation rule@en"
+			dc#description hasValue "Rule or pattern used by the Event Processing Agent to detect the corresponding event."
+		endAnnotations		
+			
 	concept EventObservationDescription subConceptOf dul#Description
 		annotations
 			dc#identifier hasValue "event observation description@en"
 			dc#description hasValue "Description of the observed situation."
 		endAnnotations
+		dul#describes ofType EventObservation
 			
 	concept EventObservationType subConceptOf dul#EventType
 		annotations
 			dc#identifier hasValue "event observation type@en"
 			dc#description hasValue "Type of the observed situation."
 		endAnnotations
-		dul#isDefinedIn ofType EventObservationDescription
+		dul#isDefinedIn ofType EventObservationRule
 		
 	concept EventProcessingAgentOutput subConceptOf ssn#SensorOutput
 		annotations
@@ -78,6 +85,7 @@ ontology EventObservation
 			dc#description hasValue "Value of the event observation pointing to the type of the situation observed."
 		endAnnotations
 		eventObservationType ofType EventObservationType
+
 	
 
 	// Relations
@@ -92,4 +100,5 @@ ontology EventObservation
 			dc#identifier hasValue "event observation type@en"
 			dc#description hasValue "The output of the event processing agent (sensor) is the detection of a situation (view of an event) defined by an event observation type."
 		endAnnotations
+		
 	
