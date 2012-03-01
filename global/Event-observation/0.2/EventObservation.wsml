@@ -46,6 +46,7 @@ ontology EventObservation
 		ssn#observedBy ofType EventProcessingAgent
 		ssn#includesEvent ofType ssn#Stimulus
 		ssn#observationResult ofType EventProcessingAgentOutput
+		dul#isClassifiedBy ofType EventObservationType
 			
 	concept EventObservationDescription subConceptOf dul#Description
 		annotations
@@ -103,5 +104,6 @@ ontology EventObservation
 			dc#identifier hasValue "event observation type@en"
 			dc#description hasValue "The output of the event processing agent (sensor) is the detection of a situation (view of an event) defined by an event observation type."
 		endAnnotations
+		
 		
 	
