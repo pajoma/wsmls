@@ -89,7 +89,7 @@ concept PredictedEvent subConceptOf dul#Situation
 	endAnnotations
 	predicts ofType ge#geographical_event
 
-concept PredictedObservation subConceptOf VirtualObservation
+concept PredictedEventObservation subConceptOf VirtualObservation
 	annotations
 		dc#identifier hasValue "Predicted Observation@en"
 		dc#identifier hasValue "Vorhergesagte Beobachtung@de"
@@ -119,5 +119,11 @@ concept Probability subConceptOf dul#Quality
 	endAnnotations
 	isProbabilityOf	ofType dul#Event
 
+	
+concept PredictedEventObservationDescription subConceptOf dul#Description
+	annotations
+		dc#identifier hasValue "Description of Predicted Event Observation@en"
+	endAnnotations
+	dul#describes ofType PredictedObservation
 
 	 
