@@ -149,7 +149,7 @@ concept PredictedEventObservationDescription subConceptOf dul#Description
 	annotations
 		dc#identifier hasValue "Description of Predicted Event Observation@en"
 	endAnnotations
-	dul#describes ofType PredictedObservation
+	dul#describes ofType PredictedEventObservation
 	describedLocation ofType DescribedLocation
 	
 concept DescribedLocation subConceptOf {geospace#geographical_space_region, geosparql#Geometry, time#TemporalEntity}
