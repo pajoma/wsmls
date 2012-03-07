@@ -13,7 +13,7 @@
 @prefix ssn: <http://purl.org/ifgi/ssn#> .
 @prefix geosparql: <http://purl.org/ifgi/geosparql#> .
 
-_:node16n79bd2nx2 a owl:Ontology ;
+_:node16nll2fi3x2 a owl:Ontology ;
 	rdfs:label "geographical_model" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/event-observation#> , <http://purl.org/ifgi/geoevents#> , <http://purl.org/ifgi/ssn#> , <http://purl.org/ifgi/geospace#> , <http://purl.org/ifgi/dulSpatial#> , <http://purl.org/ifgi/dul#> , <http://purl.org/ifgi/geosparql#> .
@@ -76,6 +76,12 @@ _:node16n79bd2nx2 a owl:Ontology ;
 	a rdf:Property ;
 	rdfs:range :ForecastModel .
 
+:PredictedEventObservation_prop_predicts a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/geomodels#predicts" ;
+	rdfs:domain :PredictedEventObservation ;
+	a rdf:Property ;
+	rdfs:range ge:geographical_event .
+
 :VirtualObservation a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/geomodels#VirtualObservation" ;
 	rdfs:subClassOf ssn:Observation ;
@@ -122,7 +128,7 @@ _:node16n79bd2nx2 a owl:Ontology ;
 	rdfs:label "http://purl.org/ifgi/dul#describes" ;
 	rdfs:domain :PredictedEventObservationDescription ;
 	a rdf:Property ;
-	rdfs:range :PredictedObservation ;
+	rdfs:range :PredictedEventObservation ;
 	rdfs:subPropertyOf dul:describes .
 
 :PredictedEventObservationDescription_prop_describedLocation a rdf:Property ;
