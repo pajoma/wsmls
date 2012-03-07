@@ -33,7 +33,7 @@ ontology geographical_events
 		has_duration ofType time_interval
 		occursIn ofType geospace#geographical_unit
      
-    concept movement subConceptOf dul#Event
+    concept movement subConceptOf geographical_event
     	annotations
 			dc#identifier hasValue "movement@en"
 			dc#identifier hasValue "Bewegung@de"

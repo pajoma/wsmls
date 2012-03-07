@@ -8,7 +8,7 @@
 @prefix dulSp: <http://purl.org/ifgi/dulSpatial#> .
 @prefix geospace: <http://purl.org/ifgi/geospace#> .
 
-_:node16ml1r73dx2 a owl:Ontology ;
+_:node16nlm2bg2x2 a owl:Ontology ;
 	rdfs:label "geographical_events" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/dul#> , <http://purl.org/ifgi/dulSpatial#> , <http://purl.org/ifgi/geospace#> ;
@@ -28,24 +28,27 @@ _:node16ml1r73dx2 a owl:Ontology ;
 	dc:description "a non-artificial event in the physical sense, and therefore not produced by humans, although it may affect humans (such as pathogens, aging, natural disasters, death)"^^xsd:string ;
 	dc:source "http://en.wikipedia.org/wiki/Natural_phenomenon"^^xsd:string .
 
-:geographical_event-has_start_point rdfs:label "http://purl.org/ifgi/geoevents#has_start_point" ;
+:geographical_event_prop_has_start_point a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/geoevents#has_start_point" ;
 	rdfs:domain :geographical_event ;
 	a rdf:Property ;
 	rdfs:range :point_in_time .
 
-:geographical_event-has_duration rdfs:label "http://purl.org/ifgi/geoevents#has_duration" ;
+:geographical_event_prop_has_duration a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/geoevents#has_duration" ;
 	rdfs:domain :geographical_event ;
 	a rdf:Property ;
 	rdfs:range :time_interval .
 
-:geographical_event-occursIn rdfs:label "http://purl.org/ifgi/geoevents#occursIn" ;
+:geographical_event_prop_occursIn a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/geoevents#occursIn" ;
 	rdfs:domain :geographical_event ;
 	a rdf:Property ;
 	rdfs:range geospace:geographical_unit .
 
 :movement a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/geoevents#movement" ;
-	rdfs:subClassOf dul:Event ;
+	rdfs:subClassOf :geographical_event ;
 	dc:identifier "movement@en"^^xsd:string , "Bewegung@de"^^xsd:string ;
 	dc:description "a natural event that involves a change in the position or location of something"^^xsd:string ;
 	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
@@ -135,7 +138,6 @@ _:node16ml1r73dx2 a owl:Ontology ;
 	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
 :has_start_point a rdf:Property ;
-	rdfs:label :has_start_point ;
 	rdfs:domain :geographical_event ;
 	rdfs:range :point_in_time ;
 	rdfs:subPropertyOf dul:hasQuality ;
@@ -143,7 +145,6 @@ _:node16ml1r73dx2 a owl:Ontology ;
 	dc:description ""^^xsd:string .
 
 :has_duration a rdf:Property ;
-	rdfs:label :has_duration ;
 	rdfs:domain :geographical_event ;
 	rdfs:range :time_interval ;
 	rdfs:subPropertyOf dul:hasQuality ;
