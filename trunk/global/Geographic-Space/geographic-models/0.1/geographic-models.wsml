@@ -120,6 +120,7 @@ concept PredictedEventObservation subConceptOf VirtualObservation
 		dc#identifier hasValue "Vorhergesagte Beobachtung@de"
 	endAnnotations
 	isComputedBy ofType ForecastModel
+	predicts ofType ge#geographical_event
 
 concept VirtualObservation subConceptOf ssn#Observation
 	annotations
