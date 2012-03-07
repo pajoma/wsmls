@@ -10,7 +10,7 @@ All ontologies of this repository are listed here. Ontologies highlighted green 
 || <font color="#04B404">DOLCE_Lite</font> || <font color="#04B404">http://purl.org/ifgi/dolce</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Dolce/0.2/DOLCE-Lite.rdf</font> ||
 || <font color="#04B404">DOLCE_Ultralite</font> || <font color="#04B404">http://purl.org/ifgi/dul</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/DUL/0.1//DOLCE-Ultralite.rdf</font> ||
 || <font color="#04B404">DOLCE_ExtendedDnS</font> || <font color="#04B404">http://purl.org/ifgi/dolceDnS</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Dolce-Modules/ExtendedDnS/0.2/DOLCE_ExtendedDnS.rdf</font> ||
-|| <font color="#04B404">{{{DOLCE_SpatialRelations}}}</font> || <font color="#04B404">http://purl.org/ifgi/dolceSpatial</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Dolce-Modules/SpatialRelations/0.2/DOLCE_SpatialRelations.rdf</font> ||
+|| <font color="#04B404">DOLCE_SpatialRelations</font> || <font color="#04B404">http://purl.org/ifgi/dolceSpatial</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Dolce-Modules/SpatialRelations/0.2/DOLCE_SpatialRelations.rdf</font> ||
 
 ==== Geographic Space ====
 
@@ -30,6 +30,9 @@ All ontologies of this repository are listed here. Ontologies highlighted green 
 || *Ontology* || *Namespace* || *Location* ||
 || <font color="#04B404">Observation</font> || <font color="#04B404">http://purl.org/ifgi/observation</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Observations/0.3/Observation.rdf</font> ||
 || <font color="#04B404">SSN</font> || <font color="#04B404">http://purl.org/ifgi/ssn</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Observations/0.3/SSN.rdf</font> ||
+|| <font color="#04B404">Event-Observation</font> || <font color="#04B404">http://purl.org/ifgi/event-observation</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Event-observation/0.2/EventObservation.rdf</font> ||
+
+
 
 ==== Patterns ====
 
