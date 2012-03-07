@@ -39,7 +39,7 @@ All ontologies of this repository are listed here. Ontologies highlighted green 
 || *Ontology* || *Namespace* || *Location* ||
 || <font color="#04B404">Landslide</font> || <font color="#04B404">http://purl.org/ifgi/landslide</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/local/landslide/0.2/landslide.rdf</font> ||
 || <font color="#04B404">!NoiseAll</font> || <font color="#04B404">http://purl.org/ifgi/noise</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/local/noise/noiseall.rdf</font> ||
-|| <font color="#04B404">!OilSpill</font> || <font color="#04B404">http://purl.org/ifgi/oilspill</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/local/oilspill/0.1/oilspill.rdf</font> ||
+|| <font color="#04B404">!OilSpill</font> || <font color="#04B404">http://purl.org/ifgi/oilspill</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/local/oilspill/0.3/oilspill.rdf</font> ||
 || <font color="#04B404">!UrbanizedAreaFeature</font> || <font color="#04B404">http://purl.org/ifgi/suc/urbanizedarea</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/local/simpleusecase/urbanizedareafeature.rdf</font> ||
 || <font color="#04B404">!WaterLevelObservation</font> || <font color="#04B404">http://purl.org/ifgi/suc/waterlevelobservation</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/local/simpleusecase/waterlevelobservation.rdf</font> ||
 || <font color="#04B404">!RiverModel</font> || <font color="#04B404">http://purl.org/ifgi/rivermodel</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/local/water/0.1/rivermodel.rdf</font> ||
