@@ -12,6 +12,7 @@ All ontologies of this repository are listed here. Ontologies highlighted green 
 || <font color="#04B404">DOLCE_ExtendedDnS</font> || <font color="#04B404">http://purl.org/ifgi/dolceDnS</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Dolce-Modules/ExtendedDnS/0.2/DOLCE_ExtendedDnS.rdf</font> ||
 || <font color="#04B404">DOLCE_SpatialRelations</font> || <font color="#04B404">http://purl.org/ifgi/dolceSpatial</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Dolce-Modules/SpatialRelations/0.2/DOLCE_SpatialRelations.rdf</font> ||
 
+
 ==== Geographic Space ====
 
 || *Ontology* || *Namespace* || *Location* ||
