@@ -1,0 +1,92 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://purl.org/ifgi/time#",
+	xsd _"http://www.w3.org/2001/XMLSchema#",  
+	dc _"http://purl.org/dc/elements/1.1/", 
+	rdfs _"http://www.w3.org/2000/01/rdf-schema#",
+	rdf _"http://www.w3.org/1999/02/22-rdf-syntax-ns"
+ }
+
+ontology GeoSPARQL 
+
+	annotations
+		dc#publisher hasValue "(a)IfGI, University of Muenster"
+		dc#date hasValue "2012-03-15"
+		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+		dc#type hasValue "Ontology"
+		dc#title hasValue "W3C Time Ontology"
+		dc#description hasValue "Taken from the W3C Time ontology"
+		dc#source hasValue "See http://www.w3.org/2006/time#"
+	endAnnotations
+	
+	
+// Classes
+
+concept Instant subConceptOf TemporalEntity
+
+concept Interval subConceptOf TemporalEntity
+
+concept TemporalEntity 
+	hasDurationDescription ofType DurationDescription
+
+concept ProperInterval subConceptOf Interval
+
+concept DurationDescription
+
+concept Year subConceptOf DurationDescription
+
+concept DateTimeInterval subConceptOf ProperInterval
+
+concept DateTimeDescription
+
+// Properties
+
+
+
+relation before (ofType TemporalEntity, ofType TemporalEntity)
+
+relation after (ofType TemporalEntity, ofType TemporalEntity)
+
+relation hasBeginning (ofType TemporalEntity, ofType Instant)
+
+relation hasEnd (ofType TemporalEntity, ofType Instant)
+
+relation inside (ofType Interval, ofType Instant)
+
+relation intervalEquals (ofType ProperInterval, ofType ProperInterval) 
+
+relation intervalBefore (ofType ProperInterval, ofType ProperInterval) subRelationOf before
+
+relation intervalMeets (ofType ProperInterval, ofType ProperInterval)
+
+relation intervalOverlaps (ofType ProperInterval, ofType ProperInterval)
+
+relation intervalStarts (ofType ProperInterval, ofType ProperInterval)
+
+relation intervalDuring (ofType ProperInterval, ofType ProperInterval)
+
+relation intervalFinishes (ofType ProperInterval, ofType ProperInterval)
+
+relation intervalMetBy (ofType ProperInterval, ofType ProperInterval)
+
+relation intervalOverlappedBy (ofType ProperInterval, ofType ProperInterval)
+
+relation intervalStartedBy (ofType ProperInterval, ofType ProperInterval)
+
+relation intervalFinishedBy (ofType ProperInterval, ofType ProperInterval)
+
+relation intervalContains (ofType ProperInterval, ofType ProperInterval)
+
+relation years (ofType DurationDescription, ofType xsd#decimal)
+
+relation months (ofType DurationDescription, ofType xsd#decimal)
+
+relation weeks (ofType DurationDescription, ofType xsd#decimal)
+
+relation days (ofType DurationDescription, ofType xsd#decimal)
+
+relation hours (ofType DurationDescription, ofType xsd#decimal)
+
+relation minutes (ofType DurationDescription, ofType xsd#decimal)
+
+relation seconds (ofType DurationDescription, ofType xsd#decimal)
+
