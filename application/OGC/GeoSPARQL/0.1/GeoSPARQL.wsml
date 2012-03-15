@@ -6,7 +6,7 @@ namespace { _"http://purl.org/ifgi/geosparql#",
 	rdf _"http://www.w3.org/1999/02/22-rdf-syntax-ns"
  }
 
-ontology GeoSPARQL
+ontology GeoSPARQL 
 
 	annotations
 		dc#publisher hasValue "(a)IfGI, University of Muenster"
@@ -56,9 +56,9 @@ concept MultiLineString subConceptOf MultiCurve
 
 concept MultiPolygon subConceptOf MultiSurface
 
-concept WKTLiteral
+instance WKTLiteral memberOf rdfs#Datatype
 
-concept GMLLiteral subConceptOf rdf#XMLLiteral
+instance GMLLiteral memberOf rdfs#Datatype
 
 
 // Properties

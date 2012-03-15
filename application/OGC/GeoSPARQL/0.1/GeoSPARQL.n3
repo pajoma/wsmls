@@ -5,7 +5,7 @@
 @prefix : <http://purl.org/ifgi/geosparql#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 
-_:node16lent8itx2 a owl:Ontology ;
+_:node16ob255lsx1 a owl:Ontology ;
 	rdfs:label "GeoSPARQL" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
@@ -91,12 +91,9 @@ _:node16lent8itx2 a owl:Ontology ;
 	rdfs:label "http://purl.org/ifgi/geosparql#MultiPolygon" ;
 	rdfs:subClassOf :MultiSurface .
 
-:WKTLiteral a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/geosparql#WKTLiteral" .
+:WKTLiteral a rdfs:Datatype .
 
-:GMLLiteral a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/geosparql#GMLLiteral" ;
-	rdfs:subClassOf rdf:XMLLiteral .
+:GMLLiteral a rdfs:Datatype .
 
 :defaultGeometry a rdf:Property ;
 	rdfs:domain :Feature ;
