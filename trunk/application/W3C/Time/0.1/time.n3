@@ -1,0 +1,149 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://purl.org/ifgi/time#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+_:node16ob6bvolx1 a owl:Ontology ;
+	rdfs:label "GeoSPARQL" ;
+	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
+	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
+	dc:date "2012-03-15"^^xsd:string ;
+	dc:rights "http://creativecommons.org/licenses/by/3.0/"^^xsd:string ;
+	dc:type "Ontology"^^xsd:string ;
+	dc:title "W3C Time Ontology"^^xsd:string ;
+	dc:description "Taken from the W3C Time ontology"^^xsd:string ;
+	dc:source "See http://www.w3.org/2006/time#"^^xsd:string .
+
+:Instant a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/time#Instant" ;
+	rdfs:subClassOf :TemporalEntity .
+
+:Interval a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/time#Interval" ;
+	rdfs:subClassOf :TemporalEntity .
+
+:TemporalEntity a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/time#TemporalEntity" .
+
+:TemporalEntity_prop_hasDurationDescription a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/time#hasDurationDescription" ;
+	rdfs:domain :TemporalEntity ;
+	a rdf:Property ;
+	rdfs:range :DurationDescription .
+
+:ProperInterval a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/time#ProperInterval" ;
+	rdfs:subClassOf :Interval .
+
+:DurationDescription a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/time#DurationDescription" .
+
+:Year a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/time#Year" ;
+	rdfs:subClassOf :DurationDescription .
+
+:DateTimeInterval a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/time#DateTimeInterval" ;
+	rdfs:subClassOf :ProperInterval .
+
+:DateTimeDescription a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/time#DateTimeDescription" .
+
+:before a rdf:Property ;
+	rdfs:domain :TemporalEntity ;
+	rdfs:range :TemporalEntity .
+
+:after a rdf:Property ;
+	rdfs:domain :TemporalEntity ;
+	rdfs:range :TemporalEntity .
+
+:hasBeginning a rdf:Property ;
+	rdfs:domain :TemporalEntity ;
+	rdfs:range :Instant .
+
+:hasEnd a rdf:Property ;
+	rdfs:domain :TemporalEntity ;
+	rdfs:range :Instant .
+
+:inside a rdf:Property ;
+	rdfs:domain :Interval ;
+	rdfs:range :Instant .
+
+:intervalEquals a rdf:Property ;
+	rdfs:domain :ProperInterval ;
+	rdfs:range :ProperInterval .
+
+:intervalBefore a rdf:Property ;
+	rdfs:domain :ProperInterval ;
+	rdfs:range :ProperInterval ;
+	rdfs:subPropertyOf :before .
+
+:intervalMeets a rdf:Property ;
+	rdfs:domain :ProperInterval ;
+	rdfs:range :ProperInterval .
+
+:intervalOverlaps a rdf:Property ;
+	rdfs:domain :ProperInterval ;
+	rdfs:range :ProperInterval .
+
+:intervalStarts a rdf:Property ;
+	rdfs:domain :ProperInterval ;
+	rdfs:range :ProperInterval .
+
+:intervalDuring a rdf:Property ;
+	rdfs:domain :ProperInterval ;
+	rdfs:range :ProperInterval .
+
+:intervalFinishes a rdf:Property ;
+	rdfs:domain :ProperInterval ;
+	rdfs:range :ProperInterval .
+
+:intervalMetBy a rdf:Property ;
+	rdfs:domain :ProperInterval ;
+	rdfs:range :ProperInterval .
+
+:intervalOverlappedBy a rdf:Property ;
+	rdfs:domain :ProperInterval ;
+	rdfs:range :ProperInterval .
+
+:intervalStartedBy a rdf:Property ;
+	rdfs:domain :ProperInterval ;
+	rdfs:range :ProperInterval .
+
+:intervalFinishedBy a rdf:Property ;
+	rdfs:domain :ProperInterval ;
+	rdfs:range :ProperInterval .
+
+:intervalContains a rdf:Property ;
+	rdfs:domain :ProperInterval ;
+	rdfs:range :ProperInterval .
+
+:years a rdf:Property ;
+	rdfs:domain :DurationDescription ;
+	rdfs:range xsd:decimal .
+
+:months a rdf:Property ;
+	rdfs:domain :DurationDescription ;
+	rdfs:range xsd:decimal .
+
+:weeks a rdf:Property ;
+	rdfs:domain :DurationDescription ;
+	rdfs:range xsd:decimal .
+
+:days a rdf:Property ;
+	rdfs:domain :DurationDescription ;
+	rdfs:range xsd:decimal .
+
+:hours a rdf:Property ;
+	rdfs:domain :DurationDescription ;
+	rdfs:range xsd:decimal .
+
+:minutes a rdf:Property ;
+	rdfs:domain :DurationDescription ;
+	rdfs:range xsd:decimal .
+
+:seconds a rdf:Property ;
+	rdfs:domain :DurationDescription ;
+	rdfs:range xsd:decimal .
