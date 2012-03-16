@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns="http://purl.org/ifgi/geospace#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:dul="http://purl.org/ifgi/dul#"
+	xmlns:dulSp="http://purl.org/ifgi/dulSpatial#"
+	xmlns:gspace="http://purl.org/ifgi/geospace#"
+	xmlns:geosparql="http://purl.org/ifgi/geosparql#"
+	xmlns:time="http://purl.org/ifgi/time#">
+
+<rdf:Description rdf:nodeID="node16odug23mx1">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<rdfs:label>geographic_descriptions</rdfs:label>
+	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
+	<owl:imports rdf:resource="http://purl.org/ifgi/dulSpatial#"/>
+	<owl:imports rdf:resource="http://purl.org/ifgi/dul#"/>
+	<owl:imports rdf:resource="http://purl.org/ifgi/geospace#"/>
+	<owl:imports rdf:resource="http://purl.org/ifgi/time#"/>
+	<dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">p.maue (ifgi)</dc:creator>
+	<dc:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(a)IfGI, University of Muenster</dc:publisher>
+	<dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://creativecommons.org/licenses/by/3.0/</dc:rights>
+	<dc:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Domain Ontology</dc:type>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geographic descriptions are associated with a location in space (using GeoSPARQL) and time (using W3C time)</dc:description>
+	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geographic Descriptions Ontology</dc:title>
+	<dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geography</dc:subject>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/geospace#SitationDescription">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/geospace#SitationDescription</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dul#Description"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/geospace#SitationDescription_prop_describes">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/geospace#describes</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/geospace#SitationDescription"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Situation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/geospace#SitationDescription_prop_describedLocation">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/geospace#describedLocation</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/geospace#SitationDescription"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/geospace#LocationDescription"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/geospace#GeographicalDescription">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/geospace#GeographicalDescription</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dul#Description"/>
+	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Description of Geographic Unit</dc:title>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/geospace#GeographicalDescription_prop_describes">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/geospace#describes</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/geospace#GeographicalDescription"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/geospace#geographical_unit"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/geospace#GeographicalDescription_prop_describedLocation">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/geospace#describedLocation</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/geospace#GeographicalDescription"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/geospace#LocationDescription"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/geospace#LocationDescription">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/geospace#LocationDescription</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geosparql#Geometry"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/time#TemporalEntity"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dul#Description"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Description of spatio-temporal location of a geographic unit.</dc:identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/geospace#LocationDescription_prop_isRelatedToDescription">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/geospace#isRelatedToDescription</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/geospace#LocationDescription"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Description"/>
+</rdf:Description>
+
+</rdf:RDF>
