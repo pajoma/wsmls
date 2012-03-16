@@ -4,7 +4,8 @@ namespace { _"http://purl.org/ifgi/event-observation#",
 		dc _"http://purl.org/dc/elements/1.1/",
 		ssn _"http://purl.org/ifgi/ssn#",
 		dul _"http://purl.org/ifgi/dul#",
-		gm _"http://purl.org/ifgi/geomodels#"
+		gModel _"http://purl.org/ifgi/geomodels#", 
+		gDesc _"http://purl.org/ifgi/geodesc#"
  }
  
 
@@ -20,7 +21,8 @@ ontology EventObservation
 	importsOntology {
 		_"http://purl.org/ifgi/dul#",
 		_"http://purl.org/ifgi/ssn#",
-		_"http://purl.org/ifgi/geomodels#"
+		_"http://purl.org/ifgi/geomodels#",
+		_"http://purl.org/ifgi/geodesc#"
 	}
 	
 	concept EventProcessingAgent subConceptOf ssn#Sensor
@@ -48,13 +50,13 @@ ontology EventObservation
 		ssn#observationResult ofType EventProcessingAgentOutput
 		dul#isClassifiedBy ofType EventObservationType
 			
-	concept EventObservationDescription subConceptOf dul#Description
+	concept EventObservationDescription subConceptOf gDesc#SituationDescription
 		annotations
 			dc#identifier hasValue "event observation description@en"
 			dc#description hasValue "Description of the observed situation."
 		endAnnotations
 		dul#describes ofType EventObservation
-		gm#describedLocation ofType gm#DescribedLocation
+		gDesc#describedLocation ofType gDesc#DescribedLocation
 			
 	concept EventDetectionProcedure subConceptOf ssn#Sensing
 		annotations
