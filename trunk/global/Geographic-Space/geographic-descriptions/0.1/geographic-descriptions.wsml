@@ -1,0 +1,51 @@
+	wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://purl.org/ifgi/geospace#", 
+		dc _"http://purl.org/dc/elements/1.1/", 
+     	rdfs _"http://www.w3.org/2000/01/rdf-schema#",
+     	dul _"http://purl.org/ifgi/dul#",
+     	dulSp _"http://purl.org/ifgi/dulSpatial#",
+		gspace _"http://purl.org/ifgi/geospace#", 
+		geosparql _"http://purl.org/ifgi/geosparql#", 
+		time _"http://purl.org/ifgi/time#"
+     	}
+
+ontology geographic_descriptions
+     annotations
+     	dc#creator hasValue "p.maue (ifgi)"
+		dc#publisher hasValue "(a)IfGI, University of Muenster"
+		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+		dc#type hasValue "Domain Ontology"
+		dc#description hasValue "Geographic descriptions are associated with a location in space (using GeoSPARQL) and time (using W3C time)" 
+		dc#title hasValue "Geographic Descriptions Ontology"	
+		dc#subject hasValue "Geography"			
+     endAnnotations
+	 
+	 importsOntology {	_"http://purl.org/ifgi/dulSpatial#", 
+						_"http://purl.org/ifgi/dul#", 
+						_"http://purl.org/ifgi/geospace#", 
+						_"http://purl.org/ifgi/time#"
+					 }
+   
+concept SitationDescription subConceptOf dul#Description
+	describes ofType dul#Situation
+	describedLocation ofType LocationDescription
+ 
+concept GeographicalDescription subConceptOf dul#Description
+	annotations
+		dc#title hasValue "Description of Geographic Unit"	
+	endAnnotations
+	describes ofType gspace#geographical_unit
+	describedLocation ofType LocationDescription
+	
+	
+concept LocationDescription subConceptOf {geosparql#Geometry, time#TemporalEntity, dul#Description}
+	annotations
+		dc#identifier hasValue "Description of spatio-temporal location of a geographic unit."
+	endAnnotations
+	isRelatedToDescription ofType dul#Description
+	
+
+
+
+
+	
