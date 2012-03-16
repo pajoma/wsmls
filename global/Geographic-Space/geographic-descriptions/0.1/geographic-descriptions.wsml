@@ -1,5 +1,5 @@
 	wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
-namespace { _"http://purl.org/ifgi/geospace#", 
+namespace { _"http://purl.org/ifgi/geodesc#", 
 		dc _"http://purl.org/dc/elements/1.1/", 
      	rdfs _"http://www.w3.org/2000/01/rdf-schema#",
      	dul _"http://purl.org/ifgi/dul#",
