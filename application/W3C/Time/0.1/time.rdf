@@ -7,9 +7,9 @@
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/">
 
-<rdf:Description rdf:nodeID="node16ob6c664x1">
+<rdf:Description rdf:nodeID="node16odre7m6x1">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
-	<rdfs:label>GeoSPARQL</rdfs:label>
+	<rdfs:label>Time</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
 	<dc:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(a)IfGI, University of Muenster</dc:publisher>
 	<dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-03-15</dc:date>
@@ -71,6 +71,12 @@
 <rdf:Description rdf:about="http://purl.org/ifgi/time#DateTimeDescription">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/time#DateTimeDescription</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/time#inXSDDateTime">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/time#TemporalEntity"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/time#before">

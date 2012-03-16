@@ -6,7 +6,7 @@ namespace { _"http://purl.org/ifgi/time#",
 	rdf _"http://www.w3.org/1999/02/22-rdf-syntax-ns"
  }
 
-ontology GeoSPARQL 
+ontology Time 
 
 	annotations
 		dc#publisher hasValue "(a)IfGI, University of Muenster"
@@ -41,6 +41,7 @@ concept DateTimeDescription
 // Properties
 
 
+relation inXSDDateTime (ofType TemporalEntity, ofType _string)
 
 relation before (ofType TemporalEntity, ofType TemporalEntity)
 
