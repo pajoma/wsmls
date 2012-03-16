@@ -6,10 +6,11 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dul: <http://purl.org/ifgi/dul#> .
 @prefix dulSp: <http://purl.org/ifgi/dulSpatial#> .
+@prefix gspace: <http://purl.org/ifgi/geospace#> .
 @prefix geosparql: <http://purl.org/ifgi/geosparql#> .
 @prefix time: <http://purl.org/ifgi/time#> .
 
-_:node16odufr93x1 a owl:Ontology ;
+_:node16odvr70nx1 a owl:Ontology ;
 	rdfs:label "geographic_descriptions" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/dulSpatial#> , <http://purl.org/ifgi/dul#> , <http://purl.org/ifgi/geospace#> , <http://purl.org/ifgi/time#> ;
@@ -22,45 +23,45 @@ _:node16odufr93x1 a owl:Ontology ;
 	dc:subject "Geography"^^xsd:string .
 
 :SitationDescription a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/geospace#SitationDescription" ;
+	rdfs:label "http://purl.org/ifgi/geodesc#SitationDescription" ;
 	rdfs:subClassOf dul:Description .
 
 :SitationDescription_prop_describes a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/geospace#describes" ;
+	rdfs:label "http://purl.org/ifgi/geodesc#describes" ;
 	rdfs:domain :SitationDescription ;
 	a rdf:Property ;
 	rdfs:range dul:Situation .
 
 :SitationDescription_prop_describedLocation a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/geospace#describedLocation" ;
+	rdfs:label "http://purl.org/ifgi/geodesc#describedLocation" ;
 	rdfs:domain :SitationDescription ;
 	a rdf:Property ;
 	rdfs:range :LocationDescription .
 
 :GeographicalDescription a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/geospace#GeographicalDescription" ;
+	rdfs:label "http://purl.org/ifgi/geodesc#GeographicalDescription" ;
 	rdfs:subClassOf dul:Description ;
 	dc:title "Description of Geographic Unit"^^xsd:string .
 
 :GeographicalDescription_prop_describes a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/geospace#describes" ;
+	rdfs:label "http://purl.org/ifgi/geodesc#describes" ;
 	rdfs:domain :GeographicalDescription ;
 	a rdf:Property ;
-	rdfs:range :geographical_unit .
+	rdfs:range gspace:geographical_unit .
 
 :GeographicalDescription_prop_describedLocation a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/geospace#describedLocation" ;
+	rdfs:label "http://purl.org/ifgi/geodesc#describedLocation" ;
 	rdfs:domain :GeographicalDescription ;
 	a rdf:Property ;
 	rdfs:range :LocationDescription .
 
 :LocationDescription a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/geospace#LocationDescription" ;
+	rdfs:label "http://purl.org/ifgi/geodesc#LocationDescription" ;
 	rdfs:subClassOf geosparql:Geometry , time:TemporalEntity , dul:Description ;
 	dc:identifier "Description of spatio-temporal location of a geographic unit."^^xsd:string .
 
 :LocationDescription_prop_isRelatedToDescription a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/geospace#isRelatedToDescription" ;
+	rdfs:label "http://purl.org/ifgi/geodesc#isRelatedToDescription" ;
 	rdfs:domain :LocationDescription ;
 	a rdf:Property ;
 	rdfs:range dul:Description .
