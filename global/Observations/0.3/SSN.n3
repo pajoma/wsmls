@@ -6,11 +6,12 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix DUL: <http://purl.org/ifgi/dul#> .
 @prefix ssn: <http://purl.oclc.org/NET/ssnx/ssn#> .
+@prefix gs: <http://purl.org/ifgi/geospace#> .
 
-_:node16m5gl4c1x106 a owl:Ontology ;
+_:node16p7a1ib0x4 a owl:Ontology ;
 	rdfs:label "SSN_Observation" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
-	owl:imports <http://purl.org/ifgi/dul#> ;
+	owl:imports <http://purl.org/ifgi/dul#> , <http://purl.org/ifgi/geospace#> ;
 	dc:creator "W3C Semantic Sensor Network Incubator Group"^^xsd:string ;
 	dc:publisher "IfGI, University of Muenster"^^xsd:string ;
 	dc:date "09-03-2011"^^xsd:string ;
@@ -266,7 +267,6 @@ _:node16m5gl4c1x106 a owl:Ontology ;
 	dc:description "Total useful life of a sensor/system (expressed as total life since manufacture, time in use, number of operations, etc.)."^^xsd:string .
 
 :hasProperty a rdf:Property ;
-	rdfs:label :hasProperty ;
 	rdfs:domain :FeatureOfInterest ;
 	rdfs:range :Property ;
 	rdfs:subPropertyOf DUL:hasQuality ;
@@ -274,7 +274,6 @@ _:node16m5gl4c1x106 a owl:Ontology ;
 	dc:description "A relation between a FeatureOfInterest and a Property of that feature."^^xsd:string .
 
 :observedProperty a rdf:Property ;
-	rdfs:label :observedProperty ;
 	rdfs:domain :Observation ;
 	rdfs:range :Property ;
 	rdfs:subPropertyOf DUL:isSettingFor ;
@@ -282,7 +281,6 @@ _:node16m5gl4c1x106 a owl:Ontology ;
 	dc:description "Relation linking an Observation to the Property that was observed. The observedProperty should be a Property (hasProperty) of the FeatureOfInterest (linked by featureOfInterest) of this observation."^^xsd:string .
 
 :sensingMethodUsed a rdf:Property ;
-	rdfs:label :sensingMethodUsed ;
 	rdfs:domain :Observation ;
 	rdfs:range :Sensing ;
 	rdfs:subPropertyOf DUL:satisfies ;
@@ -290,7 +288,6 @@ _:node16m5gl4c1x106 a owl:Ontology ;
 	dc:description "A (measurement) procedure is a detailed description of a measurement according to one or more measurement principles and to a given measurement method, based on a measurement model and including any calculation to obtain a measurement result [VIM 2.6]"^^xsd:string .
 
 :featureOfInterest a rdf:Property ;
-	rdfs:label :featureOfInterest ;
 	rdfs:domain :Observation ;
 	rdfs:range :FeatureOfInterest ;
 	rdfs:subPropertyOf DUL:isSettingFor ;
@@ -298,7 +295,6 @@ _:node16m5gl4c1x106 a owl:Ontology ;
 	dc:description "A relation between an observation and the entity whose quality was observed. For example, in an observation of the weight of a person, the feature of interest is the person and the quality is weight."^^xsd:string .
 
 :includesEvent a rdf:Property ;
-	rdfs:label :includesEvent ;
 	rdfs:domain :Observation ;
 	rdfs:range :Stimulus ;
 	rdfs:subPropertyOf DUL:hasQuality ;
@@ -306,7 +302,6 @@ _:node16m5gl4c1x106 a owl:Ontology ;
 	dc:description "A relation between a FeatureOfInterest and a Property of that feature."^^xsd:string .
 
 :observationResult a rdf:Property ;
-	rdfs:label :observationResult ;
 	rdfs:domain :Observation ;
 	rdfs:range :SensorOutput ;
 	rdfs:subPropertyOf DUL:isSettingFor ;
@@ -314,14 +309,12 @@ _:node16m5gl4c1x106 a owl:Ontology ;
 	dc:description "Relation linking an Observation (i.e., a description of the context, the Situation, in which the observatioin was made) and a Result, which contains a value representing the value associated with the observed Property."^^xsd:string .
 
 :observedBy a rdf:Property ;
-	rdfs:label :observedBy ;
 	rdfs:domain :Observation ;
 	rdfs:range :Sensor ;
 	rdfs:subPropertyOf DUL:includesObject ;
 	dc:identifier "observed by@en"^^xsd:string .
 
 :observationSamplingTime a rdf:Property ;
-	rdfs:label :observationSamplingTime ;
 	rdfs:domain :Observation ;
 	rdfs:range xsd:nonNegativeInteger ;
 	rdfs:subPropertyOf DUL:hasRegion ;
@@ -329,7 +322,6 @@ _:node16m5gl4c1x106 a owl:Ontology ;
 	dc:description "Rebadged as phenomenon time in [O&M]. The phenomenon time shall describe the time that the result applies to the property of the feature-of-interest. This is often the time of interaction by a sampling procedure or observation procedure with a real-world feature."^^xsd:string .
 
 :observationResultTime a rdf:Property ;
-	rdfs:label :observationResultTime ;
 	rdfs:domain :Observation ;
 	rdfs:range xsd:nonNegativeInteger ;
 	rdfs:subPropertyOf DUL:hasRegion ;
@@ -337,7 +329,6 @@ _:node16m5gl4c1x106 a owl:Ontology ;
 	dc:description "The result time is the time when the procedure associated with the observation act was applied. The result time shall describe the time when the result became available, typically when the procedure associated with the observation was completed For some observations this is identical to the phenomenonTime. However, there are important cases where they differ.[O&M]"^^xsd:string .
 
 :qualityOfObservation a rdf:Property ;
-	rdfs:label :qualityOfObservation ;
 	rdfs:domain :Observation ;
 	rdfs:range xsd:nonNegativeInteger ;
 	rdfs:subPropertyOf DUL:hasProperty ;
@@ -345,7 +336,6 @@ _:node16m5gl4c1x106 a owl:Ontology ;
 	dc:description "Relation linking an Observation to the adjudged quality of the result. This is of course complimentary to the MeasurementCapability information recorded for the Sensor that made the Observation."^^xsd:string .
 
 :isPropertyOf a rdf:Property ;
-	rdfs:label :isPropertyOf ;
 	rdfs:domain :Property ;
 	rdfs:range :FeatureOfInterest ;
 	rdfs:subPropertyOf DUL:isQualityOf ;
@@ -353,7 +343,6 @@ _:node16m5gl4c1x106 a owl:Ontology ;
 	dc:description "Relation between a FeatureOfInterest and a Property (a Quality observable by a sensor) of that feature."^^xsd:string .
 
 :implements a rdf:Property ;
-	rdfs:label :implements ;
 	rdfs:domain :Sensor ;
 	rdfs:range :Sensing ;
 	rdfs:subPropertyOf DUL:isDescribedBy ;
@@ -361,22 +350,19 @@ _:node16m5gl4c1x106 a owl:Ontology ;
 	dc:description "A relation between an entity that implements a method in some executable way and the description of an algorithm, procedure or method. For example, between a Sensor and the scientific measuring method that the Sensor uses to observe a Property."^^xsd:string .
 
 :detects a rdf:Property ;
-	rdfs:label :detects ;
 	rdfs:domain :Sensor ;
 	rdfs:range :Stimulus ;
 	dc:identifier "detects@en"^^xsd:string ;
 	dc:description "A relation from a sensor to the Stimulus that the sensor can detect. The Stimulus itself will be serving as a proxy for (see isProxyOf) some observable property."^^xsd:string .
 
 :observes a rdf:Property ;
-	rdfs:label :observes ;
 	rdfs:domain :Sensor ;
 	rdfs:range :Property ;
 	rdfs:subPropertyOf DUL:hasQuality ;
 	dc:identifier "observes@en"^^xsd:string ;
-	dc:description "A relation between a FeatureOfInterest and a Property of that feature."^^xsd:string .
+	dc:description "A relation between a Sensor and a Property of a FeatureOfInterest."^^xsd:string .
 
 :hasMeasurementCapability a rdf:Property ;
-	rdfs:label :hasMeasurementCapability ;
 	rdfs:domain :Sensor ;
 	rdfs:range :MeasurementCapability ;
 	rdfs:subPropertyOf :hasProperty ;
@@ -384,28 +370,24 @@ _:node16m5gl4c1x106 a owl:Ontology ;
 	dc:description "Relation from a Sensor to a MeasurementCapability describing the measurement properties of the sensor."^^xsd:string .
 
 :isProxyFor a rdf:Property ;
-	rdfs:label :isProxyFor ;
 	rdfs:domain :SensorInput ;
 	rdfs:range :Event ;
 	dc:identifier "isProxyFor@en"^^xsd:string ;
 	dc:description "A relation from a Stimulus to the Property that the Stimulus is serving as a proxy for. For example, the expansion of the quicksilver is a stimulus that serves as a proxy for temperature, or an increase or decrease in the spinning of cups on a wind sensor is serving as a proxy for wind speed."^^xsd:string .
 
 :_hasValue a rdf:Property ;
-	rdfs:label :_hasValue ;
 	rdfs:domain :SensorOutput ;
 	rdfs:range :ObservationValue ;
 	rdfs:subPropertyOf DUL:hasRegion ;
 	dc:identifier "has value@en"^^xsd:string .
 
 :isProducedBy a rdf:Property ;
-	rdfs:label :isProducedBy ;
 	rdfs:domain :SensorOutput ;
 	rdfs:range :Sensor ;
 	dc:identifier "is produced by@en"^^xsd:string ;
 	dc:description "Relation between a producer and a produced entity: for example, between a sensor and the produced output."^^xsd:string .
 
 :hasOperatingRange a rdf:Property ;
-	rdfs:label :hasOperatingRange ;
 	rdfs:domain :System ;
 	rdfs:range :OperatingRange ;
 	rdfs:subPropertyOf :hasProperty ;
@@ -413,7 +395,6 @@ _:node16m5gl4c1x106 a owl:Ontology ;
 	dc:description "Relation from a System to an OperatingRange describing the normal operating environment of the System."^^xsd:string .
 
 :hasSubSystem a rdf:Property ;
-	rdfs:label :hasSubSystem ;
 	rdfs:domain :System ;
 	rdfs:range :System ;
 	rdfs:subPropertyOf DUL:hasPart ;
@@ -421,7 +402,6 @@ _:node16m5gl4c1x106 a owl:Ontology ;
 	dc:description "Haspart relation between a system and its parts."^^xsd:string .
 
 :hasDeployment a rdf:Property ;
-	rdfs:label :hasDeployment ;
 	rdfs:domain :Platform ;
 	rdfs:range :Deployment ;
 	rdfs:subPropertyOf DUL:isParticipantIn ;
@@ -429,7 +409,6 @@ _:node16m5gl4c1x106 a owl:Ontology ;
 	dc:description "Relation between a System and a Deployment, recording that the System/Sensor was deployed in that Deployment."^^xsd:string , "Relation between a Platform and a Deployment, recording that the object was used as a platform for a system/sensor for a particular deployment: as in this PhysicalObject is acting as a Platform inDeployment Deployment."^^xsd:string .
 
 :hasSurvivalRange a rdf:Property ;
-	rdfs:label :hasSurvivalRange ;
 	rdfs:domain :System ;
 	rdfs:range :SurvivalRange ;
 	rdfs:subPropertyOf :hasProperty ;
@@ -437,7 +416,6 @@ _:node16m5gl4c1x106 a owl:Ontology ;
 	dc:description "A Relation from a System to a SurvivalRange."^^xsd:string .
 
 :onPlatform a rdf:Property ;
-	rdfs:label :onPlatform ;
 	rdfs:domain :System ;
 	rdfs:range :Platform ;
 	rdfs:subPropertyOf DUL:hasLocation ;
@@ -445,19 +423,16 @@ _:node16m5gl4c1x106 a owl:Ontology ;
 	dc:description "Relation between a System (e.g., a Sensor) and a Platform. The relation locates the sensor relative to other described entities entities: i.e., the Sensor s1's location is Platform p1. More precise locations for sensors in space (relative to other entities, where attached to another entity, or in 3D space) are made using DOLCE's Regions (SpaceRegion)."^^xsd:string .
 
 :hasOutput a rdf:Property ;
-	rdfs:label :hasOutput ;
 	rdfs:domain :Process ;
 	rdfs:range :Output ;
 	dc:identifier "has output@en"^^xsd:string .
 
 :hasInput a rdf:Property ;
-	rdfs:label :hasInput ;
 	rdfs:domain :Process ;
 	rdfs:range :Input ;
 	dc:identifier "has input@en"^^xsd:string .
 
 :hasMeasurementProperty a rdf:Property ;
-	rdfs:label :hasMeasurementProperty ;
 	rdfs:domain :MeasurementCapability ;
 	rdfs:range :MeasurementProperty ;
 	rdfs:subPropertyOf :hasProperty ;
@@ -465,7 +440,6 @@ _:node16m5gl4c1x106 a owl:Ontology ;
 	dc:description "Relation from a MeasurementCapability to a MeasurementProperty. For example, to an accuracy (see notes at MeasurementCapability)."^^xsd:string .
 
 :madeObservation a rdf:Property ;
-	rdfs:label :madeObservation ;
 	rdfs:domain :Sensor ;
 	rdfs:range :Observation ;
 	rdfs:subPropertyOf DUL:isObjectIncludedIn ;
@@ -473,21 +447,18 @@ _:node16m5gl4c1x106 a owl:Ontology ;
 	dc:description "Relation between a Sensor and Observations it has made."^^xsd:string .
 
 :forProperty a rdf:Property ;
-	rdfs:label :forProperty ;
 	rdfs:domain :MeasurementCapability ;
 	rdfs:range :Property ;
 	dc:identifier "for property@en"^^xsd:string ;
 	dc:description "A relation between some aspect of a sensing entity and a property. For example, from a sensor to the properties it can observe, or from a deployment to the properties it was installed to observe. Also from a measurement capability to the property the capability is described for. (Used in conjunction with ofFeature)."^^xsd:string .
 
 :inCondition a rdf:Property ;
-	rdfs:label :inCondition ;
 	rdfs:domain :MeasurementCapability ;
 	rdfs:range :Property ;
 	dc:identifier "in condition@en"^^xsd:string ;
 	dc:description "Describes the prevailing environmental conditions for MeasurementCapabilites, OperatingConditions and SurvivalRanges. Used for example to say that a sensor has a particular accuracy in particular conditions. (see also MeasurementCapability)"^^xsd:string .
 
 :deployedSystem a rdf:Property ;
-	rdfs:label :deployedSystem ;
 	rdfs:domain :Deployment ;
 	rdfs:range :System ;
 	rdfs:subPropertyOf DUL:hasParticipant ;
@@ -495,7 +466,6 @@ _:node16m5gl4c1x106 a owl:Ontology ;
 	dc:description "Relation between a deployment and the deployed system."^^xsd:string .
 
 :deployedOnPlatform a rdf:Property ;
-	rdfs:label :deployedOnPlatform ;
 	rdfs:domain :Deployment ;
 	rdfs:range :Platform ;
 	rdfs:subPropertyOf DUL:hasParticipant ;
@@ -503,7 +473,6 @@ _:node16m5gl4c1x106 a owl:Ontology ;
 	dc:description "Relation between a deployment and the platform on which the system was deployed."^^xsd:string .
 
 :deploymentProcessPart a rdf:Property ;
-	rdfs:label :deploymentProcessPart ;
 	rdfs:domain :DeploymentRelatedProcess ;
 	rdfs:range :DeploymentRelatedProcess ;
 	rdfs:subPropertyOf DUL:hasPart ;
@@ -511,7 +480,6 @@ _:node16m5gl4c1x106 a owl:Ontology ;
 	dc:description "Has part relation between a deployment process and its constituent processes."^^xsd:string .
 
 :attachedSystem a rdf:Property ;
-	rdfs:label :attachedSystem ;
 	rdfs:domain :Platform ;
 	rdfs:range :System ;
 	rdfs:subPropertyOf DUL:isLocationOf ;
@@ -519,7 +487,6 @@ _:node16m5gl4c1x106 a owl:Ontology ;
 	dc:description "Relation between a Platform and any Systems (e.g., Sensors) that are attached to the Platform."^^xsd:string .
 
 :inDeployment a rdf:Property ;
-	rdfs:label :inDeployment ;
 	rdfs:domain :Platform ;
 	rdfs:range :Deployment ;
 	rdfs:subPropertyOf DUL:hasQuality ;
@@ -527,7 +494,6 @@ _:node16m5gl4c1x106 a owl:Ontology ;
 	dc:description "A relation between a FeatureOfInterest and a Property of that feature."^^xsd:string .
 
 :hasOperatingProperty a rdf:Property ;
-	rdfs:label :hasOperatingProperty ;
 	rdfs:domain :OperatingRange ;
 	rdfs:range :OperatingProperty ;
 	rdfs:subPropertyOf :hasProperty ;
@@ -535,7 +501,6 @@ _:node16m5gl4c1x106 a owl:Ontology ;
 	dc:description "Relation from an OperatingRange to a Property. For example, to a battery lifetime."^^xsd:string .
 
 :hasSurvivalProperty a rdf:Property ;
-	rdfs:label :hasSurvivalProperty ;
 	rdfs:domain :SurvivalRange ;
 	rdfs:range :SurvivalProperty ;
 	rdfs:subPropertyOf :hasProperty ;
@@ -543,7 +508,6 @@ _:node16m5gl4c1x106 a owl:Ontology ;
 	dc:description "Relation from a SurvivalRange to a Property describing the survial range of a system. For example, to the temperature extreme that a system can withstand before being considered damaged."^^xsd:string .
 
 :isRegionFor a rdf:Property ;
-	rdfs:label :isRegionFor ;
 	rdfs:domain :ObservationValue ;
 	rdfs:range :SensorOutput ;
 	rdfs:subPropertyOf DUL:hasQuality ;
@@ -551,15 +515,20 @@ _:node16m5gl4c1x106 a owl:Ontology ;
 	dc:description "A relation between a FeatureOfInterest and a Property of that feature."^^xsd:string .
 
 :endTime a rdf:Property ;
-	rdfs:label :endTime ;
 	rdfs:domain DUL:Entity ;
 	rdfs:range DUL:Region ;
 	rdfs:subPropertyOf DUL:hasRegion ;
 	dc:identifier "end time@en"^^xsd:string .
 
 :startTime a rdf:Property ;
-	rdfs:label :startTime ;
 	rdfs:domain DUL:Entity ;
 	rdfs:range DUL:Region ;
 	rdfs:subPropertyOf DUL:hasRegion ;
 	dc:identifier "start time@en"^^xsd:string .
+
+:inverseOfObserves a rdf:Property ;
+	rdfs:domain gs:geographical_quality ;
+	rdfs:range :Sensor ;
+	rdfs:subPropertyOf DUL:associatedWith ;
+	dc:identifier "inverse of observes@en"^^xsd:string ;
+	dc:description "Inverse property of 'ssn:observes'"^^xsd:string .

@@ -110,7 +110,7 @@ ontology FloodScenario
 			dc#identifier hasValue "water body volume@en"
 			dc#description hasValue "The amount of 3-dimensional space occupied by a waterbody, e.g. a reservoir."
 		endAnnotations
-		ssn#observedBy ofType ssn#Sensor
+		ssn#inverseOfObserves ofType ssn#Sensor
 		
 	concept VolumetricFlowRate subConceptOf gs#geographical_quality
 		annotations
@@ -125,7 +125,7 @@ ontology FloodScenario
 			dc#subject hasValue "Quality"
 		endAnnotations
 		owl#sameAs ofType {FlowRate, WaterDischarge, Discharge}
-		ssn#observedBy ofType ssn#Sensor
+		ssn#inverseOfObserves ofType ssn#Sensor
 		
 	concept FlowRate subConceptOf gs#geographical_quality
 		annotations
@@ -138,7 +138,7 @@ ontology FloodScenario
 			dc#source hasValue "http://en.wikipedia.org/wiki/Volumetric_flow_rate"
 			dc#subject hasValue "Quality"
 		endAnnotations
-		ssn#observedBy ofType ssn#Sensor
+		ssn#inverseOfObserves ofType ssn#Sensor
 		
 	concept WaterDischarge subConceptOf gs#geographical_quality
 		annotations
@@ -151,7 +151,7 @@ ontology FloodScenario
 			dc#source hasValue "http://en.wikipedia.org/wiki/Volumetric_flow_rate"
 			dc#subject hasValue "Quality"
 		endAnnotations
-		ssn#observedBy ofType ssn#Sensor
+		ssn#inverseOfObserves ofType ssn#Sensor
 		
 	concept Discharge subConceptOf gs#geographical_quality
 		annotations
@@ -164,7 +164,7 @@ ontology FloodScenario
 			dc#source hasValue "http://en.wikipedia.org/wiki/Volumetric_flow_rate"
 			dc#subject hasValue "Quality"
 		endAnnotations
-		ssn#observedBy ofType ssn#Sensor
+		ssn#inverseOfObserves ofType ssn#Sensor
 	
 	concept WaterLevel subConceptOf gs#geographical_quality
 		annotations
@@ -175,7 +175,7 @@ ontology FloodScenario
 			dc#subject hasValue "Quality"
 		endAnnotations
 		owl#sameAs ofType {WaterStage, GaugeHeight, GageHeight}
-		ssn#observedBy ofType ssn#Sensor
+		ssn#inverseOfObserves ofType ssn#Sensor
 	
 	concept WaterStage subConceptOf gs#geographical_quality
 		annotations
@@ -184,7 +184,7 @@ ontology FloodScenario
 			dc#source hasValue "http://amsglossary.allenpress.com/glossary/browse?s=w&p=7"
 			dc#subject hasValue "Quality"
 		endAnnotations
-		ssn#observedBy ofType ssn#Sensor
+		ssn#inverseOfObserves ofType ssn#Sensor
 		
 	concept GaugeHeight subConceptOf gs#geographical_quality
 		annotations
@@ -193,7 +193,7 @@ ontology FloodScenario
 			dc#source hasValue "http://amsglossary.allenpress.com/glossary/browse?s=w&p=7"
 			dc#subject hasValue "Quality"
 		endAnnotations
-		ssn#observedBy ofType ssn#Sensor
+		ssn#inverseOfObserves ofType ssn#Sensor
 		
 	concept GageHeight subConceptOf gs#geographical_quality
 		annotations
@@ -202,7 +202,7 @@ ontology FloodScenario
 			dc#source hasValue "http://amsglossary.allenpress.com/glossary/browse?s=w&p=7"
 			dc#subject hasValue "Quality"
 		endAnnotations
-		ssn#observedBy ofType ssn#Sensor
+		ssn#inverseOfObserves ofType ssn#Sensor
 
 
 		

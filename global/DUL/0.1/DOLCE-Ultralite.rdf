@@ -8,10 +8,11 @@
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns:DUL="http://www.loa-cnr.it/ontologies/DUL.owl#">
 
-<rdf:Description rdf:nodeID="node16m5gl4c1x39">
+<rdf:Description rdf:nodeID="node16p7a1ib0x1">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>DOLCE_Ultralite</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
+	<owl:imports rdf:resource="http://www.w3.org/2002/07/owl#"/>
 	<dc:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IfGI, University of Muenster</dc:publisher>
 	<dc:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Foundational Ontology</dc:type>
 	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOLCE+DnS Ultralite</dc:title>
@@ -682,7 +683,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#actsFor">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#actsFor"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Agent"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#SocialAgent"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -693,18 +693,24 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#actsThrough">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#actsThrough"/>
-	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#SocialAgent"/>
-	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Agent"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Agent"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#SocialAgent"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">acts through@en</dc:identifier>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">agisce mediante@it</dc:identifier>
-	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The relation holding between a PhysicalAgent and a SocialAgent. In principle, a SocialAgent requires at least one PhysicalAgent in order to act, but this dependency can be 'delegated', e.g. a university can be acted for by a department, which is acted for by physical agents. AKA isActedBy</dc:description>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">acts for@en</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">agisce per@it</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The relation holding between a PhysicalAgent and a SocialAgent. In principle, a SocialAgent requires at least one PhysicalAgent in order to act, but this dependency can be 'delegated';, e.g. a university can be acted for by a department, which is acted for by physical agents. AKA isActedBy</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/dul#associatedWith">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">associated with@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A catch-all object property, useful for alignment and querying purposes.</dc:description>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#characterizes">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#characterizes"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Concept"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Collection"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -715,7 +721,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#classifies">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#classifies"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Concept"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -726,7 +731,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#co-participatesWith">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#co-participatesWith"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Object"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Object"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -737,7 +741,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#conceptualizes">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#conceptualizes"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Agent"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#SocialObject"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -748,7 +751,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#concretelyExpresses">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#concretelyExpresses"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#InformationRealization"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#SocialObject"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -759,7 +761,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#covers">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#covers"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Concept"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Collection"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -770,7 +771,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#describes">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#describes"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Description"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -781,7 +781,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#expresses">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#expresses"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#InformationObject"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#SocialObject"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -792,7 +791,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#expressesConcept">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#expressesConcept"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#InformationObject"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Concept"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#expresses"/>
@@ -803,7 +801,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#farFrom">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#farFrom"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -813,7 +810,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#follows">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#follows"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -824,7 +820,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#DirectlyFollows">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#DirectlyFollows"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#follows"/>
@@ -835,7 +830,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#hasCommonBoundary">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#hasCommonBoundary"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -845,7 +839,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#hasConstituent">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#hasConstituent"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -856,7 +849,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#hasLocation">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#hasLocation"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -867,7 +859,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#hasMember">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#hasMember"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Collection"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -878,7 +869,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#hasPart">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#hasPart"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -889,7 +879,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#hasParticipant">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#hasParticipant"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Event"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Object"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -900,7 +889,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#hasQuality">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#hasQuality"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Quality"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -911,7 +899,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#hasRegion">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#hasRegion"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Region"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -922,7 +909,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#hasSetting">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#hasSetting"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Situation"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -933,7 +919,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#introduces">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#introduces"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Description"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#SocialAgent"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -944,7 +929,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#isAbout">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#isAbout"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#InformationObject"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -955,7 +939,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#isCharacterizedBy">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#isCharacterizedBy"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Collection"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Concept"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -965,7 +948,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#isClassifiedBy">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#isClassifiedBy"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Concept"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -976,7 +958,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#isConceptUsedIn">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#isConceptUsedIn"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Concept"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Description"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -987,7 +968,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#isConceptualizedBy">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#isConceptualizedBy"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#SocialObject"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Agent"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -998,7 +978,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#isConcretelyExpressedBy">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#isConcretelyExpressedBy"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#SocialObject"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#InformationRealization"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -1009,7 +988,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#isConstituentOf">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#isConstituentOf"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -1020,7 +998,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#isConstraintFor">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#isConstraintFor"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Parameter"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#classifies"/>
@@ -1031,7 +1008,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#isCoveredBy">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#isCoveredBy"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Collection"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Concept"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -1042,7 +1018,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#isDescribedBy">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#isDescribedBy"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Description"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -1053,7 +1028,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#isExecutedIn">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#isExecutedIn"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Task"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Action"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#classifies"/>
@@ -1064,7 +1038,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#isExpressedBy">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#isExpressedBy"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#SocialObject"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#InformationObject"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -1075,7 +1048,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#isIntroducedBy">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#isIntroducedBy"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#SocialAgent"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Description"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -1086,7 +1058,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#isLocationOf">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#isLocationOf"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -1097,7 +1068,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#isMemberOf">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#isMemberOf"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Collection"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -1108,7 +1078,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#isPartOf">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#isPartOf"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -1119,7 +1088,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#isParticipantIn">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#isParticipantIn"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Object"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Event"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -1130,7 +1098,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#isQualityOf">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#isQualityOf"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Quality"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -1141,7 +1108,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#isRealizedBy">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#isRealizedBy"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#InformationObject"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#InformationRealization"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -1152,7 +1118,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#isReferenceOf">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#isReferenceOf"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#InformationObject"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -1163,7 +1128,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#isReferenceOfInformationRealizedBy">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#isReferenceOfInformationRealizedBy"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#InformationRealization"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -1174,7 +1138,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#isRegionFor">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#isRegionFor"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Region"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -1185,7 +1148,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#isRelatedToConcept">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#isRelatedToConcept"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Concept"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Concept"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -1196,7 +1158,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#isRelatedToDescription">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#isRelatedToDescription"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Description"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Description"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -1207,7 +1168,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#isRoleOf">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#isRoleOf"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Role"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Object"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#classifies"/>
@@ -1218,7 +1178,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#isSatisfiedBy">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#isSatisfiedBy"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Description"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Situation"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -1229,7 +1188,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#isSettingFor">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#isSettingFor"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Situation"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -1240,7 +1198,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#isSpecializedBy">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#isSpecializedBy"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#SocialObject"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#SocialObject"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -1251,7 +1208,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#overlaps">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#overlaps"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -1262,7 +1218,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#parametrizes">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#parametrizes"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Parameter"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Region"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#classifies"/>
@@ -1273,7 +1228,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#precedes">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#precedes"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -1284,7 +1238,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#realizes">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#realizes"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#InformationRealization"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#InformationObject"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -1295,7 +1248,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#realizesInformationAbout">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#realizesInformationAbout"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#InformationRealization"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -1306,7 +1258,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#satisfies">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#satisfies"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Situation"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Description"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -1317,7 +1268,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#specializes">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#specializes"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#SocialObject"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#SocialObject"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -1328,7 +1278,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#unifies">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#unifies"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Description"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Collection"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
@@ -1339,7 +1288,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#usesConcept">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dul#usesConcept"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Description"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Concept"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
