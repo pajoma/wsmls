@@ -12,7 +12,7 @@
 @prefix evob: <http://purl.org/ifgi/event-observation#> .
 @prefix ge: <http://purl.org/ifgi/geoevents#> .
 
-_:node16nkkktjsx2 a owl:Ontology ;
+_:node16p7a1ib0x6 a owl:Ontology ;
 	rdfs:label "FloodScenario" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/dul#> , <http://purl.org/ifgi/ssn#> , <http://purl.org/ifgi/geospace#> , <http://purl.org/ifgi/geounits#> , <http://purl.org/ifgi/event-observation#> ;
@@ -141,12 +141,12 @@ _:node16nkkktjsx2 a owl:Ontology ;
 	dc:identifier "water body volume@en"^^xsd:string ;
 	dc:description "The amount of 3-dimensional space occupied by a waterbody, e.g. a reservoir."^^xsd:string .
 
-:WaterBodyVolume_prop_observedBy a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/ssn#observedBy" ;
+:WaterBodyVolume_prop_inverseOfObserves a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/ssn#inverseOfObserves" ;
 	rdfs:domain :WaterBodyVolume ;
 	a rdf:Property ;
 	rdfs:range ssn:Sensor ;
-	rdfs:subPropertyOf ssn:observedBy .
+	rdfs:subPropertyOf ssn:inverseOfObserves .
 
 :VolumetricFlowRate a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/water/flood#VolumetricFlowRate" ;
@@ -167,12 +167,12 @@ _:node16nkkktjsx2 a owl:Ontology ;
 	rdfs:range :WaterDischarge ;
 	rdfs:subPropertyOf owl:sameAs .
 
-:VolumetricFlowRate_prop_observedBy a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/ssn#observedBy" ;
+:VolumetricFlowRate_prop_inverseOfObserves a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/ssn#inverseOfObserves" ;
 	rdfs:domain :VolumetricFlowRate ;
 	a rdf:Property ;
 	rdfs:range ssn:Sensor ;
-	rdfs:subPropertyOf ssn:observedBy .
+	rdfs:subPropertyOf ssn:inverseOfObserves .
 
 :FlowRate a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/water/flood#FlowRate" ;
@@ -182,12 +182,12 @@ _:node16nkkktjsx2 a owl:Ontology ;
 	dc:source "http://en.wikipedia.org/wiki/Volumetric_flow_rate"^^xsd:string ;
 	dc:subject "Quality"^^xsd:string .
 
-:FlowRate_prop_observedBy a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/ssn#observedBy" ;
+:FlowRate_prop_inverseOfObserves a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/ssn#inverseOfObserves" ;
 	rdfs:domain :FlowRate ;
 	a rdf:Property ;
 	rdfs:range ssn:Sensor ;
-	rdfs:subPropertyOf ssn:observedBy .
+	rdfs:subPropertyOf ssn:inverseOfObserves .
 
 :WaterDischarge a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/water/flood#WaterDischarge" ;
@@ -197,12 +197,12 @@ _:node16nkkktjsx2 a owl:Ontology ;
 	dc:source "http://en.wikipedia.org/wiki/Volumetric_flow_rate"^^xsd:string ;
 	dc:subject "Quality"^^xsd:string .
 
-:WaterDischarge_prop_observedBy a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/ssn#observedBy" ;
+:WaterDischarge_prop_inverseOfObserves a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/ssn#inverseOfObserves" ;
 	rdfs:domain :WaterDischarge ;
 	a rdf:Property ;
 	rdfs:range ssn:Sensor ;
-	rdfs:subPropertyOf ssn:observedBy .
+	rdfs:subPropertyOf ssn:inverseOfObserves .
 
 :Discharge a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/water/flood#Discharge" ;
@@ -212,12 +212,12 @@ _:node16nkkktjsx2 a owl:Ontology ;
 	dc:source "http://en.wikipedia.org/wiki/Volumetric_flow_rate"^^xsd:string ;
 	dc:subject "Quality"^^xsd:string .
 
-:Discharge_prop_observedBy a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/ssn#observedBy" ;
+:Discharge_prop_inverseOfObserves a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/ssn#inverseOfObserves" ;
 	rdfs:domain :Discharge ;
 	a rdf:Property ;
 	rdfs:range ssn:Sensor ;
-	rdfs:subPropertyOf ssn:observedBy .
+	rdfs:subPropertyOf ssn:inverseOfObserves .
 
 :WaterLevel a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/water/flood#WaterLevel" ;
@@ -238,12 +238,12 @@ _:node16nkkktjsx2 a owl:Ontology ;
 	rdfs:range :GageHeight ;
 	rdfs:subPropertyOf owl:sameAs .
 
-:WaterLevel_prop_observedBy a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/ssn#observedBy" ;
+:WaterLevel_prop_inverseOfObserves a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/ssn#inverseOfObserves" ;
 	rdfs:domain :WaterLevel ;
 	a rdf:Property ;
 	rdfs:range ssn:Sensor ;
-	rdfs:subPropertyOf ssn:observedBy .
+	rdfs:subPropertyOf ssn:inverseOfObserves .
 
 :WaterStage a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/water/flood#WaterStage" ;
@@ -253,12 +253,12 @@ _:node16nkkktjsx2 a owl:Ontology ;
 	dc:source "http://amsglossary.allenpress.com/glossary/browse?s=w&p=7"^^xsd:string ;
 	dc:subject "Quality"^^xsd:string .
 
-:WaterStage_prop_observedBy a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/ssn#observedBy" ;
+:WaterStage_prop_inverseOfObserves a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/ssn#inverseOfObserves" ;
 	rdfs:domain :WaterStage ;
 	a rdf:Property ;
 	rdfs:range ssn:Sensor ;
-	rdfs:subPropertyOf ssn:observedBy .
+	rdfs:subPropertyOf ssn:inverseOfObserves .
 
 :GaugeHeight a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/water/flood#GaugeHeight" ;
@@ -268,12 +268,12 @@ _:node16nkkktjsx2 a owl:Ontology ;
 	dc:source "http://amsglossary.allenpress.com/glossary/browse?s=w&p=7"^^xsd:string ;
 	dc:subject "Quality"^^xsd:string .
 
-:GaugeHeight_prop_observedBy a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/ssn#observedBy" ;
+:GaugeHeight_prop_inverseOfObserves a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/ssn#inverseOfObserves" ;
 	rdfs:domain :GaugeHeight ;
 	a rdf:Property ;
 	rdfs:range ssn:Sensor ;
-	rdfs:subPropertyOf ssn:observedBy .
+	rdfs:subPropertyOf ssn:inverseOfObserves .
 
 :GageHeight a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/water/flood#GageHeight" ;
@@ -283,12 +283,12 @@ _:node16nkkktjsx2 a owl:Ontology ;
 	dc:source "http://amsglossary.allenpress.com/glossary/browse?s=w&p=7"^^xsd:string ;
 	dc:subject "Quality"^^xsd:string .
 
-:GageHeight_prop_observedBy a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/ssn#observedBy" ;
+:GageHeight_prop_inverseOfObserves a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/ssn#inverseOfObserves" ;
 	rdfs:domain :GageHeight ;
 	a rdf:Property ;
 	rdfs:range ssn:Sensor ;
-	rdfs:subPropertyOf ssn:observedBy .
+	rdfs:subPropertyOf ssn:inverseOfObserves .
 
 :WaterLevelChange a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/water/flood#WaterLevelChange" ;

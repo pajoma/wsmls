@@ -14,7 +14,7 @@
 	xmlns:evob="http://purl.org/ifgi/event-observation#"
 	xmlns:ge="http://purl.org/ifgi/geoevents#">
 
-<rdf:Description rdf:nodeID="node16nkkktjsx1">
+<rdf:Description rdf:nodeID="node16p7a1ib0x5">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>FloodScenario</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -183,13 +183,13 @@
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The amount of 3-dimensional space occupied by a waterbody, e.g. a reservoir.</dc:description>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#WaterBodyVolume_prop_observedBy">
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#WaterBodyVolume_prop_inverseOfObserves">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label>http://purl.org/ifgi/ssn#observedBy</rdfs:label>
+	<rdfs:label>http://purl.org/ifgi/ssn#inverseOfObserves</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/water/flood#WaterBodyVolume"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#Sensor"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/ssn#observedBy"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/ssn#inverseOfObserves"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/water/flood#VolumetricFlowRate">
@@ -216,13 +216,13 @@
 	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#VolumetricFlowRate_prop_observedBy">
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#VolumetricFlowRate_prop_inverseOfObserves">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label>http://purl.org/ifgi/ssn#observedBy</rdfs:label>
+	<rdfs:label>http://purl.org/ifgi/ssn#inverseOfObserves</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/water/flood#VolumetricFlowRate"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#Sensor"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/ssn#observedBy"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/ssn#inverseOfObserves"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/water/flood#FlowRate">
@@ -235,13 +235,13 @@
 	<dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quality</dc:subject>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#FlowRate_prop_observedBy">
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#FlowRate_prop_inverseOfObserves">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label>http://purl.org/ifgi/ssn#observedBy</rdfs:label>
+	<rdfs:label>http://purl.org/ifgi/ssn#inverseOfObserves</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/water/flood#FlowRate"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#Sensor"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/ssn#observedBy"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/ssn#inverseOfObserves"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/water/flood#WaterDischarge">
@@ -254,13 +254,13 @@
 	<dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quality</dc:subject>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#WaterDischarge_prop_observedBy">
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#WaterDischarge_prop_inverseOfObserves">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label>http://purl.org/ifgi/ssn#observedBy</rdfs:label>
+	<rdfs:label>http://purl.org/ifgi/ssn#inverseOfObserves</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/water/flood#WaterDischarge"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#Sensor"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/ssn#observedBy"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/ssn#inverseOfObserves"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/water/flood#Discharge">
@@ -273,13 +273,13 @@
 	<dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quality</dc:subject>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#Discharge_prop_observedBy">
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#Discharge_prop_inverseOfObserves">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label>http://purl.org/ifgi/ssn#observedBy</rdfs:label>
+	<rdfs:label>http://purl.org/ifgi/ssn#inverseOfObserves</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/water/flood#Discharge"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#Sensor"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/ssn#observedBy"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/ssn#inverseOfObserves"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/water/flood#WaterLevel">
@@ -306,13 +306,13 @@
 	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#WaterLevel_prop_observedBy">
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#WaterLevel_prop_inverseOfObserves">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label>http://purl.org/ifgi/ssn#observedBy</rdfs:label>
+	<rdfs:label>http://purl.org/ifgi/ssn#inverseOfObserves</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/water/flood#WaterLevel"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#Sensor"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/ssn#observedBy"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/ssn#inverseOfObserves"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/water/flood#WaterStage">
@@ -325,13 +325,13 @@
 	<dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quality</dc:subject>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#WaterStage_prop_observedBy">
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#WaterStage_prop_inverseOfObserves">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label>http://purl.org/ifgi/ssn#observedBy</rdfs:label>
+	<rdfs:label>http://purl.org/ifgi/ssn#inverseOfObserves</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/water/flood#WaterStage"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#Sensor"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/ssn#observedBy"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/ssn#inverseOfObserves"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/water/flood#GaugeHeight">
@@ -344,13 +344,13 @@
 	<dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quality</dc:subject>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#GaugeHeight_prop_observedBy">
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#GaugeHeight_prop_inverseOfObserves">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label>http://purl.org/ifgi/ssn#observedBy</rdfs:label>
+	<rdfs:label>http://purl.org/ifgi/ssn#inverseOfObserves</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/water/flood#GaugeHeight"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#Sensor"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/ssn#observedBy"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/ssn#inverseOfObserves"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/water/flood#GageHeight">
@@ -363,13 +363,13 @@
 	<dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quality</dc:subject>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#GageHeight_prop_observedBy">
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#GageHeight_prop_inverseOfObserves">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label>http://purl.org/ifgi/ssn#observedBy</rdfs:label>
+	<rdfs:label>http://purl.org/ifgi/ssn#inverseOfObserves</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/water/flood#GageHeight"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#Sensor"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/ssn#observedBy"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/ssn#inverseOfObserves"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/water/flood#WaterLevelChange">

@@ -6,7 +6,8 @@ namespace { _"http://purl.org/ifgi/ssn#",
 	dc _"http://purl.org/dc/elements/1.1/",
 	owl _"http://www.w3.org/2002/07/owl#",
 	DUL _"http://purl.org/ifgi/dul#",
-	ssn _"http://purl.oclc.org/NET/ssnx/ssn#"
+	ssn _"http://purl.oclc.org/NET/ssnx/ssn#",
+	gs _"http://purl.org/ifgi/geospace#"
  }
 
 ontology SSN_Observation
@@ -23,7 +24,7 @@ ontology SSN_Observation
 		dc#identifier hasValue "http://purl.oclc.org/NET/ssnx/ssn"
 	endAnnotations
 	
-	importsOntology {_"http://purl.org/ifgi/dul#"}
+	importsOntology {_"http://purl.org/ifgi/dul#", _"http://purl.org/ifgi/geospace#"}
 	
 /* Classes */
 	
@@ -369,7 +370,7 @@ relation detects (ofType Sensor, ofType Stimulus)
 relation observes (ofType Sensor, ofType Property) subRelationOf DUL#hasQuality
 	annotations	
 		dc#identifier hasValue "observes@en"
-		dc#description hasValue "A relation between a FeatureOfInterest and a Property of that feature."
+		dc#description hasValue "A relation between a Sensor and a Property of a FeatureOfInterest."
 	endAnnotations	
 	
 relation hasMeasurementCapability (ofType Sensor, ofType MeasurementCapability) subRelationOf hasProperty
@@ -521,4 +522,10 @@ relation endTime (ofType DUL#Entity, ofType DUL#Region) subRelationOf DUL#hasReg
 relation startTime (ofType DUL#Entity, ofType DUL#Region) subRelationOf DUL#hasRegion
 	annotations	
 		dc#identifier hasValue "start time@en"
+	endAnnotations
+	
+relation inverseOfObserves (ofType gs#geographical_quality, ofType Sensor) subRelationOf DUL#associatedWith
+	annotations	
+		dc#identifier hasValue "inverse of observes@en"
+		dc#description hasValue "Inverse property of 'ssn:observes'"
 	endAnnotations

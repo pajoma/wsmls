@@ -4,7 +4,8 @@ namespace { _"http://purl.org/ifgi/dul#",
     rdfs _"http://www.w3.org/2000/01/rdf-schema#",
     xsd _"http://www.w3.org/2001/XMLSchema#",
     dc _"http://purl.org/dc/elements/1.1/",
-    DUL _"http://www.loa-cnr.it/ontologies/DUL.owl#"
+    DUL _"http://www.loa-cnr.it/ontologies/DUL.owl#",
+	owl _"http://www.w3.org/2002/07/owl#"
  }
 
 ontology DOLCE_Ultralite
@@ -17,6 +18,8 @@ ontology DOLCE_Ultralite
 		dc#source hasValue "http://www.loa-cnr.it/ontologies/DUL.owl"
 		dc#subject hasValue "dolce, foundational"	
      endAnnotations
+	 
+	 importsOntology {_"http://www.w3.org/2002/07/owl#"}
 
 
 /* Classes */
@@ -577,12 +580,18 @@ relation actsFor (ofType Agent, ofType SocialAgent) subRelationOf associatedWith
 		dc#identifier hasValue "agisce per@it"
 		dc#description hasValue "The relation holding between any Agent, and a SocialAgent. In principle, a SocialAgent requires at least one PhysicalAgent in order to act, but this dependency can be 'delegated'; e.g. a university can be acted for by a department, which on its turm is acted for by physical agents."
 	endAnnotations	
-
-relation actsThrough (ofType SocialAgent, ofType Agent) subRelationOf associatedWith
+	
+relation actsThrough (ofType Agent, ofType SocialAgent) subRelationOf associatedWith
 	annotations
-		dc#identifier hasValue "acts through@en"
-		dc#identifier hasValue "agisce mediante@it"
-		dc#description hasValue "The relation holding between a PhysicalAgent and a SocialAgent. In principle, a SocialAgent requires at least one PhysicalAgent in order to act, but this dependency can be 'delegated', e.g. a university can be acted for by a department, which is acted for by physical agents. AKA isActedBy"
+		dc#identifier hasValue "acts for@en"
+		dc#identifier hasValue "agisce per@it"
+		dc#description hasValue "The relation holding between a PhysicalAgent and a SocialAgent. In principle, a SocialAgent requires at least one PhysicalAgent in order to act, but this dependency can be 'delegated';, e.g. a university can be acted for by a department, which is acted for by physical agents. AKA isActedBy"
+	endAnnotations
+
+relation associatedWith (ofType owl#Thing, ofType owl#Thing)
+	annotations
+		dc#identifier hasValue "associated with@en"
+		dc#description hasValue "A catch-all object property, useful for alignment and querying purposes."
 	endAnnotations	
 	
 relation characterizes (ofType Concept, ofType Collection) subRelationOf associatedWith
