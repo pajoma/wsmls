@@ -8,11 +8,10 @@
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns:DUL="http://www.loa-cnr.it/ontologies/DUL.owl#">
 
-<rdf:Description rdf:nodeID="node16p7a1ib0x1">
+<rdf:Description rdf:nodeID="node16p9v4febx1">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>DOLCE_Ultralite</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
-	<owl:imports rdf:resource="http://www.w3.org/2002/07/owl#"/>
 	<dc:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IfGI, University of Muenster</dc:publisher>
 	<dc:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Foundational Ontology</dc:type>
 	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOLCE+DnS Ultralite</dc:title>
@@ -703,8 +702,8 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#associatedWith">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-	<rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Entity"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">associated with@en</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A catch-all object property, useful for alignment and querying purposes.</dc:description>
 </rdf:Description>
