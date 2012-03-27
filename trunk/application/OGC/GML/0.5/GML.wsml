@@ -4,7 +4,7 @@ namespace { _"http://purl.org/ifgi/gml/0.2#",
 	xsd _"http://www.w3.org/2001/XMLSchema#",  
 	dc _"http://purl.org/dc/elements/1.1/", 
 	rdfs _"http://www.w3.org/2000/01/rdf-schema#",
-	DUL _"http://www.loa-cnr.it/ontologies/DUL.owl#",
+	DUL _"http://purl.org/ifgi/dul#",
 	ogc _"http://purl.org/ifgi/geosparql#",
 	time _"http://w3.org/2006/time#"
  }
@@ -20,7 +20,7 @@ ontology GML
 		dc#title hasValue "OGC Feature Ontology"
 	endAnnotations
 	
-	importsOntology {_"http://www.loa-cnr.it/ontologies/DUL.owl#", _"http://purl.org/ifgi/geosparql#", _"http://purl.org/ifgi/time#"}
+	importsOntology {_"http://purl.org/ifgi/dul#", _"http://purl.org/ifgi/geosparql#", _"http://purl.org/ifgi/time#"}
 
 concept AbstractGML subConceptOf DUL#InformationObject
 	annotations

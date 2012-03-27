@@ -7,15 +7,15 @@
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:gml="http://purl.org/ifgi/gml/0.2#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
-	xmlns:DUL="http://www.loa-cnr.it/ontologies/DUL.owl#"
+	xmlns:DUL="http://purl.org/ifgi/dul#"
 	xmlns:ogc="http://purl.org/ifgi/geosparql#"
 	xmlns:time="http://w3.org/2006/time#">
 
-<rdf:Description rdf:nodeID="node16lc2ued0x1">
+<rdf:Description rdf:nodeID="node16p9s1qvix1">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>GML</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
-	<owl:imports rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#"/>
+	<owl:imports rdf:resource="http://purl.org/ifgi/dul#"/>
 	<owl:imports rdf:resource="http://purl.org/ifgi/geosparql#"/>
 	<owl:imports rdf:resource="http://purl.org/ifgi/time#"/>
 	<dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marcell Roth</dc:creator>
@@ -29,7 +29,7 @@
 <rdf:Description rdf:about="http://purl.org/ifgi/gml/0.2#AbstractGML">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/gml/0.2#AbstractGML</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#InformationObject"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dul#InformationObject"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abstract GML@en</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">deprecated</dc:description>
 </rdf:Description>
@@ -67,7 +67,7 @@
 <rdf:Description rdf:about="http://purl.org/ifgi/gml/0.2#Envelope">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/gml/0.2#Envelope</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#InformationObject"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dul#InformationObject"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">envelope@en</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">deprecated</dc:description>
 </rdf:Description>
