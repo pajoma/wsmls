@@ -6,10 +6,9 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix DUL: <http://www.loa-cnr.it/ontologies/DUL.owl#> .
 
-_:node16p7a1ib0x2 a owl:Ontology ;
+_:node16p9v4febx2 a owl:Ontology ;
 	rdfs:label "DOLCE_Ultralite" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
-	owl:imports <http://www.w3.org/2002/07/owl#> ;
 	dc:publisher "IfGI, University of Muenster"^^xsd:string ;
 	dc:type "Foundational Ontology"^^xsd:string ;
 	dc:title "DOLCE+DnS Ultralite"^^xsd:string ;
@@ -472,8 +471,8 @@ _:node16p7a1ib0x2 a owl:Ontology ;
 	dc:description "The relation holding between a PhysicalAgent and a SocialAgent. In principle, a SocialAgent requires at least one PhysicalAgent in order to act, but this dependency can be 'delegated';, e.g. a university can be acted for by a department, which is acted for by physical agents. AKA isActedBy"^^xsd:string .
 
 :associatedWith a rdf:Property ;
-	rdfs:domain owl:Thing ;
-	rdfs:range owl:Thing ;
+	rdfs:domain :Entity ;
+	rdfs:range :Entity ;
 	dc:identifier "associated with@en"^^xsd:string ;
 	dc:description "A catch-all object property, useful for alignment and querying purposes."^^xsd:string .
 
