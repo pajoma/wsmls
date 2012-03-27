@@ -78,13 +78,13 @@ relation gml#hasValue (ofType FeatureProperty, ofType xsd#anyType)
 			dc#identifier hasValue "has value@en"
 	endAnnotations
 
-relation upperCorner (ofType Envelope, ofType rdfs#Literal)
+relation upperCorner (ofType Envelope, ofType xsd#string)
 	annotations
 			dc#identifier hasValue "upper corner@en"
 			dc#description hasValue "deprecated"
 	endAnnotations
 
-relation lowerCorner (ofType Envelope, ofType rdfs#Literal)
+relation lowerCorner (ofType Envelope, ofType xsd#string)
 	annotations
 			dc#identifier hasValue "lower corner@en"
 			dc#description hasValue "deprecated"

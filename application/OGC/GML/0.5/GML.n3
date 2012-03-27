@@ -8,7 +8,7 @@
 @prefix ogc: <http://purl.org/ifgi/geosparql#> .
 @prefix time: <http://w3.org/2006/time#> .
 
-_:node16p9s1qvix2 a owl:Ontology ;
+_:node16p9stmfcx2 a owl:Ontology ;
 	rdfs:label "GML" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/dul#> , <http://purl.org/ifgi/geosparql#> , <http://purl.org/ifgi/time#> ;
@@ -75,13 +75,13 @@ _:node16p9s1qvix2 a owl:Ontology ;
 
 :upperCorner a rdf:Property ;
 	rdfs:domain :Envelope ;
-	rdfs:range rdfs:Literal ;
+	rdfs:range xsd:string ;
 	dc:identifier "upper corner@en"^^xsd:string ;
 	dc:description "deprecated"^^xsd:string .
 
 :lowerCorner a rdf:Property ;
 	rdfs:domain :Envelope ;
-	rdfs:range rdfs:Literal ;
+	rdfs:range xsd:string ;
 	dc:identifier "lower corner@en"^^xsd:string ;
 	dc:description "deprecated"^^xsd:string .
 
