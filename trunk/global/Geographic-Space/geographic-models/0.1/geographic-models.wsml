@@ -42,10 +42,12 @@ relation atRisk (ofType dul#Plan, ofType dul#Risk)
 		dc#identifier hasValue "at risk@en"
 	endAnnotations
 
+/*
 relation predicts (ofType PredictedEvent, ofType ge#geographical_event)
 	annotations
 		dc#identifier hasValue "predicts@en"
 	endAnnotations
+*/
 
 relation isComputedBy (ofType VirtualObservation, ofType ComputationalModel)
 	annotations
@@ -61,74 +63,76 @@ relation describedLocation (ofType dul#Description, ofType DescribedLocation)
 // Concepts
 concept Risk subConceptOf dul#Concept
 	annotations
-		dc#title hasValue "Risk@en"
-		dc#title hasValue "Risiko@de"
+		dc#identifier hasValue "Risk@en"
+		dc#identifier hasValue "Risiko@de"
 		dc#description hasValue "Risk is the likelihood of harm (in the context of a plan)"
 	endAnnotations
 
 concept RiskDescription subConceptOf dul#Description
 	annotations
-		dc#title hasValue "Risk Description@en"
-		dc#title hasValue "Risiko Beschreibung@de"
+		dc#identifier hasValue "Risk Description@en"
+		dc#identifier hasValue "Risiko Beschreibung@de"
 	endAnnotations
 	hasRiskLevel ofType _string
 
 concept Hazard subConceptOf dul#Concept
 	annotations
-		dc#title hasValue "Hazard@en"
-		dc#title hasValue "Gefahr@de"
+		dc#identifier hasValue "Hazard@en"
+		dc#identifier hasValue "Gefahr@de"
 		dc#description hasValue "Hazard is the potential to cause harm"
 	endAnnotations
 
 concept HazardLevelDescription subConceptOf dul#Description
 	annotations
-		dc#title hasValue "Hazard Description@en"
-		dc#title hasValue "Gefährdung Beschreibung@de"
+		dc#identifier hasValue "Hazard Description@en"
+		dc#identifier hasValue "Gefährdung Beschreibung@de"
 	endAnnotations
 	hasHazardLevel ofType _string
 	
 	
 concept ComputationalModel subConceptOf dul#Workflow 
 	annotations
-		dc#title hasValue "Computational Model@en"
-		dc#title hasValue "Computermodell@de"
+		dc#identifier hasValue "Computational Model@en"
+		dc#identifier hasValue "Computermodell@de"
 	endAnnotations
 
 concept GeographicalModel subConceptOf dul#Description
 	annotations
-		dc#title hasValue "Geographical Model@en"
-		dc#title hasValue "Geographisches Modell@de"
+		dc#identifier hasValue "Geographical Model@en"
+		dc#identifier hasValue "Geographisches Modell@de"
 	endAnnotations
 
 concept EnvironmentalModel subConceptOf GeographicalModel
 	annotations
-		dc#title hasValue "Environmental Model@en"
-		dc#title hasValue "Umweltmodell@de"
+		dc#identifier hasValue "Environmental Model@en"
+		dc#identifier hasValue "Umweltmodell@de"
 	endAnnotations
 
 concept SocialModel subConceptOf GeographicalModel
 	annotations
-		dc#title hasValue "Social Model@en"
-		dc#title hasValue "Gesellschaftsmodell@de"
+		dc#identifier hasValue "Social Model@en"
+		dc#identifier hasValue "Gesellschaftsmodell@de"
 	endAnnotations
 
 concept ForecastModel subConceptOf ComputationalModel
 	annotations
-		dc#title hasValue "Forecast Model@en"
-		dc#title hasValue "Vorhersagemodell@de"
+		dc#identifier hasValue "Forecast Model@en"
+		dc#identifier hasValue "Vorhersagemodell@de"
 	endAnnotations
 
+/*
 concept PredictedEvent subConceptOf dul#Situation
 	annotations
-		dc#title hasValue "Predicted Event@en"
-		dc#title hasValue "Vorhergesagtes Ereignis@de"
+		dc#identifier hasValue "Predicted Event@en"
+		dc#identifier hasValue "Vorhergesagtes Ereignis@de"
 	endAnnotations
 	predicts ofType ge#geographical_event
+*/
 
 concept PredictedEventObservation subConceptOf VirtualObservation
 	annotations
-		dc#title hasValue "Predicted Observation@en"
-		dc#title hasValue "Vorhergesagte Beobachtung@de"
+		dc#identifier hasValue "Predicted Observation@en"
+		dc#identifier hasValue "Vorhergesagte Beobachtung@de"
 	endAnnotations
 	isComputedBy ofType ForecastModel
 	predicts ofType ge#geographical_event
@@ -136,31 +140,32 @@ concept PredictedEventObservation subConceptOf VirtualObservation
 
 concept VirtualObservation subConceptOf ssn#Observation
 	annotations
-		dc#title hasValue "Virtual Observation@en"
-		dc#title hasValue "Virtuelle Beobachtung@de"
+		dc#identifier hasValue "Virtual Observation@en"
+		dc#identifier hasValue "Virtuelle Beobachtung@de"
 	endAnnotations
 	isComputedBy ofType ComputationalModel
 
 
 concept EventProbability subConceptOf Probability
 	annotations
-		dc#title hasValue "Event Probability@en"
-		dc#title hasValue "Ereignis Wahrscheinlichkeit@de"
+		dc#identifier hasValue "Event Probability@en"
+		dc#identifier hasValue "Ereignis Wahrscheinlichkeit@de"
 	endAnnotations
 	dul#isQualityOf ofType {ge#geographical_event, Hazard}
 
  
 concept Probability subConceptOf dul#Quality
 	annotations
-		dc#title hasValue "Probability@en"
-		dc#title hasValue "Wahrscheinlichkeit@de"
+		dc#identifier hasValue "Probability@en"
+		dc#identifier hasValue "Wahrscheinlichkeit@de"
 	endAnnotations
 	dul#isQualityOf	ofType dul#Event
 
 	
 concept PredictedEventDescription subConceptOf geoDesc#SitationDescription
 	annotations
-		dc#title hasValue "Description of Predicted Event Observation@en"
+		dc#identifier hasValue "Description of Predicted Event Observation@en"
+		dc#identifier hasValue "Beschreibung einer vorhergesagten Beobachtung@de"
 	endAnnotations
 	dul#describes ofType PredictedEventObservation
 	associatedHazardLevel ofType HazardLevelDescription

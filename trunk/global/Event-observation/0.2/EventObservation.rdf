@@ -11,7 +11,7 @@
 	xmlns:gModel="http://purl.org/ifgi/geomodels#"
 	xmlns:gDesc="http://purl.org/ifgi/geodesc#">
 
-<rdf:Description rdf:nodeID="node16odv355hx1">
+<rdf:Description rdf:nodeID="node16s6lufdex1">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>EventObservation</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -155,15 +155,6 @@
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/event-observation#EventObservation"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#describes"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://purl.org/ifgi/event-observation#EventObservationDescription_prop_describedLocation">
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label>http://purl.org/ifgi/geodesc#describedLocation</rdfs:label>
-	<rdfs:domain rdf:resource="http://purl.org/ifgi/event-observation#EventObservationDescription"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:range rdf:resource="http://purl.org/ifgi/geodesc#DescribedLocation"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/geodesc#describedLocation"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/event-observation#EventDetectionProcedure">
