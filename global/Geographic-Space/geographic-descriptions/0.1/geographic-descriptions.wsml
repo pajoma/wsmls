@@ -27,12 +27,19 @@ ontology geographic_descriptions
 					 }
    
 concept SitationDescription subConceptOf dul#Description
+	annotations
+		dc#identifier hasValue "situation description@en"
+		dc#identifier hasValue "Situationsbeschreibung@de"
+		dc#description hasValue "Description of a situation, e.g. event or observation."
+	endAnnotations
 	describes ofType dul#Situation
 	describedLocation ofType LocationDescription
  
 concept GeographicalDescription subConceptOf dul#Description
 	annotations
-		dc#title hasValue "Description of Geographic Unit"	
+		dc#identifier hasValue "geographical description@en"
+		dc#identifier hasValue "geographische Beschreibung@de"
+		dc#description hasValue "Description of a geographical unit."
 	endAnnotations
 	describes ofType gspace#geographical_unit
 	describedLocation ofType LocationDescription
@@ -40,7 +47,9 @@ concept GeographicalDescription subConceptOf dul#Description
 	
 concept LocationDescription subConceptOf {geosparql#Geometry, time#TemporalEntity, dul#Description}
 	annotations
-		dc#identifier hasValue "Description of spatio-temporal location of a geographic unit."
+		dc#identifier hasValue "location description@en"
+		dc#identifier hasValue "Standortbeschreibung@de"
+		dc#description hasValue "Description of spatio-temporal location of a geographic unit."
 	endAnnotations
 	isRelatedToDescription ofType dul#Description
 	

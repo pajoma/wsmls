@@ -56,7 +56,6 @@ ontology EventObservation
 			dc#description hasValue "Description of the observed situation."
 		endAnnotations
 		dul#describes ofType EventObservation
-		gDesc#describedLocation ofType gDesc#DescribedLocation
 			
 	concept EventDetectionProcedure subConceptOf ssn#Sensing
 		annotations

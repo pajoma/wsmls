@@ -12,7 +12,7 @@
 	xmlns:geosparql="http://purl.org/ifgi/geosparql#"
 	xmlns:time="http://purl.org/ifgi/time#">
 
-<rdf:Description rdf:nodeID="node16odvr0ntx1">
+<rdf:Description rdf:nodeID="node16s6lufdex3">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>geographic_descriptions</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -33,6 +33,9 @@
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/geodesc#SitationDescription</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dul#Description"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">situation description@en</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Situationsbeschreibung@de</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Description of a situation, e.g. event or observation.</dc:description>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/geodesc#SitationDescription_prop_describes">
@@ -55,7 +58,9 @@
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/geodesc#GeographicalDescription</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dul#Description"/>
-	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Description of Geographic Unit</dc:title>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">geographical description@en</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">geographische Beschreibung@de</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Description of a geographical unit.</dc:description>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/geodesc#GeographicalDescription_prop_describes">
@@ -80,7 +85,9 @@
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geosparql#Geometry"/>
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/time#TemporalEntity"/>
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dul#Description"/>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Description of spatio-temporal location of a geographic unit.</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">location description@en</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Standortbeschreibung@de</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Description of spatio-temporal location of a geographic unit.</dc:description>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/geodesc#LocationDescription_prop_isRelatedToDescription">

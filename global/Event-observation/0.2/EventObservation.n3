@@ -9,7 +9,7 @@
 @prefix gModel: <http://purl.org/ifgi/geomodels#> .
 @prefix gDesc: <http://purl.org/ifgi/geodesc#> .
 
-_:node16odv3c1lx1 a owl:Ontology ;
+_:node16s6lufdex2 a owl:Ontology ;
 	rdfs:label "EventObservation" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/dul#> , <http://purl.org/ifgi/ssn#> , <http://purl.org/ifgi/geomodels#> , <http://purl.org/ifgi/geodesc#> ;
@@ -119,13 +119,6 @@ _:node16odv3c1lx1 a owl:Ontology ;
 	a rdf:Property ;
 	rdfs:range :EventObservation ;
 	rdfs:subPropertyOf dul:describes .
-
-:EventObservationDescription_prop_describedLocation a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/geodesc#describedLocation" ;
-	rdfs:domain :EventObservationDescription ;
-	a rdf:Property ;
-	rdfs:range gDesc:DescribedLocation ;
-	rdfs:subPropertyOf gDesc:describedLocation .
 
 :EventDetectionProcedure a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/event-observation#EventDetectionProcedure" ;
