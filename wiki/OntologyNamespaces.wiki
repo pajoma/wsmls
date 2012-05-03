@@ -6,7 +6,7 @@ All ontologies of this repository are listed here. Ontologies highlighted green 
 
 ==== DOLCE ====
 
-|| *Ontology* || *Namespace* || *Location* ||
+|| *Ontology* || *Namespace* || *Location* || *Doc* ||
 || <font color="#04B404">DOLCE_Lite</font> || <font color="#04B404">http://purl.org/ifgi/dolce</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Dolce/0.2/DOLCE-Lite.rdf</font> ||
 || <font color="#04B404">DOLCE_Ultralite</font> || <font color="#04B404">http://purl.org/ifgi/dul</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/DUL/0.1//DOLCE-Ultralite.rdf</font> ||
 || <font color="#04B404">DOLCE_ExtendedDnS</font> || <font color="#04B404">http://purl.org/ifgi/dolceDnS</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Dolce-Modules/ExtendedDnS/0.2/DOLCE_ExtendedDnS.rdf</font> ||
