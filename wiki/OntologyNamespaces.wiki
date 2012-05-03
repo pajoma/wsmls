@@ -7,7 +7,7 @@ All ontologies of this repository are listed here. Ontologies highlighted green 
 ==== DOLCE ====
 
 || *Ontology* || *Namespace* || *Location* || *Doc* ||
-|| <font color="#04B404">DOLCE_Lite</font> || <font color="#04B404">http://purl.org/ifgi/dolce</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Dolce/0.2/DOLCE-Lite.rdf</font> || [http://wsmls.googlecode.com/svn/trunk/application/OGC/GeoSPARQL/0.1/GeoSPARQL.html http://code.google.com/p/wsmls/source/browse/trunk/misc/figures/Doc-32.png] ||
+|| <font color="#04B404">DOLCE_Lite</font> || <font color="#04B404">http://purl.org/ifgi/dolce</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Dolce/0.2/DOLCE-Lite.rdf</font> || [http://wsmls.googlecode.com/svn/trunk/application/OGC/GeoSPARQL/0.1/GeoSPARQL.html http://wsmls.googlecode.com/svn/trunk/misc/figures/Doc-32.png] ||
 || <font color="#04B404">DOLCE_Ultralite</font> || <font color="#04B404">http://purl.org/ifgi/dul</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/DUL/0.1//DOLCE-Ultralite.rdf</font> ||
 || <font color="#04B404">DOLCE_ExtendedDnS</font> || <font color="#04B404">http://purl.org/ifgi/dolceDnS</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Dolce-Modules/ExtendedDnS/0.2/DOLCE_ExtendedDnS.rdf</font> ||
 || <font color="#04B404">{{{DOLCE_SpatialRelations}}}</font> || <font color="#04B404">http://purl.org/ifgi/dolceSpatial</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Dolce-Modules/SpatialRelations/0.2/DOLCE_SpatialRelations.rdf</font> ||
