@@ -9,11 +9,12 @@
 @prefix ge: <http://purl.org/ifgi/geoevents#> .
 @prefix ssn: <http://purl.org/ifgi/ssn#> .
 @prefix geoDesc: <http://purl.org/ifgi/geodesc#> .
+@prefix eo: <http://purl.org/ifgi/event-observation#> .
 
-_:node16s6lufdex8 a owl:Ontology ;
+_:node16s8u3mk6x2 a owl:Ontology ;
 	rdfs:label "geographical_model" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
-	owl:imports <http://purl.org/ifgi/geoevents#> , <http://purl.org/ifgi/ssn#> , <http://purl.org/ifgi/dul#> , <http://purl.org/ifgi/geodesc#> .
+	owl:imports <http://purl.org/ifgi/geoevents#> , <http://purl.org/ifgi/event-observation#> .
 
 :Risk a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/geomodels#Risk" ;
@@ -128,23 +129,29 @@ _:node16s6lufdex8 a owl:Ontology ;
 	rdfs:range dul:Event ;
 	rdfs:subPropertyOf dul:isQualityOf .
 
-:PredictedEventDescription a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/geomodels#PredictedEventDescription" ;
+:PredictedEventObservationDescription a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geomodels#PredictedEventObservationDescription" ;
 	rdfs:subClassOf geoDesc:SitationDescription ;
 	dc:identifier "Description of Predicted Event Observation@en"^^xsd:string , "Beschreibung einer vorhergesagten Beobachtung@de"^^xsd:string .
 
-:PredictedEventDescription_prop_describes a rdf:Property ;
+:PredictedEventObservationDescription_prop_describes a rdf:Property ;
 	rdfs:label "http://purl.org/ifgi/dul#describes" ;
-	rdfs:domain :PredictedEventDescription ;
+	rdfs:domain :PredictedEventObservationDescription ;
 	a rdf:Property ;
 	rdfs:range :PredictedEventObservation ;
 	rdfs:subPropertyOf dul:describes .
 
-:PredictedEventDescription_prop_associatedHazardLevel a rdf:Property ;
+:PredictedEventObservationDescription_prop_associatedHazardLevel a rdf:Property ;
 	rdfs:label "http://purl.org/ifgi/geomodels#associatedHazardLevel" ;
-	rdfs:domain :PredictedEventDescription ;
+	rdfs:domain :PredictedEventObservationDescription ;
 	a rdf:Property ;
 	rdfs:range :HazardLevelDescription .
+
+:PredictedEventObservationDescription_prop_hasSource a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/geomodels#hasSource" ;
+	rdfs:domain :PredictedEventObservationDescription ;
+	a rdf:Property ;
+	rdfs:range eo:EventObservationDescription .
 
 :isAffectedBy a rdf:Property ;
 	rdfs:domain dul:Plan ;
