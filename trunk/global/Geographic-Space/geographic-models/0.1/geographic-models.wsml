@@ -6,17 +6,15 @@ namespace { _"http://purl.org/ifgi/geomodels#",
     dul _"http://purl.org/ifgi/dul#",
 	ge _"http://purl.org/ifgi/geoevents#", 
 	ssn _"http://purl.org/ifgi/ssn#",
-	geoDesc _"http://purl.org/ifgi/geodesc#"
+	geoDesc _"http://purl.org/ifgi/geodesc#",
+	eo _"http://purl.org/ifgi/event-observation#"
  }
 
 ontology geographical_model 
 
 	importsOntology {
 		_"http://purl.org/ifgi/geoevents#",
-		_"http://purl.org/ifgi/ssn#",
-		_"http://purl.org/ifgi/dul#",
-		_"http://purl.org/ifgi/geodesc#",
-		_"http://purl.org/ifgi/geoevents#"			
+		_"http://purl.org/ifgi/event-observation#"
 	}
 
 /*
@@ -162,13 +160,14 @@ concept Probability subConceptOf dul#Quality
 	dul#isQualityOf	ofType dul#Event
 
 	
-concept PredictedEventDescription subConceptOf geoDesc#SitationDescription
+concept PredictedEventObservationDescription subConceptOf geoDesc#SitationDescription
 	annotations
 		dc#identifier hasValue "Description of Predicted Event Observation@en"
 		dc#identifier hasValue "Beschreibung einer vorhergesagten Beobachtung@de"
 	endAnnotations
 	dul#describes ofType PredictedEventObservation
 	associatedHazardLevel ofType HazardLevelDescription
+	hasSource ofType eo#EventObservationDescription
 
 	
 

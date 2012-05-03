@@ -281,5 +281,77 @@ ontology FloodScenario
 			dc#source hasValue "http://en.wikipedia.org/wiki/Flood"
 		endnfp
 
+//relations
+	
+	relation downstream (ofType gs#geographical_unit, ofType gs#geographical_unit)
+		annotations
+			dc#identifier hasValue "downstream@en"
+			dc#identifier hasValue "flussabwärts@de"
+			dc#description hasValue "downstream defines a relation of two geographical units being located near by a river. The second geographical unit can be reached from the first on by going along the river with a direction compliant to the flow direction of the river."
+		endAnnotations
+	
+	relation upstream (ofType gs#geographical_unit, ofType gs#geographical_unit)
+		annotations
+			dc#identifier hasValue "upstream@en"
+			dc#identifier hasValue "flussaufwärts@de"
+			dc#description hasValue "upstream defines a relation of two geographical units being located near by a river. The second geographical unit can be reached from the first on by going along the river with a direction opposed to the flow direction of the river."
+		endAnnotations
 
+//axioms
 
+	axiom validate_downstream
+		definedBy
+			!- downstream(?x1,?x2) and
+			?x1 memberOf gs#geographical_unit and
+			?x2 memberOf gs#geographical_unit and
+			?y memberOf River and
+			naf (nearBy(?x1,?y) and nearBy(?x2,?y)). 
+	
+	axiom validate_upstream
+		definedBy
+			!- upstream(?x1,?x2) and
+			?x1 memberOf gs#geographical_unit and
+			?x2 memberOf gs#geographical_unit and
+			?y memberOf River and
+			naf (nearBy(?x1,?y) and nearBy(?x2,?y)). 
+			
+	axiom upstream_disjoint_downstream
+		definedBy
+			!- downstream(?x,?y) and upstream(?x,?y). 
+
+	axiom upstream_inverse
+		definedBy
+			?x memberOf gs#geographical_unit and
+			?y memberOf gs#geographical_unit and
+			upstream(?x,?y)
+			implies 
+			downstream(?y,?x). 
+			
+	axiom downstream_inverse
+		definedBy
+			?x memberOf gs#geographical_unit and
+			?y memberOf gs#geographical_unit and
+			downstream(?x,?y)
+			implies 
+			upstream(?y,?x). 
+	
+	axiom upstream_transitive
+		definedBy
+			?x memberOf gs#geographical_unit and
+			?y memberOf gs#geographical_unit and
+			?z memberOf gs#geographical_unit and
+			upstream(?x,?y) and
+			upstream(?y,?z)
+			implies
+			upstream(?x,?z). 
+			
+	axiom downstream_transitive
+		definedBy
+			?x memberOf gs#geographical_unit and
+			?y memberOf gs#geographical_unit and
+			?z memberOf gs#geographical_unit and
+			downstream(?x,?y) and
+			downstream(?y,?z)
+			implies
+			downstream(?x,?z). 
+			
