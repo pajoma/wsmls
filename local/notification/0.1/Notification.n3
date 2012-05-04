@@ -9,21 +9,14 @@
 @prefix flood: <http://purl.org/ifgi/water/flood#> .
 @prefix eo: <http://purl.org/ifgi/event-observation#> .
 @prefix gDesc: <http://purl.org/ifgi/geodesc#> .
+@prefix ssn: <http://purl.org/ifgi/ssn#> .
 @prefix dul: <http://purl.org/ifgi/dul#> .
 @prefix geomod: <http://purl.org/ifgi/geomodels#> .
 
-_:node16sc4qmuex25 a owl:Ontology ;
+_:node16scfvroax24 a owl:Ontology ;
 	rdfs:label "NotificationOntology" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
-	owl:imports <http://purl.org/ifgi/affecting-environment#> , <http://purl.org/ifgi/water/flood#> , <http://purl.org/ifgi/geomodels#> ;
-	dc:creator "Henry Michels (ifgi)"^^xsd:string ;
-	dc:contributor "Marcell Roth (ifgi)"^^xsd:string ;
-	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
-	dc:rights "http://creativecommons.org/licenses/by/3.0/"^^xsd:string ;
-	dc:type "Domain Ontology"^^xsd:string ;
-	dc:description ""^^xsd:string ;
-	dc:title "Notification Ontology"^^xsd:string ;
-	dc:subject ""^^xsd:string .
+	owl:imports <http://purl.org/ifgi/affecting-environment#> , <http://purl.org/ifgi/water/flood#> , <http://purl.org/ifgi/geomodels#> .
 
 :stay_at_place a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/notification#stay_at_place" ;
@@ -113,7 +106,7 @@ _:node16sc4qmuex25 a owl:Ontology ;
 
 :city a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/notification#city" ;
-	rdfs:subClassOf gspace:geographical_unit .
+	rdfs:subClassOf ae:affected_object .
 
 :city_prop_situated_in a rdf:Property ;
 	rdfs:label "http://purl.org/ifgi/geospace#situated_in" ;
@@ -129,7 +122,7 @@ _:node16sc4qmuex25 a owl:Ontology ;
 
 :village a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/notification#village" ;
-	rdfs:subClassOf gspace:geographical_unit .
+	rdfs:subClassOf ae:affected_object .
 
 :village_prop_situated_in a rdf:Property ;
 	rdfs:label "http://purl.org/ifgi/geospace#situated_in" ;
@@ -143,13 +136,63 @@ _:node16sc4qmuex25 a owl:Ontology ;
 	a rdf:Property ;
 	rdfs:range xsd:string .
 
-_:node16sc4qmuex26 rdfs:label "http://purl.org/ifgi/notification#flooding" ;
+:newFact a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/notification#newFact" .
+
+_:node16scfvroax25 rdfs:label "http://purl.org/ifgi/notification#predict_flooding_50" ;
 	a <http://www.wsmo.org/wsml/wsml-syntax#Axiom> ;
 	rdf:value """?eventobsdesc[_\"http://purl.org/ifgi/geodesc#describedLocation\" hasValue ?descLoc, _\"http://purl.org/ifgi/dul#describes\" hasValue ?eventobs] memberOf _\"http://purl.org/ifgi/event-observation#EventObservationDescription\"
  and ?eventobs[_\"http://purl.org/ifgi/dul#isClassifiedBy\" hasValue ?eventobstype] memberOf _\"http://purl.org/ifgi/event-observation#EventObservation\"
  and ?eventobstype memberOf _\"http://purl.org/ifgi/water/flood#ActionStageToMinorFloodingStage\"
+ and ?predictedeventobsdesc memberOf _\"http://purl.org/ifgi/notification#newFact\"
+ and ?predictedeventobs memberOf _\"http://purl.org/ifgi/notification#newFact\"
+ and ?hazlevdes memberOf _\"http://purl.org/ifgi/notification#newFact\"
+ and ?event memberOf _\"http://purl.org/ifgi/notification#newFact\"
  implies 
 ?predictedeventobsdesc[_\"http://purl.org/ifgi/geodesc#describedLocation\" hasValue ?descLoc, _\"http://purl.org/ifgi/dul#describes\" hasValue ?predictedeventobs, _\"http://purl.org/ifgi/geomodels#associatedHazardLevel\" hasValue ?hazlevdesc, _\"http://purl.org/ifgi/geomodels#hasSource\" hasValue ?eventobsdesc] memberOf _\"http://purl.org/ifgi/geomodels#PredictedEventObservationDescription\"
  and ?predictedeventobs[_\"http://purl.org/ifgi/geomodels#predicts\" hasValue ?event] memberOf _\"http://purl.org/ifgi/geomodels#PredictedEventObservation\"
  and ?hazlevdesc[_\"http://purl.org/ifgi/geomodels#hasHazardLevel\" hasValue \"50\"] memberOf _\"http://purl.org/ifgi/water/flood#HazardLevelDescription\"
  and ?event memberOf _\"http://purl.org/ifgi/water/flood#Flood\". """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> .
+
+_:node16scfvroax26 rdfs:label "http://purl.org/ifgi/notification#predict_flooding_70" ;
+	a <http://www.wsmo.org/wsml/wsml-syntax#Axiom> ;
+	rdf:value """?eventobsdesc[_\"http://purl.org/ifgi/geodesc#describedLocation\" hasValue ?descLoc, _\"http://purl.org/ifgi/dul#describes\" hasValue ?eventobs] memberOf _\"http://purl.org/ifgi/event-observation#EventObservationDescription\"
+ and ?eventobs[_\"http://purl.org/ifgi/dul#isClassifiedBy\" hasValue ?eventobstype] memberOf _\"http://purl.org/ifgi/event-observation#EventObservation\"
+ and ?eventobstype memberOf _\"http://purl.org/ifgi/water/flood#MinorFloodingStageToModerateFloodingStage\"
+ and ?predictedeventobsdesc memberOf _\"http://purl.org/ifgi/notification#newFact\"
+ and ?predictedeventobs memberOf _\"http://purl.org/ifgi/notification#newFact\"
+ and ?hazlevdes memberOf _\"http://purl.org/ifgi/notification#newFact\"
+ and ?event memberOf _\"http://purl.org/ifgi/notification#newFact\"
+ implies 
+?predictedeventobsdesc[_\"http://purl.org/ifgi/geodesc#describedLocation\" hasValue ?descLoc, _\"http://purl.org/ifgi/dul#describes\" hasValue ?predictedeventobs, _\"http://purl.org/ifgi/geomodels#associatedHazardLevel\" hasValue ?hazlevdesc, _\"http://purl.org/ifgi/geomodels#hasSource\" hasValue ?eventobsdesc] memberOf _\"http://purl.org/ifgi/geomodels#PredictedEventObservationDescription\"
+ and ?predictedeventobs[_\"http://purl.org/ifgi/geomodels#predicts\" hasValue ?event] memberOf _\"http://purl.org/ifgi/geomodels#PredictedEventObservation\"
+ and ?hazlevdesc[_\"http://purl.org/ifgi/geomodels#hasHazardLevel\" hasValue \"50\"] memberOf _\"http://purl.org/ifgi/water/flood#HazardLevelDescription\"
+ and ?event memberOf _\"http://purl.org/ifgi/water/flood#Flood\". """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> .
+
+_:node16scfvroax27 rdfs:label "http://purl.org/ifgi/notification#predict_flooding_90" ;
+	a <http://www.wsmo.org/wsml/wsml-syntax#Axiom> ;
+	rdf:value """?eventobsdesc[_\"http://purl.org/ifgi/geodesc#describedLocation\" hasValue ?descLoc, _\"http://purl.org/ifgi/dul#describes\" hasValue ?eventobs] memberOf _\"http://purl.org/ifgi/event-observation#EventObservationDescription\"
+ and ?eventobs[_\"http://purl.org/ifgi/dul#isClassifiedBy\" hasValue ?eventobstype] memberOf _\"http://purl.org/ifgi/event-observation#EventObservation\"
+ and ?eventobstype memberOf _\"http://purl.org/ifgi/water/flood#ModerateFloodingStageToMajorFloodingStage\"
+ and ?predictedeventobsdesc memberOf _\"http://purl.org/ifgi/notification#newFact\"
+ and ?predictedeventobs memberOf _\"http://purl.org/ifgi/notification#newFact\"
+ and ?hazlevdes memberOf _\"http://purl.org/ifgi/notification#newFact\"
+ and ?event memberOf _\"http://purl.org/ifgi/notification#newFact\"
+ implies 
+?predictedeventobsdesc[_\"http://purl.org/ifgi/geodesc#describedLocation\" hasValue ?descLoc, _\"http://purl.org/ifgi/dul#describes\" hasValue ?predictedeventobs, _\"http://purl.org/ifgi/geomodels#associatedHazardLevel\" hasValue ?hazlevdesc, _\"http://purl.org/ifgi/geomodels#hasSource\" hasValue ?eventobsdesc] memberOf _\"http://purl.org/ifgi/geomodels#PredictedEventObservationDescription\"
+ and ?predictedeventobs[_\"http://purl.org/ifgi/geomodels#predicts\" hasValue ?event] memberOf _\"http://purl.org/ifgi/geomodels#PredictedEventObservation\"
+ and ?hazlevdesc[_\"http://purl.org/ifgi/geomodels#hasHazardLevel\" hasValue \"50\"] memberOf _\"http://purl.org/ifgi/water/flood#HazardLevelDescription\"
+ and ?event memberOf _\"http://purl.org/ifgi/water/flood#Flood\". """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> .
+
+_:node16scfvroax28 rdfs:label "http://purl.org/ifgi/notification#change_state_to_flooded" ;
+	a <http://www.wsmo.org/wsml/wsml-syntax#Axiom> ;
+	rdf:value """?predictedeventobsdesc[_\"http://purl.org/ifgi/geodesc#describedLocation\" hasValue ?descLoc, _\"http://purl.org/ifgi/dul#describes\" hasValue ?predictedeventobs, _\"http://purl.org/ifgi/geomodels#associatedHazardLevel\" hasValue ?hazlevdesc, _\"http://purl.org/ifgi/geomodels#hasSource\" hasValue ?eventobsdesc] memberOf _\"http://purl.org/ifgi/geomodels#PredictedEventObservationDescription\"
+ and ?predictedeventobs[_\"http://purl.org/ifgi/geomodels#predicts\" hasValue ?event] memberOf _\"http://purl.org/ifgi/geomodels#PredictedEventObservation\"
+ and ?hazlevdesc[_\"http://purl.org/ifgi/geomodels#hasHazardLevel\" hasValue ?probability] memberOf _\"http://purl.org/ifgi/water/flood#HazardLevelDescription\"
+ and ?event memberOf _\"http://purl.org/ifgi/water/flood#Flood\"
+ and ?probability > 50
+ and ?watlevsensdesc[_\"http://purl.org/ifgi/geodesc#describes\" hasValue ?watlevsens, _\"http://purl.org/ifgi/geodesc#describedLocation\" hasValue ?watlevsensloc] memberOf _\"http://purl.org/ifgi/geodesc#GeographicalDescription\"
+ and ?watlevsensloc = ?descLoc
+ and ?watlevsens[_\"http://purl.org/ifgi/water/flood#downstream\" hasValue ?dobj1] memberOf _\"http://purl.org/ifgi/water/flood#WaterLevelSensor\"
+ and ?dobj1[_\"http://purl.org/ifgi/water/flood#downstream\" hasValue ?dobj2] memberOf _\"http://purl.org/ifgi/affecting-environment#affected_object\"
+ and ?dobj2 memberOf _\"http://purl.org/ifgi/affecting-environment#affected_object\". """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> .

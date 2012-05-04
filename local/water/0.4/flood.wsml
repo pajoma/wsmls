@@ -75,7 +75,14 @@ ontology FloodScenario
 			dc#identifier hasValue "dam gate@en"
 			dc#description hasValue "The gate(s) of a dam control(s) the water discharge of the reservoir."
 		endAnnotations
-			
+	
+	concept WaterLevelSensor subConceptOf {ssn#Sensor, gu#anthropogenic_unit}
+		annotations
+			dc#identifier hasValue "water level sensor@en"
+			dc#identifier hasValue "Wasserstandsmesser@de"
+			dc#description hasValue ""
+		endAnnotations
+		gs#nearBy ofType River			
 		
 	
 	// Parameters

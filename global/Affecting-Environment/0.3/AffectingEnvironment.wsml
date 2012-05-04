@@ -7,16 +7,16 @@ namespace {_"http://purl.org/ifgi/affecting-environment#",
 
 
 ontology AffectingEnvironment
-	annotations
-     	dc#creator hasValue "Henry Michels (ifgi)"
-		dc#contributor hasValue "Marcell Roth (ifgi)"
-		dc#publisher hasValue "(a)IfGI, University of Muenster"
-		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
-		dc#type hasValue "Domain Ontology"
-		dc#description hasValue "" 
-		dc#title hasValue "Affecting Environment Ontology"	
-		dc#subject hasValue ""			
-	endAnnotations
+//	annotations
+//     	dc#creator hasValue "Henry Michels (ifgi)"
+//		dc#contributor hasValue "Marcell Roth (ifgi)"
+//		dc#publisher hasValue "(a)IfGI, University of Muenster"
+//		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+//		dc#type hasValue "Domain Ontology"
+//		dc#description hasValue "" 
+//		dc#title hasValue "Affecting Environment Ontology"	
+//		dc#subject hasValue ""			
+//	endAnnotations
      
 	importsOntology {_"http://purl.org/ifgi/dolce#", _"http://purl.org/ifgi/geospace#"}
 
