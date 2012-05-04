@@ -9,7 +9,7 @@
 	xmlns:dolce="http://purl.org/ifgi/dolce#"
 	xmlns:gspace="http://purl.org/ifgi/geospace#">
 
-<rdf:Description rdf:nodeID="node16sc2kj8bx5">
+<rdf:Description rdf:nodeID="node16sc4qmuex1">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>AffectingEnvironment</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -244,7 +244,7 @@
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#Particular"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16sc2kj8bx6">
+<rdf:Description rdf:nodeID="node16sc4qmuex2">
 	<rdfs:label>http://purl.org/ifgi/affecting-environment#parthood_reflexiv</rdfs:label>
 	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
 	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?x memberOf _"http://purl.org/ifgi/dolce#particular"
@@ -257,7 +257,7 @@ true. </rdf:value>
 true. </rdf:value>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16sc2kj8bx7">
+<rdf:Description rdf:nodeID="node16sc4qmuex3">
 	<rdfs:label>http://purl.org/ifgi/affecting-environment#parthood_transitive</rdfs:label>
 	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
 	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?x memberOf _"http://purl.org/ifgi/dolce#particular"
@@ -276,7 +276,7 @@ _"http://purl.org/ifgi/affecting-environment#part_of"(?x,?z). </rdf:value>
 _"http://purl.org/ifgi/affecting-environment#part_of"(?x,?z). </rdf:value>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16sc2kj8bx8">
+<rdf:Description rdf:nodeID="node16sc4qmuex4">
 	<rdfs:label>http://purl.org/ifgi/affecting-environment#partOf_inverse_hasPart</rdfs:label>
 	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
 	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?x memberOf _"http://purl.org/ifgi/dolce#particular"
@@ -291,7 +291,7 @@ _"http://purl.org/ifgi/affecting-environment#has_part"(?y,?x). </rdf:value>
 _"http://purl.org/ifgi/affecting-environment#part_of"(?y,?x). </rdf:value>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16sc2kj8bx9">
+<rdf:Description rdf:nodeID="node16sc4qmuex5">
 	<rdfs:label>http://purl.org/ifgi/affecting-environment#define_inverse_isDefinedBy</rdfs:label>
 	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
 	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?x memberOf {_"http://purl.org/ifgi/affecting-environment#activity",_"http://purl.org/ifgi/affecting-environment#compound_activity"}
@@ -306,7 +306,7 @@ _"http://purl.org/ifgi/affecting-environment#is_defined_by"(?y,?x). </rdf:value>
 _"http://purl.org/ifgi/affecting-environment#define"(?y,?x). </rdf:value>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16sc2kj8bx10">
+<rdf:Description rdf:nodeID="node16sc4qmuex6">
 	<rdfs:label>http://purl.org/ifgi/affecting-environment#participantIn_inverse_hasParticipant</rdfs:label>
 	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
 	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?x memberOf _"http://purl.org/ifgi/affecting-environment#agent"
@@ -321,7 +321,7 @@ _"http://purl.org/ifgi/affecting-environment#has_participant"(?y,?x). </rdf:valu
 _"http://purl.org/ifgi/affecting-environment#participant_in"(?y,?x). </rdf:value>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16sc2kj8bx11">
+<rdf:Description rdf:nodeID="node16sc4qmuex7">
 	<rdfs:label>http://purl.org/ifgi/affecting-environment#isSurroundedBy_inverse_surrounds</rdfs:label>
 	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
 	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?x memberOf _"http://purl.org/ifgi/dolce#physical_object"
@@ -336,7 +336,7 @@ _"http://purl.org/ifgi/affecting-environment#surrounds"(?y,?x). </rdf:value>
 _"http://purl.org/ifgi/affecting-environment#is_surrounded_by"(?y,?x). </rdf:value>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16sc2kj8bx12">
+<rdf:Description rdf:nodeID="node16sc4qmuex8">
 	<rdfs:label>http://purl.org/ifgi/affecting-environment#A1</rdfs:label>
 	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
 	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?x memberOf _"http://purl.org/ifgi/affecting-environment#agent"
@@ -349,7 +349,7 @@ _"http://purl.org/ifgi/affecting-environment#is_surrounded_by"(?y,?x). </rdf:val
 ?e[_"http://purl.org/ifgi/affecting-environment#part_of" hasValue ?u]. </rdf:value>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16sc2kj8bx13">
+<rdf:Description rdf:nodeID="node16sc4qmuex9">
 	<rdfs:label>http://purl.org/ifgi/affecting-environment#A3</rdfs:label>
 	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
 	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?c memberOf _"http://purl.org/ifgi/affecting-environment#compound_affecting_environment"

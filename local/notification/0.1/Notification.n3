@@ -2,172 +2,154 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix : <http://purl.org/ifgi/observation#> .
+@prefix : <http://purl.org/ifgi/notification#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix dolce: <http://purl.org/ifgi/dolce#> .
-@prefix dns: <http://purl.org/ifgi/dolceDnS#> .
+@prefix ae: <http://purl.org/ifgi/affecting-environment#> .
+@prefix gspace: <http://purl.org/ifgi/geospace#> .
+@prefix flood: <http://purl.org/ifgi/water/flood#> .
+@prefix eo: <http://purl.org/ifgi/event-observation#> .
+@prefix gDesc: <http://purl.org/ifgi/geodesc#> .
+@prefix dul: <http://purl.org/ifgi/dul#> .
+@prefix geomod: <http://purl.org/ifgi/geomodels#> .
 
-_:node16sc2kj8bx25 a owl:Ontology ;
-	rdfs:label "Observation" ;
+_:node16sc4qmuex25 a owl:Ontology ;
+	rdfs:label "NotificationOntology" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
-	owl:imports <http://purl.org/ifgi/dolceDnS#> ;
-	dc:publisher "IfGI, University of Muenster"^^xsd:string ;
-	dc:type "Foundational Ontology"^^xsd:string ;
-	dc:title "Observation Foundational Ontology"^^xsd:string ;
-	dc:description "Formalization of Kuhn's Observation and Measurement, with respect to annotate SOSs by Henry Michels"^^xsd:string ;
-	dc:source ""^^xsd:string ;
-	dc:subject "observation, measurement, foundational"^^xsd:string ;
-	dc:date "10-05-2011"^^xsd:string .
+	owl:imports <http://purl.org/ifgi/affecting-environment#> , <http://purl.org/ifgi/water/flood#> , <http://purl.org/ifgi/geomodels#> ;
+	dc:creator "Henry Michels (ifgi)"^^xsd:string ;
+	dc:contributor "Marcell Roth (ifgi)"^^xsd:string ;
+	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
+	dc:rights "http://creativecommons.org/licenses/by/3.0/"^^xsd:string ;
+	dc:type "Domain Ontology"^^xsd:string ;
+	dc:description ""^^xsd:string ;
+	dc:title "Notification Ontology"^^xsd:string ;
+	dc:subject ""^^xsd:string .
 
-:ObservationProcess a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/observation#ObservationProcess" ;
-	rdfs:subClassOf dolce:process ;
-	dc:identifier "observation process@en"^^xsd:string .
+:stay_at_place a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/notification#stay_at_place" ;
+	rdfs:subClassOf ae:activity .
 
-:ObservationProcess_prop_isPerformedBy a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/observation#isPerformedBy" ;
-	rdfs:domain :ObservationProcess ;
+:stay_at_place_prop_define a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/affecting-environment#define" ;
+	rdfs:domain :stay_at_place ;
 	a rdf:Property ;
-	rdfs:range :Sensor .
+	rdfs:range :stay_at_place_environment ;
+	rdfs:subPropertyOf ae:define .
 
-:ObservationProcess_prop_realizes a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/dolceDnS#realizes" ;
-	rdfs:domain :ObservationProcess ;
+:stay_at_place_prop_has_participant a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/affecting-environment#has_participant" ;
+	rdfs:domain :stay_at_place ;
 	a rdf:Property ;
-	rdfs:range :Observation ;
-	rdfs:subPropertyOf dns:realizes .
+	rdfs:range :subscriber ;
+	rdfs:subPropertyOf ae:has_participant .
 
-:Sensor a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/observation#Sensor" ;
-	rdfs:subClassOf dolce:non_agentive_physical_object ;
-	dc:identifier "sensor@en"^^xsd:string .
+:stay_at_place_environment a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/notification#stay_at_place_environment" ;
+	rdfs:subClassOf ae:affecting_environment .
 
-:Sensor_prop_performs a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/observation#performs" ;
-	rdfs:domain :Sensor ;
+:stay_at_place_environment_prop_has_part a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/affecting-environment#has_part" ;
+	rdfs:domain :stay_at_place_environment ;
 	a rdf:Property ;
-	rdfs:range :ObservationProcess .
+	rdfs:range :region ;
+	rdfs:subPropertyOf ae:has_part .
 
-:Sensor_prop_observes a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/observation#observes" ;
-	rdfs:domain :Sensor ;
+:stay_at_place_environment_prop_is_defined_by a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/affecting-environment#is_defined_by" ;
+	rdfs:domain :stay_at_place_environment ;
 	a rdf:Property ;
-	rdfs:range :Observable .
+	rdfs:range :stay_at_place ;
+	rdfs:subPropertyOf ae:is_defined_by .
 
-:Observable a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/observation#Observable" ;
-	rdfs:subClassOf dolce:physical_quality ;
-	dc:identifier "observable@en"^^xsd:string .
+:region a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/notification#region" ;
+	rdfs:subClassOf ae:affected_object .
 
-:Observable_prop_isObservedBy a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/observation#isObservedBy" ;
-	rdfs:domain :Observable ;
+:subscriber a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/notification#subscriber" ;
+	rdfs:subClassOf ae:agent .
+
+:subscriber_prop_participant_in a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/affecting-environment#participant_in" ;
+	rdfs:domain :subscriber ;
 	a rdf:Property ;
-	rdfs:range :Sensor .
+	rdfs:range :stay_at_place ;
+	rdfs:subPropertyOf ae:participant_in .
 
-:ObservedEntity a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/observation#ObservedEntity" ;
-	rdfs:subClassOf dolce:physical_endurant ;
-	dc:identifier "observed entity@en"^^xsd:string .
-
-:ObservedEntity_prop_has_quality a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
-	rdfs:domain :ObservedEntity ;
+:subscriber_prop_has_contact a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/notification#has_contact" ;
+	rdfs:domain :subscriber ;
 	a rdf:Property ;
-	rdfs:range :Observable ;
-	rdfs:subPropertyOf dolce:has_quality .
+	rdfs:range xsd:string .
 
-:ObservedEntity_prop_participant_in a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/dolce#participant_in" ;
-	rdfs:domain :ObservedEntity ;
+:subscriber_prop_has_kind_of_contact a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/notification#has_kind_of_contact" ;
+	rdfs:domain :subscriber ;
 	a rdf:Property ;
-	rdfs:range :Stimulus ;
-	rdfs:subPropertyOf dolce:participant_in .
+	rdfs:range xsd:string .
 
-:Stimulus a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/observation#Stimulus" ;
-	rdfs:subClassOf dolce:process ;
-	dc:identifier "stimulus@en"^^xsd:string .
+:affected a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/notification#affected" ;
+	rdfs:subClassOf ae:state .
 
-:Stimulus_prop_has_participant a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/dolce#has_participant" ;
-	rdfs:domain :Stimulus ;
+:flooded a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/notification#flooded" ;
+	rdfs:subClassOf :affected .
+
+:normal a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/notification#normal" ;
+	rdfs:subClassOf ae:state .
+
+:region_description a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/notification#region_description" ;
+	rdfs:subClassOf gDesc:GeographicalDescription .
+
+:region_description_prop_describes a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/geodesc#describes" ;
+	rdfs:domain :region_description ;
 	a rdf:Property ;
-	rdfs:range :ObservedEntity ;
-	rdfs:subPropertyOf dolce:has_participant .
+	rdfs:range :region ;
+	rdfs:subPropertyOf gDesc:describes .
 
-:Stimulus_prop_isDetectedBy a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/observation#isDetectedBy" ;
-	rdfs:domain :Stimulus ;
-	a rdf:Property ;
-	rdfs:range :Sensor .
+:city a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/notification#city" ;
+	rdfs:subClassOf gspace:geographical_unit .
 
-:Observation a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/observation#Observation" ;
-	rdfs:subClassOf dns:information_object ;
-	dc:identifier "observation@en"^^xsd:string .
+:city_prop_situated_in a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/geospace#situated_in" ;
+	rdfs:domain :city ;
+	rdfs:range :region ;
+	rdfs:subPropertyOf gspace:situated_in .
 
-:Observation_prop_is_realized_by a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/dolceDnS#is_realized_by" ;
-	rdfs:domain :Observation ;
+:city_prop_name a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/notification#name" ;
+	rdfs:domain :city ;
 	a rdf:Property ;
-	rdfs:range :ObservationProcess ;
-	rdfs:subPropertyOf dns:is_realized_by .
+	rdfs:range xsd:string .
 
-:Observation_prop_holds a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/observation#holds" ;
-	rdfs:domain :Observation ;
-	a rdf:Property ;
-	rdfs:range :ObservationValue ;
-	a rdf:Property ;
-	rdfs:range dolce:temporal_region ;
-	a rdf:Property ;
-	rdfs:range dolce:space_region .
+:village a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/notification#village" ;
+	rdfs:subClassOf gspace:geographical_unit .
 
-:ObservationValue a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/observation#ObservationValue" ;
-	rdfs:subClassOf dolce:abstract_quality ;
-	dc:identifier "observation value@en"^^xsd:string .
+:village_prop_situated_in a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/geospace#situated_in" ;
+	rdfs:domain :village ;
+	rdfs:range :region ;
+	rdfs:subPropertyOf gspace:situated_in .
 
-:ObservationValue_prop_value a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/observation#value" ;
-	rdfs:domain :ObservationValue ;
+:village_prop_name a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/notification#name" ;
+	rdfs:domain :village ;
 	a rdf:Property ;
-	rdfs:range xsd:integer ;
-	a rdf:Property ;
-	rdfs:range xsd:float ;
-	a rdf:Property ;
-	rdfs:range xsd:string ;
-	a rdf:Property ;
-	rdfs:range xsd:boolean .
+	rdfs:range xsd:string .
 
-:ObservationValue_prop_q_location a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/dolce#q_location" ;
-	rdfs:domain :ObservationValue ;
-	a rdf:Property ;
-	rdfs:range dolce:measurement_unit ;
-	rdfs:subPropertyOf dolce:q_location .
-
-:performs a rdf:Property ;
-	rdfs:domain :Sensor ;
-	rdfs:range :ObservationProcess ;
-	rdfs:subPropertyOf dolce:participant_in ;
-	dc:identifier "performs@en"^^xsd:string .
-
-:isPerformedBy a rdf:Property ;
-	rdfs:domain :ObservationProcess ;
-	rdfs:range :Sensor ;
-	rdfs:subPropertyOf dolce:participant ;
-	dc:identifier "is performed by@en"^^xsd:string .
-
-_:node16sc2kj8bx26 rdfs:label "http://purl.org/ifgi/observation#performs_inverse_isPerformedBy" ;
+_:node16sc4qmuex26 rdfs:label "http://purl.org/ifgi/notification#flooding" ;
 	a <http://www.wsmo.org/wsml/wsml-syntax#Axiom> ;
-	rdf:value """?x memberOf _\"http://purl.org/ifgi/observation#Sensor\"
- and ?y memberOf _\"http://purl.org/ifgi/observation#ObservationProcess\"
- and _\"http://purl.org/ifgi/observation#performs\"(?x,?y)
+	rdf:value """?eventobsdesc[_\"http://purl.org/ifgi/geodesc#describedLocation\" hasValue ?descLoc, _\"http://purl.org/ifgi/dul#describes\" hasValue ?eventobs] memberOf _\"http://purl.org/ifgi/event-observation#EventObservationDescription\"
+ and ?eventobs[_\"http://purl.org/ifgi/dul#isClassifiedBy\" hasValue ?eventobstype] memberOf _\"http://purl.org/ifgi/event-observation#EventObservation\"
+ and ?eventobstype memberOf _\"http://purl.org/ifgi/water/flood#ActionStageToMinorFloodingStage\"
  implies 
-_\"http://purl.org/ifgi/observation#isPerformedBy\"(?y,?x). """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> , """?x memberOf _\"http://purl.org/ifgi/observation#ObservationProcess\"
- and ?y memberOf _\"http://purl.org/ifgi/observation#Sensor\"
- and _\"http://purl.org/ifgi/observation#isPerformedBy\"(?x,?y)
- implies 
-_\"http://purl.org/ifgi/observation#performs\"(?y,?x). """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> .
+?predictedeventobsdesc[_\"http://purl.org/ifgi/geodesc#describedLocation\" hasValue ?descLoc, _\"http://purl.org/ifgi/dul#describes\" hasValue ?predictedeventobs, _\"http://purl.org/ifgi/geomodels#associatedHazardLevel\" hasValue ?hazlevdesc, _\"http://purl.org/ifgi/geomodels#hasSource\" hasValue ?eventobsdesc] memberOf _\"http://purl.org/ifgi/geomodels#PredictedEventObservationDescription\"
+ and ?predictedeventobs[_\"http://purl.org/ifgi/geomodels#predicts\" hasValue ?event] memberOf _\"http://purl.org/ifgi/geomodels#PredictedEventObservation\"
+ and ?hazlevdesc[_\"http://purl.org/ifgi/geomodels#hasHazardLevel\" hasValue \"50\"] memberOf _\"http://purl.org/ifgi/water/flood#HazardLevelDescription\"
+ and ?event memberOf _\"http://purl.org/ifgi/water/flood#Flood\". """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> .
