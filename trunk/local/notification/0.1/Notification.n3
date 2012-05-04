@@ -1,0 +1,173 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://purl.org/ifgi/observation#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dolce: <http://purl.org/ifgi/dolce#> .
+@prefix dns: <http://purl.org/ifgi/dolceDnS#> .
+
+_:node16sc2kj8bx25 a owl:Ontology ;
+	rdfs:label "Observation" ;
+	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
+	owl:imports <http://purl.org/ifgi/dolceDnS#> ;
+	dc:publisher "IfGI, University of Muenster"^^xsd:string ;
+	dc:type "Foundational Ontology"^^xsd:string ;
+	dc:title "Observation Foundational Ontology"^^xsd:string ;
+	dc:description "Formalization of Kuhn's Observation and Measurement, with respect to annotate SOSs by Henry Michels"^^xsd:string ;
+	dc:source ""^^xsd:string ;
+	dc:subject "observation, measurement, foundational"^^xsd:string ;
+	dc:date "10-05-2011"^^xsd:string .
+
+:ObservationProcess a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/observation#ObservationProcess" ;
+	rdfs:subClassOf dolce:process ;
+	dc:identifier "observation process@en"^^xsd:string .
+
+:ObservationProcess_prop_isPerformedBy a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/observation#isPerformedBy" ;
+	rdfs:domain :ObservationProcess ;
+	a rdf:Property ;
+	rdfs:range :Sensor .
+
+:ObservationProcess_prop_realizes a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#realizes" ;
+	rdfs:domain :ObservationProcess ;
+	a rdf:Property ;
+	rdfs:range :Observation ;
+	rdfs:subPropertyOf dns:realizes .
+
+:Sensor a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/observation#Sensor" ;
+	rdfs:subClassOf dolce:non_agentive_physical_object ;
+	dc:identifier "sensor@en"^^xsd:string .
+
+:Sensor_prop_performs a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/observation#performs" ;
+	rdfs:domain :Sensor ;
+	a rdf:Property ;
+	rdfs:range :ObservationProcess .
+
+:Sensor_prop_observes a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/observation#observes" ;
+	rdfs:domain :Sensor ;
+	a rdf:Property ;
+	rdfs:range :Observable .
+
+:Observable a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/observation#Observable" ;
+	rdfs:subClassOf dolce:physical_quality ;
+	dc:identifier "observable@en"^^xsd:string .
+
+:Observable_prop_isObservedBy a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/observation#isObservedBy" ;
+	rdfs:domain :Observable ;
+	a rdf:Property ;
+	rdfs:range :Sensor .
+
+:ObservedEntity a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/observation#ObservedEntity" ;
+	rdfs:subClassOf dolce:physical_endurant ;
+	dc:identifier "observed entity@en"^^xsd:string .
+
+:ObservedEntity_prop_has_quality a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
+	rdfs:domain :ObservedEntity ;
+	a rdf:Property ;
+	rdfs:range :Observable ;
+	rdfs:subPropertyOf dolce:has_quality .
+
+:ObservedEntity_prop_participant_in a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/dolce#participant_in" ;
+	rdfs:domain :ObservedEntity ;
+	a rdf:Property ;
+	rdfs:range :Stimulus ;
+	rdfs:subPropertyOf dolce:participant_in .
+
+:Stimulus a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/observation#Stimulus" ;
+	rdfs:subClassOf dolce:process ;
+	dc:identifier "stimulus@en"^^xsd:string .
+
+:Stimulus_prop_has_participant a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/dolce#has_participant" ;
+	rdfs:domain :Stimulus ;
+	a rdf:Property ;
+	rdfs:range :ObservedEntity ;
+	rdfs:subPropertyOf dolce:has_participant .
+
+:Stimulus_prop_isDetectedBy a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/observation#isDetectedBy" ;
+	rdfs:domain :Stimulus ;
+	a rdf:Property ;
+	rdfs:range :Sensor .
+
+:Observation a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/observation#Observation" ;
+	rdfs:subClassOf dns:information_object ;
+	dc:identifier "observation@en"^^xsd:string .
+
+:Observation_prop_is_realized_by a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/dolceDnS#is_realized_by" ;
+	rdfs:domain :Observation ;
+	a rdf:Property ;
+	rdfs:range :ObservationProcess ;
+	rdfs:subPropertyOf dns:is_realized_by .
+
+:Observation_prop_holds a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/observation#holds" ;
+	rdfs:domain :Observation ;
+	a rdf:Property ;
+	rdfs:range :ObservationValue ;
+	a rdf:Property ;
+	rdfs:range dolce:temporal_region ;
+	a rdf:Property ;
+	rdfs:range dolce:space_region .
+
+:ObservationValue a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/observation#ObservationValue" ;
+	rdfs:subClassOf dolce:abstract_quality ;
+	dc:identifier "observation value@en"^^xsd:string .
+
+:ObservationValue_prop_value a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/observation#value" ;
+	rdfs:domain :ObservationValue ;
+	a rdf:Property ;
+	rdfs:range xsd:integer ;
+	a rdf:Property ;
+	rdfs:range xsd:float ;
+	a rdf:Property ;
+	rdfs:range xsd:string ;
+	a rdf:Property ;
+	rdfs:range xsd:boolean .
+
+:ObservationValue_prop_q_location a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/dolce#q_location" ;
+	rdfs:domain :ObservationValue ;
+	a rdf:Property ;
+	rdfs:range dolce:measurement_unit ;
+	rdfs:subPropertyOf dolce:q_location .
+
+:performs a rdf:Property ;
+	rdfs:domain :Sensor ;
+	rdfs:range :ObservationProcess ;
+	rdfs:subPropertyOf dolce:participant_in ;
+	dc:identifier "performs@en"^^xsd:string .
+
+:isPerformedBy a rdf:Property ;
+	rdfs:domain :ObservationProcess ;
+	rdfs:range :Sensor ;
+	rdfs:subPropertyOf dolce:participant ;
+	dc:identifier "is performed by@en"^^xsd:string .
+
+_:node16sc2kj8bx26 rdfs:label "http://purl.org/ifgi/observation#performs_inverse_isPerformedBy" ;
+	a <http://www.wsmo.org/wsml/wsml-syntax#Axiom> ;
+	rdf:value """?x memberOf _\"http://purl.org/ifgi/observation#Sensor\"
+ and ?y memberOf _\"http://purl.org/ifgi/observation#ObservationProcess\"
+ and _\"http://purl.org/ifgi/observation#performs\"(?x,?y)
+ implies 
+_\"http://purl.org/ifgi/observation#isPerformedBy\"(?y,?x). """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> , """?x memberOf _\"http://purl.org/ifgi/observation#ObservationProcess\"
+ and ?y memberOf _\"http://purl.org/ifgi/observation#Sensor\"
+ and _\"http://purl.org/ifgi/observation#isPerformedBy\"(?x,?y)
+ implies 
+_\"http://purl.org/ifgi/observation#performs\"(?y,?x). """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> .
