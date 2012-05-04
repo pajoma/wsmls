@@ -6,22 +6,23 @@ namespace {_"http://purl.org/ifgi/notification#",
 	flood _"http://purl.org/ifgi/water/flood#",
 	eo _"http://purl.org/ifgi/event-observation#",
 	gDesc _"http://purl.org/ifgi/geodesc#",
+	ssn _"http://purl.org/ifgi/ssn#",
 	dul _"http://purl.org/ifgi/dul#",
 	geomod _"http://purl.org/ifgi/geomodels#"
 }
 
 
 ontology NotificationOntology
-	annotations
-     	dc#creator hasValue "Henry Michels (ifgi)"
-		dc#contributor hasValue "Marcell Roth (ifgi)"
-		dc#publisher hasValue "(a)IfGI, University of Muenster"
-		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
-		dc#type hasValue "Domain Ontology"
-		dc#description hasValue "" 
-		dc#title hasValue "Notification Ontology"	
-		dc#subject hasValue ""			
-	endAnnotations
+//	annotations
+//     	dc#creator hasValue "Henry Michels (ifgi)"
+//		dc#contributor hasValue "Marcell Roth (ifgi)"
+//		dc#publisher hasValue "(a)IfGI, University of Muenster"
+//		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+//		dc#type hasValue "Domain Ontology"
+//		dc#description hasValue "" 
+//		dc#title hasValue "Notification Ontology"	
+//		dc#subject hasValue ""			
+//	endAnnotations
      
 	importsOntology {_"http://purl.org/ifgi/affecting-environment#", _"http://purl.org/ifgi/water/flood#", _"http://purl.org/ifgi/geomodels#"}
 
@@ -49,25 +50,78 @@ ontology NotificationOntology
     concept region_description subConceptOf gDesc#GeographicalDescription
     	gDesc#describes ofType region
     	
-    concept city subConceptOf gspace#geographical_unit
+    concept city subConceptOf ae#affected_object
     	gspace#situated_in impliesType region
     	name ofType _string
     
-    concept village subConceptOf gspace#geographical_unit
+    concept village subConceptOf ae#affected_object
     	gspace#situated_in impliesType region
     	name ofType _string
+    
+    concept newFact
+    
     
     //axioms to create predicted events with probabilities
     //axioms if predicted event is related to flood and the prob is higher than 50% than change state of affected objects
-    axiom flooding
+    axiom predict_flooding_50
         definedBy
              ?eventobsdesc[gDesc#describedLocation hasValue ?descLoc, dul#describes hasValue ?eventobs] memberOf eo#EventObservationDescription
              and ?eventobs [dul#isClassifiedBy hasValue ?eventobstype] memberOf eo#EventObservation
              and ?eventobstype memberOf flood#ActionStageToMinorFloodingStage
+             and ?predictedeventobsdesc memberOf newFact
+             and ?predictedeventobs memberOf newFact
+             and ?hazlevdes memberOf newFact
+             and ?event memberOf newFact
              implies
              ?predictedeventobsdesc[gDesc#describedLocation hasValue ?descLoc, dul#describes hasValue ?predictedeventobs, geomod#associatedHazardLevel hasValue ?hazlevdesc, geomod#hasSource hasValue ?eventobsdesc] memberOf geomod#PredictedEventObservationDescription
              and ?predictedeventobs [geomod#predicts hasValue ?event] memberOf geomod#PredictedEventObservation
              and ?hazlevdesc [geomod#hasHazardLevel hasValue "50"] memberOf flood#HazardLevelDescription
              and ?event memberOf flood#Flood.
+             
+	axiom predict_flooding_70
+        definedBy
+             ?eventobsdesc[gDesc#describedLocation hasValue ?descLoc, dul#describes hasValue ?eventobs] memberOf eo#EventObservationDescription
+             and ?eventobs [dul#isClassifiedBy hasValue ?eventobstype] memberOf eo#EventObservation
+             and ?eventobstype memberOf flood#MinorFloodingStageToModerateFloodingStage
+             and ?predictedeventobsdesc memberOf newFact
+             and ?predictedeventobs memberOf newFact
+             and ?hazlevdes memberOf newFact
+             and ?event memberOf newFact
+             implies
+             ?predictedeventobsdesc[gDesc#describedLocation hasValue ?descLoc, dul#describes hasValue ?predictedeventobs, geomod#associatedHazardLevel hasValue ?hazlevdesc, geomod#hasSource hasValue ?eventobsdesc] memberOf geomod#PredictedEventObservationDescription
+             and ?predictedeventobs [geomod#predicts hasValue ?event] memberOf geomod#PredictedEventObservation
+             and ?hazlevdesc [geomod#hasHazardLevel hasValue "50"] memberOf flood#HazardLevelDescription
+             and ?event memberOf flood#Flood.
+
+	axiom predict_flooding_90
+        definedBy
+             ?eventobsdesc[gDesc#describedLocation hasValue ?descLoc, dul#describes hasValue ?eventobs] memberOf eo#EventObservationDescription
+             and ?eventobs [dul#isClassifiedBy hasValue ?eventobstype] memberOf eo#EventObservation
+             and ?eventobstype memberOf flood#ModerateFloodingStageToMajorFloodingStage
+             and ?predictedeventobsdesc memberOf newFact
+             and ?predictedeventobs memberOf newFact
+             and ?hazlevdes memberOf newFact
+             and ?event memberOf newFact
+             implies
+             ?predictedeventobsdesc[gDesc#describedLocation hasValue ?descLoc, dul#describes hasValue ?predictedeventobs, geomod#associatedHazardLevel hasValue ?hazlevdesc, geomod#hasSource hasValue ?eventobsdesc] memberOf geomod#PredictedEventObservationDescription
+             and ?predictedeventobs [geomod#predicts hasValue ?event] memberOf geomod#PredictedEventObservation
+             and ?hazlevdesc [geomod#hasHazardLevel hasValue "50"] memberOf flood#HazardLevelDescription
+             and ?event memberOf flood#Flood.
+           
+	axiom change_state_to_flooded
+		definedBy
+			?predictedeventobsdesc[gDesc#describedLocation hasValue ?descLoc, dul#describes hasValue ?predictedeventobs, geomod#associatedHazardLevel hasValue ?hazlevdesc, geomod#hasSource hasValue ?eventobsdesc] memberOf geomod#PredictedEventObservationDescription
+             and ?predictedeventobs [geomod#predicts hasValue ?event] memberOf geomod#PredictedEventObservation
+             and ?hazlevdesc [geomod#hasHazardLevel hasValue ?probability] memberOf flood#HazardLevelDescription
+             and ?event memberOf flood#Flood
+             and ?probability > 50
+             and ?watlevsensdesc [gDesc#describes hasValue ?watlevsens, gDesc#describedLocation hasValue ?watlevsensloc] memberOf gDesc#GeographicalDescription
+             and ?watlevsensloc = ?descLoc
+             and ?watlevsens [flood#downstream hasValue ?dobj1] memberOf flood#WaterLevelSensor
+             and ?dobj1 [flood#downstream hasValue ?dobj2] memberOf ae#affected_object
+             and ?dobj2 memberOf ae#affected_object.
+             
+  
+             
              
     
