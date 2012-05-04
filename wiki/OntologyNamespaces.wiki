@@ -7,7 +7,7 @@ All ontologies of this repository are listed here. Ontologies highlighted green 
 ==== Affecting Environment ====
 
 || *Ontology* || *Namespace* || *Location* || *Doc* ||
-|| <font color="#FF4040">AffectingEnvironment</font> || <font color="#04B404">http://purl.org/ifgi/geospace</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Affecting-Environment/0.3/AffectingEnvironment.rdf</font> || [http://wsmls.googlecode.com/svn/trunk/global/Affecting-Environment/0.3/AffectingEnvironment.html http://wsmls.googlecode.com/svn/trunk/misc/figures/Doc-32.png] ||
+|| <font color="#FF4040">!AffectingEnvironment</font> || <font color="#04B404">http://purl.org/ifgi/geospace</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Affecting-Environment/0.3/AffectingEnvironment.rdf</font> || [http://wsmls.googlecode.com/svn/trunk/global/Affecting-Environment/0.3/AffectingEnvironment.html http://wsmls.googlecode.com/svn/trunk/misc/figures/Doc-32.png] ||
 
 ==== DOLCE ====
 
@@ -53,7 +53,7 @@ All ontologies of this repository are listed here. Ontologies highlighted green 
 ==== Scenario-specific Domain Ontologies ====
 
 || *Ontology* || *Namespace* || *Location* || *Doc* ||
-|| <font color="#04B404">FF4040</font> || <font color="#04B404">http://purl.org/ifgi/water/flood</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/local/water/0.4/flood.rdf</font> || [http://wsmls.googlecode.com/svn/trunk/local/water/0.4/flood.html http://wsmls.googlecode.com/svn/trunk/misc/figures/Doc-32.png] ||
+|| <font color="#FF4040">Flood</font> || <font color="#04B404">http://purl.org/ifgi/water/flood</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/local/water/0.4/flood.rdf</font> || [http://wsmls.googlecode.com/svn/trunk/local/water/0.4/flood.html http://wsmls.googlecode.com/svn/trunk/misc/figures/Doc-32.png] ||
 || <font color="#04B404">Landslide</font> || <font color="#04B404">http://purl.org/ifgi/landslide</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/local/landslide/0.2/landslide.rdf</font> || [http://wsmls.googlecode.com/svn/trunk/local/landslide/0.2/landslide.html http://wsmls.googlecode.com/svn/trunk/misc/figures/Doc-32.png] ||
 || <font color="#04B404">Noise</font> || <font color="#04B404">http://purl.org/ifgi/noise</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/local/noise/noiseall.rdf</font> || [http://wsmls.googlecode.com/svn/trunk/local/noise/noiseall.html http://wsmls.googlecode.com/svn/trunk/misc/figures/Doc-32.png] ||
 || <font color="#FF4040">Notification</font> || <font color="#04B404">http://purl.org/ifgi/notification</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/local/notification/0.1/Notification.rdf</font> || [http://wsmls.googlecode.com/svn/trunk/local/notification/0.1/Notification.html http://wsmls.googlecode.com/svn/trunk/misc/figures/Doc-32.png] ||
