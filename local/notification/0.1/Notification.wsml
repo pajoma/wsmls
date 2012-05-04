@@ -1,0 +1,72 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace {_"http://purl.org/ifgi/notification#",
+	dc _"http://purl.org/dc/elements/1.1/",
+	ae _"http://purl.org/ifgi/affecting-environment#",
+	gspace _"http://purl.org/ifgi/geospace#",
+	flood _"http://purl.org/ifgi/water/flood#",
+	eo _"http://purl.org/ifgi/event-observation#",
+	gDesc _"http://purl.org/ifgi/geodesc#",
+	geomod _"http://purl.org/ifgi/geomodels#"
+}
+
+
+ontology NotificationOntology
+	annotations
+     	dc#creator hasValue "Henry Michels (ifgi)"
+		dc#contributor hasValue "Marcell Roth (ifgi)"
+		dc#publisher hasValue "(a)IfGI, University of Muenster"
+		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+		dc#type hasValue "Domain Ontology"
+		dc#description hasValue "" 
+		dc#title hasValue "Notification Ontology"	
+		dc#subject hasValue ""			
+	endAnnotations
+     
+	importsOntology {_"http://purl.org/ifgi/affecting-environment#", http://purl.org/ifgi/water/flood#, _"http://purl.org/ifgi/geomodels#"}
+
+	concept stay_at_place subConceptOf ae#activity
+        ae#define ofType stay_at_place_environment
+        ae#has_participant ofType subscriber
+                     
+    concept stay_at_place_environment subConceptOf ae#affecting_environment
+        ae#has_part ofType region           
+        ae#is_defined_by ofType stay_at_place
+                     
+    concept region subConceptOf ae#affected_object
+                     
+    concept subscriber subConceptOf ae#agent
+        ae#participant_in ofType stay_at_place    
+        has_contact ofType _string                   
+        has_kind_of_contact ofType _string
+                     
+    concept affected subConceptOf ae#state
+    
+    concept flooded subConceptOf affected
+       
+    concept normal subConceptOf ae#state
+    
+    concept region_description subConceptOf gDesc#GeographicalDescription
+    	gDesc#describes ofType region
+    	
+    concept city subConceptOf gspace#geographical_unit
+    	gspace#situated_in impliesType region
+    	name ofType _string
+    
+    concept village subConceptOf gspace#geographical_unit
+    	gspace#situated_in impliesType region
+    	name ofType _string
+    
+    //axioms to create predicted events with probabilities
+    //axioms if predicted event is related to flood and the prob is higher than 50% than change state of affected objects
+    axiom flooding
+        definedBy
+             ?eventobsdesc[gDesc#describedLocation hasValue ?descLoc, dul#describes hasValue ?eventobs] memberOf eo#EventObservationDescription
+             and ?eventobs [dul#isClassifiedBy hasValue ?eventobstype] memberOf eo#EventObservation
+             and ?eventobstype memberOf flood#ActionStageToMinorFloodingStage
+             implies
+             ?predictedeventobsdesc[gDesc#describedLocation hasValue ?descLoc, dul#describes hasValue ?predictedeventobs, geomod#associatedHazardLevel hasValue ?hazlevdesc, geomod#hasSource hasValue ?eventobsdesc] memberOf geomod#PredictedEventObservationDescription
+             and ?predictedeventobs [geomod#predicts hasValue ?event] memberOf geomod#PredictedEventObservation
+             and ?hazlevdesc [geomod#hasHazardLevel hasValue "50"] memberOf flood#HazardLevelDescription
+             and ?event memberOf flood#Flood.
+             
+    

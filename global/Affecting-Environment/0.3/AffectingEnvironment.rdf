@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns="http://purl.org/ifgi/affecting-environment#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:dolce="http://purl.org/ifgi/dolce#"
+	xmlns:gspace="http://purl.org/ifgi/geospace#">
+
+<rdf:Description rdf:nodeID="node16sc2kj8bx5">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<rdfs:label>AffectingEnvironment</rdfs:label>
+	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
+	<owl:imports rdf:resource="http://purl.org/ifgi/dolce#"/>
+	<owl:imports rdf:resource="http://purl.org/ifgi/geospace#"/>
+	<dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Henry Michels (ifgi)</dc:creator>
+	<dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marcell Roth (ifgi)</dc:contributor>
+	<dc:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(a)IfGI, University of Muenster</dc:publisher>
+	<dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://creativecommons.org/licenses/by/3.0/</dc:rights>
+	<dc:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Domain Ontology</dc:type>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
+	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Affecting Environment Ontology</dc:title>
+	<dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:subject>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/affecting-environment#universal_environment">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/affecting-environment#universal_environment</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/affecting-environment#universal_environment_prop_surrounds">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/affecting-environment#surrounds</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/affecting-environment#universal_environment"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#physical_object"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/affecting-environment#agent">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/affecting-environment#agent</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dolce#physical_agentive_object"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/affecting-environment#agent_prop_is_surrounded_by">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/affecting-environment#is_surrounded_by</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/affecting-environment#agent"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/affecting-environment#universal_environment"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/affecting-environment#agent_prop_participant_in">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/affecting-environment#participant_in</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/affecting-environment#agent"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/affecting-environment#activity"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/affecting-environment#activity">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/affecting-environment#activity</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dolce#process"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/affecting-environment#activity_prop_define">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/affecting-environment#define</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/affecting-environment#activity"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/affecting-environment#affecting_environment"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/affecting-environment#activity_prop_has_participant">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/affecting-environment#has_participant</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/affecting-environment#activity"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/affecting-environment#agent"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/affecting-environment#activity_prop_part_of">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/affecting-environment#part_of</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/affecting-environment#activity"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/affecting-environment#compound_activity"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/affecting-environment#compound_activity">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/affecting-environment#compound_activity</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dolce#process"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/affecting-environment#compound_activity_prop_has_part">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/affecting-environment#has_part</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/affecting-environment#compound_activity"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/affecting-environment#activity"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/affecting-environment#compound_activity_prop_define">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/affecting-environment#define</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/affecting-environment#compound_activity"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/affecting-environment#compound_affecting_environment"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/affecting-environment#affecting_environment">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/affecting-environment#affecting_environment</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/affecting-environment#affecting_environment_prop_part_of">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/affecting-environment#part_of</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/affecting-environment#affecting_environment"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/affecting-environment#universal_environment"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/affecting-environment#compound_affecting_environment"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/affecting-environment#affecting_environment_prop_is_defined_by">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/affecting-environment#is_defined_by</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/affecting-environment#affecting_environment"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/affecting-environment#activity"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/affecting-environment#affecting_environment_prop_has_part">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/affecting-environment#has_part</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/affecting-environment#affecting_environment"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/affecting-environment#affected_object"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/affecting-environment#compound_affecting_environment">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/affecting-environment#compound_affecting_environment</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/affecting-environment#compound_affecting_environment_prop_is_defined_by">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/affecting-environment#is_defined_by</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/affecting-environment#compound_affecting_environment"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/affecting-environment#compound_activity"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/affecting-environment#compound_affecting_environment_prop_has_part">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/affecting-environment#has_part</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/affecting-environment#compound_affecting_environment"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/affecting-environment#affecting_environment"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/affecting-environment#affected_object">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/affecting-environment#affected_object</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geospace#geographical_unit"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/affecting-environment#affected_object_prop_has_state">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/affecting-environment#has_state</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/affecting-environment#affected_object"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/affecting-environment#state"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/affecting-environment#affected_object_prop_part_of">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/affecting-environment#part_of</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/affecting-environment#affected_object"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/affecting-environment#affecting_environment"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/affecting-environment#state">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/affecting-environment#state</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dolce#quality"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/affecting-environment#define">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/affecting-environment#Activity"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/affecting-environment#CompoundActivity"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/affecting-environment#AffectingEnvironment"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/affecting-environment#CompoundAffectingEnvironment"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/affecting-environment#isDefinedBy">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/affecting-environment#AffectingEnvironment"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/affecting-environment#CompoundAffectingEnvironment"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/affecting-environment#Activity"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/affecting-environment#CompoundActivity"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/affecting-environment#participantIn">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/affecting-environment#Agent"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/affecting-environment#Activity"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/affecting-environment#hasParticipant">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/affecting-environment#Activity"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/affecting-environment#Agent"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/affecting-environment#surrounds">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/affecting-environment#UniversalEnvironment"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#PhysicalObject"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/affecting-environment#isSurroundedBy">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#PhysicalObject"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/affecting-environment#UniversalEnvironment"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/affecting-environment#partOf">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#Particular"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#Particular"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/affecting-environment#hasPart">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#Particular"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#Particular"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node16sc2kj8bx6">
+	<rdfs:label>http://purl.org/ifgi/affecting-environment#parthood_reflexiv</rdfs:label>
+	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
+	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?x memberOf _"http://purl.org/ifgi/dolce#particular"
+ and _"http://purl.org/ifgi/affecting-environment#part_of"(?x,?x)
+ implies 
+true. </rdf:value>
+	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?x memberOf _"http://purl.org/ifgi/dolce#particular"
+ and _"http://purl.org/ifgi/affecting-environment#has_part"(?x,?x)
+ implies 
+true. </rdf:value>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node16sc2kj8bx7">
+	<rdfs:label>http://purl.org/ifgi/affecting-environment#parthood_transitive</rdfs:label>
+	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
+	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?x memberOf _"http://purl.org/ifgi/dolce#particular"
+ and ?y memberOf _"http://purl.org/ifgi/dolce#particular"
+ and ?z memberOf _"http://purl.org/ifgi/dolce#particular"
+ and _"http://purl.org/ifgi/affecting-environment#part_of"(?x,?y)
+ and _"http://purl.org/ifgi/affecting-environment#part_of"(?y,?z)
+ implies 
+_"http://purl.org/ifgi/affecting-environment#part_of"(?x,?z). </rdf:value>
+	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?x memberOf _"http://purl.org/ifgi/dolce#particular"
+ and ?y memberOf _"http://purl.org/ifgi/dolce#particular"
+ and ?z memberOf _"http://purl.org/ifgi/dolce#particular"
+ and _"http://purl.org/ifgi/affecting-environment#has_part"(?x,?y)
+ and _"http://purl.org/ifgi/affecting-environment#part_of"(?y,?z)
+ implies 
+_"http://purl.org/ifgi/affecting-environment#part_of"(?x,?z). </rdf:value>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node16sc2kj8bx8">
+	<rdfs:label>http://purl.org/ifgi/affecting-environment#partOf_inverse_hasPart</rdfs:label>
+	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
+	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?x memberOf _"http://purl.org/ifgi/dolce#particular"
+ and ?y memberOf _"http://purl.org/ifgi/dolce#particular"
+ and _"http://purl.org/ifgi/affecting-environment#part_of"(?x,?y)
+ implies 
+_"http://purl.org/ifgi/affecting-environment#has_part"(?y,?x). </rdf:value>
+	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?x memberOf _"http://purl.org/ifgi/dolce#particular"
+ and ?y memberOf _"http://purl.org/ifgi/dolce#particular"
+ and _"http://purl.org/ifgi/affecting-environment#has_part"(?x,?y)
+ implies 
+_"http://purl.org/ifgi/affecting-environment#part_of"(?y,?x). </rdf:value>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node16sc2kj8bx9">
+	<rdfs:label>http://purl.org/ifgi/affecting-environment#define_inverse_isDefinedBy</rdfs:label>
+	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
+	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?x memberOf {_"http://purl.org/ifgi/affecting-environment#activity",_"http://purl.org/ifgi/affecting-environment#compound_activity"}
+ and ?y memberOf {_"http://purl.org/ifgi/affecting-environment#affecting_Environment",_"http://purl.org/ifgi/affecting-environment#compound_affecting_environment"}
+ and _"http://purl.org/ifgi/affecting-environment#define"(?x,?y)
+ implies 
+_"http://purl.org/ifgi/affecting-environment#is_defined_by"(?y,?x). </rdf:value>
+	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?x memberOf {_"http://purl.org/ifgi/affecting-environment#affecting_environment",_"http://purl.org/ifgi/affecting-environment#compound_affecting_environment"}
+ and ?y memberOf {_"http://purl.org/ifgi/affecting-environment#activity",_"http://purl.org/ifgi/affecting-environment#compound_activity"}
+ and _"http://purl.org/ifgi/affecting-environment#is_defined_by"(?x,?y)
+ implies 
+_"http://purl.org/ifgi/affecting-environment#define"(?y,?x). </rdf:value>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node16sc2kj8bx10">
+	<rdfs:label>http://purl.org/ifgi/affecting-environment#participantIn_inverse_hasParticipant</rdfs:label>
+	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
+	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?x memberOf _"http://purl.org/ifgi/affecting-environment#agent"
+ and ?y memberOf _"http://purl.org/ifgi/affecting-environment#activity"
+ and _"http://purl.org/ifgi/affecting-environment#participant_in"(?x,?y)
+ implies 
+_"http://purl.org/ifgi/affecting-environment#has_participant"(?y,?x). </rdf:value>
+	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?x memberOf _"http://purl.org/ifgi/affecting-environment#activity"
+ and ?y memberOf _"http://purl.org/ifgi/affecting-environment#agent"
+ and _"http://purl.org/ifgi/affecting-environment#has_participant"(?x,?y)
+ implies 
+_"http://purl.org/ifgi/affecting-environment#participant_in"(?y,?x). </rdf:value>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node16sc2kj8bx11">
+	<rdfs:label>http://purl.org/ifgi/affecting-environment#isSurroundedBy_inverse_surrounds</rdfs:label>
+	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
+	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?x memberOf _"http://purl.org/ifgi/dolce#physical_object"
+ and ?y memberOf _"http://purl.org/ifgi/affecting-environment#universal_environment"
+ and _"http://purl.org/ifgi/affecting-environment#is_Surrounded_by"(?x,?y)
+ implies 
+_"http://purl.org/ifgi/affecting-environment#surrounds"(?y,?x). </rdf:value>
+	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?x memberOf _"http://purl.org/ifgi/affecting-environment#universal_environment"
+ and ?y memberOf _"http://purl.org/ifgi/dolce#physical_object"
+ and _"http://purl.org/ifgi/affecting-environment#surrounds"(?x,?y)
+ implies 
+_"http://purl.org/ifgi/affecting-environment#is_surrounded_by"(?y,?x). </rdf:value>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node16sc2kj8bx12">
+	<rdfs:label>http://purl.org/ifgi/affecting-environment#A1</rdfs:label>
+	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
+	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?x memberOf _"http://purl.org/ifgi/affecting-environment#agent"
+ and ?e memberOf _"http://purl.org/ifgi/affecting-environment#affecting_environment"
+ and ?a memberOf _"http://purl.org/ifgi/affecting-environment#activity"
+ and ?u memberOf _"http://purl.org/ifgi/affecting-environment#universal_environment"
+ and ?x[_"http://purl.org/ifgi/affecting-environment#participant_in" hasValue ?a, _"http://purl.org/ifgi/affecting-environment#is_surrounded_by" hasValue ?u]
+ and ?u[_"http://purl.org/ifgi/affecting-environment#define" hasValue ?e]
+ implies 
+?e[_"http://purl.org/ifgi/affecting-environment#part_of" hasValue ?u]. </rdf:value>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node16sc2kj8bx13">
+	<rdfs:label>http://purl.org/ifgi/affecting-environment#A3</rdfs:label>
+	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
+	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?c memberOf _"http://purl.org/ifgi/affecting-environment#compound_affecting_environment"
+ and ?y memberOf _"http://purl.org/ifgi/affecting-environment#compound_activity"
+ and ?c[_"http://purl.org/ifgi/affecting-environment#is_defined_by" hasValue ?y]
+ and ?a memberOf _"http://purl.org/ifgi/affecting-environment#affecting_environment"
+ and ?x memberOf _"http://purl.org/ifgi/affecting-environment#activity"
+ and ?a[_"http://purl.org/ifgi/affecting-environment#is_defined_by" hasValue ?x]
+ and ?y[_"http://purl.org/ifgi/affecting-environment#has_part" hasValue ?x]
+ implies 
+?c[_"http://purl.org/ifgi/affecting-environment#has_part" hasValue ?a]. </rdf:value>
+</rdf:Description>
+
+</rdf:RDF>

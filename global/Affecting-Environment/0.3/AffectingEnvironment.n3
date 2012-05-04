@@ -1,0 +1,271 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://purl.org/ifgi/affecting-environment#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dolce: <http://purl.org/ifgi/dolce#> .
+@prefix gspace: <http://purl.org/ifgi/geospace#> .
+
+_:node16sc2kj8bx14 a owl:Ontology ;
+	rdfs:label "AffectingEnvironment" ;
+	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
+	owl:imports <http://purl.org/ifgi/dolce#> , <http://purl.org/ifgi/geospace#> ;
+	dc:creator "Henry Michels (ifgi)"^^xsd:string ;
+	dc:contributor "Marcell Roth (ifgi)"^^xsd:string ;
+	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
+	dc:rights "http://creativecommons.org/licenses/by/3.0/"^^xsd:string ;
+	dc:type "Domain Ontology"^^xsd:string ;
+	dc:description ""^^xsd:string ;
+	dc:title "Affecting Environment Ontology"^^xsd:string ;
+	dc:subject ""^^xsd:string .
+
+:universal_environment a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/affecting-environment#universal_environment" .
+
+:universal_environment_prop_surrounds a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/affecting-environment#surrounds" ;
+	rdfs:domain :universal_environment ;
+	a rdf:Property ;
+	rdfs:range dolce:physical_object .
+
+:agent a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/affecting-environment#agent" ;
+	rdfs:subClassOf dolce:physical_agentive_object .
+
+:agent_prop_is_surrounded_by a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/affecting-environment#is_surrounded_by" ;
+	rdfs:domain :agent ;
+	a rdf:Property ;
+	rdfs:range :universal_environment .
+
+:agent_prop_participant_in a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/affecting-environment#participant_in" ;
+	rdfs:domain :agent ;
+	a rdf:Property ;
+	rdfs:range :activity .
+
+:activity a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/affecting-environment#activity" ;
+	rdfs:subClassOf dolce:process .
+
+:activity_prop_define a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/affecting-environment#define" ;
+	rdfs:domain :activity ;
+	a rdf:Property ;
+	rdfs:range :affecting_environment .
+
+:activity_prop_has_participant a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/affecting-environment#has_participant" ;
+	rdfs:domain :activity ;
+	a rdf:Property ;
+	rdfs:range :agent .
+
+:activity_prop_part_of a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/affecting-environment#part_of" ;
+	rdfs:domain :activity ;
+	a rdf:Property ;
+	rdfs:range :compound_activity .
+
+:compound_activity a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/affecting-environment#compound_activity" ;
+	rdfs:subClassOf dolce:process .
+
+:compound_activity_prop_has_part a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/affecting-environment#has_part" ;
+	rdfs:domain :compound_activity ;
+	a rdf:Property ;
+	rdfs:range :activity .
+
+:compound_activity_prop_define a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/affecting-environment#define" ;
+	rdfs:domain :compound_activity ;
+	a rdf:Property ;
+	rdfs:range :compound_affecting_environment .
+
+:affecting_environment a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/affecting-environment#affecting_environment" .
+
+:affecting_environment_prop_part_of a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/affecting-environment#part_of" ;
+	rdfs:domain :affecting_environment ;
+	a rdf:Property ;
+	rdfs:range :universal_environment ;
+	a rdf:Property ;
+	rdfs:range :compound_affecting_environment .
+
+:affecting_environment_prop_is_defined_by a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/affecting-environment#is_defined_by" ;
+	rdfs:domain :affecting_environment ;
+	a rdf:Property ;
+	rdfs:range :activity .
+
+:affecting_environment_prop_has_part a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/affecting-environment#has_part" ;
+	rdfs:domain :affecting_environment ;
+	a rdf:Property ;
+	rdfs:range :affected_object .
+
+:compound_affecting_environment a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/affecting-environment#compound_affecting_environment" .
+
+:compound_affecting_environment_prop_is_defined_by a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/affecting-environment#is_defined_by" ;
+	rdfs:domain :compound_affecting_environment ;
+	a rdf:Property ;
+	rdfs:range :compound_activity .
+
+:compound_affecting_environment_prop_has_part a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/affecting-environment#has_part" ;
+	rdfs:domain :compound_affecting_environment ;
+	a rdf:Property ;
+	rdfs:range :affecting_environment .
+
+:affected_object a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/affecting-environment#affected_object" ;
+	rdfs:subClassOf gspace:geographical_unit .
+
+:affected_object_prop_has_state a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/affecting-environment#has_state" ;
+	rdfs:domain :affected_object ;
+	a rdf:Property ;
+	rdfs:range :state .
+
+:affected_object_prop_part_of a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/affecting-environment#part_of" ;
+	rdfs:domain :affected_object ;
+	a rdf:Property ;
+	rdfs:range :affecting_environment .
+
+:state a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/affecting-environment#state" ;
+	rdfs:subClassOf dolce:quality .
+
+:define a rdf:Property ;
+	rdfs:domain :Activity , :CompoundActivity ;
+	rdfs:range :AffectingEnvironment , :CompoundAffectingEnvironment .
+
+:isDefinedBy a rdf:Property ;
+	rdfs:domain :AffectingEnvironment , :CompoundAffectingEnvironment ;
+	rdfs:range :Activity , :CompoundActivity .
+
+:participantIn a rdf:Property ;
+	rdfs:domain :Agent ;
+	rdfs:range :Activity .
+
+:hasParticipant a rdf:Property ;
+	rdfs:domain :Activity ;
+	rdfs:range :Agent .
+
+:surrounds a rdf:Property ;
+	rdfs:domain :UniversalEnvironment ;
+	rdfs:range dolce:PhysicalObject .
+
+:isSurroundedBy a rdf:Property ;
+	rdfs:domain dolce:PhysicalObject ;
+	rdfs:range :UniversalEnvironment .
+
+:partOf a rdf:Property ;
+	rdfs:domain dolce:Particular ;
+	rdfs:range dolce:Particular .
+
+:hasPart a rdf:Property ;
+	rdfs:domain dolce:Particular ;
+	rdfs:range dolce:Particular .
+
+_:node16sc2kj8bx15 rdfs:label "http://purl.org/ifgi/affecting-environment#parthood_reflexiv" ;
+	a <http://www.wsmo.org/wsml/wsml-syntax#Axiom> ;
+	rdf:value """?x memberOf _\"http://purl.org/ifgi/dolce#particular\"
+ and _\"http://purl.org/ifgi/affecting-environment#part_of\"(?x,?x)
+ implies 
+true. """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> , """?x memberOf _\"http://purl.org/ifgi/dolce#particular\"
+ and _\"http://purl.org/ifgi/affecting-environment#has_part\"(?x,?x)
+ implies 
+true. """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> .
+
+_:node16sc2kj8bx16 rdfs:label "http://purl.org/ifgi/affecting-environment#parthood_transitive" ;
+	a <http://www.wsmo.org/wsml/wsml-syntax#Axiom> ;
+	rdf:value """?x memberOf _\"http://purl.org/ifgi/dolce#particular\"
+ and ?y memberOf _\"http://purl.org/ifgi/dolce#particular\"
+ and ?z memberOf _\"http://purl.org/ifgi/dolce#particular\"
+ and _\"http://purl.org/ifgi/affecting-environment#part_of\"(?x,?y)
+ and _\"http://purl.org/ifgi/affecting-environment#part_of\"(?y,?z)
+ implies 
+_\"http://purl.org/ifgi/affecting-environment#part_of\"(?x,?z). """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> , """?x memberOf _\"http://purl.org/ifgi/dolce#particular\"
+ and ?y memberOf _\"http://purl.org/ifgi/dolce#particular\"
+ and ?z memberOf _\"http://purl.org/ifgi/dolce#particular\"
+ and _\"http://purl.org/ifgi/affecting-environment#has_part\"(?x,?y)
+ and _\"http://purl.org/ifgi/affecting-environment#part_of\"(?y,?z)
+ implies 
+_\"http://purl.org/ifgi/affecting-environment#part_of\"(?x,?z). """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> .
+
+_:node16sc2kj8bx17 rdfs:label "http://purl.org/ifgi/affecting-environment#partOf_inverse_hasPart" ;
+	a <http://www.wsmo.org/wsml/wsml-syntax#Axiom> ;
+	rdf:value """?x memberOf _\"http://purl.org/ifgi/dolce#particular\"
+ and ?y memberOf _\"http://purl.org/ifgi/dolce#particular\"
+ and _\"http://purl.org/ifgi/affecting-environment#part_of\"(?x,?y)
+ implies 
+_\"http://purl.org/ifgi/affecting-environment#has_part\"(?y,?x). """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> , """?x memberOf _\"http://purl.org/ifgi/dolce#particular\"
+ and ?y memberOf _\"http://purl.org/ifgi/dolce#particular\"
+ and _\"http://purl.org/ifgi/affecting-environment#has_part\"(?x,?y)
+ implies 
+_\"http://purl.org/ifgi/affecting-environment#part_of\"(?y,?x). """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> .
+
+_:node16sc2kj8bx18 rdfs:label "http://purl.org/ifgi/affecting-environment#define_inverse_isDefinedBy" ;
+	a <http://www.wsmo.org/wsml/wsml-syntax#Axiom> ;
+	rdf:value """?x memberOf {_\"http://purl.org/ifgi/affecting-environment#activity\",_\"http://purl.org/ifgi/affecting-environment#compound_activity\"}
+ and ?y memberOf {_\"http://purl.org/ifgi/affecting-environment#affecting_Environment\",_\"http://purl.org/ifgi/affecting-environment#compound_affecting_environment\"}
+ and _\"http://purl.org/ifgi/affecting-environment#define\"(?x,?y)
+ implies 
+_\"http://purl.org/ifgi/affecting-environment#is_defined_by\"(?y,?x). """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> , """?x memberOf {_\"http://purl.org/ifgi/affecting-environment#affecting_environment\",_\"http://purl.org/ifgi/affecting-environment#compound_affecting_environment\"}
+ and ?y memberOf {_\"http://purl.org/ifgi/affecting-environment#activity\",_\"http://purl.org/ifgi/affecting-environment#compound_activity\"}
+ and _\"http://purl.org/ifgi/affecting-environment#is_defined_by\"(?x,?y)
+ implies 
+_\"http://purl.org/ifgi/affecting-environment#define\"(?y,?x). """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> .
+
+_:node16sc2kj8bx19 rdfs:label "http://purl.org/ifgi/affecting-environment#participantIn_inverse_hasParticipant" ;
+	a <http://www.wsmo.org/wsml/wsml-syntax#Axiom> ;
+	rdf:value """?x memberOf _\"http://purl.org/ifgi/affecting-environment#agent\"
+ and ?y memberOf _\"http://purl.org/ifgi/affecting-environment#activity\"
+ and _\"http://purl.org/ifgi/affecting-environment#participant_in\"(?x,?y)
+ implies 
+_\"http://purl.org/ifgi/affecting-environment#has_participant\"(?y,?x). """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> , """?x memberOf _\"http://purl.org/ifgi/affecting-environment#activity\"
+ and ?y memberOf _\"http://purl.org/ifgi/affecting-environment#agent\"
+ and _\"http://purl.org/ifgi/affecting-environment#has_participant\"(?x,?y)
+ implies 
+_\"http://purl.org/ifgi/affecting-environment#participant_in\"(?y,?x). """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> .
+
+_:node16sc2kj8bx20 rdfs:label "http://purl.org/ifgi/affecting-environment#isSurroundedBy_inverse_surrounds" ;
+	a <http://www.wsmo.org/wsml/wsml-syntax#Axiom> ;
+	rdf:value """?x memberOf _\"http://purl.org/ifgi/dolce#physical_object\"
+ and ?y memberOf _\"http://purl.org/ifgi/affecting-environment#universal_environment\"
+ and _\"http://purl.org/ifgi/affecting-environment#is_Surrounded_by\"(?x,?y)
+ implies 
+_\"http://purl.org/ifgi/affecting-environment#surrounds\"(?y,?x). """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> , """?x memberOf _\"http://purl.org/ifgi/affecting-environment#universal_environment\"
+ and ?y memberOf _\"http://purl.org/ifgi/dolce#physical_object\"
+ and _\"http://purl.org/ifgi/affecting-environment#surrounds\"(?x,?y)
+ implies 
+_\"http://purl.org/ifgi/affecting-environment#is_surrounded_by\"(?y,?x). """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> .
+
+_:node16sc2kj8bx21 rdfs:label "http://purl.org/ifgi/affecting-environment#A1" ;
+	a <http://www.wsmo.org/wsml/wsml-syntax#Axiom> ;
+	rdf:value """?x memberOf _\"http://purl.org/ifgi/affecting-environment#agent\"
+ and ?e memberOf _\"http://purl.org/ifgi/affecting-environment#affecting_environment\"
+ and ?a memberOf _\"http://purl.org/ifgi/affecting-environment#activity\"
+ and ?u memberOf _\"http://purl.org/ifgi/affecting-environment#universal_environment\"
+ and ?x[_\"http://purl.org/ifgi/affecting-environment#participant_in\" hasValue ?a, _\"http://purl.org/ifgi/affecting-environment#is_surrounded_by\" hasValue ?u]
+ and ?u[_\"http://purl.org/ifgi/affecting-environment#define\" hasValue ?e]
+ implies 
+?e[_\"http://purl.org/ifgi/affecting-environment#part_of\" hasValue ?u]. """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> .
+
+_:node16sc2kj8bx22 rdfs:label "http://purl.org/ifgi/affecting-environment#A3" ;
+	a <http://www.wsmo.org/wsml/wsml-syntax#Axiom> ;
+	rdf:value """?c memberOf _\"http://purl.org/ifgi/affecting-environment#compound_affecting_environment\"
+ and ?y memberOf _\"http://purl.org/ifgi/affecting-environment#compound_activity\"
+ and ?c[_\"http://purl.org/ifgi/affecting-environment#is_defined_by\" hasValue ?y]
+ and ?a memberOf _\"http://purl.org/ifgi/affecting-environment#affecting_environment\"
+ and ?x memberOf _\"http://purl.org/ifgi/affecting-environment#activity\"
+ and ?a[_\"http://purl.org/ifgi/affecting-environment#is_defined_by\" hasValue ?x]
+ and ?y[_\"http://purl.org/ifgi/affecting-environment#has_part\" hasValue ?x]
+ implies 
+?c[_\"http://purl.org/ifgi/affecting-environment#has_part\" hasValue ?a]. """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> .
