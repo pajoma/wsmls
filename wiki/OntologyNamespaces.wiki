@@ -65,8 +65,7 @@ All ontologies of this repository are listed here. Ontologies highlighted green 
 ==== OGC ====
 
 || *Ontology* || *Namespace* || *Location* || *Doc* ||
-|| <font color="#04B404">COV</font> || <font color="#04B404">http://purl.org/ifgi/cov</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/application/OGC/COV/0.2/COV.rdf</font> || 
-test ||
+|| <font color="#04B404">COV</font> || <font color="#04B404">http://purl.org/ifgi/cov</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/application/OGC/COV/0.2/COV.rdf</font> || test ||
 || <font color="#04B404">GeoSPARQL</font> || <font color="#04B404">http://purl.org/ifgi/geosparql</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/application/OGC/GeoSPARQL/0.1/GeoSPARQL.rdf</font> ||
 [http://wsmls.googlecode.com/svn/trunk/application/OGC/GeoSPARQL/0.1/GeoSPARQL.html http://wsmls.googlecode.com/svn/trunk/misc/figures/Doc-32.png] ||
 || <font color="#04B404">GML</font> || <font color="#04B404">http://purl.org/ifgi/gml/0.2</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/application/OGC/GML/0.5/GML.rdf</font> ||
