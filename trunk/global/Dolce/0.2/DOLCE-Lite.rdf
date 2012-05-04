@@ -8,7 +8,7 @@
 	xmlns:dolce="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/">
 
-<rdf:Description rdf:nodeID="node16m5h9qq4x1">
+<rdf:Description rdf:nodeID="node16sc2kj8bx1">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>DOLCE_Lite</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -128,14 +128,16 @@
 	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#non-physical-endurant"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolce#non_physical_endurant-has_quality">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolce#non_physical_endurant_prop_has_quality">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolce#has_quality</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#non_physical_endurant"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#abstract_quality"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolce#non_physical_endurant-part">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolce#non_physical_endurant_prop_part">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolce#part</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#non_physical_endurant"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -151,7 +153,8 @@
 	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#non-physical-object"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolce#non_physical_object-generically_dependent_on">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolce#non_physical_object_prop_generically_dependent_on">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolce#generically_dependent_on</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#non_physical_object"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -175,21 +178,24 @@
 	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#perdurant"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolce#perdurant-has_quality">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolce#perdurant_prop_has_quality">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolce#has_quality</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#perdurant"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#temporal_location_q"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolce#perdurant-participant">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolce#perdurant_prop_participant">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolce#participant</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#perdurant"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#endurant"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolce#perdurant-part">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolce#perdurant_prop_part">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolce#part</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#perdurant"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -259,7 +265,8 @@
 	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#region"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolce#quale-part">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolce#quale_prop_part">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolce#part</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#quale"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -293,10 +300,10 @@
 	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#region"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolce#region-part">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolce#region_prop_part">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolce#part</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#region"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#region"/>
 </rdf:Description>
 
@@ -399,14 +406,16 @@
 	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#temporal-region"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolce#temporal_region-part">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolce#temporal_region_prop_part">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolce#part</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#temporal_region"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#temporal_region"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolce#temporal_region-q_location_of">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolce#temporal_region_prop_q_location_of">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolce#q_location_of</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#temporal_region"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -424,7 +433,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#immediate_relation">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#immediate_relation"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Immediate Relation@en</dc:identifier>
@@ -434,7 +442,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#immediate_relation_i">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#immediate_relation_i"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Immediate Relation Inverse@en</dc:identifier>
@@ -444,7 +451,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#mediated_relation">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#mediated_relation"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mediated Relation@en</dc:identifier>
@@ -454,7 +460,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#mediated_relation_i">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#mediated_relation_i"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Immediate Relation Inverse@en</dc:identifier>
@@ -464,7 +469,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#generic_constituent">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#generic_constituent"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#immediate_relation"/>
@@ -475,7 +479,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#generic_constituent_of">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#generic_constituent_of"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#immediate_relation_i"/>
@@ -486,7 +489,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#generic_dependent">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#generic_dependent"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#immediate_relation"/>
@@ -497,7 +499,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#identitiy_c">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#identitiy_c"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#immediate_relation"/>
@@ -508,7 +509,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#identitiy_n">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#identitiy_n"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#immediate_relation"/>
@@ -519,7 +519,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#inherent_in">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#inherent_in"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#immediate_relation"/>
@@ -530,7 +529,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#has_quality">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#has_quality"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#quality"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#immediate_relation_i"/>
@@ -541,7 +539,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#t_inherent_in">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#t_inherent_in"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#quality"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#immediate_relation"/>
@@ -552,7 +549,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#has_t_quality">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#has_t_quality"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#quality"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#has_quality"/>
@@ -563,7 +559,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#part">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#part"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#immediate_relation"/>
@@ -574,7 +569,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#part_of">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#part_of"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#immediate_relation_i"/>
@@ -585,7 +579,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#atomic_part">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#atomic_part"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#part"/>
@@ -596,7 +589,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#atomic_part_of">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#atomic_part_of"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#part_of"/>
@@ -607,7 +599,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#proper_part">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#proper_part"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#part"/>
@@ -618,7 +609,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#proper_part_of">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#proper_part_of"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#part_of"/>
@@ -629,7 +619,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#boundary">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#boundary"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#proper_part"/>
@@ -640,7 +629,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#boundary_of">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#boundary_of"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#proper_part_of"/>
@@ -651,7 +639,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#temporary_proper_part">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#temporary_proper_part"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#endurant"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#endurant"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#proper_part"/>
@@ -662,7 +649,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#temporary_proper_part_of">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#temporary_proper_part_of"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#endurant"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#endurant"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#proper_part_of"/>
@@ -673,7 +659,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#temporary_part">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#temporary_part"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#endurant"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#endurant"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#part"/>
@@ -684,7 +669,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#temporary_part_of">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#temporary_part_of"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#endurant"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#endurant"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#immediate_relation"/>
@@ -695,7 +679,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#constant_participant">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#constant_participant"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#perdurant"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#endurant"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#participant"/>
@@ -706,7 +689,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#constant_participant_in">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#constant_participant_in"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#endurant"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#participant_in"/>
@@ -717,7 +699,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#specific_constant_dependent">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#specific_constant_dependent"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#immediate_relation"/>
@@ -728,7 +709,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#specifically_constantly_dependent_on">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#specifically_constantly_dependent_on"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#immediate_relation"/>
@@ -739,7 +719,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#temporary_participant_in">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#temporary_participant_in"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#endurant"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#perdurant"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#participant_in"/>
@@ -750,7 +729,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#temporary_participant">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#temporary_participant"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#perdurant"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#endurant"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#participant"/>
@@ -761,7 +739,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#host_of">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#host_of"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#physical_endurant"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#feature"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#specific_constant_dependent"/>
@@ -772,7 +749,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#host">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#host"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#feature"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#physical_endurant"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#specifically_constantly_dependent_on"/>
@@ -783,7 +759,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#specific_constant_constituent_of">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#specific_constant_constituent_of"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#immediate_relation"/>
@@ -794,7 +769,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#specific_constant_constituent">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#specific_constant_constituent"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#immediate_relation"/>
@@ -805,7 +779,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#weak_connection">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#weak_connection"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#immediate_relation"/>
@@ -816,7 +789,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#r_location_of">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#r_location_of"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#region"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#region"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#immediate_relation_i"/>
@@ -827,7 +799,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#r_location">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#r_location"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#region"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#region"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#immediate_relation"/>
@@ -838,7 +809,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#quale_of">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#quale_of"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#quale"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#quality"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#immediate_relation"/>
@@ -849,7 +819,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#has_quale">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#has_quale"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#quality"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#quale"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#immediate_relation"/>
@@ -860,7 +829,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#total_temporary_participant">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#total_temporary_participant"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#perdurant"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#endurant"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#temporary_participant"/>
@@ -871,7 +839,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#total_temporary_participant_in">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#total_temporary_participant_in"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#endurant"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#perdurant"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#temporary_participant_in"/>
@@ -882,7 +849,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#generically_dependent_on">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#generically_dependent_on"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#immediate_relation_i"/>
@@ -893,7 +859,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#q_present_at">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#q_present_at"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#physical_quality"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#time_interval"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#mediated_relation"/>
@@ -904,7 +869,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#time_of_q_presence_of">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#time_of_q_presence_of"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#time_interval"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#physical_quality"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#mediated_relation_i"/>
@@ -915,7 +879,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#mereologically_coincides">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#mereologically_coincides"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#endurant"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#endurant"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#temporary_part"/>
@@ -926,7 +889,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#participant">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#participant"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#perdurant"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#endurant"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#immediate_relation"/>
@@ -937,7 +899,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#participant_in">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#participant_in"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#endurant"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#perdurant"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#immediate_relation_i"/>
@@ -948,7 +909,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#life">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#life"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#constant_participant_in"/>
@@ -959,7 +919,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#life_of">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#life_of"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#perdurant"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#endurant"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#constant_participant"/>
@@ -970,7 +929,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#partly_compresent">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#partly_compresent"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#mediated_relation"/>
@@ -981,7 +939,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#abstract_location_of">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#abstract_location_of"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#abstract_region"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#non_physical_endurant"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#exact_location_of"/>
@@ -992,7 +949,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#abstract_location">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#abstract_location"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#non_physical_endurant"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#abstract_region"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#exact_location"/>
@@ -1003,7 +959,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#generic_location_of">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#generic_location_of"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#mediated_relation_i"/>
@@ -1014,7 +969,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#generic_location">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#generic_location"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#mediated_relation"/>
@@ -1025,7 +979,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#physical_location">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#physical_location"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#physical_endurant"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#physical_region"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#exact_location"/>
@@ -1036,7 +989,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#physical_location_of">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#physical_location_of"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#physical_region"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#physical_endurant"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#exact_location_of"/>
@@ -1047,7 +999,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#q_location_of">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#q_location_of"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#region"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#quality"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#immediate_relation_i"/>
@@ -1058,7 +1009,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#q_location">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#q_location"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#quality"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#region"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#immediate_relation"/>
@@ -1069,7 +1019,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#total_constant_participant">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#total_constant_participant"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#perdurant"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#endurant"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#constant_participant"/>
@@ -1080,7 +1029,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#total_constant_participant_in">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#total_constant_participant_in"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#endurant"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#perdurant"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#constant_participant_in"/>
@@ -1091,7 +1039,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#sibling_part">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#sibling_part"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#mediated_relation"/>
@@ -1102,7 +1049,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#spatio_temporally_present_at">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#spatio_temporally_present_at"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#spatio_temporal_region"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#exact_location"/>
@@ -1113,7 +1059,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#spatio_temporal_presence_of">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#spatio_temporal_presence_of"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#spatio_temporal_region"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#exact_location_of"/>
@@ -1124,7 +1069,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#strong_connection">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#strong_connection"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#mediated_relation"/>
@@ -1135,7 +1079,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#exact_location_of">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#exact_location_of"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#region"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#generic_location_of"/>
@@ -1146,7 +1089,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#exact_location">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#exact_location"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#region"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#generic_location"/>
@@ -1157,7 +1099,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#temporary_atomic_part">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#temporary_atomic_part"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#endurant"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#endurant"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#temporary_proper_part"/>
@@ -1168,7 +1109,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#temporary_atomic_part_of">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#temporary_atomic_part_of"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#endurant"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#endurant"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#temporary_proper_part_of"/>
@@ -1179,7 +1119,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolce#overlaps">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolce#overlaps"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#mediated_relation"/>
@@ -1188,7 +1127,7 @@
 	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#overlaps"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16m5h9qq4x2">
+<rdf:Description rdf:nodeID="node16sc2kj8bx2">
 	<rdfs:label>http://purl.org/ifgi/dolce#define_inverse</rdfs:label>
 	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
 	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">_"http://purl.org/ifgi/dolce#immediate_relation"(?x,?y)
