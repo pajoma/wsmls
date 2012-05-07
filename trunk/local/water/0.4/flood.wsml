@@ -10,7 +10,8 @@ namespace { _"http://purl.org/ifgi/water/flood#",
 	 gs _"http://purl.org/ifgi/geospace#",
 	 gu _"http://purl.org/ifgi/geounits#",
 	 evob _"http://purl.org/ifgi/event-observation#", 
-	 ge _"http://purl.org/ifgi/geoevents#"
+	 ge _"http://purl.org/ifgi/geoevents#",
+	 gq _"http://purl.org/ifgi/geoqualities#"
      }
 
 ontology FloodScenario
@@ -30,8 +31,8 @@ ontology FloodScenario
 		_"http://purl.org/ifgi/ssn#",
 		_"http://purl.org/ifgi/geospace#",
 		_"http://purl.org/ifgi/geounits#",		
-		_"http://purl.org/ifgi/event-observation#"
-		
+		_"http://purl.org/ifgi/event-observation#",
+		_"http://purl.org/ifgi/geoqualities#"
 	}
 
 	// Geographical Units (Features of Interest)
@@ -309,18 +310,26 @@ ontology FloodScenario
 	axiom validate_downstream
 		definedBy
 			!- downstream(?x1,?x2) and
-			?x1 memberOf gs#geographical_unit and
-			?x2 memberOf gs#geographical_unit and
+			?x1[dul#hasQuality hasValue ?elevationx1] memberOf gs#geographical_unit and
+			?x2[dul#hasQuality hasValue ?elevationx2] memberOf gs#geographical_unit and
+			?elevationx1 [dul#hasDataValue hasValue ?value1] memberOf gq#elevation and
+			?elevationx2 [dul#hasDataValue hasValue ?value2] memberOf gq#elevation and
+			?value1 > ?value2 and
 			?y memberOf River and
-			naf (nearBy(?x1,?y) and nearBy(?x2,?y)). 
+			nearBy(?x1,?y) and
+			nearBy(?x2,?y). 
 	
 	axiom validate_upstream
 		definedBy
 			!- upstream(?x1,?x2) and
-			?x1 memberOf gs#geographical_unit and
-			?x2 memberOf gs#geographical_unit and
+			?x1[dul#hasQuality hasValue ?elevationx1] memberOf gs#geographical_unit and
+			?x2[dul#hasQuality hasValue ?elevationx2] memberOf gs#geographical_unit and
+			?elevationx1 [dul#hasDataValue hasValue ?value1] memberOf gq#elevation and
+			?elevationx2 [dul#hasDataValue hasValue ?value2] memberOf gq#elevation and
+			?value1 < ?value2 and
 			?y memberOf River and
-			naf (nearBy(?x1,?y) and nearBy(?x2,?y)). 
+			nearBy(?x1,?y) and
+			nearBy(?x2,?y). 
 			
 	axiom upstream_disjoint_downstream
 		definedBy
@@ -361,4 +370,6 @@ ontology FloodScenario
 			downstream(?y,?z)
 			implies
 			downstream(?x,?z). 
+	
+	axiom downstream
 			
