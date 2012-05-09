@@ -25,112 +25,27 @@ ontology AffectingEnvironment
                      
     concept agent subConceptOf dolce#physical_agentive_object
 		is_surrounded_by ofType universal_environment
-        participant_in ofType activity
+        dolce#participant_in ofType activity
                      
     concept activity subConceptOf dolce#process
         define ofType affecting_environment
-        has_participant ofType agent
-        part_of ofType compound_activity
+        dolce#participant ofType agent
+        dolce#part_of ofType compound_activity
                      
     concept compound_activity subConceptOf dolce#process
-        has_part ofType activity
+        dolce#has_part ofType activity
         define ofType compound_affecting_environment
                      
     concept affecting_environment
         part_of ofType {universal_environment, compound_affecting_environment}
         is_defined_by ofType activity
-        has_part ofType affected_object
                      
     concept compound_affecting_environment
         is_defined_by ofType compound_activity 
         has_part ofType affecting_environment
-                     
-    concept affected_object subConceptOf gspace#geographical_unit
-        has_state ofType state
-        part_of ofType affecting_environment
-                     
+      
     concept state subConceptOf dolce#quality
-                     
-    axiom parthood_reflexiv
-        definedBy
-			?x memberOf dolce#particular
-            and part_of(?x,?x)
-            implies 
-            true. 
-            ?x memberOf dolce#particular
-            and has_part(?x,?x)
-            implies 
-            true. 
-                     
-    axiom parthood_transitive
-    	definedBy
-            ?x memberOf dolce#particular
-            and ?y memberOf dolce#particular
-            and ?z memberOf dolce#particular
-            and part_of(?x,?y)
-            and part_of(?y,?z)
-            implies 
-            part_of(?x,?z). 
-            ?x memberOf dolce#particular
-            and ?y memberOf dolce#particular
-            and ?z memberOf dolce#particular
-            and has_part(?x,?y)
-            and part_of(?y,?z)
-            implies 
-            part_of(?x,?z). 
-                     
-    axiom partOf_inverse_hasPart
-        definedBy
-            ?x memberOf dolce#particular
-            and ?y memberOf dolce#particular
-            and part_of(?x,?y)
-            implies 
-            has_part(?y,?x). 
-            ?x memberOf dolce#particular
-            and ?y memberOf dolce#particular
-            and has_part(?x,?y)
-            implies 
-            part_of(?y,?x). 
-                     
-    axiom define_inverse_isDefinedBy
-        definedBy
-            ?x memberOf {activity,compound_activity}
-            and ?y memberOf {affecting_Environment,compound_affecting_environment}
-            and define(?x,?y)
-            implies 
-            is_defined_by(?y,?x). 
-            ?x memberOf {affecting_environment,compound_affecting_environment}
-            and ?y memberOf {activity,compound_activity}
-            and is_defined_by(?x,?y)
-            implies 
-            define(?y,?x). 
-                     
-    axiom participantIn_inverse_hasParticipant
-        definedBy
-            ?x memberOf agent
-            and ?y memberOf activity
-            and participant_in(?x,?y)
-            implies 
-            has_participant(?y,?x). 
-            ?x memberOf activity
-            and ?y memberOf agent
-            and has_participant(?x,?y)
-            implies 
-            participant_in(?y,?x). 
-                     
-    axiom isSurroundedBy_inverse_surrounds
-        definedBy
-            ?x memberOf dolce#physical_object
-            and ?y memberOf universal_environment
-            and is_Surrounded_by(?x,?y)
-            implies 
-            surrounds(?y,?x). 
-            ?x memberOf universal_environment
-            and ?y memberOf dolce#physical_object
-            and surrounds(?x,?y)
-            implies 
-            is_surrounded_by(?y,?x). 
-                     
+                                        
     axiom A1
         definedBy
             ?x memberOf agent
@@ -154,21 +69,12 @@ ontology AffectingEnvironment
             implies 
             ?c[has_part hasValue ?a]. 
                      
+                           
+       relation contains(ofType AffectingEnvironment, ofType gspace#geographical_unit)
        
-                     
-       relation define(ofType {Activity, CompoundActivity}, ofType {AffectingEnvironment, CompoundAffectingEnvironment})
+       relation is_contained_in(ofType gspace#geographical_unit, ofType AffectingEnvironment)
        
-       relation isDefinedBy(ofType {AffectingEnvironment, CompoundAffectingEnvironment}, ofType {Activity, CompoundActivity})
+       relation has_state(ofType gspace#geographical_unit, ofType state)
        
-       relation participantIn(ofType Agent, ofType Activity)
-       
-       relation hasParticipant(ofType Activity, ofType Agent)
-       
-       relation surrounds(ofType UniversalEnvironment, ofType dolce#PhysicalObject)
-       
-       relation isSurroundedBy(ofType dolce#PhysicalObject, ofType UniversalEnvironment)
-       
-       relation partOf(ofType dolce#Particular, ofType dolce#Particular)
-       
-       relation hasPart(ofType dolce#Particular, ofType dolce#Particular)
+       relation is_state_of(ofType state, ofType gspace#geographical_unit)
        
