@@ -82,3 +82,5 @@ relation spatialDimension (ofType Geometry, ofType xsd#integer)
 relation dimension (ofType Geometry, ofType xsd#integer)
 
 relation coordinateDimension (ofType Geometry, ofType xsd#integer)
+
+relation crcAsSRID (ofType Geometry, ofType xsd#string)
