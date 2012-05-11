@@ -154,6 +154,7 @@ ontology NotificationOntology
 	
 	instance location_of_gilboa memberOf gsparql#Geometry
 		gsparql#asWKT hasValue "SRID:4326;POINT (42.3973 -74.44598)"
+		gsparql#spatialDimension hasValue 1
 	
 	instance altitude_of_gilboa memberOf gq#altitude
 		dul#hasDataValue hasValue 313
@@ -169,6 +170,7 @@ ontology NotificationOntology
 	
 	instance location_of_breakabeen memberOf gsparql#Geometry
 		gsparql#asWKT hasValue "SRID:4326;POINT (42.52424 -74.40959)"
+		gsparql#spatialDimension hasValue 1
 	
 	instance altitude_of_breakabeen memberOf gq#altitude
 		dul#hasDataValue hasValue 226
@@ -184,6 +186,7 @@ ontology NotificationOntology
 	
 	instance location_of_fultonham memberOf gsparql#Geometry
 		gsparql#asWKT hasValue "SRID:4326;POINT (42.56841 -74.39542)"
+		gsparql#spatialDimension hasValue 1
 	
 	instance altitude_of_fultonham memberOf gq#altitude
 		dul#hasDataValue hasValue 214
@@ -199,6 +202,7 @@ ontology NotificationOntology
 	
 	instance location_of_middleburgh memberOf gsparql#Geometry
 		gsparql#asWKT hasValue "SRID:4326;POINT (42.59869 -74.33292)"
+		gsparql#spatialDimension hasValue 1
 	
 	instance altitude_of_middleburgh memberOf gq#altitude
 		dul#hasDataValue hasValue 195
@@ -214,6 +218,7 @@ ontology NotificationOntology
 	
 	instance location_of_schoharie memberOf gsparql#Geometry
 		gsparql#asWKT hasValue "SRID:4326;POINT (42.66638 -74.31374)"
+		gsparql#spatialDimension hasValue 1
 	
 	instance altitude_of_schoharie memberOf gq#altitude
 		dul#hasDataValue hasValue 182
@@ -229,6 +234,7 @@ ontology NotificationOntology
 	
 	instance location_of_esperance memberOf gsparql#Geometry
 		gsparql#asWKT hasValue "SRID:4326;POINT (42.76119 -74.25652)"
+		gsparql#spatialDimension hasValue 1
 	
 	instance altitude_of_esperance memberOf gq#altitude
 		dul#hasDataValue hasValue 177
@@ -243,6 +249,7 @@ ontology NotificationOntology
 	
 	instance location_of_burtonsville memberOf gsparql#Geometry
 		gsparql#asWKT hasValue "SRID:4326;POINT (42.80507 -74.2593)"
+		gsparql#spatialDimension hasValue 1
 	
 	instance altitude_of_burtonsville memberOf gq#altitude
 		dul#hasDataValue hasValue 157
@@ -260,6 +267,7 @@ ontology NotificationOntology
 	
 	instance location_of_gilboa_dam memberOf gsparql#Geometry
 		gsparql#asWKT hasValue "SRID:4326;POINT (42.39175 -74.44959)"
+		gsparql#spatialDimension hasValue 1
 	
 	instance altitude_of_gilboa_dam memberOf gq#altitude
 		dul#hasDataValue hasValue 323
@@ -276,6 +284,7 @@ ontology NotificationOntology
 	
 	instance location_of_prattsville_water_level_sensor memberOf gsparql#Geometry
 		gsparql#asWKT hasValue "SRID:4326;POINT (42.31481 -74.43293)"
+		gsparql#spatialDimension hasValue 1
 	
 	instance altitude_of_prattsville_water_level_sensor memberOf gq#altitude
 		dul#hasDataValue hasValue 355
@@ -290,6 +299,7 @@ ontology NotificationOntology
 	
 	instance location_of_gilboa_water_level_sensor memberOf gsparql#Geometry
 		gsparql#asWKT hasValue "SRID:4326;POINT (42.3973 -74.44598)"
+		gsparql#spatialDimension hasValue 1
 	
 	instance altitude_of_gilboa_water_level_sensor memberOf gq#altitude
 		dul#hasDataValue hasValue 313
@@ -304,6 +314,7 @@ ontology NotificationOntology
 	
 	instance location_of_breakabeen_water_level_sensor memberOf gsparql#Geometry
 		gsparql#asWKT hasValue "SRID:4326;POINT (42.52424 -74.40959)"
+		gsparql#spatialDimension hasValue 1
 	
 	instance altitude_of_breakabeen_water_level_sensor memberOf gq#altitude
 		dul#hasDataValue hasValue 226

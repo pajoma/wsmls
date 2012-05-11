@@ -7,7 +7,7 @@
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/">
 
-<rdf:Description rdf:nodeID="node16sppd7dox1">
+<rdf:Description rdf:nodeID="node16suhg9uax1">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>GeoSPARQL</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -141,6 +141,10 @@
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
 </rdf:Description>
 
+<rdf:Description rdf:about="http://purl.org/ifgi/geosparql#CRSLiteral">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+</rdf:Description>
+
 <rdf:Description rdf:about="http://purl.org/ifgi/geosparql#defaultGeometry">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/geosparql#Feature"/>
@@ -201,10 +205,10 @@
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/geosparql#crcAsSRID">
+<rdf:Description rdf:about="http://purl.org/ifgi/geosparql#asCRS">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/geosparql#Geometry"/>
-	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/geosparql#CRSLiteral"/>
 </rdf:Description>
 
 </rdf:RDF>
