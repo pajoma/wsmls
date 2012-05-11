@@ -60,6 +60,8 @@ instance WKTLiteral memberOf rdfs#Datatype
 
 instance GMLLiteral memberOf rdfs#Datatype
 
+instance CRSLiteral memberOf rdfs#Datatype
+
 
 // Properties
 
@@ -83,4 +85,4 @@ relation dimension (ofType Geometry, ofType xsd#integer)
 
 relation coordinateDimension (ofType Geometry, ofType xsd#integer)
 
-relation crcAsSRID (ofType Geometry, ofType xsd#string)
+relation asCRS (ofType Geometry, ofType CRSLiteral)

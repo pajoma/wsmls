@@ -5,7 +5,7 @@
 @prefix : <http://purl.org/ifgi/geosparql#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 
-_:node16sppd7dox2 a owl:Ontology ;
+_:node16suhg9uax2 a owl:Ontology ;
 	rdfs:label "GeoSPARQL" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
@@ -95,6 +95,8 @@ _:node16sppd7dox2 a owl:Ontology ;
 
 :GMLLiteral a rdfs:Datatype .
 
+:CRSLiteral a rdfs:Datatype .
+
 :defaultGeometry a rdf:Property ;
 	rdfs:domain :Feature ;
 	rdfs:range :Geometry .
@@ -135,6 +137,6 @@ _:node16sppd7dox2 a owl:Ontology ;
 	rdfs:domain :Geometry ;
 	rdfs:range xsd:integer .
 
-:crcAsSRID a rdf:Property ;
+:asCRS a rdf:Property ;
 	rdfs:domain :Geometry ;
-	rdfs:range xsd:string .
+	rdfs:range :CRSLiteral .
