@@ -13,7 +13,7 @@
 	xmlns:geoDesc="http://purl.org/ifgi/geodesc#"
 	xmlns:eo="http://purl.org/ifgi/event-observation#">
 
-<rdf:Description rdf:nodeID="node16s8u3mk6x1">
+<rdf:Description rdf:nodeID="node16tgkn9ulx1">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>geographical_model</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -68,7 +68,7 @@
 	<rdfs:label>http://purl.org/ifgi/geomodels#hasHazardLevel</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/geomodels#HazardLevelDescription"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/geomodels#ComputationalModel">
