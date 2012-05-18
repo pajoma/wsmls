@@ -19,7 +19,7 @@
 	xmlns:ge="http://purl.org/ifgi/geoevents#"
 	xmlns:gsparql="http://purl.org/ifgi/geosparql#">
 
-<rdf:Description rdf:nodeID="node16suhg9uax3">
+<rdf:Description rdf:nodeID="node16tgkn9ulx3">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>NotificationOntology</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -430,71 +430,74 @@
 	<dul:hasDataValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">226</dul:hasDataValue>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16suhg9uax4">
+<rdf:Description rdf:nodeID="node16tgkn9ulx4">
 	<rdfs:label>http://purl.org/ifgi/notification#predict_flooding_50</rdfs:label>
 	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
 	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?eventobsdesc[_"http://purl.org/ifgi/geodesc#describedLocation" hasValue ?descloc, _"http://purl.org/ifgi/dul#describes" hasValue ?eventobs] memberOf _"http://purl.org/ifgi/event-observation#EventObservationDescription"
  and ?descloc[_"http://purl.org/ifgi/geosparql#asWKT" hasValue ?locvalue] memberOf _"http://purl.org/ifgi/geodesc#LocationDescription"
  and ?eventobs[_"http://purl.org/ifgi/dul#isClassifiedBy" hasValue ?eventobstype] memberOf _"http://purl.org/ifgi/event-observation#EventObservation"
  and ?eventobstype memberOf _"http://purl.org/ifgi/water/flood#ActionStageToMinorFloodingStage"
- and ?predictedeventobsdesc memberOf _"http://purl.org/ifgi/notification#newFact"
- and ?predictedeventobs memberOf _"http://purl.org/ifgi/notification#newFact"
- and ?hazlevdes memberOf _"http://purl.org/ifgi/notification#newFact"
- and ?event memberOf _"http://purl.org/ifgi/notification#newFact"
+ and ?predictedeventobsdesc memberOf _"http://purl.org/ifgi/geomodels#PredictedEventObservationDescription"
+ and ?predictedeventobs memberOf _"http://purl.org/ifgi/geomodels#PredictedEventObservation"
+ and ?hazlevdes memberOf _"http://purl.org/ifgi/geomodels#HazardLevelDescription"
+ and ?event memberOf _"http://purl.org/ifgi/geoevents#geographical_event"
+ and ?descloc2 memberOf _"http://purl.org/ifgi/geodesc#LocationDescription"
  implies 
 ?predictedeventobsdesc[_"http://purl.org/ifgi/geodesc#describedLocation" hasValue ?descloc2, _"http://purl.org/ifgi/dul#describes" hasValue ?predictedeventobs, _"http://purl.org/ifgi/geomodels#associatedHazardLevel" hasValue ?hazlevdesc, _"http://purl.org/ifgi/geomodels#hasSource" hasValue ?eventobsdesc] memberOf _"http://purl.org/ifgi/geomodels#PredictedEventObservationDescription"
  and ?descloc2[_"http://purl.org/ifgi/geosparql#asWKT" hasValue ?locvalue] memberOf _"http://purl.org/ifgi/geodesc#LocationDescription"
  and ?predictedeventobs[_"http://purl.org/ifgi/geomodels#predicts" hasValue ?event] memberOf _"http://purl.org/ifgi/geomodels#PredictedEventObservation"
- and ?hazlevdesc[_"http://purl.org/ifgi/geomodels#hasHazardLevel" hasValue "50"] memberOf _"http://purl.org/ifgi/water/flood#HazardLevelDescription"
+ and ?hazlevdesc[_"http://purl.org/ifgi/geomodels#hasHazardLevel" hasValue 50] memberOf _"http://purl.org/ifgi/geomodels#HazardLevelDescription"
  and ?event memberOf _"http://purl.org/ifgi/water/flood#Flood". </rdf:value>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16suhg9uax5">
+<rdf:Description rdf:nodeID="node16tgkn9ulx5">
 	<rdfs:label>http://purl.org/ifgi/notification#predict_flooding_70</rdfs:label>
 	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
 	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?eventobsdesc[_"http://purl.org/ifgi/geodesc#describedLocation" hasValue ?descloc, _"http://purl.org/ifgi/dul#describes" hasValue ?eventobs] memberOf _"http://purl.org/ifgi/event-observation#EventObservationDescription"
  and ?descloc[_"http://purl.org/ifgi/geosparql#asWKT" hasValue ?locvalue] memberOf _"http://purl.org/ifgi/geodesc#LocationDescription"
  and ?eventobs[_"http://purl.org/ifgi/dul#isClassifiedBy" hasValue ?eventobstype] memberOf _"http://purl.org/ifgi/event-observation#EventObservation"
  and ?eventobstype memberOf _"http://purl.org/ifgi/water/flood#MinorFloodingStageToModerateFloodingStage"
- and ?predictedeventobsdesc memberOf _"http://purl.org/ifgi/notification#newFact"
- and ?predictedeventobs memberOf _"http://purl.org/ifgi/notification#newFact"
- and ?hazlevdes memberOf _"http://purl.org/ifgi/notification#newFact"
- and ?event memberOf _"http://purl.org/ifgi/notification#newFact"
+ and ?predictedeventobsdesc memberOf _"http://purl.org/ifgi/geomodels#PredictedEventObservationDescription"
+ and ?predictedeventobs memberOf _"http://purl.org/ifgi/geomodels#PredictedEventObservation"
+ and ?hazlevdes memberOf _"http://purl.org/ifgi/geomodels#HazardLevelDescription"
+ and ?event memberOf _"http://purl.org/ifgi/geoevents#geographical_event"
+ and ?descloc2 memberOf _"http://purl.org/ifgi/geodesc#LocationDescription"
  implies 
 ?predictedeventobsdesc[_"http://purl.org/ifgi/geodesc#describedLocation" hasValue ?descloc2, _"http://purl.org/ifgi/dul#describes" hasValue ?predictedeventobs, _"http://purl.org/ifgi/geomodels#associatedHazardLevel" hasValue ?hazlevdesc, _"http://purl.org/ifgi/geomodels#hasSource" hasValue ?eventobsdesc] memberOf _"http://purl.org/ifgi/geomodels#PredictedEventObservationDescription"
  and ?descloc2[_"http://purl.org/ifgi/geosparql#asWKT" hasValue ?locvalue] memberOf _"http://purl.org/ifgi/geodesc#LocationDescription"
  and ?predictedeventobs[_"http://purl.org/ifgi/geomodels#predicts" hasValue ?event] memberOf _"http://purl.org/ifgi/geomodels#PredictedEventObservation"
- and ?hazlevdesc[_"http://purl.org/ifgi/geomodels#hasHazardLevel" hasValue "70"] memberOf _"http://purl.org/ifgi/water/flood#HazardLevelDescription"
+ and ?hazlevdesc[_"http://purl.org/ifgi/geomodels#hasHazardLevel" hasValue 70] memberOf _"http://purl.org/ifgi/geomodels#HazardLevelDescription"
  and ?event memberOf _"http://purl.org/ifgi/water/flood#Flood". </rdf:value>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16suhg9uax6">
+<rdf:Description rdf:nodeID="node16tgkn9ulx6">
 	<rdfs:label>http://purl.org/ifgi/notification#predict_flooding_90</rdfs:label>
 	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
 	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?eventobsdesc[_"http://purl.org/ifgi/geodesc#describedLocation" hasValue ?descloc, _"http://purl.org/ifgi/dul#describes" hasValue ?eventobs] memberOf _"http://purl.org/ifgi/event-observation#EventObservationDescription"
  and ?descloc[_"http://purl.org/ifgi/geosparql#asWKT" hasValue ?locvalue] memberOf _"http://purl.org/ifgi/geodesc#LocationDescription"
  and ?eventobs[_"http://purl.org/ifgi/dul#isClassifiedBy" hasValue ?eventobstype] memberOf _"http://purl.org/ifgi/event-observation#EventObservation"
  and ?eventobstype memberOf _"http://purl.org/ifgi/water/flood#ModerateFloodingStageToMajorFloodingStage"
- and ?predictedeventobsdesc memberOf _"http://purl.org/ifgi/notification#newFact"
- and ?predictedeventobs memberOf _"http://purl.org/ifgi/notification#newFact"
- and ?hazlevdes memberOf _"http://purl.org/ifgi/notification#newFact"
- and ?event memberOf _"http://purl.org/ifgi/notification#newFact"
+ and ?predictedeventobsdesc memberOf _"http://purl.org/ifgi/geomodels#PredictedEventObservationDescription"
+ and ?predictedeventobs memberOf _"http://purl.org/ifgi/geomodels#PredictedEventObservation"
+ and ?hazlevdes memberOf _"http://purl.org/ifgi/geomodels#HazardLevelDescription"
+ and ?event memberOf _"http://purl.org/ifgi/geoevents#geographical_event"
+ and ?descloc2 memberOf _"http://purl.org/ifgi/geodesc#LocationDescription"
  implies 
 ?predictedeventobsdesc[_"http://purl.org/ifgi/geodesc#describedLocation" hasValue ?descloc2, _"http://purl.org/ifgi/dul#describes" hasValue ?predictedeventobs, _"http://purl.org/ifgi/geomodels#associatedHazardLevel" hasValue ?hazlevdesc, _"http://purl.org/ifgi/geomodels#hasSource" hasValue ?eventobsdesc] memberOf _"http://purl.org/ifgi/geomodels#PredictedEventObservationDescription"
  and ?descloc2[_"http://purl.org/ifgi/geosparql#asWKT" hasValue ?locvalue] memberOf _"http://purl.org/ifgi/geodesc#LocationDescription"
  and ?predictedeventobs[_"http://purl.org/ifgi/geomodels#predicts" hasValue ?event] memberOf _"http://purl.org/ifgi/geomodels#PredictedEventObservation"
- and ?hazlevdesc[_"http://purl.org/ifgi/geomodels#hasHazardLevel" hasValue "90"] memberOf _"http://purl.org/ifgi/water/flood#HazardLevelDescription"
+ and ?hazlevdesc[_"http://purl.org/ifgi/geomodels#hasHazardLevel" hasValue 90] memberOf _"http://purl.org/ifgi/geomodels#HazardLevelDescription"
  and ?event memberOf _"http://purl.org/ifgi/water/flood#Flood". </rdf:value>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16suhg9uax7">
+<rdf:Description rdf:nodeID="node16tgkn9ulx7">
 	<rdfs:label>http://purl.org/ifgi/notification#change_state_to_flooded</rdfs:label>
 	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
 	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">forall ?state
  (?predictedeventobsdesc[_"http://purl.org/ifgi/geodesc#describedLocation" hasValue ?descloc, _"http://purl.org/ifgi/dul#describes" hasValue ?predictedeventobs, _"http://purl.org/ifgi/geomodels#associatedHazardLevel" hasValue ?hazlevdesc, _"http://purl.org/ifgi/geomodels#hasSource" hasValue ?eventobsdesc] memberOf _"http://purl.org/ifgi/geomodels#PredictedEventObservationDescription"
  and ?descloc[_"http://purl.org/ifgi/geosparql#asWKT" hasValue ?locvalue] memberOf _"http://purl.org/ifgi/geodesc#LocationDescription"
  and ?predictedeventobs[_"http://purl.org/ifgi/geomodels#predicts" hasValue ?event] memberOf _"http://purl.org/ifgi/geomodels#PredictedEventObservation"
- and ?hazlevdesc[_"http://purl.org/ifgi/geomodels#hasHazardLevel" hasValue ?probability] memberOf _"http://purl.org/ifgi/water/flood#HazardLevelDescription"
+ and ?hazlevdesc[_"http://purl.org/ifgi/geomodels#hasHazardLevel" hasValue ?probability] memberOf _"http://purl.org/ifgi/geomodels#HazardLevelDescription"
  and ?event memberOf _"http://purl.org/ifgi/water/flood#Flood"
  and ?probability &gt; 50
  and ?watlevsensdesc[_"http://purl.org/ifgi/geodesc#describes" hasValue ?watlevsens, _"http://purl.org/ifgi/geodesc#describedLocation" hasValue ?watlevsensloc] memberOf _"http://purl.org/ifgi/geodesc#GeographicalDescription"

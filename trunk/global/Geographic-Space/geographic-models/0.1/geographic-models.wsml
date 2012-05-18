@@ -1,6 +1,7 @@
 wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
 namespace { _"http://purl.org/ifgi/geomodels#",
 	dc _"http://purl.org/dc/elements/1.1/",
+	xsd _"http://www.w3.org/2001/XMLSchema#",
     rdfs _"http://www.w3.org/2000/01/rdf-schema#",
     time _"http://purl.org/ifgi/time#",
     dul _"http://purl.org/ifgi/dul#",
@@ -85,7 +86,7 @@ concept HazardLevelDescription subConceptOf dul#Description
 		dc#identifier hasValue "Hazard Description@en"
 		dc#identifier hasValue "Gefährdung Beschreibung@de"
 	endAnnotations
-	hasHazardLevel ofType _string
+	hasHazardLevel ofType xsd#integer
 	
 	
 concept ComputationalModel subConceptOf dul#Workflow 

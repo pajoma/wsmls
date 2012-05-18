@@ -11,7 +11,7 @@
 @prefix geoDesc: <http://purl.org/ifgi/geodesc#> .
 @prefix eo: <http://purl.org/ifgi/event-observation#> .
 
-_:node16s8u3mk6x2 a owl:Ontology ;
+_:node16tgkn9ulx2 a owl:Ontology ;
 	rdfs:label "geographical_model" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/geoevents#> , <http://purl.org/ifgi/event-observation#> .
@@ -48,7 +48,7 @@ _:node16s8u3mk6x2 a owl:Ontology ;
 	rdfs:label "http://purl.org/ifgi/geomodels#hasHazardLevel" ;
 	rdfs:domain :HazardLevelDescription ;
 	a rdf:Property ;
-	rdfs:range xsd:string .
+	rdfs:range xsd:integer .
 
 :ComputationalModel a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/geomodels#ComputationalModel" ;

@@ -68,15 +68,16 @@ ontology NotificationOntology
              and ?descloc [gsparql#asWKT hasValue ?locvalue] memberOf gDesc#LocationDescription
              and ?eventobs [dul#isClassifiedBy hasValue ?eventobstype] memberOf eo#EventObservation
              and ?eventobstype memberOf flood#ActionStageToMinorFloodingStage
-             and ?predictedeventobsdesc memberOf newFact
-             and ?predictedeventobs memberOf newFact
-             and ?hazlevdes memberOf newFact
-             and ?event memberOf newFact
+             and ?predictedeventobsdesc memberOf geomod#PredictedEventObservationDescription
+             and ?predictedeventobs memberOf geomod#PredictedEventObservation
+             and ?hazlevdes memberOf geomod#HazardLevelDescription
+             and ?event memberOf ge#geographical_event
+			 and ?descloc2 memberOf gDesc#LocationDescription
              implies
              ?predictedeventobsdesc[gDesc#describedLocation hasValue ?descloc2, dul#describes hasValue ?predictedeventobs, geomod#associatedHazardLevel hasValue ?hazlevdesc, geomod#hasSource hasValue ?eventobsdesc] memberOf geomod#PredictedEventObservationDescription
              and ?descloc2 [gsparql#asWKT hasValue ?locvalue] memberOf gDesc#LocationDescription
              and ?predictedeventobs [geomod#predicts hasValue ?event] memberOf geomod#PredictedEventObservation
-             and ?hazlevdesc [geomod#hasHazardLevel hasValue "50"] memberOf flood#HazardLevelDescription
+             and ?hazlevdesc [geomod#hasHazardLevel hasValue 50] memberOf geomod#HazardLevelDescription
              and ?event memberOf flood#Flood.
              
 	axiom predict_flooding_70
@@ -85,15 +86,16 @@ ontology NotificationOntology
              and ?descloc [gsparql#asWKT hasValue ?locvalue] memberOf gDesc#LocationDescription
              and ?eventobs [dul#isClassifiedBy hasValue ?eventobstype] memberOf eo#EventObservation
              and ?eventobstype memberOf flood#MinorFloodingStageToModerateFloodingStage
-             and ?predictedeventobsdesc memberOf newFact
-             and ?predictedeventobs memberOf newFact
-             and ?hazlevdes memberOf newFact
-             and ?event memberOf newFact
+             and ?predictedeventobsdesc memberOf geomod#PredictedEventObservationDescription
+             and ?predictedeventobs memberOf geomod#PredictedEventObservation
+             and ?hazlevdes memberOf geomod#HazardLevelDescription
+             and ?event memberOf ge#geographical_event
+			 and ?descloc2 memberOf gDesc#LocationDescription
              implies
              ?predictedeventobsdesc[gDesc#describedLocation hasValue ?descloc2, dul#describes hasValue ?predictedeventobs, geomod#associatedHazardLevel hasValue ?hazlevdesc, geomod#hasSource hasValue ?eventobsdesc] memberOf geomod#PredictedEventObservationDescription
              and ?descloc2 [gsparql#asWKT hasValue ?locvalue] memberOf gDesc#LocationDescription
              and ?predictedeventobs [geomod#predicts hasValue ?event] memberOf geomod#PredictedEventObservation
-             and ?hazlevdesc [geomod#hasHazardLevel hasValue "70"] memberOf flood#HazardLevelDescription
+             and ?hazlevdesc [geomod#hasHazardLevel hasValue 70] memberOf geomod#HazardLevelDescription
              and ?event memberOf flood#Flood.
 
 	axiom predict_flooding_90
@@ -102,15 +104,16 @@ ontology NotificationOntology
              and ?descloc [gsparql#asWKT hasValue ?locvalue] memberOf gDesc#LocationDescription
              and ?eventobs [dul#isClassifiedBy hasValue ?eventobstype] memberOf eo#EventObservation
              and ?eventobstype memberOf flood#ModerateFloodingStageToMajorFloodingStage
-             and ?predictedeventobsdesc memberOf newFact
-             and ?predictedeventobs memberOf newFact
-             and ?hazlevdes memberOf newFact
-             and ?event memberOf newFact
+             and ?predictedeventobsdesc memberOf geomod#PredictedEventObservationDescription
+             and ?predictedeventobs memberOf geomod#PredictedEventObservation
+             and ?hazlevdes memberOf geomod#HazardLevelDescription
+             and ?event memberOf ge#geographical_event
+			 and ?descloc2 memberOf gDesc#LocationDescription
              implies
              ?predictedeventobsdesc[gDesc#describedLocation hasValue ?descloc2, dul#describes hasValue ?predictedeventobs, geomod#associatedHazardLevel hasValue ?hazlevdesc, geomod#hasSource hasValue ?eventobsdesc] memberOf geomod#PredictedEventObservationDescription
              and ?descloc2 [gsparql#asWKT hasValue ?locvalue] memberOf gDesc#LocationDescription
              and ?predictedeventobs [geomod#predicts hasValue ?event] memberOf geomod#PredictedEventObservation
-             and ?hazlevdesc [geomod#hasHazardLevel hasValue "90"] memberOf flood#HazardLevelDescription
+             and ?hazlevdesc [geomod#hasHazardLevel hasValue 90] memberOf geomod#HazardLevelDescription
              and ?event memberOf flood#Flood.
            
 	axiom change_state_to_flooded
@@ -119,7 +122,7 @@ ontology NotificationOntology
 				?predictedeventobsdesc[gDesc#describedLocation hasValue ?descloc, dul#describes hasValue ?predictedeventobs, geomod#associatedHazardLevel hasValue ?hazlevdesc, geomod#hasSource hasValue ?eventobsdesc] memberOf geomod#PredictedEventObservationDescription
             	and ?descloc [gsparql#asWKT hasValue ?locvalue] memberOf gDesc#LocationDescription
             	and ?predictedeventobs [geomod#predicts hasValue ?event] memberOf geomod#PredictedEventObservation
-             	and ?hazlevdesc [geomod#hasHazardLevel hasValue ?probability] memberOf flood#HazardLevelDescription
+             	and ?hazlevdesc [geomod#hasHazardLevel hasValue ?probability] memberOf geomod#HazardLevelDescription
              	and ?event memberOf flood#Flood
              	and ?probability > 50
              	and ?watlevsensdesc [gDesc#describes hasValue ?watlevsens, gDesc#describedLocation hasValue ?watlevsensloc] memberOf gDesc#GeographicalDescription
