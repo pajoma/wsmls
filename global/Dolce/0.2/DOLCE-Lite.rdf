@@ -8,14 +8,14 @@
 	xmlns:dolce="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/">
 
-<rdf:Description rdf:nodeID="node16sc2kj8bx1">
+<rdf:Description rdf:nodeID="node16tnq54t5x5">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>DOLCE_Lite</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
 	<dc:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IfGI, University of Muenster</dc:publisher>
 	<dc:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Foundational Ontology</dc:type>
 	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOLCE Foundational Ontology</dc:title>
-	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The DOLCE and DnS ontologies. OWL engineering by Aldo Gangemi. WSML Translation by Patrick Maué</dc:description>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The DOLCE and DnS ontologies. OWL engineering by Aldo Gangemi. WSML Translation by Patrick Mauï¿½</dc:description>
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl</dc:source>
 	<dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dolce, foundational</dc:subject>
 </rdf:Description>
@@ -1113,65 +1113,4 @@
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#endurant"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#temporary_proper_part_of"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">temporary_atomic_part_of@en</dc:identifier>
-	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Having an atom as part at a time t.</dc:description>
-	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#temporary_atomic_part_of"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://purl.org/ifgi/dolce#overlaps">
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#particular"/>
-	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#particular"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#mediated_relation"/>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">overlaps@en</dc:identifier>
-	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mereological overlap: having a common part.</dc:description>
-	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#overlaps"/>
-</rdf:Description>
-
-<rdf:Description rdf:nodeID="node16sc2kj8bx2">
-	<rdfs:label>http://purl.org/ifgi/dolce#define_inverse</rdfs:label>
-	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
-	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">_"http://purl.org/ifgi/dolce#immediate_relation"(?x,?y)
- implies 
-_"http://purl.org/ifgi/dolce#immediate_relation_i"(?y,?x). </rdf:value>
-	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">_"http://purl.org/ifgi/dolce#mediated_relation"(?x,?y)
- implies 
-_"http://purl.org/ifgi/dolce#mediated_relation_i"(?y,?x). </rdf:value>
-	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">_"http://purl.org/ifgi/dolce#generic_constituent"(?x,?y)
- implies 
-_"http://purl.org/ifgi/dolce#generic_constituent_of"(?y,?x). </rdf:value>
-	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">_"http://purl.org/ifgi/dolce#generic_dependent"(?x,?y)
- implies 
-_"http://purl.org/ifgi/dolce#generic_dependent_on"(?y,?x). </rdf:value>
-	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">_"http://purl.org/ifgi/dolce#identitiy_c"(?x,?y)
- implies 
-_"http://purl.org/ifgi/dolce#identitiy_c"(?y,?x). </rdf:value>
-	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">_"http://purl.org/ifgi/dolce#identitiy_n"(?x,?y)
- implies 
-_"http://purl.org/ifgi/dolce#identitiy_n"(?y,?x). </rdf:value>
-	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">_"http://purl.org/ifgi/dolce#sibling_part"(?x,?y)
- implies 
-_"http://purl.org/ifgi/dolce#sibling_part"(?y,?x). </rdf:value>
-	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">_"http://purl.org/ifgi/dolce#inherent_in"(?x,?y)
- implies 
-_"http://purl.org/ifgi/dolce#has_quality"(?y,?x). </rdf:value>
-	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">_"http://purl.org/ifgi/dolce#t_inherent_in"(?x,?y)
- implies 
-_"http://purl.org/ifgi/dolce#has_t_quality"(?y,?x). </rdf:value>
-	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">_"http://purl.org/ifgi/dolce#part"(?x,?y)
- implies 
-_"http://purl.org/ifgi/dolce#part_of"(?y,?x). </rdf:value>
-	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">_"http://purl.org/ifgi/dolce#atomic_part"(?x,?y)
- implies 
-_"http://purl.org/ifgi/dolce#atomic_part_of"(?y,?x). </rdf:value>
-	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">_"http://purl.org/ifgi/dolce#proper_part"(?x,?y)
- implies 
-_"http://purl.org/ifgi/dolce#proper_part_of"(?y,?x). </rdf:value>
-	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">_"http://purl.org/ifgi/dolce#boundary"(?x,?y)
- implies 
-_"http://purl.org/ifgi/dolce#boundary_of"(?y,?x). </rdf:value>
-	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">_"http://purl.org/ifgi/dolce#temporary_proper_part"(?x,?y)
- implies 
-_"http://purl.org/ifgi/dolce#temporary_proper_part_of"(?y,?x). </rdf:value>
-</rdf:Description>
-
-</rdf:RDF>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#st

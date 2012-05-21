@@ -11,7 +11,7 @@
 	xmlns:geospace="http://purl.org/ifgi/geospace#"
 	xmlns:geoevent="http://purl.org/ifgi/geoevents#">
 
-<rdf:Description rdf:nodeID="node16nm9uiu5x1">
+<rdf:Description rdf:nodeID="node16tnq54t5x21">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>geographic_units</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -32,7 +32,7 @@
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/geounits#natural_unit</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geospace#geographical_unit"/>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Natürliche Einheit@de</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Natï¿½rliche Einheit@de</dc:identifier>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Natural Unit@en</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A geographic unit created naturally</dc:description>
 	<dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Units</dc:subject>
@@ -104,37 +104,4 @@
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geounits#vegetation_community"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unterholz@de</dc:identifier>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">brushwood@en</dc:identifier>
-	<comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Branches and twigs fallen from trees and shrubs; small trees and shrubs</comment>
-	<dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LandCover</dc:subject>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://purl.org/ifgi/geounits#waterbody">
-	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:label>http://purl.org/ifgi/geounits#waterbody</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geounits#landcover_unit"/>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gewaesser@de</dc:identifier>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">water body@en</dc:identifier>
-	<comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">any kind of accumulation of water, as oceans, rivers or lakes</comment>
-	<dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LandCover</dc:subject>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://purl.org/ifgi/geounits#landcover_unit_covers">
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:domain rdf:resource="http://purl.org/ifgi/geounits#landcover_unit"/>
-	<rdfs:range rdf:resource="http://purl.org/ifgi/geospace#geographical_unit"/>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cover@en</dc:identifier>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bedecken@de</dc:identifier>
-	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://purl.org/ifgi/geounits#landcover_unit_particpant_in">
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:domain rdf:resource="http://purl.org/ifgi/geounits#landcover_unit"/>
-	<rdfs:range rdf:resource="http://purl.org/ifgi/geoevents#ground_movement"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#participant_in"/>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">participant in@en</dc:identifier>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">teilnehmen an@de</dc:identifier>
-	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
-</rdf:Description>
-
-</rdf:RDF>
+	<comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Branches and twigs fallen from trees and shrubs; small trees and shru
