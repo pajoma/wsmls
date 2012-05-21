@@ -7,7 +7,7 @@
 @prefix src: <http://www.loa-cnr.it/ontologies/SpatialRelations.owl#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 
-_:node16mkr2b3jx2 a owl:Ontology ;
+_:node16tnq54t5x10 a owl:Ontology ;
 	rdfs:label "DUL_SpatialRelations" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/dul#> ;
@@ -15,12 +15,11 @@ _:node16mkr2b3jx2 a owl:Ontology ;
 	dc:publisher "IfGI, University of Muenster"^^xsd:string ;
 	dc:type "Foundational Ontology"^^xsd:string ;
 	dc:title "Dolce Ultra Light Ontology (Spatial Relations)"^^xsd:string ;
-	dc:description "An Ontology of spatial relations, extending the location relations from DOLCE Ultra Lite. OWL engineering by Aldo Gangemi. WSML Translation by Patrick Maué"^^xsd:string ;
+	dc:description "An Ontology of spatial relations, extending the location relations from DOLCE Ultra Lite. OWL engineering by Aldo Gangemi. WSML Translation by Patrick Mauï¿½"^^xsd:string ;
 	dc:source "http://wiki.loa-cnr.it/index.php/LoaWiki:Spatial"^^xsd:string ;
 	dc:subject "dolce, , dul, foundational, module, spatial"^^xsd:string .
 
 :approximateLocation a rdf:Property ;
-	rdfs:label :approximateLocation ;
 	rdfs:domain dul:Entity ;
 	rdfs:range dul:Entity ;
 	rdfs:subPropertyOf dul:hasLocation ;
@@ -29,7 +28,6 @@ _:node16mkr2b3jx2 a owl:Ontology ;
 	rdfs:seeAlso src:approximate-location .
 
 :approximateLocationOf a rdf:Property ;
-	rdfs:label :approximateLocationOf ;
 	rdfs:domain dul:Entity ;
 	rdfs:range dul:Entity ;
 	rdfs:subPropertyOf dul:isLocationOf ;
@@ -38,7 +36,6 @@ _:node16mkr2b3jx2 a owl:Ontology ;
 	rdfs:seeAlso src:approximate-location-of .
 
 :descriptivePlace a rdf:Property ;
-	rdfs:label :descriptivePlace ;
 	rdfs:domain dul:PhysicalObject ;
 	rdfs:range dul:Place ;
 	rdfs:subPropertyOf dul:hasLocation ;
@@ -47,7 +44,6 @@ _:node16mkr2b3jx2 a owl:Ontology ;
 	rdfs:seeAlso src:descriptive-place .
 
 :descriptivePlaceOf a rdf:Property ;
-	rdfs:label :descriptivePlaceOf ;
 	rdfs:domain dul:Place ;
 	rdfs:range dul:PhysicalObject ;
 	rdfs:subPropertyOf dul:isLocationOf ;
@@ -56,7 +52,6 @@ _:node16mkr2b3jx2 a owl:Ontology ;
 	rdfs:seeAlso src:descriptive-place-of .
 
 :participantPlace a rdf:Property ;
-	rdfs:label :participantPlace ;
 	rdfs:domain dul:Event ;
 	rdfs:range dul:PhysicalPlace ;
 	rdfs:subPropertyOf :approximate_location ;
@@ -65,7 +60,6 @@ _:node16mkr2b3jx2 a owl:Ontology ;
 	rdfs:seeAlso src:participant-place .
 
 :participantPlaceOf a rdf:Property ;
-	rdfs:label :participantPlaceOf ;
 	rdfs:domain dul:PhysicalPlace ;
 	rdfs:range dul:Event ;
 	rdfs:subPropertyOf :approximate_location_of ;
@@ -74,7 +68,6 @@ _:node16mkr2b3jx2 a owl:Ontology ;
 	rdfs:seeAlso src:participant-place-of .
 
 :descriptiveOrigin a rdf:Property ;
-	rdfs:label :descriptiveOrigin ;
 	rdfs:domain dul:PhysicalObject ;
 	rdfs:range dul:Place ;
 	rdfs:subPropertyOf :descriptive_place ;
@@ -83,7 +76,6 @@ _:node16mkr2b3jx2 a owl:Ontology ;
 	rdfs:seeAlso src:descriptive-origin .
 
 :descriptiveOriginOf a rdf:Property ;
-	rdfs:label :descriptiveOriginOf ;
 	rdfs:domain dul:Place ;
 	rdfs:range dul:PhysicalObject ;
 	rdfs:subPropertyOf :descriptive_place_of ;
@@ -92,7 +84,6 @@ _:node16mkr2b3jx2 a owl:Ontology ;
 	rdfs:seeAlso src:descriptive-origin-of .
 
 :place a rdf:Property ;
-	rdfs:label :place ;
 	rdfs:domain dul:PhysicalObject ;
 	rdfs:range dul:PhysicalPlace ;
 	rdfs:subPropertyOf :approximate_location ;
@@ -101,7 +92,6 @@ _:node16mkr2b3jx2 a owl:Ontology ;
 	rdfs:seeAlso src:place .
 
 :placeOf a rdf:Property ;
-	rdfs:label :placeOf ;
 	rdfs:domain dul:PhysicalPlace ;
 	rdfs:range dul:PhysicalObject ;
 	rdfs:subPropertyOf :approximate_location_of ;
@@ -110,7 +100,6 @@ _:node16mkr2b3jx2 a owl:Ontology ;
 	rdfs:seeAlso src:place-of .
 
 :materialPlace a rdf:Property ;
-	rdfs:label :materialPlace ;
 	rdfs:domain dul:PhysicalObject ;
 	rdfs:range dul:PhysicalPlace ;
 	rdfs:subPropertyOf :place ;
@@ -119,7 +108,6 @@ _:node16mkr2b3jx2 a owl:Ontology ;
 	rdfs:seeAlso src:place-of .
 
 :materialPlaceOf a rdf:Property ;
-	rdfs:label :materialPlaceOf ;
 	rdfs:domain dul:PhysicalPlace ;
 	rdfs:range dul:PhysicalObject ;
 	rdfs:subPropertyOf :place_of ;
@@ -128,7 +116,6 @@ _:node16mkr2b3jx2 a owl:Ontology ;
 	rdfs:seeAlso src:material-place-of .
 
 :origin a rdf:Property ;
-	rdfs:label :origin ;
 	rdfs:domain dul:PhysicalObject ;
 	rdfs:range dul:PhysicalPlace ;
 	rdfs:subPropertyOf :material_place ;
@@ -137,7 +124,6 @@ _:node16mkr2b3jx2 a owl:Ontology ;
 	rdfs:seeAlso src:origin .
 
 :originOf a rdf:Property ;
-	rdfs:label :originOf ;
 	rdfs:domain dul:PhysicalPlace ;
 	rdfs:range dul:PhysicalObject ;
 	rdfs:subPropertyOf :material_place_of ;
@@ -146,7 +132,6 @@ _:node16mkr2b3jx2 a owl:Ontology ;
 	rdfs:seeAlso src:origin-of .
 
 :p_spatialLocation a rdf:Property ;
-	rdfs:label :p_spatialLocation ;
 	rdfs:domain dul:Event ;
 	rdfs:range dul:SpaceRegion ;
 	rdfs:subPropertyOf dul:hasLocation ;
@@ -155,7 +140,6 @@ _:node16mkr2b3jx2 a owl:Ontology ;
 	rdfs:seeAlso src:p-spatial-location .
 
 :p_spatialLocationOf a rdf:Property ;
-	rdfs:label :p_spatialLocationOf ;
 	rdfs:domain dul:SpaceRegion ;
 	rdfs:range dul:Event ;
 	rdfs:subPropertyOf dul:isLocationOf ;
@@ -164,19 +148,7 @@ _:node16mkr2b3jx2 a owl:Ontology ;
 	rdfs:seeAlso src:p-spatial-location-of .
 
 :spatialLocation a rdf:Property ;
-	rdfs:label :spatialLocation ;
 	rdfs:domain dul:PhysicalObject ;
 	rdfs:range dul:SpaceRegion ;
 	rdfs:subPropertyOf dul:hasLocation ;
-	dc:identifier "has spatial location@en"^^xsd:string ;
-	dc:description "Analytical location holding between physical endurants and spatial regions."^^xsd:string ;
-	rdfs:seeAlso src:spatial-location-of .
-
-:spatialLocationOf a rdf:Property ;
-	rdfs:label :spatialLocationOf ;
-	rdfs:domain dul:SpaceRegion ;
-	rdfs:range dul:PhysicalObject ;
-	rdfs:subPropertyOf dul:isLocationOf ;
-	dc:identifier "is spatial location of@en"^^xsd:string ;
-	dc:description "Analytical location holding between physical endurants and spatial regions."^^xsd:string ;
-	rdfs:seeAlso src:spatial-location-of .
+	dc:identifier "has spatial location
