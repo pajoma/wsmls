@@ -9,7 +9,7 @@
 	xmlns:dolce="http://purl.org/ifgi/dolce#"
 	xmlns:dns="http://purl.org/ifgi/dolceDnS#">
 
-<rdf:Description rdf:nodeID="node16tsilpblx71">
+<rdf:Description rdf:nodeID="node16tsjbk2dx71">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>Observation</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -208,7 +208,7 @@
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is performed by@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16tsilpblx72">
+<rdf:Description rdf:nodeID="node16tsjbk2dx72">
 	<rdfs:label>http://purl.org/ifgi/observation#performs_inverse_isPerformedBy</rdfs:label>
 	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
 	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?x memberOf _"http://purl.org/ifgi/observation#Sensor"

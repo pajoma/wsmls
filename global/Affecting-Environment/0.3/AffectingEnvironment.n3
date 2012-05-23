@@ -7,7 +7,7 @@
 @prefix dolce: <http://purl.org/ifgi/dolce#> .
 @prefix gspace: <http://purl.org/ifgi/geospace#> .
 
-_:node16tsilpblx40 a owl:Ontology ;
+_:node16tsjbk2dx40 a owl:Ontology ;
 	rdfs:label "AffectingEnvironment" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/dolce#> , <http://purl.org/ifgi/geospace#> .
@@ -131,7 +131,7 @@ _:node16tsilpblx40 a owl:Ontology ;
 	rdfs:domain :state ;
 	rdfs:range gspace:geographical_unit .
 
-_:node16tsilpblx41 rdfs:label "http://purl.org/ifgi/affecting-environment#A1" ;
+_:node16tsjbk2dx41 rdfs:label "http://purl.org/ifgi/affecting-environment#A1" ;
 	a <http://www.wsmo.org/wsml/wsml-syntax#Axiom> ;
 	rdf:value """?x memberOf _\"http://purl.org/ifgi/affecting-environment#agent\"
  and ?e memberOf _\"http://purl.org/ifgi/affecting-environment#affecting_environment\"
@@ -142,7 +142,7 @@ _:node16tsilpblx41 rdfs:label "http://purl.org/ifgi/affecting-environment#A1" ;
  implies 
 ?e[_\"http://purl.org/ifgi/affecting-environment#part_of\" hasValue ?u]. """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> .
 
-_:node16tsilpblx42 rdfs:label "http://purl.org/ifgi/affecting-environment#A3" ;
+_:node16tsjbk2dx42 rdfs:label "http://purl.org/ifgi/affecting-environment#A3" ;
 	a <http://www.wsmo.org/wsml/wsml-syntax#Axiom> ;
 	rdf:value """?c memberOf _\"http://purl.org/ifgi/affecting-environment#compound_affecting_environment\"
  and ?y memberOf _\"http://purl.org/ifgi/affecting-environment#compound_activity\"

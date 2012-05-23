@@ -6,7 +6,7 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix DUL: <http://www.loa-cnr.it/ontologies/DUL.owl#> .
 
-_:node16tsilpblx52 a owl:Ontology ;
+_:node16tsjbk2dx52 a owl:Ontology ;
 	rdfs:label "DOLCE_Ultralite" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	dc:publisher "IfGI, University of Muenster"^^xsd:string ;

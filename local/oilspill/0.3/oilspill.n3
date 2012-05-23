@@ -10,7 +10,7 @@
 @prefix ge: <http://purl.org/ifgi/geoevents#> .
 @prefix gq: <http://purl.org/ifgi/geoqualities#> .
 
-_:node16tsilpblx98 a owl:Ontology ;
+_:node16tsjbk2dx98 a owl:Ontology ;
 	rdfs:label "OilSpill" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/geospace#> , <http://purl.org/ifgi/geounits#> , <http://purl.org/ifgi/geoevents#> , <http://purl.org/ifgi/geoqualities#> , <http://purl.org/ifgi/dul#> ;

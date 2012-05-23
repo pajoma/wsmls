@@ -8,7 +8,7 @@
 @prefix ows: <http://purl.org/ifgi/ows/0.2#> .
 @prefix posm: <http://purl.org/ifgi/posm#> .
 
-_:node16tsilpblx28 a owl:Ontology ;
+_:node16tsjbk2dx28 a owl:Ontology ;
 	rdfs:label "WPS" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/ows/0.2#> , <http://purl.org/ifgi/posm#> ;
