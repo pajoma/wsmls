@@ -6,7 +6,7 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix gml: <http://purl.org/ifgi/gml/0.2#> .
 
-_:node16lc7aev5x2 a owl:Ontology ;
+_:node16tshsbepx16 a owl:Ontology ;
 	rdfs:label "Base" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/gml/0.2#> ;

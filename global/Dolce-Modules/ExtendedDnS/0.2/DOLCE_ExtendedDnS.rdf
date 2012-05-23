@@ -9,7 +9,7 @@
 	xmlns:src="http://www.loa-cnr.it/ontologies/SpatialRelations.owl#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/">
 
-<rdf:Description rdf:nodeID="node16m5gl4c1x41">
+<rdf:Description rdf:nodeID="node16tshsbepx47">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>DOLCE_ExtendedDnS</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -17,7 +17,7 @@
 	<dc:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IfGI, University of Muenster</dc:publisher>
 	<dc:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Foundational Ontology</dc:type>
 	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dolce Ontology (Description and Situations)</dc:title>
-	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An ontology of collections, collectives, social units, and systems, plugins to DnS. These are placeholders for a more ambitious ontology of basic entities from the social world. OWL engineering by Aldo Gangemi. WSML Translation by Patrick Maué</dc:description>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An ontology of collections, collectives, social units, and systems, plugins to DnS. These are placeholders for a more ambitious ontology of basic entities from the social world. OWL engineering by Aldo Gangemi. WSML Translation by Patrick Mau?</dc:description>
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.loa-cnr.it/ontologies/ExtendedDnS.owl</dc:source>
 	<dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dolce, foundational, module, spatial</dc:subject>
 </rdf:Description>
@@ -59,10 +59,10 @@
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A social object that is assumed to adopt a plan. Since social objects are dependent on physical ones, adoption involves that a social object is acted-by physical agents that 'internally represents' that plan. For example, an institution can adopt the plan to promote or regulate some activities, but this is possible by means of the powers conferred to it by some legal system, through its representatives, and that plan has to be executed by means of the physical agents that 'act for' the institution.</dc:description>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#agentive_social_object-adopts">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#agentive_social_object_prop_adopts">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolceDnS#adopts</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#agentive_social_object"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#plan"/>
 </rdf:Description>
 
@@ -78,10 +78,10 @@
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Agentive figures are those which are assigned (agentive) roles from a society or community; hence, they can act like a physical agent. Typical agentive figures are societies, organizations, and in general all socially constructed persons. Agentive figures are not dependent on roles defined or used in the same descriptions they are defined or used, but they can act because they depute some powers to some of those roles. In other words, a figure classified by some agentive role can play that role because there are other roles in the descriptions that define or use the figure. Those roles classifies endurants that result to act for the figure. For example, an employee acts for an organization that deputes the role (e.g. turner) that classifies the employee. Simply put, a guy working as a turner at FIAT acts for (or on behalf of) FIAT. In complex figures, like organizations or companies, a total agency is possible when an endurant plays a delegate or representative role of the figure. Since figures are social objects, it is conceivable to find agentive figures that act for other agentive figures.</dc:description>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#agentive_figure-plays">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#agentive_figure_prop_plays">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolceDnS#plays</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#agentive_figure"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#role"/>
 </rdf:Description>
 
@@ -109,12 +109,12 @@
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An event occurring in the (embodied) mind.</dc:description>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#cognitive_event-total_constant_participant">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#cognitive_event_prop_total_constant_participant">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolce#total_constant_participant</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#cognitive_event"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#total_constant_participant"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#agentive_physical_object"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#total_constant_participant"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#flux">
@@ -149,20 +149,20 @@
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Perdurant that exemplifies the intentionality of an agent. Could it be aborted, incomplete, mislead, while remaining a (potential) accomplishment ... The point here is that having a result depends on a method, then an action remains an action under incomplete results. As a matter of fact, if we neutralize intentionality, a purely topological, post-hoc view is at odds with the notion of incomplete accomplishments.</dc:description>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#action-generically_dependent_on">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#action_prop_generically_dependent_on">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolce#generically_dependent_on</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#action"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#generically_dependent_on"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#cognitive_state"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#generically_dependent_on"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#action-participant">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#action_prop_participant">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolce#participant</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#action"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#participant"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#agent"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#participant"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#activity">
@@ -173,20 +173,20 @@
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In dependency terms, an activity is an action that is generically constantly dependent on a (at least partly) shared plan adopted by participants. This condition implies that an action must be sequenced by a task.Intuitively, activities are complex actions that are at least partly conventionally planned.</dc:description>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#activity-generically_dependent_on">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#activity_prop_generically_dependent_on">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolce#generically_dependent_on</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#activity"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#generically_dependent_on"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#plan"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#generically_dependent_on"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#activity-part">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#activity_prop_part">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolce#part</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#activity"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#part"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#action"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#part"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#communication_event">
@@ -213,12 +213,12 @@
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenomenon having a physical endurant as participant</dc:description>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#physical_phenomenon-participant">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#physical_phenomenon_prop_participant">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolce#participant</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#physical_phenomenon"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#participant"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#physical_endurant"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#participant"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#non_agentive_physical_object">
@@ -263,10 +263,10 @@
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ssss</dc:description>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#non_agentive_figure-plays">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#non_agentive_figure_prop_plays">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolceDnS#plays</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#non_agentive_figure"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#role"/>
 </rdf:Description>
 
@@ -286,32 +286,32 @@
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Collections are social objects which, although not defined by a description, depend both on member entities and on some concepts or figures, hence indirectly on descriptions. While we could talk in general of collections of any kind of entities (events, objects, abstracts, etc.), we restrict here our attention to collections of endurants, and to the concepts that classify them (i.e. roles).</dc:description>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#collection-unified_by">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#collection_prop_unified_by">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolceDnS#unified_by</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#collection"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#description"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#collection-part">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#collection_prop_part">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolce#part</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#collection"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#part"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#collection"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#part"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#collection-refined_by">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#collection_prop_refined_by">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolceDnS#refined_by</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#collection"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#collection"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#collection-specialized_by">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#collection_prop_specialized_by">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolceDnS#specialized_by</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#collection"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#collection"/>
 </rdf:Description>
 
@@ -323,10 +323,10 @@
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A collection with only agents as members.</dc:description>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#collective-member">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#collective_prop_member">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolceDnS#member</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#collective"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#agent"/>
 </rdf:Description>
 
@@ -338,32 +338,32 @@
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AKA C-Description. A non-physical object that is defined by a description s, and whose function is classifying entities from a ground ontology in order to build situations that can satisfy s.</dc:description>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#c_description-part">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#c_description_prop_part">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolce#part</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#c_description"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#part"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#c_description"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#part"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#c_description-defined_by">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#c_description_prop_defined_by">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolceDnS#defined_by</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#c_description"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#description"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#c_description-refined_by">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#c_description_prop_refined_by">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolceDnS#refined_by</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#c_description"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#c_description"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#c_description-specialized_by">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#c_description_prop_specialized_by">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolceDnS#specialized_by</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#c_description"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#c_description"/>
 </rdf:Description>
 
@@ -375,26 +375,26 @@
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A concept that classifies (in particular, it 'sequences') perdurants (processes, events, or states), as a component of some description. Courses are the descriptive counterpart of perdurants, and, since perdurants have endurants as participants, they are usually the function of some role.</dc:description>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#course-defined_by">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#course_prop_defined_by">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolceDnS#defined_by</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#course"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#description"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#course-specialized_by">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#course_prop_specialized_by">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolceDnS#specialized_by</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#course"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#course"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#course-part">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#course_prop_part">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolce#part</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#course"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#part"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#course"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#part"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#life_cycle">
@@ -421,17 +421,17 @@
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A course used to sequence activities or other controllable perdurants (some states, processes), usually within methods. They must be defined by a method, but can be *used* by other kinds of descriptions. They are desire targets of some role played by an agent. Tasks can be complex, and ordered according to an abstract succession relation. Tasks can relate to ground activities or decision making; the last kind deals with typical flowchart content. A task is different both from a flowchart node, and from an action or action type.Tasks can be considered shortcuts for plans, since at least one role played by an agent has a desire attitude towards them (possibly different from the one that puts the task into action). In principle, tasks could be transformed into explicit plans.</dc:description>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#task-defined_by">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#task_prop_defined_by">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolceDnS#defined_by</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#task"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#method"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#task-specialized_by">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#task_prop_specialized_by">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolceDnS#specialized_by</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#task"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#task"/>
 </rdf:Description>
 
@@ -443,24 +443,24 @@
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ssss</dc:description>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#parameter-defined_by">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#parameter_prop_defined_by">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolceDnS#defined_by</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#parameter"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#description"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#parameter-valued_by">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#parameter_prop_valued_by">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolceDnS#valued_by</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#parameter"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#region"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#parameter-specialized_by">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#parameter_prop_specialized_by">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolceDnS#specialized_by</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#parameter"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#parameter"/>
 </rdf:Description>
 
@@ -480,17 +480,17 @@
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Also known as 'functional role'. A concept that classifies (in particular, it is 'played by') endurants, as used in some description. Roles are the descriptive counterpart of endurants, and, as endurants participate in perdurants, they usually have courses as modal targets (see). The typology of roles is still preliminary.</dc:description>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#role-defined_by">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#role_prop_defined_by">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolceDnS#defined_by</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#role"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#description"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#role-specialized_by">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#role_prop_specialized_by">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolceDnS#specialized_by</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#role"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#role"/>
 </rdf:Description>
 
@@ -518,10 +518,10 @@
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A role played by descriptions only. Usable for metalinguistic notions, like those that deal with granular partitions of knowledge, strata of reality, argumentation, etc.</dc:description>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#description_role-played_by">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#description_role_prop_played_by">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolceDnS#played_by</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#description_role"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#description"/>
 </rdf:Description>
 
@@ -541,12 +541,12 @@
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A role created and maintained by a society.</dc:description>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#social_role-generically_dependent_on">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#social_role_prop_generically_dependent_on">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolce#generically_dependent_on</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#social_role"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#generically_dependent_on"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#collective"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#generically_dependent_on"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#symmetric_role">
@@ -565,24 +565,24 @@
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A description is a social object which represents a conceptualization (e.g. a mental object or state), hence it is generically dependent on some agent and communicable. Descriptions define or use concepts or figures, are expressed by an information object and can be satisfied by situations. The typology of descriptions is still preliminary.</dc:description>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#description-expressed_by">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#description_prop_expressed_by">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolceDnS#expressed_by</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#description"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#information_object"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#description-refined_by">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#description_prop_refined_by">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolceDnS#refined_by</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#description"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#description"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#description-specialized_by">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#description_prop_specialized_by">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolceDnS#specialized_by</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#description"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#description"/>
 </rdf:Description>
 
@@ -594,12 +594,11 @@
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A description whose purpose is defining a figure.</dc:description>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#constitutive_description-defines_">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#constitutive_description_prop_defines_">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolceDnS#defines_</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#constitutive_description"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#role"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#figure"/>
 </rdf:Description>
 
@@ -619,12 +618,11 @@
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ssss</dc:description>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#method-d_uses">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#method_prop_d_uses">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolceDnS#d_uses</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#method"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#role"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#task"/>
 </rdf:Description>
 
@@ -636,14 +634,13 @@
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plan is a method for executing or performing a procedure or a stage of a procedure. A plan must use both at least one role played by an agent, and at least one task. Finally, a plan has a goal as proper part, and can also have regulations and other descriptions as proper parts.</dc:description>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#plan-proper_part">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#plan_prop_proper_part">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolce#proper_part</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#plan"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#proper_part"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#goal_"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#objective"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#proper_part"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#project">
@@ -662,10 +659,10 @@
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A social method carried out explicitly or by tradition, spontaneously emerged, or moderately or strongly regulated. A practice has more relaxed constraints than a plan, and it's characterized by its adoption a agentive social object, e.g. a community.</dc:description>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#practice-adopted_by">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#practice_prop_adopted_by">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolceDnS#adopted_by</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#practice"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#agentive_social_object"/>
 </rdf:Description>
 
@@ -773,38 +770,37 @@
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information objects are social objects. They are realized by some entity. They are ordered (expressed according to) by some system for information encoding. Consequently, they are dependent from an encoding as well as from a concrete realization.They can express a description (the ontological equivalent of a meaning/conceptualization), can be about any entity, and can be interpreted by an agent.From a communication perspective, an information object can play the role of 'message'. From a semiotic perspective, it playes the role of 'expression'.</dc:description>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#information_object-ordered_by">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#information_object_prop_ordered_by">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolceDnS#ordered_by</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#information_object"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#description"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#information_object-realized_by">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#information_object_prop_realized_by">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolceDnS#realized_by</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#information_object"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#physical_realization"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#information_object-part">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#information_object_prop_part">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolce#part</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#information_object"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#part"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#information_object"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#part"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#information_object-refined_by">
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#information_object_prop_refined_by">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolceDnS#refined_by</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#information_object"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#information_object"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#component">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolceDnS#component"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#particular"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#proper_part"/>
@@ -814,7 +810,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#d_uses">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolceDnS#d_uses"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#description"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#figure"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolceDnS#component"/>
@@ -824,7 +819,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#defines_">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolceDnS#defines_"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#description"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#figure"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolceDnS#d_uses"/>
@@ -834,7 +828,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#optionally_uses">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolceDnS#optionally_uses"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#description"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#c_description"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolceDnS#d_uses"/>
@@ -844,7 +837,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#temporary_component">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolceDnS#temporary_component"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#endurant"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#endurant"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolceDnS#component"/>
@@ -854,7 +846,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#expands">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolceDnS#expands"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#description"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#description"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#proper_part"/>
@@ -864,7 +855,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#refines">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolceDnS#refines"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#social_object"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#social_object"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#proper_part"/>
@@ -874,7 +864,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#adopts">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolceDnS#adopts"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#rational_agent"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#description"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#immediate_relation"/>
@@ -884,7 +873,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#creates">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolceDnS#creates"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#rational_agent"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#description"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#immediate_relation"/>
@@ -894,7 +882,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dolceDnS#deputes">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/dolceDnS#deputes"/>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolceDnS#figure"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolceDnS#role"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolceDnS#temporary_proper_part_of"/>

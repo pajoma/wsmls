@@ -8,7 +8,7 @@
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns:gml="http://swing.brgm.fr/repository/ontologies/GML212/current#">
 
-<rdf:Description rdf:nodeID="node16m5gl4c1x123">
+<rdf:Description rdf:nodeID="node16tshsbepx103">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>RiverModel</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -133,15 +133,15 @@
 	<rdfs:comments rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comments>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/rivermodel#BreakLine-derivesFrom">
+<rdf:Description rdf:about="http://purl.org/ifgi/rivermodel#BreakLine_prop_derivesFrom">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/rivermodel#derivesFrom</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/rivermodel#BreakLine"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/rivermodel#BreakPoint"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stammt ab von@de</dc:identifier>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">derives from@en</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
 	<rdfs:comments rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A break line consists of break points</rdfs:comments>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:range rdf:resource="http://purl.org/ifgi/rivermodel#BreakPoint"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/rivermodel#ContourLine">

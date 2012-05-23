@@ -12,7 +12,7 @@
 @prefix gm: <http://purl.org/ifgi/geomodels#> .
 @prefix oil: <http://purl.org/ifgi/oilspill#> .
 
-_:node16ml1tv6kx2 a owl:Ontology ;
+_:node16tshsbepx84 a owl:Ontology ;
 	rdfs:label "Landslide" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/geounits#> , <http://purl.org/ifgi/geoqualities#> , <http://purl.org/ifgi/geospace#> , <http://purl.org/ifgi/geoevents#> , <http://purl.org/ifgi/oilspill#> , <http://purl.org/ifgi/dul#> , <http://purl.org/ifgi/geomodels#> ;
@@ -39,11 +39,12 @@ _:node16ml1tv6kx2 a owl:Ontology ;
 	dc:identifier "landslide risk@en"^^xsd:string , "Hangrutsch Risiko@de"^^xsd:string ;
 	dc:description "the risk that a landslide occurs"^^xsd:string .
 
-:landslide_probability-isProbabilityOf rdfs:label "http://purl.org/ifgi/geospace#isProbabilityOf" ;
+:landslide_probability_prop_isProbabilityOf a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/geospace#isProbabilityOf" ;
 	rdfs:domain :landslide_probability ;
-	rdfs:subPropertyOf gs:isProbabilityOf ;
 	a rdf:Property ;
-	rdfs:range :landslide .
+	rdfs:range :landslide ;
+	rdfs:subPropertyOf gs:isProbabilityOf .
 
 :landslide_runout_zone a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#landslide_runout_zone" ;
@@ -121,11 +122,11 @@ _:node16ml1tv6kx2 a owl:Ontology ;
 	dc:description "The side of a hill, situated between the foot and the summit."^^xsd:string ;
 	dc:source "http://www.thefreedictionary.com/hillside"^^xsd:string .
 
-:hillside-hasPart rdfs:label "http://purl.org/ifgi/dul#hasPart" ;
+:hillside_prop_hasPart a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/dul#hasPart" ;
 	rdfs:domain :hillside ;
-	rdfs:subPropertyOf dul:hasPart ;
-	a rdf:Property ;
-	rdfs:range :mountain .
+	rdfs:range :mountain ;
+	rdfs:subPropertyOf dul:hasPart .
 
 :catchment_area a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#catchment_area" ;
@@ -134,11 +135,12 @@ _:node16ml1tv6kx2 a owl:Ontology ;
 	dc:description "the entire geographical area drained by a river and its tributaries; an area characterized by all runoff being conveyed to the same outlet"^^xsd:string ;
 	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
-:catchment_area-sameAs rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
+:catchment_area_prop_sameAs a rdf:Property ;
+	rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
 	rdfs:domain :catchment_area ;
-	rdfs:subPropertyOf owl:sameAs ;
 	a rdf:Property ;
-	rdfs:range :watershed .
+	rdfs:range :watershed ;
+	rdfs:subPropertyOf owl:sameAs .
 
 :watershed a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#watershed" ;
@@ -147,16 +149,17 @@ _:node16ml1tv6kx2 a owl:Ontology ;
 	dc:description "the entire geographical area drained by a river and its tributaries; an area characterized by all runoff being conveyed to the same outlet"^^xsd:string ;
 	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
-:watershed-sameAs rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
+:watershed_prop_sameAs a rdf:Property ;
+	rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
 	rdfs:domain :watershed ;
-	rdfs:subPropertyOf owl:sameAs ;
 	a rdf:Property ;
-	rdfs:range :catchment_area .
+	rdfs:range :catchment_area ;
+	rdfs:subPropertyOf owl:sameAs .
 
 :surfacewater a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#surfacewater" ;
 	rdfs:subClassOf oil:water ;
-	dc:identifier "surface water@en"^^xsd:string , "Oberflächenwasser@de"^^xsd:string ;
+	dc:identifier "surface water@en"^^xsd:string , "Oberfl?chenwasser@de"^^xsd:string ;
 	dc:description "Surface water is water collecting on the ground or in a stream, river, lake, wetland, or ocean"^^xsd:string ;
 	dc:source "http://en.wikipedia.org/wiki/Surface_water"^^xsd:string .
 
@@ -171,7 +174,7 @@ _:node16ml1tv6kx2 a owl:Ontology ;
 	rdfs:label "http://purl.org/ifgi/landslide#debris" ;
 	rdfs:subClassOf gu:landcover_unit ;
 	dc:identifier "debris@en"^^xsd:string , "Geroell@de"^^xsd:string ;
-	dc:description "the remains of geological activity including landslides, volcanic explosions, avalanches, mudflows or Glacial lake outburst floods (Jökulhlaups) and moraine, lahars, and lava eruptions"^^xsd:string ;
+	dc:description "the remains of geological activity including landslides, volcanic explosions, avalanches, mudflows or Glacial lake outburst floods (J?kulhlaups) and moraine, lahars, and lava eruptions"^^xsd:string ;
 	dc:source "http://en.wikipedia.org/wiki/Debris"^^xsd:string .
 
 :rock a rdfs:Class ;
@@ -181,11 +184,12 @@ _:node16ml1tv6kx2 a owl:Ontology ;
 	dc:description "a lump or mass of hard consolidated mineral matter"^^xsd:string ;
 	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
-:rock-hasQuality rdfs:label "http://purl.org/ifgi/dul#hasQuality" ;
+:rock_prop_hasQuality a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/dul#hasQuality" ;
 	rdfs:domain :rock ;
-	rdfs:subPropertyOf dul:hasQuality ;
 	a rdf:Property ;
-	rdfs:range :porosity .
+	rdfs:range :porosity ;
+	rdfs:subPropertyOf dul:hasQuality .
 
 :soil a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#soil" ;
@@ -194,14 +198,15 @@ _:node16ml1tv6kx2 a owl:Ontology ;
 	dc:description "material in the top layer of the surface of the earth in which plants can grow (especially with reference to its quality or use)"^^xsd:string ;
 	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
-:soil-is_layered_by rdfs:label "http://purl.org/ifgi/landslide#is_layered_by" ;
+:soil_prop_is_layered_by a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/landslide#is_layered_by" ;
 	rdfs:domain :soil ;
 	a rdf:Property ;
 	rdfs:range :subsoil .
 
-:soil-hasQuality rdfs:label "http://purl.org/ifgi/dul#hasQuality" ;
+:soil_prop_hasQuality a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/dul#hasQuality" ;
 	rdfs:domain :soil ;
-	rdfs:subPropertyOf dul:hasQuality ;
 	a rdf:Property ;
 	rdfs:range :water_saturation ;
 	a rdf:Property ;
@@ -215,7 +220,8 @@ _:node16ml1tv6kx2 a owl:Ontology ;
 	a rdf:Property ;
 	rdfs:range :cohesion ;
 	a rdf:Property ;
-	rdfs:range :density .
+	rdfs:range :density ;
+	rdfs:subPropertyOf dul:hasQuality .
 
 :borehole a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#borehole" ;
@@ -224,13 +230,14 @@ _:node16ml1tv6kx2 a owl:Ontology ;
 	dc:description "A borehole is the generalized term for any narrow shaft bored in the ground, either vertically or horizontally."^^xsd:string ;
 	dc:source "http://en.wikipedia.org/wiki/Borehole"^^xsd:string .
 
-:borehole-hasQuality rdfs:label "http://purl.org/ifgi/dul#hasQuality" ;
+:borehole_prop_hasQuality a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/dul#hasQuality" ;
 	rdfs:domain :borehole ;
-	rdfs:subPropertyOf dul:hasQuality ;
 	a rdf:Property ;
 	rdfs:range oil:depth ;
 	a rdf:Property ;
-	rdfs:range :diameter .
+	rdfs:range :diameter ;
+	rdfs:subPropertyOf dul:hasQuality .
 
 :rail a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#rail" ;
@@ -267,11 +274,12 @@ _:node16ml1tv6kx2 a owl:Ontology ;
 	dc:description "the layer of soil between the topsoil and bedrock"^^xsd:string ;
 	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
-:subsoil-hasQuality rdfs:label "http://purl.org/ifgi/dul#hasQuality" ;
+:subsoil_prop_hasQuality a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/dul#hasQuality" ;
 	rdfs:domain :subsoil ;
-	rdfs:subPropertyOf dul:hasQuality ;
 	a rdf:Property ;
-	rdfs:range :thickness .
+	rdfs:range :thickness ;
+	rdfs:subPropertyOf dul:hasQuality .
 
 :grassland a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#grassland" ;
@@ -297,7 +305,7 @@ _:node16ml1tv6kx2 a owl:Ontology ;
 :water_saturation a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#water_saturation" ;
 	rdfs:subClassOf dul:Quality ;
-	dc:identifier "water saturation@en"^^xsd:string , "Wassersättigung@de"^^xsd:string ;
+	dc:identifier "water saturation@en"^^xsd:string , "Wassers?ttigung@de"^^xsd:string ;
 	dc:description "The fraction of water in a given pore space."^^xsd:string ;
 	dc:source "http://www.glossary.oilfield.slb.com/Display.cfm?Term=water%20saturation"^^xsd:string .
 
@@ -308,16 +316,17 @@ _:node16ml1tv6kx2 a owl:Ontology ;
 	dc:description "the vertical dimension of extension; distance from the base of something to the top"^^xsd:string ;
 	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
-:height-sameAs rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
+:height_prop_sameAs a rdf:Property ;
+	rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
 	rdfs:domain :height ;
-	rdfs:subPropertyOf owl:sameAs ;
 	a rdf:Property ;
-	rdfs:range gq:elevation .
+	rdfs:range gq:elevation ;
+	rdfs:subPropertyOf owl:sameAs .
 
 :porosity a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#porosity" ;
 	rdfs:subClassOf dul:Quality ;
-	dc:identifier "porosity@en"^^xsd:string , "Poroesität@de"^^xsd:string ;
+	dc:identifier "porosity@en"^^xsd:string , "Poroesit?t@de"^^xsd:string ;
 	dc:description "the property of being porous; being able to absorb fluids"^^xsd:string ;
 	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
@@ -360,7 +369,7 @@ _:node16ml1tv6kx2 a owl:Ontology ;
 	rdfs:label "http://purl.org/ifgi/landslide#angle_of_repose" ;
 	rdfs:subClassOf dul:Quality ;
 	dc:identifier "angle of repose@en"^^xsd:string , "Reibungswinkel@de"^^xsd:string ;
-	dc:description "The angle of repose or, more precisely, the critical angle of repose,[1] of a granular material is the steepest angle of descent or dip of the slope relative to the horizontal plane when material on the slope face is on the verge of sliding. This angle is in the range 0°–90°."^^xsd:string ;
+	dc:description "The angle of repose or, more precisely, the critical angle of repose,[1] of a granular material is the steepest angle of descent or dip of the slope relative to the horizontal plane when material on the slope face is on the verge of sliding. This angle is in the range 0??90?."^^xsd:string ;
 	dc:source "http://en.wikipedia.org/wiki/Angle_of_repose"^^xsd:string .
 
 :diameter a rdfs:Class ;

@@ -7,11 +7,11 @@
 @prefix wsml: <http://www.wsmo.org/wsml/wsml-syntax#> .
 @prefix dolce: <http://purl.org/ifgi/dolce#> .
 
-_:node16m5gl4c1x112 a owl:Ontology ;
+_:node16tshsbepx80 a owl:Ontology ;
 	rdfs:label "Systems" ;
 	<http://purl.org/dc/elements/1.1/format> "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/dolce> ;
-	dc:creator "p.maue© (IFGI)"^^xsd:string ;
+	dc:creator "p.maue? (IFGI)"^^xsd:string ;
 	dc:contributor "h.michels (IFGI)"^^xsd:string ;
 	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
 	dc:rights "http://creativecommons.org/licenses/by/3.0/"^^xsd:string ;
@@ -23,14 +23,14 @@ _:node16m5gl4c1x112 a owl:Ontology ;
 	rdfs:label "http://purl.org/ifgi/patterns/system#System" ;
 	dc:identifier "system@en"^^xsd:string .
 
-:System-involvedPhysicalEndurant rdfs:label "http://purl.org/ifgi/patterns/system#involvedPhysicalEndurant" ;
+:System_prop_involvedPhysicalEndurant a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/patterns/system#involvedPhysicalEndurant" ;
 	rdfs:domain :System ;
-	a rdf:Property ;
 	rdfs:range dolce:physical_endurant .
 
-:System-involvedPerdurant rdfs:label "http://purl.org/ifgi/patterns/system#involvedPerdurant" ;
+:System_prop_involvedPerdurant a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/patterns/system#involvedPerdurant" ;
 	rdfs:domain :System ;
-	a rdf:Property ;
 	rdfs:range dolce:perdurant .
 
 :Model a rdfs:Class ;

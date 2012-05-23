@@ -8,7 +8,7 @@
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns:DUL="http://www.loa-cnr.it/ontologies/DUL.owl#">
 
-<rdf:Description rdf:nodeID="node16tnq54t5x3">
+<rdf:Description rdf:nodeID="node16tshsbepx51">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>DOLCE_Ultralite</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -111,7 +111,7 @@
 	<rdfs:label>http://purl.org/ifgi/dul#Community</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dul#CollectiveAgent"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Community@en</dc:identifier>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Comunit�@it</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Comunit?@it</dc:identifier>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#Concept">
@@ -189,7 +189,7 @@
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/dul#Entity</rdfs:label>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Entity@en</dc:identifier>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Entit�@it</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Entit?@it</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anything: real, possible, or imaginary, which some modeller wants to talk about for some purpose.</dc:description>
 </rdf:Description>
 
@@ -216,7 +216,7 @@
 	<rdfs:label>http://purl.org/ifgi/dul#FormalEntity</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dul#Abstract"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Formal entity@en</dc:identifier>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Entit� formale astratta@it</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Entit? formale astratta@it</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Entities that are formally defined and are considered independent from the social context in which they are used. They cannot be localized in space or time. Also called 'Platonic entities'. Mathematical and logical entities are included in this class: sets, categories, tuples, costants, variables, etc. Abstract formal entities are distinguished from information objects, which are supposed to be part of a social context, and are localized in space and time, therefore being (social) objects. For example, the class 'Quark' is an abstract formal entity from the purely set-theoretical perspective, but it is an InformationObject from the viewpoint of ontology design, when e.g. implemented in a logical language like OWL. Abstract formal entities are also distinguished from Concept(s), Collection(s), and Description(s), which are part of a social context, therefore being SocialObject(s) as well. For example, the class 'Quark' is an abstract FormalEntity from the purely set-theoretical perspective, but it is a Concept within history of science and cultural dynamics. These distinctions allow to represent two different notions of 'semantics': the first one is abstract and formal ('formal semantics'), and formallyInterprets symbols that are about entities whatsoever; for example, the term 'Quark' isAbout the Collection of all quarks, and that Collection isFormalGroundingFor the abstract class 'Quark' (in the extensional sense). The second notion is social, localized in space-time ('social semantics'), and can be used to interpret entities in the intensional sense. For example, the Collection of all quarks isCoveredBy the Concept 'Quark', which is also expressed by the term 'Quark'.</dc:description>
 </rdf:Description>
 
@@ -480,7 +480,7 @@
 	<rdfs:label>http://purl.org/ifgi/dul#Quality</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quality@en</dc:identifier>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualit�@it</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualit?@it</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any aspect of an Entity (but not a part of it), which cannot exist without that Entity. For example, the way the surface of a specific PhysicalObject looks like is a Quality, while the encoding of that Quality into e.g. a PhysicalAttribute should be modeled as a Region. From the design viewpoint, the Quality-Region distinction is useful only when individual aspects of an Entity are considered in a domain of discourse. For example, in an automotive context, it would be irrelevant to consider the aspects of car windows for a specific car, unless the factory wants to check a specific window against design parameters (anomaly detection). On the other hand, in an antiques context, the individual aspects for a specific piece of furniture are a major focus of attention, and may constitute the actual added value, because the design parameters for old furniture are often not fixed, and may not be viewed as 'anomalies'.</dc:description>
 </rdf:Description>
 
@@ -659,7 +659,7 @@
 	<rdfs:label>http://purl.org/ifgi/dul#UnitOfMeasure</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dul#Parameter"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unit of measure@en</dc:identifier>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unit� di misura@it</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unit? di misura@it</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Units of measure are conceptualized here as parameters on regions, which can be valued as datatype values.</dc:description>
 </rdf:Description>
 
@@ -901,7 +901,7 @@
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Quality"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has quality@en</dc:identifier>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ha qualit�@it</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ha qualit?@it</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relation between entities and qualities, e.g. 'Dmitri's skin is yellowish'.</dc:description>
 </rdf:Description>
 
@@ -921,7 +921,7 @@
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Situation"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has setting@en</dc:identifier>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">� nel contesto di@it</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">? nel contesto di@it</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relation between entities and situations, e.g. 'this morning I've prepared my coffee with a new fantastic Arabica', i.e.: (an amount of) a new fantastic Arabica hasSetting the preparation of my coffee this morning.</dc:description>
 </rdf:Description>
 
@@ -951,7 +951,7 @@
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Concept"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is characterized by@en</dc:identifier>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">� caratterizzato da@it</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">? caratterizzato da@it</dc:identifier>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#isClassifiedBy">
@@ -960,7 +960,7 @@
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Concept"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is classified by@en</dc:identifier>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">� classificato da@it</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">? classificato da@it</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relation between a Concept and an Entity, e.g. 'John is considered a typical rude man'; your last concert constitutes the achievement of a lifetime; '20-year-old means she's mature enough'.</dc:description>
 </rdf:Description>
 
@@ -970,7 +970,7 @@
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Description"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is concept used in@en</dc:identifier>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">� un concetto usato in@it</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">? un concetto usato in@it</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A more generic relation holding between a Description and a Concept. In order to be used, a Concept must be previously definedIn another Description</dc:description>
 </rdf:Description>
 
@@ -980,7 +980,7 @@
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Agent"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is conceptualized by@en</dc:identifier>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">� concettualizzato da@it</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">? concettualizzato da@it</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relation stating that an Agent is internally representing a Description . E.g., 'John believes in the conspiracy theory'; 'Niels Bohr created a solar-system metaphor for his atomic theory'; 'Jacques assumes all swans are white'; 'the task force shares the attack plan'.</dc:description>
 </rdf:Description>
 
@@ -990,7 +990,7 @@
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#InformationRealization"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is concretely expressed by@en</dc:identifier>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">� espresso concretamente da@it</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">? espresso concretamente da@it</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relation between an InformationRealization and a Description, e.g. 'the printout of the Italian Constitution concretelyExpresses the Italian Constitution'. It should be supplied also with a rule stating that the InformationRealization realizes an InformationObject that expresses the Description.</dc:description>
 </rdf:Description>
 
@@ -1000,7 +1000,7 @@
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is constituent of@en</dc:identifier>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">� costituente di@it</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">? costituente di@it</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'Constituency' depends on some layering of the world described by the ontology. For example, scientific granularities (e.g. body-organ-tissue-cell) or ontological 'strata' (e.g. social-mental-biological-physical) are typical layerings. Intuitively, a constituent is a part belonging to a lower layer. Since layering is actually a partition of the world described by the ontology, constituents are not properly classified as parts, although this kinship can be intuitive for common sense. A desirable advantage of this distinction is that we are able to talk e.g. of physical constituents of non-physical objects (e.g. systems), while this is not possible in terms of parts. Example of are the persons constituting a social system, the molecules constituting a person, the atoms constituting a river, etc. In all these examples, we notice a typical discontinuity between the constituted and the constituent object: e.g. a social system is conceptualized at a different layer from the persons that constitute it, a person is conceptualized at a different layer from the molecules that constitute them, and a river is conceptualized at a different layer from the atoms that constitute it.</dc:description>
 </rdf:Description>
 
@@ -1010,7 +1010,7 @@
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#classifies"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is constraint for@en</dc:identifier>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">� un vincolo per@it</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">? un vincolo per@it</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relation between parameters and entities. It allows to assert generic constraints (encoded as parameters), e.g. MinimumAgeForDriving isConstraintFor John (where John is a legal subject under the TrafficLaw). The intended semantics (not expressible in OWL) is that a Parameter isConstraintFor and Entity if the Parameter isParameterFor a Concept that classifies that Entity; moreover, it entails that a Parameter parametrizes a Region that isRegionFor that Entity. The use in OWL is therefore a shortcut to annotate what Parameter constrains what Entity</dc:description>
 </rdf:Description>
 
@@ -1020,7 +1020,7 @@
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Concept"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is covered by@en</dc:identifier>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">� ricoperto da@it</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">? ricoperto da@it</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relation between concepts and collections, where a Concept is said to cover a Collection; it corresponds to a link between the (reified) intensional and extensional interpretations of a (reified) class. E.g. the collection of vintage saxophones is covered by the Concept 'Saxophone' with the Parameter 'Vintage'.</dc:description>
 </rdf:Description>
 
@@ -1030,7 +1030,7 @@
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Description"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is covered by@en</dc:identifier>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">� descritto da@it</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">? descritto da@it</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The relation between an Entity and a Description: a Description gives a unity to a Collection of parts (the components), or constituents, by assigning a Role to each of them in the context of a whole Object (the system). A same Entity can be given different descriptions, for example, an old cradle can be given a unifying Description based on the original aesthetic design, the functionality it was built for, or a new aesthetic functionality in which it can be used as a flower pot.</dc:description>
 </rdf:Description>
 
@@ -1040,7 +1040,7 @@
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Action"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#classifies"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is executed in@en</dc:identifier>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">� eseguito mediante@it</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">? eseguito mediante@it</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relation between an action and a task, e.g. 'putting some water in a pot and putting the pot on a fire until the water starts bubbling' executes the task 'boiling'.</dc:description>
 </rdf:Description>
 
@@ -1050,7 +1050,7 @@
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#InformationObject"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is expressed by@en</dc:identifier>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">� espresso da@it</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">? espresso da@it</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relation between a dul:SocialObject (the 'meaning') and a dul:InformationObject (the 'expression'). For example: 'A Beehive is a structure in which bees are kept, typically in the form of a dome or box.' (Oxford dictionary)'; 'the term Beehive expresses the concept Beehive in my apiculture ontology'. The intuition for 'meaning' is intended to be very broad. A separate, large comment is included in the encoding of 'expresses', for those who want to investigate more on what kind of meaning can be represented in what form.</dc:description>
 </rdf:Description>
 
@@ -1060,7 +1060,7 @@
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Description"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is expressed by@en</dc:identifier>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">� introdotto da@it</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">? introdotto da@it</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relation between a Description and a SocialAgent, e.g. a Constitutional Charter introduces the SocialAgent 'PresidentOfRepublic'.</dc:description>
 </rdf:Description>
 
@@ -1070,7 +1070,7 @@
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is location of@en</dc:identifier>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">� una localizzazione di@it</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">? una localizzazione di@it</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A generic, relative localization, holding between any entities. E.g. 'Rome is the seat of the Pope', 'the liver is the location of the tumor'. For 'absolute' locations, see SpaceRegion</dc:description>
 </rdf:Description>
 
@@ -1080,7 +1080,7 @@
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Collection"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is member of@en</dc:identifier>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">� membro di@it</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">? membro di@it</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relation between collections and entities, e.g. 'the Night Watch by Rembrandt is in the Rijksmuseum collection'; 'Davide is member of the Pen Club', 'Igor is one the subjects chosen for the experiment'.</dc:description>
 </rdf:Description>
 
@@ -1090,7 +1090,7 @@
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is part of@en</dc:identifier>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">� parte di@it</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">? parte di@it</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relation between any entities, e.g.'brain is a part of the human body'.</dc:description>
 </rdf:Description>
 
@@ -1110,7 +1110,7 @@
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is quality of@en</dc:identifier>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">� una qualit� di@it</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">? una qualit? di@it</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relation between entities and qualities, e.g. 'Dmitri's skin is yellowish'.</dc:description>
 </rdf:Description>
 
@@ -1120,7 +1120,7 @@
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#InformationRealization"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is realized by@en</dc:identifier>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">� realizzato da@it</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">? realizzato da@it</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relation between an information realization and an information object, e.g. the paper copy of the Italian Constitution realizes the text of the Constitution.</dc:description>
 </rdf:Description>
 
@@ -1130,7 +1130,7 @@
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#InformationObject"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is reference of@en</dc:identifier>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">� il riferimento di@it</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">? il riferimento di@it</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relation between information objects and any Entity (including information objects). It can be used to talk about e.g. entities are references of proper nouns: the proper noun 'Leonardo da Vinci' isAbout the Person Leonardo da Vinci; as well as to talk about sets of entities that can be described by a common noun: the common noun 'person' isAbout the set of all persons in a domain of discourse, which can be represented in DOLCE-Ultralite as an individual of the class: Collection . The isReferenceOf relation is irreflexive, differently from its inverse isAbout.</dc:description>
 </rdf:Description>
 
@@ -1140,7 +1140,7 @@
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#InformationRealization"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is reference of information realized by@en</dc:identifier>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">� riferimento dell'informazione realizzata da@it</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">? riferimento dell'informazione realizzata da@it</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The relation between entities and information realizations, e.g. between Italy and a paper copy of the text of the Italian Constitution.</dc:description>
 </rdf:Description>
 
@@ -1150,7 +1150,7 @@
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Entity"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is region for@en</dc:identifier>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">� una regione di@it</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">? una regione di@it</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relation between entities and regions, e.g. 'the color of my car is red'.</dc:description>
 </rdf:Description>
 
@@ -1160,7 +1160,7 @@
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Concept"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is related to concept@en</dc:identifier>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">� associato al concetto@it</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">? associato al concetto@it</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any relation between concepts, e.g. superordinated, conceptual parthood, having a parameter, having a task, superordination, etc.</dc:description>
 </rdf:Description>
 
@@ -1170,7 +1170,7 @@
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Description"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is related to description@en</dc:identifier>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">� associata alla descrizione@it</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">? associata alla descrizione@it</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any relation between descriptions.</dc:description>
 </rdf:Description>
 
@@ -1180,7 +1180,7 @@
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Object"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#classifies"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is role of@en</dc:identifier>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">� un ruolo di@it</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">? un ruolo di@it</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relation between an object and a role, e.g. 'student' is the role of 'John'.</dc:description>
 </rdf:Description>
 
@@ -1190,7 +1190,7 @@
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Situation"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is satisfied by@en</dc:identifier>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">� soddisfatta da@it</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">? soddisfatta da@it</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relation between a Situation and a Description, e.g. the execution of a Plan satisfies that plan.</dc:description>
 </rdf:Description>
 
@@ -1210,7 +1210,7 @@
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#SocialObject"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is specialized by@en</dc:identifier>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">� specializzato da@it</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">? specializzato da@it</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A partial order relation that holds between social objects. It represents the subsumption relation between e.g. a Concept and another Concept that is broader in extensional interpretation, but narrowe in intensional interpretation. E.g. PhDStudent Role specializes Student Role.</dc:description>
 </rdf:Description>
 
@@ -1285,4 +1285,23 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dul#unifies">
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Description"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Collection"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">unifies@en</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">unifica@it</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Collection has a unification criterion, provided by a Description; for example, a community of practice can be unified by a shared theory or interest, e.g. the community that makes research on mirror neurons shares some core knowledge about mirror neurons, which can be represented as a Description MirrorNeuronTheory that unifies the community. There can be several unifying descriptions.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/dul#usesConcept">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#Description"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Concept"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#associatedWith"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uses concept@en</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">usa il concetto@it</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A generic relation holding between a Description and a Concept. In order to be used, a Concept must be previously definedIn another Description. This last condition cannot be encoded for object properties in OWL.</dc:description>
+</rdf:Description>
+
+</rdf:RDF>

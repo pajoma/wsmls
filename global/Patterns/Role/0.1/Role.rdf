@@ -8,7 +8,7 @@
 	xmlns:dc="http://purl.org/dc/elements/1.1/#"
 	xmlns:dul="http://purl.org/ifgi/dul#">
 
-<rdf:Description rdf:nodeID="node16m5gl4c1x109">
+<rdf:Description rdf:nodeID="node16tshsbepx77">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>RolePattern</rdfs:label>
 	<format xmlns="http://purl.org/dc/elements/1.1/">http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</format>
@@ -29,37 +29,37 @@
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rolle@de</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/patterns/role#Role-isPlayedBy">
+<rdf:Description rdf:about="http://purl.org/ifgi/patterns/role#Role_prop_isPlayedBy">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/patterns/role#isPlayedBy</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/patterns/role#Role"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Agent"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wird gespielt von@de</dc:identifier>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is played by@en</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:source>
 	<rdfs:comments rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comments>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#Agent"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/patterns/role#TemporaryRole">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/patterns/role#TemporaryRole</rdfs:label>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temporary Role@en</dc:identifier>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rolle, vorÃ¼bergehend@de</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rolle, vorübergehend@de</dc:identifier>
 	<rdfs:comments rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A role which is played only a certain time, e.g. a student</rdfs:comments>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/patterns/role#TemporaryRole-startTime">
+<rdf:Description rdf:about="http://purl.org/ifgi/patterns/role#TemporaryRole_prop_startTime">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/patterns/role#startTime</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/patterns/role#TemporaryRole"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#TimeInterval"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/patterns/role#TemporaryRole-endTime">
+<rdf:Description rdf:about="http://purl.org/ifgi/patterns/role#TemporaryRole_prop_endTime">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/patterns/role#endTime</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/patterns/role#TemporaryRole"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#TimeInterval"/>
 </rdf:Description>
 
