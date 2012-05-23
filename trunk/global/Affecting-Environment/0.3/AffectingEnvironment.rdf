@@ -9,7 +9,7 @@
 	xmlns:dolce="http://purl.org/ifgi/dolce#"
 	xmlns:gspace="http://purl.org/ifgi/geospace#">
 
-<rdf:Description rdf:nodeID="node16sppd7dox3">
+<rdf:Description rdf:nodeID="node16tshsbepx37">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>AffectingEnvironment</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -182,7 +182,7 @@
 	<rdfs:range rdf:resource="http://purl.org/ifgi/geospace#geographical_unit"/>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16sppd7dox4">
+<rdf:Description rdf:nodeID="node16tshsbepx38">
 	<rdfs:label>http://purl.org/ifgi/affecting-environment#A1</rdfs:label>
 	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
 	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?x memberOf _"http://purl.org/ifgi/affecting-environment#agent"
@@ -195,7 +195,7 @@
 ?e[_"http://purl.org/ifgi/affecting-environment#part_of" hasValue ?u]. </rdf:value>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16sppd7dox5">
+<rdf:Description rdf:nodeID="node16tshsbepx39">
 	<rdfs:label>http://purl.org/ifgi/affecting-environment#A3</rdfs:label>
 	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
 	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?c memberOf _"http://purl.org/ifgi/affecting-environment#compound_affecting_environment"

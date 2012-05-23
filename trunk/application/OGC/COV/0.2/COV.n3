@@ -7,7 +7,7 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix swe: <http://purl.org/ifgi/swe#> .
 
-_:node16kg83qlpx2 a owl:Ontology ;
+_:node16tshsbepx4 a owl:Ontology ;
 	rdfs:label "COV" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/gml/0.2#> , <http://purl.org/ifgi/swe#> ;

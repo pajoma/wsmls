@@ -9,12 +9,12 @@
 	xmlns:wsml="http://www.wsmo.org/wsml/wsml-syntax#"
 	xmlns:dolce="http://purl.org/ifgi/dolce#">
 
-<rdf:Description rdf:nodeID="node16m5gl4c1x111">
+<rdf:Description rdf:nodeID="node16tshsbepx79">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>Systems</rdfs:label>
 	<format xmlns="http://purl.org/dc/elements/1.1/">http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</format>
 	<owl:imports rdf:resource="http://purl.org/ifgi/dolce"/>
-	<dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">p.maue© (IFGI)</dc:creator>
+	<dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">p.maue? (IFGI)</dc:creator>
 	<dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">h.michels (IFGI)</dc:contributor>
 	<dc:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(a)IfGI, University of Muenster</dc:publisher>
 	<dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://creativecommons.org/licenses/by/3.0/</dc:rights>
@@ -29,17 +29,17 @@
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">system@en</dc:identifier>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/patterns/system#System-involvedPhysicalEndurant">
+<rdf:Description rdf:about="http://purl.org/ifgi/patterns/system#System_prop_involvedPhysicalEndurant">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/patterns/system#involvedPhysicalEndurant</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/patterns/system#System"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#physical_endurant"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/patterns/system#System-involvedPerdurant">
+<rdf:Description rdf:about="http://purl.org/ifgi/patterns/system#System_prop_involvedPerdurant">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/patterns/system#involvedPerdurant</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/patterns/system#System"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#perdurant"/>
 </rdf:Description>
 

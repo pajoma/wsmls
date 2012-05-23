@@ -9,7 +9,7 @@
 	xmlns:src="http://www.loa-cnr.it/ontologies/SpatialRelations.owl#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/">
 
-<rdf:Description rdf:nodeID="node16tnq54t5x9">
+<rdf:Description rdf:nodeID="node16tshsbepx53">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>DUL_SpatialRelations</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -18,7 +18,7 @@
 	<dc:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IfGI, University of Muenster</dc:publisher>
 	<dc:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Foundational Ontology</dc:type>
 	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dolce Ultra Light Ontology (Spatial Relations)</dc:title>
-	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Ontology of spatial relations, extending the location relations from DOLCE Ultra Lite. OWL engineering by Aldo Gangemi. WSML Translation by Patrick Mau�</dc:description>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Ontology of spatial relations, extending the location relations from DOLCE Ultra Lite. OWL engineering by Aldo Gangemi. WSML Translation by Patrick Mau?</dc:description>
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://wiki.loa-cnr.it/index.php/LoaWiki:Spatial</dc:source>
 	<dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dolce, , dul, foundational, module, spatial</dc:subject>
 </rdf:Description>
@@ -195,4 +195,12 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/dulSpatial#spatialLocationOf">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:domain rdf:resource="http://purl
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/dul#SpaceRegion"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dul#PhysicalObject"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#isLocationOf"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is spatial location of@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Analytical location holding between physical endurants and spatial regions.</dc:description>
+	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/SpatialRelations.owl#spatial-location-of"/>
+</rdf:Description>
+
+</rdf:RDF>

@@ -7,7 +7,7 @@
 @prefix DUL: <http://purl.org/ifgi/dul#> .
 @prefix ssn: <http://purl.oclc.org/NET/ssnx/ssn#> .
 
-_:node16oavaog9x1 a owl:Ontology ;
+_:node16tshsbepx82 a owl:Ontology ;
 	rdfs:label "SSN_Observation" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/dul#> ;
@@ -55,7 +55,7 @@ _:node16oavaog9x1 a owl:Ontology ;
 	rdfs:label "http://purl.org/ifgi/ssn#DetectionLimit" ;
 	rdfs:subClassOf :MeasurementProperty ;
 	dc:identifier "detection limit@en"^^xsd:string ;
-	dc:description "An observed value for which the probability of falsely claiming the absence of a component in a material is β, given a probability α of falsely claiming its presence."^^xsd:string .
+	dc:description "An observed value for which the probability of falsely claiming the absence of a component in a material is ?, given a probability ? of falsely claiming its presence."^^xsd:string .
 
 :Device a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/ssn#Device" ;

@@ -26,7 +26,7 @@ ontology geographic_descriptions
 						_"http://purl.org/ifgi/time#"
 					 }
    
-concept SitationDescription subConceptOf dul#Description
+concept SituationDescription subConceptOf dul#Description
 	annotations
 		dc#identifier hasValue "situation description@en"
 		dc#identifier hasValue "Situationsbeschreibung@de"

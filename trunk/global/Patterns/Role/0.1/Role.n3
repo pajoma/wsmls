@@ -6,7 +6,7 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/#> .
 @prefix dul: <http://purl.org/ifgi/dul#> .
 
-_:node16m5gl4c1x110 a owl:Ontology ;
+_:node16tshsbepx78 a owl:Ontology ;
 	rdfs:label "RolePattern" ;
 	<http://purl.org/dc/elements/1.1/format> "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/dul> ;
@@ -22,26 +22,26 @@ _:node16m5gl4c1x110 a owl:Ontology ;
 	rdfs:label "http://purl.org/ifgi/patterns/role#Role" ;
 	dc:identifier "Role@en"^^xsd:string , "Rolle@de"^^xsd:string .
 
-:Role-isPlayedBy rdfs:label "http://purl.org/ifgi/patterns/role#isPlayedBy" ;
+:Role_prop_isPlayedBy a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/patterns/role#isPlayedBy" ;
 	rdfs:domain :Role ;
+	rdfs:range dul:Agent ;
 	dc:identifier "wird gespielt von@de"^^xsd:string , "is played by@en"^^xsd:string ;
 	dc:description ""^^xsd:string ;
 	dc:source ""^^xsd:string ;
-	rdfs:comments ""^^xsd:string ;
-	a rdf:Property ;
-	rdfs:range dul:Agent .
+	rdfs:comments ""^^xsd:string .
 
 :TemporaryRole a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/patterns/role#TemporaryRole" ;
-	dc:identifier "Temporary Role@en"^^xsd:string , "Rolle, vorÃ¼bergehend@de"^^xsd:string ;
+	dc:identifier "Temporary Role@en"^^xsd:string , "Rolle, vorübergehend@de"^^xsd:string ;
 	rdfs:comments "A role which is played only a certain time, e.g. a student"^^xsd:string .
 
-:TemporaryRole-startTime rdfs:label "http://purl.org/ifgi/patterns/role#startTime" ;
+:TemporaryRole_prop_startTime a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/patterns/role#startTime" ;
 	rdfs:domain :TemporaryRole ;
-	a rdf:Property ;
 	rdfs:range dul:TimeInterval .
 
-:TemporaryRole-endTime rdfs:label "http://purl.org/ifgi/patterns/role#endTime" ;
+:TemporaryRole_prop_endTime a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/patterns/role#endTime" ;
 	rdfs:domain :TemporaryRole ;
-	a rdf:Property ;
 	rdfs:range dul:TimeInterval .

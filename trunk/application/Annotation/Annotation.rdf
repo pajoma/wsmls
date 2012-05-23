@@ -8,7 +8,7 @@
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns:wsml="http://www.wsmo.org/wsml/wsml-syntax#">
 
-<rdf:Description rdf:nodeID="node16m5gl4c1x1">
+<rdf:Description rdf:nodeID="node16tshsbepx1">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>Annotation</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -23,7 +23,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/annotations#annotate">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/annotations#annotate"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">annotate@en</dc:identifier>
 	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">annotate relation</dc:title>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">...</dc:description>
@@ -32,7 +31,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/annotations#domainReference">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/annotations#domainReference"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">domain reference@en</dc:identifier>
 	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">relation to the domain model</dc:title>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">...</dc:description>
@@ -41,7 +39,6 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/annotations#measureReference">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label rdf:resource="http://purl.org/ifgi/annotations#measureReference"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">measure reference@en</dc:identifier>
 	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">relation to the reference space</dc:title>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">...</dc:description>

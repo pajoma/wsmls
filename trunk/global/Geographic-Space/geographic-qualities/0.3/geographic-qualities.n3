@@ -1,0 +1,82 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://purl.org/ifgi/geoqualities#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix geospace: <http://purl.org/ifgi/geospace#> .
+
+_:node16tshsbepx64 a owl:Ontology ;
+	rdfs:label "geographical_qualities" ;
+	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
+	owl:imports <http://purl.org/ifgi/geospace#> ;
+	dc:creator "p.maue (ifgi)"^^xsd:string ;
+	dc:contributor "e.klien (ifgi), s.schade (ifgi)"^^xsd:string ;
+	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
+	dc:rights "http://creativecommons.org/licenses/by/3.0/"^^xsd:string ;
+	dc:type "Domain Ontology"^^xsd:string ;
+	dc:description "A generic ontology suitable to describe objects and events in the geographic space, e.g. weather, forests, mountains, rivers, snow, ..."^^xsd:string ;
+	dc:title "Geographic Space Ontology"^^xsd:string ;
+	dc:subject "Geography, Quality"^^xsd:string .
+
+:aspect a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geoqualities#aspect" ;
+	rdfs:subClassOf geospace:geographical_quality ;
+	dc:identifier "Aspect@en"^^xsd:string ;
+	dc:description "In geography, aspect refers to the horizontal direction to which Slope faces."^^xsd:string .
+
+:area a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geoqualities#area" ;
+	rdfs:subClassOf geospace:geographical_quality ;
+	dc:identifier "Area@en"^^xsd:string ;
+	dc:description "The area of a geographic unit."^^xsd:string .
+
+:altitude a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geoqualities#altitude" ;
+	rdfs:subClassOf geospace:geographical_quality ;
+	dc:identifier "Altitude@en"^^xsd:string ;
+	dc:description "The height or vertical elevation of a point above a reference surface. Altitude measurements are usually based on a given reference datum, such as mean sea level."^^xsd:string ;
+	dc:relation <http://en.wikipedia.org/wiki/Altitude> .
+
+:elevation a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geoqualities#elevation" ;
+	rdfs:subClassOf geospace:geographical_quality ;
+	dc:identifier "Hoehe@de"^^xsd:string , "elevation@en"^^xsd:string ;
+	dc:description "The elevation of a geographic location is its height above a fixed reference point, often the mean sea level"^^xsd:string ;
+	dc:source "en.wikipedia.org/wiki/Elevation"^^xsd:string .
+
+:depth a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geoqualities#depth" ;
+	rdfs:subClassOf geospace:geographical_quality ;
+	dc:identifier "Tiefe@de"^^xsd:string , "depth@en"^^xsd:string ;
+	dc:description "The depth of a body is the length measure from a fixed reference point, often the mean sea level, to the ground"^^xsd:string ;
+	dc:source "en.wikipedia.org/wiki/Elevation"^^xsd:string .
+
+:slope a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geoqualities#slope" ;
+	rdfs:subClassOf geospace:geographical_quality ;
+	dc:identifier "Slope@en"^^xsd:string , "Gefaelle@de"^^xsd:string ;
+	dc:description "The degree to which a surface tends upward or downward."^^xsd:string .
+
+:grade a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geoqualities#grade" ;
+	rdfs:subClassOf geospace:geographical_quality ;
+	rdfs:seeAlso :slope .
+
+:spatial_extent a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geoqualities#spatial_extent" ;
+	rdfs:subClassOf geospace:geographical_quality ;
+	dc:identifier "Spatial Extent@en"^^xsd:string , "raeumliche Ausdehnung@de"^^xsd:string ;
+	dc:description ""^^xsd:string .
+
+:terrain a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geoqualities#terrain" ;
+	rdfs:subClassOf geospace:geographical_quality ;
+	dc:identifier "Terrain@en"^^xsd:string , "Gelände@de"^^xsd:string ;
+	dc:description "The area of the surface with a distinctive geological character"^^xsd:string .
+
+:texture a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geoqualities#texture" ;
+	rdfs:subClassOf geospace:geographical_quality ;
+	dc:identifier "Texture@en"^^xsd:string , "Textur@de"^^xsd:string ;
+	dc:description ""^^xsd:string .

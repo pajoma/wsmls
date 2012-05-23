@@ -6,7 +6,7 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix DUL: <http://www.loa-cnr.it/ontologies/DUL.owl#> .
 
-_:node16tnq54t5x4 a owl:Ontology ;
+_:node16tshsbepx52 a owl:Ontology ;
 	rdfs:label "DOLCE_Ultralite" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	dc:publisher "IfGI, University of Muenster"^^xsd:string ;
@@ -77,7 +77,7 @@ _:node16tnq54t5x4 a owl:Ontology ;
 :Community a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/dul#Community" ;
 	rdfs:subClassOf :CollectiveAgent ;
-	dc:identifier "Community@en"^^xsd:string , "Comunit�@it"^^xsd:string .
+	dc:identifier "Community@en"^^xsd:string , "Comunit?@it"^^xsd:string .
 
 :Concept a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/dul#Concept" ;
@@ -128,7 +128,7 @@ _:node16tnq54t5x4 a owl:Ontology ;
 
 :Entity a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/dul#Entity" ;
-	dc:identifier "Entity@en"^^xsd:string , "Entit�@it"^^xsd:string ;
+	dc:identifier "Entity@en"^^xsd:string , "Entit?@it"^^xsd:string ;
 	dc:description "Anything: real, possible, or imaginary, which some modeller wants to talk about for some purpose."^^xsd:string .
 
 :Event a rdfs:Class ;
@@ -146,7 +146,7 @@ _:node16tnq54t5x4 a owl:Ontology ;
 :FormalEntity a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/dul#FormalEntity" ;
 	rdfs:subClassOf :Abstract ;
-	dc:identifier "Formal entity@en"^^xsd:string , "Entit� formale astratta@it"^^xsd:string ;
+	dc:identifier "Formal entity@en"^^xsd:string , "Entit? formale astratta@it"^^xsd:string ;
 	dc:description "Entities that are formally defined and are considered independent from the social context in which they are used. They cannot be localized in space or time. Also called 'Platonic entities'. Mathematical and logical entities are included in this class: sets, categories, tuples, costants, variables, etc. Abstract formal entities are distinguished from information objects, which are supposed to be part of a social context, and are localized in space and time, therefore being (social) objects. For example, the class 'Quark' is an abstract formal entity from the purely set-theoretical perspective, but it is an InformationObject from the viewpoint of ontology design, when e.g. implemented in a logical language like OWL. Abstract formal entities are also distinguished from Concept(s), Collection(s), and Description(s), which are part of a social context, therefore being SocialObject(s) as well. For example, the class 'Quark' is an abstract FormalEntity from the purely set-theoretical perspective, but it is a Concept within history of science and cultural dynamics. These distinctions allow to represent two different notions of 'semantics': the first one is abstract and formal ('formal semantics'), and formallyInterprets symbols that are about entities whatsoever; for example, the term 'Quark' isAbout the Collection of all quarks, and that Collection isFormalGroundingFor the abstract class 'Quark' (in the extensional sense). The second notion is social, localized in space-time ('social semantics'), and can be used to interpret entities in the intensional sense. For example, the Collection of all quarks isCoveredBy the Concept 'Quark', which is also expressed by the term 'Quark'."^^xsd:string .
 
 :FunctionalSubstance a rdfs:Class ;
@@ -324,7 +324,7 @@ _:node16tnq54t5x4 a owl:Ontology ;
 :Quality a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/dul#Quality" ;
 	rdfs:subClassOf :Entity ;
-	dc:identifier "Quality@en"^^xsd:string , "Qualit�@it"^^xsd:string ;
+	dc:identifier "Quality@en"^^xsd:string , "Qualit?@it"^^xsd:string ;
 	dc:description "Any aspect of an Entity (but not a part of it), which cannot exist without that Entity. For example, the way the surface of a specific PhysicalObject looks like is a Quality, while the encoding of that Quality into e.g. a PhysicalAttribute should be modeled as a Region. From the design viewpoint, the Quality-Region distinction is useful only when individual aspects of an Entity are considered in a domain of discourse. For example, in an automotive context, it would be irrelevant to consider the aspects of car windows for a specific car, unless the factory wants to check a specific window against design parameters (anomaly detection). On the other hand, in an antiques context, the individual aspects for a specific piece of furniture are a major focus of attention, and may constitute the actual added value, because the design parameters for old furniture are often not fixed, and may not be viewed as 'anomalies'."^^xsd:string .
 
 :Region a rdfs:Class ;
@@ -442,7 +442,7 @@ _:node16tnq54t5x4 a owl:Ontology ;
 :UnitOfMeasure a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/dul#UnitOfMeasure" ;
 	rdfs:subClassOf :Parameter ;
-	dc:identifier "Unit of measure@en"^^xsd:string , "Unit� di misura@it"^^xsd:string ;
+	dc:identifier "Unit of measure@en"^^xsd:string , "Unit? di misura@it"^^xsd:string ;
 	dc:description "Units of measure are conceptualized here as parameters on regions, which can be valued as datatype values."^^xsd:string .
 
 :Workflow a rdfs:Class ;
@@ -612,7 +612,7 @@ _:node16tnq54t5x4 a owl:Ontology ;
 	rdfs:domain :Entity ;
 	rdfs:range :Quality ;
 	rdfs:subPropertyOf :associatedWith ;
-	dc:identifier "has quality@en"^^xsd:string , "ha qualit�@it"^^xsd:string ;
+	dc:identifier "has quality@en"^^xsd:string , "ha qualit?@it"^^xsd:string ;
 	dc:description "A relation between entities and qualities, e.g. 'Dmitri's skin is yellowish'."^^xsd:string .
 
 :hasRegion a rdf:Property ;
@@ -626,7 +626,7 @@ _:node16tnq54t5x4 a owl:Ontology ;
 	rdfs:domain :Entity ;
 	rdfs:range :Situation ;
 	rdfs:subPropertyOf :associatedWith ;
-	dc:identifier "has setting@en"^^xsd:string , "� nel contesto di@it"^^xsd:string ;
+	dc:identifier "has setting@en"^^xsd:string , "? nel contesto di@it"^^xsd:string ;
 	dc:description "A relation between entities and situations, e.g. 'this morning I've prepared my coffee with a new fantastic Arabica', i.e.: (an amount of) a new fantastic Arabica hasSetting the preparation of my coffee this morning."^^xsd:string .
 
 :introduces a rdf:Property ;
@@ -647,104 +647,104 @@ _:node16tnq54t5x4 a owl:Ontology ;
 	rdfs:domain :Collection ;
 	rdfs:range :Concept ;
 	rdfs:subPropertyOf :associatedWith ;
-	dc:identifier "is characterized by@en"^^xsd:string , "� caratterizzato da@it"^^xsd:string .
+	dc:identifier "is characterized by@en"^^xsd:string , "? caratterizzato da@it"^^xsd:string .
 
 :isClassifiedBy a rdf:Property ;
 	rdfs:domain :Entity ;
 	rdfs:range :Concept ;
 	rdfs:subPropertyOf :associatedWith ;
-	dc:identifier "is classified by@en"^^xsd:string , "� classificato da@it"^^xsd:string ;
+	dc:identifier "is classified by@en"^^xsd:string , "? classificato da@it"^^xsd:string ;
 	dc:description "A relation between a Concept and an Entity, e.g. 'John is considered a typical rude man'; your last concert constitutes the achievement of a lifetime; '20-year-old means she's mature enough'."^^xsd:string .
 
 :isConceptUsedIn a rdf:Property ;
 	rdfs:domain :Concept ;
 	rdfs:range :Description ;
 	rdfs:subPropertyOf :associatedWith ;
-	dc:identifier "is concept used in@en"^^xsd:string , "� un concetto usato in@it"^^xsd:string ;
+	dc:identifier "is concept used in@en"^^xsd:string , "? un concetto usato in@it"^^xsd:string ;
 	dc:description "A more generic relation holding between a Description and a Concept. In order to be used, a Concept must be previously definedIn another Description"^^xsd:string .
 
 :isConceptualizedBy a rdf:Property ;
 	rdfs:domain :SocialObject ;
 	rdfs:range :Agent ;
 	rdfs:subPropertyOf :associatedWith ;
-	dc:identifier "is conceptualized by@en"^^xsd:string , "� concettualizzato da@it"^^xsd:string ;
+	dc:identifier "is conceptualized by@en"^^xsd:string , "? concettualizzato da@it"^^xsd:string ;
 	dc:description "A relation stating that an Agent is internally representing a Description . E.g., 'John believes in the conspiracy theory'; 'Niels Bohr created a solar-system metaphor for his atomic theory'; 'Jacques assumes all swans are white'; 'the task force shares the attack plan'."^^xsd:string .
 
 :isConcretelyExpressedBy a rdf:Property ;
 	rdfs:domain :SocialObject ;
 	rdfs:range :InformationRealization ;
 	rdfs:subPropertyOf :associatedWith ;
-	dc:identifier "is concretely expressed by@en"^^xsd:string , "� espresso concretamente da@it"^^xsd:string ;
+	dc:identifier "is concretely expressed by@en"^^xsd:string , "? espresso concretamente da@it"^^xsd:string ;
 	dc:description "A relation between an InformationRealization and a Description, e.g. 'the printout of the Italian Constitution concretelyExpresses the Italian Constitution'. It should be supplied also with a rule stating that the InformationRealization realizes an InformationObject that expresses the Description."^^xsd:string .
 
 :isConstituentOf a rdf:Property ;
 	rdfs:domain :Entity ;
 	rdfs:range :Entity ;
 	rdfs:subPropertyOf :associatedWith ;
-	dc:identifier "is constituent of@en"^^xsd:string , "� costituente di@it"^^xsd:string ;
+	dc:identifier "is constituent of@en"^^xsd:string , "? costituente di@it"^^xsd:string ;
 	dc:description "'Constituency' depends on some layering of the world described by the ontology. For example, scientific granularities (e.g. body-organ-tissue-cell) or ontological 'strata' (e.g. social-mental-biological-physical) are typical layerings. Intuitively, a constituent is a part belonging to a lower layer. Since layering is actually a partition of the world described by the ontology, constituents are not properly classified as parts, although this kinship can be intuitive for common sense. A desirable advantage of this distinction is that we are able to talk e.g. of physical constituents of non-physical objects (e.g. systems), while this is not possible in terms of parts. Example of are the persons constituting a social system, the molecules constituting a person, the atoms constituting a river, etc. In all these examples, we notice a typical discontinuity between the constituted and the constituent object: e.g. a social system is conceptualized at a different layer from the persons that constitute it, a person is conceptualized at a different layer from the molecules that constitute them, and a river is conceptualized at a different layer from the atoms that constitute it."^^xsd:string .
 
 :isConstraintFor a rdf:Property ;
 	rdfs:domain :Parameter ;
 	rdfs:range :Entity ;
 	rdfs:subPropertyOf :classifies ;
-	dc:identifier "is constraint for@en"^^xsd:string , "� un vincolo per@it"^^xsd:string ;
+	dc:identifier "is constraint for@en"^^xsd:string , "? un vincolo per@it"^^xsd:string ;
 	dc:description "A relation between parameters and entities. It allows to assert generic constraints (encoded as parameters), e.g. MinimumAgeForDriving isConstraintFor John (where John is a legal subject under the TrafficLaw). The intended semantics (not expressible in OWL) is that a Parameter isConstraintFor and Entity if the Parameter isParameterFor a Concept that classifies that Entity; moreover, it entails that a Parameter parametrizes a Region that isRegionFor that Entity. The use in OWL is therefore a shortcut to annotate what Parameter constrains what Entity"^^xsd:string .
 
 :isCoveredBy a rdf:Property ;
 	rdfs:domain :Collection ;
 	rdfs:range :Concept ;
 	rdfs:subPropertyOf :associatedWith ;
-	dc:identifier "is covered by@en"^^xsd:string , "� ricoperto da@it"^^xsd:string ;
+	dc:identifier "is covered by@en"^^xsd:string , "? ricoperto da@it"^^xsd:string ;
 	dc:description "A relation between concepts and collections, where a Concept is said to cover a Collection; it corresponds to a link between the (reified) intensional and extensional interpretations of a (reified) class. E.g. the collection of vintage saxophones is covered by the Concept 'Saxophone' with the Parameter 'Vintage'."^^xsd:string .
 
 :isDescribedBy a rdf:Property ;
 	rdfs:domain :Entity ;
 	rdfs:range :Description ;
 	rdfs:subPropertyOf :associatedWith ;
-	dc:identifier "is covered by@en"^^xsd:string , "� descritto da@it"^^xsd:string ;
+	dc:identifier "is covered by@en"^^xsd:string , "? descritto da@it"^^xsd:string ;
 	dc:description "The relation between an Entity and a Description: a Description gives a unity to a Collection of parts (the components), or constituents, by assigning a Role to each of them in the context of a whole Object (the system). A same Entity can be given different descriptions, for example, an old cradle can be given a unifying Description based on the original aesthetic design, the functionality it was built for, or a new aesthetic functionality in which it can be used as a flower pot."^^xsd:string .
 
 :isExecutedIn a rdf:Property ;
 	rdfs:domain :Task ;
 	rdfs:range :Action ;
 	rdfs:subPropertyOf :classifies ;
-	dc:identifier "is executed in@en"^^xsd:string , "� eseguito mediante@it"^^xsd:string ;
+	dc:identifier "is executed in@en"^^xsd:string , "? eseguito mediante@it"^^xsd:string ;
 	dc:description "A relation between an action and a task, e.g. 'putting some water in a pot and putting the pot on a fire until the water starts bubbling' executes the task 'boiling'."^^xsd:string .
 
 :isExpressedBy a rdf:Property ;
 	rdfs:domain :SocialObject ;
 	rdfs:range :InformationObject ;
 	rdfs:subPropertyOf :associatedWith ;
-	dc:identifier "is expressed by@en"^^xsd:string , "� espresso da@it"^^xsd:string ;
+	dc:identifier "is expressed by@en"^^xsd:string , "? espresso da@it"^^xsd:string ;
 	dc:description "A relation between a dul:SocialObject (the 'meaning') and a dul:InformationObject (the 'expression'). For example: 'A Beehive is a structure in which bees are kept, typically in the form of a dome or box.' (Oxford dictionary)'; 'the term Beehive expresses the concept Beehive in my apiculture ontology'. The intuition for 'meaning' is intended to be very broad. A separate, large comment is included in the encoding of 'expresses', for those who want to investigate more on what kind of meaning can be represented in what form."^^xsd:string .
 
 :isIntroducedBy a rdf:Property ;
 	rdfs:domain :SocialAgent ;
 	rdfs:range :Description ;
 	rdfs:subPropertyOf :associatedWith ;
-	dc:identifier "is expressed by@en"^^xsd:string , "� introdotto da@it"^^xsd:string ;
+	dc:identifier "is expressed by@en"^^xsd:string , "? introdotto da@it"^^xsd:string ;
 	dc:description "A relation between a Description and a SocialAgent, e.g. a Constitutional Charter introduces the SocialAgent 'PresidentOfRepublic'."^^xsd:string .
 
 :isLocationOf a rdf:Property ;
 	rdfs:domain :Entity ;
 	rdfs:range :Entity ;
 	rdfs:subPropertyOf :associatedWith ;
-	dc:identifier "is location of@en"^^xsd:string , "� una localizzazione di@it"^^xsd:string ;
+	dc:identifier "is location of@en"^^xsd:string , "? una localizzazione di@it"^^xsd:string ;
 	dc:description "A generic, relative localization, holding between any entities. E.g. 'Rome is the seat of the Pope', 'the liver is the location of the tumor'. For 'absolute' locations, see SpaceRegion"^^xsd:string .
 
 :isMemberOf a rdf:Property ;
 	rdfs:domain :Entity ;
 	rdfs:range :Collection ;
 	rdfs:subPropertyOf :associatedWith ;
-	dc:identifier "is member of@en"^^xsd:string , "� membro di@it"^^xsd:string ;
+	dc:identifier "is member of@en"^^xsd:string , "? membro di@it"^^xsd:string ;
 	dc:description "A relation between collections and entities, e.g. 'the Night Watch by Rembrandt is in the Rijksmuseum collection'; 'Davide is member of the Pen Club', 'Igor is one the subjects chosen for the experiment'."^^xsd:string .
 
 :isPartOf a rdf:Property ;
 	rdfs:domain :Entity ;
 	rdfs:range :Entity ;
 	rdfs:subPropertyOf :associatedWith ;
-	dc:identifier "is part of@en"^^xsd:string , "� parte di@it"^^xsd:string ;
+	dc:identifier "is part of@en"^^xsd:string , "? parte di@it"^^xsd:string ;
 	dc:description "A relation between any entities, e.g.'brain is a part of the human body'."^^xsd:string .
 
 :isParticipantIn a rdf:Property ;
@@ -758,57 +758,138 @@ _:node16tnq54t5x4 a owl:Ontology ;
 	rdfs:domain :Quality ;
 	rdfs:range :Entity ;
 	rdfs:subPropertyOf :associatedWith ;
-	dc:identifier "is quality of@en"^^xsd:string , "� una qualit� di@it"^^xsd:string ;
+	dc:identifier "is quality of@en"^^xsd:string , "? una qualit? di@it"^^xsd:string ;
 	dc:description "A relation between entities and qualities, e.g. 'Dmitri's skin is yellowish'."^^xsd:string .
 
 :isRealizedBy a rdf:Property ;
 	rdfs:domain :InformationObject ;
 	rdfs:range :InformationRealization ;
 	rdfs:subPropertyOf :associatedWith ;
-	dc:identifier "is realized by@en"^^xsd:string , "� realizzato da@it"^^xsd:string ;
+	dc:identifier "is realized by@en"^^xsd:string , "? realizzato da@it"^^xsd:string ;
 	dc:description "A relation between an information realization and an information object, e.g. the paper copy of the Italian Constitution realizes the text of the Constitution."^^xsd:string .
 
 :isReferenceOf a rdf:Property ;
 	rdfs:domain :Entity ;
 	rdfs:range :InformationObject ;
 	rdfs:subPropertyOf :associatedWith ;
-	dc:identifier "is reference of@en"^^xsd:string , "� il riferimento di@it"^^xsd:string ;
+	dc:identifier "is reference of@en"^^xsd:string , "? il riferimento di@it"^^xsd:string ;
 	dc:description "A relation between information objects and any Entity (including information objects). It can be used to talk about e.g. entities are references of proper nouns: the proper noun 'Leonardo da Vinci' isAbout the Person Leonardo da Vinci; as well as to talk about sets of entities that can be described by a common noun: the common noun 'person' isAbout the set of all persons in a domain of discourse, which can be represented in DOLCE-Ultralite as an individual of the class: Collection . The isReferenceOf relation is irreflexive, differently from its inverse isAbout."^^xsd:string .
 
 :isReferenceOfInformationRealizedBy a rdf:Property ;
 	rdfs:domain :Entity ;
 	rdfs:range :InformationRealization ;
 	rdfs:subPropertyOf :associatedWith ;
-	dc:identifier "is reference of information realized by@en"^^xsd:string , "� riferimento dell'informazione realizzata da@it"^^xsd:string ;
+	dc:identifier "is reference of information realized by@en"^^xsd:string , "? riferimento dell'informazione realizzata da@it"^^xsd:string ;
 	dc:description "The relation between entities and information realizations, e.g. between Italy and a paper copy of the text of the Italian Constitution."^^xsd:string .
 
 :isRegionFor a rdf:Property ;
 	rdfs:domain :Region ;
 	rdfs:range :Entity ;
 	rdfs:subPropertyOf :associatedWith ;
-	dc:identifier "is region for@en"^^xsd:string , "� una regione di@it"^^xsd:string ;
+	dc:identifier "is region for@en"^^xsd:string , "? una regione di@it"^^xsd:string ;
 	dc:description "A relation between entities and regions, e.g. 'the color of my car is red'."^^xsd:string .
 
 :isRelatedToConcept a rdf:Property ;
 	rdfs:domain :Concept ;
 	rdfs:range :Concept ;
 	rdfs:subPropertyOf :associatedWith ;
-	dc:identifier "is related to concept@en"^^xsd:string , "� associato al concetto@it"^^xsd:string ;
+	dc:identifier "is related to concept@en"^^xsd:string , "? associato al concetto@it"^^xsd:string ;
 	dc:description "Any relation between concepts, e.g. superordinated, conceptual parthood, having a parameter, having a task, superordination, etc."^^xsd:string .
 
 :isRelatedToDescription a rdf:Property ;
 	rdfs:domain :Description ;
 	rdfs:range :Description ;
 	rdfs:subPropertyOf :associatedWith ;
-	dc:identifier "is related to description@en"^^xsd:string , "� associata alla descrizione@it"^^xsd:string ;
+	dc:identifier "is related to description@en"^^xsd:string , "? associata alla descrizione@it"^^xsd:string ;
 	dc:description "Any relation between descriptions."^^xsd:string .
 
 :isRoleOf a rdf:Property ;
 	rdfs:domain :Role ;
 	rdfs:range :Object ;
 	rdfs:subPropertyOf :classifies ;
-	dc:identifier "is role of@en"^^xsd:string , "� un ruolo di@it"^^xsd:string ;
+	dc:identifier "is role of@en"^^xsd:string , "? un ruolo di@it"^^xsd:string ;
 	dc:description "A relation between an object and a role, e.g. 'student' is the role of 'John'."^^xsd:string .
 
 :isSatisfiedBy a rdf:Property ;
-	rdfs:domain :Desc
+	rdfs:domain :Description ;
+	rdfs:range :Situation ;
+	rdfs:subPropertyOf :associatedWith ;
+	dc:identifier "is satisfied by@en"^^xsd:string , "? soddisfatta da@it"^^xsd:string ;
+	dc:description "A relation between a Situation and a Description, e.g. the execution of a Plan satisfies that plan."^^xsd:string .
+
+:isSettingFor a rdf:Property ;
+	rdfs:domain :Situation ;
+	rdfs:range :Entity ;
+	rdfs:subPropertyOf :associatedWith ;
+	dc:identifier "is setting for@en"^^xsd:string , "include@it"^^xsd:string ;
+	dc:description "A relation between situations and entities, e.g. 'this morning I've prepared my coffee with a new fantastic Arabica', i.e.: the preparation of my coffee this morning is the setting for (an amount of) a new fantastic Arabica."^^xsd:string .
+
+:isSpecializedBy a rdf:Property ;
+	rdfs:domain :SocialObject ;
+	rdfs:range :SocialObject ;
+	rdfs:subPropertyOf :associatedWith ;
+	dc:identifier "is specialized by@en"^^xsd:string , "? specializzato da@it"^^xsd:string ;
+	dc:description "A partial order relation that holds between social objects. It represents the subsumption relation between e.g. a Concept and another Concept that is broader in extensional interpretation, but narrowe in intensional interpretation. E.g. PhDStudent Role specializes Student Role."^^xsd:string .
+
+:overlaps a rdf:Property ;
+	rdfs:domain :Entity ;
+	rdfs:range :Entity ;
+	rdfs:subPropertyOf :associatedWith ;
+	dc:identifier "overlaps@en"^^xsd:string , "sovrapposto a@it"^^xsd:string ;
+	dc:description "A schematic relation between any entities, e.g. 'the chest region overlaps with the abdomen region', 'my spoken words overlap with hers', 'the time of my leave overlaps with the time of your arrival', 'fibromyalgia overlaps with other conditions'. Subproperties and restrictions can be used to specialize overlaps for objects, events, time intervals, etc."^^xsd:string .
+
+:parametrizes a rdf:Property ;
+	rdfs:domain :Parameter ;
+	rdfs:range :Region ;
+	rdfs:subPropertyOf :classifies ;
+	dc:identifier "parametrizes@en"^^xsd:string , "parametrizza@it"^^xsd:string ;
+	dc:description "The relation between a Parameter, e.g. 'MajorAgeLimit', and a Region, e.g. '18_year'. For a more data-oriented relation, see hasDataValue"^^xsd:string .
+
+:precedes a rdf:Property ;
+	rdfs:domain :Entity ;
+	rdfs:range :Entity ;
+	rdfs:subPropertyOf :associatedWith ;
+	dc:identifier "precedes@en"^^xsd:string , "precede@it"^^xsd:string ;
+	dc:description "A relation between entities, expressing a 'sequence' schema. E.g. 'year 1999 precedes 2000', 'deciding what coffee to use' precedes 'preparing coffee', 'World War II follows World War I', 'in the Milan to Rome autoroute, Bologna precedes Florence', etc. It can then be used between tasks, processes, time intervals, spatially locate objects, situations, etc. Subproperties can be defined in order to distinguish the different uses."^^xsd:string .
+
+:realizes a rdf:Property ;
+	rdfs:domain :InformationRealization ;
+	rdfs:range :InformationObject ;
+	rdfs:subPropertyOf :associatedWith ;
+	dc:identifier "realizes@en"^^xsd:string , "realizza@it"^^xsd:string ;
+	dc:description "A relation between an information realization and an information object, e.g. the paper copy of the Italian Constitution realizes the text of the Constitution."^^xsd:string .
+
+:realizesInformationAbout a rdf:Property ;
+	rdfs:domain :InformationRealization ;
+	rdfs:range :Entity ;
+	rdfs:subPropertyOf :associatedWith ;
+	dc:identifier "realizes information about@en"^^xsd:string , "realizza informazione che si riferisce a a@it"^^xsd:string ;
+	dc:description "The relation between entities and information realizations, e.g. between Italy and a paper copy of the text of the Italian Constitution."^^xsd:string .
+
+:satisfies a rdf:Property ;
+	rdfs:domain :Situation ;
+	rdfs:range :Description ;
+	rdfs:subPropertyOf :associatedWith ;
+	dc:identifier "satisfies@en"^^xsd:string , "soddisfa@it"^^xsd:string ;
+	dc:description "A relation between a Situation and a Description, e.g. the execution of a Plan satisfies that plan."^^xsd:string .
+
+:specializes a rdf:Property ;
+	rdfs:domain :SocialObject ;
+	rdfs:range :SocialObject ;
+	rdfs:subPropertyOf :associatedWith ;
+	dc:identifier "specializes@en"^^xsd:string , "specializza@it"^^xsd:string ;
+	dc:description "A partial order relation that holds between social objects. It mainly represents the subsumption relation between e.g. a Concept or Description and another Concept (resp. Description) that is broader in extensional interpretation, but narrower in intensional interpretation. For example, the role PhDStudent specializes the role Student. Another possible use is between a Collection that isCoveredBy a Concept A, and another Collection that isCoveredBy a Concept B that on its turm specializes A. For example, the 70,000 series Selmer Mark VI saxophone Collection specializes the Selmer Mark VI saxophone Collection."^^xsd:string .
+
+:unifies a rdf:Property ;
+	rdfs:domain :Description ;
+	rdfs:range :Collection ;
+	rdfs:subPropertyOf :associatedWith ;
+	dc:identifier "unifies@en"^^xsd:string , "unifica@it"^^xsd:string ;
+	dc:description "A Collection has a unification criterion, provided by a Description; for example, a community of practice can be unified by a shared theory or interest, e.g. the community that makes research on mirror neurons shares some core knowledge about mirror neurons, which can be represented as a Description MirrorNeuronTheory that unifies the community. There can be several unifying descriptions."^^xsd:string .
+
+:usesConcept a rdf:Property ;
+	rdfs:domain :Description ;
+	rdfs:range :Concept ;
+	rdfs:subPropertyOf :associatedWith ;
+	dc:identifier "uses concept@en"^^xsd:string , "usa il concetto@it"^^xsd:string ;
+	dc:description "A generic relation holding between a Description and a Concept. In order to be used, a Concept must be previously definedIn another Description. This last condition cannot be encoded for object properties in OWL."^^xsd:string .

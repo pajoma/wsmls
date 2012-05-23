@@ -14,7 +14,7 @@
 	xmlns:ge="http://purl.org/net/wsml/geoevents#"
 	xmlns:gq="http://purl.org/net/wsml/geoqualities#">
 
-<rdf:Description rdf:nodeID="node16m5gl4c1x115">
+<rdf:Description rdf:nodeID="node16tshsbepx85">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>NoiseAll</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-core</dc:format>
@@ -47,26 +47,23 @@
 	<rdfs:comments rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comments>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/noise#TrafficSystem-involvedPhysicalEndurant">
+<rdf:Description rdf:about="http://purl.org/ifgi/noise#TrafficSystem_prop_involvedPhysicalEndurant">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/patterns/system#involvedPhysicalEndurant</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/noise#TrafficSystem"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/patterns/system#involvedPhysicalEndurant"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/noise#Vehicle"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/noise#RoadNetwork"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/patterns/system#involvedPhysicalEndurant"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/noise#TrafficSystem-involvedPerdurant">
+<rdf:Description rdf:about="http://purl.org/ifgi/noise#TrafficSystem_prop_involvedPerdurant">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/patterns/system#involvedPerdurant</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/noise#TrafficSystem"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/patterns/system#involvedPerdurant"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/noise#SoundEmission"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/noise#Pollution"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/noise#TrafficFlow"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/patterns/system#involvedPerdurant"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/noise#Infrastructure">
@@ -83,12 +80,12 @@
 	<rdfs:comments rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comments>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/noise#Infrastructure-consists-of">
+<rdf:Description rdf:about="http://purl.org/ifgi/noise#Infrastructure_prop_consists-of">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolce#consists-of</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/noise#Infrastructure"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#consists-of"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/noise#RoadNetwork"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#consists-of"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/noise#NoiseImissionEnvironment">
@@ -139,12 +136,12 @@
 	<rdfs:comments rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comments>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/noise#Road-part-of">
+<rdf:Description rdf:about="http://purl.org/ifgi/noise#Road_prop_part-of">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolce#part-of</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/noise#Road"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#part-of"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/noise#RoadNetwork"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#part-of"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/noise#Crossing">
@@ -159,24 +156,24 @@
 	<rdfs:comments rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comments>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/noise#Crossing-part-of">
+<rdf:Description rdf:about="http://purl.org/ifgi/noise#Crossing_prop_part-of">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolce#part-of</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/noise#Crossing"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#part-of"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/noise#RoadNetwork"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#part-of"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/noise#Crossing-intersects">
+<rdf:Description rdf:about="http://purl.org/ifgi/noise#Crossing_prop_intersects">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/noise#intersects</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/noise#Crossing"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/noise#Road"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">schneidet@de</dc:identifier>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">intersects@en</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:source>
 	<rdfs:comments rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comments>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:range rdf:resource="http://purl.org/ifgi/noise#Road"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/noise#Intersection">
@@ -228,20 +225,20 @@
 	<rdfs:comments rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comments>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/noise#Street-part-of">
+<rdf:Description rdf:about="http://purl.org/ifgi/noise#Street_prop_part-of">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolce#part-of</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/noise#Street"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#part-of"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/noise#Road"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#part-of"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/noise#Street-sourroundedBy">
+<rdf:Description rdf:about="http://purl.org/ifgi/noise#Street_prop_sourroundedBy">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/net/wsml/geospace#sourroundedBy</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/noise#Street"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/net/wsml/geospace#sourroundedBy"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/geosystems#Environment"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/net/wsml/geospace#sourroundedBy"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/noise#StreetSection">
@@ -256,12 +253,12 @@
 	<rdfs:comments rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comments>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/noise#StreetSection-part-of">
+<rdf:Description rdf:about="http://purl.org/ifgi/noise#StreetSection_prop_part-of">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolce#part-of</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/noise#StreetSection"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#part-of"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/noise#Street"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#part-of"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/noise#Vehicle">
@@ -277,14 +274,13 @@
 	<rdfs:comments rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comments>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/noise#Vehicle-participates-in">
+<rdf:Description rdf:about="http://purl.org/ifgi/noise#Vehicle_prop_participates-in">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolce#participates-in</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/noise#Vehicle"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#participates-in"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/noise#SoundEmission"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/noise#TrafficFlow"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#participates-in"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/noise#Vehicles">
@@ -300,20 +296,20 @@
 	<rdfs:comments rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comments>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/noise#Vehicles-consists-of">
+<rdf:Description rdf:about="http://purl.org/ifgi/noise#Vehicles_prop_consists-of">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolce#consists-of</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/noise#Vehicles"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#consists-of"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/noise#Vehicle"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#consists-of"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/noise#Vehicles-has-quality">
+<rdf:Description rdf:about="http://purl.org/ifgi/noise#Vehicles_prop_has-quality">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolce#has-quality</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/noise#Vehicles"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#has-quality"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/noise#TrafficDensity"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#has-quality"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/noise#Car">
@@ -340,20 +336,20 @@
 	<rdfs:comments rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comments>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/noise#Tire-part-of">
+<rdf:Description rdf:about="http://purl.org/ifgi/noise#Tire_prop_part-of">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolce#part-of</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/noise#Tire"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#part-of"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/noise#Vehicle"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#part-of"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/noise#Tire-has-quality">
+<rdf:Description rdf:about="http://purl.org/ifgi/noise#Tire_prop_has-quality">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolce#has-quality</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/noise#Tire"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#has-quality"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/noise#TireType"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#has-quality"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/noise#TireType">
@@ -380,12 +376,12 @@
 	<rdfs:comments rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comments>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/noise#Building-situatedIn">
+<rdf:Description rdf:about="http://purl.org/ifgi/noise#Building_prop_situatedIn">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/net/wsml/geospace#situatedIn</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/noise#Building"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/net/wsml/geospace#situatedIn"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/noise#UrbanizedArea"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/net/wsml/geospace#situatedIn"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/noise#Tree">
@@ -400,19 +396,19 @@
 	<rdfs:comments rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comments>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/noise#Tree-situatedIn">
+<rdf:Description rdf:about="http://purl.org/ifgi/noise#Tree_prop_situatedIn">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/net/wsml/geospace#situatedIn</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/noise#Tree"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/net/wsml/geospace#situatedIn"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/noise#UrbanizedArea"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/net/wsml/geospace#situatedIn"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/noise#UrbanizedArea">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/noise#UrbanizedArea</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://purl.org/net/wsml/geounits#GeographicalUnit"/>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">st�dtisches Gebiet@de</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">st?dtisches Gebiet@de</dc:identifier>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UrbanizedArea@en</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a geographical area constituting a city or town</dc:description>
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://wordnetweb.princeton.edu/perl/webwn?s=urban%20area</dc:source>
@@ -436,7 +432,7 @@
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/noise#SoundEmission</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/patterns/system#Event"/>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ger�uschemission@de</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ger?uschemission@de</dc:identifier>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sound emission@en</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">the source which sends out sound waves who take injurious to health or disturbing effects for human beings and the environment caused by their loudness and structure</dc:description>
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://de.wikipedia.org/wiki/L%C3%A4rmemission</dc:source>
@@ -444,27 +440,27 @@
 	<rdfs:comments rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comments>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/noise#SoundEmission-initiates">
+<rdf:Description rdf:about="http://purl.org/ifgi/noise#SoundEmission_prop_initiates">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/patterns/system#initiates</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/noise#SoundEmission"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/patterns/system#initiates"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/noise#Noise"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/patterns/system#initiates"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/noise#SoundEmission-changes">
+<rdf:Description rdf:about="http://purl.org/ifgi/noise#SoundEmission_prop_changes">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/patterns/system#changes</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/noise#SoundEmission"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/patterns/system#changes"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/noise#Intensity"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/patterns/system#changes"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/noise#Noise">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/noise#Noise</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/noise#Pollution"/>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">L�rm@de</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">L?rm@de</dc:identifier>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">noise@en</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:source>
@@ -472,12 +468,12 @@
 	<rdfs:comments rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comments>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/noise#Noise-has-quality">
+<rdf:Description rdf:about="http://purl.org/ifgi/noise#Noise_prop_has-quality">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolce#has-quality</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/noise#Noise"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#has-quality"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/noise#Intensity"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#has-quality"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/noise#TrafficFlow">
@@ -505,26 +501,23 @@
 	<rdfs:comments rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comments>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/noise#NoiseBarrier-isPlayedBy">
+<rdf:Description rdf:about="http://purl.org/ifgi/noise#NoiseBarrier_prop_isPlayedBy">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/patterns/system#isPlayedBy</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/noise#NoiseBarrier"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/patterns/system#isPlayedBy"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/noise#Building"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/noise#Tree"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/patterns/system#isPlayedBy"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/noise#NoiseBarrier-has-quality">
+<rdf:Description rdf:about="http://purl.org/ifgi/noise#NoiseBarrier_prop_has-quality">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolce#has-quality</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/noise#NoiseBarrier"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#has-quality"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/noise#Diffraction"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/noise#Refraction"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/noise#Reflection"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#has-quality"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/noise#Sound">
@@ -540,19 +533,19 @@
 	<rdfs:comments rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comments>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/noise#Sound-has-quality">
+<rdf:Description rdf:about="http://purl.org/ifgi/noise#Sound_prop_has-quality">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>http://purl.org/ifgi/dolce#has-quality</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/noise#Sound"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#has-quality"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/noise#Intensity"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#has-quality"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/noise#Intensity">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/noise#Intensity</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dolce#quality"/>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intensit�t@de</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intensit?t@de</dc:identifier>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">intensity@en</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">the amount of energy transmitted</dc:description>
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://wordnetweb.princeton.edu/perl/webwn?s =intensity&amp;sub=Search+WordNet&amp;o2=&amp;o0=1&amp;o7=&amp;o5=&amp;o1=1&amp;o6=&amp;o4=&amp;o3=&amp;h=0</dc:source>

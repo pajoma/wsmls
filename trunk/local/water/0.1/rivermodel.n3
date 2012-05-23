@@ -6,7 +6,7 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix gml: <http://swing.brgm.fr/repository/ontologies/GML212/current#> .
 
-_:node16m5gl4c1x124 a owl:Ontology ;
+_:node16tshsbepx104 a owl:Ontology ;
 	rdfs:label "RiverModel" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://swing.brgm.fr/repository/ontologies/GML212/current#> ;
@@ -102,13 +102,13 @@ _:node16m5gl4c1x124 a owl:Ontology ;
 	dc:subject "Geometry"^^xsd:string ;
 	rdfs:comments ""^^xsd:string .
 
-:BreakLine-derivesFrom rdfs:label "http://purl.org/ifgi/rivermodel#derivesFrom" ;
+:BreakLine_prop_derivesFrom a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/rivermodel#derivesFrom" ;
 	rdfs:domain :BreakLine ;
+	rdfs:range :BreakPoint ;
 	dc:identifier "stammt ab von@de"^^xsd:string , "derives from@en"^^xsd:string ;
 	dc:description ""^^xsd:string ;
-	rdfs:comments "A break line consists of break points"^^xsd:string ;
-	a rdf:Property ;
-	rdfs:range :BreakPoint .
+	rdfs:comments "A break line consists of break points"^^xsd:string .
 
 :ContourLine a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/rivermodel#ContourLine" ;

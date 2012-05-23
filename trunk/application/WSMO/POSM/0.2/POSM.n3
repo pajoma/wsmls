@@ -5,7 +5,7 @@
 @prefix : <http://purl.org/ifgi/posm#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 
-_:node16m5gl4c1x32 a owl:Ontology ;
+_:node16tshsbepx34 a owl:Ontology ;
 	rdfs:label "POSM" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-core" .
 
@@ -13,42 +13,42 @@ _:node16m5gl4c1x32 a owl:Ontology ;
 	rdfs:label "http://purl.org/ifgi/posm#Service" ;
 	dc:identifier "service@en"^^xsd:string .
 
-:Service-hasOperation rdfs:label "http://purl.org/ifgi/posm#hasOperation" ;
+:Service_prop_hasOperation a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/posm#hasOperation" ;
 	rdfs:domain :Service ;
-	a rdf:Property ;
 	rdfs:range :Operation .
 
 :Operation a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/posm#Operation" ;
 	dc:identifier "operation@en"^^xsd:string .
 
-:Operation-hasInput rdfs:label "http://purl.org/ifgi/posm#hasInput" ;
+:Operation_prop_hasInput a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/posm#hasInput" ;
 	rdfs:domain :Operation ;
-	a rdf:Property ;
 	rdfs:range :MessagePart .
 
-:Operation-hasOutput rdfs:label "http://purl.org/ifgi/posm#hasOutput" ;
+:Operation_prop_hasOutput a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/posm#hasOutput" ;
 	rdfs:domain :Operation ;
-	a rdf:Property ;
 	rdfs:range :MessagePart .
 
-:Operation-hasInputFault rdfs:label "http://purl.org/ifgi/posm#hasInputFault" ;
+:Operation_prop_hasInputFault a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/posm#hasInputFault" ;
 	rdfs:domain :Operation ;
-	a rdf:Property ;
 	rdfs:range :MessagePart .
 
-:Operation-hasOutputFault rdfs:label "http://purl.org/ifgi/posm#hasOutputFault" ;
+:Operation_prop_hasOutputFault a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/posm#hasOutputFault" ;
 	rdfs:domain :Operation ;
-	a rdf:Property ;
 	rdfs:range :MessagePart .
 
 :MessagePart a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/posm#MessagePart" ;
 	dc:identifier "message part@en"^^xsd:string .
 
-:MessagePart-hasMessagePart rdfs:label "http://purl.org/ifgi/posm#hasMessagePart" ;
+:MessagePart_prop_hasMessagePart a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/posm#hasMessagePart" ;
 	rdfs:domain :MessagePart ;
-	a rdf:Property ;
 	rdfs:range :MessagePart .
 
 :MessageContent a rdfs:Class ;

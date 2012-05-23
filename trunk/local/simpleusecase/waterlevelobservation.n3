@@ -7,7 +7,7 @@
 @prefix dolce: <http://purl.org/ifgi/dolce#> .
 @prefix obs: <http://purl.org/ifgi/observation#> .
 
-_:node16m5gl4c1x122 a owl:Ontology ;
+_:node16tshsbepx102 a owl:Ontology ;
 	rdfs:label "WaterlevelObservation" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/observation#> ;
@@ -24,14 +24,14 @@ _:node16m5gl4c1x122 a owl:Ontology ;
 	rdfs:subClassOf obs:ObservationProcess ;
 	dc:identifier "water level observation@en"^^xsd:string .
 
-:WaterlevelObservation-hasName rdfs:label "http://purl.org/ifgi/suc/waterlevelobservation#hasName" ;
+:WaterlevelObservation_prop_hasName a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/suc/waterlevelobservation#hasName" ;
 	rdfs:domain :WaterlevelObservation ;
-	a rdf:Property ;
 	rdfs:range xsd:string .
 
-:WaterlevelObservation-isPerformedBy rdfs:label "http://purl.org/ifgi/suc/waterlevelobservation#isPerformedBy" ;
+:WaterlevelObservation_prop_isPerformedBy a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/suc/waterlevelobservation#isPerformedBy" ;
 	rdfs:domain :WaterlevelObservation ;
-	a rdf:Property ;
 	rdfs:range :WaterlevelSensor .
 
 :WaterlevelSensor a rdfs:Class ;
@@ -39,14 +39,14 @@ _:node16m5gl4c1x122 a owl:Ontology ;
 	rdfs:subClassOf obs:Observer ;
 	dc:identifier "water level sensor@en"^^xsd:string .
 
-:WaterlevelSensor-performs rdfs:label "http://purl.org/ifgi/suc/waterlevelobservation#performs" ;
+:WaterlevelSensor_prop_performs a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/suc/waterlevelobservation#performs" ;
 	rdfs:domain :WaterlevelSensor ;
-	a rdf:Property ;
 	rdfs:range :WaterlevelObservation .
 
-:WaterlevelSensor-observes rdfs:label "http://purl.org/ifgi/suc/waterlevelobservation#observes" ;
+:WaterlevelSensor_prop_observes a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/suc/waterlevelobservation#observes" ;
 	rdfs:domain :WaterlevelSensor ;
-	a rdf:Property ;
 	rdfs:range :Waterlevel .
 
 :WaterlevelValue a rdfs:Class ;
@@ -54,14 +54,14 @@ _:node16m5gl4c1x122 a owl:Ontology ;
 	rdfs:subClassOf obs:ObservationValue ;
 	dc:identifier "water level value@en"^^xsd:string .
 
-:WaterlevelValue-value rdfs:label "http://purl.org/ifgi/suc/waterlevelobservation#value" ;
+:WaterlevelValue_prop_value a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/suc/waterlevelobservation#value" ;
 	rdfs:domain :WaterlevelValue ;
-	a rdf:Property ;
 	rdfs:range xsd:float .
 
-:WaterlevelValue-isProducedBy rdfs:label "http://purl.org/ifgi/suc/waterlevelobservation#isProducedBy" ;
+:WaterlevelValue_prop_isProducedBy a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/suc/waterlevelobservation#isProducedBy" ;
 	rdfs:domain :WaterlevelValue ;
-	a rdf:Property ;
 	rdfs:range :WaterlevelObservation .
 
 :Waterlevel a rdfs:Class ;
@@ -69,9 +69,9 @@ _:node16m5gl4c1x122 a owl:Ontology ;
 	rdfs:subClassOf :Level ;
 	dc:identifier "water level@en"^^xsd:string .
 
-:Waterlevel-isObservedBy rdfs:label "http://purl.org/ifgi/suc/waterlevelobservation#isObservedBy" ;
+:Waterlevel_prop_isObservedBy a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/suc/waterlevelobservation#isObservedBy" ;
 	rdfs:domain :Waterlevel ;
-	a rdf:Property ;
 	rdfs:range :WaterlevelSensor .
 
 :Level a rdfs:Class ;
@@ -94,8 +94,8 @@ _:node16m5gl4c1x122 a owl:Ontology ;
 	rdfs:subClassOf obs:ObservedEntity ;
 	dc:identifier "water@en"^^xsd:string .
 
-:Water-has_quality rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
+:Water_prop_has_quality a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/dolce#has_quality" ;
 	rdfs:domain :Water ;
-	rdfs:subPropertyOf dolce:has_quality ;
-	a rdf:Property ;
-	rdfs:range :Waterlevel .
+	rdfs:range :Waterlevel ;
+	rdfs:subPropertyOf dolce:has_quality .

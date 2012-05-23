@@ -9,7 +9,7 @@
 	xmlns:DUL="http://purl.org/ifgi/dul#"
 	xmlns:ssn="http://purl.oclc.org/NET/ssnx/ssn#">
 
-<rdf:Description rdf:nodeID="node16oavaf45x1">
+<rdf:Description rdf:nodeID="node16tshsbepx81">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>SSN_Observation</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -70,7 +70,7 @@
 	<rdfs:label>http://purl.org/ifgi/ssn#DetectionLimit</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/ssn#MeasurementProperty"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">detection limit@en</dc:identifier>
-	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An observed value for which the probability of falsely claiming the absence of a component in a material is β, given a probability α of falsely claiming its presence.</dc:description>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An observed value for which the probability of falsely claiming the absence of a component in a material is ?, given a probability ? of falsely claiming its presence.</dc:description>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/ssn#Device">
