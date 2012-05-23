@@ -9,7 +9,7 @@
 	xmlns:gml="http://purl.org/ifgi/gml/0.2#"
 	xmlns:ssn="http://purl.org/ifgi/ssn#">
 
-<rdf:Description rdf:nodeID="node16tshsbepx11">
+<rdf:Description rdf:nodeID="node16tsilpblx11">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>ObservationsAndMeasurements</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>

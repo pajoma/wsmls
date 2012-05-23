@@ -5,7 +5,7 @@
 @prefix : <http://purl.org/ifgi/geosparql#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 
-_:node16tshsbepx6 a owl:Ontology ;
+_:node16tsilpblx6 a owl:Ontology ;
 	rdfs:label "GeoSPARQL" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;

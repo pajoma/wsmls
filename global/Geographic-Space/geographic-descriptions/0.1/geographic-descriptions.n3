@@ -10,7 +10,7 @@
 @prefix geosparql: <http://purl.org/ifgi/geosparql#> .
 @prefix time: <http://purl.org/ifgi/time#> .
 
-_:node16tshsbepx58 a owl:Ontology ;
+_:node16tsilpblx58 a owl:Ontology ;
 	rdfs:label "geographic_descriptions" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/dulSpatial#> , <http://purl.org/ifgi/dul#> , <http://purl.org/ifgi/geospace#> , <http://purl.org/ifgi/time#> ;
@@ -23,20 +23,20 @@ _:node16tshsbepx58 a owl:Ontology ;
 	dc:subject "Geography"^^xsd:string .
 
 :SituationDescription a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/geodesc#SitationDescription" ;
+	rdfs:label "http://purl.org/ifgi/geodesc#SituationDescription" ;
 	rdfs:subClassOf dul:Description ;
 	dc:identifier "situation description@en"^^xsd:string , "Situationsbeschreibung@de"^^xsd:string ;
 	dc:description "Description of a situation, e.g. event or observation."^^xsd:string .
 
 :SituationDescription_prop_describes a rdf:Property ;
 	rdfs:label "http://purl.org/ifgi/geodesc#describes" ;
-	rdfs:domain :SitationDescription ;
+	rdfs:domain :SituationDescription ;
 	a rdf:Property ;
 	rdfs:range dul:Situation .
 
 :SituationDescription_prop_describedLocation a rdf:Property ;
 	rdfs:label "http://purl.org/ifgi/geodesc#describedLocation" ;
-	rdfs:domain :SitationDescription ;
+	rdfs:domain :SituationDescription ;
 	a rdf:Property ;
 	rdfs:range :LocationDescription .
 

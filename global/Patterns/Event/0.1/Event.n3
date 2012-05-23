@@ -6,7 +6,7 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dolce: <http://purl.org/ifgi/dolce#> .
 
-_:node16tshsbepx76 a owl:Ontology ;
+_:node16tsilpblx76 a owl:Ontology ;
 	rdfs:label "EventPattern" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-core" ;
 	owl:imports <http://purl.org/ifgi/dolce#> ;

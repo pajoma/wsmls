@@ -7,7 +7,7 @@
 @prefix dolce: <http://purl.org/ifgi/dolce#> .
 @prefix obs: <http://purl.org/ifgi/observation#> .
 
-_:node16tshsbepx102 a owl:Ontology ;
+_:node16tsilpblx102 a owl:Ontology ;
 	rdfs:label "WaterlevelObservation" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/observation#> ;

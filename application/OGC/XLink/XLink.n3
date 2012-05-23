@@ -6,7 +6,7 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix xlink: <http://www.w3.org/1999/xlink#> .
 
-_:node16tshsbepx30 a owl:Ontology ;
+_:node16tsilpblx30 a owl:Ontology ;
 	rdfs:label "XLink" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	dc:creator "pajoma"^^xsd:string ;

@@ -7,7 +7,7 @@
 @prefix ptrn: <http://purl.org/ifgi/patterns/system#> .
 @prefix role: <http://purl.org/ifgi/patterns/role#> .
 
-_:node16tshsbepx68 a owl:Ontology ;
+_:node16tsilpblx68 a owl:Ontology ;
 	rdfs:label "geographic_systems" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/patterns/system#> , <http://purl.org/ifgi/patterns/role#> ;
