@@ -6,7 +6,7 @@
 @prefix dolce: <http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 
-_:node16tnq54t5x7 a owl:Ontology ;
+_:node16tsn6s7vx1 a owl:Ontology ;
 	rdfs:label "DOLCE_Lite" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	dc:publisher "IfGI, University of Muenster"^^xsd:string ;
@@ -796,3 +796,127 @@ _:node16tnq54t5x7 a owl:Ontology ;
 :q_location a rdf:Property ;
 	rdfs:domain :quality ;
 	rdfs:range :region ;
+	rdfs:subPropertyOf :immediate_relation ;
+	dc:identifier "q_location@en"^^xsd:string ;
+	dc:description "The immediate relation holding for qualities and regions. See 'generic location' branching for the various mediated relations that embed q_location."^^xsd:string ;
+	rdfs:seeAlso dolce:q_location .
+
+:total_constant_participant a rdf:Property ;
+	rdfs:domain :perdurant ;
+	rdfs:range :endurant ;
+	rdfs:subPropertyOf :constant_participant ;
+	dc:identifier "total_constant_participant@en"^^xsd:string ;
+	dc:description "The perdurant p has a participant e that constantly participates in p with all its parts, e.g. in 'I played the concert' (where the concert is a solo concert)."^^xsd:string ;
+	rdfs:seeAlso dolce:total_constant_participant .
+
+:total_constant_participant_in a rdf:Property ;
+	rdfs:domain :endurant ;
+	rdfs:range :perdurant ;
+	rdfs:subPropertyOf :constant_participant_in ;
+	dc:identifier "total_constant_participant_in@en"^^xsd:string ;
+	dc:description "The perdurant p has a participant e that constantly participates in p with all its parts, e.g. in 'I played the concert' (where the concert is a solo concert)."^^xsd:string ;
+	rdfs:seeAlso dolce:total_constant_participant_in .
+
+:sibling_part a rdf:Property ;
+	rdfs:domain :particular ;
+	rdfs:range :particular ;
+	rdfs:subPropertyOf :mediated_relation ;
+	dc:identifier "sibling part@en"^^xsd:string ;
+	dc:description "Mereological sibling: having a common whole"^^xsd:string ;
+	rdfs:seeAlso dolce:sibling_part .
+
+:spatio_temporally_present_at a rdf:Property ;
+	rdfs:domain :particular ;
+	rdfs:range :spatio_temporal_region ;
+	rdfs:subPropertyOf :exact_location ;
+	dc:identifier "spatio_temporally_present_at@en"^^xsd:string ;
+	dc:description ""^^xsd:string ;
+	rdfs:seeAlso dolce:spatio_temporally_present_at .
+
+:spatio_temporal_presence_of a rdf:Property ;
+	rdfs:domain :spatio_temporal_region ;
+	rdfs:range :particular ;
+	rdfs:subPropertyOf :exact_location_of ;
+	dc:identifier "spatio_temporal_presence_of@en"^^xsd:string ;
+	dc:description ""^^xsd:string ;
+	rdfs:seeAlso dolce:spatio_temporal_presence_of .
+
+:strong_connection a rdf:Property ;
+	rdfs:domain :particular ;
+	rdfs:range :particular ;
+	rdfs:subPropertyOf :mediated_relation ;
+	dc:identifier "strong_connection@en"^^xsd:string ;
+	dc:description "By strong connection here we mean a connection between two entities that share a boundary."^^xsd:string ;
+	rdfs:seeAlso dolce:strong_connection .
+
+:exact_location_of a rdf:Property ;
+	rdfs:domain :region ;
+	rdfs:range :particular ;
+	rdfs:subPropertyOf :generic_location_of ;
+	dc:identifier "exact location of@en"^^xsd:string ;
+	dc:description "A location relation bounded to regions and defined analytically through the composition of inherence and q_location. This is the analytical version of 'generic location'."^^xsd:string ;
+	rdfs:seeAlso dolce:exact_location_of .
+
+:exact_location a rdf:Property ;
+	rdfs:domain :particular ;
+	rdfs:range :region ;
+	rdfs:subPropertyOf :generic_location ;
+	dc:identifier "exact location@en"^^xsd:string ;
+	dc:description "A location relation bounded to regions and defined analytically through the composition of inherence and q_location. This is the analytical version of 'generic location'."^^xsd:string ;
+	rdfs:seeAlso dolce:exact_location .
+
+:temporary_atomic_part a rdf:Property ;
+	rdfs:domain :endurant ;
+	rdfs:range :endurant ;
+	rdfs:subPropertyOf :temporary_proper_part ;
+	dc:identifier "temporary_atomic_part@en"^^xsd:string ;
+	dc:description "Having an atom as part at a time t."^^xsd:string ;
+	rdfs:seeAlso dolce:temporary_atomic_part .
+
+:temporary_atomic_part_of a rdf:Property ;
+	rdfs:domain :endurant ;
+	rdfs:range :endurant ;
+	rdfs:subPropertyOf :temporary_proper_part_of ;
+	dc:identifier "temporary_atomic_part_of@en"^^xsd:string ;
+	dc:description "Having an atom as part at a time t."^^xsd:string ;
+	rdfs:seeAlso dolce:temporary_atomic_part_of .
+
+:overlaps a rdf:Property ;
+	rdfs:domain :particular ;
+	rdfs:range :particular ;
+	rdfs:subPropertyOf :mediated_relation ;
+	dc:identifier "overlaps@en"^^xsd:string ;
+	dc:description "Mereological overlap: having a common part."^^xsd:string ;
+	rdfs:seeAlso dolce:overlaps .
+
+_:node16tsn6s7vx2 rdfs:label "http://purl.org/ifgi/dolce#define_inverse" ;
+	a <http://www.wsmo.org/wsml/wsml-syntax#Axiom> ;
+	rdf:value """_\"http://purl.org/ifgi/dolce#immediate_relation\"(?x,?y)
+ implies 
+_\"http://purl.org/ifgi/dolce#immediate_relation_i\"(?y,?x). """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> , """_\"http://purl.org/ifgi/dolce#mediated_relation\"(?x,?y)
+ implies 
+_\"http://purl.org/ifgi/dolce#mediated_relation_i\"(?y,?x). """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> , """_\"http://purl.org/ifgi/dolce#generic_constituent\"(?x,?y)
+ implies 
+_\"http://purl.org/ifgi/dolce#generic_constituent_of\"(?y,?x). """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> , """_\"http://purl.org/ifgi/dolce#generic_dependent\"(?x,?y)
+ implies 
+_\"http://purl.org/ifgi/dolce#generic_dependent_on\"(?y,?x). """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> , """_\"http://purl.org/ifgi/dolce#identitiy_c\"(?x,?y)
+ implies 
+_\"http://purl.org/ifgi/dolce#identitiy_c\"(?y,?x). """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> , """_\"http://purl.org/ifgi/dolce#identitiy_n\"(?x,?y)
+ implies 
+_\"http://purl.org/ifgi/dolce#identitiy_n\"(?y,?x). """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> , """_\"http://purl.org/ifgi/dolce#sibling_part\"(?x,?y)
+ implies 
+_\"http://purl.org/ifgi/dolce#sibling_part\"(?y,?x). """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> , """_\"http://purl.org/ifgi/dolce#inherent_in\"(?x,?y)
+ implies 
+_\"http://purl.org/ifgi/dolce#has_quality\"(?y,?x). """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> , """_\"http://purl.org/ifgi/dolce#t_inherent_in\"(?x,?y)
+ implies 
+_\"http://purl.org/ifgi/dolce#has_t_quality\"(?y,?x). """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> , """_\"http://purl.org/ifgi/dolce#part\"(?x,?y)
+ implies 
+_\"http://purl.org/ifgi/dolce#part_of\"(?y,?x). """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> , """_\"http://purl.org/ifgi/dolce#atomic_part\"(?x,?y)
+ implies 
+_\"http://purl.org/ifgi/dolce#atomic_part_of\"(?y,?x). """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> , """_\"http://purl.org/ifgi/dolce#proper_part\"(?x,?y)
+ implies 
+_\"http://purl.org/ifgi/dolce#proper_part_of\"(?y,?x). """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> , """_\"http://purl.org/ifgi/dolce#boundary\"(?x,?y)
+ implies 
+_\"http://purl.org/ifgi/dolce#boundary_of\"(?y,?x). """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> , """_\"http://purl.org/ifgi/dolce#temporary_proper_part\"(?x,?y)
+ implies 
+_\"http://purl.org/ifgi/dolce#temporary_proper_part_of\"(?y,?x). """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> .
