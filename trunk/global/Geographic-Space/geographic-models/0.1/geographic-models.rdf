@@ -13,7 +13,7 @@
 	xmlns:geoDesc="http://purl.org/ifgi/geodesc#"
 	xmlns:eo="http://purl.org/ifgi/event-observation#">
 
-<rdf:Description rdf:nodeID="node16tshsbepx61">
+<rdf:Description rdf:nodeID="node16tsilpblx61">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>geographical_model</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>

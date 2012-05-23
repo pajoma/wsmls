@@ -7,7 +7,7 @@
 @prefix dul: <http://purl.org/ifgi/dul#> .
 @prefix dulSp: <http://purl.org/ifgi/dulSpatial#> .
 
-_:node16tshsbepx66 a owl:Ontology ;
+_:node16tsilpblx66 a owl:Ontology ;
 	rdfs:label "geographic_space" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/dulSpatial#> , <http://purl.org/ifgi/dul#> ;

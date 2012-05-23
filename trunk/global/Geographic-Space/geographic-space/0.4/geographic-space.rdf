@@ -9,7 +9,7 @@
 	xmlns:dul="http://purl.org/ifgi/dul#"
 	xmlns:dulSp="http://purl.org/ifgi/dulSpatial#">
 
-<rdf:Description rdf:nodeID="node16tshsbepx65">
+<rdf:Description rdf:nodeID="node16tsilpblx65">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>geographic_space</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>

@@ -9,7 +9,7 @@
 @prefix posm: <http://purl.org/ifgi/posm#> .
 @prefix dolce: <http://purl.org/net/wsml/dolceDnS#> .
 
-_:node16tshsbepx24 a owl:Ontology ;
+_:node16tsilpblx24 a owl:Ontology ;
 	rdfs:label "WFS" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/ows/0.2#> , <http://purl.org/net/wsml/dolceDnS#> , <http://purl.org/ifgi/posm#> ;
