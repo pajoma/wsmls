@@ -10,7 +10,7 @@
 @prefix ge: <http://purl.org/net/wsml/geoevents#> .
 @prefix gq: <http://purl.org/net/wsml/geoqualities#> .
 
-_:node16tsilpblx100 a owl:Ontology ;
+_:node16tsjbk2dx100 a owl:Ontology ;
 	rdfs:label "UrbanizedAreaFeature" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/net/wsml/geospace#> , <http://purl.org/net/wsml/geounits#> , <http://purl.org/net/wsml/geoevents#> , <http://purl.org/net/wsml/geoqualities#> ;

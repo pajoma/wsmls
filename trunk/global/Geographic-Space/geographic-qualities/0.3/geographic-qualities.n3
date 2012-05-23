@@ -6,7 +6,7 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix geospace: <http://purl.org/ifgi/geospace#> .
 
-_:node16tsilpblx64 a owl:Ontology ;
+_:node16tsjbk2dx64 a owl:Ontology ;
 	rdfs:label "geographical_qualities" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/geospace#> ;

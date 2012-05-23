@@ -11,7 +11,7 @@
 	xmlns:ogc="http://purl.org/ifgi/geosparql#"
 	xmlns:time="http://w3.org/2006/time#">
 
-<rdf:Description rdf:nodeID="node16tsilpblx7">
+<rdf:Description rdf:nodeID="node16tsjbk2dx7">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>GML</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>

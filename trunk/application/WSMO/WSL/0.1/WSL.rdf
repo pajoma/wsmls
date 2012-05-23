@@ -7,7 +7,7 @@
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/">
 
-<rdf:Description rdf:nodeID="node16tsilpblx35">
+<rdf:Description rdf:nodeID="node16tsjbk2dx35">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>WSL</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-core</dc:format>
