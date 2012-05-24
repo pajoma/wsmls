@@ -1,5 +1,5 @@
 wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
-namespace {_"http://purl.org/ifgi/affecting-environment#",
+namespace {_"http://purl.org/ifgi/affenv#",
 	dc _"http://purl.org/dc/elements/1.1/",
 	dolce _"http://purl.org/ifgi/dolce#",
 	gspace _"http://purl.org/ifgi/geospace#"
