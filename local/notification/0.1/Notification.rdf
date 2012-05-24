@@ -6,7 +6,7 @@
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
-	xmlns:ae="http://purl.org/ifgi/affecting-environment#"
+	xmlns:ae="http://purl.org/ifgi/affenv#"
 	xmlns:gspace="http://purl.org/ifgi/geospace#"
 	xmlns:flood="http://purl.org/ifgi/water/flood#"
 	xmlns:eo="http://purl.org/ifgi/event-observation#"
@@ -19,11 +19,11 @@
 	xmlns:ge="http://purl.org/ifgi/geoevents#"
 	xmlns:gsparql="http://purl.org/ifgi/geosparql#">
 
-<rdf:Description rdf:nodeID="node16tta18lgx1">
+<rdf:Description rdf:nodeID="node16tvo2mhdx7">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>NotificationOntology</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
-	<owl:imports rdf:resource="http://purl.org/ifgi/affecting-environment#"/>
+	<owl:imports rdf:resource="http://purl.org/ifgi/affenv#"/>
 	<owl:imports rdf:resource="http://purl.org/ifgi/water/flood#"/>
 	<owl:imports rdf:resource="http://purl.org/ifgi/geomodels#"/>
 </rdf:Description>
@@ -31,16 +31,16 @@
 <rdf:Description rdf:about="http://purl.org/ifgi/notification#stay_at_place">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/notification#stay_at_place</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/affecting-environment#activity"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/affenv#activity"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/notification#stay_at_place_prop_define">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label>http://purl.org/ifgi/affecting-environment#define</rdfs:label>
+	<rdfs:label>http://purl.org/ifgi/affenv#define</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/notification#stay_at_place"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/notification#stay_at_place_environment"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/affecting-environment#define"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/affenv#define"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/notification#stay_at_place_prop_participant">
@@ -55,31 +55,31 @@
 <rdf:Description rdf:about="http://purl.org/ifgi/notification#stay_at_place_environment">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/notification#stay_at_place_environment</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/affecting-environment#affecting_environment"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/affenv#affecting_environment"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/notification#stay_at_place_environment_prop_contains">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label>http://purl.org/ifgi/affecting-environment#contains</rdfs:label>
+	<rdfs:label>http://purl.org/ifgi/affenv#contains</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/notification#stay_at_place_environment"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/notification#region"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/affecting-environment#contains"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/affenv#contains"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/notification#stay_at_place_environment_prop_is_defined_by">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label>http://purl.org/ifgi/affecting-environment#is_defined_by</rdfs:label>
+	<rdfs:label>http://purl.org/ifgi/affenv#is_defined_by</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/notification#stay_at_place_environment"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/notification#stay_at_place"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/affecting-environment#is_defined_by"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/affenv#is_defined_by"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/notification#subscriber">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/notification#subscriber</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/affecting-environment#agent"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/affenv#agent"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/notification#subscriber_prop_participant_in">
@@ -118,7 +118,7 @@
 <rdf:Description rdf:about="http://purl.org/ifgi/notification#affected">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/notification#affected</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/affecting-environment#state"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/affenv#state"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/notification#flooded">
@@ -130,7 +130,7 @@
 <rdf:Description rdf:about="http://purl.org/ifgi/notification#normal">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/notification#normal</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/affecting-environment#state"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/affenv#state"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/notification#city">
@@ -457,7 +457,7 @@
 	<dul:hasDataValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">226</dul:hasDataValue>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16tta18lgx2">
+<rdf:Description rdf:nodeID="node16tvo2mhdx8">
 	<rdfs:label>http://purl.org/ifgi/notification#predict_flooding_50</rdfs:label>
 	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
 	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?eventobsdesc[_"http://purl.org/ifgi/geodesc#describedLocation" hasValue ?descloc, _"http://purl.org/ifgi/dul#describes" hasValue ?eventobs] memberOf _"http://purl.org/ifgi/event-observation#EventObservationDescription"
@@ -477,7 +477,7 @@
  and ?event memberOf _"http://purl.org/ifgi/water/flood#Flood". </rdf:value>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16tta18lgx3">
+<rdf:Description rdf:nodeID="node16tvo2mhdx9">
 	<rdfs:label>http://purl.org/ifgi/notification#predict_flooding_70</rdfs:label>
 	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
 	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?eventobsdesc[_"http://purl.org/ifgi/geodesc#describedLocation" hasValue ?descloc, _"http://purl.org/ifgi/dul#describes" hasValue ?eventobs] memberOf _"http://purl.org/ifgi/event-observation#EventObservationDescription"
@@ -497,7 +497,7 @@
  and ?event memberOf _"http://purl.org/ifgi/water/flood#Flood". </rdf:value>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16tta18lgx4">
+<rdf:Description rdf:nodeID="node16tvo2mhdx10">
 	<rdfs:label>http://purl.org/ifgi/notification#predict_flooding_90</rdfs:label>
 	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
 	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?eventobsdesc[_"http://purl.org/ifgi/geodesc#describedLocation" hasValue ?descloc, _"http://purl.org/ifgi/dul#describes" hasValue ?eventobs] memberOf _"http://purl.org/ifgi/event-observation#EventObservationDescription"
@@ -517,7 +517,7 @@
  and ?event memberOf _"http://purl.org/ifgi/water/flood#Flood". </rdf:value>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node16tta18lgx5">
+<rdf:Description rdf:nodeID="node16tvo2mhdx11">
 	<rdfs:label>http://purl.org/ifgi/notification#change_state_to_flooded</rdfs:label>
 	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
 	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">forall ?state
@@ -531,12 +531,12 @@
  and ?watlevsensloc[_"http://purl.org/ifgi/geosparql#asWKT" hasValue ?locvalue2] memberOf _"http://purl.org/ifgi/geodesc#LocationDescription"
  and ?locvalue = ?locvalue2
  and ?watlevsens memberOf _"http://purl.org/ifgi/water/flood#WaterLevelSensor"
- and ?dobj[_"http://purl.org/ifgi/affecting-environment#has_state" hasValue ?state] memberOf _"http://purl.org/ifgi/geospace#geographical_unit"
+ and ?dobj[_"http://purl.org/ifgi/affenv#has_state" hasValue ?state] memberOf _"http://purl.org/ifgi/geospace#geographical_unit"
  and ?dam memberOf _"http://purl.org/ifgi/water/flood#Dam"
  and _"http://purl.org/ifgi/water/flood#downstream"(?watlevsens,?dobj)
  and _"http://purl.org/ifgi/water/flood#downstream"(?watlevsens,?dam)
  and neg _"http://purl.org/ifgi/water/flood#downstream"(?dam,?dobj)
- and ?state memberOf _"http://purl.org/ifgi/affecting-environment#state"
+ and ?state memberOf _"http://purl.org/ifgi/affenv#state"
  implies 
 ?state memberOf _"http://purl.org/ifgi/notification#flooded") . </rdf:value>
 </rdf:Description>

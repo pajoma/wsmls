@@ -1,7 +1,7 @@
 wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
 namespace {_"http://purl.org/ifgi/notification#",
 	dc _"http://purl.org/dc/elements/1.1/",
-	ae _"http://purl.org/ifgi/affecting-environment#",
+	ae _"http://purl.org/ifgi/affenv#",
 	gspace _"http://purl.org/ifgi/geospace#",
 	flood _"http://purl.org/ifgi/water/flood#",
 	eo _"http://purl.org/ifgi/event-observation#",
@@ -29,7 +29,7 @@ ontology NotificationOntology
 //		dc#subject hasValue ""			
 //	endAnnotations
      
-	importsOntology {_"http://purl.org/ifgi/affecting-environment#", _"http://purl.org/ifgi/water/flood#", _"http://purl.org/ifgi/geomodels#"}
+	importsOntology {_"http://purl.org/ifgi/affenv#", _"http://purl.org/ifgi/water/flood#", _"http://purl.org/ifgi/geomodels#"}
 
 	concept stay_at_place subConceptOf ae#activity
         ae#define ofType stay_at_place_environment
