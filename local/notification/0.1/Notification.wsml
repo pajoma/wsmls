@@ -2,6 +2,7 @@ wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
 namespace {_"http://purl.org/ifgi/notification#",
 	dc _"http://purl.org/dc/elements/1.1/",
 	ae _"http://purl.org/ifgi/affenv#",
+	os _"http://purl.org/ifgi/oilspill#",
 	gspace _"http://purl.org/ifgi/geospace#",
 	flood _"http://purl.org/ifgi/water/flood#",
 	eo _"http://purl.org/ifgi/event-observation#",
@@ -29,14 +30,14 @@ ontology NotificationOntology
 //		dc#subject hasValue ""			
 //	endAnnotations
      
-	importsOntology {_"http://purl.org/ifgi/affenv#", _"http://purl.org/ifgi/water/flood#", _"http://purl.org/ifgi/geomodels#"}
+	importsOntology {_"http://purl.org/ifgi/affenv#", _"http://purl.org/ifgi/water/flood#", _"http://purl.org/ifgi/geomodels#", _"http://purl.org/ifgi/oilspill#"}
 
 	concept stay_at_place subConceptOf ae#activity
         ae#define ofType stay_at_place_environment
         dolce#participant ofType subscriber
                      
     concept stay_at_place_environment subConceptOf ae#affecting_environment
-        ae#contains ofType region           
+        ae#contains ofType os#region           
         ae#is_defined_by ofType stay_at_place
                      
     concept subscriber subConceptOf ae#agent
@@ -52,10 +53,10 @@ ontology NotificationOntology
     concept normal subConceptOf ae#state
     
     concept city subConceptOf gspace#geographical_unit
-    	gspace#situated_in impliesType flood#region
+    	gspace#situated_in impliesType os#region
     
     concept village subConceptOf gspace#geographical_unit
-    	gspace#situated_in impliesType flood#region
+    	gspace#situated_in impliesType os#region
     
     
     
@@ -69,7 +70,7 @@ ontology NotificationOntology
              and ?eventobstype memberOf flood#ActionStageToMinorFloodingStage
              and ?predictedeventobsdesc memberOf geomod#PredictedEventObservationDescription
              and ?predictedeventobs memberOf geomod#PredictedEventObservation
-             and ?hazlevdes memberOf geomod#HazardLevelDescription
+             and ?hazlevdesc memberOf geomod#HazardLevelDescription
              and ?event memberOf ge#geographical_event
 			 and ?descloc2 memberOf gDesc#LocationDescription
              implies
@@ -87,14 +88,14 @@ ontology NotificationOntology
              and ?eventobstype memberOf flood#MinorFloodingStageToModerateFloodingStage
              and ?predictedeventobsdesc memberOf geomod#PredictedEventObservationDescription
              and ?predictedeventobs memberOf geomod#PredictedEventObservation
-             and ?hazlevdes memberOf geomod#HazardLevelDescription
+             and ?hazlevdesc memberOf geomod#HazardLevelDescription
              and ?event memberOf ge#geographical_event
 			 and ?descloc2 memberOf gDesc#LocationDescription
              implies
              ?predictedeventobsdesc[gDesc#describedLocation hasValue ?descloc2, dul#describes hasValue ?predictedeventobs, geomod#associatedHazardLevel hasValue ?hazlevdesc, geomod#hasSource hasValue ?eventobsdesc] memberOf geomod#PredictedEventObservationDescription
              and ?descloc2 [gsparql#asWKT hasValue ?locvalue] memberOf gDesc#LocationDescription
              and ?predictedeventobs [geomod#predicts hasValue ?event] memberOf geomod#PredictedEventObservation
-             and ?hazlevdesc [geomod#hasHazardLevel hasValue 70] memberOf geomod#HazardLevelDescription
+             and ?hazlevdesc [geomod#hasHazardLevel hasValue "70"] memberOf geomod#HazardLevelDescription
              and ?event memberOf flood#Flood.
 
 	axiom predict_flooding_90
@@ -105,7 +106,7 @@ ontology NotificationOntology
              and ?eventobstype memberOf flood#ModerateFloodingStageToMajorFloodingStage
              and ?predictedeventobsdesc memberOf geomod#PredictedEventObservationDescription
              and ?predictedeventobs memberOf geomod#PredictedEventObservation
-             and ?hazlevdes memberOf geomod#HazardLevelDescription
+             and ?hazlevdesc memberOf geomod#HazardLevelDescription
              and ?event memberOf ge#geographical_event
 			 and ?descloc2 memberOf gDesc#LocationDescription
              implies
@@ -117,7 +118,7 @@ ontology NotificationOntology
            
 	axiom change_state_to_flooded
 		definedBy
-			forall ?state (
+			
 				?predictedeventobsdesc[gDesc#describedLocation hasValue ?descloc, dul#describes hasValue ?predictedeventobs, geomod#associatedHazardLevel hasValue ?hazlevdesc, geomod#hasSource hasValue ?eventobsdesc] memberOf geomod#PredictedEventObservationDescription
             	and ?descloc [gsparql#asWKT hasValue ?locvalue] memberOf gDesc#LocationDescription
             	and ?predictedeventobs [geomod#predicts hasValue ?event] memberOf geomod#PredictedEventObservation
@@ -129,13 +130,13 @@ ontology NotificationOntology
              	and ?locvalue = ?locvalue2
              	and ?watlevsens  memberOf flood#WaterLevelSensor
              	and ?dobj [ae#has_state hasValue ?state] memberOf gspace#geographical_unit
-             	and ?dam memberOf flood#Dam
+             	//and ?dam memberOf flood#Dam
              	and flood#downstream(?watlevsens,?dobj)
-             	and flood#downstream(?watlevsens,?dam)
-             	and neg (flood#downstream(?dam,?dobj))
+             	//and flood#downstream(?watlevsens,?dam)
+             	//and neg (flood#downstream(?dam,?dobj))
              	and ?state memberOf ae#state
              	implies
-             	?state memberOf flooded).
+             	?state memberOf flooded.
             
 //	Geographical objects in the USGS scenario = test dataset
 
@@ -149,6 +150,7 @@ ontology NotificationOntology
 		ae#has_state hasValue state_of_gilboa
 		flood#downstream hasValue breakabeen
 		dul#has_quality hasValue altitude_of_gilboa
+		gspace#nearBy hasValue schoharie_creek
 	
 	instance description_about_gilboa memberOf gDesc#GeographicalDescription
 		gDesc#describes hasValue gilboa
@@ -167,6 +169,7 @@ ontology NotificationOntology
 		ae#has_state hasValue state_of_breakabeen
 		flood#downstream hasValue fultonham
 		dul#has_quality hasValue altitude_of_breakabeen
+		gspace#nearBy hasValue schoharie_creek
 	
 	instance description_about_breakabeen memberOf gDesc#GeographicalDescription
 		gDesc#describes hasValue breakabeen
@@ -185,6 +188,7 @@ ontology NotificationOntology
 		ae#has_state hasValue state_of_fultonham
 		flood#downstream hasValue middleburgh
 		dul#has_quality hasValue altitude_of_fultonham
+		gspace#nearBy hasValue schoharie_creek
 	
 	instance description_about_fultonham memberOf gDesc#GeographicalDescription
 		gDesc#describes hasValue fultonham
@@ -203,6 +207,7 @@ ontology NotificationOntology
 		ae#has_state hasValue state_of_middleburgh
 		flood#downstream hasValue schoharie
 		dul#has_quality hasValue altitude_of_middleburgh
+		gspace#nearBy hasValue schoharie_creek
 	
 	instance description_about_middleburgh memberOf gDesc#GeographicalDescription
 		gDesc#describes hasValue middleburgh
@@ -221,6 +226,7 @@ ontology NotificationOntology
 		ae#has_state hasValue state_of_schoharie
 		flood#downstream hasValue esperance
 		dul#has_quality hasValue altitude_of_schoharie
+		gspace#nearBy hasValue schoharie_creek
 	
 	instance description_about_schoharie memberOf gDesc#GeographicalDescription
 		gDesc#describes hasValue schoharie
@@ -239,6 +245,7 @@ ontology NotificationOntology
 		ae#has_state hasValue state_of_esperance
 		flood#downstream hasValue burtonsville
 		dul#has_quality hasValue altitude_of_esperance
+		gspace#nearBy hasValue schoharie_creek
 	
 	instance description_about_esperance memberOf gDesc#GeographicalDescription
 		gDesc#describes hasValue esperance
@@ -256,6 +263,7 @@ ontology NotificationOntology
 	instance burtonsville memberOf village
 		ae#has_state hasValue state_of_burtonsville
 		dul#has_quality hasValue altitude_of_burtonsville
+		gspace#nearBy hasValue schoharie_creek
 	
 	instance description_about_burtonsville memberOf gDesc#GeographicalDescription
 		gDesc#describes hasValue esperance
@@ -276,6 +284,7 @@ ontology NotificationOntology
 		ae#has_state hasValue state_of_gilboa_dam
 		flood#downstream hasValue gilboa
 		dul#has_quality hasValue altitude_of_gilboa_dam
+		gspace#nearBy hasValue schoharie_creek
 	
 	instance description_about_gilboa_dam memberOf gDesc#GeographicalDescription
 		gDesc#describes hasValue gilboa_dam
@@ -295,6 +304,7 @@ ontology NotificationOntology
 	instance prattsville_water_level_sensor memberOf flood#WaterLevelSensor
 		flood#downstream hasValue gilboa_dam
 		dul#has_quality hasValue altitude_of_prattsville_water_level_sensor
+		gspace#nearBy hasValue schoharie_creek
 	
 	instance description_about_prattsville_water_level_sensor memberOf gDesc#GeographicalDescription
 		gDesc#describes hasValue prattsville_water_level_sensor
@@ -310,6 +320,7 @@ ontology NotificationOntology
 	instance gilboa_water_level_sensor memberOf flood#WaterLevelSensor
 		flood#downstream hasValue breakabeen
 		dul#has_quality hasValue altitude_of_gilboa_water_level_sensor
+		gspace#nearBy hasValue schoharie_creek
 	
 	instance description_about_gilboa_water_level_sensor memberOf gDesc#GeographicalDescription
 		gDesc#describes hasValue gilboa_water_level_sensor
@@ -325,6 +336,7 @@ ontology NotificationOntology
 	instance breakabeen_water_level_sensor memberOf flood#WaterLevelSensor
 		flood#downstream hasValue fultonham
 		dul#has_quality hasValue altitude_of_breakabeen_water_level_sensor
+		gspace#nearBy hasValue schoharie_creek
 	
 	instance description_about_breakabeen_water_level_sensor memberOf gDesc#GeographicalDescription
 		gDesc#describes hasValue breakabeen_water_level_sensor
