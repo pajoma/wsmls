@@ -32,7 +32,7 @@ concept SituationDescription subConceptOf dul#Description
 		dc#identifier hasValue "Situationsbeschreibung@de"
 		dc#description hasValue "Description of a situation, e.g. event or observation."
 	endAnnotations
-	describes ofType dul#Situation
+	dul#describes ofType dul#Situation
 	describedLocation ofType LocationDescription
  
 concept GeographicalDescription subConceptOf dul#Description
@@ -41,7 +41,7 @@ concept GeographicalDescription subConceptOf dul#Description
 		dc#identifier hasValue "geographische Beschreibung@de"
 		dc#description hasValue "Description of a geographical unit."
 	endAnnotations
-	describes ofType gspace#geographical_unit
+	dul#describes ofType gspace#geographical_unit
 	describedLocation ofType LocationDescription
 	
 	

@@ -10,7 +10,7 @@
 @prefix geosparql: <http://purl.org/ifgi/geosparql#> .
 @prefix time: <http://purl.org/ifgi/time#> .
 
-_:node16tsjbk2dx58 a owl:Ontology ;
+_:node16v6a5fmox2 a owl:Ontology ;
 	rdfs:label "geographic_descriptions" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/dulSpatial#> , <http://purl.org/ifgi/dul#> , <http://purl.org/ifgi/geospace#> , <http://purl.org/ifgi/time#> ;
@@ -29,10 +29,11 @@ _:node16tsjbk2dx58 a owl:Ontology ;
 	dc:description "Description of a situation, e.g. event or observation."^^xsd:string .
 
 :SituationDescription_prop_describes a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/geodesc#describes" ;
+	rdfs:label "http://purl.org/ifgi/dul#describes" ;
 	rdfs:domain :SituationDescription ;
 	a rdf:Property ;
-	rdfs:range dul:Situation .
+	rdfs:range dul:Situation ;
+	rdfs:subPropertyOf dul:describes .
 
 :SituationDescription_prop_describedLocation a rdf:Property ;
 	rdfs:label "http://purl.org/ifgi/geodesc#describedLocation" ;
@@ -47,10 +48,11 @@ _:node16tsjbk2dx58 a owl:Ontology ;
 	dc:description "Description of a geographical unit."^^xsd:string .
 
 :GeographicalDescription_prop_describes a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/geodesc#describes" ;
+	rdfs:label "http://purl.org/ifgi/dul#describes" ;
 	rdfs:domain :GeographicalDescription ;
 	a rdf:Property ;
-	rdfs:range gspace:geographical_unit .
+	rdfs:range gspace:geographical_unit ;
+	rdfs:subPropertyOf dul:describes .
 
 :GeographicalDescription_prop_describedLocation a rdf:Property ;
 	rdfs:label "http://purl.org/ifgi/geodesc#describedLocation" ;
