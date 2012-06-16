@@ -7,16 +7,15 @@
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns:dul="http://purl.org/ifgi/dul#"
-	xmlns:dulSp="http://purl.org/ifgi/dulSpatial#"
 	xmlns:gspace="http://purl.org/ifgi/geospace#"
 	xmlns:geosparql="http://purl.org/ifgi/geosparql#"
 	xmlns:time="http://purl.org/ifgi/time#">
 
-<rdf:Description rdf:nodeID="node16v6a5fmox1">
+<rdf:Description rdf:nodeID="node16vqea1e0x1">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>geographic_descriptions</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
-	<owl:imports rdf:resource="http://purl.org/ifgi/dulSpatial#"/>
+	<owl:imports rdf:resource="http://purl.org/ifgi/geosparql#"/>
 	<owl:imports rdf:resource="http://purl.org/ifgi/dul#"/>
 	<owl:imports rdf:resource="http://purl.org/ifgi/geospace#"/>
 	<owl:imports rdf:resource="http://purl.org/ifgi/time#"/>
