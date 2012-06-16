@@ -3,7 +3,6 @@ namespace { _"http://purl.org/ifgi/geodesc#",
 		dc _"http://purl.org/dc/elements/1.1/", 
      	rdfs _"http://www.w3.org/2000/01/rdf-schema#",
      	dul _"http://purl.org/ifgi/dul#",
-     	dulSp _"http://purl.org/ifgi/dulSpatial#",
 		gspace _"http://purl.org/ifgi/geospace#", 
 		geosparql _"http://purl.org/ifgi/geosparql#", 
 		time _"http://purl.org/ifgi/time#"
@@ -20,7 +19,7 @@ ontology geographic_descriptions
 		dc#subject hasValue "Geography"			
      endAnnotations
 	 
-	 importsOntology {	_"http://purl.org/ifgi/dulSpatial#", 
+	 importsOntology {	_"http://purl.org/ifgi/geosparql#", 
 						_"http://purl.org/ifgi/dul#", 
 						_"http://purl.org/ifgi/geospace#", 
 						_"http://purl.org/ifgi/time#"

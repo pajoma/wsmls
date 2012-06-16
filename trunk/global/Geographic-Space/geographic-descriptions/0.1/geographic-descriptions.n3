@@ -5,15 +5,14 @@
 @prefix : <http://purl.org/ifgi/geodesc#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dul: <http://purl.org/ifgi/dul#> .
-@prefix dulSp: <http://purl.org/ifgi/dulSpatial#> .
 @prefix gspace: <http://purl.org/ifgi/geospace#> .
 @prefix geosparql: <http://purl.org/ifgi/geosparql#> .
 @prefix time: <http://purl.org/ifgi/time#> .
 
-_:node16v6a5fmox2 a owl:Ontology ;
+_:node16vqea1e0x2 a owl:Ontology ;
 	rdfs:label "geographic_descriptions" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
-	owl:imports <http://purl.org/ifgi/dulSpatial#> , <http://purl.org/ifgi/dul#> , <http://purl.org/ifgi/geospace#> , <http://purl.org/ifgi/time#> ;
+	owl:imports <http://purl.org/ifgi/geosparql#> , <http://purl.org/ifgi/dul#> , <http://purl.org/ifgi/geospace#> , <http://purl.org/ifgi/time#> ;
 	dc:creator "p.maue (ifgi)"^^xsd:string ;
 	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
 	dc:rights "http://creativecommons.org/licenses/by/3.0/"^^xsd:string ;
