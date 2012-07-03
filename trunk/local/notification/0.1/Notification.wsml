@@ -148,7 +148,6 @@ ontology NotificationOntology
 
 	instance gilboa memberOf village
 		ae#has_state hasValue state_of_gilboa
-		flood#downstream hasValue breakabeen
 		dul#has_quality hasValue altitude_of_gilboa
 		gspace#nearBy hasValue schoharie_creek
 	
@@ -167,7 +166,6 @@ ontology NotificationOntology
 	
 	instance breakabeen memberOf village
 		ae#has_state hasValue state_of_breakabeen
-		flood#downstream hasValue fultonham
 		dul#has_quality hasValue altitude_of_breakabeen
 		gspace#nearBy hasValue schoharie_creek
 	
@@ -186,7 +184,6 @@ ontology NotificationOntology
 	
 	instance fultonham memberOf village
 		ae#has_state hasValue state_of_fultonham
-		flood#downstream hasValue middleburgh
 		dul#has_quality hasValue altitude_of_fultonham
 		gspace#nearBy hasValue schoharie_creek
 	
@@ -205,7 +202,6 @@ ontology NotificationOntology
 	
 	instance middleburgh memberOf village
 		ae#has_state hasValue state_of_middleburgh
-		flood#downstream hasValue schoharie
 		dul#has_quality hasValue altitude_of_middleburgh
 		gspace#nearBy hasValue schoharie_creek
 	
@@ -224,7 +220,6 @@ ontology NotificationOntology
 	
 	instance schoharie memberOf village
 		ae#has_state hasValue state_of_schoharie
-		flood#downstream hasValue esperance
 		dul#has_quality hasValue altitude_of_schoharie
 		gspace#nearBy hasValue schoharie_creek
 	
@@ -243,7 +238,6 @@ ontology NotificationOntology
 	
 	instance esperance memberOf village
 		ae#has_state hasValue state_of_esperance
-		flood#downstream hasValue burtonsville
 		dul#has_quality hasValue altitude_of_esperance
 		gspace#nearBy hasValue schoharie_creek
 	
@@ -282,7 +276,6 @@ ontology NotificationOntology
 
 	instance gilboa_dam memberOf village
 		ae#has_state hasValue state_of_gilboa_dam
-		flood#downstream hasValue gilboa
 		dul#has_quality hasValue altitude_of_gilboa_dam
 		gspace#nearBy hasValue schoharie_creek
 	
@@ -302,7 +295,6 @@ ontology NotificationOntology
 //	water level sensors
 	
 	instance prattsville_water_level_sensor memberOf flood#WaterLevelSensor
-		flood#downstream hasValue gilboa_dam
 		dul#has_quality hasValue altitude_of_prattsville_water_level_sensor
 		gspace#nearBy hasValue schoharie_creek
 	
@@ -318,7 +310,6 @@ ontology NotificationOntology
 		dul#hasDataValue hasValue 355
 	
 	instance gilboa_water_level_sensor memberOf flood#WaterLevelSensor
-		flood#downstream hasValue breakabeen
 		dul#has_quality hasValue altitude_of_gilboa_water_level_sensor
 		gspace#nearBy hasValue schoharie_creek
 	
@@ -334,7 +325,6 @@ ontology NotificationOntology
 		dul#hasDataValue hasValue 313
 	
 	instance breakabeen_water_level_sensor memberOf flood#WaterLevelSensor
-		flood#downstream hasValue fultonham
 		dul#has_quality hasValue altitude_of_breakabeen_water_level_sensor
 		gspace#nearBy hasValue schoharie_creek
 	

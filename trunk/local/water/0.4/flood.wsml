@@ -309,7 +309,8 @@ ontology FloodScenario
 
 	axiom validate_downstream
 		definedBy
-			!- downstream(?x1,?x2) and
+			downstream(?x1,?x2)
+			impliedBy
 			?x1[dul#hasQuality hasValue ?elevationx1] memberOf gs#geographical_unit and
 			?x2[dul#hasQuality hasValue ?elevationx2] memberOf gs#geographical_unit and
 			?elevationx1 [dul#hasDataValue hasValue ?value1] memberOf gq#elevation and
@@ -321,7 +322,8 @@ ontology FloodScenario
 	
 	axiom validate_upstream
 		definedBy
-			!- upstream(?x1,?x2) and
+			upstream(?x1,?x2)
+			impliedBy
 			?x1[dul#hasQuality hasValue ?elevationx1] memberOf gs#geographical_unit and
 			?x2[dul#hasQuality hasValue ?elevationx2] memberOf gs#geographical_unit and
 			?elevationx1 [dul#hasDataValue hasValue ?value1] memberOf gq#elevation and
@@ -371,5 +373,5 @@ ontology FloodScenario
 			implies
 			downstream(?x,?z). 
 	
-	axiom downstream
+	
 			
