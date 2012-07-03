@@ -344,7 +344,7 @@ ontology FloodScenario
 			gs#nearBy(?x1,?y) and
 			gs#nearBy(?x2,?y)
 			implies
-			downstream(?x1,?x2). 
+			?x1[downstream hasValue ?x2]. 
 	
 	axiom imply_upstream
 		definedBy
@@ -357,7 +357,7 @@ ontology FloodScenario
 			gs#nearBy(?x1,?y) and
 			gs#nearBy(?x2,?y)
 			implies
-			upstream(?x1,?x2).
+			?x1[upstream hasValue ?x2].
 //			
 //	axiom upstream_disjoint_downstream
 //		definedBy
