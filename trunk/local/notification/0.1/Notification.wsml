@@ -148,7 +148,7 @@ ontology NotificationOntology
 
 	instance gilboa memberOf village
 		ae#has_state hasValue state_of_gilboa
-		dul#has_quality hasValue altitude_of_gilboa
+		dul#hasQuality hasValue altitude_of_gilboa
 		gspace#nearBy hasValue schoharie_creek
 	
 	instance description_about_gilboa memberOf gDesc#GeographicalDescription
@@ -166,7 +166,7 @@ ontology NotificationOntology
 	
 	instance breakabeen memberOf village
 		ae#has_state hasValue state_of_breakabeen
-		dul#has_quality hasValue altitude_of_breakabeen
+		dul#hasQuality hasValue altitude_of_breakabeen
 		gspace#nearBy hasValue schoharie_creek
 	
 	instance description_about_breakabeen memberOf gDesc#GeographicalDescription
@@ -184,7 +184,7 @@ ontology NotificationOntology
 	
 	instance fultonham memberOf village
 		ae#has_state hasValue state_of_fultonham
-		dul#has_quality hasValue altitude_of_fultonham
+		dul#hasQuality hasValue altitude_of_fultonham
 		gspace#nearBy hasValue schoharie_creek
 	
 	instance description_about_fultonham memberOf gDesc#GeographicalDescription
@@ -202,7 +202,7 @@ ontology NotificationOntology
 	
 	instance middleburgh memberOf village
 		ae#has_state hasValue state_of_middleburgh
-		dul#has_quality hasValue altitude_of_middleburgh
+		dul#hasQuality hasValue altitude_of_middleburgh
 		gspace#nearBy hasValue schoharie_creek
 	
 	instance description_about_middleburgh memberOf gDesc#GeographicalDescription
@@ -220,7 +220,7 @@ ontology NotificationOntology
 	
 	instance schoharie memberOf village
 		ae#has_state hasValue state_of_schoharie
-		dul#has_quality hasValue altitude_of_schoharie
+		dul#hasQuality hasValue altitude_of_schoharie
 		gspace#nearBy hasValue schoharie_creek
 	
 	instance description_about_schoharie memberOf gDesc#GeographicalDescription
@@ -238,7 +238,7 @@ ontology NotificationOntology
 	
 	instance esperance memberOf village
 		ae#has_state hasValue state_of_esperance
-		dul#has_quality hasValue altitude_of_esperance
+		dul#hasQuality hasValue altitude_of_esperance
 		gspace#nearBy hasValue schoharie_creek
 	
 	instance description_about_esperance memberOf gDesc#GeographicalDescription
@@ -256,7 +256,7 @@ ontology NotificationOntology
 	
 	instance burtonsville memberOf village
 		ae#has_state hasValue state_of_burtonsville
-		dul#has_quality hasValue altitude_of_burtonsville
+		dul#hasQuality hasValue altitude_of_burtonsville
 		gspace#nearBy hasValue schoharie_creek
 	
 	instance description_about_burtonsville memberOf gDesc#GeographicalDescription
@@ -276,7 +276,7 @@ ontology NotificationOntology
 
 	instance gilboa_dam memberOf village
 		ae#has_state hasValue state_of_gilboa_dam
-		dul#has_quality hasValue altitude_of_gilboa_dam
+		dul#hasQuality hasValue altitude_of_gilboa_dam
 		gspace#nearBy hasValue schoharie_creek
 	
 	instance description_about_gilboa_dam memberOf gDesc#GeographicalDescription
@@ -295,7 +295,7 @@ ontology NotificationOntology
 //	water level sensors
 	
 	instance prattsville_water_level_sensor memberOf flood#WaterLevelSensor
-		dul#has_quality hasValue altitude_of_prattsville_water_level_sensor
+		dul#hasQuality hasValue altitude_of_prattsville_water_level_sensor
 		gspace#nearBy hasValue schoharie_creek
 	
 	instance description_about_prattsville_water_level_sensor memberOf gDesc#GeographicalDescription
@@ -310,7 +310,7 @@ ontology NotificationOntology
 		dul#hasDataValue hasValue 355
 	
 	instance gilboa_water_level_sensor memberOf flood#WaterLevelSensor
-		dul#has_quality hasValue altitude_of_gilboa_water_level_sensor
+		dul#hasQuality hasValue altitude_of_gilboa_water_level_sensor
 		gspace#nearBy hasValue schoharie_creek
 	
 	instance description_about_gilboa_water_level_sensor memberOf gDesc#GeographicalDescription
@@ -325,7 +325,7 @@ ontology NotificationOntology
 		dul#hasDataValue hasValue 313
 	
 	instance breakabeen_water_level_sensor memberOf flood#WaterLevelSensor
-		dul#has_quality hasValue altitude_of_breakabeen_water_level_sensor
+		dul#hasQuality hasValue altitude_of_breakabeen_water_level_sensor
 		gspace#nearBy hasValue schoharie_creek
 	
 	instance description_about_breakabeen_water_level_sensor memberOf gDesc#GeographicalDescription

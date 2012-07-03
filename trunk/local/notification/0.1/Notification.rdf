@@ -20,7 +20,7 @@
 	xmlns:ge="http://purl.org/ifgi/geoevents#"
 	xmlns:gsparql="http://purl.org/ifgi/geosparql#">
 
-<rdf:Description rdf:nodeID="node1716j572rx1">
+<rdf:Description rdf:nodeID="node1716jeh2ax1">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>NotificationOntology</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -170,7 +170,7 @@
 <rdf:Description rdf:about="http://purl.org/ifgi/notification#gilboa">
 	<rdf:type rdf:resource="http://purl.org/ifgi/notification#village"/>
 	<ae:has_state rdf:resource="http://purl.org/ifgi/notification#state_of_gilboa"/>
-	<dul:has_quality rdf:resource="http://purl.org/ifgi/notification#altitude_of_gilboa"/>
+	<dul:hasQuality rdf:resource="http://purl.org/ifgi/notification#altitude_of_gilboa"/>
 	<gspace:nearBy rdf:resource="http://purl.org/ifgi/notification#schoharie_creek"/>
 </rdf:Description>
 
@@ -198,7 +198,7 @@
 <rdf:Description rdf:about="http://purl.org/ifgi/notification#breakabeen">
 	<rdf:type rdf:resource="http://purl.org/ifgi/notification#village"/>
 	<ae:has_state rdf:resource="http://purl.org/ifgi/notification#state_of_breakabeen"/>
-	<dul:has_quality rdf:resource="http://purl.org/ifgi/notification#altitude_of_breakabeen"/>
+	<dul:hasQuality rdf:resource="http://purl.org/ifgi/notification#altitude_of_breakabeen"/>
 	<gspace:nearBy rdf:resource="http://purl.org/ifgi/notification#schoharie_creek"/>
 </rdf:Description>
 
@@ -226,7 +226,7 @@
 <rdf:Description rdf:about="http://purl.org/ifgi/notification#fultonham">
 	<rdf:type rdf:resource="http://purl.org/ifgi/notification#village"/>
 	<ae:has_state rdf:resource="http://purl.org/ifgi/notification#state_of_fultonham"/>
-	<dul:has_quality rdf:resource="http://purl.org/ifgi/notification#altitude_of_fultonham"/>
+	<dul:hasQuality rdf:resource="http://purl.org/ifgi/notification#altitude_of_fultonham"/>
 	<gspace:nearBy rdf:resource="http://purl.org/ifgi/notification#schoharie_creek"/>
 </rdf:Description>
 
@@ -254,7 +254,7 @@
 <rdf:Description rdf:about="http://purl.org/ifgi/notification#middleburgh">
 	<rdf:type rdf:resource="http://purl.org/ifgi/notification#village"/>
 	<ae:has_state rdf:resource="http://purl.org/ifgi/notification#state_of_middleburgh"/>
-	<dul:has_quality rdf:resource="http://purl.org/ifgi/notification#altitude_of_middleburgh"/>
+	<dul:hasQuality rdf:resource="http://purl.org/ifgi/notification#altitude_of_middleburgh"/>
 	<gspace:nearBy rdf:resource="http://purl.org/ifgi/notification#schoharie_creek"/>
 </rdf:Description>
 
@@ -282,7 +282,7 @@
 <rdf:Description rdf:about="http://purl.org/ifgi/notification#schoharie">
 	<rdf:type rdf:resource="http://purl.org/ifgi/notification#village"/>
 	<ae:has_state rdf:resource="http://purl.org/ifgi/notification#state_of_schoharie"/>
-	<dul:has_quality rdf:resource="http://purl.org/ifgi/notification#altitude_of_schoharie"/>
+	<dul:hasQuality rdf:resource="http://purl.org/ifgi/notification#altitude_of_schoharie"/>
 	<gspace:nearBy rdf:resource="http://purl.org/ifgi/notification#schoharie_creek"/>
 </rdf:Description>
 
@@ -310,7 +310,7 @@
 <rdf:Description rdf:about="http://purl.org/ifgi/notification#esperance">
 	<rdf:type rdf:resource="http://purl.org/ifgi/notification#village"/>
 	<ae:has_state rdf:resource="http://purl.org/ifgi/notification#state_of_esperance"/>
-	<dul:has_quality rdf:resource="http://purl.org/ifgi/notification#altitude_of_esperance"/>
+	<dul:hasQuality rdf:resource="http://purl.org/ifgi/notification#altitude_of_esperance"/>
 	<gspace:nearBy rdf:resource="http://purl.org/ifgi/notification#schoharie_creek"/>
 </rdf:Description>
 
@@ -338,7 +338,7 @@
 <rdf:Description rdf:about="http://purl.org/ifgi/notification#burtonsville">
 	<rdf:type rdf:resource="http://purl.org/ifgi/notification#village"/>
 	<ae:has_state rdf:resource="http://purl.org/ifgi/notification#state_of_burtonsville"/>
-	<dul:has_quality rdf:resource="http://purl.org/ifgi/notification#altitude_of_burtonsville"/>
+	<dul:hasQuality rdf:resource="http://purl.org/ifgi/notification#altitude_of_burtonsville"/>
 	<gspace:nearBy rdf:resource="http://purl.org/ifgi/notification#schoharie_creek"/>
 </rdf:Description>
 
@@ -366,7 +366,7 @@
 <rdf:Description rdf:about="http://purl.org/ifgi/notification#gilboa_dam">
 	<rdf:type rdf:resource="http://purl.org/ifgi/notification#village"/>
 	<ae:has_state rdf:resource="http://purl.org/ifgi/notification#state_of_gilboa_dam"/>
-	<dul:has_quality rdf:resource="http://purl.org/ifgi/notification#altitude_of_gilboa_dam"/>
+	<dul:hasQuality rdf:resource="http://purl.org/ifgi/notification#altitude_of_gilboa_dam"/>
 	<gspace:nearBy rdf:resource="http://purl.org/ifgi/notification#schoharie_creek"/>
 </rdf:Description>
 
@@ -393,7 +393,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/notification#prattsville_water_level_sensor">
 	<rdf:type rdf:resource="http://purl.org/ifgi/water/flood#WaterLevelSensor"/>
-	<dul:has_quality rdf:resource="http://purl.org/ifgi/notification#altitude_of_prattsville_water_level_sensor"/>
+	<dul:hasQuality rdf:resource="http://purl.org/ifgi/notification#altitude_of_prattsville_water_level_sensor"/>
 	<gspace:nearBy rdf:resource="http://purl.org/ifgi/notification#schoharie_creek"/>
 </rdf:Description>
 
@@ -416,7 +416,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/notification#gilboa_water_level_sensor">
 	<rdf:type rdf:resource="http://purl.org/ifgi/water/flood#WaterLevelSensor"/>
-	<dul:has_quality rdf:resource="http://purl.org/ifgi/notification#altitude_of_gilboa_water_level_sensor"/>
+	<dul:hasQuality rdf:resource="http://purl.org/ifgi/notification#altitude_of_gilboa_water_level_sensor"/>
 	<gspace:nearBy rdf:resource="http://purl.org/ifgi/notification#schoharie_creek"/>
 </rdf:Description>
 
@@ -439,7 +439,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/notification#breakabeen_water_level_sensor">
 	<rdf:type rdf:resource="http://purl.org/ifgi/water/flood#WaterLevelSensor"/>
-	<dul:has_quality rdf:resource="http://purl.org/ifgi/notification#altitude_of_breakabeen_water_level_sensor"/>
+	<dul:hasQuality rdf:resource="http://purl.org/ifgi/notification#altitude_of_breakabeen_water_level_sensor"/>
 	<gspace:nearBy rdf:resource="http://purl.org/ifgi/notification#schoharie_creek"/>
 </rdf:Description>
 
@@ -460,7 +460,7 @@
 	<dul:hasDataValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">226</dul:hasDataValue>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node1716j572rx2">
+<rdf:Description rdf:nodeID="node1716jeh2ax2">
 	<rdfs:label>http://purl.org/ifgi/notification#predict_flooding_50</rdfs:label>
 	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
 	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?eventobsdesc[_"http://purl.org/ifgi/geodesc#describedLocation" hasValue ?descloc, _"http://purl.org/ifgi/dul#describes" hasValue ?eventobs] memberOf _"http://purl.org/ifgi/event-observation#EventObservationDescription"
@@ -480,7 +480,7 @@
  and ?event memberOf _"http://purl.org/ifgi/water/flood#Flood". </rdf:value>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node1716j572rx3">
+<rdf:Description rdf:nodeID="node1716jeh2ax3">
 	<rdfs:label>http://purl.org/ifgi/notification#predict_flooding_70</rdfs:label>
 	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
 	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?eventobsdesc[_"http://purl.org/ifgi/geodesc#describedLocation" hasValue ?descloc, _"http://purl.org/ifgi/dul#describes" hasValue ?eventobs] memberOf _"http://purl.org/ifgi/event-observation#EventObservationDescription"
@@ -500,7 +500,7 @@
  and ?event memberOf _"http://purl.org/ifgi/water/flood#Flood". </rdf:value>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node1716j572rx4">
+<rdf:Description rdf:nodeID="node1716jeh2ax4">
 	<rdfs:label>http://purl.org/ifgi/notification#predict_flooding_90</rdfs:label>
 	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
 	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?eventobsdesc[_"http://purl.org/ifgi/geodesc#describedLocation" hasValue ?descloc, _"http://purl.org/ifgi/dul#describes" hasValue ?eventobs] memberOf _"http://purl.org/ifgi/event-observation#EventObservationDescription"
@@ -520,7 +520,7 @@
  and ?event memberOf _"http://purl.org/ifgi/water/flood#Flood". </rdf:value>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node1716j572rx5">
+<rdf:Description rdf:nodeID="node1716jeh2ax5">
 	<rdfs:label>http://purl.org/ifgi/notification#change_state_to_flooded</rdfs:label>
 	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
 	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?predictedeventobsdesc[_"http://purl.org/ifgi/geodesc#describedLocation" hasValue ?descloc, _"http://purl.org/ifgi/dul#describes" hasValue ?predictedeventobs, _"http://purl.org/ifgi/geomodels#associatedHazardLevel" hasValue ?hazlevdesc, _"http://purl.org/ifgi/geomodels#hasSource" hasValue ?eventobsdesc] memberOf _"http://purl.org/ifgi/geomodels#PredictedEventObservationDescription"
