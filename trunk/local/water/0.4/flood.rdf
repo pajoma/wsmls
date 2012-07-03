@@ -15,7 +15,7 @@
 	xmlns:ge="http://purl.org/ifgi/geoevents#"
 	xmlns:gq="http://purl.org/ifgi/geoqualities#">
 
-<rdf:Description rdf:nodeID="node1716jot34x11">
+<rdf:Description rdf:nodeID="node1716t3s7ix11">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>FloodScenario</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -499,76 +499,78 @@
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">upstream defines a relation of two geographical units being located near by a river. The second geographical unit can be reached from the first on by going along the river with a direction opposed to the flow direction of the river.</dc:description>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node1716jot34x12">
-	<rdfs:label>http://purl.org/ifgi/water/flood#imply_downstream</rdfs:label>
+<rdf:Description rdf:nodeID="node1716t3s7ix12">
+	<rdfs:label>http://purl.org/ifgi/water/flood#validate_downstream</rdfs:label>
 	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
-	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?x1[_"http://purl.org/ifgi/dul#hasQuality" hasValue ?elevationx1] memberOf _"http://purl.org/ifgi/geospace#geographical_unit"
+	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?x1[_"http://purl.org/ifgi/water/flood#downstream" hasValue ?x2]
+ impliedBy 
+?x1[_"http://purl.org/ifgi/dul#hasQuality" hasValue ?elevationx1] memberOf _"http://purl.org/ifgi/geospace#geographical_unit"
  and ?x2[_"http://purl.org/ifgi/dul#hasQuality" hasValue ?elevationx2] memberOf _"http://purl.org/ifgi/geospace#geographical_unit"
  and ?elevationx1[_"http://purl.org/ifgi/dul#hasDataValue" hasValue ?value1] memberOf _"http://purl.org/ifgi/geoqualities#altitude"
  and ?elevationx2[_"http://purl.org/ifgi/dul#hasDataValue" hasValue ?value2] memberOf _"http://purl.org/ifgi/geoqualities#altitude"
+ and ?value1 &gt; ?value2
  and ?y memberOf _"http://purl.org/ifgi/water/flood#River"
- and _"http://purl.org/ifgi/geospace#nearBy"(?x1,?y)
- and _"http://purl.org/ifgi/geospace#nearBy"(?x2,?y)
- implies 
-?x1[_"http://purl.org/ifgi/water/flood#downstream" hasValue ?x2]. </rdf:value>
+ and ?x1[_"http://purl.org/ifgi/geospace#nearBy" hasValue ?y]
+ and ?x2[_"http://purl.org/ifgi/geospace#nearBy" hasValue ?y]. </rdf:value>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node1716jot34x13">
-	<rdfs:label>http://purl.org/ifgi/water/flood#imply_upstream</rdfs:label>
+<rdf:Description rdf:nodeID="node1716t3s7ix13">
+	<rdfs:label>http://purl.org/ifgi/water/flood#validate_upstream</rdfs:label>
 	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
-	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?x1[_"http://purl.org/ifgi/dul#hasQuality" hasValue ?elevationx1] memberOf _"http://purl.org/ifgi/geospace#geographical_unit"
+	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?x1[_"http://purl.org/ifgi/water/flood#upstream" hasValue ?x2]
+ impliedBy 
+?x1[_"http://purl.org/ifgi/dul#hasQuality" hasValue ?elevationx1] memberOf _"http://purl.org/ifgi/geospace#geographical_unit"
  and ?x2[_"http://purl.org/ifgi/dul#hasQuality" hasValue ?elevationx2] memberOf _"http://purl.org/ifgi/geospace#geographical_unit"
  and ?elevationx1[_"http://purl.org/ifgi/dul#hasDataValue" hasValue ?value1] memberOf _"http://purl.org/ifgi/geoqualities#altitude"
  and ?elevationx2[_"http://purl.org/ifgi/dul#hasDataValue" hasValue ?value2] memberOf _"http://purl.org/ifgi/geoqualities#altitude"
+ and ?value1 &lt; ?value2
  and ?y memberOf _"http://purl.org/ifgi/water/flood#River"
- and _"http://purl.org/ifgi/geospace#nearBy"(?x1,?y)
- and _"http://purl.org/ifgi/geospace#nearBy"(?x2,?y)
- implies 
-?x1[_"http://purl.org/ifgi/water/flood#upstream" hasValue ?x2]. </rdf:value>
+ and ?x1[_"http://purl.org/ifgi/geospace#nearBy" hasValue ?y]
+ and ?x2[_"http://purl.org/ifgi/geospace#nearBy" hasValue ?y]. </rdf:value>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node1716jot34x14">
+<rdf:Description rdf:nodeID="node1716t3s7ix14">
 	<rdfs:label>http://purl.org/ifgi/water/flood#upstream_inverse</rdfs:label>
 	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
 	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?x memberOf _"http://purl.org/ifgi/geospace#geographical_unit"
  and ?y memberOf _"http://purl.org/ifgi/geospace#geographical_unit"
- and _"http://purl.org/ifgi/water/flood#upstream"(?x,?y)
+ and ?x[_"http://purl.org/ifgi/water/flood#upstream" hasValue ?y]
  implies 
-_"http://purl.org/ifgi/water/flood#downstream"(?y,?x). </rdf:value>
+?y[_"http://purl.org/ifgi/water/flood#downstream" hasValue ?x]. </rdf:value>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node1716jot34x15">
+<rdf:Description rdf:nodeID="node1716t3s7ix15">
 	<rdfs:label>http://purl.org/ifgi/water/flood#downstream_inverse</rdfs:label>
 	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
 	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?x memberOf _"http://purl.org/ifgi/geospace#geographical_unit"
  and ?y memberOf _"http://purl.org/ifgi/geospace#geographical_unit"
- and _"http://purl.org/ifgi/water/flood#downstream"(?x,?y)
+ and ?y[_"http://purl.org/ifgi/water/flood#downstream" hasValue ?x]
  implies 
-_"http://purl.org/ifgi/water/flood#upstream"(?y,?x). </rdf:value>
+?x[_"http://purl.org/ifgi/water/flood#upstream" hasValue ?y]. </rdf:value>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node1716jot34x16">
-	<rdfs:label>http://purl.org/ifgi/water/flood#upstream_transitive</rdfs:label>
-	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
-	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?x memberOf _"http://purl.org/ifgi/geospace#geographical_unit"
- and ?y memberOf _"http://purl.org/ifgi/geospace#geographical_unit"
- and ?z memberOf _"http://purl.org/ifgi/geospace#geographical_unit"
- and _"http://purl.org/ifgi/water/flood#upstream"(?x,?y)
- and _"http://purl.org/ifgi/water/flood#upstream"(?y,?z)
- implies 
-_"http://purl.org/ifgi/water/flood#upstream"(?x,?z). </rdf:value>
-</rdf:Description>
-
-<rdf:Description rdf:nodeID="node1716jot34x17">
+<rdf:Description rdf:nodeID="node1716t3s7ix16">
 	<rdfs:label>http://purl.org/ifgi/water/flood#downstream_transitive</rdfs:label>
 	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
 	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?x memberOf _"http://purl.org/ifgi/geospace#geographical_unit"
  and ?y memberOf _"http://purl.org/ifgi/geospace#geographical_unit"
  and ?z memberOf _"http://purl.org/ifgi/geospace#geographical_unit"
- and _"http://purl.org/ifgi/water/flood#downstream"(?x,?y)
- and _"http://purl.org/ifgi/water/flood#downstream"(?y,?z)
+ and ?x[_"http://purl.org/ifgi/water/flood#downstream" hasValue ?y]
+ and ?y[_"http://purl.org/ifgi/water/flood#downstream" hasValue ?z]
  implies 
-_"http://purl.org/ifgi/water/flood#downstream"(?x,?z). </rdf:value>
+?x[_"http://purl.org/ifgi/water/flood#downstream" hasValue ?z]. </rdf:value>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1716t3s7ix17">
+	<rdfs:label>http://purl.org/ifgi/water/flood#upstream_transitive</rdfs:label>
+	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
+	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?x memberOf _"http://purl.org/ifgi/geospace#geographical_unit"
+ and ?y memberOf _"http://purl.org/ifgi/geospace#geographical_unit"
+ and ?z memberOf _"http://purl.org/ifgi/geospace#geographical_unit"
+ and ?x[_"http://purl.org/ifgi/water/flood#upstream" hasValue ?y]
+ and ?y[_"http://purl.org/ifgi/water/flood#upstream" hasValue ?z]
+ implies 
+?x[_"http://purl.org/ifgi/water/flood#upstream" hasValue ?z]. </rdf:value>
 </rdf:Description>
 
 </rdf:RDF>

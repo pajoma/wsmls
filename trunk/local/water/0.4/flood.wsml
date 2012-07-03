@@ -307,58 +307,34 @@ ontology FloodScenario
 
 //axioms
 
-//	axiom validate_downstream
-//		definedBy
-//			downstream(?x1,?x2)
-//			impliedBy
-//			?x1[dul#hasQuality hasValue ?elevationx1] memberOf gs#geographical_unit and
-//			?x2[dul#hasQuality hasValue ?elevationx2] memberOf gs#geographical_unit and
-//			?elevationx1 [dul#hasDataValue hasValue ?value1] memberOf gq#altitude and
-//			?elevationx2 [dul#hasDataValue hasValue ?value2] memberOf gq#altitude and
-//			//?value1 > ?value2 and
-//			?y memberOf River and
-//			gs#nearBy(?x1,?y) and
-//			gs#nearBy(?x2,?y). 
-//	
-//	axiom validate_upstream
-//		definedBy
-//			upstream(?x1,?x2)
-//			impliedBy
-//			?x1[dul#hasQuality hasValue ?elevationx1] memberOf gs#geographical_unit and
-//			?x2[dul#hasQuality hasValue ?elevationx2] memberOf gs#geographical_unit and
-//			?elevationx1 [dul#hasDataValue hasValue ?value1] memberOf gq#altitude and
-//			?elevationx2 [dul#hasDataValue hasValue ?value2] memberOf gq#altitude and
-//			//?value1 < ?value2 and
-//			?y memberOf River and
-//			gs#nearBy(?x1,?y) and
-//			gs#nearBy(?x2,?y).
-			
-	axiom imply_downstream
+	axiom validate_downstream
 		definedBy
+			?x1[downstream hasValue ?x2]
+			impliedBy
 			?x1[dul#hasQuality hasValue ?elevationx1] memberOf gs#geographical_unit and
 			?x2[dul#hasQuality hasValue ?elevationx2] memberOf gs#geographical_unit and
-			?elevationx1 [dul#hasDataValue hasValue ?value1] memberOf gq#altitude and
-			?elevationx2 [dul#hasDataValue hasValue ?value2] memberOf gq#altitude and
-			//?value1 > ?value2 and
+			?elevationx1[dul#hasDataValue hasValue ?value1] memberOf gq#altitude and
+			?elevationx2[dul#hasDataValue hasValue ?value2] memberOf gq#altitude and
+			?value1 > ?value2 and
 			?y memberOf River and
-			gs#nearBy(?x1,?y) and
-			gs#nearBy(?x2,?y)
-			implies
-			?x1[downstream hasValue ?x2]. 
+			?x1[gs#nearBy hasValue ?y] and
+			?x2[gs#nearBy hasValue ?y].
 	
-	axiom imply_upstream
+	axiom validate_upstream
 		definedBy
+			?x1[upstream hasValue ?x2]
+			impliedBy
 			?x1[dul#hasQuality hasValue ?elevationx1] memberOf gs#geographical_unit and
 			?x2[dul#hasQuality hasValue ?elevationx2] memberOf gs#geographical_unit and
 			?elevationx1 [dul#hasDataValue hasValue ?value1] memberOf gq#altitude and
 			?elevationx2 [dul#hasDataValue hasValue ?value2] memberOf gq#altitude and
-			//?value1 < ?value2 and
+			?value1 < ?value2 and
 			?y memberOf River and
-			gs#nearBy(?x1,?y) and
-			gs#nearBy(?x2,?y)
-			implies
-			?x1[upstream hasValue ?x2].
-//			
+			?x1[gs#nearBy hasValue ?y] and
+			?x2[gs#nearBy hasValue ?y].
+			
+	
+			
 //	axiom upstream_disjoint_downstream
 //		definedBy
 //			!- downstream(?x,?y) and upstream(?x,?y). 
@@ -367,37 +343,37 @@ ontology FloodScenario
 		definedBy
 			?x memberOf gs#geographical_unit and
 			?y memberOf gs#geographical_unit and
-			upstream(?x,?y)
+			?x[upstream hasValue ?y]
 			implies 
-			downstream(?y,?x). 
+			?y[downstream hasValue ?x]. 
 			
 	axiom downstream_inverse
 		definedBy
 			?x memberOf gs#geographical_unit and
 			?y memberOf gs#geographical_unit and
-			downstream(?x,?y)
+			?y[downstream hasValue ?x]
 			implies 
-			upstream(?y,?x). 
+			?x[upstream hasValue ?y]. 
 	
-	axiom upstream_transitive
-		definedBy
-			?x memberOf gs#geographical_unit and
-			?y memberOf gs#geographical_unit and
-			?z memberOf gs#geographical_unit and
-			upstream(?x,?y) and
-			upstream(?y,?z)
-			implies
-			upstream(?x,?z). 
-			
 	axiom downstream_transitive
 		definedBy
 			?x memberOf gs#geographical_unit and
 			?y memberOf gs#geographical_unit and
 			?z memberOf gs#geographical_unit and
-			downstream(?x,?y) and
-			downstream(?y,?z)
+			?x[downstream hasValue ?y] and
+			?y[downstream hasValue ?z]
 			implies
-			downstream(?x,?z). 
+			?x[downstream hasValue ?z]. 
+			
+	axiom upstream_transitive
+		definedBy
+			?x memberOf gs#geographical_unit and
+			?y memberOf gs#geographical_unit and
+			?z memberOf gs#geographical_unit and
+			?x[upstream hasValue ?y] and
+			?y[upstream hasValue ?z]
+			implies
+			?x[upstream hasValue ?z]. 
 	
 	
 			
