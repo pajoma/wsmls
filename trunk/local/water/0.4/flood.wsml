@@ -307,34 +307,10 @@ ontology FloodScenario
 
 //axioms
 
-	axiom validate_downstream
-		definedBy
-			downstream(?x1,?x2)
-			impliedBy
-			?x1[dul#hasQuality hasValue ?elevationx1] memberOf gs#geographical_unit and
-			?x2[dul#hasQuality hasValue ?elevationx2] memberOf gs#geographical_unit and
-			?elevationx1 [dul#hasDataValue hasValue ?value1] memberOf gq#altitude and
-			?elevationx2 [dul#hasDataValue hasValue ?value2] memberOf gq#altitude and
-			//?value1 > ?value2 and
-			?y memberOf River and
-			nearBy(?x1,?y) and
-			nearBy(?x2,?y). 
-	
-	axiom validate_upstream
-		definedBy
-			upstream(?x1,?x2)
-			impliedBy
-			?x1[dul#hasQuality hasValue ?elevationx1] memberOf gs#geographical_unit and
-			?x2[dul#hasQuality hasValue ?elevationx2] memberOf gs#geographical_unit and
-			?elevationx1 [dul#hasDataValue hasValue ?value1] memberOf gq#altitude and
-			?elevationx2 [dul#hasDataValue hasValue ?value2] memberOf gq#altitude and
-			//?value1 < ?value2 and
-			?y memberOf River and
-			nearBy(?x1,?y) and
-			nearBy(?x2,?y).
-			
-//	axiom imply_downstream
+//	axiom validate_downstream
 //		definedBy
+//			downstream(?x1,?x2)
+//			impliedBy
 //			?x1[dul#hasQuality hasValue ?elevationx1] memberOf gs#geographical_unit and
 //			?x2[dul#hasQuality hasValue ?elevationx2] memberOf gs#geographical_unit and
 //			?elevationx1 [dul#hasDataValue hasValue ?value1] memberOf gq#altitude and
@@ -342,12 +318,12 @@ ontology FloodScenario
 //			//?value1 > ?value2 and
 //			?y memberOf River and
 //			nearBy(?x1,?y) and
-//			nearBy(?x2,?y)
-//			implies
-//			downstream(?x1,?x2). 
+//			nearBy(?x2,?y). 
 //	
-//	axiom imply_upstream
+//	axiom validate_upstream
 //		definedBy
+//			upstream(?x1,?x2)
+//			impliedBy
 //			?x1[dul#hasQuality hasValue ?elevationx1] memberOf gs#geographical_unit and
 //			?x2[dul#hasQuality hasValue ?elevationx2] memberOf gs#geographical_unit and
 //			?elevationx1 [dul#hasDataValue hasValue ?value1] memberOf gq#altitude and
@@ -355,9 +331,33 @@ ontology FloodScenario
 //			//?value1 < ?value2 and
 //			?y memberOf River and
 //			nearBy(?x1,?y) and
-//			nearBy(?x2,?y)
-//			implies
-//			upstream(?x1,?x2).
+//			nearBy(?x2,?y).
+			
+	axiom imply_downstream
+		definedBy
+			?x1[dul#hasQuality hasValue ?elevationx1] memberOf gs#geographical_unit and
+			?x2[dul#hasQuality hasValue ?elevationx2] memberOf gs#geographical_unit and
+			?elevationx1 [dul#hasDataValue hasValue ?value1] memberOf gq#altitude and
+			?elevationx2 [dul#hasDataValue hasValue ?value2] memberOf gq#altitude and
+			//?value1 > ?value2 and
+			?y memberOf River and
+			nearBy(?x1,?y) and
+			nearBy(?x2,?y)
+			implies
+			downstream(?x1,?x2). 
+	
+	axiom imply_upstream
+		definedBy
+			?x1[dul#hasQuality hasValue ?elevationx1] memberOf gs#geographical_unit and
+			?x2[dul#hasQuality hasValue ?elevationx2] memberOf gs#geographical_unit and
+			?elevationx1 [dul#hasDataValue hasValue ?value1] memberOf gq#altitude and
+			?elevationx2 [dul#hasDataValue hasValue ?value2] memberOf gq#altitude and
+			//?value1 < ?value2 and
+			?y memberOf River and
+			nearBy(?x1,?y) and
+			nearBy(?x2,?y)
+			implies
+			upstream(?x1,?x2).
 //			
 //	axiom upstream_disjoint_downstream
 //		definedBy
