@@ -18,7 +18,7 @@
 @prefix ge: <http://purl.org/ifgi/geoevents#> .
 @prefix gsparql: <http://purl.org/ifgi/geosparql#> .
 
-_:node1716f3m2jx6 a owl:Ontology ;
+_:node1716j572rx6 a owl:Ontology ;
 	rdfs:label "NotificationOntology" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/affenv#> , <http://purl.org/ifgi/water/flood#> , <http://purl.org/ifgi/geomodels#> , <http://purl.org/ifgi/oilspill#> .
@@ -311,7 +311,7 @@ _:node1716f3m2jx6 a owl:Ontology ;
 :altitude_of_breakabeen_water_level_sensor a gq:altitude ;
 	dul:hasDataValue "226"^^xsd:integer .
 
-_:node1716f3m2jx7 rdfs:label "http://purl.org/ifgi/notification#predict_flooding_50" ;
+_:node1716j572rx7 rdfs:label "http://purl.org/ifgi/notification#predict_flooding_50" ;
 	a <http://www.wsmo.org/wsml/wsml-syntax#Axiom> ;
 	rdf:value """?eventobsdesc[_\"http://purl.org/ifgi/geodesc#describedLocation\" hasValue ?descloc, _\"http://purl.org/ifgi/dul#describes\" hasValue ?eventobs] memberOf _\"http://purl.org/ifgi/event-observation#EventObservationDescription\"
  and ?descloc[_\"http://purl.org/ifgi/geosparql#asWKT\" hasValue ?locvalue] memberOf _\"http://purl.org/ifgi/geodesc#LocationDescription\"
@@ -329,7 +329,7 @@ _:node1716f3m2jx7 rdfs:label "http://purl.org/ifgi/notification#predict_flooding
  and ?hazlevdesc[_\"http://purl.org/ifgi/geomodels#hasHazardLevel\" hasValue 50] memberOf _\"http://purl.org/ifgi/geomodels#HazardLevelDescription\"
  and ?event memberOf _\"http://purl.org/ifgi/water/flood#Flood\". """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> .
 
-_:node1716f3m2jx8 rdfs:label "http://purl.org/ifgi/notification#predict_flooding_70" ;
+_:node1716j572rx8 rdfs:label "http://purl.org/ifgi/notification#predict_flooding_70" ;
 	a <http://www.wsmo.org/wsml/wsml-syntax#Axiom> ;
 	rdf:value """?eventobsdesc[_\"http://purl.org/ifgi/geodesc#describedLocation\" hasValue ?descloc, _\"http://purl.org/ifgi/dul#describes\" hasValue ?eventobs] memberOf _\"http://purl.org/ifgi/event-observation#EventObservationDescription\"
  and ?descloc[_\"http://purl.org/ifgi/geosparql#asWKT\" hasValue ?locvalue] memberOf _\"http://purl.org/ifgi/geodesc#LocationDescription\"
@@ -347,7 +347,7 @@ _:node1716f3m2jx8 rdfs:label "http://purl.org/ifgi/notification#predict_flooding
  and ?hazlevdesc[_\"http://purl.org/ifgi/geomodels#hasHazardLevel\" hasValue \"70\"] memberOf _\"http://purl.org/ifgi/geomodels#HazardLevelDescription\"
  and ?event memberOf _\"http://purl.org/ifgi/water/flood#Flood\". """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> .
 
-_:node1716f3m2jx9 rdfs:label "http://purl.org/ifgi/notification#predict_flooding_90" ;
+_:node1716j572rx9 rdfs:label "http://purl.org/ifgi/notification#predict_flooding_90" ;
 	a <http://www.wsmo.org/wsml/wsml-syntax#Axiom> ;
 	rdf:value """?eventobsdesc[_\"http://purl.org/ifgi/geodesc#describedLocation\" hasValue ?descloc, _\"http://purl.org/ifgi/dul#describes\" hasValue ?eventobs] memberOf _\"http://purl.org/ifgi/event-observation#EventObservationDescription\"
  and ?descloc[_\"http://purl.org/ifgi/geosparql#asWKT\" hasValue ?locvalue] memberOf _\"http://purl.org/ifgi/geodesc#LocationDescription\"
@@ -365,7 +365,7 @@ _:node1716f3m2jx9 rdfs:label "http://purl.org/ifgi/notification#predict_flooding
  and ?hazlevdesc[_\"http://purl.org/ifgi/geomodels#hasHazardLevel\" hasValue 90] memberOf _\"http://purl.org/ifgi/geomodels#HazardLevelDescription\"
  and ?event memberOf _\"http://purl.org/ifgi/water/flood#Flood\". """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> .
 
-_:node1716f3m2jx10 rdfs:label "http://purl.org/ifgi/notification#change_state_to_flooded" ;
+_:node1716j572rx10 rdfs:label "http://purl.org/ifgi/notification#change_state_to_flooded" ;
 	a <http://www.wsmo.org/wsml/wsml-syntax#Axiom> ;
 	rdf:value """?predictedeventobsdesc[_\"http://purl.org/ifgi/geodesc#describedLocation\" hasValue ?descloc, _\"http://purl.org/ifgi/dul#describes\" hasValue ?predictedeventobs, _\"http://purl.org/ifgi/geomodels#associatedHazardLevel\" hasValue ?hazlevdesc, _\"http://purl.org/ifgi/geomodels#hasSource\" hasValue ?eventobsdesc] memberOf _\"http://purl.org/ifgi/geomodels#PredictedEventObservationDescription\"
  and ?descloc[_\"http://purl.org/ifgi/geosparql#asWKT\" hasValue ?locvalue] memberOf _\"http://purl.org/ifgi/geodesc#LocationDescription\"

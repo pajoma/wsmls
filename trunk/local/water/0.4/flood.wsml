@@ -317,8 +317,8 @@ ontology FloodScenario
 //			?elevationx2 [dul#hasDataValue hasValue ?value2] memberOf gq#altitude and
 //			//?value1 > ?value2 and
 //			?y memberOf River and
-//			nearBy(?x1,?y) and
-//			nearBy(?x2,?y). 
+//			gs#nearBy(?x1,?y) and
+//			gs#nearBy(?x2,?y). 
 //	
 //	axiom validate_upstream
 //		definedBy
@@ -330,8 +330,8 @@ ontology FloodScenario
 //			?elevationx2 [dul#hasDataValue hasValue ?value2] memberOf gq#altitude and
 //			//?value1 < ?value2 and
 //			?y memberOf River and
-//			nearBy(?x1,?y) and
-//			nearBy(?x2,?y).
+//			gs#nearBy(?x1,?y) and
+//			gs#nearBy(?x2,?y).
 			
 	axiom imply_downstream
 		definedBy
@@ -341,8 +341,8 @@ ontology FloodScenario
 			?elevationx2 [dul#hasDataValue hasValue ?value2] memberOf gq#altitude and
 			//?value1 > ?value2 and
 			?y memberOf River and
-			nearBy(?x1,?y) and
-			nearBy(?x2,?y)
+			gs#nearBy(?x1,?y) and
+			gs#nearBy(?x2,?y)
 			implies
 			downstream(?x1,?x2). 
 	
@@ -354,8 +354,8 @@ ontology FloodScenario
 			?elevationx2 [dul#hasDataValue hasValue ?value2] memberOf gq#altitude and
 			//?value1 < ?value2 and
 			?y memberOf River and
-			nearBy(?x1,?y) and
-			nearBy(?x2,?y)
+			gs#nearBy(?x1,?y) and
+			gs#nearBy(?x2,?y)
 			implies
 			upstream(?x1,?x2).
 //			
