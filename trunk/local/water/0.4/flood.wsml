@@ -315,7 +315,7 @@ ontology FloodScenario
 			?x2[dul#hasQuality hasValue ?elevationx2] memberOf gs#geographical_unit and
 			?elevationx1 [dul#hasDataValue hasValue ?value1] memberOf gq#altitude and
 			?elevationx2 [dul#hasDataValue hasValue ?value2] memberOf gq#altitude and
-			?value1 > ?value2 and
+			//?value1 > ?value2 and
 			?y memberOf River and
 			nearBy(?x1,?y) and
 			nearBy(?x2,?y). 
@@ -328,7 +328,7 @@ ontology FloodScenario
 			?x2[dul#hasQuality hasValue ?elevationx2] memberOf gs#geographical_unit and
 			?elevationx1 [dul#hasDataValue hasValue ?value1] memberOf gq#altitude and
 			?elevationx2 [dul#hasDataValue hasValue ?value2] memberOf gq#altitude and
-			?value1 < ?value2 and
+			//?value1 < ?value2 and
 			?y memberOf River and
 			nearBy(?x1,?y) and
 			nearBy(?x2,?y). 
