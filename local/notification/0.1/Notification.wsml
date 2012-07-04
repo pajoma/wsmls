@@ -155,7 +155,7 @@ ontology NotificationOntology
 		gDesc#describes hasValue gilboa
 		gDesc#describedLocation hasValue location_of_gilboa
 	
-	instance location_of_gilboa memberOf gsparql#Geometry
+	instance location_of_gilboa memberOf gDesc#LocationDescription
 		gsparql#asWKT hasValue "SRID:4326;POINT (42.3973 -74.44598)"
 		gsparql#spatialDimension hasValue 1
 	
@@ -173,7 +173,7 @@ ontology NotificationOntology
 		gDesc#describes hasValue breakabeen
 		gDesc#describedLocation hasValue location_of_breakabeen
 	
-	instance location_of_breakabeen memberOf gsparql#Geometry
+	instance location_of_breakabeen memberOf gDesc#LocationDescription
 		gsparql#asWKT hasValue "SRID:4326;POINT (42.52424 -74.40959)"
 		gsparql#spatialDimension hasValue 1
 	
@@ -191,7 +191,7 @@ ontology NotificationOntology
 		gDesc#describes hasValue fultonham
 		gDesc#describedLocation hasValue location_of_fultonham
 	
-	instance location_of_fultonham memberOf gsparql#Geometry
+	instance location_of_fultonham memberOf gDesc#LocationDescription
 		gsparql#asWKT hasValue "SRID:4326;POINT (42.56841 -74.39542)"
 		gsparql#spatialDimension hasValue 1
 	
@@ -209,7 +209,7 @@ ontology NotificationOntology
 		gDesc#describes hasValue middleburgh
 		gDesc#describedLocation hasValue location_of_middleburgh
 	
-	instance location_of_middleburgh memberOf gsparql#Geometry
+	instance location_of_middleburgh memberOf gDesc#LocationDescription
 		gsparql#asWKT hasValue "SRID:4326;POINT (42.59869 -74.33292)"
 		gsparql#spatialDimension hasValue 1
 	
@@ -227,7 +227,7 @@ ontology NotificationOntology
 		gDesc#describes hasValue schoharie
 		gDesc#describedLocation hasValue location_of_schoharie
 	
-	instance location_of_schoharie memberOf gsparql#Geometry
+	instance location_of_schoharie memberOf gDesc#LocationDescription
 		gsparql#asWKT hasValue "SRID:4326;POINT (42.66638 -74.31374)"
 		gsparql#spatialDimension hasValue 1
 	
@@ -245,7 +245,7 @@ ontology NotificationOntology
 		gDesc#describes hasValue esperance
 		gDesc#describedLocation hasValue location_of_esperance
 	
-	instance location_of_esperance memberOf gsparql#Geometry
+	instance location_of_esperance memberOf gDesc#LocationDescription
 		gsparql#asWKT hasValue "SRID:4326;POINT (42.76119 -74.25652)"
 		gsparql#spatialDimension hasValue 1
 	
@@ -263,7 +263,7 @@ ontology NotificationOntology
 		gDesc#describes hasValue esperance
 		gDesc#describedLocation hasValue location_of_burtonsville
 	
-	instance location_of_burtonsville memberOf gsparql#Geometry
+	instance location_of_burtonsville memberOf gDesc#LocationDescription
 		gsparql#asWKT hasValue "SRID:4326;POINT (42.80507 -74.2593)"
 		gsparql#spatialDimension hasValue 1
 	
@@ -283,7 +283,7 @@ ontology NotificationOntology
 		gDesc#describes hasValue gilboa_dam
 		gDesc#describedLocation hasValue location_of_gilboa_dam
 	
-	instance location_of_gilboa_dam memberOf gsparql#Geometry
+	instance location_of_gilboa_dam memberOf gDesc#LocationDescription
 		gsparql#asWKT hasValue "SRID:4326;POINT (42.39175 -74.44959)"
 		gsparql#spatialDimension hasValue 1
 	
@@ -302,7 +302,7 @@ ontology NotificationOntology
 		gDesc#describes hasValue prattsville_water_level_sensor
 		gDesc#describedLocation hasValue location_of_prattsville_water_level_sensor
 	
-	instance location_of_prattsville_water_level_sensor memberOf gsparql#Geometry
+	instance location_of_prattsville_water_level_sensor memberOf gDesc#LocationDescription
 		gsparql#asWKT hasValue "SRID:4326;POINT (42.31481 -74.43293)"
 		gsparql#spatialDimension hasValue 1
 	
@@ -317,7 +317,7 @@ ontology NotificationOntology
 		gDesc#describes hasValue gilboa_water_level_sensor
 		gDesc#describedLocation hasValue location_of_gilboa_water_level_sensor
 	
-	instance location_of_gilboa_water_level_sensor memberOf gsparql#Geometry
+	instance location_of_gilboa_water_level_sensor memberOf gDesc#LocationDescription
 		gsparql#asWKT hasValue "SRID:4326;POINT (42.3973 -74.44598)"
 		gsparql#spatialDimension hasValue 1
 	
@@ -332,7 +332,7 @@ ontology NotificationOntology
 		gDesc#describes hasValue breakabeen_water_level_sensor
 		gDesc#describedLocation hasValue location_of_breakabeen_water_level_sensor
 	
-	instance location_of_breakabeen_water_level_sensor memberOf gsparql#Geometry
+	instance location_of_breakabeen_water_level_sensor memberOf gDesc#LocationDescription
 		gsparql#asWKT hasValue "SRID:4326;POINT (42.52424 -74.40959)"
 		gsparql#spatialDimension hasValue 1
 	
