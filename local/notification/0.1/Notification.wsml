@@ -128,10 +128,11 @@ ontology NotificationOntology
              	and ?watlevsensdesc [gDesc#describes hasValue ?watlevsens, gDesc#describedLocation hasValue ?watlevsensloc] memberOf gDesc#GeographicalDescription
              	and ?watlevsensloc [gsparql#asWKT hasValue ?locvalue2] memberOf gDesc#LocationDescription
              	and ?locvalue = ?locvalue2
-             	and ?watlevsens  memberOf flood#WaterLevelSensor
+             	and ?watlevsens memberOf flood#WaterLevelSensor
              	and ?dobj [ae#has_state hasValue ?state] memberOf gspace#geographical_unit
-             	//and ?dam memberOf flood#Dam
-             	and flood#downstream(?watlevsens,?dobj)
+             	and ?dam memberOf flood#Dam
+             	and ?watlevsens[flood#downstream hasValue ?dobj]
+				and ?dobj[flood#downstream hasValue ?dam]
              	//and flood#downstream(?watlevsens,?dam)
              	//and neg (flood#downstream(?dam,?dobj))
              	and ?state memberOf ae#state
@@ -274,7 +275,7 @@ ontology NotificationOntology
 	
 //	dams
 
-	instance gilboa_dam memberOf village
+	instance gilboa_dam memberOf flood#Dam
 		ae#has_state hasValue state_of_gilboa_dam
 		dul#hasQuality hasValue altitude_of_gilboa_dam
 		gspace#nearBy hasValue schoharie_creek
