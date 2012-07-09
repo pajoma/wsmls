@@ -95,7 +95,7 @@ ontology NotificationOntology
              ?predictedeventobsdesc[gDesc#describedLocation hasValue ?descloc2, dul#describes hasValue ?predictedeventobs, geomod#associatedHazardLevel hasValue ?hazlevdesc, geomod#hasSource hasValue ?eventobsdesc] memberOf geomod#PredictedEventObservationDescription
              and ?descloc2 [gsparql#asWKT hasValue ?locvalue] memberOf gDesc#LocationDescription
              and ?predictedeventobs [geomod#predicts hasValue ?event] memberOf geomod#PredictedEventObservation
-             and ?hazlevdesc [geomod#hasHazardLevel hasValue "70"] memberOf geomod#HazardLevelDescription
+             and ?hazlevdesc [geomod#hasHazardLevel hasValue 70] memberOf geomod#HazardLevelDescription
              and ?event memberOf flood#Flood.
 
 	axiom predict_flooding_90
