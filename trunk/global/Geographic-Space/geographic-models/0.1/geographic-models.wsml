@@ -161,7 +161,7 @@ concept Probability subConceptOf dul#Quality
 	dul#isQualityOf	ofType dul#Event
 
 	
-concept PredictedEventObservationDescription subConceptOf geoDesc#SitationDescription
+concept PredictedEventObservationDescription subConceptOf geoDesc#SituationDescription
 	annotations
 		dc#identifier hasValue "Description of Predicted Event Observation@en"
 		dc#identifier hasValue "Beschreibung einer vorhergesagten Beobachtung@de"

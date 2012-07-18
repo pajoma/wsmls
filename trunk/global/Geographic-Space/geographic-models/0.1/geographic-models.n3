@@ -11,7 +11,7 @@
 @prefix geoDesc: <http://purl.org/ifgi/geodesc#> .
 @prefix eo: <http://purl.org/ifgi/event-observation#> .
 
-_:node16tsjbk2dx62 a owl:Ontology ;
+_:node172d3v21ux2 a owl:Ontology ;
 	rdfs:label "geographical_model" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/geoevents#> , <http://purl.org/ifgi/event-observation#> .
@@ -42,7 +42,7 @@ _:node16tsjbk2dx62 a owl:Ontology ;
 :HazardLevelDescription a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/geomodels#HazardLevelDescription" ;
 	rdfs:subClassOf dul:Description ;
-	dc:identifier "Hazard Description@en"^^xsd:string , "Gef?hrdung Beschreibung@de"^^xsd:string .
+	dc:identifier "Hazard Description@en"^^xsd:string , "Gefährdung Beschreibung@de"^^xsd:string .
 
 :HazardLevelDescription_prop_hasHazardLevel a rdf:Property ;
 	rdfs:label "http://purl.org/ifgi/geomodels#hasHazardLevel" ;
@@ -131,7 +131,7 @@ _:node16tsjbk2dx62 a owl:Ontology ;
 
 :PredictedEventObservationDescription a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/geomodels#PredictedEventObservationDescription" ;
-	rdfs:subClassOf geoDesc:SitationDescription ;
+	rdfs:subClassOf geoDesc:SituationDescription ;
 	dc:identifier "Description of Predicted Event Observation@en"^^xsd:string , "Beschreibung einer vorhergesagten Beobachtung@de"^^xsd:string .
 
 :PredictedEventObservationDescription_prop_describes a rdf:Property ;
