@@ -10,12 +10,12 @@
 
 
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://www.semanticweb.org/ontologies/dataqualitymodule.owl"
+     xml:base="http://purl.org/ifgi/patterns/quality/dataquality/dataqualitymodule.owl"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     ontologyIRI="http://www.semanticweb.org/ontologies/dataqualitymodule.owl">
+     ontologyIRI="http://purl.org/ifgi/patterns/quality/dataquality/dataqualitymodule.owl">
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
@@ -65,16 +65,16 @@
         <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataquality.owl#satisfies"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasQualityComponent"/>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataqualitymodule.owl#hasQualityComponent"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#isApproximatedBy"/>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataqualitymodule.owl#isApproximatedBy"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#isQualityCriterionOf"/>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataqualitymodule.owl#isQualityCriterionOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#isResultOf"/>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataqualitymodule.owl#isResultOf"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="http://www.semanticweb.org/ontologies/dataquality.owl#hasValue"/>
@@ -96,36 +96,36 @@
         <ObjectProperty abbreviatedIRI=":topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasQualityComponent"/>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataqualitymodule.owl#hasQualityComponent"/>
         <ObjectProperty abbreviatedIRI=":topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#isApproximatedBy"/>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataqualitymodule.owl#isApproximatedBy"/>
         <ObjectProperty abbreviatedIRI=":topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#isQualityCriterionOf"/>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataqualitymodule.owl#isQualityCriterionOf"/>
         <ObjectProperty abbreviatedIRI=":topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#isResultOf"/>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataqualitymodule.owl#isResultOf"/>
         <ObjectProperty abbreviatedIRI=":topObjectProperty"/>
     </SubObjectPropertyOf>
     <InverseObjectProperties>
         <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataquality.owl#approximates"/>
-        <ObjectProperty IRI="#isApproximatedBy"/>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataqualitymodule.owl#isApproximatedBy"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#isResultOf"/>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataqualitymodule.owl#isResultOf"/>
         <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataquality.owl#involves"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#hasQualityComponent"/>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataqualitymodule.owl#hasQualityComponent"/>
         <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataquality.owl#isQualityComponentOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataquality.owl#satisfies"/>
-        <ObjectProperty IRI="#isQualityCriterionOf"/>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataqualitymodule.owl#isQualityCriterionOf"/>
     </InverseObjectProperties>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataquality.owl#approximates"/>
@@ -223,22 +223,22 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#hasQualityComponent</IRI>
+        <IRI>http://www.semanticweb.org/ontologies/dataqualitymodule.owl#hasQualityComponent</IRI>
         <Literal>inverse property of &#39;isPropertyOf&#39;.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#isApproximatedBy</IRI>
+        <IRI>http://www.semanticweb.org/ontologies/dataqualitymodule.owl#isApproximatedBy</IRI>
         <Literal>inverse property of &#39;approximates&#39;.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#isQualityCriterionOf</IRI>
+        <IRI>http://www.semanticweb.org/ontologies/dataqualitymodule.owl#isQualityCriterionOf</IRI>
         <Literal>inverse property of &#39;satisfies&#39;.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#isResultOf</IRI>
+        <IRI>http://www.semanticweb.org/ontologies/dataqualitymodule.owl#isResultOf</IRI>
         <Literal>inverse property of &#39;involves&#39;.</Literal>
     </AnnotationAssertion>
 </Ontology>
