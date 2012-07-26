@@ -66,7 +66,7 @@ All ontologies of this repository are listed here. Ontologies highlighted green 
 ==== Quality ====
 || <font color="#04B404">DataQuality</font> || <font color="#04B404">http://purl.org/ifgi/patterns/dataquality</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Patterns/Quality/DataQuality/dataqualitymodule.owl</font> || ||
 || <font color="#04B404">ServiceQuality</font> || <font color="#04B404">http://purl.org/ifgi/patterns/servicequality</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Patterns/Quality/ServiceQuality/servicequalitymodule.owl</font> ||  ||
-
+|| <font color="#04B404">Example</font> || <font color="#04B404">http://purl.org/ifgi/patterns/dataqualityexample</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Patterns/Quality/QualityExample/dataqualityexample.owl</font> ||  ||
 
 <br>
 <br>
