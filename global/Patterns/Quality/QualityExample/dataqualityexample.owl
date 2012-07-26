@@ -1,0 +1,450 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/ssn2012/dataqualityexample.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.semanticweb.org/ssn2012/dataqualityexample.owl">
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://wsmls.googlecode.com/svn/trunk/global/Patterns/Quality/DataQuality/dataqualitymodule.owl</Import>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <Literal>July 26, 2012</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>An illustration of the use of the ontology design pattern for data quality characterization in the Semantic Sensor Web. The example focuses on &#39;resolution&#39; and illustrates two different ways to characterize the (spatial) resolution of an observation offering: 1) using the sampling density of the observation offering, or 2) use the characteristics of the sensor. </Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <Literal>Auriol Degbelo&lt;degbelo@uni-muenster.de&gt;</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#ObservationOffering"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sensor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#contributesToOffering"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#involvesSensor"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasNumberOfSensors"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasQualityCriterionName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSensorResolution"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSpatialExtent"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#dataQobservation1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#dataQobservation2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#observationoffering1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#qualityresult1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#qualityresult2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#resolution"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#samplingdensity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sensor1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sensorcharacteristics"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#ObservationOffering"/>
+        <Class IRI="http://www.semanticweb.org/ontologies/dataquality.owl#Data"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/ontologies/dataquality.owl#DataQualityObservation"/>
+        <NamedIndividual IRI="#dataQobservation1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/ontologies/dataquality.owl#DataQualityObservation"/>
+        <NamedIndividual IRI="#dataQobservation2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ObservationOffering"/>
+        <NamedIndividual IRI="#observationoffering1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/ontologies/dataquality.owl#DataQualityResult"/>
+        <NamedIndividual IRI="#qualityresult1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/ontologies/dataquality.owl#DataQualityResult"/>
+        <NamedIndividual IRI="#qualityresult2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/ontologies/dataquality.owl#DataQualityComponent"/>
+        <NamedIndividual IRI="#resolution"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/ontologies/dataquality.owl#DataQualityCriterion"/>
+        <NamedIndividual IRI="#samplingdensity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Sensor"/>
+        <NamedIndividual IRI="#sensor1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/ontologies/dataquality.owl#DataQualityCriterion"/>
+        <NamedIndividual IRI="#sensorcharacteristics"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataquality.owl#approximates"/>
+        <NamedIndividual IRI="#dataQobservation1"/>
+        <NamedIndividual IRI="#resolution"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataquality.owl#involves"/>
+        <NamedIndividual IRI="#dataQobservation1"/>
+        <NamedIndividual IRI="#qualityresult1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataquality.owl#satisfies"/>
+        <NamedIndividual IRI="#dataQobservation1"/>
+        <NamedIndividual IRI="#samplingdensity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataquality.owl#approximates"/>
+        <NamedIndividual IRI="#dataQobservation2"/>
+        <NamedIndividual IRI="#resolution"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataquality.owl#involves"/>
+        <NamedIndividual IRI="#dataQobservation2"/>
+        <NamedIndividual IRI="#qualityresult2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataquality.owl#satisfies"/>
+        <NamedIndividual IRI="#dataQobservation2"/>
+        <NamedIndividual IRI="#sensorcharacteristics"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#involvesSensor"/>
+        <NamedIndividual IRI="#observationoffering1"/>
+        <NamedIndividual IRI="#sensor1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataquality.owl#isQualityComponentOf"/>
+        <NamedIndividual IRI="#resolution"/>
+        <NamedIndividual IRI="#observationoffering1"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasQualityCriterionName"/>
+        <NamedIndividual IRI="#samplingdensity"/>
+        <Literal datatypeIRI="&xsd;string">sampling density</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSensorResolution"/>
+        <NamedIndividual IRI="#sensor1"/>
+        <Literal datatypeIRI="&xsd;double">100</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasQualityCriterionName"/>
+        <NamedIndividual IRI="#sensorcharacteristics"/>
+        <Literal datatypeIRI="&xsd;string">sensor characteristics</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#contributesToOffering"/>
+        <ObjectProperty abbreviatedIRI=":topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#involvesSensor"/>
+        <ObjectProperty abbreviatedIRI=":topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#contributesToOffering"/>
+        <ObjectProperty IRI="#involvesSensor"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#involvesSensor"/>
+        <Class IRI="#ObservationOffering"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#involvesSensor"/>
+        <Class IRI="#Sensor"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasNumberOfSensors"/>
+        <DataProperty abbreviatedIRI=":topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasQualityCriterionName"/>
+        <DataProperty abbreviatedIRI=":topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasSensorResolution"/>
+        <DataProperty abbreviatedIRI=":topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasSpatialExtent"/>
+        <DataProperty abbreviatedIRI=":topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasNumberOfSensors"/>
+        <Class IRI="#ObservationOffering"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasQualityCriterionName"/>
+        <Class IRI="http://www.semanticweb.org/ontologies/dataquality.owl#DataQualityCriterion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSensorResolution"/>
+        <Class IRI="#Sensor"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSpatialExtent"/>
+        <Class IRI="#ObservationOffering"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasNumberOfSensors"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasQualityCriterionName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSensorResolution"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSpatialExtent"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="http://www.semanticweb.org/ontologies/dataquality.owl#DataQualityComponent"/>
+                <Variable IRI="urn:swrl#comp"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="http://www.semanticweb.org/ontologies/dataquality.owl#DataQualityCriterion"/>
+                <Variable IRI="urn:swrl#crit"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="http://www.semanticweb.org/ontologies/dataquality.owl#DataQualityObservation"/>
+                <Variable IRI="urn:swrl#obs"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="http://www.semanticweb.org/ontologies/dataquality.owl#DataQualityResult"/>
+                <Variable IRI="urn:swrl#r"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#ObservationOffering"/>
+                <Variable IRI="urn:swrl#offering"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#Sensor"/>
+                <Variable IRI="urn:swrl#sens"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataquality.owl#approximates"/>
+                <Variable IRI="urn:swrl#obs"/>
+                <Variable IRI="urn:swrl#comp"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataquality.owl#involves"/>
+                <Variable IRI="urn:swrl#obs"/>
+                <Variable IRI="urn:swrl#r"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataquality.owl#isQualityComponentOf"/>
+                <Variable IRI="urn:swrl#comp"/>
+                <Variable IRI="urn:swrl#offering"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataquality.owl#satisfies"/>
+                <Variable IRI="urn:swrl#obs"/>
+                <Variable IRI="urn:swrl#crit"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#involvesSensor"/>
+                <Variable IRI="urn:swrl#offering"/>
+                <Variable IRI="urn:swrl#sens"/>
+            </ObjectPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasNumberOfSensors"/>
+                <Variable IRI="urn:swrl#offering"/>
+                <Variable IRI="urn:swrl#n"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasQualityCriterionName"/>
+                <Variable IRI="urn:swrl#crit"/>
+                <Variable IRI="urn:swrl#critname"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasSensorResolution"/>
+                <Variable IRI="urn:swrl#sens"/>
+                <Variable IRI="urn:swrl#value"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#stringEqualIgnoreCase">
+                <Variable IRI="urn:swrl#critname"/>
+                <Literal datatypeIRI="&xsd;string">sensor characteristics</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <DataPropertyAtom>
+                <DataProperty IRI="http://www.semanticweb.org/ontologies/dataquality.owl#hasValue"/>
+                <Variable IRI="urn:swrl#r"/>
+                <Variable IRI="urn:swrl#value"/>
+            </DataPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="http://www.semanticweb.org/ontologies/dataquality.owl#DataQualityComponent"/>
+                <Variable IRI="urn:swrl#comp"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="http://www.semanticweb.org/ontologies/dataquality.owl#DataQualityCriterion"/>
+                <Variable IRI="urn:swrl#crit"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="http://www.semanticweb.org/ontologies/dataquality.owl#DataQualityObservation"/>
+                <Variable IRI="urn:swrl#obs"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="http://www.semanticweb.org/ontologies/dataquality.owl#DataQualityResult"/>
+                <Variable IRI="urn:swrl#r"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#ObservationOffering"/>
+                <Variable IRI="urn:swrl#offering"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataquality.owl#approximates"/>
+                <Variable IRI="urn:swrl#obs"/>
+                <Variable IRI="urn:swrl#proper"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataquality.owl#involves"/>
+                <Variable IRI="urn:swrl#obs"/>
+                <Variable IRI="urn:swrl#r"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataquality.owl#isQualityComponentOf"/>
+                <Variable IRI="urn:swrl#comp"/>
+                <Variable IRI="urn:swrl#offering"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataquality.owl#satisfies"/>
+                <Variable IRI="urn:swrl#obs"/>
+                <Variable IRI="urn:swrl#crit"/>
+            </ObjectPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasNumberOfSensors"/>
+                <Variable IRI="urn:swrl#offering"/>
+                <Variable IRI="urn:swrl#n"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasQualityCriterionName"/>
+                <Variable IRI="urn:swrl#crit"/>
+                <Variable IRI="urn:swrl#critname"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasSpatialExtent"/>
+                <Variable IRI="urn:swrl#offering"/>
+                <Variable IRI="urn:swrl#s"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#divide">
+                <Variable IRI="urn:swrl#value"/>
+                <Variable IRI="urn:swrl#s"/>
+                <Variable IRI="urn:swrl#n"/>
+            </BuiltInAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#stringEqualIgnoreCase">
+                <Variable IRI="urn:swrl#critname"/>
+                <Literal datatypeIRI="&xsd;string">sampling density</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <DataPropertyAtom>
+                <DataProperty IRI="http://www.semanticweb.org/ontologies/dataquality.owl#hasValue"/>
+                <Variable IRI="urn:swrl#r"/>
+                <Variable IRI="urn:swrl#value"/>
+            </DataPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ObservationOffering</IRI>
+        <Literal>An observation offering is a grouping or collection of observations</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Sensor</IRI>
+        <Literal>Sensor is defined here as &#39;Sensor&#39; in the W3C&#39;s semantic sensor network ontology (See http://purl.oclc.org/NET/ssnx/ssn).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#contributesToOffering</IRI>
+        <Literal>inverse property of &#39;involvesSensor&#39;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasNumberOfSensors</IRI>
+        <Literal>this property relates an observation offering to the number of sensors contributing to an observation offering.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasQualityCriterionName</IRI>
+        <Literal>this property relates a quality criterion to its name.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasSensorResolution</IRI>
+        <Literal>this property is used to express the resolution of a measurement device. &#39;Resolution&#39; here is defined as &#39;Resolution&#39; in the W3C&#39;s semantic sensor network ontology (See http://purl.oclc.org/NET/ssnx/ssn).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasSpatialExtent</IRI>
+        <Literal>this property is used to specify the spatial extent of an observation offering.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#involvesSensor</IRI>
+        <Literal>this property serves to relate an observation offering to a sensor. It is assumed here (for sake of simplicity) that only one type of sensor is used to produce all the observations which are members of an observation offering.</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.0.0.1469) http://owlapi.sourceforge.net -->
+
