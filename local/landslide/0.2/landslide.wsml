@@ -6,6 +6,7 @@ namespace { _"http://purl.org/ifgi/landslide#",
     dc _"http://purl.org/dc/elements/1.1/",
     owl _"http://www.w3.org/2002/07/owl#",
     dul _"http://purl.org/ifgi/dul#",
+	evob _"http://purl.org/ifgi/event-observation#",
     gu _"http://purl.org/ifgi/geounits#",
 	gq _"http://purl.org/ifgi/geoqualities#",
 	gs _"http://purl.org/ifgi/geospace#",
@@ -27,7 +28,7 @@ ontology Landslide
 		dc#subject hasValue "Landslide"
     endAnnotations
     
-    importsOntology {_"http://purl.org/ifgi/geounits#", _"http://purl.org/ifgi/geoqualities#", _"http://purl.org/ifgi/geospace#", _"http://purl.org/ifgi/geoevents#", _"http://purl.org/ifgi/oilspill#", _"http://purl.org/ifgi/dul#", _"http://purl.org/ifgi/geomodels#"}
+    importsOntology {_"http://purl.org/ifgi/oilspill#", _"http://purl.org/ifgi/geomodels#"}
 
 	/*
 		Events/Processes
@@ -118,6 +119,36 @@ ontology Landslide
 			dc#identifier hasValue "Evaporation@de"
 			dc#description hasValue "the process of extracting moisture"
 			dc#source hasValue "http://wordnetweb.princeton.edu/"
+		endAnnotations
+		
+	concept rain subConceptOf ge#precipitation
+		annotations
+			dc#description hasValue "Rain is liquid water in the form of droplets that have condensed from atmospheric water vapor and then precipitated—that is, become heavy enough to fall under gravity."
+			dc#source hasValue "http://en.wikipedia.org/wiki/Rain"
+		endAnnotations
+
+	concept heavyRain subConceptOf evob#EventObservationType
+		annotations
+			dc#description hasValue "24-hour accumulated rainfall exceeds 50 millimeters with at least one hour of 15 millimeters or above"
+			dc#source hasValue "http://www.cwb.gov.tw/V7e/observe/rainfall/define.htm?"
+		endAnnotations
+
+	concept extremelyHeavyRain subConceptOf evob#EventObservationType
+		annotations
+			dc#description hasValue "24-hour accumulated rainfall exceeds 130 millimeters"
+			dc#source hasValue "http://www.cwb.gov.tw/V7e/observe/rainfall/define.htm?"
+		endAnnotations
+
+	concept torrentialRain subConceptOf evob#EventObservationType
+		annotations
+			dc#description hasValue "if exceeding 200 millimeters in 24 hours"
+			dc#source hasValue "http://www.cwb.gov.tw/V7e/observe/rainfall/define.htm?"
+		endAnnotations
+
+	concept extremelyTorrentialRain subConceptOf evob#EventObservationType
+		annotations
+			dc#description hasValue "if exceeding 350 millimeters in 24 hours or more"
+			dc#source hasValue "http://www.cwb.gov.tw/V7e/observe/rainfall/define.htm?"
 		endAnnotations
 
 	/*

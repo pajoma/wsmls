@@ -18,10 +18,18 @@
 @prefix ge: <http://purl.org/ifgi/geoevents#> .
 @prefix gsparql: <http://purl.org/ifgi/geosparql#> .
 
-_:node171mg3vv6x6 a owl:Ontology ;
+_:node172i9q3oex6 a owl:Ontology ;
 	rdfs:label "NotificationOntology" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
-	owl:imports <http://purl.org/ifgi/affenv#> , <http://purl.org/ifgi/water/flood#> , <http://purl.org/ifgi/geomodels#> , <http://purl.org/ifgi/oilspill#> .
+	owl:imports <http://purl.org/ifgi/affenv#> , <http://purl.org/ifgi/water/flood#> , <http://purl.org/ifgi/geomodels#> , <http://purl.org/ifgi/oilspill#> ;
+	dc:creator "Henry Michels (ifgi)"^^xsd:string ;
+	dc:contributor "Marcell Roth (ifgi)"^^xsd:string ;
+	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
+	dc:rights "http://creativecommons.org/licenses/by/3.0/"^^xsd:string ;
+	dc:type "Domain Ontology"^^xsd:string ;
+	dc:description ""^^xsd:string ;
+	dc:title "Notification Ontology"^^xsd:string ;
+	dc:subject ""^^xsd:string .
 
 :stay_at_place a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/notification#stay_at_place" ;
@@ -128,7 +136,7 @@ _:node171mg3vv6x6 a owl:Ontology ;
 	gspace:nearBy :schoharie_creek .
 
 :description_about_gilboa a gDesc:GeographicalDescription ;
-	gDesc:describes :gilboa ;
+	dul:describes :gilboa ;
 	gDesc:describedLocation :location_of_gilboa .
 
 :location_of_gilboa a gDesc:LocationDescription ;
@@ -136,7 +144,7 @@ _:node171mg3vv6x6 a owl:Ontology ;
 	gsparql:spatialDimension "1"^^xsd:integer .
 
 :altitude_of_gilboa a gq:altitude ;
-	dul:hasDataValue "313"^^xsd:integer .
+	dul:hasDataValue "323"^^xsd:integer .
 
 :state_of_gilboa a :normal .
 
@@ -146,7 +154,7 @@ _:node171mg3vv6x6 a owl:Ontology ;
 	gspace:nearBy :schoharie_creek .
 
 :description_about_breakabeen a gDesc:GeographicalDescription ;
-	gDesc:describes :breakabeen ;
+	dul:describes :breakabeen ;
 	gDesc:describedLocation :location_of_breakabeen .
 
 :location_of_breakabeen a gDesc:LocationDescription ;
@@ -164,7 +172,7 @@ _:node171mg3vv6x6 a owl:Ontology ;
 	gspace:nearBy :schoharie_creek .
 
 :description_about_fultonham a gDesc:GeographicalDescription ;
-	gDesc:describes :fultonham ;
+	dul:describes :fultonham ;
 	gDesc:describedLocation :location_of_fultonham .
 
 :location_of_fultonham a gDesc:LocationDescription ;
@@ -182,7 +190,7 @@ _:node171mg3vv6x6 a owl:Ontology ;
 	gspace:nearBy :schoharie_creek .
 
 :description_about_middleburgh a gDesc:GeographicalDescription ;
-	gDesc:describes :middleburgh ;
+	dul:describes :middleburgh ;
 	gDesc:describedLocation :location_of_middleburgh .
 
 :location_of_middleburgh a gDesc:LocationDescription ;
@@ -200,7 +208,7 @@ _:node171mg3vv6x6 a owl:Ontology ;
 	gspace:nearBy :schoharie_creek .
 
 :description_about_schoharie a gDesc:GeographicalDescription ;
-	gDesc:describes :schoharie ;
+	dul:describes :schoharie ;
 	gDesc:describedLocation :location_of_schoharie .
 
 :location_of_schoharie a gDesc:LocationDescription ;
@@ -218,7 +226,7 @@ _:node171mg3vv6x6 a owl:Ontology ;
 	gspace:nearBy :schoharie_creek .
 
 :description_about_esperance a gDesc:GeographicalDescription ;
-	gDesc:describes :esperance ;
+	dul:describes :esperance ;
 	gDesc:describedLocation :location_of_esperance .
 
 :location_of_esperance a gDesc:LocationDescription ;
@@ -236,7 +244,7 @@ _:node171mg3vv6x6 a owl:Ontology ;
 	gspace:nearBy :schoharie_creek .
 
 :description_about_burtonsville a gDesc:GeographicalDescription ;
-	gDesc:describes :esperance ;
+	dul:describes :esperance ;
 	gDesc:describedLocation :location_of_burtonsville .
 
 :location_of_burtonsville a gDesc:LocationDescription ;
@@ -254,7 +262,7 @@ _:node171mg3vv6x6 a owl:Ontology ;
 	gspace:nearBy :schoharie_creek .
 
 :description_about_gilboa_dam a gDesc:GeographicalDescription ;
-	gDesc:describes :gilboa_dam ;
+	dul:describes :gilboa_dam ;
 	gDesc:describedLocation :location_of_gilboa_dam .
 
 :location_of_gilboa_dam a gDesc:LocationDescription ;
@@ -262,7 +270,7 @@ _:node171mg3vv6x6 a owl:Ontology ;
 	gsparql:spatialDimension "1"^^xsd:integer .
 
 :altitude_of_gilboa_dam a gq:altitude ;
-	dul:hasDataValue "323"^^xsd:integer .
+	dul:hasDataValue "313"^^xsd:integer .
 
 :state_of_gilboa_dam a :normal .
 
@@ -271,7 +279,7 @@ _:node171mg3vv6x6 a owl:Ontology ;
 	gspace:nearBy :schoharie_creek .
 
 :description_about_prattsville_water_level_sensor a gDesc:GeographicalDescription ;
-	gDesc:describes :prattsville_water_level_sensor ;
+	dul:describes :prattsville_water_level_sensor ;
 	gDesc:describedLocation :location_of_prattsville_water_level_sensor .
 
 :location_of_prattsville_water_level_sensor a gDesc:LocationDescription ;
@@ -286,7 +294,7 @@ _:node171mg3vv6x6 a owl:Ontology ;
 	gspace:nearBy :schoharie_creek .
 
 :description_about_gilboa_water_level_sensor a gDesc:GeographicalDescription ;
-	gDesc:describes :gilboa_water_level_sensor ;
+	dul:describes :gilboa_water_level_sensor ;
 	gDesc:describedLocation :location_of_gilboa_water_level_sensor .
 
 :location_of_gilboa_water_level_sensor a gDesc:LocationDescription ;
@@ -301,7 +309,7 @@ _:node171mg3vv6x6 a owl:Ontology ;
 	gspace:nearBy :schoharie_creek .
 
 :description_about_breakabeen_water_level_sensor a gDesc:GeographicalDescription ;
-	gDesc:describes :breakabeen_water_level_sensor ;
+	dul:describes :breakabeen_water_level_sensor ;
 	gDesc:describedLocation :location_of_breakabeen_water_level_sensor .
 
 :location_of_breakabeen_water_level_sensor a gDesc:LocationDescription ;
@@ -311,14 +319,14 @@ _:node171mg3vv6x6 a owl:Ontology ;
 :altitude_of_breakabeen_water_level_sensor a gq:altitude ;
 	dul:hasDataValue "226"^^xsd:integer .
 
-_:node171mg3vv6x7 rdfs:label "http://purl.org/ifgi/notification#predict_flooding_50" ;
+_:node172i9q3oex7 rdfs:label "http://purl.org/ifgi/notification#predict_flooding_50" ;
 	a <http://www.wsmo.org/wsml/wsml-syntax#Axiom> ;
 	rdf:value """?eventobsdesc[_\"http://purl.org/ifgi/geodesc#describedLocation\" hasValue ?descloc, _\"http://purl.org/ifgi/dul#describes\" hasValue ?eventobs] memberOf _\"http://purl.org/ifgi/event-observation#EventObservationDescription\"
  and ?descloc[_\"http://purl.org/ifgi/geosparql#asWKT\" hasValue ?locvalue] memberOf _\"http://purl.org/ifgi/geodesc#LocationDescription\"
  and ?eventobs[_\"http://purl.org/ifgi/dul#isClassifiedBy\" hasValue ?eventobstype] memberOf _\"http://purl.org/ifgi/event-observation#EventObservation\"
  and ?eventobstype memberOf _\"http://purl.org/ifgi/water/flood#ActionStageToMinorFloodingStage\"
- and ?predictedeventobsdesc memberOf _\"http://purl.org/ifgi/geomodels#PredictedEventObservationDescription\"
- and ?predictedeventobs memberOf _\"http://purl.org/ifgi/geomodels#PredictedEventObservation\"
+ and ?predictedeventobsdesc[_\"http://purl.org/ifgi/geodesc#describedLocation\" hasValue ?descloc2, _\"http://purl.org/ifgi/dul#describes\" hasValue ?predictedeventobs, _\"http://purl.org/ifgi/geomodels#associatedHazardLevel\" hasValue ?hazlevdesc] memberOf _\"http://purl.org/ifgi/geomodels#PredictedEventObservationDescription\"
+ and ?predictedeventobs[_\"http://purl.org/ifgi/geomodels#predicts\" hasValue ?event] memberOf _\"http://purl.org/ifgi/geomodels#PredictedEventObservation\"
  and ?hazlevdesc memberOf _\"http://purl.org/ifgi/geomodels#HazardLevelDescription\"
  and ?event memberOf _\"http://purl.org/ifgi/geoevents#geographical_event\"
  and ?descloc2 memberOf _\"http://purl.org/ifgi/geodesc#LocationDescription\"
@@ -329,14 +337,14 @@ _:node171mg3vv6x7 rdfs:label "http://purl.org/ifgi/notification#predict_flooding
  and ?hazlevdesc[_\"http://purl.org/ifgi/geomodels#hasHazardLevel\" hasValue 50] memberOf _\"http://purl.org/ifgi/geomodels#HazardLevelDescription\"
  and ?event memberOf _\"http://purl.org/ifgi/water/flood#Flood\". """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> .
 
-_:node171mg3vv6x8 rdfs:label "http://purl.org/ifgi/notification#predict_flooding_70" ;
+_:node172i9q3oex8 rdfs:label "http://purl.org/ifgi/notification#predict_flooding_70" ;
 	a <http://www.wsmo.org/wsml/wsml-syntax#Axiom> ;
 	rdf:value """?eventobsdesc[_\"http://purl.org/ifgi/geodesc#describedLocation\" hasValue ?descloc, _\"http://purl.org/ifgi/dul#describes\" hasValue ?eventobs] memberOf _\"http://purl.org/ifgi/event-observation#EventObservationDescription\"
  and ?descloc[_\"http://purl.org/ifgi/geosparql#asWKT\" hasValue ?locvalue] memberOf _\"http://purl.org/ifgi/geodesc#LocationDescription\"
  and ?eventobs[_\"http://purl.org/ifgi/dul#isClassifiedBy\" hasValue ?eventobstype] memberOf _\"http://purl.org/ifgi/event-observation#EventObservation\"
  and ?eventobstype memberOf _\"http://purl.org/ifgi/water/flood#MinorFloodingStageToModerateFloodingStage\"
- and ?predictedeventobsdesc memberOf _\"http://purl.org/ifgi/geomodels#PredictedEventObservationDescription\"
- and ?predictedeventobs memberOf _\"http://purl.org/ifgi/geomodels#PredictedEventObservation\"
+ and ?predictedeventobsdesc[_\"http://purl.org/ifgi/geodesc#describedLocation\" hasValue ?descloc2, _\"http://purl.org/ifgi/dul#describes\" hasValue ?predictedeventobs, _\"http://purl.org/ifgi/geomodels#associatedHazardLevel\" hasValue ?hazlevdesc] memberOf _\"http://purl.org/ifgi/geomodels#PredictedEventObservationDescription\"
+ and ?predictedeventobs[_\"http://purl.org/ifgi/geomodels#predicts\" hasValue ?event] memberOf _\"http://purl.org/ifgi/geomodels#PredictedEventObservation\"
  and ?hazlevdesc memberOf _\"http://purl.org/ifgi/geomodels#HazardLevelDescription\"
  and ?event memberOf _\"http://purl.org/ifgi/geoevents#geographical_event\"
  and ?descloc2 memberOf _\"http://purl.org/ifgi/geodesc#LocationDescription\"
@@ -347,14 +355,14 @@ _:node171mg3vv6x8 rdfs:label "http://purl.org/ifgi/notification#predict_flooding
  and ?hazlevdesc[_\"http://purl.org/ifgi/geomodels#hasHazardLevel\" hasValue 70] memberOf _\"http://purl.org/ifgi/geomodels#HazardLevelDescription\"
  and ?event memberOf _\"http://purl.org/ifgi/water/flood#Flood\". """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> .
 
-_:node171mg3vv6x9 rdfs:label "http://purl.org/ifgi/notification#predict_flooding_90" ;
+_:node172i9q3oex9 rdfs:label "http://purl.org/ifgi/notification#predict_flooding_90" ;
 	a <http://www.wsmo.org/wsml/wsml-syntax#Axiom> ;
 	rdf:value """?eventobsdesc[_\"http://purl.org/ifgi/geodesc#describedLocation\" hasValue ?descloc, _\"http://purl.org/ifgi/dul#describes\" hasValue ?eventobs] memberOf _\"http://purl.org/ifgi/event-observation#EventObservationDescription\"
  and ?descloc[_\"http://purl.org/ifgi/geosparql#asWKT\" hasValue ?locvalue] memberOf _\"http://purl.org/ifgi/geodesc#LocationDescription\"
  and ?eventobs[_\"http://purl.org/ifgi/dul#isClassifiedBy\" hasValue ?eventobstype] memberOf _\"http://purl.org/ifgi/event-observation#EventObservation\"
  and ?eventobstype memberOf _\"http://purl.org/ifgi/water/flood#ModerateFloodingStageToMajorFloodingStage\"
- and ?predictedeventobsdesc memberOf _\"http://purl.org/ifgi/geomodels#PredictedEventObservationDescription\"
- and ?predictedeventobs memberOf _\"http://purl.org/ifgi/geomodels#PredictedEventObservation\"
+ and ?predictedeventobsdesc[_\"http://purl.org/ifgi/geodesc#describedLocation\" hasValue ?descloc2, _\"http://purl.org/ifgi/dul#describes\" hasValue ?predictedeventobs, _\"http://purl.org/ifgi/geomodels#associatedHazardLevel\" hasValue ?hazlevdesc] memberOf _\"http://purl.org/ifgi/geomodels#PredictedEventObservationDescription\"
+ and ?predictedeventobs[_\"http://purl.org/ifgi/geomodels#predicts\" hasValue ?event] memberOf _\"http://purl.org/ifgi/geomodels#PredictedEventObservation\"
  and ?hazlevdesc memberOf _\"http://purl.org/ifgi/geomodels#HazardLevelDescription\"
  and ?event memberOf _\"http://purl.org/ifgi/geoevents#geographical_event\"
  and ?descloc2 memberOf _\"http://purl.org/ifgi/geodesc#LocationDescription\"
@@ -365,7 +373,7 @@ _:node171mg3vv6x9 rdfs:label "http://purl.org/ifgi/notification#predict_flooding
  and ?hazlevdesc[_\"http://purl.org/ifgi/geomodels#hasHazardLevel\" hasValue 90] memberOf _\"http://purl.org/ifgi/geomodels#HazardLevelDescription\"
  and ?event memberOf _\"http://purl.org/ifgi/water/flood#Flood\". """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> .
 
-_:node171mg3vv6x10 rdfs:label "http://purl.org/ifgi/notification#change_state_to_flooded" ;
+_:node172i9q3oex10 rdfs:label "http://purl.org/ifgi/notification#change_state_to_flooded" ;
 	a <http://www.wsmo.org/wsml/wsml-syntax#Axiom> ;
 	rdf:value """?predictedeventobsdesc[_\"http://purl.org/ifgi/geodesc#describedLocation\" hasValue ?descloc, _\"http://purl.org/ifgi/dul#describes\" hasValue ?predictedeventobs, _\"http://purl.org/ifgi/geomodels#associatedHazardLevel\" hasValue ?hazlevdesc, _\"http://purl.org/ifgi/geomodels#hasSource\" hasValue ?eventobsdesc] memberOf _\"http://purl.org/ifgi/geomodels#PredictedEventObservationDescription\"
  and ?descloc[_\"http://purl.org/ifgi/geosparql#asWKT\" hasValue ?locvalue] memberOf _\"http://purl.org/ifgi/geodesc#LocationDescription\"
@@ -373,14 +381,12 @@ _:node171mg3vv6x10 rdfs:label "http://purl.org/ifgi/notification#change_state_to
  and ?hazlevdesc[_\"http://purl.org/ifgi/geomodels#hasHazardLevel\" hasValue ?probability] memberOf _\"http://purl.org/ifgi/geomodels#HazardLevelDescription\"
  and ?event memberOf _\"http://purl.org/ifgi/water/flood#Flood\"
  and ?probability > 50
- and ?watlevsensdesc[_\"http://purl.org/ifgi/geodesc#describes\" hasValue ?watlevsens, _\"http://purl.org/ifgi/geodesc#describedLocation\" hasValue ?watlevsensloc] memberOf _\"http://purl.org/ifgi/geodesc#GeographicalDescription\"
- and ?watlevsensloc[_\"http://purl.org/ifgi/geosparql#asWKT\" hasValue ?locvalue2] memberOf _\"http://purl.org/ifgi/geodesc#LocationDescription\"
- and ?locvalue = ?locvalue2
- and ?watlevsens memberOf _\"http://purl.org/ifgi/water/flood#WaterLevelSensor\"
- and ?dobj[_\"http://purl.org/ifgi/affenv#has_state\" hasValue ?state] memberOf _\"http://purl.org/ifgi/geospace#geographical_unit\"
+ and ?watlevsensdesc[_\"http://purl.org/ifgi/dul#describes\" hasValue ?watlevsens, _\"http://purl.org/ifgi/geodesc#describedLocation\" hasValue ?watlevsensloc] memberOf _\"http://purl.org/ifgi/geodesc#GeographicalDescription\"
+ and ?watlevsensloc[_\"http://purl.org/ifgi/geosparql#asWKT\" hasValue ?locvalue] memberOf _\"http://purl.org/ifgi/geodesc#LocationDescription\"
+ and ?watlevsens[_\"http://purl.org/ifgi/water/flood#downstream\" hasValue ?obj] memberOf _\"http://purl.org/ifgi/water/flood#WaterLevelSensor\"
+ and ?obj[_\"http://purl.org/ifgi/affenv#has_state\" hasValue ?state] memberOf _\"http://purl.org/ifgi/geospace#geographical_unit\"
  and ?dam memberOf _\"http://purl.org/ifgi/water/flood#Dam\"
- and ?watlevsens[_\"http://purl.org/ifgi/water/flood#downstream\" hasValue ?dobj]
- and ?dobj[_\"http://purl.org/ifgi/water/flood#downstream\" hasValue ?dam]
+ and ?watlevsens[_\"http://purl.org/ifgi/water/flood#downstream\" hasValue ?dam]
  and ?state memberOf _\"http://purl.org/ifgi/affenv#state\"
  implies 
 ?state memberOf _\"http://purl.org/ifgi/notification#flooded\". """^^<http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral> .

@@ -20,7 +20,7 @@
 	xmlns:ge="http://purl.org/ifgi/geoevents#"
 	xmlns:gsparql="http://purl.org/ifgi/geosparql#">
 
-<rdf:Description rdf:nodeID="node171mg3vv6x1">
+<rdf:Description rdf:nodeID="node172i9q3oex1">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>NotificationOntology</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -28,6 +28,14 @@
 	<owl:imports rdf:resource="http://purl.org/ifgi/water/flood#"/>
 	<owl:imports rdf:resource="http://purl.org/ifgi/geomodels#"/>
 	<owl:imports rdf:resource="http://purl.org/ifgi/oilspill#"/>
+	<dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Henry Michels (ifgi)</dc:creator>
+	<dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marcell Roth (ifgi)</dc:contributor>
+	<dc:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(a)IfGI, University of Muenster</dc:publisher>
+	<dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://creativecommons.org/licenses/by/3.0/</dc:rights>
+	<dc:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Domain Ontology</dc:type>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
+	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Notification Ontology</dc:title>
+	<dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:subject>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/notification#stay_at_place">
@@ -176,7 +184,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/notification#description_about_gilboa">
 	<rdf:type rdf:resource="http://purl.org/ifgi/geodesc#GeographicalDescription"/>
-	<gDesc:describes rdf:resource="http://purl.org/ifgi/notification#gilboa"/>
+	<dul:describes rdf:resource="http://purl.org/ifgi/notification#gilboa"/>
 	<gDesc:describedLocation rdf:resource="http://purl.org/ifgi/notification#location_of_gilboa"/>
 </rdf:Description>
 
@@ -188,7 +196,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/notification#altitude_of_gilboa">
 	<rdf:type rdf:resource="http://purl.org/ifgi/geoqualities#altitude"/>
-	<dul:hasDataValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">313</dul:hasDataValue>
+	<dul:hasDataValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">323</dul:hasDataValue>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/notification#state_of_gilboa">
@@ -204,7 +212,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/notification#description_about_breakabeen">
 	<rdf:type rdf:resource="http://purl.org/ifgi/geodesc#GeographicalDescription"/>
-	<gDesc:describes rdf:resource="http://purl.org/ifgi/notification#breakabeen"/>
+	<dul:describes rdf:resource="http://purl.org/ifgi/notification#breakabeen"/>
 	<gDesc:describedLocation rdf:resource="http://purl.org/ifgi/notification#location_of_breakabeen"/>
 </rdf:Description>
 
@@ -232,7 +240,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/notification#description_about_fultonham">
 	<rdf:type rdf:resource="http://purl.org/ifgi/geodesc#GeographicalDescription"/>
-	<gDesc:describes rdf:resource="http://purl.org/ifgi/notification#fultonham"/>
+	<dul:describes rdf:resource="http://purl.org/ifgi/notification#fultonham"/>
 	<gDesc:describedLocation rdf:resource="http://purl.org/ifgi/notification#location_of_fultonham"/>
 </rdf:Description>
 
@@ -260,7 +268,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/notification#description_about_middleburgh">
 	<rdf:type rdf:resource="http://purl.org/ifgi/geodesc#GeographicalDescription"/>
-	<gDesc:describes rdf:resource="http://purl.org/ifgi/notification#middleburgh"/>
+	<dul:describes rdf:resource="http://purl.org/ifgi/notification#middleburgh"/>
 	<gDesc:describedLocation rdf:resource="http://purl.org/ifgi/notification#location_of_middleburgh"/>
 </rdf:Description>
 
@@ -288,7 +296,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/notification#description_about_schoharie">
 	<rdf:type rdf:resource="http://purl.org/ifgi/geodesc#GeographicalDescription"/>
-	<gDesc:describes rdf:resource="http://purl.org/ifgi/notification#schoharie"/>
+	<dul:describes rdf:resource="http://purl.org/ifgi/notification#schoharie"/>
 	<gDesc:describedLocation rdf:resource="http://purl.org/ifgi/notification#location_of_schoharie"/>
 </rdf:Description>
 
@@ -316,7 +324,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/notification#description_about_esperance">
 	<rdf:type rdf:resource="http://purl.org/ifgi/geodesc#GeographicalDescription"/>
-	<gDesc:describes rdf:resource="http://purl.org/ifgi/notification#esperance"/>
+	<dul:describes rdf:resource="http://purl.org/ifgi/notification#esperance"/>
 	<gDesc:describedLocation rdf:resource="http://purl.org/ifgi/notification#location_of_esperance"/>
 </rdf:Description>
 
@@ -344,7 +352,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/notification#description_about_burtonsville">
 	<rdf:type rdf:resource="http://purl.org/ifgi/geodesc#GeographicalDescription"/>
-	<gDesc:describes rdf:resource="http://purl.org/ifgi/notification#esperance"/>
+	<dul:describes rdf:resource="http://purl.org/ifgi/notification#esperance"/>
 	<gDesc:describedLocation rdf:resource="http://purl.org/ifgi/notification#location_of_burtonsville"/>
 </rdf:Description>
 
@@ -372,7 +380,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/notification#description_about_gilboa_dam">
 	<rdf:type rdf:resource="http://purl.org/ifgi/geodesc#GeographicalDescription"/>
-	<gDesc:describes rdf:resource="http://purl.org/ifgi/notification#gilboa_dam"/>
+	<dul:describes rdf:resource="http://purl.org/ifgi/notification#gilboa_dam"/>
 	<gDesc:describedLocation rdf:resource="http://purl.org/ifgi/notification#location_of_gilboa_dam"/>
 </rdf:Description>
 
@@ -384,7 +392,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/notification#altitude_of_gilboa_dam">
 	<rdf:type rdf:resource="http://purl.org/ifgi/geoqualities#altitude"/>
-	<dul:hasDataValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">323</dul:hasDataValue>
+	<dul:hasDataValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">313</dul:hasDataValue>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/notification#state_of_gilboa_dam">
@@ -399,7 +407,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/notification#description_about_prattsville_water_level_sensor">
 	<rdf:type rdf:resource="http://purl.org/ifgi/geodesc#GeographicalDescription"/>
-	<gDesc:describes rdf:resource="http://purl.org/ifgi/notification#prattsville_water_level_sensor"/>
+	<dul:describes rdf:resource="http://purl.org/ifgi/notification#prattsville_water_level_sensor"/>
 	<gDesc:describedLocation rdf:resource="http://purl.org/ifgi/notification#location_of_prattsville_water_level_sensor"/>
 </rdf:Description>
 
@@ -422,7 +430,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/notification#description_about_gilboa_water_level_sensor">
 	<rdf:type rdf:resource="http://purl.org/ifgi/geodesc#GeographicalDescription"/>
-	<gDesc:describes rdf:resource="http://purl.org/ifgi/notification#gilboa_water_level_sensor"/>
+	<dul:describes rdf:resource="http://purl.org/ifgi/notification#gilboa_water_level_sensor"/>
 	<gDesc:describedLocation rdf:resource="http://purl.org/ifgi/notification#location_of_gilboa_water_level_sensor"/>
 </rdf:Description>
 
@@ -445,7 +453,7 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/notification#description_about_breakabeen_water_level_sensor">
 	<rdf:type rdf:resource="http://purl.org/ifgi/geodesc#GeographicalDescription"/>
-	<gDesc:describes rdf:resource="http://purl.org/ifgi/notification#breakabeen_water_level_sensor"/>
+	<dul:describes rdf:resource="http://purl.org/ifgi/notification#breakabeen_water_level_sensor"/>
 	<gDesc:describedLocation rdf:resource="http://purl.org/ifgi/notification#location_of_breakabeen_water_level_sensor"/>
 </rdf:Description>
 
@@ -460,15 +468,15 @@
 	<dul:hasDataValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">226</dul:hasDataValue>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node171mg3vv6x2">
+<rdf:Description rdf:nodeID="node172i9q3oex2">
 	<rdfs:label>http://purl.org/ifgi/notification#predict_flooding_50</rdfs:label>
 	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
 	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?eventobsdesc[_"http://purl.org/ifgi/geodesc#describedLocation" hasValue ?descloc, _"http://purl.org/ifgi/dul#describes" hasValue ?eventobs] memberOf _"http://purl.org/ifgi/event-observation#EventObservationDescription"
  and ?descloc[_"http://purl.org/ifgi/geosparql#asWKT" hasValue ?locvalue] memberOf _"http://purl.org/ifgi/geodesc#LocationDescription"
  and ?eventobs[_"http://purl.org/ifgi/dul#isClassifiedBy" hasValue ?eventobstype] memberOf _"http://purl.org/ifgi/event-observation#EventObservation"
  and ?eventobstype memberOf _"http://purl.org/ifgi/water/flood#ActionStageToMinorFloodingStage"
- and ?predictedeventobsdesc memberOf _"http://purl.org/ifgi/geomodels#PredictedEventObservationDescription"
- and ?predictedeventobs memberOf _"http://purl.org/ifgi/geomodels#PredictedEventObservation"
+ and ?predictedeventobsdesc[_"http://purl.org/ifgi/geodesc#describedLocation" hasValue ?descloc2, _"http://purl.org/ifgi/dul#describes" hasValue ?predictedeventobs, _"http://purl.org/ifgi/geomodels#associatedHazardLevel" hasValue ?hazlevdesc] memberOf _"http://purl.org/ifgi/geomodels#PredictedEventObservationDescription"
+ and ?predictedeventobs[_"http://purl.org/ifgi/geomodels#predicts" hasValue ?event] memberOf _"http://purl.org/ifgi/geomodels#PredictedEventObservation"
  and ?hazlevdesc memberOf _"http://purl.org/ifgi/geomodels#HazardLevelDescription"
  and ?event memberOf _"http://purl.org/ifgi/geoevents#geographical_event"
  and ?descloc2 memberOf _"http://purl.org/ifgi/geodesc#LocationDescription"
@@ -480,15 +488,15 @@
  and ?event memberOf _"http://purl.org/ifgi/water/flood#Flood". </rdf:value>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node171mg3vv6x3">
+<rdf:Description rdf:nodeID="node172i9q3oex3">
 	<rdfs:label>http://purl.org/ifgi/notification#predict_flooding_70</rdfs:label>
 	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
 	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?eventobsdesc[_"http://purl.org/ifgi/geodesc#describedLocation" hasValue ?descloc, _"http://purl.org/ifgi/dul#describes" hasValue ?eventobs] memberOf _"http://purl.org/ifgi/event-observation#EventObservationDescription"
  and ?descloc[_"http://purl.org/ifgi/geosparql#asWKT" hasValue ?locvalue] memberOf _"http://purl.org/ifgi/geodesc#LocationDescription"
  and ?eventobs[_"http://purl.org/ifgi/dul#isClassifiedBy" hasValue ?eventobstype] memberOf _"http://purl.org/ifgi/event-observation#EventObservation"
  and ?eventobstype memberOf _"http://purl.org/ifgi/water/flood#MinorFloodingStageToModerateFloodingStage"
- and ?predictedeventobsdesc memberOf _"http://purl.org/ifgi/geomodels#PredictedEventObservationDescription"
- and ?predictedeventobs memberOf _"http://purl.org/ifgi/geomodels#PredictedEventObservation"
+ and ?predictedeventobsdesc[_"http://purl.org/ifgi/geodesc#describedLocation" hasValue ?descloc2, _"http://purl.org/ifgi/dul#describes" hasValue ?predictedeventobs, _"http://purl.org/ifgi/geomodels#associatedHazardLevel" hasValue ?hazlevdesc] memberOf _"http://purl.org/ifgi/geomodels#PredictedEventObservationDescription"
+ and ?predictedeventobs[_"http://purl.org/ifgi/geomodels#predicts" hasValue ?event] memberOf _"http://purl.org/ifgi/geomodels#PredictedEventObservation"
  and ?hazlevdesc memberOf _"http://purl.org/ifgi/geomodels#HazardLevelDescription"
  and ?event memberOf _"http://purl.org/ifgi/geoevents#geographical_event"
  and ?descloc2 memberOf _"http://purl.org/ifgi/geodesc#LocationDescription"
@@ -500,15 +508,15 @@
  and ?event memberOf _"http://purl.org/ifgi/water/flood#Flood". </rdf:value>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node171mg3vv6x4">
+<rdf:Description rdf:nodeID="node172i9q3oex4">
 	<rdfs:label>http://purl.org/ifgi/notification#predict_flooding_90</rdfs:label>
 	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
 	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?eventobsdesc[_"http://purl.org/ifgi/geodesc#describedLocation" hasValue ?descloc, _"http://purl.org/ifgi/dul#describes" hasValue ?eventobs] memberOf _"http://purl.org/ifgi/event-observation#EventObservationDescription"
  and ?descloc[_"http://purl.org/ifgi/geosparql#asWKT" hasValue ?locvalue] memberOf _"http://purl.org/ifgi/geodesc#LocationDescription"
  and ?eventobs[_"http://purl.org/ifgi/dul#isClassifiedBy" hasValue ?eventobstype] memberOf _"http://purl.org/ifgi/event-observation#EventObservation"
  and ?eventobstype memberOf _"http://purl.org/ifgi/water/flood#ModerateFloodingStageToMajorFloodingStage"
- and ?predictedeventobsdesc memberOf _"http://purl.org/ifgi/geomodels#PredictedEventObservationDescription"
- and ?predictedeventobs memberOf _"http://purl.org/ifgi/geomodels#PredictedEventObservation"
+ and ?predictedeventobsdesc[_"http://purl.org/ifgi/geodesc#describedLocation" hasValue ?descloc2, _"http://purl.org/ifgi/dul#describes" hasValue ?predictedeventobs, _"http://purl.org/ifgi/geomodels#associatedHazardLevel" hasValue ?hazlevdesc] memberOf _"http://purl.org/ifgi/geomodels#PredictedEventObservationDescription"
+ and ?predictedeventobs[_"http://purl.org/ifgi/geomodels#predicts" hasValue ?event] memberOf _"http://purl.org/ifgi/geomodels#PredictedEventObservation"
  and ?hazlevdesc memberOf _"http://purl.org/ifgi/geomodels#HazardLevelDescription"
  and ?event memberOf _"http://purl.org/ifgi/geoevents#geographical_event"
  and ?descloc2 memberOf _"http://purl.org/ifgi/geodesc#LocationDescription"
@@ -520,7 +528,7 @@
  and ?event memberOf _"http://purl.org/ifgi/water/flood#Flood". </rdf:value>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node171mg3vv6x5">
+<rdf:Description rdf:nodeID="node172i9q3oex5">
 	<rdfs:label>http://purl.org/ifgi/notification#change_state_to_flooded</rdfs:label>
 	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
 	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?predictedeventobsdesc[_"http://purl.org/ifgi/geodesc#describedLocation" hasValue ?descloc, _"http://purl.org/ifgi/dul#describes" hasValue ?predictedeventobs, _"http://purl.org/ifgi/geomodels#associatedHazardLevel" hasValue ?hazlevdesc, _"http://purl.org/ifgi/geomodels#hasSource" hasValue ?eventobsdesc] memberOf _"http://purl.org/ifgi/geomodels#PredictedEventObservationDescription"
@@ -529,14 +537,12 @@
  and ?hazlevdesc[_"http://purl.org/ifgi/geomodels#hasHazardLevel" hasValue ?probability] memberOf _"http://purl.org/ifgi/geomodels#HazardLevelDescription"
  and ?event memberOf _"http://purl.org/ifgi/water/flood#Flood"
  and ?probability &gt; 50
- and ?watlevsensdesc[_"http://purl.org/ifgi/geodesc#describes" hasValue ?watlevsens, _"http://purl.org/ifgi/geodesc#describedLocation" hasValue ?watlevsensloc] memberOf _"http://purl.org/ifgi/geodesc#GeographicalDescription"
- and ?watlevsensloc[_"http://purl.org/ifgi/geosparql#asWKT" hasValue ?locvalue2] memberOf _"http://purl.org/ifgi/geodesc#LocationDescription"
- and ?locvalue = ?locvalue2
- and ?watlevsens memberOf _"http://purl.org/ifgi/water/flood#WaterLevelSensor"
- and ?dobj[_"http://purl.org/ifgi/affenv#has_state" hasValue ?state] memberOf _"http://purl.org/ifgi/geospace#geographical_unit"
+ and ?watlevsensdesc[_"http://purl.org/ifgi/dul#describes" hasValue ?watlevsens, _"http://purl.org/ifgi/geodesc#describedLocation" hasValue ?watlevsensloc] memberOf _"http://purl.org/ifgi/geodesc#GeographicalDescription"
+ and ?watlevsensloc[_"http://purl.org/ifgi/geosparql#asWKT" hasValue ?locvalue] memberOf _"http://purl.org/ifgi/geodesc#LocationDescription"
+ and ?watlevsens[_"http://purl.org/ifgi/water/flood#downstream" hasValue ?obj] memberOf _"http://purl.org/ifgi/water/flood#WaterLevelSensor"
+ and ?obj[_"http://purl.org/ifgi/affenv#has_state" hasValue ?state] memberOf _"http://purl.org/ifgi/geospace#geographical_unit"
  and ?dam memberOf _"http://purl.org/ifgi/water/flood#Dam"
- and ?watlevsens[_"http://purl.org/ifgi/water/flood#downstream" hasValue ?dobj]
- and ?dobj[_"http://purl.org/ifgi/water/flood#downstream" hasValue ?dam]
+ and ?watlevsens[_"http://purl.org/ifgi/water/flood#downstream" hasValue ?dam]
  and ?state memberOf _"http://purl.org/ifgi/affenv#state"
  implies 
 ?state memberOf _"http://purl.org/ifgi/notification#flooded". </rdf:value>

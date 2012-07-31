@@ -7,6 +7,7 @@
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns:dul="http://purl.org/ifgi/dul#"
+	xmlns:evob="http://purl.org/ifgi/event-observation#"
 	xmlns:gu="http://purl.org/ifgi/geounits#"
 	xmlns:gq="http://purl.org/ifgi/geoqualities#"
 	xmlns:gs="http://purl.org/ifgi/geospace#"
@@ -14,16 +15,11 @@
 	xmlns:gm="http://purl.org/ifgi/geomodels#"
 	xmlns:oil="http://purl.org/ifgi/oilspill#">
 
-<rdf:Description rdf:nodeID="node16tsjbk2dx83">
+<rdf:Description rdf:nodeID="node173esja1kx1">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>Landslide</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
-	<owl:imports rdf:resource="http://purl.org/ifgi/geounits#"/>
-	<owl:imports rdf:resource="http://purl.org/ifgi/geoqualities#"/>
-	<owl:imports rdf:resource="http://purl.org/ifgi/geospace#"/>
-	<owl:imports rdf:resource="http://purl.org/ifgi/geoevents#"/>
 	<owl:imports rdf:resource="http://purl.org/ifgi/oilspill#"/>
-	<owl:imports rdf:resource="http://purl.org/ifgi/dul#"/>
 	<owl:imports rdf:resource="http://purl.org/ifgi/geomodels#"/>
 	<dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Auriol Degbelo (IFGI)</dc:creator>
 	<dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Henry Michels (IFGI)</dc:contributor>
@@ -153,6 +149,46 @@
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://wordnetweb.princeton.edu/</dc:source>
 </rdf:Description>
 
+<rdf:Description rdf:about="http://purl.org/ifgi/landslide#rain">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/landslide#rain</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geoevents#precipitation"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rain is liquid water in the form of droplets that have condensed from atmospheric water vapor and then precipitated—that is, become heavy enough to fall under gravity.</dc:description>
+	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Rain</dc:source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/landslide#heavyRain">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/landslide#heavyRain</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/event-observation#EventObservationType"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24-hour accumulated rainfall exceeds 50 millimeters with at least one hour of 15 millimeters or above</dc:description>
+	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.cwb.gov.tw/V7e/observe/rainfall/define.htm?</dc:source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/landslide#extremelyHeavyRain">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/landslide#extremelyHeavyRain</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/event-observation#EventObservationType"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24-hour accumulated rainfall exceeds 130 millimeters</dc:description>
+	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.cwb.gov.tw/V7e/observe/rainfall/define.htm?</dc:source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/landslide#torrentialRain">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/landslide#torrentialRain</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/event-observation#EventObservationType"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">if exceeding 200 millimeters in 24 hours</dc:description>
+	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.cwb.gov.tw/V7e/observe/rainfall/define.htm?</dc:source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/landslide#extremelyTorrentialRain">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/landslide#extremelyTorrentialRain</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/event-observation#EventObservationType"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">if exceeding 350 millimeters in 24 hours or more</dc:description>
+	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.cwb.gov.tw/V7e/observe/rainfall/define.htm?</dc:source>
+</rdf:Description>
+
 <rdf:Description rdf:about="http://purl.org/ifgi/landslide#mountain">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/landslide#mountain</rdfs:label>
@@ -224,7 +260,7 @@
 	<rdfs:label>http://purl.org/ifgi/landslide#surfacewater</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/oilspill#water"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">surface water@en</dc:identifier>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oberfl?chenwasser@de</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oberflächenwasser@de</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Surface water is water collecting on the ground or in a stream, river, lake, wetland, or ocean</dc:description>
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Surface_water</dc:source>
 </rdf:Description>
@@ -245,7 +281,7 @@
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geounits#landcover_unit"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">debris@en</dc:identifier>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geroell@de</dc:identifier>
-	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">the remains of geological activity including landslides, volcanic explosions, avalanches, mudflows or Glacial lake outburst floods (J?kulhlaups) and moraine, lahars, and lava eruptions</dc:description>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">the remains of geological activity including landslides, volcanic explosions, avalanches, mudflows or Glacial lake outburst floods (Jökulhlaups) and moraine, lahars, and lava eruptions</dc:description>
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Debris</dc:source>
 </rdf:Description>
 
@@ -423,7 +459,7 @@
 	<rdfs:label>http://purl.org/ifgi/landslide#water_saturation</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dul#Quality"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">water saturation@en</dc:identifier>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wassers?ttigung@de</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wassersättigung@de</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The fraction of water in a given pore space.</dc:description>
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.glossary.oilfield.slb.com/Display.cfm?Term=water%20saturation</dc:source>
 </rdf:Description>
@@ -452,7 +488,7 @@
 	<rdfs:label>http://purl.org/ifgi/landslide#porosity</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dul#Quality"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">porosity@en</dc:identifier>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Poroesit?t@de</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Poroesität@de</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">the property of being porous; being able to absorb fluids</dc:description>
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://wordnetweb.princeton.edu/</dc:source>
 </rdf:Description>
@@ -513,7 +549,7 @@
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dul#Quality"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">angle of repose@en</dc:identifier>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reibungswinkel@de</dc:identifier>
-	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The angle of repose or, more precisely, the critical angle of repose,[1] of a granular material is the steepest angle of descent or dip of the slope relative to the horizontal plane when material on the slope face is on the verge of sliding. This angle is in the range 0??90?.</dc:description>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The angle of repose or, more precisely, the critical angle of repose,[1] of a granular material is the steepest angle of descent or dip of the slope relative to the horizontal plane when material on the slope face is on the verge of sliding. This angle is in the range 0°–90°.</dc:description>
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Angle_of_repose</dc:source>
 </rdf:Description>
 
