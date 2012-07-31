@@ -26,8 +26,7 @@ ontology OilSpill
 		dc#subject hasValue "Oil Spill"	
 	endnfp
 	
-	importsOntology {
-		_"http://purl.org/ifgi/geospace#", 
+	importsOntology { 
 		_"http://purl.org/ifgi/geounits#", 
 		_"http://purl.org/ifgi/geoevents#", 
 		_"http://purl.org/ifgi/geoqualities#",
@@ -75,7 +74,7 @@ ontology OilSpill
 			dc#description hasValue "A slippery or viscous liquid or liquefiable substance not miscible with water. Oils have a high carbon and hydrogen content and are nonpolar substances."
 			dc#source hasValue "http://en.wikipedia.org/wiki/Oil"
 		endAnnotations
-		dul#hasQuality ofType {viscosity, oil_type, tocixity}
+		dul#hasQuality ofType {viscosity, oil_type, toxicity}
 	
 	concept crude_oil subConceptOf oil
 		annotations
@@ -109,13 +108,13 @@ ontology OilSpill
 			dc#description hasValue "Oil type."
 		endAnnotations
 
-	concept amount subConceptOf dul#Quality
-		annotations
-			dc#identifier hasValue "amount@en"
-			dc#identifier hasValue "Menge@de"
-			dc#description hasValue "how much there is or how many there are of something that you can quantify"
-			dc#source hasValue "http://wordnetweb.princeton.edu/"
-		endAnnotations
+	//concept amount subConceptOf dul#Quality
+		//annotations
+			//dc#identifier hasValue "amount@en"
+			//dc#identifier hasValue "Menge@de"
+			//dc#description hasValue "how much there is or how many there are of something that you can quantify"
+			//dc#source hasValue "http://wordnetweb.princeton.edu/"
+		//endAnnotations
 	
 	concept pressure subConceptOf dul#Quality
 		annotations
