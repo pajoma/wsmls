@@ -83,7 +83,8 @@ ontology FloodScenario
 			dc#identifier hasValue "Wasserstandsmesser@de"
 			dc#description hasValue ""
 		endAnnotations
-		gs#nearBy ofType River			
+		gs#nearBy ofType River
+		dul#hasParameter ofType {MinWaterLevel, MaxWaterLevel}		
 		
 	
 	// Parameters
@@ -219,6 +220,18 @@ ontology FloodScenario
 		nfp 
 			dc#identifier hasValue "Water level change@en"
 			dc#description hasValue "Relevant change in the water level of a water body."
+		endnfp
+		
+	concept HighWaterLevel subConceptOf WaterLevelChange
+		nfp
+			dc#identifier hasValue "High water level@en"
+			dc#description hasValue "The level measured at a specific point by a water level sensor exceeds the maximum allowed."
+		endnfp
+		
+	concept LowWaterLevel subConceptOf WaterLevelChange
+		nfp
+			dc#identifier hasValue "Low water level@en"
+			dc#description hasValue "The level measured at a specific point by a water level sensor is below the minimum allowed."
 		endnfp
 	
 	concept NormalStageToActionStage subConceptOf WaterLevelChange
