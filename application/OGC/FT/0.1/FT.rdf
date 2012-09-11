@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:ft="http://purl.org/ifgi/ft#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="file:///POSM/OM/GML.rdf">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://www.opengis.net/geosparql"/>
+  </owl:Ontology>
+  <rdfs:Class rdf:about="http://purl.org/ifgi/ft#FeatureAttribute">
+    <owl:disjointWith rdf:resource="http://www.opengis.net/geosparql#SpatialObject"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Feature attribute</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Feature attribute</skos:prefLabel>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://purl.org/ifgi/ft#FeatureType">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Feature type</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.opengis.net/geosparql#Feature"/>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Feature type</skos:prefLabel>
+  </rdfs:Class>
+  <owl:DatatypeProperty rdf:about="http://purl.org/ifgi/ft#identifier">
+    <rdfs:domain rdf:resource="http://purl.org/ifgi/ft#FeatureType"/>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >identifier</skos:prefLabel>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >identifier</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://purl.org/ifgi/ft#value">
+    <rdfs:domain rdf:resource="http://purl.org/ifgi/ft#FeatureAttribute"/>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >value</skos:prefLabel>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >value</rdfs:label>
+  </owl:DatatypeProperty>
+</rdf:RDF>
+
+<!-- Created with TopBraid -->
