@@ -5,11 +5,11 @@
     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-	xmlns:geo="http://www.opengis.net/geosparql#"
+	xmlns:geo="http://www.opengis.net/ont/geosparql#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-  xml:base="file:///POSM/OM/GML.rdf">
+  xml:base="http://purl.org/ifgi/ft">
   <owl:Ontology rdf:about="">
-    <owl:imports rdf:resource="http://www.opengis.net/geosparql"/>
+    <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
   </owl:Ontology>
   <rdfs:Class rdf:about="http://purl.org/ifgi/ft#FeatureAttribute">
     <owl:disjointWith rdf:resource="http://www.opengis.net/geosparql#SpatialObject"/>
