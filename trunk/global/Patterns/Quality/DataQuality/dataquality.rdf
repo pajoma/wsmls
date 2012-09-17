@@ -12,8 +12,8 @@
 ]>
 
 
-<rdf:RDF xmlns="http://wsmls.googlecode.com/svn/trunk/global/Patterns/Quality/DataQuality/dataqualitymodule.owl#"
-     xml:base="http://wsmls.googlecode.com/svn/trunk/global/Patterns/Quality/DataQuality/dataqualitymodule.owl"
+<rdf:RDF xmlns="http://purl.org/ifgi/patterns/dataquality#"
+     xml:base="http://purl.org/ifgi/patterns/dataquality"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:dataquality="http://www.semanticweb.org/ontologies/dataquality.owl#"
@@ -21,7 +21,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:dataqualitymodule="http://www.semanticweb.org/ontologies/dataqualitymodule.owl#">
-    <owl:Ontology rdf:about="http://wsmls.googlecode.com/svn/trunk/global/Patterns/Quality/DataQuality/dataqualitymodule.owl">
+    <owl:Ontology rdf:about="http://purl.org/ifgi/patterns/dataquality">
         <dc:contributor>Auriol Degbelo &lt;degbelo@uni-muenster.de&gt;</dc:contributor>
         <dc:date>July 31, 2012</dc:date>
         <rdfs:comment>The concepts suggested in this module are not aligned to a foundational ontology because the goal is to provide a simple and readily re-usable set of concepts for semantic annotation. The module aligned to the foundational ontology Dolce Ultra Light (DUL) can be accessed at http://ifgi.uni-muenster.de/~degbelo/Ressources/SSN2012Degbelo. An example of use of the module is provided at http://wsmls.googlecode.com/svn/trunk/global/Patterns/Quality/QualityExample/dataqualityexample.owl.</rdfs:comment>
