@@ -12,8 +12,8 @@
 ]>
 
 
-<rdf:RDF xmlns="http://wsmls.googlecode.com/svn/trunk/global/Patterns/Quality/DataQuality/servicequalitymodule.owl#"
-     xml:base="http://wsmls.googlecode.com/svn/trunk/global/Patterns/Quality/DataQuality/servicequalitymodule.owl"
+<rdf:RDF xmlns="http://purl.org/ifgi/patterns/servicequality#"
+     xml:base="http://purl.org/ifgi/patterns/servicequality"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:dataquality="http://www.semanticweb.org/ontologies/dataquality.owl#"
@@ -21,11 +21,11 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:dataqualitymodule="http://www.semanticweb.org/ontologies/dataqualitymodule.owl#">
-    <owl:Ontology rdf:about="http://wsmls.googlecode.com/svn/trunk/global/Patterns/Quality/DataQuality/servicequalitymodule.owl">
-        <dc:date>July 31, 2012</dc:date>
+    <owl:Ontology rdf:about="http://purl.org/ifgi/patterns/servicequality">
         <rdfs:comment>The concepts suggested in this module are not aligned to a foundational ontology because the goal is to provide a simple and readily re-usable set of concepts for semantic annotation. The module aligned to the foundational ontology Dolce Ultra Light (DUL) can be accessed at http://ifgi.uni-muenster.de/~degbelo/Ressources/SSN2012Degbelo. The module is similar to the &#39;Ontology design pattern for spatial data quality characterization in the Semantic Sensor Web&#39;.</rdfs:comment>
         <dc:contributor>Auriol Degbelo &lt;degbelo@uni-muenster.de&gt;</dc:contributor>
         <dc:title>An ontology design pattern for (web) service quality characterization in the Semantic Sensor Web.</dc:title>
+        <dc:date>July 31, 2012</dc:date>
     </owl:Ontology>
     
 
