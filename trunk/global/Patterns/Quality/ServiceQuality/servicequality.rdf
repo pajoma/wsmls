@@ -1,0 +1,230 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY dataquality "http://www.semanticweb.org/ontologies/dataquality.owl#" >
+    <!ENTITY dataqualitymodule "http://www.semanticweb.org/ontologies/dataqualitymodule.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://wsmls.googlecode.com/svn/trunk/global/Patterns/Quality/DataQuality/servicequalitymodule.owl#"
+     xml:base="http://wsmls.googlecode.com/svn/trunk/global/Patterns/Quality/DataQuality/servicequalitymodule.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dataquality="http://www.semanticweb.org/ontologies/dataquality.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:dataqualitymodule="http://www.semanticweb.org/ontologies/dataqualitymodule.owl#">
+    <owl:Ontology rdf:about="http://wsmls.googlecode.com/svn/trunk/global/Patterns/Quality/DataQuality/servicequalitymodule.owl">
+        <dc:date>July 31, 2012</dc:date>
+        <rdfs:comment>The concepts suggested in this module are not aligned to a foundational ontology because the goal is to provide a simple and readily re-usable set of concepts for semantic annotation. The module aligned to the foundational ontology Dolce Ultra Light (DUL) can be accessed at http://ifgi.uni-muenster.de/~degbelo/Ressources/SSN2012Degbelo. The module is similar to the &#39;Ontology design pattern for spatial data quality characterization in the Semantic Sensor Web&#39;.</rdfs:comment>
+        <dc:contributor>Auriol Degbelo &lt;degbelo@uni-muenster.de&gt;</dc:contributor>
+        <dc:title>An ontology design pattern for (web) service quality characterization in the Semantic Sensor Web.</dc:title>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&dc;contributor"/>
+    <owl:AnnotationProperty rdf:about="&dc;date"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    <owl:AnnotationProperty rdf:about="&dc;title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/dataquality.owl#approximates -->
+
+    <owl:ObjectProperty rdf:about="&dataquality;approximates">
+        <rdfs:comment>a relation between a service quality assessment operation and the service quality component that is assessed.</rdfs:comment>
+        <rdfs:range rdf:resource="&dataquality;ServiceQualityComponent"/>
+        <rdfs:domain rdf:resource="&dataquality;ServiceQualityObservation"/>
+        <owl:inverseOf rdf:resource="&dataqualitymodule;isApproximatedBy"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/dataquality.owl#involves -->
+
+    <owl:ObjectProperty rdf:about="&dataquality;involves">
+        <rdfs:comment>this property relates a service quality assessment operation to the result of the operation.</rdfs:comment>
+        <rdfs:domain rdf:resource="&dataquality;ServiceQualityObservation"/>
+        <rdfs:range rdf:resource="&dataquality;ServiceQualityResult"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/dataquality.owl#isQualityComponentOf -->
+
+    <owl:ObjectProperty rdf:about="&dataquality;isQualityComponentOf">
+        <rdfs:comment>a relation between a component of web service quality (e.g. reliability, robustness) and the web service.</rdfs:comment>
+        <rdfs:range rdf:resource="&dataquality;Service"/>
+        <rdfs:domain rdf:resource="&dataquality;ServiceQualityComponent"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/dataquality.owl#satisfies -->
+
+    <owl:ObjectProperty rdf:about="&dataquality;satisfies">
+        <rdfs:comment>a service quality assessment should conform to a criterion defined by the web service consumer. This property makes explicit the criterion used while assigning a value to a service quality component.</rdfs:comment>
+        <rdfs:range rdf:resource="&dataquality;ServiceQualityCriterion"/>
+        <rdfs:domain rdf:resource="&dataquality;ServiceQualityObservation"/>
+        <owl:inverseOf rdf:resource="&dataqualitymodule;isQualityCriterionOf"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/dataqualitymodule.owl#hasQualityComponent -->
+
+    <owl:ObjectProperty rdf:about="&dataqualitymodule;hasQualityComponent">
+        <rdfs:comment>inverse property of &#39;isPropertyOf&#39;.</rdfs:comment>
+        <owl:inverseOf rdf:resource="&dataquality;isQualityComponentOf"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/dataqualitymodule.owl#isApproximatedBy -->
+
+    <owl:ObjectProperty rdf:about="&dataqualitymodule;isApproximatedBy">
+        <rdfs:comment>inverse property of &#39;approximates&#39;.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/dataqualitymodule.owl#isQualityCriterionOf -->
+
+    <owl:ObjectProperty rdf:about="&dataqualitymodule;isQualityCriterionOf">
+        <rdfs:comment>inverse property of &#39;satisfies&#39;.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/dataqualitymodule.owl#isResultOf -->
+
+    <owl:ObjectProperty rdf:about="&dataqualitymodule;isResultOf">
+        <rdfs:comment>inverse property of &#39;involves&#39;.</rdfs:comment>
+        <owl:inverseOf rdf:resource="&dataquality;involves"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="&owl;topObjectProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/dataquality.owl#hasValue -->
+
+    <owl:DatatypeProperty rdf:about="&dataquality;hasValue">
+        <rdfs:comment>a relation between a service quality observation (or service quality assessment operation) and the result of the service quality assessment operation</rdfs:comment>
+        <rdfs:domain rdf:resource="&dataquality;ServiceQualityResult"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="&owl;topDataProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/dataquality.owl#Service -->
+
+    <owl:Class rdf:about="&dataquality;Service">
+        <rdfs:comment>A web service</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/dataquality.owl#ServiceQualityComponent -->
+
+    <owl:Class rdf:about="&dataquality;ServiceQualityComponent">
+        <rdfs:comment>A service quality component is any property of the service that the consumer wants to approximate. Examples of service quality components are the reliability or the robustness of the web service. </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/dataquality.owl#ServiceQualityCriterion -->
+
+    <owl:Class rdf:about="&dataquality;ServiceQualityCriterion">
+        <rdfs:comment>A service quality criterion is a criterion defined by the service consumer as meaningful to get information about the quality of the web service. It is a measure that helps to approximate the value of the service quality component.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/dataquality.owl#ServiceQualityObservation -->
+
+    <owl:Class rdf:about="&dataquality;ServiceQualityObservation">
+        <rdfs:comment>A service quality observation is an operation by which a service quality value is assigned to a service quality component using a (service) quality criterion.  </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/dataquality.owl#ServiceQualityResult -->
+
+    <owl:Class rdf:about="&dataquality;ServiceQualityResult">
+        <rdfs:comment>The result is the outcome of a service quality assessment operation.</rdfs:comment>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.0.0.1469) http://owlapi.sourceforge.net -->
+
