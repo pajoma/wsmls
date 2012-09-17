@@ -1,0 +1,230 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY dataquality "http://www.semanticweb.org/ontologies/dataquality.owl#" >
+    <!ENTITY dataqualitymodule "http://www.semanticweb.org/ontologies/dataqualitymodule.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://wsmls.googlecode.com/svn/trunk/global/Patterns/Quality/DataQuality/dataqualitymodule.owl#"
+     xml:base="http://wsmls.googlecode.com/svn/trunk/global/Patterns/Quality/DataQuality/dataqualitymodule.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dataquality="http://www.semanticweb.org/ontologies/dataquality.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:dataqualitymodule="http://www.semanticweb.org/ontologies/dataqualitymodule.owl#">
+    <owl:Ontology rdf:about="http://wsmls.googlecode.com/svn/trunk/global/Patterns/Quality/DataQuality/dataqualitymodule.owl">
+        <dc:contributor>Auriol Degbelo &lt;degbelo@uni-muenster.de&gt;</dc:contributor>
+        <dc:date>July 31, 2012</dc:date>
+        <rdfs:comment>The concepts suggested in this module are not aligned to a foundational ontology because the goal is to provide a simple and readily re-usable set of concepts for semantic annotation. The module aligned to the foundational ontology Dolce Ultra Light (DUL) can be accessed at http://ifgi.uni-muenster.de/~degbelo/Ressources/SSN2012Degbelo. An example of use of the module is provided at http://wsmls.googlecode.com/svn/trunk/global/Patterns/Quality/QualityExample/dataqualityexample.owl.</rdfs:comment>
+        <dc:title>An ontology design pattern for spatial data quality characterization in the Semantic Sensor Web.</dc:title>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&dc;contributor"/>
+    <owl:AnnotationProperty rdf:about="&dc;date"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    <owl:AnnotationProperty rdf:about="&dc;title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/dataquality.owl#approximates -->
+
+    <owl:ObjectProperty rdf:about="&dataquality;approximates">
+        <rdfs:comment>a relation between a data quality assessment operation and the data quality component that is assessed.</rdfs:comment>
+        <rdfs:range rdf:resource="&dataquality;DataQualityComponent"/>
+        <rdfs:domain rdf:resource="&dataquality;DataQualityObservation"/>
+        <owl:inverseOf rdf:resource="&dataqualitymodule;isApproximatedBy"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/dataquality.owl#involves -->
+
+    <owl:ObjectProperty rdf:about="&dataquality;involves">
+        <rdfs:comment>this property relates a data quality assessment operation to the result of the operation.</rdfs:comment>
+        <rdfs:domain rdf:resource="&dataquality;DataQualityObservation"/>
+        <rdfs:range rdf:resource="&dataquality;DataQualityResult"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/dataquality.owl#isQualityComponentOf -->
+
+    <owl:ObjectProperty rdf:about="&dataquality;isQualityComponentOf">
+        <rdfs:comment>a relation between a component of spatial data quality (e.g. accuracy, resolution) and the data.</rdfs:comment>
+        <rdfs:range rdf:resource="&dataquality;Data"/>
+        <rdfs:domain rdf:resource="&dataquality;DataQualityComponent"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/dataquality.owl#satisfies -->
+
+    <owl:ObjectProperty rdf:about="&dataquality;satisfies">
+        <rdfs:comment>a data quality assessment should conform to a criterion defined by the data consumer. This property makes explicit the criterion used while assigning a value to a data quality component.</rdfs:comment>
+        <rdfs:range rdf:resource="&dataquality;DataQualityCriterion"/>
+        <rdfs:domain rdf:resource="&dataquality;DataQualityObservation"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/dataqualitymodule.owl#hasQualityComponent -->
+
+    <owl:ObjectProperty rdf:about="&dataqualitymodule;hasQualityComponent">
+        <rdfs:comment>inverse property of &#39;isPropertyOf&#39;.</rdfs:comment>
+        <owl:inverseOf rdf:resource="&dataquality;isQualityComponentOf"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/dataqualitymodule.owl#isApproximatedBy -->
+
+    <owl:ObjectProperty rdf:about="&dataqualitymodule;isApproximatedBy">
+        <rdfs:comment>inverse property of &#39;approximates&#39;.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/dataqualitymodule.owl#isQualityCriterionOf -->
+
+    <owl:ObjectProperty rdf:about="&dataqualitymodule;isQualityCriterionOf">
+        <rdfs:comment>inverse property of &#39;satisfies&#39;.</rdfs:comment>
+        <owl:inverseOf rdf:resource="&dataquality;satisfies"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/dataqualitymodule.owl#isResultOf -->
+
+    <owl:ObjectProperty rdf:about="&dataqualitymodule;isResultOf">
+        <rdfs:comment>inverse property of &#39;involves&#39;.</rdfs:comment>
+        <owl:inverseOf rdf:resource="&dataquality;involves"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="&owl;topObjectProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/dataquality.owl#hasValue -->
+
+    <owl:DatatypeProperty rdf:about="&dataquality;hasValue">
+        <rdfs:comment>a relation between a data quality observation (or data quality assessment operation) and the result of the data quality assessment operation</rdfs:comment>
+        <rdfs:domain rdf:resource="&dataquality;DataQualityResult"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="&owl;topDataProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/dataquality.owl#Data -->
+
+    <owl:Class rdf:about="&dataquality;Data">
+        <rdfs:comment>Data is the output of an observation process involving a sensor, a stimulus, a sensed property and a feature. It is equivalent to the class Observation as defined in the ontology of the W3C&#39;s Semantic Sensor Networks Incubator Group (see the definition of &#39;Observation&#39; at http://purl.oclc.org/NET/ssnx/ssn). Data as used in this ontology refers to spatial data.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/dataquality.owl#DataQualityComponent -->
+
+    <owl:Class rdf:about="&dataquality;DataQualityComponent">
+        <rdfs:comment>A data quality component is any property of the data that the consumer wants to approximate. Data quality components refer only to aspects of spatial data quality. Examples of data quality components are the accuracy or the resolution of the data. </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/dataquality.owl#DataQualityCriterion -->
+
+    <owl:Class rdf:about="&dataquality;DataQualityCriterion">
+        <rdfs:comment>A data quality criterion is a criterion defined by the data consumer as meaningful to get information about the quality of the data. It is a measure that helps to approximate the  value of the data quality component.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/dataquality.owl#DataQualityObservation -->
+
+    <owl:Class rdf:about="&dataquality;DataQualityObservation">
+        <rdfs:comment>A data quality observation is an operation by which a data quality value is assigned to a data quality component using a data quality criterion. Data quality as used in this ontology refers only to spatial data quality aspects.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/dataquality.owl#DataQualityResult -->
+
+    <owl:Class rdf:about="&dataquality;DataQualityResult">
+        <rdfs:comment>The result is the outcome of a data quality assessment operation.</rdfs:comment>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.0.0.1469) http://owlapi.sourceforge.net -->
+
