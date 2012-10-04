@@ -4,15 +4,18 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix : <http://purl.org/ifgi/geodesc#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix dul: <http://purl.org/ifgi/dul#> .
+@prefix evob: <http://purl.org/ifgi/event-observation#> .
 @prefix gspace: <http://purl.org/ifgi/geospace#> .
+@prefix ge: <http://purl.org/ifgi/geoevents#> .
+@prefix annot: <http://purl.org/ifgi/annotations#> .
 @prefix geosparql: <http://purl.org/ifgi/geosparql#> .
-@prefix time: <http://purl.org/ifgi/time#> .
+@prefix gml: <http://purl.org/ifgi/gml/0.2#> .
+@prefix om: <http://purl.org/ifgi/om#> .
 
-_:node16vqea1e0x2 a owl:Ontology ;
+_:node178m854p7x4 a owl:Ontology ;
 	rdfs:label "geographic_descriptions" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
-	owl:imports <http://purl.org/ifgi/geosparql#> , <http://purl.org/ifgi/dul#> , <http://purl.org/ifgi/geospace#> , <http://purl.org/ifgi/time#> ;
+	owl:imports <http://purl.org/ifgi/geosparql#> , <http://purl.org/ifgi/om#> , <http://purl.org/ifgi/geospace#> , <http://purl.org/ifgi/gml/0.2#> , <http://purl.org/ifgi/annotations#> , <http://purl.org/ifgi/geoevents#> , <http://purl.org/ifgi/event-observation#> ;
 	dc:creator "p.maue (ifgi)"^^xsd:string ;
 	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
 	dc:rights "http://creativecommons.org/licenses/by/3.0/"^^xsd:string ;
@@ -23,50 +26,45 @@ _:node16vqea1e0x2 a owl:Ontology ;
 
 :SituationDescription a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/geodesc#SituationDescription" ;
-	rdfs:subClassOf dul:Description ;
+	rdfs:subClassOf gml:SpatioTemporalFeature ;
 	dc:identifier "situation description@en"^^xsd:string , "Situationsbeschreibung@de"^^xsd:string ;
-	dc:description "Description of a situation, e.g. event or observation."^^xsd:string .
+	dc:description "Description of a situation, e.g. event."^^xsd:string .
 
-:SituationDescription_prop_describes a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/dul#describes" ;
+:SituationDescription_prop_domainReference a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/annotations#domainReference" ;
 	rdfs:domain :SituationDescription ;
 	a rdf:Property ;
-	rdfs:range dul:Situation ;
-	rdfs:subPropertyOf dul:describes .
-
-:SituationDescription_prop_describedLocation a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/geodesc#describedLocation" ;
-	rdfs:domain :SituationDescription ;
-	a rdf:Property ;
-	rdfs:range :LocationDescription .
+	rdfs:range ge:geographical_event ;
+	rdfs:subPropertyOf annot:domainReference .
 
 :GeographicalDescription a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/geodesc#GeographicalDescription" ;
-	rdfs:subClassOf dul:Description ;
+	rdfs:subClassOf geosparql:Feature ;
 	dc:identifier "geographical description@en"^^xsd:string , "geographische Beschreibung@de"^^xsd:string ;
 	dc:description "Description of a geographical unit."^^xsd:string .
 
-:GeographicalDescription_prop_describes a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/dul#describes" ;
+:GeographicalDescription_prop_domainReference a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/annotations#domainReference" ;
 	rdfs:domain :GeographicalDescription ;
 	a rdf:Property ;
 	rdfs:range gspace:geographical_unit ;
-	rdfs:subPropertyOf dul:describes .
+	rdfs:subPropertyOf annot:domainReference .
 
-:GeographicalDescription_prop_describedLocation a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/geodesc#describedLocation" ;
-	rdfs:domain :GeographicalDescription ;
+:ObservationDescription a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geodesc#ObservationDescription" ;
+	rdfs:subClassOf gml:SpatioTemporalFeature ;
+	dc:identifier "situation description@en"^^xsd:string , "Situationsbeschreibung@de"^^xsd:string ;
+	dc:description "Description of a situation, e.g. event."^^xsd:string .
+
+:ObservationDescription_prop_domainReference a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/annotations#domainReference" ;
+	rdfs:domain :ObservationDescription ;
 	a rdf:Property ;
-	rdfs:range :LocationDescription .
+	rdfs:range evob:EventObservation ;
+	rdfs:subPropertyOf annot:domainReference .
 
-:LocationDescription a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/geodesc#LocationDescription" ;
-	rdfs:subClassOf geosparql:Geometry , time:TemporalEntity , dul:Description ;
-	dc:identifier "location description@en"^^xsd:string , "Standortbeschreibung@de"^^xsd:string ;
-	dc:description "Description of spatio-temporal location of a geographic unit."^^xsd:string .
-
-:LocationDescription_prop_isRelatedToDescription a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/geodesc#isRelatedToDescription" ;
-	rdfs:domain :LocationDescription ;
+:ObservationDescription_prop_derivedFrom a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/geodesc#derivedFrom" ;
+	rdfs:domain :ObservationDescription ;
 	a rdf:Property ;
-	rdfs:range dul:Description .
+	rdfs:range om:ObservationCollection .

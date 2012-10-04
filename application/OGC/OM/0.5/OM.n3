@@ -5,12 +5,12 @@
 @prefix : <http://purl.org/ifgi/om#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix gml: <http://purl.org/ifgi/gml/0.2#> .
-@prefix ssn: <http://purl.org/ifgi/ssn#> .
+@prefix geosparql: <http://purl.org/ifgi/geosparql#> .
 
-_:node16tsjbk2dx12 a owl:Ontology ;
+_:node178m854p7x2 a owl:Ontology ;
 	rdfs:label "ObservationsAndMeasurements" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
-	owl:imports <http://purl.org/ifgi/gml/0.2#> , <http://purl.org/ifgi/ssn#> ;
+	owl:imports <http://purl.org/ifgi/gml/0.2#> , <http://purl.org/ifgi/geosparql#> ;
 	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
 	dc:date "2012-01-27"^^xsd:string ;
 	dc:rights "http://creativecommons.org/licenses/by/3.0/"^^xsd:string ;
@@ -26,32 +26,30 @@ _:node16tsjbk2dx12 a owl:Ontology ;
 
 :Observation a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/om#Observation" ;
-	rdfs:subClassOf gml:SpatioTemporalFeature , ssn:Observation ;
+	rdfs:subClassOf gml:SpatioTemporalFeature ;
 	dc:identifier "observation@en"^^xsd:string .
 
 :Sensor a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/om#Sensor" ;
-	rdfs:subClassOf ssn:Sensor ;
+	rdfs:subClassOf geosparql:Feature ;
 	dc:identifier "sensor@en"^^xsd:string .
 
 :Property a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/om#Property" ;
-	rdfs:subClassOf ssn:Property ;
+	rdfs:subClassOf gml:FeatureProperty ;
 	dc:identifier "property@en"^^xsd:string .
 
 :FeatureOfInterest a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/om#FeatureOfInterest" ;
-	rdfs:subClassOf ssn:FeatureOfInterest ;
+	rdfs:subClassOf geosparql:Feature ;
 	dc:identifier "feature of interest@en"^^xsd:string .
 
 :SensorOutput a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/om#SensorOutput" ;
-	rdfs:subClassOf ssn:SensorOutput ;
 	dc:identifier "sensor output@en"^^xsd:string .
 
 :ObservationValue a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/om#ObservationValue" ;
-	rdfs:subClassOf ssn:ObservationValue ;
 	dc:identifier "observation value@en"^^xsd:string .
 
 :member a rdf:Property ;
@@ -68,3 +66,19 @@ _:node16tsjbk2dx12 a owl:Ontology ;
 	rdfs:domain :ObservationValue ;
 	rdfs:range xsd:string ;
 	dc:identifier "has quantity value@en"^^xsd:string .
+
+:observedProperty a rdf:Property ;
+	rdfs:domain :Observation ;
+	rdfs:range :Property ;
+	rdfs:subPropertyOf gml:hasProperty ;
+	dc:identifier "observed Property@en"^^xsd:string .
+
+:featureOfInterest a rdf:Property ;
+	rdfs:domain :Observation ;
+	rdfs:range :FeatureOfInterest ;
+	dc:identifier "feature of interest@en"^^xsd:string .
+
+:observationResult a rdf:Property ;
+	rdfs:domain :Observation ;
+	rdfs:range :ObservationValue ;
+	dc:identifier "observation result@en"^^xsd:string .
