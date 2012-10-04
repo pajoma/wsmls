@@ -2,7 +2,7 @@ wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
 namespace { _"http://purl.org/ifgi/om#",
 dc _"http://purl.org/dc/elements/1.1/", 
 gml _"http://purl.org/ifgi/gml/0.2#",
-geosparql _"http://purl.org/ifgi/geosparql#"
+geosparql _"http://purl.org/ifgi/geosparql#",
 xsd _"http://www.w3.org/2001/XMLSchema#"
  }
 
