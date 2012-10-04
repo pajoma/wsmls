@@ -10,10 +10,10 @@
 @prefix ge: <http://purl.org/ifgi/geoevents#> .
 @prefix gq: <http://purl.org/ifgi/geoqualities#> .
 
-_:node16tsjbk2dx98 a owl:Ontology ;
+_:node178libo3fx18 a owl:Ontology ;
 	rdfs:label "OilSpill" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
-	owl:imports <http://purl.org/ifgi/geospace#> , <http://purl.org/ifgi/geounits#> , <http://purl.org/ifgi/geoevents#> , <http://purl.org/ifgi/geoqualities#> , <http://purl.org/ifgi/dul#> ;
+	owl:imports <http://purl.org/ifgi/geounits#> , <http://purl.org/ifgi/geoevents#> , <http://purl.org/ifgi/geoqualities#> , <http://purl.org/ifgi/dul#> ;
 	dc:creator "Marcell Roth (IFGI)"^^xsd:string ;
 	dc:contributor "Henry Michels (IFGI)"^^xsd:string , "Alejandro Llaves (IFGI)"^^xsd:string ;
 	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
@@ -21,13 +21,13 @@ _:node16tsjbk2dx98 a owl:Ontology ;
 	dc:rights "http://creativecommons.org/licenses/by/3.0/"^^xsd:string ;
 	dc:type "Domain Ontology"^^xsd:string ;
 	dc:title "Domain Ontology for Oil Spill Scenario"^^xsd:string ;
-	dc:description "Created by University of M?nster. WSML code implemented by Marcell Roth"^^xsd:string ;
+	dc:description "Created by University of M�nster. WSML code implemented by Marcell Roth"^^xsd:string ;
 	dc:subject "Oil Spill"^^xsd:string .
 
 :oil_spill a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/oilspill#oil_spill" ;
 	rdfs:subClassOf ge:geographical_event ;
-	dc:identifier "?lverschmutzung@de"^^xsd:string , "oil spill@en"^^xsd:string ;
+	dc:identifier "�lverschmutzung@de"^^xsd:string , "oil spill@en"^^xsd:string ;
 	dc:description "An oil spill is a release of oil into the ocean or coastal waters due to human activity. Oil spills include releases of crude oil from tankers, offshore platforms, drilling rigs and wells, as well as spills of refined petroleum products (such as gasoline, diesel) and their by-products, and heavier fuels used by large ships such as bunker fuel, or the spill of any oily refuse or waste oil."^^xsd:string ;
 	dc:source "http://en.wikipedia.org/wiki/Oil_spill"^^xsd:string .
 
@@ -82,7 +82,7 @@ _:node16tsjbk2dx98 a owl:Ontology ;
 :oil a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/oilspill#oil" ;
 	rdfs:subClassOf dul:Substance ;
-	dc:identifier "?l@de"^^xsd:string , "oil@en"^^xsd:string ;
+	dc:identifier "�l@de"^^xsd:string , "oil@en"^^xsd:string ;
 	dc:description "A slippery or viscous liquid or liquefiable substance not miscible with water. Oils have a high carbon and hydrogen content and are nonpolar substances."^^xsd:string ;
 	dc:source "http://en.wikipedia.org/wiki/Oil"^^xsd:string .
 
@@ -90,24 +90,24 @@ _:node16tsjbk2dx98 a owl:Ontology ;
 	rdfs:label "http://purl.org/ifgi/dul#hasQuality" ;
 	rdfs:domain :oil ;
 	a rdf:Property ;
+	rdfs:range :toxicity ;
+	a rdf:Property ;
 	rdfs:range :viscosity ;
 	a rdf:Property ;
 	rdfs:range :oil_type ;
-	a rdf:Property ;
-	rdfs:range :tocixity ;
 	rdfs:subPropertyOf dul:hasQuality .
 
 :crude_oil a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/oilspill#crude_oil" ;
 	rdfs:subClassOf :oil ;
-	dc:identifier "Erd?l@de"^^xsd:string , "crude oil@en"^^xsd:string ;
+	dc:identifier "Erd�l@de"^^xsd:string , "crude oil@en"^^xsd:string ;
 	dc:description "Crude oil or petroleum is a naturally occurring, inflammable dark oil consisting mainly of hydrocarbons. It is found in geologic formations beneath the Earth's surface."^^xsd:string ;
 	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
 :black_oil a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/oilspill#black_oil" ;
 	rdfs:subClassOf :oil ;
-	dc:identifier "Rohschmier?l@de"^^xsd:string , "black oil@en"^^xsd:string ;
+	dc:identifier "Rohschmier�l@de"^^xsd:string , "black oil@en"^^xsd:string ;
 	dc:description "Low-grade, black petroleum oil used to lubricate slow-moving or rough-surfaced machinery"^^xsd:string ;
 	dc:source "http://www.answers.com/topic/black-oil"^^xsd:string .
 
@@ -118,25 +118,11 @@ _:node16tsjbk2dx98 a owl:Ontology ;
 	dc:description "The simplest method of determining the velocity of a current involves an observer, a floating object or drifter, and a timing device. An observer then divides the distance the object traveled by the time it took the object to travel that distance, which equals the speed of the current."^^xsd:string ;
 	dc:source "http://oceanservice.noaa.gov/education/kits/currents/07measure1.html"^^xsd:string .
 
-:sea_current_speed_prop_isQualityOf a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/dul#isQualityOf" ;
-	rdfs:domain :sea_current_speed ;
-	a rdf:Property ;
-	rdfs:range ge:sea_current ;
-	rdfs:subPropertyOf dul:isQualityOf .
-
 :oil_type a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/oilspill#oil_type" ;
 	rdfs:subClassOf dul:Quality ;
 	dc:identifier "oil type@en"^^xsd:string ;
 	dc:description "Oil type."^^xsd:string .
-
-:amount a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/oilspill#amount" ;
-	rdfs:subClassOf dul:Quality ;
-	dc:identifier "amount@en"^^xsd:string , "Menge@de"^^xsd:string ;
-	dc:description "how much there is or how many there are of something that you can quantify"^^xsd:string ;
-	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
 :pressure a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/oilspill#pressure" ;
@@ -166,28 +152,12 @@ _:node16tsjbk2dx98 a owl:Ontology ;
 	dc:description "Wind speed or wind velocity is the speed of wind, the movement of air or other gases in an atmosphere."^^xsd:string ;
 	dc:source "http://en.wikipedia.org/wiki/Wind_speed"^^xsd:string .
 
-:wind_speed_prop_isQualityOf a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/dul#isQualityOf" ;
-	rdfs:domain :wind_speed ;
-	a rdf:Property ;
-	rdfs:range ge:wind ;
-	rdfs:subPropertyOf dul:isQualityOf .
-
 :direction a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/oilspill#direction" ;
 	rdfs:subClassOf dul:Quality ;
 	dc:identifier "Richtung@de"^^xsd:string , "direction@en"^^xsd:string ;
 	dc:description "Direction is the information contained in the relative position of one object with respect to another object without the distance information. Directions may be either relative to some indicated reference (the violins in a full orchestra are typically seated to the left of the conductor), or absolute according to some previously agreed upon frame of reference (New York City lies due west of Madrid)."^^xsd:string ;
 	dc:source "http://en.wikipedia.org/wiki/Direction_(geometry)"^^xsd:string .
-
-:direction_prop_isQualityOf a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/dul#isQualityOf" ;
-	rdfs:domain :direction ;
-	a rdf:Property ;
-	rdfs:range ge:sea_current ;
-	a rdf:Property ;
-	rdfs:range ge:wind ;
-	rdfs:subPropertyOf dul:isQualityOf .
 
 :temperature a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/oilspill#temperature" ;
@@ -213,7 +183,7 @@ _:node16tsjbk2dx98 a owl:Ontology ;
 :viscosity a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/oilspill#viscosity" ;
 	rdfs:subClassOf dul:Quality ;
-	dc:identifier "Viskosit?t@de"^^xsd:string , "viscosity@en"^^xsd:string ;
+	dc:identifier "Viskosit�t@de"^^xsd:string , "viscosity@en"^^xsd:string ;
 	dc:description "Resistance of a liquid to shear forces (and hence to flow)."^^xsd:string ;
 	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
@@ -290,14 +260,14 @@ _:node16tsjbk2dx98 a owl:Ontology ;
 :carrying_capacity a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/oilspill#carrying_capacity" ;
 	rdfs:subClassOf dul:Quality ;
-	dc:identifier "Ladekapazit?t@de"^^xsd:string , "carrying capacity@en"^^xsd:string ;
+	dc:identifier "Ladekapazit�t@de"^^xsd:string , "carrying capacity@en"^^xsd:string ;
 	dc:description "capacity of a cargo-space"^^xsd:string ;
 	dc:source "(Henry)"^^xsd:string .
 
 :tankage a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/oilspill#tankage" ;
 	rdfs:subClassOf :carrying_capacity ;
-	dc:identifier "Fassungsverm?gen@de"^^xsd:string , "tankage@en"^^xsd:string ;
+	dc:identifier "Fassungsverm�gen@de"^^xsd:string , "tankage@en"^^xsd:string ;
 	dc:description "The capacity of a tank or tanks."^^xsd:string ;
 	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
@@ -311,7 +281,7 @@ _:node16tsjbk2dx98 a owl:Ontology ;
 :size a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/oilspill#size" ;
 	rdfs:subClassOf dul:Quality ;
-	dc:identifier "Gr??e@de"^^xsd:string , "size@en"^^xsd:string ;
+	dc:identifier "Gr��e@de"^^xsd:string , "size@en"^^xsd:string ;
 	dc:description "The physical magnitude of something such as length or mass (how big it is)."^^xsd:string ;
 	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
@@ -325,21 +295,21 @@ _:node16tsjbk2dx98 a owl:Ontology ;
 :lethality a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/oilspill#lethality" ;
 	rdfs:subClassOf dul:Quality ;
-	dc:identifier "Letalit?t@de"^^xsd:string , "lethality@en"^^xsd:string ;
+	dc:identifier "Letalit�t@de"^^xsd:string , "lethality@en"^^xsd:string ;
 	dc:description "The quality of being deadly. It is the ratio of deaths within a designated population with a particular condition, over a certain period of time."^^xsd:string ;
 	dc:source "http://en.wikipedia.org/wiki/Case_fatality_rate"^^xsd:string .
 
 :population_size a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/oilspill#population_size" ;
 	rdfs:subClassOf :size ;
-	dc:identifier "Bev?lkerungszahl@de"^^xsd:string , "population size@en"^^xsd:string ;
+	dc:identifier "Bev�lkerungszahl@de"^^xsd:string , "population size@en"^^xsd:string ;
 	dc:description "The number of individual organisms in a population."^^xsd:string ;
 	dc:source "http://en.wikipedia.org/wiki/Population_size"^^xsd:string .
 
 :water_column a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/oilspill#water_column" ;
 	rdfs:subClassOf gu:waterbody ;
-	dc:identifier "Wassers?ule@de"^^xsd:string , "water column@en"^^xsd:string ;
+	dc:identifier "Wassers�ule@de"^^xsd:string , "water column@en"^^xsd:string ;
 	dc:description "A water column is a conceptual column of water from surface to bottom sediments. This concept is used chiefly for environmental studies evaluating the stratification or mixing (e.g. by wind induced currents) of the thermal or chemically stratified layers in a lake, stream or ocean."^^xsd:string ;
 	dc:source "http://en.wikipedia.org/wiki/Water_column"^^xsd:string .
 
@@ -374,7 +344,7 @@ _:node16tsjbk2dx98 a owl:Ontology ;
 :oil_slick a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/oilspill#oil_slick" ;
 	rdfs:subClassOf gs:geographical_unit ;
-	dc:identifier "?lschlick@de"^^xsd:string , "oil slick@en"^^xsd:string ;
+	dc:identifier "�lschlick@de"^^xsd:string , "oil slick@en"^^xsd:string ;
 	dc:description "A thin film of oil floating on top of water (especially crude oil spilled from a ship)"^^xsd:string ;
 	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
@@ -421,14 +391,14 @@ _:node16tsjbk2dx98 a owl:Ontology ;
 :coastal_terrestrial_unit a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/oilspill#coastal_terrestrial_unit" ;
 	rdfs:subClassOf :terrestrial_unit ;
-	dc:identifier "K?stenlandeinheit@de"^^xsd:string , "coastal terrestrial unit@en"^^xsd:string ;
+	dc:identifier "K�stenlandeinheit@de"^^xsd:string , "coastal terrestrial unit@en"^^xsd:string ;
 	dc:description "A TerrestrialUnit that is near the sea."^^xsd:string ;
 	dc:source "http://irtg.ifgi.de/students/jens-ortmann/#thesis"^^xsd:string .
 
 :coast a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/oilspill#coast" ;
 	rdfs:subClassOf :coastal_terrestrial_unit ;
-	dc:identifier "K?ste@de"^^xsd:string , "coast@en"^^xsd:string ;
+	dc:identifier "K�ste@de"^^xsd:string , "coast@en"^^xsd:string ;
 	dc:description "The shore of a sea or ocean. It is where the land meets the sea or ocean."^^xsd:string ;
 	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
@@ -608,7 +578,6 @@ _:node16tsjbk2dx98 a owl:Ontology ;
 
 :gadus a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/oilspill#gadus" ;
-	rdfs:subClassOf :gadoid ;
 	dc:identifier "gadus@en"^^xsd:string , "Dorsch@de"^^xsd:string ;
 	dc:description "Gadus is a cod. See also concept \"Cod\"."^^xsd:string ;
 	dc:source "http://en.wikipedia.org/wiki/Cod"^^xsd:string .

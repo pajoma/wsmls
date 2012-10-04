@@ -4,10 +4,12 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix : <http://purl.org/ifgi/geosparql#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dul: <http://purl.org/ifgi/dul#> .
 
-_:node16tsjbk2dx6 a owl:Ontology ;
+_:node178libo3fx2 a owl:Ontology ;
 	rdfs:label "GeoSPARQL" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
+	owl:imports <http://purl.org/ifgi/dul#> ;
 	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
 	dc:date "2012-02-07"^^xsd:string ;
 	dc:rights "http://creativecommons.org/licenses/by/3.0/"^^xsd:string ;
@@ -17,7 +19,8 @@ _:node16tsjbk2dx6 a owl:Ontology ;
 	dc:source "See http://www.w3.org/2011/02/GeoSPARQL.pdf"^^xsd:string .
 
 :SpatialObject a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/geosparql#SpatialObject" .
+	rdfs:label "http://purl.org/ifgi/geosparql#SpatialObject" ;
+	rdfs:subClassOf :InformationObject .
 
 :Feature a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/geosparql#Feature" ;

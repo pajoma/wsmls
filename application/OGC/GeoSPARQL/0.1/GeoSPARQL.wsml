@@ -3,6 +3,7 @@ namespace { _"http://purl.org/ifgi/geosparql#",
 	xsd _"http://www.w3.org/2001/XMLSchema#",  
 	dc _"http://purl.org/dc/elements/1.1/", 
 	rdfs _"http://www.w3.org/2000/01/rdf-schema#",
+	dul _"http://purl.org/ifgi/dul#",
 	rdf _"http://www.w3.org/1999/02/22-rdf-syntax-ns"
  }
 
@@ -17,8 +18,10 @@ ontology GeoSPARQL
 		dc#description hasValue "Taken from the GeoSPARQL ontology"
 		dc#source hasValue "See http://www.w3.org/2011/02/GeoSPARQL.pdf"
 	endAnnotations
+
+	importsOntology {_"http://purl.org/ifgi/dul#"}
 	
-concept SpatialObject
+concept SpatialObject subConceptOf InformationObject
 
 concept Feature subConceptOf SpatialObject
 

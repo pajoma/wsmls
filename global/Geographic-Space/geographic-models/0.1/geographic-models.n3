@@ -11,69 +11,10 @@
 @prefix geoDesc: <http://purl.org/ifgi/geodesc#> .
 @prefix eo: <http://purl.org/ifgi/event-observation#> .
 
-_:node172d3v21ux2 a owl:Ontology ;
+_:node178libo3fx12 a owl:Ontology ;
 	rdfs:label "geographical_model" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/geoevents#> , <http://purl.org/ifgi/event-observation#> .
-
-:Risk a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/geomodels#Risk" ;
-	rdfs:subClassOf dul:Concept ;
-	dc:identifier "Risk@en"^^xsd:string , "Risiko@de"^^xsd:string ;
-	dc:description "Risk is the likelihood of harm (in the context of a plan)"^^xsd:string .
-
-:RiskDescription a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/geomodels#RiskDescription" ;
-	rdfs:subClassOf dul:Description ;
-	dc:identifier "Risk Description@en"^^xsd:string , "Risiko Beschreibung@de"^^xsd:string .
-
-:RiskDescription_prop_hasRiskLevel a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/geomodels#hasRiskLevel" ;
-	rdfs:domain :RiskDescription ;
-	a rdf:Property ;
-	rdfs:range xsd:string .
-
-:Hazard a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/geomodels#Hazard" ;
-	rdfs:subClassOf dul:Concept ;
-	dc:identifier "Hazard@en"^^xsd:string , "Gefahr@de"^^xsd:string ;
-	dc:description "Hazard is the potential to cause harm"^^xsd:string .
-
-:HazardLevelDescription a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/geomodels#HazardLevelDescription" ;
-	rdfs:subClassOf dul:Description ;
-	dc:identifier "Hazard Description@en"^^xsd:string , "Gefährdung Beschreibung@de"^^xsd:string .
-
-:HazardLevelDescription_prop_hasHazardLevel a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/geomodels#hasHazardLevel" ;
-	rdfs:domain :HazardLevelDescription ;
-	a rdf:Property ;
-	rdfs:range xsd:integer .
-
-:ComputationalModel a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/geomodels#ComputationalModel" ;
-	rdfs:subClassOf dul:Workflow ;
-	dc:identifier "Computational Model@en"^^xsd:string , "Computermodell@de"^^xsd:string .
-
-:GeographicalModel a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/geomodels#GeographicalModel" ;
-	rdfs:subClassOf dul:Description ;
-	dc:identifier "Geographical Model@en"^^xsd:string , "Geographisches Modell@de"^^xsd:string .
-
-:EnvironmentalModel a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/geomodels#EnvironmentalModel" ;
-	rdfs:subClassOf :GeographicalModel ;
-	dc:identifier "Environmental Model@en"^^xsd:string , "Umweltmodell@de"^^xsd:string .
-
-:SocialModel a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/geomodels#SocialModel" ;
-	rdfs:subClassOf :GeographicalModel ;
-	dc:identifier "Social Model@en"^^xsd:string , "Gesellschaftsmodell@de"^^xsd:string .
-
-:ForecastModel a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/geomodels#ForecastModel" ;
-	rdfs:subClassOf :ComputationalModel ;
-	dc:identifier "Forecast Model@en"^^xsd:string , "Vorhersagemodell@de"^^xsd:string .
 
 :PredictedEventObservation a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/geomodels#PredictedEventObservation" ;
@@ -96,12 +37,6 @@ _:node172d3v21ux2 a owl:Ontology ;
 	rdfs:label "http://purl.org/ifgi/geomodels#VirtualObservation" ;
 	rdfs:subClassOf ssn:Observation ;
 	dc:identifier "Virtual Observation@en"^^xsd:string , "Virtuelle Beobachtung@de"^^xsd:string .
-
-:VirtualObservation_prop_isComputedBy a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/geomodels#isComputedBy" ;
-	rdfs:domain :VirtualObservation ;
-	a rdf:Property ;
-	rdfs:range :ComputationalModel .
 
 :EventProbability a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/geomodels#EventProbability" ;
@@ -160,15 +95,15 @@ _:node172d3v21ux2 a owl:Ontology ;
 
 :atRisk a rdf:Property ;
 	rdfs:domain dul:Plan ;
-	rdfs:range dul:Risk ;
+	rdfs:range :Risk ;
 	dc:identifier "at risk@en"^^xsd:string .
+
+:isProbabilityOf a rdf:Property ;
+	rdfs:domain :EventProbability ;
+	rdfs:range ge:geographical_event ;
+	dc:identifier "is probability of@en"^^xsd:string .
 
 :isComputedBy a rdf:Property ;
 	rdfs:domain :VirtualObservation ;
 	rdfs:range :ComputationalModel ;
 	dc:identifier "is computed by@en"^^xsd:string .
-
-:describedLocation a rdf:Property ;
-	rdfs:domain dul:Description ;
-	rdfs:range :DescribedLocation ;
-	dc:identifier "described location@en"^^xsd:string .

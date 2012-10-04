@@ -100,7 +100,7 @@ ontology OilSpill
 			dc#description hasValue "The simplest method of determining the velocity of a current involves an observer, a floating object or drifter, and a timing device. An observer then divides the distance the object traveled by the time it took the object to travel that distance, which equals the speed of the current."
 			dc#source hasValue "http://oceanservice.noaa.gov/education/kits/currents/07measure1.html"
 		endAnnotations
-		dul#isQualityOf ofType ge#sea_current
+		//dul#isQualityOf ofType ge#sea_current
 
 	concept oil_type subConceptOf dul#Quality
 		annotations
@@ -139,7 +139,7 @@ ontology OilSpill
 			dc#description hasValue "Wind speed or wind velocity is the speed of wind, the movement of air or other gases in an atmosphere."
 			dc#source hasValue "http://en.wikipedia.org/wiki/Wind_speed"
 		endAnnotations
-		dul#isQualityOf ofType ge#wind
+		//dul#isQualityOf ofType ge#wind
 	
 	concept direction subConceptOf dul#Quality
 		annotations
@@ -148,7 +148,7 @@ ontology OilSpill
 			dc#description hasValue "Direction is the information contained in the relative position of one object with respect to another object without the distance information. Directions may be either relative to some indicated reference (the violins in a full orchestra are typically seated to the left of the conductor), or absolute according to some previously agreed upon frame of reference (New York City lies due west of Madrid)."
 			dc#source hasValue "http://en.wikipedia.org/wiki/Direction_(geometry)"
 		endAnnotations	
-		dul#isQualityOf ofType {ge#wind, ge#sea_current}
+		//dul#isQualityOf ofType {ge#wind, ge#sea_current}
 	
 	concept temperature subConceptOf dul#Quality
 		annotations
@@ -481,7 +481,7 @@ ontology OilSpill
 		dul#hasQuality ofType {average_weight, lethality, population_size}
 		dul#hasMember ofType fish
 	
-	concept gadus subConceptOf gadoid
+	concept gadus
 		annotations
 			dc#identifier hasValue "gadus@en"
 			dc#identifier hasValue "Dorsch@de"

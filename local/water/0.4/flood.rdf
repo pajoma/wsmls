@@ -15,7 +15,7 @@
 	xmlns:ge="http://purl.org/ifgi/geoevents#"
 	xmlns:gq="http://purl.org/ifgi/geoqualities#">
 
-<rdf:Description rdf:nodeID="node176duvckex1">
+<rdf:Description rdf:nodeID="node178libo3fx19">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>FloodScenario</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -82,9 +82,9 @@
 	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/geospace#nearBy"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#Reservoir_prop_geographical_quality">
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#Reservoir_prop_hasQuality">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label>http://purl.org/ifgi/geospace#geographical_quality</rdfs:label>
+	<rdfs:label>http://purl.org/ifgi/dul#hasQuality</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/water/flood#Reservoir"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/water/flood#WaterBodyVolume"/>
@@ -92,7 +92,7 @@
 	<rdfs:range rdf:resource="http://purl.org/ifgi/water/flood#VolumetricFlowRate"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/water/flood#WaterLevel"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/geospace#geographical_quality"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#hasQuality"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/water/flood#HydropowerPlant">
@@ -199,7 +199,7 @@
 <rdf:Description rdf:about="http://purl.org/ifgi/water/flood#Volume">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/water/flood#Volume</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geospace#geographical_quality"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dul#Quality"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Volumen@de</dc:identifier>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">volume@en</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The amount of 3-dimensional space occupied by an any solid, plasma, vacuum or theoretical object often quantified numerically</dc:description>
@@ -227,7 +227,7 @@
 <rdf:Description rdf:about="http://purl.org/ifgi/water/flood#VolumetricFlowRate">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/water/flood#VolumetricFlowRate</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geospace#geographical_quality"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dul#Quality"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Durchfluss@de</dc:identifier>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">volumetric flow rate@en</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The volumetric flow rate, also volume flow rate and rate of fluid flow, is the volume of fluid which passes through a given surface per unit time, mostly measured in cubic metre per second. Volumetric flow rate should not be confused with volumetric flux, the integration of a flux over an area gives the volumetric flow rate</dc:description>
@@ -513,7 +513,7 @@
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/geospace#geographical_unit"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/geospace#geographical_unit"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">downstream@en</dc:identifier>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flussabwärts@de</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flussabw?rts@de</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">downstream defines a relation of two geographical units being located near by a river. The second geographical unit can be reached from the first on by going along the river with a direction compliant to the flow direction of the river.</dc:description>
 </rdf:Description>
 
@@ -522,11 +522,11 @@
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/geospace#geographical_unit"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/geospace#geographical_unit"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">upstream@en</dc:identifier>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flussaufwärts@de</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flussaufw?rts@de</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">upstream defines a relation of two geographical units being located near by a river. The second geographical unit can be reached from the first on by going along the river with a direction opposed to the flow direction of the river.</dc:description>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node176duvckex2">
+<rdf:Description rdf:nodeID="node178libo3fx20">
 	<rdfs:label>http://purl.org/ifgi/water/flood#validate_downstream</rdfs:label>
 	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
 	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?x1[_"http://purl.org/ifgi/water/flood#downstream" hasValue ?x2]
@@ -541,7 +541,7 @@
  and ?x2[_"http://purl.org/ifgi/geospace#nearBy" hasValue ?y]. </rdf:value>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node176duvckex3">
+<rdf:Description rdf:nodeID="node178libo3fx21">
 	<rdfs:label>http://purl.org/ifgi/water/flood#validate_upstream</rdfs:label>
 	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
 	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?x1[_"http://purl.org/ifgi/water/flood#upstream" hasValue ?x2]
@@ -556,7 +556,7 @@
  and ?x2[_"http://purl.org/ifgi/geospace#nearBy" hasValue ?y]. </rdf:value>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node176duvckex4">
+<rdf:Description rdf:nodeID="node178libo3fx22">
 	<rdfs:label>http://purl.org/ifgi/water/flood#upstream_inverse</rdfs:label>
 	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
 	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?x memberOf _"http://purl.org/ifgi/geospace#geographical_unit"
@@ -566,7 +566,7 @@
 ?y[_"http://purl.org/ifgi/water/flood#downstream" hasValue ?x]. </rdf:value>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node176duvckex5">
+<rdf:Description rdf:nodeID="node178libo3fx23">
 	<rdfs:label>http://purl.org/ifgi/water/flood#downstream_inverse</rdfs:label>
 	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
 	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?x memberOf _"http://purl.org/ifgi/geospace#geographical_unit"
@@ -576,7 +576,7 @@
 ?x[_"http://purl.org/ifgi/water/flood#upstream" hasValue ?y]. </rdf:value>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node176duvckex6">
+<rdf:Description rdf:nodeID="node178libo3fx24">
 	<rdfs:label>http://purl.org/ifgi/water/flood#downstream_transitive</rdfs:label>
 	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
 	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?x memberOf _"http://purl.org/ifgi/geospace#geographical_unit"
@@ -588,7 +588,7 @@
 ?x[_"http://purl.org/ifgi/water/flood#downstream" hasValue ?z]. </rdf:value>
 </rdf:Description>
 
-<rdf:Description rdf:nodeID="node176duvckex7">
+<rdf:Description rdf:nodeID="node178libo3fx25">
 	<rdfs:label>http://purl.org/ifgi/water/flood#upstream_transitive</rdfs:label>
 	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
 	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?x memberOf _"http://purl.org/ifgi/geospace#geographical_unit"

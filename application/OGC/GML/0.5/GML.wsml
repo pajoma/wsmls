@@ -73,9 +73,9 @@ relation hasProperty (ofType ogc#Feature, ofType FeatureProperty)
 			dc#identifier hasValue "has property@en"
 	endAnnotations
 
-relation gml#hasValue (ofType FeatureProperty, ofType xsd#anyType)
+relation value (ofType FeatureProperty, ofType xsd#anyType)
 	annotations
-			dc#identifier hasValue "has value@en"
+			dc#identifier hasValue "value@en"
 	endAnnotations
 
 relation upperCorner (ofType Envelope, ofType xsd#string)

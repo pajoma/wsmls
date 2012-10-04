@@ -7,7 +7,7 @@
 @prefix dul: <http://purl.org/ifgi/dul#> .
 @prefix dulSp: <http://purl.org/ifgi/dulSpatial#> .
 
-_:node16tsjbk2dx66 a owl:Ontology ;
+_:node178libo3fx14 a owl:Ontology ;
 	rdfs:label "geographic_space" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/dulSpatial#> , <http://purl.org/ifgi/dul#> ;
@@ -27,10 +27,10 @@ _:node16tsjbk2dx66 a owl:Ontology ;
 	dc:description "Something which is identified as entity on geographic scale"^^xsd:string .
 
 :geographical_unit_prop_spatialLocation a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/dulSpatial#spatialLocation" ;
+	rdfs:label "http://purl.org/ifgi/dul#spatialLocation" ;
 	rdfs:domain :geographical_unit ;
 	rdfs:range :geographical_space_region ;
-	rdfs:subPropertyOf dulSp:spatialLocation .
+	rdfs:subPropertyOf dul:spatialLocation .
 
 :geographical_unit_prop_hasQuality a rdf:Property ;
 	rdfs:label "http://purl.org/ifgi/dul#hasQuality" ;
@@ -60,7 +60,7 @@ _:node16tsjbk2dx66 a owl:Ontology ;
 	rdfs:label "http://purl.org/ifgi/geospace#nearBy" ;
 	rdfs:domain :geographical_unit ;
 	rdfs:range :geographical_unit ;
-	dc:identifier "in der N?he von@de"^^xsd:string , "nearby@en"^^xsd:string ;
+	dc:identifier "in der N�he von@de"^^xsd:string , "nearby@en"^^xsd:string ;
 	dc:description "This unit can be nearby to another unit"^^xsd:string ;
 	dc:source ""^^xsd:string ;
 	rdfs:comments ""^^xsd:string .
@@ -74,5 +74,5 @@ _:node16tsjbk2dx66 a owl:Ontology ;
 :geographical_quality a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/geospace#geographical_quality" ;
 	rdfs:subClassOf dul:Quality ;
-	dc:identifier "Geographic Quality@en"^^xsd:string , "Geographische Qualit?t@de"^^xsd:string ;
+	dc:identifier "Geographic Quality@en"^^xsd:string , "Geographische Qualit�t@de"^^xsd:string ;
 	dc:description "Qualities restricted to geographic objects. Only large scale objects have a terrain or a skyline"^^xsd:string .

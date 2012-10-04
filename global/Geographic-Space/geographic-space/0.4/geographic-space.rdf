@@ -9,7 +9,7 @@
 	xmlns:dul="http://purl.org/ifgi/dul#"
 	xmlns:dulSp="http://purl.org/ifgi/dulSpatial#">
 
-<rdf:Description rdf:nodeID="node16tsjbk2dx65">
+<rdf:Description rdf:nodeID="node178libo3fx13">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>geographic_space</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -36,10 +36,10 @@
 
 <rdf:Description rdf:about="http://purl.org/ifgi/geospace#geographical_unit_prop_spatialLocation">
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label>http://purl.org/ifgi/dulSpatial#spatialLocation</rdfs:label>
+	<rdfs:label>http://purl.org/ifgi/dul#spatialLocation</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/geospace#geographical_unit"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/geospace#geographical_space_region"/>
-	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dulSpatial#spatialLocation"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#spatialLocation"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/geospace#geographical_unit_prop_hasQuality">
@@ -79,7 +79,7 @@
 	<rdfs:label>http://purl.org/ifgi/geospace#nearBy</rdfs:label>
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/geospace#geographical_unit"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/geospace#geographical_unit"/>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">in der N?he von@de</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">in der N�he von@de</dc:identifier>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nearby@en</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This unit can be nearby to another unit</dc:description>
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:source>
@@ -100,7 +100,7 @@
 	<rdfs:label>http://purl.org/ifgi/geospace#geographical_quality</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dul#Quality"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geographic Quality@en</dc:identifier>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geographische Qualit?t@de</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geographische Qualit�t@de</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualities restricted to geographic objects. Only large scale objects have a terrain or a skyline</dc:description>
 </rdf:Description>
 

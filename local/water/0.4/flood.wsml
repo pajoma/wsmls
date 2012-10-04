@@ -52,7 +52,7 @@ ontology FloodScenario
 			dc#source hasValue "http://en.wikipedia.org/wiki/Reservoir"
 		endAnnotations
 		gs#nearBy ofType Dam
-		gs#geographical_quality ofType {WaterLevel, VolumetricFlowRate, WaterBodyVolume}
+		dul#hasQuality ofType {WaterLevel, VolumetricFlowRate, WaterBodyVolume}
 	
 	concept HydropowerPlant subConceptOf gu#anthropogenic_unit
 		annotations
@@ -104,7 +104,7 @@ ontology FloodScenario
 	// Properties/Qualities
 	// We don't need to model the concept "Sensor" since the SSN ontology already defines that a ssn#Property (and its subconcepts) is observed by a sensor.
 
-	concept Volume subConceptOf gs#geographical_quality
+	concept Volume subConceptOf dul#Quality
 		annotations
 			dc#identifier hasValue "Volumen@de"
 			dc#identifier hasValue "volume@en"
@@ -121,7 +121,7 @@ ontology FloodScenario
 		endAnnotations
 		ssn#inverseOfObserves ofType ssn#Sensor
 		
-	concept VolumetricFlowRate subConceptOf gs#geographical_quality
+	concept VolumetricFlowRate subConceptOf dul#Quality
 		annotations
 			dc#identifier hasValue "Durchfluss@de"
 			dc#identifier hasValue "volumetric flow rate@en"

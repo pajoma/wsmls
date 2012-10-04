@@ -8,7 +8,7 @@
 @prefix ogc: <http://purl.org/ifgi/geosparql#> .
 @prefix time: <http://w3.org/2006/time#> .
 
-_:node16tsjbk2dx8 a owl:Ontology ;
+_:node178libo3fx4 a owl:Ontology ;
 	rdfs:label "GML" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/dul#> , <http://purl.org/ifgi/geosparql#> , <http://purl.org/ifgi/time#> ;
@@ -68,10 +68,10 @@ _:node16tsjbk2dx8 a owl:Ontology ;
 	rdfs:range :FeatureProperty ;
 	dc:identifier "has property@en"^^xsd:string .
 
-:hasValue a rdf:Property ;
+:value a rdf:Property ;
 	rdfs:domain :FeatureProperty ;
 	rdfs:range xsd:anyType ;
-	dc:identifier "has value@en"^^xsd:string .
+	dc:identifier "value@en"^^xsd:string .
 
 :upperCorner a rdf:Property ;
 	rdfs:domain :Envelope ;

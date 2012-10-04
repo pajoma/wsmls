@@ -27,7 +27,7 @@ concept geographical_unit subConceptOf dul#PhysicalPlace
 		dc#identifier hasValue "Geographische Einheit@de"
 		dc#description hasValue "Something which is identified as entity on geographic scale" 
 	endAnnotations 
-	dulSp#spatialLocation impliesType geographical_space_region
+	dul#spatialLocation impliesType geographical_space_region
 	dul#hasQuality  impliesType geographical_quality
 	confined_by impliesType geographical_unit
 			annotations

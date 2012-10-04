@@ -5,12 +5,14 @@
 	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
-	xmlns:dc="http://purl.org/dc/elements/1.1/">
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:dul="http://purl.org/ifgi/dul#">
 
-<rdf:Description rdf:nodeID="node16tsjbk2dx5">
+<rdf:Description rdf:nodeID="node178libo3fx1">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>GeoSPARQL</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
+	<owl:imports rdf:resource="http://purl.org/ifgi/dul#"/>
 	<dc:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(a)IfGI, University of Muenster</dc:publisher>
 	<dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-02-07</dc:date>
 	<dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://creativecommons.org/licenses/by/3.0/</dc:rights>
@@ -23,6 +25,7 @@
 <rdf:Description rdf:about="http://purl.org/ifgi/geosparql#SpatialObject">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/geosparql#SpatialObject</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geosparql#InformationObject"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://purl.org/ifgi/geosparql#Feature">
