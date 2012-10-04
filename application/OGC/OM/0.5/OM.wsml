@@ -2,7 +2,7 @@ wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
 namespace { _"http://purl.org/ifgi/om#",
 dc _"http://purl.org/dc/elements/1.1/", 
 gml _"http://purl.org/ifgi/gml/0.2#",
-ssn _"http://purl.org/ifgi/ssn#",
+geosparql _"http://purl.org/ifgi/geosparql#"
 xsd _"http://www.w3.org/2001/XMLSchema#"
  }
 
@@ -24,7 +24,7 @@ ontology ObservationsAndMeasurements
 		dc#source hasValue "http://purl.oclc.org/NET/ssnx/ssn#"
 	endAnnotations
 	
-	importsOntology {_"http://purl.org/ifgi/gml/0.2#", _"http://purl.org/ifgi/ssn#"}
+	importsOntology {_"http://purl.org/ifgi/gml/0.2#", _"http://purl.org/ifgi/geosparql#"}
 	
 	/*elements*/
 
@@ -33,32 +33,32 @@ ontology ObservationsAndMeasurements
 			dc#identifier hasValue "observation collection@en"
 		endAnnotations
 		
-	concept Observation subConceptOf {gml#SpatioTemporalFeature, ssn#Observation}
+	concept Observation subConceptOf gml#SpatioTemporalFeature
 		annotations
 			dc#identifier hasValue "observation@en"
 		endAnnotations
 
-	concept Sensor subConceptOf ssn#Sensor
+	concept Sensor subConceptOf geosparql#Feature
 		annotations
 			dc#identifier hasValue "sensor@en"
 		endAnnotations
 	
-	concept Property subConceptOf ssn#Property
+	concept Property subConceptOf gml#FeatureProperty
 		annotations
 			dc#identifier hasValue "property@en"
 		endAnnotations
 	
-	concept FeatureOfInterest subConceptOf ssn#FeatureOfInterest
+	concept FeatureOfInterest subConceptOf geosparql#Feature
 		annotations
 			dc#identifier hasValue "feature of interest@en"
 		endAnnotations
 	
-	concept SensorOutput subConceptOf ssn#SensorOutput
+	concept SensorOutput
 		annotations
 			dc#identifier hasValue "sensor output@en"
 		endAnnotations
 	
-	concept ObservationValue subConceptOf ssn#ObservationValue
+	concept ObservationValue
 		annotations
 			dc#identifier hasValue "observation value@en"
 		endAnnotations
@@ -80,5 +80,18 @@ ontology ObservationsAndMeasurements
 			dc#identifier hasValue "has quantity value@en"
 		endAnnotations
 	
+	relation observedProperty (ofType Observation, ofType Property) subRelationOf gml#hasProperty
+		annotations
+			dc#identifier hasValue "observed Property@en"
+		endAnnotations
 	
+	relation featureOfInterest (ofType Observation, ofType FeatureOfInterest)
+		annotations
+			dc#identifier hasValue "feature of interest@en"
+		endAnnotations
+	
+	relation observationResult (ofType Observation, ofType ObservationValue)
+		annotations
+			dc#identifier hasValue "observation result@en"
+		endAnnotations
 		
