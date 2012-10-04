@@ -48,23 +48,8 @@ ontology Landslide
 			dc#identifier hasValue "Hangrutsch Risiko@de"
 			dc#description hasValue "the risk that a landslide occurs"
 		endAnnotations
-		gs#isProbabilityOf ofType landslide
+		gm#isProbabilityOf ofType landslide
 		
-	concept landslide_runout_zone subConceptOf gm#PredictedObservation
-		annotations
-			dc#identifier hasValue "landslide runout zone@en"
-			dc#identifier hasValue "Hangrutsch Auslaufgebiet@de"
-			dc#description hasValue "the entire area down which a landslide moves"
-		endAnnotations
-		
-	concept precipitation subConceptOf ge#precipitation
-		annotations
-			dc#identifier hasValue "precipitation@en"
-			dc#identifier hasValue "Niederschlag@de"
-			dc#description hasValue "the falling to earth of any form of water (rain or snow or hail or sleet or mist)"
-			dc#source hasValue "http://wordnetweb.princeton.edu/"
-		endAnnotations
-
 	concept deep_landslide subConceptOf landslide
 		annotations
 			dc#identifier hasValue "deep landslide@en"
@@ -154,7 +139,14 @@ ontology Landslide
 	/*
 	Endurants
 	*/
-
+	
+	concept landslide_runout_zone subConceptOf gs#geographical_unit
+		annotations
+			dc#identifier hasValue "landslide runout zone@en"
+			dc#identifier hasValue "Hangrutsch Auslaufgebiet@de"
+			dc#description hasValue "the entire area down which a landslide moves"
+		endAnnotations
+	
 	concept mountain subConceptOf gu#geomorphological_unit
 		annotations
 			dc#identifier hasValue "mountain@en"

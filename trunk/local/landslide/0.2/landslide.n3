@@ -13,7 +13,7 @@
 @prefix gm: <http://purl.org/ifgi/geomodels#> .
 @prefix oil: <http://purl.org/ifgi/oilspill#> .
 
-_:node173esja1kx2 a owl:Ontology ;
+_:node178libo3fx16 a owl:Ontology ;
 	rdfs:label "Landslide" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/oilspill#> , <http://purl.org/ifgi/geomodels#> ;
@@ -41,24 +41,11 @@ _:node173esja1kx2 a owl:Ontology ;
 	dc:description "the risk that a landslide occurs"^^xsd:string .
 
 :landslide_probability_prop_isProbabilityOf a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/geospace#isProbabilityOf" ;
+	rdfs:label "http://purl.org/ifgi/geomodels#isProbabilityOf" ;
 	rdfs:domain :landslide_probability ;
 	a rdf:Property ;
 	rdfs:range :landslide ;
-	rdfs:subPropertyOf gs:isProbabilityOf .
-
-:landslide_runout_zone a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/landslide#landslide_runout_zone" ;
-	rdfs:subClassOf gm:PredictedObservation ;
-	dc:identifier "landslide runout zone@en"^^xsd:string , "Hangrutsch Auslaufgebiet@de"^^xsd:string ;
-	dc:description "the entire area down which a landslide moves"^^xsd:string .
-
-:precipitation a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/landslide#precipitation" ;
-	rdfs:subClassOf ge:precipitation ;
-	dc:identifier "precipitation@en"^^xsd:string , "Niederschlag@de"^^xsd:string ;
-	dc:description "the falling to earth of any form of water (rain or snow or hail or sleet or mist)"^^xsd:string ;
-	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
+	rdfs:subPropertyOf gm:isProbabilityOf .
 
 :deep_landslide a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#deep_landslide" ;
@@ -112,7 +99,7 @@ _:node173esja1kx2 a owl:Ontology ;
 :rain a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#rain" ;
 	rdfs:subClassOf ge:precipitation ;
-	dc:description "Rain is liquid water in the form of droplets that have condensed from atmospheric water vapor and then precipitated—that is, become heavy enough to fall under gravity."^^xsd:string ;
+	dc:description "Rain is liquid water in the form of droplets that have condensed from atmospheric water vapor and then precipitatedï¿½that is, become heavy enough to fall under gravity."^^xsd:string ;
 	dc:source "http://en.wikipedia.org/wiki/Rain"^^xsd:string .
 
 :heavyRain a rdfs:Class ;
@@ -138,6 +125,12 @@ _:node173esja1kx2 a owl:Ontology ;
 	rdfs:subClassOf evob:EventObservationType ;
 	dc:description "if exceeding 350 millimeters in 24 hours or more"^^xsd:string ;
 	dc:source "http://www.cwb.gov.tw/V7e/observe/rainfall/define.htm?"^^xsd:string .
+
+:landslide_runout_zone a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/landslide#landslide_runout_zone" ;
+	rdfs:subClassOf gs:geographical_unit ;
+	dc:identifier "landslide runout zone@en"^^xsd:string , "Hangrutsch Auslaufgebiet@de"^^xsd:string ;
+	dc:description "the entire area down which a landslide moves"^^xsd:string .
 
 :mountain a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#mountain" ;
@@ -190,7 +183,7 @@ _:node173esja1kx2 a owl:Ontology ;
 :surfacewater a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#surfacewater" ;
 	rdfs:subClassOf oil:water ;
-	dc:identifier "surface water@en"^^xsd:string , "Oberflächenwasser@de"^^xsd:string ;
+	dc:identifier "surface water@en"^^xsd:string , "Oberflï¿½chenwasser@de"^^xsd:string ;
 	dc:description "Surface water is water collecting on the ground or in a stream, river, lake, wetland, or ocean"^^xsd:string ;
 	dc:source "http://en.wikipedia.org/wiki/Surface_water"^^xsd:string .
 
@@ -205,7 +198,7 @@ _:node173esja1kx2 a owl:Ontology ;
 	rdfs:label "http://purl.org/ifgi/landslide#debris" ;
 	rdfs:subClassOf gu:landcover_unit ;
 	dc:identifier "debris@en"^^xsd:string , "Geroell@de"^^xsd:string ;
-	dc:description "the remains of geological activity including landslides, volcanic explosions, avalanches, mudflows or Glacial lake outburst floods (Jökulhlaups) and moraine, lahars, and lava eruptions"^^xsd:string ;
+	dc:description "the remains of geological activity including landslides, volcanic explosions, avalanches, mudflows or Glacial lake outburst floods (Jï¿½kulhlaups) and moraine, lahars, and lava eruptions"^^xsd:string ;
 	dc:source "http://en.wikipedia.org/wiki/Debris"^^xsd:string .
 
 :rock a rdfs:Class ;
@@ -336,7 +329,7 @@ _:node173esja1kx2 a owl:Ontology ;
 :water_saturation a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#water_saturation" ;
 	rdfs:subClassOf dul:Quality ;
-	dc:identifier "water saturation@en"^^xsd:string , "Wassersättigung@de"^^xsd:string ;
+	dc:identifier "water saturation@en"^^xsd:string , "Wassersï¿½ttigung@de"^^xsd:string ;
 	dc:description "The fraction of water in a given pore space."^^xsd:string ;
 	dc:source "http://www.glossary.oilfield.slb.com/Display.cfm?Term=water%20saturation"^^xsd:string .
 
@@ -357,7 +350,7 @@ _:node173esja1kx2 a owl:Ontology ;
 :porosity a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/landslide#porosity" ;
 	rdfs:subClassOf dul:Quality ;
-	dc:identifier "porosity@en"^^xsd:string , "Poroesität@de"^^xsd:string ;
+	dc:identifier "porosity@en"^^xsd:string , "Poroesitï¿½t@de"^^xsd:string ;
 	dc:description "the property of being porous; being able to absorb fluids"^^xsd:string ;
 	dc:source "http://wordnetweb.princeton.edu/"^^xsd:string .
 
@@ -400,7 +393,7 @@ _:node173esja1kx2 a owl:Ontology ;
 	rdfs:label "http://purl.org/ifgi/landslide#angle_of_repose" ;
 	rdfs:subClassOf dul:Quality ;
 	dc:identifier "angle of repose@en"^^xsd:string , "Reibungswinkel@de"^^xsd:string ;
-	dc:description "The angle of repose or, more precisely, the critical angle of repose,[1] of a granular material is the steepest angle of descent or dip of the slope relative to the horizontal plane when material on the slope face is on the verge of sliding. This angle is in the range 0°–90°."^^xsd:string ;
+	dc:description "The angle of repose or, more precisely, the critical angle of repose,[1] of a granular material is the steepest angle of descent or dip of the slope relative to the horizontal plane when material on the slope face is on the verge of sliding. This angle is in the range 0ï¿½ï¿½90ï¿½."^^xsd:string ;
 	dc:source "http://en.wikipedia.org/wiki/Angle_of_repose"^^xsd:string .
 
 :diameter a rdfs:Class ;

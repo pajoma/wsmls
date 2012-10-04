@@ -70,9 +70,9 @@ ontology AffectingEnvironment
             ?c[has_part hasValue ?a]. 
                      
                            
-       relation contains(ofType AffectingEnvironment, ofType gspace#geographical_unit)
+       relation contains(ofType affecting_environment, ofType gspace#geographical_unit)
        
-       relation is_contained_in(ofType gspace#geographical_unit, ofType AffectingEnvironment)
+       relation is_contained_in(ofType gspace#geographical_unit, ofType affecting_environment)
        
        relation has_state(ofType gspace#geographical_unit, ofType state)
        

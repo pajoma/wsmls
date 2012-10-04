@@ -36,9 +36,14 @@ relation isAffectedBy (ofType dul#Plan, ofType dul#Event)
 		dc#identifier hasValue "is affected by@en"
 	endAnnotations
 
-relation atRisk (ofType dul#Plan, ofType dul#Risk)
+relation atRisk (ofType dul#Plan, ofType Risk)
 	annotations
 		dc#identifier hasValue "at risk@en"
+	endAnnotations
+
+relation isProbabilityOf (ofType EventProbability, ofType ge#geographical_event)
+	annotations
+		dc#identifier hasValue "is probability of@en"
 	endAnnotations
 
 /*
@@ -53,10 +58,12 @@ relation isComputedBy (ofType VirtualObservation, ofType ComputationalModel)
 		dc#identifier hasValue "is computed by@en"
 	endAnnotations
 	
+/*
 relation describedLocation (ofType dul#Description, ofType DescribedLocation)
 	annotations
 		dc#identifier hasValue "described location@en"
 	endAnnotations
+/*
 	
 
 // Concepts
@@ -142,7 +149,6 @@ concept VirtualObservation subConceptOf ssn#Observation
 		dc#identifier hasValue "Virtual Observation@en"
 		dc#identifier hasValue "Virtuelle Beobachtung@de"
 	endAnnotations
-	isComputedBy ofType ComputationalModel
 
 
 concept EventProbability subConceptOf Probability
