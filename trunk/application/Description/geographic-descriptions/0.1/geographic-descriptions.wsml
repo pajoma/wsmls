@@ -1,0 +1,64 @@
+	wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://purl.org/ifgi/geodesc#", 
+		dc _"http://purl.org/dc/elements/1.1/", 
+     	rdfs _"http://www.w3.org/2000/01/rdf-schema#",
+		evob _"http://purl.org/ifgi/event-observation#",
+		gspace _"http://purl.org/ifgi/geospace#",
+		ge _"http://purl.org/ifgi/geoevents#",
+		annot _"http://purl.org/ifgi/annotations#",		
+		geosparql _"http://purl.org/ifgi/geosparql#",
+		gml _"http://purl.org/ifgi/gml/0.2#",
+		om _"http://purl.org/ifgi/om#"
+     	}
+
+ontology geographic_descriptions
+     annotations
+     	dc#creator hasValue "p.maue (ifgi)"
+		dc#publisher hasValue "(a)IfGI, University of Muenster"
+		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+		dc#type hasValue "Domain Ontology"
+		dc#description hasValue "Geographic descriptions are associated with a location in space (using GeoSPARQL) and time (using W3C time)" 
+		dc#title hasValue "Geographic Descriptions Ontology"	
+		dc#subject hasValue "Geography"			
+     endAnnotations
+	 
+	 importsOntology {	_"http://purl.org/ifgi/geosparql#", 
+						_"http://purl.org/ifgi/om#",
+						_"http://purl.org/ifgi/geospace#", 
+						_"http://purl.org/ifgi/gml/0.2#",
+						_"http://purl.org/ifgi/annotations#",
+						_"http://purl.org/ifgi/geoevents#",
+						_"http://purl.org/ifgi/event-observation#"
+					 }
+   
+concept SituationDescription subConceptOf gml#SpatioTemporalFeature
+	annotations
+		dc#identifier hasValue "situation description@en"
+		dc#identifier hasValue "Situationsbeschreibung@de"
+		dc#description hasValue "Description of a situation, e.g. event."
+	endAnnotations
+	annot#domainReference ofType ge#geographical_event
+ 
+concept GeographicalDescription subConceptOf geosparql#Feature
+	annotations
+		dc#identifier hasValue "geographical description@en"
+		dc#identifier hasValue "geographische Beschreibung@de"
+		dc#description hasValue "Description of a geographical unit."
+	endAnnotations
+	annot#domainReference ofType gspace#geographical_unit
+
+concept ObservationDescription subConceptOf gml#SpatioTemporalFeature
+	annotations
+		dc#identifier hasValue "situation description@en"
+		dc#identifier hasValue "Situationsbeschreibung@de"
+		dc#description hasValue "Description of a situation, e.g. event."
+	endAnnotations
+	annot#domainReference ofType evob#EventObservation
+	derivedFrom ofType om#ObservationCollection
+	
+	
+
+
+
+
+	
