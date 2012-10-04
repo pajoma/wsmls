@@ -6,7 +6,7 @@ namespace { _"http://purl.org/ifgi/gml/0.2#",
 	rdfs _"http://www.w3.org/2000/01/rdf-schema#",
 	DUL _"http://purl.org/ifgi/dul#",
 	ogc _"http://purl.org/ifgi/geosparql#",
-	time _"http://w3.org/2006/time#"
+	time _"http://purl.org/ifgi/time#"
  }
 
 ontology GML
