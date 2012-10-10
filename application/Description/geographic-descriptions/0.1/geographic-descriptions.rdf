@@ -8,19 +8,21 @@
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns:evob="http://purl.org/ifgi/event-observation#"
 	xmlns:gspace="http://purl.org/ifgi/geospace#"
+	xmlns:geomodels="http://purl.org/ifgi/geomodels#"
 	xmlns:ge="http://purl.org/ifgi/geoevents#"
 	xmlns:annot="http://purl.org/ifgi/annotations#"
 	xmlns:geosparql="http://purl.org/ifgi/geosparql#"
 	xmlns:gml="http://purl.org/ifgi/gml/0.2#"
 	xmlns:om="http://purl.org/ifgi/om#">
 
-<rdf:Description rdf:nodeID="node178m854p7x3">
+<rdf:Description rdf:nodeID="node1795lbvmsx1">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>geographic_descriptions</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
 	<owl:imports rdf:resource="http://purl.org/ifgi/geosparql#"/>
 	<owl:imports rdf:resource="http://purl.org/ifgi/om#"/>
 	<owl:imports rdf:resource="http://purl.org/ifgi/geospace#"/>
+	<owl:imports rdf:resource="http://purl.org/ifgi/geomodels#"/>
 	<owl:imports rdf:resource="http://purl.org/ifgi/gml/0.2#"/>
 	<owl:imports rdf:resource="http://purl.org/ifgi/annotations#"/>
 	<owl:imports rdf:resource="http://purl.org/ifgi/geoevents#"/>
@@ -94,6 +96,31 @@
 	<rdfs:domain rdf:resource="http://purl.org/ifgi/geodesc#ObservationDescription"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:range rdf:resource="http://purl.org/ifgi/om#ObservationCollection"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/geodesc#PredictedObservationDescription">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/geodesc#PredictedObservationDescription</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml/0.2#SpatioTemporalFeature"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Description of Predicted Event Observation@en</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beschreibung einer vorhergesagten Beobachtung@de</dc:identifier>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/geodesc#PredictedObservationDescription_prop_domainReference">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/annotations#domainReference</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/geodesc#PredictedObservationDescription"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/geomodels#PredictedEventObservation"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/annotations#domainReference"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/geodesc#PredictedObservationDescription_prop_derivedFrom">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/geodesc#derivedFrom</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/geodesc#PredictedObservationDescription"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/geodesc#ObservationDescription"/>
 </rdf:Description>
 
 </rdf:RDF>

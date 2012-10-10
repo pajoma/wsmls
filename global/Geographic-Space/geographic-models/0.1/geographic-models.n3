@@ -11,7 +11,7 @@
 @prefix geoDesc: <http://purl.org/ifgi/geodesc#> .
 @prefix eo: <http://purl.org/ifgi/event-observation#> .
 
-_:node178libo3fx12 a owl:Ontology ;
+_:node1795lbvmsx4 a owl:Ontology ;
 	rdfs:label "geographical_model" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://purl.org/ifgi/geoevents#> , <http://purl.org/ifgi/event-observation#> .
@@ -64,30 +64,6 @@ _:node178libo3fx12 a owl:Ontology ;
 	rdfs:range dul:Event ;
 	rdfs:subPropertyOf dul:isQualityOf .
 
-:PredictedEventObservationDescription a rdfs:Class ;
-	rdfs:label "http://purl.org/ifgi/geomodels#PredictedEventObservationDescription" ;
-	rdfs:subClassOf geoDesc:SituationDescription ;
-	dc:identifier "Description of Predicted Event Observation@en"^^xsd:string , "Beschreibung einer vorhergesagten Beobachtung@de"^^xsd:string .
-
-:PredictedEventObservationDescription_prop_describes a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/dul#describes" ;
-	rdfs:domain :PredictedEventObservationDescription ;
-	a rdf:Property ;
-	rdfs:range :PredictedEventObservation ;
-	rdfs:subPropertyOf dul:describes .
-
-:PredictedEventObservationDescription_prop_associatedHazardLevel a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/geomodels#associatedHazardLevel" ;
-	rdfs:domain :PredictedEventObservationDescription ;
-	a rdf:Property ;
-	rdfs:range :HazardLevelDescription .
-
-:PredictedEventObservationDescription_prop_hasSource a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/geomodels#hasSource" ;
-	rdfs:domain :PredictedEventObservationDescription ;
-	a rdf:Property ;
-	rdfs:range eo:EventObservationDescription .
-
 :isAffectedBy a rdf:Property ;
 	rdfs:domain dul:Plan ;
 	rdfs:range dul:Event ;
@@ -102,6 +78,11 @@ _:node178libo3fx12 a owl:Ontology ;
 	rdfs:domain :EventProbability ;
 	rdfs:range ge:geographical_event ;
 	dc:identifier "is probability of@en"^^xsd:string .
+
+:associatedHazardLevel a rdf:Property ;
+	rdfs:domain geoDesc:PredictedObservationDescription ;
+	rdfs:range :HazardLevelDescription ;
+	dc:identifier "associated hazard level@en"^^xsd:string .
 
 :isComputedBy a rdf:Property ;
 	rdfs:domain :VirtualObservation ;

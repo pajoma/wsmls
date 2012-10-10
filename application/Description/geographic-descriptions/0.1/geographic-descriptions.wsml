@@ -4,6 +4,7 @@ namespace { _"http://purl.org/ifgi/geodesc#",
      	rdfs _"http://www.w3.org/2000/01/rdf-schema#",
 		evob _"http://purl.org/ifgi/event-observation#",
 		gspace _"http://purl.org/ifgi/geospace#",
+		geomodels _"http://purl.org/ifgi/geomodels#",
 		ge _"http://purl.org/ifgi/geoevents#",
 		annot _"http://purl.org/ifgi/annotations#",		
 		geosparql _"http://purl.org/ifgi/geosparql#",
@@ -24,7 +25,8 @@ ontology geographic_descriptions
 	 
 	 importsOntology {	_"http://purl.org/ifgi/geosparql#", 
 						_"http://purl.org/ifgi/om#",
-						_"http://purl.org/ifgi/geospace#", 
+						_"http://purl.org/ifgi/geospace#",
+						_"http://purl.org/ifgi/geomodels#",
 						_"http://purl.org/ifgi/gml/0.2#",
 						_"http://purl.org/ifgi/annotations#",
 						_"http://purl.org/ifgi/geoevents#",
@@ -56,7 +58,13 @@ concept ObservationDescription subConceptOf gml#SpatioTemporalFeature
 	annot#domainReference ofType evob#EventObservation
 	derivedFrom ofType om#ObservationCollection
 	
-	
+concept PredictedObservationDescription subConceptOf gml#SpatioTemporalFeature
+	annotations
+		dc#identifier hasValue "Description of Predicted Event Observation@en"
+		dc#identifier hasValue "Beschreibung einer vorhergesagten Beobachtung@de"
+	endAnnotations
+	annot#domainReference ofType geomodels#PredictedEventObservation
+	derivedFrom ofType ObservationDescription
 
 
 

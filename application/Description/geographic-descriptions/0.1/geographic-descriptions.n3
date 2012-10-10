@@ -6,16 +6,17 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix evob: <http://purl.org/ifgi/event-observation#> .
 @prefix gspace: <http://purl.org/ifgi/geospace#> .
+@prefix geomodels: <http://purl.org/ifgi/geomodels#> .
 @prefix ge: <http://purl.org/ifgi/geoevents#> .
 @prefix annot: <http://purl.org/ifgi/annotations#> .
 @prefix geosparql: <http://purl.org/ifgi/geosparql#> .
 @prefix gml: <http://purl.org/ifgi/gml/0.2#> .
 @prefix om: <http://purl.org/ifgi/om#> .
 
-_:node178m854p7x4 a owl:Ontology ;
+_:node1795lbvmsx2 a owl:Ontology ;
 	rdfs:label "geographic_descriptions" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
-	owl:imports <http://purl.org/ifgi/geosparql#> , <http://purl.org/ifgi/om#> , <http://purl.org/ifgi/geospace#> , <http://purl.org/ifgi/gml/0.2#> , <http://purl.org/ifgi/annotations#> , <http://purl.org/ifgi/geoevents#> , <http://purl.org/ifgi/event-observation#> ;
+	owl:imports <http://purl.org/ifgi/geosparql#> , <http://purl.org/ifgi/om#> , <http://purl.org/ifgi/geospace#> , <http://purl.org/ifgi/geomodels#> , <http://purl.org/ifgi/gml/0.2#> , <http://purl.org/ifgi/annotations#> , <http://purl.org/ifgi/geoevents#> , <http://purl.org/ifgi/event-observation#> ;
 	dc:creator "p.maue (ifgi)"^^xsd:string ;
 	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
 	dc:rights "http://creativecommons.org/licenses/by/3.0/"^^xsd:string ;
@@ -68,3 +69,21 @@ _:node178m854p7x4 a owl:Ontology ;
 	rdfs:domain :ObservationDescription ;
 	a rdf:Property ;
 	rdfs:range om:ObservationCollection .
+
+:PredictedObservationDescription a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/geodesc#PredictedObservationDescription" ;
+	rdfs:subClassOf gml:SpatioTemporalFeature ;
+	dc:identifier "Description of Predicted Event Observation@en"^^xsd:string , "Beschreibung einer vorhergesagten Beobachtung@de"^^xsd:string .
+
+:PredictedObservationDescription_prop_domainReference a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/annotations#domainReference" ;
+	rdfs:domain :PredictedObservationDescription ;
+	a rdf:Property ;
+	rdfs:range geomodels:PredictedEventObservation ;
+	rdfs:subPropertyOf annot:domainReference .
+
+:PredictedObservationDescription_prop_derivedFrom a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/geodesc#derivedFrom" ;
+	rdfs:domain :PredictedObservationDescription ;
+	a rdf:Property ;
+	rdfs:range :ObservationDescription .

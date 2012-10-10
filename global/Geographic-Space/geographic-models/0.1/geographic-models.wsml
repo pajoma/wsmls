@@ -46,6 +46,11 @@ relation isProbabilityOf (ofType EventProbability, ofType ge#geographical_event)
 		dc#identifier hasValue "is probability of@en"
 	endAnnotations
 
+relation associatedHazardLevel (ofType geoDesc#PredictedObservationDescription, ofType HazardLevelDescription)
+	annotations
+		dc#identifier hasValue "associated hazard level@en"
+	endAnnotations
+	
 /*
 relation predicts (ofType PredictedEvent, ofType ge#geographical_event)
 	annotations
@@ -167,14 +172,7 @@ concept Probability subConceptOf dul#Quality
 	dul#isQualityOf	ofType dul#Event
 
 	
-concept PredictedEventObservationDescription subConceptOf geoDesc#SituationDescription
-	annotations
-		dc#identifier hasValue "Description of Predicted Event Observation@en"
-		dc#identifier hasValue "Beschreibung einer vorhergesagten Beobachtung@de"
-	endAnnotations
-	dul#describes ofType PredictedEventObservation
-	associatedHazardLevel ofType HazardLevelDescription
-	hasSource ofType eo#EventObservationDescription
+
 
 	
 
