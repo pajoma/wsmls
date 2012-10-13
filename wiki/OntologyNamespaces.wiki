@@ -64,7 +64,7 @@ All ontologies of this repository are listed here. Ontologies highlighted green 
 || <font color="#04B404">Water</font> || <font color="#04B404">http://purl.org/ifgi/water</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/local/water/0.1/water.rdf</font> || [http://wsmls.googlecode.com/svn/trunk/local/water/0.1/water.html http://wsmls.googlecode.com/svn/trunk/misc/figures/Doc-32.png] ||
 
 ==== Quality ====
-|| <font color="#04B404">DataQuality</font> || <font color="#04B404">http://purl.org/ifgi/patterns/dataquality</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Patterns/Quality/DataQuality/dataquality.rdf</font> || ||
+|| <font color="#04B404">DataQuality</font> || <font color="#04B404">http://purl.org/ifgi/patterns/dataquality</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Patterns/Quality/DataQuality/dataquality.rdf</font> || [http://wsmls.googlecode.com/svn/trunk/global/Patterns/Quality/DataQuality/dataquality.html http://wsmls.googlecode.com/svn/trunk/misc/figures/Doc-32.png]||
 || <font color="#04B404">ServiceQuality</font> || <font color="#04B404">http://purl.org/ifgi/patterns/servicequality</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Patterns/Quality/ServiceQuality/servicequality.rdf</font> ||  ||
 
 
