@@ -1,6 +1,6 @@
 = Ontology Namespaces =
 
-All ontologies of this repository are listed here. Ontologies highlighted green enable namespace which point directly to the ontology which means the namespace can be used as an URL to retrieve the concerning ontology in RDF format.
+All ontologies of this repository are listed here. Ontologies highlighted in green enable namespace which point directly to the ontology which means the namespace can be used as an URL to retrieve the concerning ontology in RDF format. Ontologies highlighted in red are not up-to-date.
 
 == Global Ontologies ==
 
