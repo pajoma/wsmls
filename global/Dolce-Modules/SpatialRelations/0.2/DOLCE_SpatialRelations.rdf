@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns="http://purl.org/ifgi/dolceSpatial#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:dolce="http://purl.org/ifgi/dolce#"
+	xmlns:src="http://www.loa-cnr.it/ontologies/SpatialRelations.owl#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+<rdf:Description rdf:nodeID="node16tsjbk2dx49">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<rdfs:label>DOLCE_SpatialRelations</rdfs:label>
+	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
+	<owl:imports rdf:resource="http://purl.org/ifgi/dolce#"/>
+	<dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">p.maue (IFGI)</dc:creator>
+	<dc:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IfGI, University of Muenster</dc:publisher>
+	<dc:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Foundational Ontology</dc:type>
+	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dolce Ontology (Spatial Relations)</dc:title>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Ontology of spatial relations, extending the location relations from DOLCE. OWL engineering by Aldo Gangemi. WSML Translation by Patrick Mau?</dc:description>
+	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://wiki.loa-cnr.it/index.php/LoaWiki:Spatial</dc:source>
+	<dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dolce, foundational, module, spatial</dc:subject>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceSpatial#approximate_location">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#spatio_temporal_particular"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#spatio_temporal_particular"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#generic_location"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has approximate location@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A spatial location relation holding between any two entities but regions. It assumes a mereotopological association (part, connection, overlaps, etc.) between shared spatial regions.</dc:description>
+	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/SpatialRelations.owl#approximate-location"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceSpatial#approximate_location_of">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#spatio_temporal_particular"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#spatio_temporal_particular"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#generic_location_of"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is approximate location of@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A spatial location relation holding between any two entities but regions. It assumes a mereotopological association (part, connection, overlaps, etc.) between shared spatial regions.</dc:description>
+	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/SpatialRelations.owl#approximate-location-of"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceSpatial#descriptive_place">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#endurant"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#non_physical_endurant"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolceSpatial#approximate_location"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has descriptive place@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Approximate location of an endurant in a non-physical one. It assumes a shared region.AKA fiat-place.</dc:description>
+	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/SpatialRelations.owl#descriptive-place"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceSpatial#descriptive_place_of">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#non_physical_endurant"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#endurant"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolceSpatial#approximate_location_of"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is descriptive place of@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Approximate location of an endurant in a non-physical one. It assumes a shared region.AKA fiat-place.</dc:description>
+	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/SpatialRelations.owl#descriptive-place-of"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceSpatial#participant_place">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#perdurant"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#endurant"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#approximate_location"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has participant place@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The place of a perdurant as provided by a reference region at which the spatial quality of a certain endurant is q-located.</dc:description>
+	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/SpatialRelations.owl#approximate-location-of"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceSpatial#participant_place_of">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#endurant"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#perdurant"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#approximate_location_of"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is participant place of@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The place of a perdurant as provided by a reference region at which the spatial quality of a certain endurant is q-located.</dc:description>
+	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/SpatialRelations.owl#approximate-location-of"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceSpatial#descriptive_origin">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#endurant"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#non_physical_endurant"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolceSpatial#descriptive_place"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has descriptive origin@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Original location of an endurant in a non-physical one. It assumes a shared region between the first and the depend-on of the second (see descriptive place).</dc:description>
+	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/SpatialRelations.owl#descriptive-origin"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceSpatial#descriptive_origin_of">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#non_physical_endurant"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#endurant"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolceSpatial#descriptive_place_of"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is descriptive origin of@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Original location of an endurant in a non-physical one. It assumes a shared region between the first and the depend-on of the second (see descriptive place).</dc:description>
+	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/SpatialRelations.owl#descriptive-origin-of"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceSpatial#place">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#endurant"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#physical_endurant"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolceSpatial#approximate_location"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has place@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relation of approximate location holding between any endurant and physical endurants. It assumes a shared physical region. Sharedness can be any mereotopological association, but no analytical definition can be done in OWL due to the lack of role value maps.</dc:description>
+	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/SpatialRelations.owl#place"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceSpatial#place_of">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#physical_endurant"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#endurant"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolceSpatial#approximate_location_of"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is place of@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relation of approximate location holding between any endurant and physical endurants. It assumes a shared physical region. Sharedness can be any mereotopological association, but no analytical definition can be done in OWL due to the lack of role value maps.</dc:description>
+	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/SpatialRelations.owl#place-of"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceSpatial#material_place">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#physical_endurant"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#physical_endurant"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolceSpatial#place"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has material place@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relation of approximate location holding for physical endurants. It assumes a physical region that is shared by two physical endurants. Sharedness can be any mereotopological association, but no analytical definition can be done in OWL due to the lack of role value maps.</dc:description>
+	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/SpatialRelations.owl#place-of"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceSpatial#material_place_of">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#physical_endurant"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#physical_endurant"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolceSpatial#place_of"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is material place of@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relation of approximate location holding for physical endurants. It assumes a physical region that is shared by two physical endurants. Sharedness can be any mereotopological association, but no analytical definition can be done in OWL due to the lack of role value maps.</dc:description>
+	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/SpatialRelations.owl#material-place-of"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceSpatial#origin">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#physical_endurant"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#physical_endurant"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolceSpatial#material_place"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has origin@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The physical 'origin' of a physical endurant in the space region of the spatial quality of another physical endurant.</dc:description>
+	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/SpatialRelations.owl#origin"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceSpatial#origin_of">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#physical_endurant"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#physical_endurant"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolceSpatial#material_place_of"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is origin of@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The physical 'origin' of a physical endurant in the space region of the spatial quality of another physical endurant.</dc:description>
+	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/SpatialRelations.owl#origin-of"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceSpatial#d_spatial_location">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#non_physical_endurant"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#space_region"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#exact_location"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has spatial location@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Analytical indirect location holding between non-physical endurants and space regions.</dc:description>
+	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/SpatialRelations.owl#d-spatial-location"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceSpatial#d_spatial_location_of">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#space_region"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#non_physical_endurant"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#exact_location_of"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is spatial location of@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Analytical indirect location holding between non-physical endurants and space regions.</dc:description>
+	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/SpatialRelations.owl#d-spatial-location-of"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceSpatial#p_spatial_location">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#perdurant"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#space_region"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#exact_location"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has spatial location@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Analytical indirect location holding between perdurants and space regions.</dc:description>
+	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/SpatialRelations.owl#p-spatial-location"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceSpatial#p_spatial_location_of">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#space_region"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#perdurant"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#exact_location_of"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is spatial location of@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Analytical indirect location holding between perdurants and space regions.</dc:description>
+	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/SpatialRelations.owl#p-spatial-location-of"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceSpatial#spatial_location">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#physical_endurant"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#space_region"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#exact_location_of"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has spatial location@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Analytical location holding between physical endurants and spatial regions.</dc:description>
+	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/SpatialRelations.owl#spatial-location-of"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/dolceSpatial#spatial_location_of">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/dolce#space_region"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/dolce#physical_endurant"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dolce#exact_location_of"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is spatial location of@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Analytical location holding between physical endurants and spatial regions.</dc:description>
+	<rdfs:seeAlso rdf:resource="http://www.loa-cnr.it/ontologies/SpatialRelations.owl#spatial-location-of"/>
+</rdf:Description>
+
+</rdf:RDF>

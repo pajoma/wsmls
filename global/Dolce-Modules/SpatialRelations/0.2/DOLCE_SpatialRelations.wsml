@@ -1,0 +1,162 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://purl.org/ifgi/dolceSpatial#",
+     rdf _"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+     rdfs _"http://www.w3.org/2000/01/rdf-schema#",
+     dolce _"http://purl.org/ifgi/dolce#",
+     src _"http://www.loa-cnr.it/ontologies/SpatialRelations.owl",
+     dc _"http://purl.org/dc/elements/1.1/"}
+
+ontology DOLCE_SpatialRelations
+     annotations
+        dc#creator hasValue "p.maue (IFGI)"
+        dc#publisher hasValue "IfGI, University of Muenster"
+		dc#type hasValue "Foundational Ontology"
+		dc#title hasValue "Dolce Ontology (Spatial Relations)"	
+		dc#description hasValue "An Ontology of spatial relations, extending the location relations from DOLCE. OWL engineering by Aldo Gangemi. WSML Translation by Patrick Maué"
+		dc#source hasValue "http://wiki.loa-cnr.it/index.php/LoaWiki:Spatial"
+		dc#subject hasValue "dolce, foundational, module, spatial"	
+     endAnnotations
+     
+	importsOntology {_"http://purl.org/ifgi/dolce#"}
+     
+relation approximate_location (ofType dolce#spatio_temporal_particular, ofType dolce#spatio_temporal_particular	)  subRelationOf dolce#generic_location
+	annotations
+		dc#identifier hasValue "has approximate location@en"
+		dc#description hasValue "A spatial location relation holding between any two entities but regions. It assumes a mereotopological association (part, connection, overlaps, etc.) between shared spatial regions."
+		rdfs#seeAlso hasValue src#approximate\-location
+	endAnnotations
+	
+relation approximate_location_of (ofType dolce#spatio_temporal_particular, ofType dolce#spatio_temporal_particular	)  subRelationOf dolce#generic_location_of
+	annotations
+		dc#identifier hasValue "is approximate location of@en"
+		dc#description hasValue "A spatial location relation holding between any two entities but regions. It assumes a mereotopological association (part, connection, overlaps, etc.) between shared spatial regions."
+		rdfs#seeAlso hasValue src#approximate\-location\-of
+	endAnnotations
+	
+relation descriptive_place (ofType dolce#endurant, ofType dolce#non_physical_endurant)  subRelationOf approximate_location
+	annotations
+		dc#identifier hasValue "has descriptive place@en"
+		dc#description hasValue "Approximate location of an endurant in a non-physical one. It assumes a shared region.AKA fiat-place."
+		rdfs#seeAlso hasValue src#descriptive\-place
+	endAnnotations
+	
+relation descriptive_place_of (ofType dolce#non_physical_endurant, ofType dolce#endurant)  subRelationOf approximate_location_of
+	annotations
+		dc#identifier hasValue "is descriptive place of@en"
+		dc#description hasValue "Approximate location of an endurant in a non-physical one. It assumes a shared region.AKA fiat-place."
+		rdfs#seeAlso hasValue src#descriptive\-place\-of
+	endAnnotations			
+		
+relation participant_place (ofType dolce#perdurant, ofType dolce#endurant)  subRelationOf dolce#approximate_location
+	annotations
+		dc#identifier hasValue "has participant place@en"
+		dc#description hasValue "The place of a perdurant as provided by a reference region at which the spatial quality of a certain endurant is q-located."
+		rdfs#seeAlso hasValue src#approximate\-location\-of
+	endAnnotations
+	
+relation participant_place_of (ofType dolce#endurant, ofType dolce#perdurant)  subRelationOf dolce#approximate_location_of
+	annotations
+		dc#identifier hasValue "is participant place of@en"
+		dc#description hasValue "The place of a perdurant as provided by a reference region at which the spatial quality of a certain endurant is q-located."
+		rdfs#seeAlso hasValue src#approximate\-location\-of
+	endAnnotations			
+	
+relation descriptive_origin (ofType dolce#endurant, ofType dolce#non_physical_endurant)  subRelationOf descriptive_place
+	annotations
+		dc#identifier hasValue "has descriptive origin@en"
+		dc#description hasValue "Original location of an endurant in a non-physical one. It assumes a shared region between the first and the depend-on of the second (see descriptive place)."
+		rdfs#seeAlso hasValue src#descriptive\-origin
+	endAnnotations
+	
+relation descriptive_origin_of (ofType dolce#non_physical_endurant, ofType dolce#endurant)  subRelationOf descriptive_place_of
+	annotations
+		dc#identifier hasValue "is descriptive origin of@en"
+		dc#description hasValue "Original location of an endurant in a non-physical one. It assumes a shared region between the first and the depend-on of the second (see descriptive place)."
+		rdfs#seeAlso hasValue src#descriptive\-origin\-of
+	endAnnotations		
+	
+relation place (ofType dolce#endurant, ofType dolce#physical_endurant)  subRelationOf approximate_location
+	annotations
+		dc#identifier hasValue "has place@en"
+		dc#description hasValue "A relation of approximate location holding between any endurant and physical endurants. It assumes a shared physical region. Sharedness can be any mereotopological association, but no analytical definition can be done in OWL due to the lack of role value maps."
+		rdfs#seeAlso hasValue src#place
+	endAnnotations
+	
+relation place_of (ofType dolce#physical_endurant, ofType dolce#endurant)  subRelationOf approximate_location_of
+	annotations
+		dc#identifier hasValue "is place of@en"
+		dc#description hasValue "A relation of approximate location holding between any endurant and physical endurants. It assumes a shared physical region. Sharedness can be any mereotopological association, but no analytical definition can be done in OWL due to the lack of role value maps."
+		rdfs#seeAlso hasValue src#place\-of
+	endAnnotations	
+	
+relation material_place (ofType dolce#physical_endurant, ofType dolce#physical_endurant)  subRelationOf place
+	annotations
+		dc#identifier hasValue "has material place@en"
+		dc#description hasValue "A relation of approximate location holding for physical endurants. It assumes a physical region that is shared by two physical endurants. Sharedness can be any mereotopological association, but no analytical definition can be done in OWL due to the lack of role value maps."
+		rdfs#seeAlso hasValue src#place\-of
+	endAnnotations
+	
+relation material_place_of (ofType dolce#physical_endurant, ofType dolce#physical_endurant)  subRelationOf place_of
+	annotations
+		dc#identifier hasValue "is material place of@en"
+		dc#description hasValue "A relation of approximate location holding for physical endurants. It assumes a physical region that is shared by two physical endurants. Sharedness can be any mereotopological association, but no analytical definition can be done in OWL due to the lack of role value maps."
+		rdfs#seeAlso hasValue src#material\-place\-of
+	endAnnotations
+	
+	
+relation origin (ofType dolce#physical_endurant, ofType dolce#physical_endurant)  subRelationOf material_place
+	annotations
+		dc#identifier hasValue "has origin@en"
+		dc#description hasValue "The physical 'origin' of a physical endurant in the space region of the spatial quality of another physical endurant."
+		rdfs#seeAlso hasValue src#origin
+	endAnnotations
+	
+relation origin_of (ofType dolce#physical_endurant, ofType dolce#physical_endurant)  subRelationOf material_place_of
+	annotations
+		dc#identifier hasValue "is origin of@en"
+		dc#description hasValue "The physical 'origin' of a physical endurant in the space region of the spatial quality of another physical endurant."
+		rdfs#seeAlso hasValue src#origin\-of
+	endAnnotations
+	
+relation d_spatial_location (ofType dolce#non_physical_endurant, ofType dolce#space_region)  subRelationOf dolce#exact_location
+	annotations
+		dc#identifier hasValue "has spatial location@en"
+		dc#description hasValue "Analytical indirect location holding between non-physical endurants and space regions."
+		rdfs#seeAlso hasValue src#d\-spatial\-location
+	endAnnotations	
+	
+relation d_spatial_location_of (ofType dolce#space_region, ofType dolce#non_physical_endurant)  subRelationOf dolce#exact_location_of
+	annotations
+		dc#identifier hasValue "is spatial location of@en"
+		dc#description hasValue "Analytical indirect location holding between non-physical endurants and space regions."
+		rdfs#seeAlso hasValue src#d\-spatial\-location\-of
+	endAnnotations	
+	
+relation p_spatial_location (ofType dolce#perdurant, ofType dolce#space_region)  subRelationOf dolce#exact_location
+	annotations
+		dc#identifier hasValue "has spatial location@en"
+		dc#description hasValue "Analytical indirect location holding between perdurants and space regions."
+		rdfs#seeAlso hasValue src#p\-spatial\-location
+	endAnnotations	
+	
+relation p_spatial_location_of (ofType dolce#space_region, ofType dolce#perdurant)  subRelationOf dolce#exact_location_of
+	annotations
+		dc#identifier hasValue "is spatial location of@en"
+		dc#description hasValue "Analytical indirect location holding between perdurants and space regions."
+		rdfs#seeAlso hasValue src#p\-spatial\-location\-of
+	endAnnotations		
+	
+relation spatial_location (ofType dolce#physical_endurant, ofType dolce#space_region)  subRelationOf dolce#exact_location_of
+	annotations
+		dc#identifier hasValue "has spatial location@en"
+		dc#description hasValue "Analytical location holding between physical endurants and spatial regions."
+		rdfs#seeAlso hasValue src#spatial\-location\-of
+	endAnnotations	
+	
+relation spatial_location_of (ofType dolce#space_region, ofType dolce#physical_endurant)  subRelationOf dolce#exact_location_of
+	annotations
+		dc#identifier hasValue "is spatial location of@en"
+		dc#description hasValue "Analytical location holding between physical endurants and spatial regions."
+		rdfs#seeAlso hasValue src#spatial\-location\-of
+	endAnnotations			
+							     
