@@ -7,7 +7,7 @@ All ontologies of this repository are listed here. Ontologies highlighted in gre
 ==== Affecting Environment ====
 
 || *Ontology* || *Namespace* || *Location* || *Doc* ||
-|| <font color="#FF4040">!AffectingEnvironment</font> || <font color="#04B404">http://purl.org/ifgi/affenv</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Affecting-Environment/0.3/AffectingEnvironment.rdf</font> || [http://wsmls.googlecode.com/svn/trunk/global/Affecting-Environment/0.3/AffectingEnvironment.html http://wsmls.googlecode.com/svn/trunk/misc/figures/Doc-32.png] ||
+|| <font color="#FF4040">!AffectingEnvironment</font> || <font color="#04B404">http://purl.org/ifgi/affenv</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Affecting-Environment/0.3/AffectingEnvironment.rdf</font> || [http://wsmls.googlecode.com/svn/trunk/global/Affecting-Environment/0.3/affecting_environment.html http://wsmls.googlecode.com/svn/trunk/misc/figures/Doc-32.png] ||
 
 ==== DOLCE ====
 
