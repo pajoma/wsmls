@@ -1,0 +1,180 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://purl.org/ifgi/dolceSpatial#> .
+@prefix dolce: <http://purl.org/ifgi/dolce#> .
+@prefix src: <http://www.loa-cnr.it/ontologies/SpatialRelations.owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+_:node16tsjbk2dx50 a owl:Ontology ;
+	rdfs:label "DOLCE_SpatialRelations" ;
+	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
+	owl:imports <http://purl.org/ifgi/dolce#> ;
+	dc:creator "p.maue (IFGI)"^^xsd:string ;
+	dc:publisher "IfGI, University of Muenster"^^xsd:string ;
+	dc:type "Foundational Ontology"^^xsd:string ;
+	dc:title "Dolce Ontology (Spatial Relations)"^^xsd:string ;
+	dc:description "An Ontology of spatial relations, extending the location relations from DOLCE. OWL engineering by Aldo Gangemi. WSML Translation by Patrick Mau?"^^xsd:string ;
+	dc:source "http://wiki.loa-cnr.it/index.php/LoaWiki:Spatial"^^xsd:string ;
+	dc:subject "dolce, foundational, module, spatial"^^xsd:string .
+
+:approximate_location a rdf:Property ;
+	rdfs:domain dolce:spatio_temporal_particular ;
+	rdfs:range dolce:spatio_temporal_particular ;
+	rdfs:subPropertyOf dolce:generic_location ;
+	dc:identifier "has approximate location@en"^^xsd:string ;
+	dc:description "A spatial location relation holding between any two entities but regions. It assumes a mereotopological association (part, connection, overlaps, etc.) between shared spatial regions."^^xsd:string ;
+	rdfs:seeAlso src:approximate-location .
+
+:approximate_location_of a rdf:Property ;
+	rdfs:domain dolce:spatio_temporal_particular ;
+	rdfs:range dolce:spatio_temporal_particular ;
+	rdfs:subPropertyOf dolce:generic_location_of ;
+	dc:identifier "is approximate location of@en"^^xsd:string ;
+	dc:description "A spatial location relation holding between any two entities but regions. It assumes a mereotopological association (part, connection, overlaps, etc.) between shared spatial regions."^^xsd:string ;
+	rdfs:seeAlso src:approximate-location-of .
+
+:descriptive_place a rdf:Property ;
+	rdfs:domain dolce:endurant ;
+	rdfs:range dolce:non_physical_endurant ;
+	rdfs:subPropertyOf :approximate_location ;
+	dc:identifier "has descriptive place@en"^^xsd:string ;
+	dc:description "Approximate location of an endurant in a non-physical one. It assumes a shared region.AKA fiat-place."^^xsd:string ;
+	rdfs:seeAlso src:descriptive-place .
+
+:descriptive_place_of a rdf:Property ;
+	rdfs:domain dolce:non_physical_endurant ;
+	rdfs:range dolce:endurant ;
+	rdfs:subPropertyOf :approximate_location_of ;
+	dc:identifier "is descriptive place of@en"^^xsd:string ;
+	dc:description "Approximate location of an endurant in a non-physical one. It assumes a shared region.AKA fiat-place."^^xsd:string ;
+	rdfs:seeAlso src:descriptive-place-of .
+
+:participant_place a rdf:Property ;
+	rdfs:domain dolce:perdurant ;
+	rdfs:range dolce:endurant ;
+	rdfs:subPropertyOf dolce:approximate_location ;
+	dc:identifier "has participant place@en"^^xsd:string ;
+	dc:description "The place of a perdurant as provided by a reference region at which the spatial quality of a certain endurant is q-located."^^xsd:string ;
+	rdfs:seeAlso src:approximate-location-of .
+
+:participant_place_of a rdf:Property ;
+	rdfs:domain dolce:endurant ;
+	rdfs:range dolce:perdurant ;
+	rdfs:subPropertyOf dolce:approximate_location_of ;
+	dc:identifier "is participant place of@en"^^xsd:string ;
+	dc:description "The place of a perdurant as provided by a reference region at which the spatial quality of a certain endurant is q-located."^^xsd:string ;
+	rdfs:seeAlso src:approximate-location-of .
+
+:descriptive_origin a rdf:Property ;
+	rdfs:domain dolce:endurant ;
+	rdfs:range dolce:non_physical_endurant ;
+	rdfs:subPropertyOf :descriptive_place ;
+	dc:identifier "has descriptive origin@en"^^xsd:string ;
+	dc:description "Original location of an endurant in a non-physical one. It assumes a shared region between the first and the depend-on of the second (see descriptive place)."^^xsd:string ;
+	rdfs:seeAlso src:descriptive-origin .
+
+:descriptive_origin_of a rdf:Property ;
+	rdfs:domain dolce:non_physical_endurant ;
+	rdfs:range dolce:endurant ;
+	rdfs:subPropertyOf :descriptive_place_of ;
+	dc:identifier "is descriptive origin of@en"^^xsd:string ;
+	dc:description "Original location of an endurant in a non-physical one. It assumes a shared region between the first and the depend-on of the second (see descriptive place)."^^xsd:string ;
+	rdfs:seeAlso src:descriptive-origin-of .
+
+:place a rdf:Property ;
+	rdfs:domain dolce:endurant ;
+	rdfs:range dolce:physical_endurant ;
+	rdfs:subPropertyOf :approximate_location ;
+	dc:identifier "has place@en"^^xsd:string ;
+	dc:description "A relation of approximate location holding between any endurant and physical endurants. It assumes a shared physical region. Sharedness can be any mereotopological association, but no analytical definition can be done in OWL due to the lack of role value maps."^^xsd:string ;
+	rdfs:seeAlso src:place .
+
+:place_of a rdf:Property ;
+	rdfs:domain dolce:physical_endurant ;
+	rdfs:range dolce:endurant ;
+	rdfs:subPropertyOf :approximate_location_of ;
+	dc:identifier "is place of@en"^^xsd:string ;
+	dc:description "A relation of approximate location holding between any endurant and physical endurants. It assumes a shared physical region. Sharedness can be any mereotopological association, but no analytical definition can be done in OWL due to the lack of role value maps."^^xsd:string ;
+	rdfs:seeAlso src:place-of .
+
+:material_place a rdf:Property ;
+	rdfs:domain dolce:physical_endurant ;
+	rdfs:range dolce:physical_endurant ;
+	rdfs:subPropertyOf :place ;
+	dc:identifier "has material place@en"^^xsd:string ;
+	dc:description "A relation of approximate location holding for physical endurants. It assumes a physical region that is shared by two physical endurants. Sharedness can be any mereotopological association, but no analytical definition can be done in OWL due to the lack of role value maps."^^xsd:string ;
+	rdfs:seeAlso src:place-of .
+
+:material_place_of a rdf:Property ;
+	rdfs:domain dolce:physical_endurant ;
+	rdfs:range dolce:physical_endurant ;
+	rdfs:subPropertyOf :place_of ;
+	dc:identifier "is material place of@en"^^xsd:string ;
+	dc:description "A relation of approximate location holding for physical endurants. It assumes a physical region that is shared by two physical endurants. Sharedness can be any mereotopological association, but no analytical definition can be done in OWL due to the lack of role value maps."^^xsd:string ;
+	rdfs:seeAlso src:material-place-of .
+
+:origin a rdf:Property ;
+	rdfs:domain dolce:physical_endurant ;
+	rdfs:range dolce:physical_endurant ;
+	rdfs:subPropertyOf :material_place ;
+	dc:identifier "has origin@en"^^xsd:string ;
+	dc:description "The physical 'origin' of a physical endurant in the space region of the spatial quality of another physical endurant."^^xsd:string ;
+	rdfs:seeAlso src:origin .
+
+:origin_of a rdf:Property ;
+	rdfs:domain dolce:physical_endurant ;
+	rdfs:range dolce:physical_endurant ;
+	rdfs:subPropertyOf :material_place_of ;
+	dc:identifier "is origin of@en"^^xsd:string ;
+	dc:description "The physical 'origin' of a physical endurant in the space region of the spatial quality of another physical endurant."^^xsd:string ;
+	rdfs:seeAlso src:origin-of .
+
+:d_spatial_location a rdf:Property ;
+	rdfs:domain dolce:non_physical_endurant ;
+	rdfs:range dolce:space_region ;
+	rdfs:subPropertyOf dolce:exact_location ;
+	dc:identifier "has spatial location@en"^^xsd:string ;
+	dc:description "Analytical indirect location holding between non-physical endurants and space regions."^^xsd:string ;
+	rdfs:seeAlso src:d-spatial-location .
+
+:d_spatial_location_of a rdf:Property ;
+	rdfs:domain dolce:space_region ;
+	rdfs:range dolce:non_physical_endurant ;
+	rdfs:subPropertyOf dolce:exact_location_of ;
+	dc:identifier "is spatial location of@en"^^xsd:string ;
+	dc:description "Analytical indirect location holding between non-physical endurants and space regions."^^xsd:string ;
+	rdfs:seeAlso src:d-spatial-location-of .
+
+:p_spatial_location a rdf:Property ;
+	rdfs:domain dolce:perdurant ;
+	rdfs:range dolce:space_region ;
+	rdfs:subPropertyOf dolce:exact_location ;
+	dc:identifier "has spatial location@en"^^xsd:string ;
+	dc:description "Analytical indirect location holding between perdurants and space regions."^^xsd:string ;
+	rdfs:seeAlso src:p-spatial-location .
+
+:p_spatial_location_of a rdf:Property ;
+	rdfs:domain dolce:space_region ;
+	rdfs:range dolce:perdurant ;
+	rdfs:subPropertyOf dolce:exact_location_of ;
+	dc:identifier "is spatial location of@en"^^xsd:string ;
+	dc:description "Analytical indirect location holding between perdurants and space regions."^^xsd:string ;
+	rdfs:seeAlso src:p-spatial-location-of .
+
+:spatial_location a rdf:Property ;
+	rdfs:domain dolce:physical_endurant ;
+	rdfs:range dolce:space_region ;
+	rdfs:subPropertyOf dolce:exact_location_of ;
+	dc:identifier "has spatial location@en"^^xsd:string ;
+	dc:description "Analytical location holding between physical endurants and spatial regions."^^xsd:string ;
+	rdfs:seeAlso src:spatial-location-of .
+
+:spatial_location_of a rdf:Property ;
+	rdfs:domain dolce:space_region ;
+	rdfs:range dolce:physical_endurant ;
+	rdfs:subPropertyOf dolce:exact_location_of ;
+	dc:identifier "is spatial location of@en"^^xsd:string ;
+	dc:description "Analytical location holding between physical endurants and spatial regions."^^xsd:string ;
+	rdfs:seeAlso src:spatial-location-of .
