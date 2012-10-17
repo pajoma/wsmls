@@ -6,10 +6,9 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix gml: <http://purl.org/ifgi/gml/0.2#> .
 
-_:node16tsjbk2dx20 a owl:Ontology ;
+_:node179nbunvkx1 a owl:Ontology ;
 	rdfs:label "SWE" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
-	owl:imports <http://purl.org/ifgi/gml/0.2> ;
 	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
 	dc:date "2010-11-10"^^xsd:string ;
 	dc:rights "http://creativecommons.org/licenses/by/3.0/"^^xsd:string ;
@@ -18,42 +17,34 @@ _:node16tsjbk2dx20 a owl:Ontology ;
 
 :AbstractDataArray a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/swe#AbstractDataArray" ;
-	rdfs:subClassOf gml:AbstractGML ;
 	dc:identifier "abstract data array@en"^^xsd:string .
 
 :AbstractDataRecord a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/swe#AbstractDataRecord" ;
-	rdfs:subClassOf gml:AbstractGML ;
 	dc:identifier "abstract data record@en"^^xsd:string .
 
 :ConditionalData a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/swe#ConditionalData" ;
-	rdfs:subClassOf gml:AbstractGML ;
 	dc:identifier "conditional data@en"^^xsd:string .
 
 :ConditionalValue a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/swe#ConditionalValue" ;
-	rdfs:subClassOf gml:AbstractGML ;
 	dc:identifier "conditional value@en"^^xsd:string .
 
 :DataArray a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/swe#DataArray" ;
-	rdfs:subClassOf gml:AbstractGML ;
 	dc:identifier "data array@en"^^xsd:string .
 
 :DataRecord a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/swe#DataRecord" ;
-	rdfs:subClassOf gml:AbstractGML ;
 	dc:identifier "data record@en"^^xsd:string .
 
 :SimpleDataRecord a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/swe#SimpleDataRecord" ;
-	rdfs:subClassOf gml:AbstractGML ;
 	dc:identifier "simple data record@en"^^xsd:string .
 
 :AnyData a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/swe#AnyData" ;
-	rdfs:subClassOf gml:AbstractGML ;
 	dc:identifier "any data@en"^^xsd:string ;
 	dc:title "Any Type"^^xsd:string .
 
@@ -64,13 +55,11 @@ _:node16tsjbk2dx20 a owl:Ontology ;
 
 :Phenomenon a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/swe#Phenomenon" ;
-	rdfs:subClassOf gml:AbstractGML ;
 	dc:identifier "phenomenon@en"^^xsd:string ;
 	dc:title "Basic Phenomenon definition, and head of substitution group of specialized phenomenon defs."^^xsd:string .
 
 :TimeAggregate a rdfs:Class ;
 	rdfs:label "http://purl.org/ifgi/swe#TimeAggregate" ;
-	rdfs:subClassOf gml:AbstractTimeObject ;
 	dc:identifier "time agregate@en"^^xsd:string ;
 	dc:title "an arbitrary set of TimeObjects, often TimeInstants and TimePeriods"^^xsd:string .
 
