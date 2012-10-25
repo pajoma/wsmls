@@ -29,7 +29,6 @@ All ontologies of this repository are listed here. Ontologies highlighted in gre
 || <font color="#04B404">geographic_systems</font> || <font color="#04B404">http://purl.org/ifgi/geosystems</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Geographic-Space/geographic-systems/0.2/geographic-systems.rdf</font> || [http://wsmls.googlecode.com/svn/trunk/global/Geographic-Space/geographic-systems/0.2/geographic-systems.html http://wsmls.googlecode.com/svn/trunk/misc/figures/Doc-32.png] ||
 || <font color="#FF4040">geographic_units</font> || <font color="#FF4040">http://purl.org/ifgi/geounits</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Geographic-Space/geographic-units/0.3/geographic-units.rdf</font> || [http://wsmls.googlecode.com/svn/trunk/global/Geographic-Space/geographic-units/0.3/geographic-units.html http://wsmls.googlecode.com/svn/trunk/misc/figures/Doc-32.png] ||
 || <font color="#04B404">geographic_models</font> || <font color="#04B404">http://purl.org/ifgi/geomodels</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Geographic-Space/geographic-models/0.1/geographic-models.rdf</font> || [http://wsmls.googlecode.com/svn/trunk/global/Geographic-Space/geographic-models/0.1/geographic-models.html http://wsmls.googlecode.com/svn/trunk/misc/figures/Doc-32.png] ||
-|| <font color="#FF4040">geographic_descriptions</font> || <font color="#FF4040">http://purl.org/ifgi/geodesc</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Geographic-Space/geographic-descriptions/0.1/geographic-descriptions.rdf</font> || [http://wsmls.googlecode.com/svn/trunk/global/Geographic-Space/geographic-descriptions/0.1/geographic-descriptions.html http://wsmls.googlecode.com/svn/trunk/misc/figures/Doc-32.png] ||
 
 
 
@@ -50,7 +49,12 @@ All ontologies of this repository are listed here. Ontologies highlighted in gre
 || <font color="#04B404">Role</font> || <font color="#04B404">http://purl.org/ifgi/patterns/role</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Patterns/Role/0.1/Role.rdf</font> || [http://wsmls.googlecode.com/svn/trunk/global/Patterns/Role/0.1/Role.html http://wsmls.googlecode.com/svn/trunk/misc/figures/Doc-32.png] ||
 || <font color="#04B404">System</font> || <font color="#04B404">http://purl.org/ifgi/patterns/system</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Patterns/System/0.1/System.rdf</font> || [http://wsmls.googlecode.com/svn/trunk/global/Patterns/System/0.1/System.html http://wsmls.googlecode.com/svn/trunk/misc/figures/Doc-32.png] ||
 
-==== Scenario-specific Domain Ontologies ====
+==== Quality ====
+
+|| <font color="#04B404">!DataQuality</font> || <font color="#04B404">http://purl.org/ifgi/patterns/dataquality</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Patterns/Quality/DataQuality/dataquality.rdf</font> || [http://wsmls.googlecode.com/svn/trunk/global/Patterns/Quality/DataQuality/dataquality.html http://wsmls.googlecode.com/svn/trunk/misc/figures/Doc-32.png]||
+|| <font color="#04B404">!ServiceQuality</font> || <font color="#04B404">http://purl.org/ifgi/patterns/servicequality</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Patterns/Quality/ServiceQuality/servicequality.rdf</font> || [http://wsmls.googlecode.com/svn/trunk/global/Patterns/Quality/ServiceQuality/servicequality.html http://wsmls.googlecode.com/svn/trunk/misc/figures/Doc-32.png]  ||
+
+== Scenario-specific Domain Ontologies ==
 
 || *Ontology* || *Namespace* || *Location* || *Doc* ||
 || <font color="#04B404">Flood</font> || <font color="#04B404">http://purl.org/ifgi/water/flood</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/local/water/0.4/flood.rdf</font> || [http://wsmls.googlecode.com/svn/trunk/local/water/0.4/flood.html http://wsmls.googlecode.com/svn/trunk/misc/figures/Doc-32.png] ||
@@ -62,10 +66,6 @@ All ontologies of this repository are listed here. Ontologies highlighted in gre
 || <font color="#04B404">!WaterLevelObservation</font> || <font color="#04B404">http://purl.org/ifgi/suc/waterlevelobservation</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/local/simpleusecase/waterlevelobservation.rdf</font> || [http://wsmls.googlecode.com/svn/trunk/local/simpleusecase/waterlevelobservation.html http://wsmls.googlecode.com/svn/trunk/misc/figures/Doc-32.png] ||
 || <font color="#04B404">!RiverModel</font> || <font color="#04B404">http://purl.org/ifgi/rivermodel</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/local/water/0.1/rivermodel.rdf</font> || [http://wsmls.googlecode.com/svn/trunk/local/water/0.1/rivermodel.html http://wsmls.googlecode.com/svn/trunk/misc/figures/Doc-32.png] ||
 || <font color="#04B404">Water</font> || <font color="#04B404">http://purl.org/ifgi/water</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/local/water/0.1/water.rdf</font> || [http://wsmls.googlecode.com/svn/trunk/local/water/0.1/water.html http://wsmls.googlecode.com/svn/trunk/misc/figures/Doc-32.png] ||
-
-==== Quality ====
-|| <font color="#04B404">DataQuality</font> || <font color="#04B404">http://purl.org/ifgi/patterns/dataquality</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Patterns/Quality/DataQuality/dataquality.rdf</font> || [http://wsmls.googlecode.com/svn/trunk/global/Patterns/Quality/DataQuality/dataquality.html http://wsmls.googlecode.com/svn/trunk/misc/figures/Doc-32.png]||
-|| <font color="#04B404">ServiceQuality</font> || <font color="#04B404">http://purl.org/ifgi/patterns/servicequality</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Patterns/Quality/ServiceQuality/servicequality.rdf</font> || [http://wsmls.googlecode.com/svn/trunk/global/Patterns/Quality/ServiceQuality/servicequality.html http://wsmls.googlecode.com/svn/trunk/misc/figures/Doc-32.png]  ||
 
 
 <br>
@@ -101,3 +101,13 @@ All ontologies of this repository are listed here. Ontologies highlighted in gre
 
 || *Ontology* || *Namespace* || *Location* || *Doc* ||
 || <font color="#04B404">Time</font> || <font color="#04B404">http://purl.org/ifgi/time</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/application/W3C/Time/0.1/time.rdf</font> || [http://wsmls.googlecode.com/svn/trunk/application/W3C/Time/0.1/time.html http://wsmls.googlecode.com/svn/trunk/misc/figures/Doc-32.png] ||
+
+==== Description====
+
+|| *Ontology* || *Namespace* || *Location* || *Doc* ||
+|| <font color="#FF4040">geographic_descriptions</font> || <font color="#04B404">http://purl.org/ifgi/geodesc</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/application/Description/geographic-descriptions/0.1/geographic-descriptions.rdf</font> || [http://wsmls.googlecode.com/svn/trunk/application/Description/geographic-descriptions/0.1/geographic-descriptions.html http://wsmls.googlecode.com/svn/trunk/misc/figures/Doc-32.png] ||
+
+==== Annotation====
+
+|| *Ontology* || *Namespace* || *Location* || *Doc* ||
+|| <font color="#FF4040">Annotation</font> || <font color="#04B404">http://purl.org/ifgi/annotations</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/application/Annotation/Annotation.rdf</font> || [http://wsmls.googlecode.com/svn/trunk/application/Annotation/annotation.html http://wsmls.googlecode.com/svn/trunk/misc/figures/Doc-32.png] ||
