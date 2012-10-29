@@ -83,7 +83,7 @@ ontology NotificationOntology
              
 	axiom predict_flooding_70
         definedBy
-             ?obsdesc[gsparql#hasGeometry hasValue ?descloc, annot#domainReference hasValue ?eventobs] memberOf eo#EventObservationDescription
+             ?obsdesc[gsparql#hasGeometry hasValue ?descloc, annot#domainReference hasValue ?eventobs] memberOf gDesc#ObservationDescription
              and ?descloc[gsparql#asWKT hasValue ?locvalue] memberOf gsparql#Geometry
              and ?eventobs[dul#isClassifiedBy hasValue ?eventobstype] memberOf eo#EventObservation
              and ?eventobstype memberOf flood#MinorFloodingStageToModerateFloodingStage
@@ -101,7 +101,7 @@ ontology NotificationOntology
 
 	axiom predict_flooding_90
         definedBy
-             ?obsdesc[gsparql#hasGeometry hasValue ?descloc, annot#domainReference hasValue ?eventobs] memberOf eo#EventObservationDescription
+             ?obsdesc[gsparql#hasGeometry hasValue ?descloc, annot#domainReference hasValue ?eventobs] memberOf gDesc#ObservationDescription
              and ?descloc[gsparql#asWKT hasValue ?locvalue] memberOf gsparql#Geometry
              and ?eventobs[dul#isClassifiedBy hasValue ?eventobstype] memberOf eo#EventObservation
              and ?eventobstype memberOf flood#ModerateFloodingStageToMajorFloodingStage
@@ -179,7 +179,7 @@ ontology NotificationOntology
 		dul#hasQuality hasValue altitude_of_breakabeen
 		gspace#nearBy hasValue schoharie_creek
 	
-	instance description_about_breakabeen memberOf gsparql#Geometry
+	instance description_about_breakabeen memberOf gDesc#GeographicalDescription
 		annot#domainReference hasValue breakabeen
 		gsparql#hasGeometry hasValue location_of_breakabeen
 	
@@ -197,7 +197,7 @@ ontology NotificationOntology
 		dul#hasQuality hasValue altitude_of_fultonham
 		gspace#nearBy hasValue schoharie_creek
 	
-	instance description_about_fultonham memberOf gsparql#Geometry
+	instance description_about_fultonham memberOf gDesc#GeographicalDescription
 		annot#domainReference hasValue fultonham
 		gsparql#hasGeometry hasValue location_of_fultonham
 	
@@ -215,7 +215,7 @@ ontology NotificationOntology
 		dul#hasQuality hasValue altitude_of_middleburgh
 		gspace#nearBy hasValue schoharie_creek
 	
-	instance description_about_middleburgh memberOf gsparql#Geometry
+	instance description_about_middleburgh memberOf gDesc#GeographicalDescription
 		annot#domainReference hasValue middleburgh
 		gsparql#hasGeometry hasValue location_of_middleburgh
 	
@@ -233,7 +233,7 @@ ontology NotificationOntology
 		dul#hasQuality hasValue altitude_of_schoharie
 		gspace#nearBy hasValue schoharie_creek
 	
-	instance description_about_schoharie memberOf gsparql#Geometry
+	instance description_about_schoharie memberOf gDesc#GeographicalDescription
 		annot#domainReference hasValue schoharie
 		gsparql#hasGeometry hasValue location_of_schoharie
 	
@@ -251,7 +251,7 @@ ontology NotificationOntology
 		dul#hasQuality hasValue altitude_of_esperance
 		gspace#nearBy hasValue schoharie_creek
 	
-	instance description_about_esperance memberOf gsparql#Geometry
+	instance description_about_esperance memberOf gDesc#GeographicalDescription
 		annot#domainReference hasValue esperance
 		gsparql#hasGeometry hasValue location_of_esperance
 	
@@ -269,7 +269,7 @@ ontology NotificationOntology
 		dul#hasQuality hasValue altitude_of_burtonsville
 		gspace#nearBy hasValue schoharie_creek
 	
-	instance description_about_burtonsville memberOf gsparql#Geometry
+	instance description_about_burtonsville memberOf gDesc#GeographicalDescription
 		annot#domainReference hasValue esperance
 		gsparql#hasGeometry hasValue location_of_burtonsville
 	
@@ -289,7 +289,7 @@ ontology NotificationOntology
 		dul#hasQuality hasValue altitude_of_gilboa_dam
 		gspace#nearBy hasValue schoharie_creek
 	
-	instance description_about_gilboa_dam memberOf gsparql#Geometry
+	instance description_about_gilboa_dam memberOf gDesc#GeographicalDescription
 		annot#domainReference hasValue gilboa_dam
 		gsparql#hasGeometry hasValue location_of_gilboa_dam
 	
@@ -308,7 +308,7 @@ ontology NotificationOntology
 		dul#hasQuality hasValue altitude_of_prattsville_water_level_sensor
 		gspace#nearBy hasValue schoharie_creek
 	
-	instance description_about_prattsville_water_level_sensor memberOf gsparql#Geometry
+	instance description_about_prattsville_water_level_sensor memberOf gDesc#GeographicalDescription
 		annot#domainReference hasValue prattsville_water_level_sensor
 		gsparql#hasGeometry hasValue location_of_prattsville_water_level_sensor
 	
@@ -323,7 +323,7 @@ ontology NotificationOntology
 		dul#hasQuality hasValue altitude_of_gilboa_water_level_sensor
 		gspace#nearBy hasValue schoharie_creek
 	
-	instance description_about_gilboa_water_level_sensor memberOf gsparql#Geometry
+	instance description_about_gilboa_water_level_sensor memberOf gDesc#GeographicalDescription
 		annot#domainReference hasValue gilboa_water_level_sensor
 		gsparql#hasGeometry hasValue location_of_gilboa_water_level_sensor
 	
@@ -338,7 +338,7 @@ ontology NotificationOntology
 		dul#hasQuality hasValue altitude_of_breakabeen_water_level_sensor
 		gspace#nearBy hasValue schoharie_creek
 	
-	instance description_about_breakabeen_water_level_sensor memberOf gsparql#Geometry
+	instance description_about_breakabeen_water_level_sensor memberOf gDesc#GeographicalDescription
 		annot#domainReference hasValue breakabeen_water_level_sensor
 		gsparql#hasGeometry hasValue location_of_breakabeen_water_level_sensor
 	
