@@ -1,0 +1,177 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://purl.org/ifgi/event-observation#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ssn: <http://purl.org/ifgi/ssn#> .
+@prefix dul: <http://purl.org/ifgi/dul#> .
+@prefix gModel: <http://purl.org/ifgi/geomodels#> .
+@prefix gDesc: <http://purl.org/ifgi/geodesc#> .
+
+_:node17aoj1maux2 a owl:Ontology ;
+	rdfs:label "EventObservation" ;
+	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
+	owl:imports <http://purl.org/ifgi/dul#> , <http://purl.org/ifgi/ssn#> , <http://purl.org/ifgi/geomodels#> , <http://purl.org/ifgi/geodesc#> ;
+	dc:title "Event-observation Ontology"^^xsd:string ;
+	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
+	dc:rights "http://creativecommons.org/licenses/by/3.0/"^^xsd:string ;
+	dc:description "Extension of the SSN model that allows to represent occurrences inferred from Event Processing of observations"^^xsd:string ;
+	dc:creator "Alejandro Llaves"^^xsd:string .
+
+:EventProcessingAgent a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/event-observation#EventProcessingAgent" ;
+	rdfs:subClassOf ssn:Sensor ;
+	dc:identifier "event processing agent@en"^^xsd:string ;
+	dc:description "An event processing agent is a software entity that processes events. In our case it looks for specific situations defined as rules or event patterns in time-series of observations previously converted to time-series of events."^^xsd:string .
+
+:EventProcessingAgent_prop_observes a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/ssn#observes" ;
+	rdfs:domain :EventProcessingAgent ;
+	a rdf:Property ;
+	rdfs:range ssn:Property ;
+	rdfs:subPropertyOf ssn:observes .
+
+:EventProcessingAgent_prop_implements a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/ssn#implements" ;
+	rdfs:domain :EventProcessingAgent ;
+	a rdf:Property ;
+	rdfs:range :EventDetectionProcedure ;
+	rdfs:subPropertyOf ssn:implements .
+
+:EventProcessingAgent_prop_detects a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/ssn#detects" ;
+	rdfs:domain :EventProcessingAgent ;
+	a rdf:Property ;
+	rdfs:range ssn:Stimulus ;
+	rdfs:subPropertyOf ssn:detects .
+
+:EventObservation a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/event-observation#EventObservation" ;
+	rdfs:subClassOf ssn:Observation ;
+	dc:identifier "event observation@en"^^xsd:string ;
+	dc:description "Observation of a situation (subjective view of an event)."^^xsd:string .
+
+:EventObservation_prop_observedAt a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/event-observation#observedAt" ;
+	rdfs:domain :EventObservation ;
+	a rdf:Property ;
+	rdfs:range dul:SpatioTemporalRegion .
+
+:EventObservation_prop_sensingMethodUsed a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/ssn#sensingMethodUsed" ;
+	rdfs:domain :EventObservation ;
+	a rdf:Property ;
+	rdfs:range :EventDetectionProcedure ;
+	rdfs:subPropertyOf ssn:sensingMethodUsed .
+
+:EventObservation_prop_satisfies a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/dul#satisfies" ;
+	rdfs:domain :EventObservation ;
+	a rdf:Property ;
+	rdfs:range :EventObservationRule ;
+	rdfs:subPropertyOf dul:satisfies .
+
+:EventObservation_prop_observedProperty a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/ssn#observedProperty" ;
+	rdfs:domain :EventObservation ;
+	a rdf:Property ;
+	rdfs:range ssn:Property ;
+	rdfs:subPropertyOf ssn:observedProperty .
+
+:EventObservation_prop_observedBy a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/ssn#observedBy" ;
+	rdfs:domain :EventObservation ;
+	a rdf:Property ;
+	rdfs:range :EventProcessingAgent ;
+	rdfs:subPropertyOf ssn:observedBy .
+
+:EventObservation_prop_includesEvent a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/ssn#includesEvent" ;
+	rdfs:domain :EventObservation ;
+	a rdf:Property ;
+	rdfs:range ssn:Stimulus ;
+	rdfs:subPropertyOf ssn:includesEvent .
+
+:EventObservation_prop_observationResult a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/ssn#observationResult" ;
+	rdfs:domain :EventObservation ;
+	a rdf:Property ;
+	rdfs:range :EventProcessingAgentOutput ;
+	rdfs:subPropertyOf ssn:observationResult .
+
+:EventObservation_prop_isClassifiedBy a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/dul#isClassifiedBy" ;
+	rdfs:domain :EventObservation ;
+	a rdf:Property ;
+	rdfs:range :EventObservationType ;
+	rdfs:subPropertyOf dul:isClassifiedBy .
+
+:EventDetectionProcedure a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/event-observation#EventDetectionProcedure" ;
+	rdfs:subClassOf ssn:Sensing ;
+	dc:identifier "event detection procedure@en"^^xsd:string ;
+	dc:description "Method used to detect a specific situation from observations."^^xsd:string .
+
+:EventObservationRule a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/event-observation#EventObservationRule" ;
+	rdfs:subClassOf dul:Description ;
+	dc:identifier "event observation rule@en"^^xsd:string ;
+	dc:description "Rule or pattern used by the Event Processing Agent to detect the corresponding event."^^xsd:string .
+
+:EventObservationType a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/event-observation#EventObservationType" ;
+	rdfs:subClassOf dul:EventType ;
+	dc:identifier "event observation type@en"^^xsd:string ;
+	dc:description "Type of the observed situation."^^xsd:string .
+
+:EventObservationType_prop_isDefinedIn a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/dul#isDefinedIn" ;
+	rdfs:domain :EventObservationType ;
+	a rdf:Property ;
+	rdfs:range :EventObservationRule ;
+	rdfs:subPropertyOf dul:isDefinedIn .
+
+:EventProcessingAgentOutput a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/event-observation#EventProcessingAgentOutput" ;
+	rdfs:subClassOf ssn:SensorOutput ;
+	dc:identifier "event processing agent output@en"^^xsd:string ;
+	dc:description "Output."^^xsd:string .
+
+:EventProcessingAgentOutput_prop_hasValue a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/ssn#hasValue" ;
+	rdfs:domain :EventProcessingAgentOutput ;
+	a rdf:Property ;
+	rdfs:range :EventObservationValue ;
+	rdfs:subPropertyOf ssn:hasValue .
+
+:EventProcessingAgentOutput_prop_isProducedBy a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/ssn#isProducedBy" ;
+	rdfs:domain :EventProcessingAgentOutput ;
+	a rdf:Property ;
+	rdfs:range :EventProcessingAgent ;
+	rdfs:subPropertyOf ssn:isProducedBy .
+
+:EventObservationValue a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/event-observation#EventObservationValue" ;
+	rdfs:subClassOf ssn:ObservationValue ;
+	dc:identifier "event observation value@en"^^xsd:string ;
+	dc:description "Value of the event observation pointing to the type of the situation observed."^^xsd:string .
+
+:EventObservationValue_prop_eventObservationType a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/event-observation#eventObservationType" ;
+	rdfs:domain :EventObservationValue ;
+	a rdf:Property ;
+	rdfs:range :EventObservationType .
+
+:observedAt a rdf:Property ;
+	rdfs:domain :EventObservation ;
+	rdfs:range dul:SpatioTemporalRegion ;
+	dc:identifier "observed at@en"^^xsd:string ;
+	dc:description "A relation between an observed situation (perdurant) and a spatio-temporal region."^^xsd:string .
+
+:eventObservationType a rdf:Property ;
+	rdfs:domain :EventObservationValue ;
+	rdfs:range :EventObservationType ;
+	dc:identifier "event observation type@en"^^xsd:string ;
+	dc:description "The output of the event processing agent (sensor) is the detection of a situation (view of an event) defined by an event observation type."^^xsd:string .
