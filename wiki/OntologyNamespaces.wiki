@@ -38,7 +38,7 @@ All ontologies of this repository are listed here. Ontologies highlighted in gre
 || *Ontology* || *Namespace* || *Location* || *Doc* ||
 || <font color="#04B404">Observation</font> || <font color="#04B404">http://purl.org/ifgi/observation</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Observations/0.3/Observation.rdf</font> || [http://wsmls.googlecode.com/svn/trunk/global/Observations/0.3/Observation.html http://wsmls.googlecode.com/svn/trunk/misc/figures/Doc-32.png] ||
 || <font color="#04B404">SSN</font> || <font color="#04B404">http://purl.org/ifgi/ssn</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/SSN/0.1/SSN.rdf</font> || [http://wsmls.googlecode.com/svn/trunk/global/SSN/0.1/SSN.html http://wsmls.googlecode.com/svn/trunk/misc/figures/Doc-32.png] ||
-|| <font color="#04B404">Event-Observation</font> || <font color="#04B404">http://purl.org/ifgi/event-observation</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Event-observation/0.3/EventObservation.rdf</font> || [http://wsmls.googlecode.com/svn/trunk/global/Event-observation/0.3/EventObservation.htm http://wsmls.googlecode.com/svn/trunk/misc/figures/Doc-32.png] ||
+|| <font color="#04B404">Event-Observation</font> || <font color="#04B404">http://purl.org/ifgi/event-observation</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Event-observation/0.3/EventObservation.rdf</font> || [http://wsmls.googlecode.com/svn/trunk/global/Event-observation/0.3/Event-observation.htm http://wsmls.googlecode.com/svn/trunk/misc/figures/Doc-32.png] ||
 
 
 
