@@ -47,7 +47,7 @@ All ontologies of this repository are listed here. Ontologies highlighted in gre
 || *Ontology* || *Namespace* || *Location* || *Doc* ||
 || <font color="#04B404">Event</font> || <font color="#04B404">http://purl.org/ifgi/patterns/event</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Patterns/Event/0.1/Event.rdf</font> || [http://wsmls.googlecode.com/svn/trunk/global/Patterns/Event/0.1/event.html http://wsmls.googlecode.com/svn/trunk/misc/figures/Doc-32.png] ||
 || <font color="#04B404">Role</font> || <font color="#04B404">http://purl.org/ifgi/patterns/role</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Patterns/Role/0.1/Role.rdf</font> || [http://wsmls.googlecode.com/svn/trunk/global/Patterns/Role/0.1/role.html http://wsmls.googlecode.com/svn/trunk/misc/figures/Doc-32.png] ||
-|| <font color="#04B404">System</font> || <font color="#04B404">http://purl.org/ifgi/patterns/system</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Patterns/System/0.1/System.rdf</font> || [http://wsmls.googlecode.com/svn/trunk/global/Patterns/System/0.1/System.html http://wsmls.googlecode.com/svn/trunk/misc/figures/Doc-32.png] ||
+|| <font color="#04B404">System</font> || <font color="#04B404">http://purl.org/ifgi/patterns/system</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/global/Patterns/System/0.1/System.rdf</font> || [http://wsmls.googlecode.com/svn/trunk/global/Patterns/System/0.1/system.html http://wsmls.googlecode.com/svn/trunk/misc/figures/Doc-32.png] ||
 
 ==== Quality ====
 
