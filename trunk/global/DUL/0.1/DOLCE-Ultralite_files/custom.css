@@ -303,7 +303,7 @@ h1 a[href]:hover, h2 a[href]:hover { background-color: transparent; }
 }
 
 .publisher{
-	background-image: url("../images/user-suit.png");
+	background-image: url("./images/user-suit.png");
 }
 
 /** end metadata icons ***/
