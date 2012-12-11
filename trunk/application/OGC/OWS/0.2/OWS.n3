@@ -12,7 +12,7 @@
 _:node16tsjbk2dx14 a owl:Ontology ;
 	rdfs:label "OWSOntology" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-core" ;
-	owl:imports <http://www.wsmo.org/ns/wsmo-lite#> , <http://www.wsmo.org/ns/posm/0.2#> , <http://purl.org/ifgi/dolceDnS#> ;
+	owl:imports <http://purl.org/ifgi/wsl#> , <http://purl.org/ifgi/posm#> , <http://purl.org/ifgi/dolceDnS#> ;
 	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
 	dc:date "2010-11-10"^^xsd:string ;
 	dc:rights "http://creativecommons.org/licenses/by/3.0/"^^xsd:string ;

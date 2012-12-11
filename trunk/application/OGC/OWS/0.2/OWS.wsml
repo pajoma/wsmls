@@ -20,7 +20,7 @@ ontology ows#OWSOntology
 		dc#title hasValue "OWS Common"
 	endAnnotations
 	
-	importsOntology {_"http://www.wsmo.org/ns/wsmo-lite#", _"http://www.wsmo.org/ns/posm/0.2#", _"http://purl.org/ifgi/dolceDnS#"} 
+	importsOntology {_"http://purl.org/ifgi/wsl#", _"http://purl.org/ifgi/posm#", _"http://purl.org/ifgi/dolceDnS#"} 
 
 	concept ows#OGCWebService subConceptOf wsl#FunctionalClassificationRoot
 		annotations
