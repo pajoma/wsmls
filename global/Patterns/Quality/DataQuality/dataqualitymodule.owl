@@ -16,26 +16,26 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      ontologyIRI="http://wsmls.googlecode.com/svn/trunk/global/Patterns/Quality/DataQuality/dataqualitymodule.owl">
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
-    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Annotation>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
-        <Literal>July 31, 2012</Literal>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/contributor"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Auriol Degbelo &lt;degbelo@uni-muenster.de&gt;</Literal>
     </Annotation>
     <Annotation>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/contributor"/>
-        <Literal>Auriol Degbelo &lt;degbelo@uni-muenster.de&gt;</Literal>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">July 31, 2012</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
-        <Literal>An ontology design pattern for spatial data quality characterization in the Semantic Sensor Web.</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">An ontology design pattern for spatial data quality characterization in the Semantic Sensor Web.</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <Literal>The concepts suggested in this module are not aligned to a foundational ontology because the goal is to provide a simple and readily re-usable set of concepts for semantic annotation. The module aligned to the foundational ontology Dolce Ultra Light (DUL) can be accessed at http://ifgi.uni-muenster.de/~degbelo/Ressources/SSN2012Degbelo. An example of use of the module is provided at http://wsmls.googlecode.com/svn/trunk/global/Patterns/Quality/QualityExample/dataqualityexample.owl.</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">The concepts suggested in this module are not aligned to a foundational ontology because the goal is to provide a simple and readily re-usable set of concepts for semantic annotation. The module aligned to the foundational ontology Dolce Ultra Light (DUL) can be accessed at http://ifgi.uni-muenster.de/~degbelo/Resources/SSN2012Degbelo. An example of use of the module is provided at http://wsmls.googlecode.com/svn/trunk/global/Patterns/Quality/QualityExample/dataqualityexample.owl.</Literal>
     </Annotation>
     <Declaration>
         <Class IRI="http://www.semanticweb.org/ontologies/dataquality.owl#Data"/>
@@ -81,35 +81,35 @@
     </Declaration>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataquality.owl#approximates"/>
-        <ObjectProperty abbreviatedIRI=":topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataquality.owl#involves"/>
-        <ObjectProperty abbreviatedIRI=":topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataquality.owl#isQualityComponentOf"/>
-        <ObjectProperty abbreviatedIRI=":topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataquality.owl#satisfies"/>
-        <ObjectProperty abbreviatedIRI=":topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataqualitymodule.owl#hasQualityComponent"/>
-        <ObjectProperty abbreviatedIRI=":topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataqualitymodule.owl#isApproximatedBy"/>
-        <ObjectProperty abbreviatedIRI=":topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataqualitymodule.owl#isQualityCriterionOf"/>
-        <ObjectProperty abbreviatedIRI=":topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataqualitymodule.owl#isResultOf"/>
-        <ObjectProperty abbreviatedIRI=":topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <InverseObjectProperties>
         <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataquality.owl#approximates"/>
@@ -124,8 +124,8 @@
         <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataquality.owl#isQualityComponentOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataquality.owl#satisfies"/>
         <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataqualitymodule.owl#isQualityCriterionOf"/>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataquality.owl#satisfies"/>
     </InverseObjectProperties>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataquality.owl#approximates"/>
@@ -161,7 +161,7 @@
     </ObjectPropertyRange>
     <SubDataPropertyOf>
         <DataProperty IRI="http://www.semanticweb.org/ontologies/dataquality.owl#hasValue"/>
-        <DataProperty abbreviatedIRI=":topDataProperty"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <DataPropertyDomain>
         <DataProperty IRI="http://www.semanticweb.org/ontologies/dataquality.owl#hasValue"/>
@@ -174,76 +174,76 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://www.semanticweb.org/ontologies/dataquality.owl#Data</IRI>
-        <Literal>Data is the output of an observation process involving a sensor, a stimulus, a sensed property and a feature. It is equivalent to the class Observation as defined in the ontology of the W3C&#39;s Semantic Sensor Networks Incubator Group (see the definition of &#39;Observation&#39; at http://purl.oclc.org/NET/ssnx/ssn). Data as used in this ontology refers to spatial data.</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Data is the output of an observation process involving a sensor, a stimulus, a sensed property and a feature. It is equivalent to the class Observation as defined in the ontology of the W3C&apos;s Semantic Sensor Networks Incubator Group (see the definition of &apos;Observation&apos; at http://purl.oclc.org/NET/ssnx/ssn). Data as used in this ontology refers to spatial data.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://www.semanticweb.org/ontologies/dataquality.owl#DataQualityComponent</IRI>
-        <Literal>A data quality component is any property of the data that the consumer wants to approximate. Data quality components refer only to aspects of spatial data quality. Examples of data quality components are the accuracy or the resolution of the data. </Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A data quality component is any property of the data that the consumer wants to approximate. Data quality components refer only to aspects of spatial data quality. Examples of data quality components are the accuracy or the resolution of the data. </Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://www.semanticweb.org/ontologies/dataquality.owl#DataQualityCriterion</IRI>
-        <Literal>A data quality criterion is a criterion defined by the data consumer as meaningful to get information about the quality of the data. It is a measure that helps to approximate the  value of the data quality component.</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A data quality criterion is a criterion defined by the data consumer as meaningful to get information about the quality of the data. It is a measure that helps to approximate the  value of the data quality component.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://www.semanticweb.org/ontologies/dataquality.owl#DataQualityObservation</IRI>
-        <Literal>A data quality observation is an operation by which a data quality value is assigned to a data quality component using a data quality criterion. Data quality as used in this ontology refers only to spatial data quality aspects.</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A data quality observation is an operation by which a data quality value is assigned to a data quality component using a data quality criterion. Data quality as used in this ontology refers only to spatial data quality aspects.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://www.semanticweb.org/ontologies/dataquality.owl#DataQualityResult</IRI>
-        <Literal>The result is the outcome of a data quality assessment operation.</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">The result is the outcome of a data quality assessment operation.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://www.semanticweb.org/ontologies/dataquality.owl#approximates</IRI>
-        <Literal>a relation between a data quality assessment operation and the data quality component that is assessed.</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">a relation between a data quality assessment operation and the data quality component that is assessed.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://www.semanticweb.org/ontologies/dataquality.owl#hasValue</IRI>
-        <Literal>a relation between a data quality observation (or data quality assessment operation) and the result of the data quality assessment operation</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">a relation between a data quality observation (or data quality assessment operation) and the result of the data quality assessment operation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://www.semanticweb.org/ontologies/dataquality.owl#involves</IRI>
-        <Literal>this property relates a data quality assessment operation to the result of the operation.</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">this property relates a data quality assessment operation to the result of the operation.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://www.semanticweb.org/ontologies/dataquality.owl#isQualityComponentOf</IRI>
-        <Literal>a relation between a component of spatial data quality (e.g. accuracy, resolution) and the data.</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">a relation between a component of spatial data quality (e.g. accuracy, resolution) and the data.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://www.semanticweb.org/ontologies/dataquality.owl#satisfies</IRI>
-        <Literal>a data quality assessment should conform to a criterion defined by the data consumer. This property makes explicit the criterion used while assigning a value to a data quality component.</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">a data quality assessment should conform to a criterion defined by the data consumer. This property makes explicit the criterion used while assigning a value to a data quality component.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://www.semanticweb.org/ontologies/dataqualitymodule.owl#hasQualityComponent</IRI>
-        <Literal>inverse property of &#39;isPropertyOf&#39;.</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">inverse property of &apos;isPropertyOf&apos;.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://www.semanticweb.org/ontologies/dataqualitymodule.owl#isApproximatedBy</IRI>
-        <Literal>inverse property of &#39;approximates&#39;.</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">inverse property of &apos;approximates&apos;.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://www.semanticweb.org/ontologies/dataqualitymodule.owl#isQualityCriterionOf</IRI>
-        <Literal>inverse property of &#39;satisfies&#39;.</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">inverse property of &apos;satisfies&apos;.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://www.semanticweb.org/ontologies/dataqualitymodule.owl#isResultOf</IRI>
-        <Literal>inverse property of &#39;involves&#39;.</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">inverse property of &apos;involves&apos;.</Literal>
     </AnnotationAssertion>
 </Ontology>
 
 
 
-<!-- Generated by the OWL API (version 3.0.0.1469) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.3.1957) http://owlapi.sourceforge.net -->
 
