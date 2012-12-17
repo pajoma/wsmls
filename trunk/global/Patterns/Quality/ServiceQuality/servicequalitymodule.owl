@@ -124,8 +124,8 @@
         <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataquality.owl#isQualityComponentOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataquality.owl#satisfies"/>
         <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataqualitymodule.owl#isQualityCriterionOf"/>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataquality.owl#satisfies"/>
     </InverseObjectProperties>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="http://www.semanticweb.org/ontologies/dataquality.owl#approximates"/>
@@ -204,7 +204,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://www.semanticweb.org/ontologies/dataquality.owl#hasValue</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">a relation between a service quality observation (or service quality assessment operation) and the result of the service quality assessment operation</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">a relation between a service quality observation (or service quality assessment operation) and the result of the service quality assessment operation.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
