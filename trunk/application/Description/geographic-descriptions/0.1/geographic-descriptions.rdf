@@ -76,7 +76,7 @@
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/geodesc#ObservationDescription</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml/0.2#SpatioTemporalFeature"/>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Situationsbeschreibung@de</dc:identifier>
+	<!--<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Situationsbeschreibung@de</dc:identifier>-->
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">situation description@en</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Description of a situation, e.g. event.</dc:description>
 </rdf:Description>
@@ -102,7 +102,7 @@
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://purl.org/ifgi/geodesc#PredictedObservationDescription</rdfs:label>
 	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/gml/0.2#SpatioTemporalFeature"/>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beschreibung einer vorhergesagten Beobachtung@de</dc:identifier>
+	<!--<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beschreibung einer vorhergesagten Beobachtung@de</dc:identifier>-->
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Description of Predicted Event Observation@en</dc:identifier>
 </rdf:Description>
 
