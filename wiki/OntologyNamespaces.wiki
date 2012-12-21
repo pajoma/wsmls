@@ -95,7 +95,7 @@ All ontologies of this repository are listed here. Ontologies highlighted in gre
 || *Ontology* || *Namespace* || *Location* || *Doc* ||
 || <font color="#04B404">POSM</font> || <font color="#04B404">http://purl.org/ifgi/posm</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/application/WSMO/POSM/0.2/POSM.rdf</font> || [http://wsmls.googlecode.com/svn/trunk/application/WSMO/POSM/0.2/posm.html http://wsmls.googlecode.com/svn/trunk/misc/figures/Doc-32.png] ||
 || <font color="#04B404">WSL</font> || <font color="#04B404">http://purl.org/ifgi/wsl</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/application/WSMO/WSL/0.1/WSL.rdf</font> || [http://wsmls.googlecode.com/svn/trunk/application/WSMO/WSL/0.1/wsl.html http://wsmls.googlecode.com/svn/trunk/misc/figures/Doc-32.png] ||
-|| <font color="#04B404">Annotation</font> || <font color="#04B404">http://purl.org/ifgi/annotations</font> || <font color="#04B404">http://wsmls.googlecode.com/svn/trunk/application/Annotation/Annotation.rdf</font> || [http://wsmls.googlecode.com/svn/trunk/application/Annotation/annotation.html http://wsmls.googlecode.com/svn/trunk/misc/figures/Doc-32.png] ||
+
 
 ==== W3C====
 
