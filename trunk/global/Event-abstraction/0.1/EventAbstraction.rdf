@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns="http://purl.org/ifgi/event-abstraction#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:ssn="http://purl.org/ifgi/ssn#"
+	xmlns:dul="http://www.loa.istc.cnr.it/ontologies/DUL.owl#"
+	xmlns:gModel="http://purl.org/ifgi/geomodels#"
+	xmlns:gDesc="http://purl.org/ifgi/geodesc#">
+
+<rdf:Description rdf:nodeID="node17fh3iesvx1">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<rdfs:label>EventAbstraction</rdfs:label>
+	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
+	<owl:imports rdf:resource="http://www.loa.istc.cnr.it/ontologies/DUL.owl#"/>
+	<owl:imports rdf:resource="http://purl.org/ifgi/ssn#"/>
+	<owl:imports rdf:resource="http://purl.org/ifgi/geomodels#"/>
+	<owl:imports rdf:resource="http://purl.org/ifgi/geodesc#"/>
+	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Event-abstraction Ontology</dc:title>
+	<dc:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(a)IfGI, University of Muenster</dc:publisher>
+	<dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://creativecommons.org/licenses/by/3.0/</dc:rights>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Extension of the SSN model that allows to represent occurrences inferred from event processing of observations</dc:description>
+	<dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alejandro Llaves</dc:creator>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/event-abstraction#EventProcessingAgent">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/event-abstraction#EventProcessingAgent</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/ssn#Sensor"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">event processing agent@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An event processing agent is a software module that processes events. In our case it looks for specific situations defined as rules or event patterns in time-series of observations previously converted to time-series of events.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/event-abstraction#EventProcessingAgent_prop_implements">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/ssn#implements</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/event-abstraction#EventProcessingAgent"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/event-abstraction#EventDetectionProcedure"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/ssn#implements"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/event-abstraction#EventAbstraction">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/event-abstraction#EventAbstraction</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/ssn#Observation"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">event abstraction@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An event abstraction is an observed situation of change in one or various properties of a geographical entity that is relevant for the application domain. ‘Observed’ means here that the event is abstracted from observation data which we assume that reflects a situation of change in the environment being observed.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/event-abstraction#EventAbstraction_prop_spatioTemporalRegion">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/event-abstraction#spatioTemporalRegion</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/event-abstraction#EventAbstraction"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://www.loa.istc.cnr.it/ontologies/DUL.owl#SpatioTemporalRegion"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/event-abstraction#EventAbstraction_prop_sensingMethodUsed">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/ssn#sensingMethodUsed</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/event-abstraction#EventAbstraction"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/event-abstraction#EventDetectionProcedure"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/ssn#sensingMethodUsed"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/event-abstraction#EventAbstraction_prop_satisfies">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://www.loa.istc.cnr.it/ontologies/DUL.owl#satisfies</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/event-abstraction#EventAbstraction"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/event-abstraction#EventAbstractionRule"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.loa.istc.cnr.it/ontologies/DUL.owl#satisfies"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/event-abstraction#EventAbstraction_prop_observedBy">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/ssn#observedBy</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/event-abstraction#EventAbstraction"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/event-abstraction#EventProcessingAgent"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/ssn#observedBy"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/event-abstraction#EventAbstraction_prop_abstractionResult">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/event-abstraction#abstractionResult</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/event-abstraction#EventAbstraction"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/event-abstraction#EventProcessingAgentOutput"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/event-abstraction#EventAbstraction_prop_isClassifiedBy">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://www.loa.istc.cnr.it/ontologies/DUL.owl#isClassifiedBy</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/event-abstraction#EventAbstraction"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://www.loa.istc.cnr.it/ontologies/DUL.owl#EventType"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.loa.istc.cnr.it/ontologies/DUL.owl#isClassifiedBy"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/event-abstraction#EventDetectionProcedure">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/event-abstraction#EventDetectionProcedure</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/ssn#Sensing"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">event detection procedure@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Method used to detect a specific situation from observations.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/event-abstraction#EventAbstractionRule">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/event-abstraction#EventAbstractionRule</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://www.loa.istc.cnr.it/ontologies/DUL.owl#Description"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">event abstraction rule@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rule or pattern used by the Event Processing Agent to detect the corresponding event.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/event-abstraction#EventProcessingAgentOutput">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/event-abstraction#EventProcessingAgentOutput</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/ssn#SensorOutput"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">event processing agent output@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Output.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/event-abstraction#EventProcessingAgentOutput_prop_hasValue">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/ssn#hasValue</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/event-abstraction#EventProcessingAgentOutput"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/event-abstraction#EventAbstractionValue"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/ssn#hasValue"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/event-abstraction#EventProcessingAgentOutput_prop_isProducedBy">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/ssn#isProducedBy</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/event-abstraction#EventProcessingAgentOutput"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/event-abstraction#EventProcessingAgent"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/ssn#isProducedBy"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/event-abstraction#EventAbstractionValue">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/event-abstraction#EventAbstractionValue</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/ssn#ObservationValue"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">event abstraction value@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Value of the event abstraction pointing to the type of the situation inferred.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/event-abstraction#EventAbstractionValue_prop_eventType">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/event-abstraction#eventType</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/event-abstraction#EventAbstractionValue"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://www.loa.istc.cnr.it/ontologies/DUL.owl#EventType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/event-abstraction#spatioTemporalRegion">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/event-abstraction#EventAbstraction"/>
+	<rdfs:range rdf:resource="http://www.loa.istc.cnr.it/ontologies/DUL.owl#SpatioTemporalRegion"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spatio-temporal region@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relation between an event abstraction (perdurant) and a spatio-temporal region.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/event-abstraction#eventType">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/event-abstraction#EventAbstractionValue"/>
+	<rdfs:range rdf:resource="http://www.loa.istc.cnr.it/ontologies/DUL.owl#EventType"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">event type@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The output of the event processing agent is the detection of a situation (view of an event) classified as an event type.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/event-abstraction#abstractionResult">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/event-abstraction#EventAbstraction"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/event-abstraction#EventProcessingAgentOutput"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abstraction result@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relation between an event abstraction and the output of the abstraction process.</dc:description>
+</rdf:Description>
+
+</rdf:RDF>

@@ -1,0 +1,141 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://purl.org/ifgi/event-abstraction#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ssn: <http://purl.org/ifgi/ssn#> .
+@prefix dul: <http://www.loa.istc.cnr.it/ontologies/DUL.owl#> .
+@prefix gModel: <http://purl.org/ifgi/geomodels#> .
+@prefix gDesc: <http://purl.org/ifgi/geodesc#> .
+
+_:node17fh3iesvx2 a owl:Ontology ;
+	rdfs:label "EventAbstraction" ;
+	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
+	owl:imports <http://www.loa.istc.cnr.it/ontologies/DUL.owl#> , <http://purl.org/ifgi/ssn#> , <http://purl.org/ifgi/geomodels#> , <http://purl.org/ifgi/geodesc#> ;
+	dc:title "Event-abstraction Ontology"^^xsd:string ;
+	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
+	dc:rights "http://creativecommons.org/licenses/by/3.0/"^^xsd:string ;
+	dc:description "Extension of the SSN model that allows to represent occurrences inferred from event processing of observations"^^xsd:string ;
+	dc:creator "Alejandro Llaves"^^xsd:string .
+
+:EventProcessingAgent a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/event-abstraction#EventProcessingAgent" ;
+	rdfs:subClassOf ssn:Sensor ;
+	dc:identifier "event processing agent@en"^^xsd:string ;
+	dc:description "An event processing agent is a software module that processes events. In our case it looks for specific situations defined as rules or event patterns in time-series of observations previously converted to time-series of events."^^xsd:string .
+
+:EventProcessingAgent_prop_implements a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/ssn#implements" ;
+	rdfs:domain :EventProcessingAgent ;
+	a rdf:Property ;
+	rdfs:range :EventDetectionProcedure ;
+	rdfs:subPropertyOf ssn:implements .
+
+:EventAbstraction a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/event-abstraction#EventAbstraction" ;
+	rdfs:subClassOf ssn:Observation ;
+	dc:identifier "event abstraction@en"^^xsd:string ;
+	dc:description "An event abstraction is an observed situation of change in one or various properties of a geographical entity that is relevant for the application domain. ‘Observed’ means here that the event is abstracted from observation data which we assume that reflects a situation of change in the environment being observed."^^xsd:string .
+
+:EventAbstraction_prop_spatioTemporalRegion a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/event-abstraction#spatioTemporalRegion" ;
+	rdfs:domain :EventAbstraction ;
+	a rdf:Property ;
+	rdfs:range dul:SpatioTemporalRegion .
+
+:EventAbstraction_prop_sensingMethodUsed a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/ssn#sensingMethodUsed" ;
+	rdfs:domain :EventAbstraction ;
+	a rdf:Property ;
+	rdfs:range :EventDetectionProcedure ;
+	rdfs:subPropertyOf ssn:sensingMethodUsed .
+
+:EventAbstraction_prop_satisfies a rdf:Property ;
+	rdfs:label "http://www.loa.istc.cnr.it/ontologies/DUL.owl#satisfies" ;
+	rdfs:domain :EventAbstraction ;
+	a rdf:Property ;
+	rdfs:range :EventAbstractionRule ;
+	rdfs:subPropertyOf dul:satisfies .
+
+:EventAbstraction_prop_observedBy a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/ssn#observedBy" ;
+	rdfs:domain :EventAbstraction ;
+	a rdf:Property ;
+	rdfs:range :EventProcessingAgent ;
+	rdfs:subPropertyOf ssn:observedBy .
+
+:EventAbstraction_prop_abstractionResult a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/event-abstraction#abstractionResult" ;
+	rdfs:domain :EventAbstraction ;
+	a rdf:Property ;
+	rdfs:range :EventProcessingAgentOutput .
+
+:EventAbstraction_prop_isClassifiedBy a rdf:Property ;
+	rdfs:label "http://www.loa.istc.cnr.it/ontologies/DUL.owl#isClassifiedBy" ;
+	rdfs:domain :EventAbstraction ;
+	a rdf:Property ;
+	rdfs:range dul:EventType ;
+	rdfs:subPropertyOf dul:isClassifiedBy .
+
+:EventDetectionProcedure a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/event-abstraction#EventDetectionProcedure" ;
+	rdfs:subClassOf ssn:Sensing ;
+	dc:identifier "event detection procedure@en"^^xsd:string ;
+	dc:description "Method used to detect a specific situation from observations."^^xsd:string .
+
+:EventAbstractionRule a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/event-abstraction#EventAbstractionRule" ;
+	rdfs:subClassOf dul:Description ;
+	dc:identifier "event abstraction rule@en"^^xsd:string ;
+	dc:description "Rule or pattern used by the Event Processing Agent to detect the corresponding event."^^xsd:string .
+
+:EventProcessingAgentOutput a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/event-abstraction#EventProcessingAgentOutput" ;
+	rdfs:subClassOf ssn:SensorOutput ;
+	dc:identifier "event processing agent output@en"^^xsd:string ;
+	dc:description "Output."^^xsd:string .
+
+:EventProcessingAgentOutput_prop_hasValue a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/ssn#hasValue" ;
+	rdfs:domain :EventProcessingAgentOutput ;
+	a rdf:Property ;
+	rdfs:range :EventAbstractionValue ;
+	rdfs:subPropertyOf ssn:hasValue .
+
+:EventProcessingAgentOutput_prop_isProducedBy a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/ssn#isProducedBy" ;
+	rdfs:domain :EventProcessingAgentOutput ;
+	a rdf:Property ;
+	rdfs:range :EventProcessingAgent ;
+	rdfs:subPropertyOf ssn:isProducedBy .
+
+:EventAbstractionValue a rdfs:Class ;
+	rdfs:label "http://purl.org/ifgi/event-abstraction#EventAbstractionValue" ;
+	rdfs:subClassOf ssn:ObservationValue ;
+	dc:identifier "event abstraction value@en"^^xsd:string ;
+	dc:description "Value of the event abstraction pointing to the type of the situation inferred."^^xsd:string .
+
+:EventAbstractionValue_prop_eventType a rdf:Property ;
+	rdfs:label "http://purl.org/ifgi/event-abstraction#eventType" ;
+	rdfs:domain :EventAbstractionValue ;
+	a rdf:Property ;
+	rdfs:range dul:EventType .
+
+:spatioTemporalRegion a rdf:Property ;
+	rdfs:domain :EventAbstraction ;
+	rdfs:range dul:SpatioTemporalRegion ;
+	dc:identifier "spatio-temporal region@en"^^xsd:string ;
+	dc:description "A relation between an event abstraction (perdurant) and a spatio-temporal region."^^xsd:string .
+
+:eventType a rdf:Property ;
+	rdfs:domain :EventAbstractionValue ;
+	rdfs:range dul:EventType ;
+	dc:identifier "event type@en"^^xsd:string ;
+	dc:description "The output of the event processing agent is the detection of a situation (view of an event) classified as an event type."^^xsd:string .
+
+:abstractionResult a rdf:Property ;
+	rdfs:domain :EventAbstraction ;
+	rdfs:range :EventProcessingAgentOutput ;
+	dc:identifier "abstraction result@en"^^xsd:string ;
+	dc:description "A relation between an event abstraction and the output of the abstraction process."^^xsd:string .
