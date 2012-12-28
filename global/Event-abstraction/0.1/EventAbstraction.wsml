@@ -1,0 +1,94 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://purl.org/ifgi/event-abstraction#",
+ 		xsd _"http://www.w3.org/2001/XMLSchema#",
+		dc _"http://purl.org/dc/elements/1.1/",
+		ssn _"http://purl.org/ifgi/ssn#",
+		dul _"http://www.loa.istc.cnr.it/ontologies/DUL.owl#",
+		gModel _"http://purl.org/ifgi/geomodels#", 
+		gDesc _"http://purl.org/ifgi/geodesc#"
+ }
+ 
+
+ontology EventAbstraction
+	annotations
+		dc#title hasValue "Event-abstraction Ontology"
+		dc#publisher hasValue "(a)IfGI, University of Muenster"
+		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+		dc#description hasValue "Extension of the SSN model that allows to represent occurrences inferred from event processing of observations"
+		dc#creator hasValue "Alejandro Llaves"
+	endAnnotations
+	
+	importsOntology {
+		_"http://www.loa.istc.cnr.it/ontologies/DUL.owl#",
+		_"http://purl.org/ifgi/ssn#",
+		_"http://purl.org/ifgi/geomodels#",
+		_"http://purl.org/ifgi/geodesc#"
+	}
+	
+	concept EventProcessingAgent subConceptOf ssn#Sensor
+		annotations
+			dc#identifier hasValue "event processing agent@en"
+			dc#description hasValue "An event processing agent is a software module that processes events. In our case it looks for specific situations defined as rules or event patterns in time-series of observations previously converted to time-series of events."
+		endAnnotations
+		ssn#implements ofType EventDetectionProcedure
+		
+	concept EventAbstraction subConceptOf ssn#Observation
+		annotations
+			dc#identifier hasValue "event abstraction@en"
+			dc#description hasValue "An event abstraction is an observed situation of change in one or various properties of a geographical entity that is relevant for the application domain. ‘Observed’ means here that the event is abstracted from observation data which we assume that reflects a situation of change in the environment being observed."
+		endAnnotations
+		spatioTemporalRegion ofType dul#SpatioTemporalRegion
+		ssn#sensingMethodUsed ofType EventDetectionProcedure
+		dul#satisfies ofType EventAbstractionRule
+		ssn#observedBy ofType EventProcessingAgent
+		abstractionResult ofType EventProcessingAgentOutput
+		dul#isClassifiedBy ofType dul#EventType
+			
+	concept EventDetectionProcedure subConceptOf ssn#Sensing
+		annotations
+			dc#identifier hasValue "event detection procedure@en"
+			dc#description hasValue "Method used to detect a specific situation from observations."
+		endAnnotations
+			
+	concept EventAbstractionRule subConceptOf dul#Description
+		annotations
+			dc#identifier hasValue "event abstraction rule@en"
+			dc#description hasValue "Rule or pattern used by the Event Processing Agent to detect the corresponding event."
+		endAnnotations
+			
+	concept EventProcessingAgentOutput subConceptOf ssn#SensorOutput
+		annotations
+			dc#identifier hasValue "event processing agent output@en"
+			dc#description hasValue "Output."
+		endAnnotations
+		ssn#hasValue ofType EventAbstractionValue
+		ssn#isProducedBy ofType EventProcessingAgent
+		
+	concept EventAbstractionValue subConceptOf ssn#ObservationValue
+		annotations
+			dc#identifier hasValue "event abstraction value@en"
+			dc#description hasValue "Value of the event abstraction pointing to the type of the situation inferred."
+		endAnnotations
+		eventType ofType dul#EventType
+
+	
+
+	// Relations
+	relation spatioTemporalRegion (ofType EventAbstraction, ofType dul#SpatioTemporalRegion)
+		annotations
+			dc#identifier hasValue "spatio-temporal region@en"
+			dc#description hasValue "A relation between an event abstraction (perdurant) and a spatio-temporal region."
+		endAnnotations
+	
+	relation eventType (ofType EventAbstractionValue, ofType dul#EventType)
+		annotations
+			dc#identifier hasValue "event type@en"
+			dc#description hasValue "The output of the event processing agent is the detection of a situation (view of an event) classified as an event type."
+		endAnnotations
+		
+	relation abstractionResult (ofType EventAbstraction, ofType EventProcessingAgentOutput)
+		annotations
+			dc#identifier hasValue "abstraction result@en"
+			dc#description hasValue "A relation between an event abstraction and the output of the abstraction process."
+		endAnnotations	
+	
