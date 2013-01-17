@@ -1,0 +1,132 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://purl.org/igdeal/event-abstraction#",
+ 		xsd _"http://www.w3.org/2001/XMLSchema#",
+		dc _"http://purl.org/dc/elements/1.1/",
+		ssn _"http://purl.oclc.org/NET/ssnx/ssn",
+		dul _"http://www.loa.istc.cnr.it/ontologies/DUL.owl#",
+		geo _"http://www.opengis.net/ont/geosparql#"
+ }
+ 
+
+ontology EventAbstraction
+	annotations
+		dc#title hasValue "Event-abstraction Ontology"
+		dc#publisher hasValue "(a)IfGI, University of Muenster"
+		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+		dc#description hasValue "Extension of the SSN model that allows to represent occurrences inferred from event processing of observations"
+		dc#creator hasValue "Alejandro Llaves"
+	endAnnotations
+	
+	importsOntology {
+		_"http://www.loa.istc.cnr.it/ontologies/DUL.owl#",
+		_"http://purl.oclc.org/NET/ssnx/ssn",
+		_"http://www.opengis.net/ont/geosparql#"
+	}
+	
+	concept EventProcessingAgent subConceptOf ssn#Sensor
+		annotations
+			dc#identifier hasValue "event processing agent@en"
+			dc#description hasValue "An event processing agent is a software module that processes events. In our case it looks for specific situations defined as rules or event patterns in time-series of observations previously converted to time-series of events."
+		endAnnotations
+		ssn#implements ofType EventDetectionProcedure
+		
+	concept EventAbstraction subConceptOf {ssn#Observation, geo#Feature}
+		annotations
+			dc#identifier hasValue "event abstraction@en"
+			dc#description hasValue "An event abstraction is an observed situation of change in one or various properties of a geographical entity that is relevant for the application domain. ‘Observed’ means here that the event is abstracted from observation data which we assume that reflects a situation of change in the environment being observed."
+		endAnnotations
+		processingMethodUsed ofType EventDetectionProcedure
+		processedBy ofType EventProcessingAgent
+		hasAbstractionResult ofType EventProcessingAgentOutput
+		isClassifiedBy ofType dul#EventType
+		isDerivedFrom ofType dul#Collection
+		inferredSpatioTemporalRegion ofType dul#SpatioTemporalRegion
+		geo#hasGeometry ofType geo#Geometry
+		dul#isObservableAt ofType dul#TimeInterval
+		dul#satisfies ofType EventAbstractionRule
+		ssn#observedProperty ofType ssn#ObservedProperty
+			
+	concept EventDetectionProcedure subConceptOf ssn#Sensing
+		annotations
+			dc#identifier hasValue "event detection procedure@en"
+			dc#description hasValue "Method used to detect events from streams of observations."
+		endAnnotations
+			
+	concept EventAbstractionRule subConceptOf dul#Description
+		annotations
+			dc#identifier hasValue "event abstraction rule@en"
+			dc#description hasValue "Rule or pattern used by the Event Processing Agent to detect the corresponding event."
+		endAnnotations
+			
+	concept EventProcessingAgentOutput subConceptOf ssn#SensorOutput
+		annotations
+			dc#identifier hasValue "event processing agent output@en"
+			dc#description hasValue "Output."
+		endAnnotations
+		ssn#hasValue ofType EventAbstractionValue
+		ssn#isProducedBy ofType EventProcessingAgent
+		
+	concept EventAbstractionValue subConceptOf ssn#ObservationValue
+		annotations
+			dc#identifier hasValue "event abstraction value@en"
+			dc#description hasValue "Value of the event abstraction pointing to the type of the situation inferred."
+		endAnnotations
+		hasEventType ofType dul#EventType
+
+	
+
+	// Relations
+	relation inferredSpatioTemporalRegion (ofType EventAbstraction, ofType dul#SpatioTemporalRegion)
+		annotations
+			dc#identifier hasValue "inferred spatio-temporal region@en"
+			dc#description hasValue "A relation between an event abstraction and an inferred spatio-temporal region at which it was observed."
+		endAnnotations
+		
+	relation processingMethodUsed (ofType EventAbstraction, ofType EventDetectionProcedure)
+		annotations
+			dc#identifier hasValue "processing method used@en"
+			dc#description hasValue "A relation between an event abstraction and an event processing method used to detect it. Equivalent to ssn#sensingMethodUsed"
+		endAnnotations
+		
+	relation processedBy (ofType EventAbstraction, ofType EventProcessingAgent)
+		annotations
+			dc#identifier hasValue "processed by@en"
+			dc#description hasValue "A relation between an event abstraction and an event processing agent (EPA) used to detect it. Equivalent to ssn#observedBy"
+		endAnnotations
+	
+	relation hasEventType (ofType EventAbstractionValue, ofType dul#EventType)
+		annotations
+			dc#identifier hasValue "has event type@en"
+			dc#description hasValue "The output of the event processing agent is the detection of a situation (view of an event) classified as an event type."
+		endAnnotations
+		
+	relation hasAbstractionResult (ofType EventAbstraction, ofType EventProcessingAgentOutput)
+		annotations
+			dc#identifier hasValue "has abstraction result@en"
+			dc#description hasValue "A relation between an event abstraction and the output of the abstraction process."
+		endAnnotations
+		
+	relation isClassifiedBy (ofType EventAbstraction, ofType dul#EventType)
+		annotations
+			dc#identifier hasValue "is classified by@en"
+			dc#description hasValue "A relation between an event abstraction and its event type. This relation has been created to avoid using dul#isClassifiedBy, because in that case, the range it should point to a dul#Event instead of to an EventAbstraction (remember that an EventAbstraction is a subclass of ssn#Observation subclass of dul#Situation)."
+		endAnnotations		
+		
+	relation hasBeginning (ofType dul#TimeInterval, ofType xsd#dateTime)
+		annotations
+			dc#identifier hasValue "has beginning@en"
+			dc#description hasValue "A relation between a time interval and a its begin date time. Equivalent to dul#hasIntervalDate."
+		endAnnotations	
+		
+	relation hasEnd (ofType dul#TimeInterval, ofType xsd#dateTime)
+		annotations
+			dc#identifier hasValue "has end@en"
+			dc#description hasValue "A relation between a time interval and a its end date time. Equivalent to dul#hasIntervalDate."
+		endAnnotations	
+		
+	relation isDerivedFrom (ofType EventAbstraction, ofType dul#Collection)
+		annotations
+			dc#identifier hasValue "is derived from@en"
+			dc#description hasValue "A relation between an event abstraction and the observation collection that was used in the inference process."
+		endAnnotations	
+	
