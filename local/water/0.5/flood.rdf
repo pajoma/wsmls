@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns="http://purl.org/ifgi/water/flood#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:dul="http://purl.org/ifgi/dul#"
+	xmlns:ssn="http://purl.org/ifgi/ssn#"
+	xmlns:gsy="http://purl.org/ifgi/geosystems#"
+	xmlns:gs="http://purl.org/ifgi/geospace#"
+	xmlns:gu="http://purl.org/ifgi/geounits#"
+	xmlns:evob="http://purl.org/ifgi/event-observation#"
+	xmlns:ge="http://purl.org/ifgi/geoevents#"
+	xmlns:gq="http://purl.org/ifgi/geoqualities#">
+
+<rdf:Description rdf:nodeID="node17hu1nqgjx1">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<rdfs:label>FloodScenario</rdfs:label>
+	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
+	<owl:imports rdf:resource="http://purl.org/ifgi/dul#"/>
+	<owl:imports rdf:resource="http://purl.org/ifgi/ssn#"/>
+	<owl:imports rdf:resource="http://purl.org/ifgi/geospace#"/>
+	<owl:imports rdf:resource="http://purl.org/ifgi/geounits#"/>
+	<owl:imports rdf:resource="http://purl.org/ifgi/event-observation#"/>
+	<owl:imports rdf:resource="http://purl.org/ifgi/geoqualities#"/>
+	<dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a.llaves (IFGI)</dc:creator>
+	<dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">h.michels (IFGI)</dc:contributor>
+	<dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a.baglatzi (IFGI)</dc:contributor>
+	<dc:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(a)IfGI, University of Muenster</dc:publisher>
+	<dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://creativecommons.org/licenses/by/3.0/</dc:rights>
+	<dc:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Domain Ontology</dc:type>
+	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Envision flood scenario ontology</dc:title>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This ontology captures the domain knowledge for a river and its environment in the content of flooding.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#River">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/water/flood#River</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geospace#geographical_unit"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">river@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A river is a natural watercourse flowing towards an ocean, a lake, a sea, or another river</dc:description>
+	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/River</dc:source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#River_prop_hasPart">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/dul#hasPart</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/water/flood#River"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/water/flood#Reservoir"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#hasPart"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#River_prop_hasQuality">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/dul#hasQuality</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/water/flood#River"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/water/flood#VolumetricFlowRate"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/water/flood#WaterLevel"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#hasQuality"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#Reservoir">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/water/flood#Reservoir</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geounits#landcover_unit"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">reservoir@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A reservoir or artificial lake is used to store water.</dc:description>
+	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Reservoir</dc:source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#Reservoir_prop_nearBy">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/geospace#nearBy</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/water/flood#Reservoir"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/water/flood#Dam"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/geospace#nearBy"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#Reservoir_prop_hasQuality">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/dul#hasQuality</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/water/flood#Reservoir"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/water/flood#WaterBodyVolume"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/water/flood#VolumetricFlowRate"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/water/flood#WaterLevel"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#hasQuality"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#HydropowerPlant">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/water/flood#HydropowerPlant</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geounits#anthropogenic_unit"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hydropower plant@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A factory where electricity is generated from the force or energy of falling water.</dc:description>
+	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Hydropower</dc:source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#HydropowerPlant_prop_hasComponent">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/dul#hasComponent</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/water/flood#HydropowerPlant"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/water/flood#Dam"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#hasComponent"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#Dam">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/water/flood#Dam</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geounits#anthropogenic_unit"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dam@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A dam is a barrier that impounds water or underground streams.</dc:description>
+	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Dam</dc:source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#Dam_prop_hasParameter">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/dul#hasParameter</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/water/flood#Dam"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/water/flood#MaxWaterLevel"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/water/flood#MinWaterLevel"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#hasParameter"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#Dam_prop_hasComponent">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/dul#hasComponent</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/water/flood#Dam"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/water/flood#DamGate"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#hasComponent"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#DamGate">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/water/flood#DamGate</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geounits#anthropogenic_unit"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dam gate@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The gate(s) of a dam control(s) the water discharge of the reservoir.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#WaterLevelSensor">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/water/flood#WaterLevelSensor</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/ssn#Sensor"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geounits#anthropogenic_unit"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">water level sensor@en</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wasserstandsmesser@de</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#WaterLevelSensor_prop_nearBy">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/geospace#nearBy</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/water/flood#WaterLevelSensor"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/water/flood#River"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/geospace#nearBy"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#WaterLevelSensor_prop_hasParameter">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/dul#hasParameter</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/water/flood#WaterLevelSensor"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/water/flood#MaxWaterLevel"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/water/flood#MinWaterLevel"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/dul#hasParameter"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#MinWaterLevel">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/water/flood#MinWaterLevel</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dul#Parameter"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">min water level@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The minimum level of water allowed for a specific entity.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#MaxWaterLevel">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/water/flood#MaxWaterLevel</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dul#Parameter"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">max water level@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The maximum level of water allowed for a specific entity.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#Volume">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/water/flood#Volume</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dul#Quality"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Volumen@de</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">volume@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The amount of 3-dimensional space occupied by an any solid, plasma, vacuum or theoretical object often quantified numerically</dc:description>
+	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Volume</dc:source>
+	<dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quality</dc:subject>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#WaterBodyVolume">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/water/flood#WaterBodyVolume</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/water/flood#Volume"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">water body volume@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The amount of 3-dimensional space occupied by a waterbody, e.g. a reservoir.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#WaterBodyVolume_prop_inverseOfObserves">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/ssn#inverseOfObserves</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/water/flood#WaterBodyVolume"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#Sensor"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/ssn#inverseOfObserves"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#VolumetricFlowRate">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/water/flood#VolumetricFlowRate</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dul#Quality"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Durchfluss@de</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">volumetric flow rate@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The volumetric flow rate, also volume flow rate and rate of fluid flow, is the volume of fluid which passes through a given surface per unit time, mostly measured in cubic metre per second. Volumetric flow rate should not be confused with volumetric flux, the integration of a flux over an area gives the volumetric flow rate</dc:description>
+	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Volumetric_flow_rate</dc:source>
+	<dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quality</dc:subject>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#VolumetricFlowRate_prop_sameAs">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://www.w3.org/2002/07/owl#sameAs</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/water/flood#VolumetricFlowRate"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/water/flood#FlowRate"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/water/flood#Discharge"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/water/flood#WaterDischarge"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#VolumetricFlowRate_prop_inverseOfObserves">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/ssn#inverseOfObserves</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/water/flood#VolumetricFlowRate"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#Sensor"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/ssn#inverseOfObserves"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#FlowRate">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/water/flood#FlowRate</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geospace#geographical_quality"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flow rate@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The volumetric flow rate, also volume flow rate and rate of fluid flow, is the volume of fluid which passes through a given surface per unit time, mostly measured in cubic metre per second. Volumetric flow rate should not be confused with volumetric flux, the integration of a flux over an area gives the volumetric flow rate</dc:description>
+	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Volumetric_flow_rate</dc:source>
+	<dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quality</dc:subject>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#FlowRate_prop_inverseOfObserves">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/ssn#inverseOfObserves</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/water/flood#FlowRate"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#Sensor"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/ssn#inverseOfObserves"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#WaterDischarge">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/water/flood#WaterDischarge</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geospace#geographical_quality"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">water discharge@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The volumetric flow rate, also volume flow rate and rate of fluid flow, is the volume of fluid which passes through a given surface per unit time, mostly measured in cubic metre per second. Volumetric flow rate should not be confused with volumetric flux, the integration of a flux over an area gives the volumetric flow rate</dc:description>
+	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Volumetric_flow_rate</dc:source>
+	<dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quality</dc:subject>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#WaterDischarge_prop_inverseOfObserves">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/ssn#inverseOfObserves</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/water/flood#WaterDischarge"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#Sensor"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/ssn#inverseOfObserves"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#Discharge">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/water/flood#Discharge</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geospace#geographical_quality"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">discharge@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The volumetric flow rate, also volume flow rate and rate of fluid flow, is the volume of fluid which passes through a given surface per unit time, mostly measured in cubic metre per second. Volumetric flow rate should not be confused with volumetric flux, the integration of a flux over an area gives the volumetric flow rate</dc:description>
+	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Volumetric_flow_rate</dc:source>
+	<dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quality</dc:subject>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#Discharge_prop_inverseOfObserves">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/ssn#inverseOfObserves</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/water/flood#Discharge"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#Sensor"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/ssn#inverseOfObserves"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#WaterLevel">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/water/flood#WaterLevel</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geospace#geographical_quality"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pegelstand@de</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">water level@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The height of the water surface measured above a datum</dc:description>
+	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://amsglossary.allenpress.com/glossary/browse?s=w&amp;p=7</dc:source>
+	<dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quality</dc:subject>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#WaterLevel_prop_sameAs">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://www.w3.org/2002/07/owl#sameAs</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/water/flood#WaterLevel"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/water/flood#GaugeHeight"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/water/flood#WaterStage"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/water/flood#GageHeight"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#WaterLevel_prop_inverseOfObserves">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/ssn#inverseOfObserves</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/water/flood#WaterLevel"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#Sensor"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/ssn#inverseOfObserves"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#WaterStage">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/water/flood#WaterStage</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geospace#geographical_quality"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">water stage@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The height of the water surface measured above a datum</dc:description>
+	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://amsglossary.allenpress.com/glossary/browse?s=w&amp;p=7</dc:source>
+	<dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quality</dc:subject>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#WaterStage_prop_inverseOfObserves">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/ssn#inverseOfObserves</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/water/flood#WaterStage"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#Sensor"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/ssn#inverseOfObserves"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#GaugeHeight">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/water/flood#GaugeHeight</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geospace#geographical_quality"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gauge height@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The height of the water surface measured above a datum</dc:description>
+	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://amsglossary.allenpress.com/glossary/browse?s=w&amp;p=7</dc:source>
+	<dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quality</dc:subject>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#GaugeHeight_prop_inverseOfObserves">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/ssn#inverseOfObserves</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/water/flood#GaugeHeight"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#Sensor"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/ssn#inverseOfObserves"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#GageHeight">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/water/flood#GageHeight</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geospace#geographical_quality"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gage height@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The height of the water surface measured above a datum</dc:description>
+	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://amsglossary.allenpress.com/glossary/browse?s=w&amp;p=7</dc:source>
+	<dc:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quality</dc:subject>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#GageHeight_prop_inverseOfObserves">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:label>http://purl.org/ifgi/ssn#inverseOfObserves</rdfs:label>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/water/flood#GageHeight"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/ssn#Sensor"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/ifgi/ssn#inverseOfObserves"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#WaterLevelChange">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/water/flood#WaterLevelChange</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/dul#EventType"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Water level change@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relevant change in the water level of a water body.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#HighWaterLevel">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/water/flood#HighWaterLevel</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/water/flood#WaterLevelChange"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">High water level@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The level measured at a specific point by a water level sensor exceeds the maximum allowed.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#LowWaterLevel">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/water/flood#LowWaterLevel</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/water/flood#WaterLevelChange"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Low water level@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The level measured at a specific point by a water level sensor is below the minimum allowed.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#NormalStageToActionStage">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/water/flood#NormalStageToActionStage</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/water/flood#WaterLevelChange"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Normal stage to action stage@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Transition from normal stage to action stage, the stage which, when reached by a rising stream, represents the level where the NWS or a partner/user needs to take some type of mitigation action in preparation for possible significant hydrologic activity.</dc:description>
+	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">See Action Stage at http://www.weather.gov/glossary/index.php?letter=a</dc:source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#ActionStageToMinorFloodingStage">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/water/flood#ActionStageToMinorFloodingStage</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/water/flood#WaterLevelChange"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Action stage to minor flooding stage@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Transition from action stage to minor floding stage: minimal or no property damage, but possibly some public threat.</dc:description>
+	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">See Flood Categories at http://www.weather.gov/glossary/index.php?letter=f</dc:source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#MinorFloodingStageToModerateFloodingStage">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/water/flood#MinorFloodingStageToModerateFloodingStage</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/water/flood#WaterLevelChange"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minor flooding stage to moderate flooding stage@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Transition from minor flooding stage to moderate flooding stage: some inundation of structures and roads near stream. Some evacuations of people and/or transfer of property to higher elevations.</dc:description>
+	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">See Flood Categories at http://www.weather.gov/glossary/index.php?letter=f</dc:source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#ModerateFloodingStageToMajorFloodingStage">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/water/flood#ModerateFloodingStageToMajorFloodingStage</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/water/flood#WaterLevelChange"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moderate flooding stage to major flooding stage@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Transition from moderate flooding stage to major flooding stage: extensive inundation of structures and roads. Significant evacuations of people and/or transfer of property to higher elevations.</dc:description>
+	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">See Flood Categories at http://www.weather.gov/glossary/index.php?letter=f</dc:source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#MajorFloodingStageToModerateFloodingStage">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/water/flood#MajorFloodingStageToModerateFloodingStage</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/water/flood#WaterLevelChange"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Major flooding stage to moderate flooding stage@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Transition from major flooding stage to moderate flooding stage: some inundation of structures and roads near stream. Some evacuations of people and/or transfer of property to higher elevations.</dc:description>
+	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">See Flood Categories at http://www.weather.gov/glossary/index.php?letter=f</dc:source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#ModerateFloodingStageToMinorFloodingStage">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/water/flood#ModerateFloodingStageToMinorFloodingStage</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/water/flood#WaterLevelChange"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moderate flooding stage to minor flooding stage@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Transition from moderate flooding stage to minor flooding stage: minimal or no property damage, but possibly some public threat.</dc:description>
+	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">See Flood Categories at http://www.weather.gov/glossary/index.php?letter=f</dc:source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#MinorFloodingStageToActionStage">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/water/flood#MinorFloodingStageToActionStage</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/water/flood#WaterLevelChange"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minor flooding stage to action stage@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Transition from minor flooding stage to action stage, the stage which, when reached by a rising stream, represents the level where the NWS or a partner/user needs to take some type of mitigation action in preparation for possible significant hydrologic activity.</dc:description>
+	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">See Action Stage at http://www.weather.gov/glossary/index.php?letter=a</dc:source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#ActionStageToNormalStage">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/water/flood#ActionStageToNormalStage</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/water/flood#WaterLevelChange"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Action stage to normal stage@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Transition from action stage to the normal stage of the corresponding water body.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#Flood">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://purl.org/ifgi/water/flood#Flood</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ifgi/geoevents#geographical_event"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flood@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A flood is an overflow of an expanse of water that submerges land.</dc:description>
+	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Flood</dc:source>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#downstream">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/geospace#geographical_unit"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/geospace#geographical_unit"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">downstream@en</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flussabwärts@de</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">downstream defines a relation of two geographical units being located near by a river. The second geographical unit can be reached from the first on by going along the river with a direction compliant to the flow direction of the river.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ifgi/water/flood#upstream">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/ifgi/geospace#geographical_unit"/>
+	<rdfs:range rdf:resource="http://purl.org/ifgi/geospace#geographical_unit"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">upstream@en</dc:identifier>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flussaufwärts@de</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">upstream defines a relation of two geographical units being located near by a river. The second geographical unit can be reached from the first on by going along the river with a direction opposed to the flow direction of the river.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node17hu1nqgjx2">
+	<rdfs:label>http://purl.org/ifgi/water/flood#validate_downstream</rdfs:label>
+	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
+	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?x1[_"http://purl.org/ifgi/water/flood#downstream" hasValue ?x2]
+ impliedBy 
+?x1[_"http://purl.org/ifgi/dul#hasQuality" hasValue ?elevationx1] memberOf _"http://purl.org/ifgi/geospace#geographical_unit"
+ and ?x2[_"http://purl.org/ifgi/dul#hasQuality" hasValue ?elevationx2] memberOf _"http://purl.org/ifgi/geospace#geographical_unit"
+ and ?elevationx1[_"http://purl.org/ifgi/dul#hasDataValue" hasValue ?value1] memberOf _"http://purl.org/ifgi/geoqualities#altitude"
+ and ?elevationx2[_"http://purl.org/ifgi/dul#hasDataValue" hasValue ?value2] memberOf _"http://purl.org/ifgi/geoqualities#altitude"
+ and ?value1 &gt; ?value2
+ and ?y memberOf _"http://purl.org/ifgi/water/flood#River"
+ and ?x1[_"http://purl.org/ifgi/geospace#nearBy" hasValue ?y]
+ and ?x2[_"http://purl.org/ifgi/geospace#nearBy" hasValue ?y]. </rdf:value>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node17hu1nqgjx3">
+	<rdfs:label>http://purl.org/ifgi/water/flood#validate_upstream</rdfs:label>
+	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
+	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?x1[_"http://purl.org/ifgi/water/flood#upstream" hasValue ?x2]
+ impliedBy 
+?x1[_"http://purl.org/ifgi/dul#hasQuality" hasValue ?elevationx1] memberOf _"http://purl.org/ifgi/geospace#geographical_unit"
+ and ?x2[_"http://purl.org/ifgi/dul#hasQuality" hasValue ?elevationx2] memberOf _"http://purl.org/ifgi/geospace#geographical_unit"
+ and ?elevationx1[_"http://purl.org/ifgi/dul#hasDataValue" hasValue ?value1] memberOf _"http://purl.org/ifgi/geoqualities#altitude"
+ and ?elevationx2[_"http://purl.org/ifgi/dul#hasDataValue" hasValue ?value2] memberOf _"http://purl.org/ifgi/geoqualities#altitude"
+ and ?value1 &lt; ?value2
+ and ?y memberOf _"http://purl.org/ifgi/water/flood#River"
+ and ?x1[_"http://purl.org/ifgi/geospace#nearBy" hasValue ?y]
+ and ?x2[_"http://purl.org/ifgi/geospace#nearBy" hasValue ?y]. </rdf:value>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node17hu1nqgjx4">
+	<rdfs:label>http://purl.org/ifgi/water/flood#upstream_inverse</rdfs:label>
+	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
+	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?x memberOf _"http://purl.org/ifgi/geospace#geographical_unit"
+ and ?y memberOf _"http://purl.org/ifgi/geospace#geographical_unit"
+ and ?x[_"http://purl.org/ifgi/water/flood#upstream" hasValue ?y]
+ implies 
+?y[_"http://purl.org/ifgi/water/flood#downstream" hasValue ?x]. </rdf:value>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node17hu1nqgjx5">
+	<rdfs:label>http://purl.org/ifgi/water/flood#downstream_inverse</rdfs:label>
+	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
+	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?x memberOf _"http://purl.org/ifgi/geospace#geographical_unit"
+ and ?y memberOf _"http://purl.org/ifgi/geospace#geographical_unit"
+ and ?y[_"http://purl.org/ifgi/water/flood#downstream" hasValue ?x]
+ implies 
+?x[_"http://purl.org/ifgi/water/flood#upstream" hasValue ?y]. </rdf:value>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node17hu1nqgjx6">
+	<rdfs:label>http://purl.org/ifgi/water/flood#downstream_transitive</rdfs:label>
+	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
+	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?x memberOf _"http://purl.org/ifgi/geospace#geographical_unit"
+ and ?y memberOf _"http://purl.org/ifgi/geospace#geographical_unit"
+ and ?z memberOf _"http://purl.org/ifgi/geospace#geographical_unit"
+ and ?x[_"http://purl.org/ifgi/water/flood#downstream" hasValue ?y]
+ and ?y[_"http://purl.org/ifgi/water/flood#downstream" hasValue ?z]
+ implies 
+?x[_"http://purl.org/ifgi/water/flood#downstream" hasValue ?z]. </rdf:value>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node17hu1nqgjx7">
+	<rdfs:label>http://purl.org/ifgi/water/flood#upstream_transitive</rdfs:label>
+	<rdf:type rdf:resource="http://www.wsmo.org/wsml/wsml-syntax#Axiom"/>
+	<rdf:value rdf:datatype="http://www.wsmo.org/wsml/wsml-syntax#AxiomLiteral">?x memberOf _"http://purl.org/ifgi/geospace#geographical_unit"
+ and ?y memberOf _"http://purl.org/ifgi/geospace#geographical_unit"
+ and ?z memberOf _"http://purl.org/ifgi/geospace#geographical_unit"
+ and ?x[_"http://purl.org/ifgi/water/flood#upstream" hasValue ?y]
+ and ?y[_"http://purl.org/ifgi/water/flood#upstream" hasValue ?z]
+ implies 
+?x[_"http://purl.org/ifgi/water/flood#upstream" hasValue ?z]. </rdf:value>
+</rdf:Description>
+
+</rdf:RDF>
