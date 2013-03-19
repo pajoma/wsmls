@@ -1,0 +1,74 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://wmls.googlecode.com/svn/trunk/application/EventType/RomanianWaters#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dul: <http://www.loa.istc.cnr.it/ontologies/DUL.owl#> .
+@prefix flood: <http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#> .
+
+_:node17m1rg2aix2 a owl:Ontology ;
+	rdfs:label "RomanianWatersEventTypes" ;
+	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
+	dc:creator "Alejandro Llaves"^^xsd:string ;
+	dc:rights "http://creativecommons.org/licenses/by/3.0/"^^xsd:string ;
+	dc:type "Application Ontology"^^xsd:string ;
+	dc:title "Event types for Romanian Waters scenario"^^xsd:string ;
+	dc:description "This ontology contains the event types necessary to annotate the event patterns of the Romanian Waters scenario."^^xsd:string .
+
+:AtentionStage a rdfs:Class ;
+	rdfs:label "http://wmls.googlecode.com/svn/trunk/application/EventType/RomanianWaters#AtentionStage" ;
+	rdfs:subClassOf flood:WaterLevelChange ;
+	dc:identifier "Atention stage@en"^^xsd:string ;
+	dc:description "The level at which the risk of flooding is possible after a relatively short time frame, requiring increased vigilance when carrying out activities exposed to flooding."^^xsd:string ;
+	dc:source "http://www.rowater.ro/daprut/Documente%20Repository/Regulament%20%20gestionare%20situatii%20de%20urgenta%20.pdf"^^xsd:string .
+
+:FloodingStage a rdfs:Class ;
+	rdfs:label "http://wmls.googlecode.com/svn/trunk/application/EventType/RomanianWaters#FloodingStage" ;
+	rdfs:subClassOf flood:WaterLevelChange ;
+	dc:identifier "Flooding stage@en"^^xsd:string ;
+	dc:description "The level at which major floods occur can lead to flooding of households and socio-economic goods."^^xsd:string ;
+	dc:source "http://www.rowater.ro/daprut/Documente%20Repository/Regulament%20%20gestionare%20situatii%20de%20urgenta%20.pdf"^^xsd:string .
+
+:DangerStage a rdfs:Class ;
+	rdfs:label "http://wmls.googlecode.com/svn/trunk/application/EventType/RomanianWaters#DangerStage" ;
+	rdfs:subClassOf flood:WaterLevelChange ;
+	dc:identifier "Danger stage@en"^^xsd:string ;
+	dc:description "The level at which special measures are necessary for the evacuation of people and goods, the restriction on the use of bridges and roads, and the operation of hydraulic structures."^^xsd:string ;
+	dc:source "http://www.rowater.ro/daprut/Documente%20Repository/Regulament%20%20gestionare%20situatii%20de%20urgenta%20.pdf"^^xsd:string .
+
+:AttentionThresholdExceeded a rdfs:Class ;
+	rdfs:label "http://wmls.googlecode.com/svn/trunk/application/EventType/RomanianWaters#AttentionThresholdExceeded" ;
+	rdfs:subClassOf flood:WaterLevelChange ;
+	dc:identifier "Attention threshold exceeded@en"^^xsd:string ;
+	dc:description "Two observations (a, b) produced by the same sensor and ordered in time where the value of a is below the attention threshold and the value of b is above."^^xsd:string .
+
+:AttentionThresholdDeceeded a rdfs:Class ;
+	rdfs:label "http://wmls.googlecode.com/svn/trunk/application/EventType/RomanianWaters#AttentionThresholdDeceeded" ;
+	rdfs:subClassOf flood:WaterLevelChange ;
+	dc:identifier "Attention threshold deceeded@en"^^xsd:string ;
+	dc:description "Two observations (a, b) produced by the same sensor and ordered in time where the value of a is above the attention threshold and the value of b is below."^^xsd:string .
+
+:FloodingThresholdExceeded a rdfs:Class ;
+	rdfs:label "http://wmls.googlecode.com/svn/trunk/application/EventType/RomanianWaters#FloodingThresholdExceeded" ;
+	rdfs:subClassOf flood:WaterLevelChange ;
+	dc:identifier "Flooding threshold exceeded@en"^^xsd:string ;
+	dc:description "Two observations (a, b) produced by the same sensor and ordered in time where the value of a is below the flooding threshold and the value of b is above."^^xsd:string .
+
+:FloodingThresholdDeceeded a rdfs:Class ;
+	rdfs:label "http://wmls.googlecode.com/svn/trunk/application/EventType/RomanianWaters#FloodingThresholdDeceeded" ;
+	rdfs:subClassOf flood:WaterLevelChange ;
+	dc:identifier "Flooding threshold deceeded@en"^^xsd:string ;
+	dc:description "Two observations (a, b) produced by the same sensor and ordered in time where the value of a is above the flooding threshold and the value of b is below."^^xsd:string .
+
+:DangerThresholdExceeded a rdfs:Class ;
+	rdfs:label "http://wmls.googlecode.com/svn/trunk/application/EventType/RomanianWaters#DangerThresholdExceeded" ;
+	rdfs:subClassOf flood:WaterLevelChange ;
+	dc:identifier "Danger threshold exceeded@en"^^xsd:string ;
+	dc:description "Two observations (a, b) produced by the same sensor and ordered in time where the value of a is below the danger threshold and the value of b is above."^^xsd:string .
+
+:DangerThresholdDeceeded a rdfs:Class ;
+	rdfs:label "http://wmls.googlecode.com/svn/trunk/application/EventType/RomanianWaters#DangerThresholdDeceeded" ;
+	rdfs:subClassOf flood:WaterLevelChange ;
+	dc:identifier "Danger threshold deceeded@en"^^xsd:string ;
+	dc:description "Two observations (a, b) produced by the same sensor and ordered in time where the value of a is above the danger threshold and the value of b is below."^^xsd:string .

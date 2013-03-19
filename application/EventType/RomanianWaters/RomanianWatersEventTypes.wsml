@@ -1,0 +1,77 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
+namespace { _"http://wmls.googlecode.com/svn/trunk/application/EventType/RomanianWaters#",
+	rdf _"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+ 	rdfs _"http://www.w3.org/2000/01/rdf-schema#",
+	dc _"http://purl.org/dc/elements/1.1/",
+    owl _"http://www.w3.org/2002/07/owl#",
+	dul _"http://www.loa.istc.cnr.it/ontologies/DUL.owl#",
+	flood _"http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#"
+ }
+
+ontology RomanianWatersEventTypes
+	annotations
+		dc#creator hasValue "Alejandro Llaves"
+		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
+		dc#type hasValue "Application Ontology"
+		dc#title hasValue "Event types for Romanian Waters scenario"	
+		dc#description hasValue "This ontology contains the event types necessary to annotate the event patterns of the Romanian Waters scenario."
+	endAnnotations
+
+	// Flood stages
+	concept AtentionStage subConceptOf flood#WaterLevelChange
+		annotations
+			dc#identifier hasValue "Atention stage@en"
+			dc#description hasValue "The level at which the risk of flooding is possible after a relatively short time frame, requiring increased vigilance when carrying out activities exposed to flooding."
+			dc#source hasValue "http://www.rowater.ro/daprut/Documente%20Repository/Regulament%20%20gestionare%20situatii%20de%20urgenta%20.pdf"
+		endAnnotations
+		
+	concept FloodingStage subConceptOf flood#WaterLevelChange
+		annotations
+			dc#identifier hasValue "Flooding stage@en"
+			dc#description hasValue "The level at which major floods occur can lead to flooding of households and socio-economic goods."
+			dc#source hasValue "http://www.rowater.ro/daprut/Documente%20Repository/Regulament%20%20gestionare%20situatii%20de%20urgenta%20.pdf"
+		endAnnotations
+		
+	concept DangerStage subConceptOf flood#WaterLevelChange
+		annotations
+			dc#identifier hasValue "Danger stage@en"
+			dc#description hasValue "The level at which special measures are necessary for the evacuation of people and goods, the restriction on the use of bridges and roads, and the operation of hydraulic structures."
+			dc#source hasValue "http://www.rowater.ro/daprut/Documente%20Repository/Regulament%20%20gestionare%20situatii%20de%20urgenta%20.pdf"
+		endAnnotations
+		
+	// Flood thresholds
+	concept AttentionThresholdExceeded subConceptOf flood#WaterLevelChange
+		annotations
+			dc#identifier hasValue "Attention threshold exceeded@en"
+			dc#description hasValue "Two observations (a, b) produced by the same sensor and ordered in time where the value of a is below the attention threshold and the value of b is above."
+		endAnnotations
+		
+	concept AttentionThresholdDeceeded subConceptOf flood#WaterLevelChange
+		annotations
+			dc#identifier hasValue "Attention threshold deceeded@en"
+			dc#description hasValue "Two observations (a, b) produced by the same sensor and ordered in time where the value of a is above the attention threshold and the value of b is below."
+		endAnnotations
+		
+	concept FloodingThresholdExceeded subConceptOf flood#WaterLevelChange
+		annotations
+			dc#identifier hasValue "Flooding threshold exceeded@en"
+			dc#description hasValue "Two observations (a, b) produced by the same sensor and ordered in time where the value of a is below the flooding threshold and the value of b is above."
+		endAnnotations
+		
+	concept FloodingThresholdDeceeded subConceptOf flood#WaterLevelChange
+		annotations
+			dc#identifier hasValue "Flooding threshold deceeded@en"
+			dc#description hasValue "Two observations (a, b) produced by the same sensor and ordered in time where the value of a is above the flooding threshold and the value of b is below."
+		endAnnotations
+		
+	concept DangerThresholdExceeded subConceptOf flood#WaterLevelChange
+		annotations
+			dc#identifier hasValue "Danger threshold exceeded@en"
+			dc#description hasValue "Two observations (a, b) produced by the same sensor and ordered in time where the value of a is below the danger threshold and the value of b is above."
+		endAnnotations
+		
+	concept DangerThresholdDeceeded subConceptOf flood#WaterLevelChange
+		annotations
+			dc#identifier hasValue "Danger threshold deceeded@en"
+			dc#description hasValue "Two observations (a, b) produced by the same sensor and ordered in time where the value of a is above the danger threshold and the value of b is below."
+		endAnnotations
