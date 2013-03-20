@@ -12,9 +12,9 @@ namespace { _"http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#",
 
 ontology FloodScenario
      annotations
-		dc#creator hasValue "a.llaves (IFGI)"
-		dc#contributor hasValue "h.michels (IFGI)"
-		dc#contributor hasValue "a.baglatzi (IFGI)"
+		dc#creator hasValue "A. Llaves"
+		dc#contributor hasValue "H. Michels"
+		dc#contributor hasValue "A. Baglatzi"
 		dc#publisher hasValue "(a)IfGI, University of Muenster"
 		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
 		dc#type hasValue "Domain Ontology"
@@ -201,29 +201,17 @@ ontology FloodScenario
 
 		
 	// Event types
-	concept Flood subConceptOf dul#EventType
+	concept FloodMonitoringEvent subConceptOf dul#EventType
+		nfp 
+			dc#identifier hasValue "Flood monitoring event@en"
+			dc#description hasValue "Anything that happens or is contemplated as happening at an instant or over a time interval and which is relevant for the flood monitoring application."
+		endnfp
+		
+	concept Flood subConceptOf FloodMonitoringEvent
 		nfp
 			dc#identifier hasValue "Flood@en"
 			dc#description hasValue "A flood is an overflow of an expanse of water that submerges land."
 			dc#source hasValue "http://en.wikipedia.org/wiki/Flood"
-		endnfp
-	
-	concept WaterLevelChange subConceptOf dul#EventType
-		nfp 
-			dc#identifier hasValue "Water level change@en"
-			dc#description hasValue "Relevant change in the water level of a water body."
-		endnfp
-		
-	concept HighWaterLevel subConceptOf WaterLevelChange
-		nfp
-			dc#identifier hasValue "High water level@en"
-			dc#description hasValue "The level measured at a specific point by a water level sensor exceeds the maximum allowed."
-		endnfp
-		
-	concept LowWaterLevel subConceptOf WaterLevelChange
-		nfp
-			dc#identifier hasValue "Low water level@en"
-			dc#description hasValue "The level measured at a specific point by a water level sensor is below the minimum allowed."
 		endnfp
 
 

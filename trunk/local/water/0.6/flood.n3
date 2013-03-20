@@ -9,11 +9,11 @@
 @prefix gs: <http://purl.org/ifgi/geospace#> .
 @prefix gu: <http://purl.org/ifgi/geounits#> .
 
-_:node17lv7sl19x2 a owl:Ontology ;
+_:node17m4gosuix2 a owl:Ontology ;
 	rdfs:label "FloodScenario" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
-	dc:creator "a.llaves (IFGI)"^^xsd:string ;
-	dc:contributor "h.michels (IFGI)"^^xsd:string , "a.baglatzi (IFGI)"^^xsd:string ;
+	dc:creator "A. Llaves"^^xsd:string ;
+	dc:contributor "H. Michels"^^xsd:string , "A. Baglatzi"^^xsd:string ;
 	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
 	dc:rights "http://creativecommons.org/licenses/by/3.0/"^^xsd:string ;
 	dc:type "Domain Ontology"^^xsd:string ;
@@ -300,30 +300,18 @@ _:node17lv7sl19x2 a owl:Ontology ;
 	rdfs:range :StreamGauge ;
 	rdfs:subPropertyOf ssn:inverseOfObserves .
 
+:FloodMonitoringEvent a rdfs:Class ;
+	rdfs:label "http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#FloodMonitoringEvent" ;
+	rdfs:subClassOf dul:EventType ;
+	dc:identifier "Flood monitoring event@en"^^xsd:string ;
+	dc:description "Anything that happens or is contemplated as happening at an instant or over a time interval and which is relevant for the flood monitoring application."^^xsd:string .
+
 :Flood a rdfs:Class ;
 	rdfs:label "http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#Flood" ;
-	rdfs:subClassOf dul:EventType ;
+	rdfs:subClassOf :FloodMonitoringEvent ;
 	dc:identifier "Flood@en"^^xsd:string ;
 	dc:description "A flood is an overflow of an expanse of water that submerges land."^^xsd:string ;
 	dc:source "http://en.wikipedia.org/wiki/Flood"^^xsd:string .
-
-:WaterLevelChange a rdfs:Class ;
-	rdfs:label "http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#WaterLevelChange" ;
-	rdfs:subClassOf dul:EventType ;
-	dc:identifier "Water level change@en"^^xsd:string ;
-	dc:description "Relevant change in the water level of a water body."^^xsd:string .
-
-:HighWaterLevel a rdfs:Class ;
-	rdfs:label "http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#HighWaterLevel" ;
-	rdfs:subClassOf :WaterLevelChange ;
-	dc:identifier "High water level@en"^^xsd:string ;
-	dc:description "The level measured at a specific point by a water level sensor exceeds the maximum allowed."^^xsd:string .
-
-:LowWaterLevel a rdfs:Class ;
-	rdfs:label "http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#LowWaterLevel" ;
-	rdfs:subClassOf :WaterLevelChange ;
-	dc:identifier "Low water level@en"^^xsd:string ;
-	dc:description "The level measured at a specific point by a water level sensor is below the minimum allowed."^^xsd:string .
 
 :downstream a rdf:Property ;
 	rdfs:domain gs:geographical_unit ;

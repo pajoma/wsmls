@@ -11,13 +11,13 @@
 	xmlns:gs="http://purl.org/ifgi/geospace#"
 	xmlns:gu="http://purl.org/ifgi/geounits#">
 
-<rdf:Description rdf:nodeID="node17lv7sl19x1">
+<rdf:Description rdf:nodeID="node17m4gosuix1">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>FloodScenario</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
-	<dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a.llaves (IFGI)</dc:creator>
-	<dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">h.michels (IFGI)</dc:contributor>
-	<dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a.baglatzi (IFGI)</dc:contributor>
+	<dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A. Llaves</dc:creator>
+	<dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">H. Michels</dc:contributor>
+	<dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A. Baglatzi</dc:contributor>
 	<dc:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(a)IfGI, University of Muenster</dc:publisher>
 	<dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://creativecommons.org/licenses/by/3.0/</dc:rights>
 	<dc:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Domain Ontology</dc:type>
@@ -383,37 +383,21 @@
 	<rdfs:subPropertyOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#inverseOfObserves"/>
 </rdf:Description>
 
+<rdf:Description rdf:about="http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#FloodMonitoringEvent">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#FloodMonitoringEvent</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://www.loa.istc.cnr.it/ontologies/DUL.owl#EventType"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flood monitoring event@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anything that happens or is contemplated as happening at an instant or over a time interval and which is relevant for the flood monitoring application.</dc:description>
+</rdf:Description>
+
 <rdf:Description rdf:about="http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#Flood">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#Flood</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://www.loa.istc.cnr.it/ontologies/DUL.owl#EventType"/>
+	<rdfs:subClassOf rdf:resource="http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#FloodMonitoringEvent"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flood@en</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A flood is an overflow of an expanse of water that submerges land.</dc:description>
 	<dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Flood</dc:source>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#WaterLevelChange">
-	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:label>http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#WaterLevelChange</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://www.loa.istc.cnr.it/ontologies/DUL.owl#EventType"/>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Water level change@en</dc:identifier>
-	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relevant change in the water level of a water body.</dc:description>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#HighWaterLevel">
-	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:label>http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#HighWaterLevel</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#WaterLevelChange"/>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">High water level@en</dc:identifier>
-	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The level measured at a specific point by a water level sensor exceeds the maximum allowed.</dc:description>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#LowWaterLevel">
-	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-	<rdfs:label>http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#LowWaterLevel</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#WaterLevelChange"/>
-	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Low water level@en</dc:identifier>
-	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The level measured at a specific point by a water level sensor is below the minimum allowed.</dc:description>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#downstream">
