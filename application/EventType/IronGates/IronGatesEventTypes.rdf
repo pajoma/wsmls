@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns="http://wmls.googlecode.com/svn/trunk/application/EventType/IronGates#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:dul="http://www.loa.istc.cnr.it/ontologies/DUL.owl#"
+	xmlns:flood="http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#">
+
+<rdf:Description rdf:nodeID="node17m4gmrmox1">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<rdfs:label>IronGatesEventTypes</rdfs:label>
+	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
+	<dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alejandro Llaves</dc:creator>
+	<dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://creativecommons.org/licenses/by/3.0/</dc:rights>
+	<dc:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Application Ontology</dc:type>
+	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Event types for Iron Gates hydropower plant scenario</dc:title>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This ontology contains the event types necessary to annotate the event patterns of the Iron Gates hydropower plant scenario.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://wmls.googlecode.com/svn/trunk/application/EventType/IronGates#HighWaterLevel">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://wmls.googlecode.com/svn/trunk/application/EventType/IronGates#HighWaterLevel</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#FloodMonitoringEvent"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">High water level@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The water level measured at a specific point by an in situ sensor exceeds the maximum allowed.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://wmls.googlecode.com/svn/trunk/application/EventType/IronGates#LowWaterLevel">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	<rdfs:label>http://wmls.googlecode.com/svn/trunk/application/EventType/IronGates#LowWaterLevel</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#FloodMonitoringEvent"/>
+	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Low water level@en</dc:identifier>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The water level measured at a specific point by an in situ sensor is below the minimum allowed.</dc:description>
+</rdf:Description>
+
+</rdf:RDF>
