@@ -5,12 +5,10 @@ namespace { _"http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#",
      dc _"http://purl.org/dc/elements/1.1/",
      owl _"http://www.w3.org/2002/07/owl#",
      dul _"http://www.loa.istc.cnr.it/ontologies/DUL.owl#",
-     ssn _"http://purl.oclc.org/NET/ssnx/ssn#",
-	 gs _"http://purl.org/ifgi/geospace#",
-	 gu _"http://purl.org/ifgi/geounits#"
+     ssn _"http://purl.oclc.org/NET/ssnx/ssn#"
      }
 
-ontology FloodScenario
+ontology FloodMonitoring
      annotations
 		dc#creator hasValue "A. Llaves"
 		dc#contributor hasValue "H. Michels"
@@ -18,30 +16,31 @@ ontology FloodScenario
 		dc#publisher hasValue "(a)IfGI, University of Muenster"
 		dc#rights hasValue "http://creativecommons.org/licenses/by/3.0/"
 		dc#type hasValue "Domain Ontology"
-		dc#title hasValue "Envision flood scenario ontology"	
-		dc#description hasValue "This ontology captures the domain knowledge for a river and its environment in the content of flooding."
+		dc#title hasValue "Envision flood monitoring ontology"	
+		dc#description hasValue "This ontology captures the domain knowledge for a river and its environment in the context of flood monitoring."
 	endAnnotations
 
-	// Geographical Units (Features of Interest)
-	concept River subConceptOf gs#geographical_unit
+	// Features of Interest
+	concept River subConceptOf ssn#FeatureOfInterest
 		annotations
 			dc#identifier hasValue "river@en"
 			dc#description hasValue "A river is a natural watercourse flowing towards an ocean, a lake, a sea, or another river"
 			dc#source hasValue "http://en.wikipedia.org/wiki/River"
 		endAnnotations
 		dul#hasPart ofType Reservoir 
-		dul#hasQuality ofType {WaterLevel, VolumetricFlowRate} 
+		ssn#hasProperty ofType {WaterLevel, VolumetricFlowRate} 
 	
-	concept Reservoir subConceptOf gu#landcover_unit
+	concept Reservoir subConceptOf ssn#FeatureOfInterest
 		annotations
 			dc#identifier hasValue "reservoir@en"
 			dc#description hasValue "A reservoir or artificial lake is used to store water."
 			dc#source hasValue "http://en.wikipedia.org/wiki/Reservoir"
 		endAnnotations
-		gs#nearBy ofType Dam
-		dul#hasQuality ofType {WaterLevel, VolumetricFlowRate, WaterBodyVolume}
+		dul#nearTo ofType Dam
+		ssn#hasProperty ofType {WaterLevel, VolumetricFlowRate, WaterBodyVolume}
 	
-	concept HydropowerPlant subConceptOf gu#anthropogenic_unit
+	// Physical places and objects
+	concept HydropowerPlant subConceptOf dul#PhysicalPlace
 		annotations
 			dc#identifier hasValue "hydropower plant@en"
 			dc#description hasValue "A factory where electricity is generated from the force or energy of falling water."
@@ -49,7 +48,7 @@ ontology FloodScenario
 		endAnnotations
 		dul#hasComponent ofType Dam
 		
-	concept Dam subConceptOf gu#anthropogenic_unit
+	concept Dam subConceptOf dul#PhysicalPlace
 		annotations
 			dc#identifier hasValue "dam@en"
 			dc#description hasValue "A dam is a barrier that impounds water or underground streams."
@@ -58,12 +57,13 @@ ontology FloodScenario
 		dul#hasParameter ofType {MinWaterLevel, MaxWaterLevel}
 		dul#hasComponent ofType DamGate		
 	
-	concept DamGate subConceptOf gu#anthropogenic_unit
+	concept DamGate subConceptOf dul#PhysicalObject
 		annotations
 			dc#identifier hasValue "dam gate@en"
 			dc#description hasValue "The gate(s) of a dam control(s) the water discharge of the reservoir."
 		endAnnotations
 	
+	// Sensors
 	concept StreamGauge subConceptOf ssn#Sensor
 		annotations
 			dc#identifier hasValue "water level sensor@en"
@@ -71,7 +71,8 @@ ontology FloodScenario
 			dc#description hasValue "A stream gauge, stream gage or gauging station is a location used by hydrologists or environmental scientists to monitor and test terrestrial bodies of water. Hydrometric measurements of water surface elevation ('stage') and/or volumetric discharge (flow) are generally taken and observations of biota may also be made."
 			dc#source hasValue "http://en.wikipedia.org/wiki/Stream_gauge"
 		endAnnotations
-		gs#nearBy ofType River
+		dul#nearTo ofType River
+		ssn#observes ofType {WaterLevel, VolumetricFlowRate}
 		
 	
 	// Parameters
@@ -88,16 +89,14 @@ ontology FloodScenario
 		endAnnotations
 	
 	
-	// Properties/Qualities
-	// We don't need to model the concept "Sensor" since the SSN ontology already defines that a ssn#Property (and its subconcepts) is observed by a sensor.
-
-	concept Volume subConceptOf dul#Quality
+	// Properties
+	concept Volume subConceptOf ssn#Property
 		annotations
 			dc#identifier hasValue "Volumen@de"
 			dc#identifier hasValue "volume@en"
 			dc#description hasValue "The amount of 3-dimensional space occupied	by an any solid, plasma, vacuum or theoretical object often quantified numerically"
 			dc#source hasValue "http://en.wikipedia.org/wiki/Volume"
-			dc#subject hasValue "Quality"
+			dc#subject hasValue "Property"
 		endAnnotations
 		
 	concept WaterBodyVolume subConceptOf Volume
@@ -105,9 +104,8 @@ ontology FloodScenario
 			dc#identifier hasValue "water body volume@en"
 			dc#description hasValue "The amount of 3-dimensional space occupied by a waterbody, e.g. a reservoir."
 		endAnnotations
-		ssn#inverseOfObserves ofType ssn#Sensor
 		
-	concept VolumetricFlowRate subConceptOf dul#Quality
+	concept VolumetricFlowRate subConceptOf ssn#Property
 		annotations
 			dc#identifier hasValue "Durchfluss@de"
 			dc#identifier hasValue "volumetric flow rate@en"
@@ -117,12 +115,23 @@ ontology FloodScenario
 			not be confused with volumetric flux, the integration of a flux over an area gives
 			the volumetric flow rate"
 			dc#source hasValue "http://en.wikipedia.org/wiki/Volumetric_flow_rate"
-			dc#subject hasValue "Quality"
+			dc#subject hasValue "Property"
 		endAnnotations
-		owl#sameAs ofType {FlowRate, WaterDischarge, Discharge}
-		ssn#inverseOfObserves ofType StreamGauge
+		owl#sameAs ofType {FlowRate, WaterDischarge, Discharge, Waterflow}
 		
-	concept FlowRate subConceptOf dul#Quality
+		concept Waterflow subConceptOf ssn#Property
+		annotations
+			dc#identifier hasValue "waterflow@en"
+			dc#description hasValue "The volumetric flow rate, also volume flow rate and rate
+			of fluid flow, is the volume of fluid which passes through a given surface per
+			unit time, mostly measured in cubic metre per second. Volumetric flow rate should
+			not be confused with volumetric flux, the integration of a flux over an area gives
+			the volumetric flow rate"
+			dc#source hasValue "http://en.wikipedia.org/wiki/Volumetric_flow_rate"
+			dc#subject hasValue "Property"
+		endAnnotations
+		
+	concept FlowRate subConceptOf ssn#Property
 		annotations
 			dc#identifier hasValue "flow rate@en"
 			dc#description hasValue "The volumetric flow rate, also volume flow rate and rate
@@ -131,11 +140,10 @@ ontology FloodScenario
 			not be confused with volumetric flux, the integration of a flux over an area gives
 			the volumetric flow rate"
 			dc#source hasValue "http://en.wikipedia.org/wiki/Volumetric_flow_rate"
-			dc#subject hasValue "Quality"
+			dc#subject hasValue "Property"
 		endAnnotations
-		ssn#inverseOfObserves ofType StreamGauge
 		
-	concept WaterDischarge subConceptOf dul#Quality
+	concept WaterDischarge subConceptOf ssn#Property
 		annotations
 			dc#identifier hasValue "water discharge@en"
 			dc#description hasValue "The volumetric flow rate, also volume flow rate and rate
@@ -144,11 +152,10 @@ ontology FloodScenario
 			not be confused with volumetric flux, the integration of a flux over an area gives
 			the volumetric flow rate"
 			dc#source hasValue "http://en.wikipedia.org/wiki/Volumetric_flow_rate"
-			dc#subject hasValue "Quality"
+			dc#subject hasValue "Property"
 		endAnnotations
-		ssn#inverseOfObserves ofType StreamGauge
 		
-	concept Discharge subConceptOf dul#Quality
+	concept Discharge subConceptOf ssn#Property
 		annotations
 			dc#identifier hasValue "discharge@en"
 			dc#description hasValue "The volumetric flow rate, also volume flow rate and rate
@@ -157,47 +164,42 @@ ontology FloodScenario
 			not be confused with volumetric flux, the integration of a flux over an area gives
 			the volumetric flow rate"
 			dc#source hasValue "http://en.wikipedia.org/wiki/Volumetric_flow_rate"
-			dc#subject hasValue "Quality"
+			dc#subject hasValue "Property"
 		endAnnotations
-		ssn#inverseOfObserves ofType StreamGauge
 	
-	concept WaterLevel subConceptOf dul#Quality
+	concept WaterLevel subConceptOf ssn#Property
 		annotations
 			dc#identifier hasValue "Pegelstand@de"
 			dc#identifier hasValue "water level@en"
 			dc#description hasValue "The height of the water surface measured above a datum"
 			dc#source hasValue "http://amsglossary.allenpress.com/glossary/browse?s=w&p=7"
-			dc#subject hasValue "Quality"
+			dc#subject hasValue "Property"
 		endAnnotations
 		owl#sameAs ofType {WaterStage, GaugeHeight, GageHeight}
-		ssn#inverseOfObserves ofType StreamGauge
 	
-	concept WaterStage subConceptOf dul#Quality
+	concept WaterStage subConceptOf ssn#Property
 		annotations
 			dc#identifier hasValue "water stage@en"
 			dc#description hasValue "The height of the water surface measured above a datum"
 			dc#source hasValue "http://amsglossary.allenpress.com/glossary/browse?s=w&p=7"
-			dc#subject hasValue "Quality"
+			dc#subject hasValue "Property"
 		endAnnotations
-		ssn#inverseOfObserves ofType StreamGauge
 		
-	concept GaugeHeight subConceptOf dul#Quality
+	concept GaugeHeight subConceptOf ssn#Property
 		annotations
 			dc#identifier hasValue "gauge height@en"
 			dc#description hasValue "The height of the water surface measured above a datum"
 			dc#source hasValue "http://amsglossary.allenpress.com/glossary/browse?s=w&p=7"
-			dc#subject hasValue "Quality"
+			dc#subject hasValue "Property"
 		endAnnotations
-		ssn#inverseOfObserves ofType StreamGauge
 		
-	concept GageHeight subConceptOf dul#Quality
+	concept GageHeight subConceptOf ssn#Property
 		annotations
 			dc#identifier hasValue "gage height@en"
 			dc#description hasValue "The height of the water surface measured above a datum"
 			dc#source hasValue "http://amsglossary.allenpress.com/glossary/browse?s=w&p=7"
-			dc#subject hasValue "Quality"
+			dc#subject hasValue "Property"
 		endAnnotations
-		ssn#inverseOfObserves ofType StreamGauge
 
 		
 	// Event types
@@ -207,27 +209,16 @@ ontology FloodScenario
 			dc#description hasValue "Anything that happens or is contemplated as happening at an instant or over a time interval and which is relevant for the flood monitoring application."
 		endnfp
 		
-	concept Flood subConceptOf FloodMonitoringEvent
+	concept WaterLevelChange subConceptOf FloodMonitoringEvent
 		nfp
-			dc#identifier hasValue "Flood@en"
-			dc#description hasValue "A flood is an overflow of an expanse of water that submerges land."
-			dc#source hasValue "http://en.wikipedia.org/wiki/Flood"
+			dc#identifier hasValue "Water level change@en"
+			dc#description hasValue "A significant change in the measurement value of the water level at a specific point in the river."
 		endnfp
 
-
-	// Relations	
-	relation downstream (ofType gs#geographical_unit, ofType gs#geographical_unit)
-		annotations
-			dc#identifier hasValue "downstream@en"
-			dc#identifier hasValue "flussabwärts@de"
-			dc#description hasValue "downstream defines a relation of two geographical units being located near by a river. The second geographical unit can be reached from the first on by going along the river with a direction compliant to the flow direction of the river."
-		endAnnotations
-	
-	relation upstream (ofType gs#geographical_unit, ofType gs#geographical_unit)
-		annotations
-			dc#identifier hasValue "upstream@en"
-			dc#identifier hasValue "flussaufwärts@de"
-			dc#description hasValue "upstream defines a relation of two geographical units being located near by a river. The second geographical unit can be reached from the first on by going along the river with a direction opposed to the flow direction of the river."
-		endAnnotations
+	concept WaterflowChange subConceptOf FloodMonitoringEvent
+		nfp
+			dc#identifier hasValue "Waterflow change@en"
+			dc#description hasValue "A significant change in the measurement value of the waterflow at a specific point in the river."
+		endnfp
 
 			

@@ -18,21 +18,28 @@ ontology RomanianWatersEventTypes
 	endAnnotations
 
 	// Flood stages
-	concept AtentionStage subConceptOf flood#FloodMonitoringEvent
+	concept FloodStageSituation subConceptOf flood#FloodMonitoringEvent
 		annotations
-			dc#identifier hasValue "Atention stage@en"
+			dc#identifier hasValue "Flood stage situation@en"
+			dc#description hasValue "Romanian Waters defines four flood stage situations for each gauging station depending on water level thresholds: normal stage, attention stage, flooding stage, and danger stage."
+			dc#source hasValue "http://www.rowater.ro/daprut/Documente%20Repository/Regulament%20%20gestionare%20situatii%20de%20urgenta%20.pdf"
+		endAnnotations
+	
+	concept AttentionStage subConceptOf FloodStageSituation
+		annotations
+			dc#identifier hasValue "Attention stage@en"
 			dc#description hasValue "The level at which the risk of flooding is possible after a relatively short time frame, requiring increased vigilance when carrying out activities exposed to flooding."
 			dc#source hasValue "http://www.rowater.ro/daprut/Documente%20Repository/Regulament%20%20gestionare%20situatii%20de%20urgenta%20.pdf"
 		endAnnotations
 		
-	concept FloodingStage subConceptOf flood#FloodMonitoringEvent
+	concept FloodingStage subConceptOf FloodStageSituation
 		annotations
 			dc#identifier hasValue "Flooding stage@en"
 			dc#description hasValue "The level at which major floods occur can lead to flooding of households and socio-economic goods."
 			dc#source hasValue "http://www.rowater.ro/daprut/Documente%20Repository/Regulament%20%20gestionare%20situatii%20de%20urgenta%20.pdf"
 		endAnnotations
 		
-	concept DangerStage subConceptOf flood#FloodMonitoringEvent
+	concept DangerStage subConceptOf FloodStageSituation
 		annotations
 			dc#identifier hasValue "Danger stage@en"
 			dc#description hasValue "The level at which special measures are necessary for the evacuation of people and goods, the restriction on the use of bridges and roads, and the operation of hydraulic structures."
@@ -40,37 +47,37 @@ ontology RomanianWatersEventTypes
 		endAnnotations
 		
 	// Flood thresholds
-	concept AttentionThresholdExceeded subConceptOf flood#FloodMonitoringEvent
+	concept AttentionThresholdExceeded subConceptOf flood#WaterLevelChange
 		annotations
 			dc#identifier hasValue "Attention threshold exceeded@en"
 			dc#description hasValue "Two observations (a, b) produced by the same sensor and ordered in time where the value of a is below the attention threshold and the value of b is above."
 		endAnnotations
 		
-	concept AttentionThresholdDeceeded subConceptOf flood#FloodMonitoringEvent
+	concept AttentionThresholdDeceeded subConceptOf flood#WaterLevelChange
 		annotations
 			dc#identifier hasValue "Attention threshold deceeded@en"
 			dc#description hasValue "Two observations (a, b) produced by the same sensor and ordered in time where the value of a is above the attention threshold and the value of b is below."
 		endAnnotations
 		
-	concept FloodingThresholdExceeded subConceptOf flood#FloodMonitoringEvent
+	concept FloodingThresholdExceeded subConceptOf flood#WaterLevelChange
 		annotations
 			dc#identifier hasValue "Flooding threshold exceeded@en"
 			dc#description hasValue "Two observations (a, b) produced by the same sensor and ordered in time where the value of a is below the flooding threshold and the value of b is above."
 		endAnnotations
 		
-	concept FloodingThresholdDeceeded subConceptOf flood#FloodMonitoringEvent
+	concept FloodingThresholdDeceeded subConceptOf flood#WaterLevelChange
 		annotations
 			dc#identifier hasValue "Flooding threshold deceeded@en"
 			dc#description hasValue "Two observations (a, b) produced by the same sensor and ordered in time where the value of a is above the flooding threshold and the value of b is below."
 		endAnnotations
 		
-	concept DangerThresholdExceeded subConceptOf flood#FloodMonitoringEvent
+	concept DangerThresholdExceeded subConceptOf flood#WaterLevelChange
 		annotations
 			dc#identifier hasValue "Danger threshold exceeded@en"
 			dc#description hasValue "Two observations (a, b) produced by the same sensor and ordered in time where the value of a is below the danger threshold and the value of b is above."
 		endAnnotations
 		
-	concept DangerThresholdDeceeded subConceptOf flood#FloodMonitoringEvent
+	concept DangerThresholdDeceeded subConceptOf flood#WaterLevelChange
 		annotations
 			dc#identifier hasValue "Danger threshold deceeded@en"
 			dc#description hasValue "Two observations (a, b) produced by the same sensor and ordered in time where the value of a is above the danger threshold and the value of b is below."

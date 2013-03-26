@@ -10,7 +10,7 @@
 	xmlns:dul="http://www.loa.istc.cnr.it/ontologies/DUL.owl#"
 	xmlns:geo="http://www.opengis.net/ont/geosparql#">
 
-<rdf:Description rdf:nodeID="node17m1rs5eqx1">
+<rdf:Description rdf:nodeID="node17mjnp5svx1">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>EventAbstraction</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -130,7 +130,7 @@
 	<rdfs:label>http://purl.oclc.org/NET/ssnx/ssn#observedProperty</rdfs:label>
 	<rdfs:domain rdf:resource="http://wsmls.googlecode.com/svn/trunk/global/Event-abstraction/0.2/EventAbstraction.rdf#EventAbstraction"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#ObservedProperty"/>
+	<rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
 	<rdfs:subPropertyOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#observedProperty"/>
 </rdf:Description>
 

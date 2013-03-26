@@ -6,23 +6,21 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dul: <http://www.loa.istc.cnr.it/ontologies/DUL.owl#> .
 @prefix ssn: <http://purl.oclc.org/NET/ssnx/ssn#> .
-@prefix gs: <http://purl.org/ifgi/geospace#> .
-@prefix gu: <http://purl.org/ifgi/geounits#> .
 
-_:node17m4gosuix2 a owl:Ontology ;
-	rdfs:label "FloodScenario" ;
+_:node17mjn1ecqx2 a owl:Ontology ;
+	rdfs:label "FloodMonitoring" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	dc:creator "A. Llaves"^^xsd:string ;
 	dc:contributor "H. Michels"^^xsd:string , "A. Baglatzi"^^xsd:string ;
 	dc:publisher "(a)IfGI, University of Muenster"^^xsd:string ;
 	dc:rights "http://creativecommons.org/licenses/by/3.0/"^^xsd:string ;
 	dc:type "Domain Ontology"^^xsd:string ;
-	dc:title "Envision flood scenario ontology"^^xsd:string ;
-	dc:description "This ontology captures the domain knowledge for a river and its environment in the content of flooding."^^xsd:string .
+	dc:title "Envision flood monitoring ontology"^^xsd:string ;
+	dc:description "This ontology captures the domain knowledge for a river and its environment in the context of flood monitoring."^^xsd:string .
 
 :River a rdfs:Class ;
 	rdfs:label "http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#River" ;
-	rdfs:subClassOf gs:geographical_unit ;
+	rdfs:subClassOf ssn:FeatureOfInterest ;
 	dc:identifier "river@en"^^xsd:string ;
 	dc:description "A river is a natural watercourse flowing towards an ocean, a lake, a sea, or another river"^^xsd:string ;
 	dc:source "http://en.wikipedia.org/wiki/River"^^xsd:string .
@@ -34,31 +32,31 @@ _:node17m4gosuix2 a owl:Ontology ;
 	rdfs:range :Reservoir ;
 	rdfs:subPropertyOf dul:hasPart .
 
-:River_prop_hasQuality a rdf:Property ;
-	rdfs:label "http://www.loa.istc.cnr.it/ontologies/DUL.owl#hasQuality" ;
+:River_prop_hasProperty a rdf:Property ;
+	rdfs:label "http://purl.oclc.org/NET/ssnx/ssn#hasProperty" ;
 	rdfs:domain :River ;
 	a rdf:Property ;
 	rdfs:range :WaterLevel ;
 	a rdf:Property ;
 	rdfs:range :VolumetricFlowRate ;
-	rdfs:subPropertyOf dul:hasQuality .
+	rdfs:subPropertyOf ssn:hasProperty .
 
 :Reservoir a rdfs:Class ;
 	rdfs:label "http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#Reservoir" ;
-	rdfs:subClassOf gu:landcover_unit ;
+	rdfs:subClassOf ssn:FeatureOfInterest ;
 	dc:identifier "reservoir@en"^^xsd:string ;
 	dc:description "A reservoir or artificial lake is used to store water."^^xsd:string ;
 	dc:source "http://en.wikipedia.org/wiki/Reservoir"^^xsd:string .
 
-:Reservoir_prop_nearBy a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/geospace#nearBy" ;
+:Reservoir_prop_nearTo a rdf:Property ;
+	rdfs:label "http://www.loa.istc.cnr.it/ontologies/DUL.owl#nearTo" ;
 	rdfs:domain :Reservoir ;
 	a rdf:Property ;
 	rdfs:range :Dam ;
-	rdfs:subPropertyOf gs:nearBy .
+	rdfs:subPropertyOf dul:nearTo .
 
-:Reservoir_prop_hasQuality a rdf:Property ;
-	rdfs:label "http://www.loa.istc.cnr.it/ontologies/DUL.owl#hasQuality" ;
+:Reservoir_prop_hasProperty a rdf:Property ;
+	rdfs:label "http://purl.oclc.org/NET/ssnx/ssn#hasProperty" ;
 	rdfs:domain :Reservoir ;
 	a rdf:Property ;
 	rdfs:range :WaterBodyVolume ;
@@ -66,11 +64,11 @@ _:node17m4gosuix2 a owl:Ontology ;
 	rdfs:range :WaterLevel ;
 	a rdf:Property ;
 	rdfs:range :VolumetricFlowRate ;
-	rdfs:subPropertyOf dul:hasQuality .
+	rdfs:subPropertyOf ssn:hasProperty .
 
 :HydropowerPlant a rdfs:Class ;
 	rdfs:label "http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#HydropowerPlant" ;
-	rdfs:subClassOf gu:anthropogenic_unit ;
+	rdfs:subClassOf dul:PhysicalPlace ;
 	dc:identifier "hydropower plant@en"^^xsd:string ;
 	dc:description "A factory where electricity is generated from the force or energy of falling water."^^xsd:string ;
 	dc:source "http://en.wikipedia.org/wiki/Hydropower"^^xsd:string .
@@ -84,7 +82,7 @@ _:node17m4gosuix2 a owl:Ontology ;
 
 :Dam a rdfs:Class ;
 	rdfs:label "http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#Dam" ;
-	rdfs:subClassOf gu:anthropogenic_unit ;
+	rdfs:subClassOf dul:PhysicalPlace ;
 	dc:identifier "dam@en"^^xsd:string ;
 	dc:description "A dam is a barrier that impounds water or underground streams."^^xsd:string ;
 	dc:source "http://en.wikipedia.org/wiki/Dam"^^xsd:string .
@@ -107,7 +105,7 @@ _:node17m4gosuix2 a owl:Ontology ;
 
 :DamGate a rdfs:Class ;
 	rdfs:label "http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#DamGate" ;
-	rdfs:subClassOf gu:anthropogenic_unit ;
+	rdfs:subClassOf dul:PhysicalObject ;
 	dc:identifier "dam gate@en"^^xsd:string ;
 	dc:description "The gate(s) of a dam control(s) the water discharge of the reservoir."^^xsd:string .
 
@@ -118,12 +116,21 @@ _:node17m4gosuix2 a owl:Ontology ;
 	dc:description "A stream gauge, stream gage or gauging station is a location used by hydrologists or environmental scientists to monitor and test terrestrial bodies of water. Hydrometric measurements of water surface elevation ('stage') and/or volumetric discharge (flow) are generally taken and observations of biota may also be made."^^xsd:string ;
 	dc:source "http://en.wikipedia.org/wiki/Stream_gauge"^^xsd:string .
 
-:StreamGauge_prop_nearBy a rdf:Property ;
-	rdfs:label "http://purl.org/ifgi/geospace#nearBy" ;
+:StreamGauge_prop_nearTo a rdf:Property ;
+	rdfs:label "http://www.loa.istc.cnr.it/ontologies/DUL.owl#nearTo" ;
 	rdfs:domain :StreamGauge ;
 	a rdf:Property ;
 	rdfs:range :River ;
-	rdfs:subPropertyOf gs:nearBy .
+	rdfs:subPropertyOf dul:nearTo .
+
+:StreamGauge_prop_observes a rdf:Property ;
+	rdfs:label "http://purl.oclc.org/NET/ssnx/ssn#observes" ;
+	rdfs:domain :StreamGauge ;
+	a rdf:Property ;
+	rdfs:range :WaterLevel ;
+	a rdf:Property ;
+	rdfs:range :VolumetricFlowRate ;
+	rdfs:subPropertyOf ssn:observes .
 
 :MinWaterLevel a rdfs:Class ;
 	rdfs:label "http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#MinWaterLevel" ;
@@ -139,11 +146,11 @@ _:node17m4gosuix2 a owl:Ontology ;
 
 :Volume a rdfs:Class ;
 	rdfs:label "http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#Volume" ;
-	rdfs:subClassOf dul:Quality ;
+	rdfs:subClassOf ssn:Property ;
 	dc:identifier "Volumen@de"^^xsd:string , "volume@en"^^xsd:string ;
 	dc:description "The amount of 3-dimensional space occupied by an any solid, plasma, vacuum or theoretical object often quantified numerically"^^xsd:string ;
 	dc:source "http://en.wikipedia.org/wiki/Volume"^^xsd:string ;
-	dc:subject "Quality"^^xsd:string .
+	dc:subject "Property"^^xsd:string .
 
 :WaterBodyVolume a rdfs:Class ;
 	rdfs:label "http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#WaterBodyVolume" ;
@@ -151,24 +158,19 @@ _:node17m4gosuix2 a owl:Ontology ;
 	dc:identifier "water body volume@en"^^xsd:string ;
 	dc:description "The amount of 3-dimensional space occupied by a waterbody, e.g. a reservoir."^^xsd:string .
 
-:WaterBodyVolume_prop_inverseOfObserves a rdf:Property ;
-	rdfs:label "http://purl.oclc.org/NET/ssnx/ssn#inverseOfObserves" ;
-	rdfs:domain :WaterBodyVolume ;
-	a rdf:Property ;
-	rdfs:range ssn:Sensor ;
-	rdfs:subPropertyOf ssn:inverseOfObserves .
-
 :VolumetricFlowRate a rdfs:Class ;
 	rdfs:label "http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#VolumetricFlowRate" ;
-	rdfs:subClassOf dul:Quality ;
+	rdfs:subClassOf ssn:Property ;
 	dc:identifier "Durchfluss@de"^^xsd:string , "volumetric flow rate@en"^^xsd:string ;
 	dc:description "The volumetric flow rate, also volume flow rate and rate of fluid flow, is the volume of fluid which passes through a given surface per unit time, mostly measured in cubic metre per second. Volumetric flow rate should not be confused with volumetric flux, the integration of a flux over an area gives the volumetric flow rate"^^xsd:string ;
 	dc:source "http://en.wikipedia.org/wiki/Volumetric_flow_rate"^^xsd:string ;
-	dc:subject "Quality"^^xsd:string .
+	dc:subject "Property"^^xsd:string .
 
 :VolumetricFlowRate_prop_sameAs a rdf:Property ;
 	rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
 	rdfs:domain :VolumetricFlowRate ;
+	a rdf:Property ;
+	rdfs:range :Waterflow ;
 	a rdf:Property ;
 	rdfs:range :WaterDischarge ;
 	a rdf:Property ;
@@ -177,65 +179,45 @@ _:node17m4gosuix2 a owl:Ontology ;
 	rdfs:range :FlowRate ;
 	rdfs:subPropertyOf owl:sameAs .
 
-:VolumetricFlowRate_prop_inverseOfObserves a rdf:Property ;
-	rdfs:label "http://purl.oclc.org/NET/ssnx/ssn#inverseOfObserves" ;
-	rdfs:domain :VolumetricFlowRate ;
-	a rdf:Property ;
-	rdfs:range :StreamGauge ;
-	rdfs:subPropertyOf ssn:inverseOfObserves .
+:Waterflow a rdfs:Class ;
+	rdfs:label "http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#Waterflow" ;
+	rdfs:subClassOf ssn:Property ;
+	dc:identifier "waterflow@en"^^xsd:string ;
+	dc:description "The volumetric flow rate, also volume flow rate and rate of fluid flow, is the volume of fluid which passes through a given surface per unit time, mostly measured in cubic metre per second. Volumetric flow rate should not be confused with volumetric flux, the integration of a flux over an area gives the volumetric flow rate"^^xsd:string ;
+	dc:source "http://en.wikipedia.org/wiki/Volumetric_flow_rate"^^xsd:string ;
+	dc:subject "Property"^^xsd:string .
 
 :FlowRate a rdfs:Class ;
 	rdfs:label "http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#FlowRate" ;
-	rdfs:subClassOf dul:Quality ;
+	rdfs:subClassOf ssn:Property ;
 	dc:identifier "flow rate@en"^^xsd:string ;
 	dc:description "The volumetric flow rate, also volume flow rate and rate of fluid flow, is the volume of fluid which passes through a given surface per unit time, mostly measured in cubic metre per second. Volumetric flow rate should not be confused with volumetric flux, the integration of a flux over an area gives the volumetric flow rate"^^xsd:string ;
 	dc:source "http://en.wikipedia.org/wiki/Volumetric_flow_rate"^^xsd:string ;
-	dc:subject "Quality"^^xsd:string .
-
-:FlowRate_prop_inverseOfObserves a rdf:Property ;
-	rdfs:label "http://purl.oclc.org/NET/ssnx/ssn#inverseOfObserves" ;
-	rdfs:domain :FlowRate ;
-	a rdf:Property ;
-	rdfs:range :StreamGauge ;
-	rdfs:subPropertyOf ssn:inverseOfObserves .
+	dc:subject "Property"^^xsd:string .
 
 :WaterDischarge a rdfs:Class ;
 	rdfs:label "http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#WaterDischarge" ;
-	rdfs:subClassOf dul:Quality ;
+	rdfs:subClassOf ssn:Property ;
 	dc:identifier "water discharge@en"^^xsd:string ;
 	dc:description "The volumetric flow rate, also volume flow rate and rate of fluid flow, is the volume of fluid which passes through a given surface per unit time, mostly measured in cubic metre per second. Volumetric flow rate should not be confused with volumetric flux, the integration of a flux over an area gives the volumetric flow rate"^^xsd:string ;
 	dc:source "http://en.wikipedia.org/wiki/Volumetric_flow_rate"^^xsd:string ;
-	dc:subject "Quality"^^xsd:string .
-
-:WaterDischarge_prop_inverseOfObserves a rdf:Property ;
-	rdfs:label "http://purl.oclc.org/NET/ssnx/ssn#inverseOfObserves" ;
-	rdfs:domain :WaterDischarge ;
-	a rdf:Property ;
-	rdfs:range :StreamGauge ;
-	rdfs:subPropertyOf ssn:inverseOfObserves .
+	dc:subject "Property"^^xsd:string .
 
 :Discharge a rdfs:Class ;
 	rdfs:label "http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#Discharge" ;
-	rdfs:subClassOf dul:Quality ;
+	rdfs:subClassOf ssn:Property ;
 	dc:identifier "discharge@en"^^xsd:string ;
 	dc:description "The volumetric flow rate, also volume flow rate and rate of fluid flow, is the volume of fluid which passes through a given surface per unit time, mostly measured in cubic metre per second. Volumetric flow rate should not be confused with volumetric flux, the integration of a flux over an area gives the volumetric flow rate"^^xsd:string ;
 	dc:source "http://en.wikipedia.org/wiki/Volumetric_flow_rate"^^xsd:string ;
-	dc:subject "Quality"^^xsd:string .
-
-:Discharge_prop_inverseOfObserves a rdf:Property ;
-	rdfs:label "http://purl.oclc.org/NET/ssnx/ssn#inverseOfObserves" ;
-	rdfs:domain :Discharge ;
-	a rdf:Property ;
-	rdfs:range :StreamGauge ;
-	rdfs:subPropertyOf ssn:inverseOfObserves .
+	dc:subject "Property"^^xsd:string .
 
 :WaterLevel a rdfs:Class ;
 	rdfs:label "http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#WaterLevel" ;
-	rdfs:subClassOf dul:Quality ;
+	rdfs:subClassOf ssn:Property ;
 	dc:identifier "Pegelstand@de"^^xsd:string , "water level@en"^^xsd:string ;
 	dc:description "The height of the water surface measured above a datum"^^xsd:string ;
 	dc:source "http://amsglossary.allenpress.com/glossary/browse?s=w&p=7"^^xsd:string ;
-	dc:subject "Quality"^^xsd:string .
+	dc:subject "Property"^^xsd:string .
 
 :WaterLevel_prop_sameAs a rdf:Property ;
 	rdfs:label "http://www.w3.org/2002/07/owl#sameAs" ;
@@ -248,57 +230,29 @@ _:node17m4gosuix2 a owl:Ontology ;
 	rdfs:range :GageHeight ;
 	rdfs:subPropertyOf owl:sameAs .
 
-:WaterLevel_prop_inverseOfObserves a rdf:Property ;
-	rdfs:label "http://purl.oclc.org/NET/ssnx/ssn#inverseOfObserves" ;
-	rdfs:domain :WaterLevel ;
-	a rdf:Property ;
-	rdfs:range :StreamGauge ;
-	rdfs:subPropertyOf ssn:inverseOfObserves .
-
 :WaterStage a rdfs:Class ;
 	rdfs:label "http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#WaterStage" ;
-	rdfs:subClassOf dul:Quality ;
+	rdfs:subClassOf ssn:Property ;
 	dc:identifier "water stage@en"^^xsd:string ;
 	dc:description "The height of the water surface measured above a datum"^^xsd:string ;
 	dc:source "http://amsglossary.allenpress.com/glossary/browse?s=w&p=7"^^xsd:string ;
-	dc:subject "Quality"^^xsd:string .
-
-:WaterStage_prop_inverseOfObserves a rdf:Property ;
-	rdfs:label "http://purl.oclc.org/NET/ssnx/ssn#inverseOfObserves" ;
-	rdfs:domain :WaterStage ;
-	a rdf:Property ;
-	rdfs:range :StreamGauge ;
-	rdfs:subPropertyOf ssn:inverseOfObserves .
+	dc:subject "Property"^^xsd:string .
 
 :GaugeHeight a rdfs:Class ;
 	rdfs:label "http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#GaugeHeight" ;
-	rdfs:subClassOf dul:Quality ;
+	rdfs:subClassOf ssn:Property ;
 	dc:identifier "gauge height@en"^^xsd:string ;
 	dc:description "The height of the water surface measured above a datum"^^xsd:string ;
 	dc:source "http://amsglossary.allenpress.com/glossary/browse?s=w&p=7"^^xsd:string ;
-	dc:subject "Quality"^^xsd:string .
-
-:GaugeHeight_prop_inverseOfObserves a rdf:Property ;
-	rdfs:label "http://purl.oclc.org/NET/ssnx/ssn#inverseOfObserves" ;
-	rdfs:domain :GaugeHeight ;
-	a rdf:Property ;
-	rdfs:range :StreamGauge ;
-	rdfs:subPropertyOf ssn:inverseOfObserves .
+	dc:subject "Property"^^xsd:string .
 
 :GageHeight a rdfs:Class ;
 	rdfs:label "http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#GageHeight" ;
-	rdfs:subClassOf dul:Quality ;
+	rdfs:subClassOf ssn:Property ;
 	dc:identifier "gage height@en"^^xsd:string ;
 	dc:description "The height of the water surface measured above a datum"^^xsd:string ;
 	dc:source "http://amsglossary.allenpress.com/glossary/browse?s=w&p=7"^^xsd:string ;
-	dc:subject "Quality"^^xsd:string .
-
-:GageHeight_prop_inverseOfObserves a rdf:Property ;
-	rdfs:label "http://purl.oclc.org/NET/ssnx/ssn#inverseOfObserves" ;
-	rdfs:domain :GageHeight ;
-	a rdf:Property ;
-	rdfs:range :StreamGauge ;
-	rdfs:subPropertyOf ssn:inverseOfObserves .
+	dc:subject "Property"^^xsd:string .
 
 :FloodMonitoringEvent a rdfs:Class ;
 	rdfs:label "http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#FloodMonitoringEvent" ;
@@ -306,21 +260,14 @@ _:node17m4gosuix2 a owl:Ontology ;
 	dc:identifier "Flood monitoring event@en"^^xsd:string ;
 	dc:description "Anything that happens or is contemplated as happening at an instant or over a time interval and which is relevant for the flood monitoring application."^^xsd:string .
 
-:Flood a rdfs:Class ;
-	rdfs:label "http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#Flood" ;
+:WaterLevelChange a rdfs:Class ;
+	rdfs:label "http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#WaterLevelChange" ;
 	rdfs:subClassOf :FloodMonitoringEvent ;
-	dc:identifier "Flood@en"^^xsd:string ;
-	dc:description "A flood is an overflow of an expanse of water that submerges land."^^xsd:string ;
-	dc:source "http://en.wikipedia.org/wiki/Flood"^^xsd:string .
+	dc:identifier "Water level change@en"^^xsd:string ;
+	dc:description "A significant change in the measurement value of the water level at a specific point in the river."^^xsd:string .
 
-:downstream a rdf:Property ;
-	rdfs:domain gs:geographical_unit ;
-	rdfs:range gs:geographical_unit ;
-	dc:identifier "downstream@en"^^xsd:string , "flussabwärts@de"^^xsd:string ;
-	dc:description "downstream defines a relation of two geographical units being located near by a river. The second geographical unit can be reached from the first on by going along the river with a direction compliant to the flow direction of the river."^^xsd:string .
-
-:upstream a rdf:Property ;
-	rdfs:domain gs:geographical_unit ;
-	rdfs:range gs:geographical_unit ;
-	dc:identifier "upstream@en"^^xsd:string , "flussaufwärts@de"^^xsd:string ;
-	dc:description "upstream defines a relation of two geographical units being located near by a river. The second geographical unit can be reached from the first on by going along the river with a direction opposed to the flow direction of the river."^^xsd:string .
+:WaterflowChange a rdfs:Class ;
+	rdfs:label "http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#WaterflowChange" ;
+	rdfs:subClassOf :FloodMonitoringEvent ;
+	dc:identifier "Waterflow change@en"^^xsd:string ;
+	dc:description "A significant change in the measurement value of the waterflow at a specific point in the river."^^xsd:string .

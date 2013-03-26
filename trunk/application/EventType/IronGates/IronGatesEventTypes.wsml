@@ -17,13 +17,13 @@ ontology IronGatesEventTypes
 		dc#description hasValue "This ontology contains the event types necessary to annotate the event patterns of the Iron Gates hydropower plant scenario."
 	endAnnotations
 
-	concept HighWaterLevel subConceptOf flood#FloodMonitoringEvent
+	concept HighWaterLevel subConceptOf flood#WaterLevelChange
 		nfp
 			dc#identifier hasValue "High water level@en"
 			dc#description hasValue "The water level measured at a specific point by an in situ sensor exceeds the maximum allowed."
 		endnfp
 		
-	concept LowWaterLevel subConceptOf flood#FloodMonitoringEvent
+	concept LowWaterLevel subConceptOf flood#WaterLevelChange
 		nfp
 			dc#identifier hasValue "Low water level@en"
 			dc#description hasValue "The water level measured at a specific point by an in situ sensor is below the minimum allowed."
