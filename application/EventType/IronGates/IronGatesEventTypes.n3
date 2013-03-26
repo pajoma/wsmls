@@ -7,7 +7,7 @@
 @prefix dul: <http://www.loa.istc.cnr.it/ontologies/DUL.owl#> .
 @prefix flood: <http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#> .
 
-_:node17m4gmrmox2 a owl:Ontology ;
+_:node17mjnsie0x2 a owl:Ontology ;
 	rdfs:label "IronGatesEventTypes" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	dc:creator "Alejandro Llaves"^^xsd:string ;
@@ -18,12 +18,12 @@ _:node17m4gmrmox2 a owl:Ontology ;
 
 :HighWaterLevel a rdfs:Class ;
 	rdfs:label "http://wmls.googlecode.com/svn/trunk/application/EventType/IronGates#HighWaterLevel" ;
-	rdfs:subClassOf flood:FloodMonitoringEvent ;
+	rdfs:subClassOf flood:WaterLevelChange ;
 	dc:identifier "High water level@en"^^xsd:string ;
 	dc:description "The water level measured at a specific point by an in situ sensor exceeds the maximum allowed."^^xsd:string .
 
 :LowWaterLevel a rdfs:Class ;
 	rdfs:label "http://wmls.googlecode.com/svn/trunk/application/EventType/IronGates#LowWaterLevel" ;
-	rdfs:subClassOf flood:FloodMonitoringEvent ;
+	rdfs:subClassOf flood:WaterLevelChange ;
 	dc:identifier "Low water level@en"^^xsd:string ;
 	dc:description "The water level measured at a specific point by an in situ sensor is below the minimum allowed."^^xsd:string .

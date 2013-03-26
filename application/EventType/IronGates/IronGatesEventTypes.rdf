@@ -9,7 +9,7 @@
 	xmlns:dul="http://www.loa.istc.cnr.it/ontologies/DUL.owl#"
 	xmlns:flood="http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#">
 
-<rdf:Description rdf:nodeID="node17m4gmrmox1">
+<rdf:Description rdf:nodeID="node17mjnsie0x1">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<rdfs:label>IronGatesEventTypes</rdfs:label>
 	<dc:format>http://www.wsmo.org/wsml/wsml-syntax/wsml-flight</dc:format>
@@ -23,7 +23,7 @@
 <rdf:Description rdf:about="http://wmls.googlecode.com/svn/trunk/application/EventType/IronGates#HighWaterLevel">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://wmls.googlecode.com/svn/trunk/application/EventType/IronGates#HighWaterLevel</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#FloodMonitoringEvent"/>
+	<rdfs:subClassOf rdf:resource="http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#WaterLevelChange"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">High water level@en</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The water level measured at a specific point by an in situ sensor exceeds the maximum allowed.</dc:description>
 </rdf:Description>
@@ -31,7 +31,7 @@
 <rdf:Description rdf:about="http://wmls.googlecode.com/svn/trunk/application/EventType/IronGates#LowWaterLevel">
 	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 	<rdfs:label>http://wmls.googlecode.com/svn/trunk/application/EventType/IronGates#LowWaterLevel</rdfs:label>
-	<rdfs:subClassOf rdf:resource="http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#FloodMonitoringEvent"/>
+	<rdfs:subClassOf rdf:resource="http://wsmls.googlecode.com/svn/trunk/local/water/0.6/flood.rdf#WaterLevelChange"/>
 	<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Low water level@en</dc:identifier>
 	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The water level measured at a specific point by an in situ sensor is below the minimum allowed.</dc:description>
 </rdf:Description>

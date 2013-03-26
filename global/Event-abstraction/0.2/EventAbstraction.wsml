@@ -2,7 +2,7 @@ wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
 namespace { _"http://wsmls.googlecode.com/svn/trunk/global/Event-abstraction/0.2/EventAbstraction.rdf#",
  		xsd _"http://www.w3.org/2001/XMLSchema#",
 		dc _"http://purl.org/dc/elements/1.1/",
-		ssn _"http://purl.oclc.org/NET/ssnx/ssn",
+		ssn _"http://purl.oclc.org/NET/ssnx/ssn#",
 		dul _"http://www.loa.istc.cnr.it/ontologies/DUL.owl#",
 		geo _"http://www.opengis.net/ont/geosparql#"
  }
@@ -44,7 +44,7 @@ ontology EventAbstraction
 		geo#hasGeometry ofType geo#Geometry
 		dul#isObservableAt ofType dul#TimeInterval
 		dul#satisfies ofType EventAbstractionRule
-		ssn#observedProperty ofType ssn#ObservedProperty
+		ssn#observedProperty ofType ssn#Property
 			
 	concept EventDetectionProcedure subConceptOf ssn#Sensing
 		annotations

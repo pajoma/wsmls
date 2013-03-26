@@ -8,7 +8,7 @@
 @prefix dul: <http://www.loa.istc.cnr.it/ontologies/DUL.owl#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 
-_:node17m1rs5eqx2 a owl:Ontology ;
+_:node17mjnp5svx2 a owl:Ontology ;
 	rdfs:label "EventAbstraction" ;
 	dc:format "http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" ;
 	owl:imports <http://www.loa.istc.cnr.it/ontologies/DUL.owl#> , <http://purl.oclc.org/NET/ssnx/ssn> , <http://www.opengis.net/ont/geosparql#> ;
@@ -98,7 +98,7 @@ _:node17m1rs5eqx2 a owl:Ontology ;
 	rdfs:label "http://purl.oclc.org/NET/ssnx/ssn#observedProperty" ;
 	rdfs:domain :EventAbstraction ;
 	a rdf:Property ;
-	rdfs:range ssn:ObservedProperty ;
+	rdfs:range ssn:Property ;
 	rdfs:subPropertyOf ssn:observedProperty .
 
 :EventDetectionProcedure a rdfs:Class ;
