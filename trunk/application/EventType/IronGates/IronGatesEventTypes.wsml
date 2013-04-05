@@ -1,5 +1,5 @@
 wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight"
-namespace { _"http://wmls.googlecode.com/svn/trunk/application/EventType/IronGates#",
+namespace { _"http://wsmls.googlecode.com/svn/trunk/application/EventType/IronGates#",
 	rdf _"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
  	rdfs _"http://www.w3.org/2000/01/rdf-schema#",
 	dc _"http://purl.org/dc/elements/1.1/",
